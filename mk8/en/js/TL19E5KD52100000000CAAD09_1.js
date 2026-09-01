@@ -1,0 +1,34 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:367px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:367px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E5KD52100000000CAAD09.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:367px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:166px;top:221px;font-weight:normal;font-size:6.49pt;\">");
+write("<nobr><b>Pressure<br>Threshold<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:239px;top:179px;font-weight:normal;font-size:6.49pt;\">");
+write("<nobr><b>Brake Assist<br>Begins<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:373px;top:93px;font-weight:normal;font-size:8.67pt;\">");
+write("<nobr><b>Panic Stop with Brake Assist<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:448px;top:339px;font-weight:normal;font-size:8.67pt;\">");
+write("<nobr><b>Time<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:304px;top:335px;font-weight:normal;font-size:6.49pt;\">");
+write("<nobr><b>Time<br>Threshold<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:152px;top:148px;font-weight:normal;font-size:8.67pt;\">");
+write("<nobr><b>Pressure<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:360px;top:192px;font-weight:normal;font-size:8.67pt;\">");
+write("<nobr><b>Panic Stop without Brake Assist<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:652px;top:22px;font-weight:normal;font-size:6.49pt;\">");
+write("<nobr><b>Brake Pedal<br>Effort Reduced<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:461px;top:256px;font-weight:normal;font-size:8.67pt;\">");
+write("<nobr><b>Normal Stop<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

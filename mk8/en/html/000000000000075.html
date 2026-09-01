@@ -1,0 +1,686 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E00F00000057101KDAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+Steering Column Removal and Installation
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<div>
+SRS components are located in this area. 
+<a href="javascript:CtsProc('0','000000000002905','i000')">
+Review the SRS component locations,
+</a>
+ and the 
+<a href="javascript:CtsProc('0','000000000002904','i000')">
+precautions and procedures
+</a>
+ before doing repairs or service.
+</div>
+<a name="iR01">
+</a>
+<div class="procedure_sub_title">
+<b>
+Removal
+</b>
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Adjust the steering column to full tilt down position, and to the full telescopic out position.
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+<a href="javascript:CtsProc('0','000000000002660','i000')">
+Do the battery terminal disconnection procedure.
+</a>
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+<a href="javascript:CtsProc('0','000000000000215','i000')">
+Remove the driver's airbag
+</a>
+ and 
+<a href="javascript:CtsProc('0','000000000000083','i000')">
+the steering wheel.
+</a>
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+<a href="javascript:CtsProc('0','000000000000379','i000')">
+Remove the driver's dashboard undercover.
+</a>
+</div>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+<a href="javascript:CtsProc('0','000000000000391','i000')">
+Remove the column covers.
+</a>
+</div>
+</li>
+</ol>
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+Remove the steering joint cover (A).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000309','1');">
+<img src="../tn/TL19E00F00000057101KDAD01.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00F00000057101KDAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR01">
+</a>
+<a name="i070">
+</a>
+<ol>
+<li value="7">
+<div>
+Loosen the upper steering joint bolt (A), and remove the lower steering joint bolt (B). Disconnect the steering joint (C) by moving the steering joint toward the column. Do not disconnect the steering joint from the column shaft (D).
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+If the center guide (E) is in place and has not moved, leave it in place.
+</div>
+</li>
+<li>
+<div>
+If the center guide has moved or been removed, discard it.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000310','1');">
+<img src="../tn/TL19E00F00000057101KDAD02.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00F00000057101KDAD02_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<span style="display:block" id="imgDispId">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR01">
+</a>
+<a name="i080">
+</a>
+<ol>
+<li value="8">
+<div>
+Disconnect the wire harness connectors from the combination switch assembly/cable reel (A).
+</div>
+</li>
+</ol>
+<a name="i090">
+</a>
+<ol>
+<li value="9">
+<div>
+Remove the combination switch assembly from the steering column shaft by removing the three screws (B).
+</div>
+</li>
+</ol>
+<a name="i100">
+</a>
+<ol>
+<li value="10">
+<div>
+Disconnect the connectors from the ignition switch, and release the wire harness clips from the steering column.
+</div>
+</li>
+</ol>
+<a name="i110">
+</a>
+<ol>
+<li value="11">
+<div>
+Remove the steering column (C) by removing the attaching nuts and bolts.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000311','1');">
+<img src="../tn/TL19E00F00000057101KDAD03.png">
+</a>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</span>
+<span style="display:none" id="imgPrtId">
+<table width="100%" class="Viewer">
+<tr>
+<td width="100%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR01">
+</a>
+<a name="i080">
+</a>
+<ol>
+<li value="8">
+<div>
+Disconnect the wire harness connectors from the combination switch assembly/cable reel (A).
+</div>
+</li>
+</ol>
+</td>
+</tr>
+<tr>
+<td width="100%" class="ViewerTD" id="graphTd" valign="top">
+<span style="display:block" id="imgId1">
+<div>
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00F00000057101KDAD03_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</div>
+</span>
+</td>
+</tr>
+<tr>
+<td width="100%" class="ViewerTD" valign="top">
+<a name="i090">
+</a>
+<ol>
+<li value="9">
+<div>
+Remove the combination switch assembly from the steering column shaft by removing the three screws (B).
+</div>
+</li>
+</ol>
+<a name="i100">
+</a>
+<ol>
+<li value="10">
+<div>
+Disconnect the connectors from the ignition switch, and release the wire harness clips from the steering column.
+</div>
+</li>
+</ol>
+<a name="i110">
+</a>
+<ol>
+<li value="11">
+<div>
+Remove the steering column (C) by removing the attaching nuts and bolts.
+</div>
+</li>
+</ol>
+</td>
+</tr>
+</table>
+</span>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR02">
+</a>
+<div class="procedure_sub_title">
+<b>
+Installation
+</b>
+</div>
+<a name="i310">
+</a>
+<ol>
+<li value="1">
+<div>
+Install the steering column in the reverse order of removal, and note these items: 
+</div>
+<ul type="disc">
+<li>
+<div>
+Make sure the wires are not caught or pinched by any parts.
+</div>
+</li>
+<li>
+<div>
+Tighten the three screws (A) to the sequence shown.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i320">
+</a>
+<ol>
+<li value="2">
+<div>
+Center the steering rack within its stroke.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000312','1');">
+<img src="../tn/TL19E00F00000057101KDAD04.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00F00000057101KDAD04_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR02">
+</a>
+<a name="i330">
+</a>
+<ol>
+<li value="3">
+<div>
+Slip the lower end of the steering joint (A) onto the pinion shaft (B).
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+Pinion shaft with center guide; install the steering joint by aligning the center guide (C).
+</div>
+</li>
+<li>
+<div>
+Pinion shaft without center guide; position the steering column by aligning the gap (D) with the angle.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000313','1');">
+<img src="../tn/TL19E00F00000057101KDAD05.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00F00000057101KDAD05_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR02">
+</a>
+<a name="i340">
+</a>
+<ol>
+<li value="4">
+<div>
+Align the bolt hole (A) on the steering joint with the groove (B) around the pinion shaft then loosely install the lower steering joint bolt (C). Be sure that the joint bolt is securely in the groove in the pinion shaft.
+</div>
+</li>
+</ol>
+<a name="i350">
+</a>
+<ol>
+<li value="5">
+<div>
+Pull on the steering joint to make sure that the steering joint is fully seated, then tighten the lower joint bolt to the specified torque.
+</div>
+</li>
+</ol>
+<a name="i360">
+</a>
+<ol>
+<li value="6">
+<div>
+Tighten the upper steering joint bolt (D) to the specified torque.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000314','1');">
+<img src="../tn/TL19E00F00000057101KDAD07.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00F00000057101KDAD07_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR02">
+</a>
+<a name="i370">
+</a>
+<ol>
+<li value="7">
+<div>
+Install the steering joint cover (A).
+</div>
+</li>
+</ol>
+<a name="i380">
+</a>
+<ol>
+<li value="8">
+<div>
+<a href="javascript:CtsProc('0','000000000000084','i000')">
+Install the steering wheel
+</a>
+ and 
+<a href="javascript:CtsProc('0','000000000000215','i000')">
+the driver's airbag.
+</a>
+</div>
+</li>
+</ol>
+<a name="i390">
+</a>
+<ol>
+<li value="9">
+<div>
+<a href="javascript:CtsProc('0','000000000002660','i000')">
+Do the battery terminal reconnection procedure,
+</a>
+ and do these tasks:
+</div>
+<ul type="disc">
+<li>
+<div>
+Turn the ignition switch to ON (II) and check that the SRS indicator should come on for about 6 seconds and then go off.
+</div>
+</li>
+<li>
+<div>
+Make sure the horn and turn signal switches work properly.
+</div>
+</li>
+<li>
+<div>
+Make sure the steering wheel switches work properly.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i400">
+</a>
+<ol>
+<li value="10">
+<div>
+After installation, do these checks:
+</div>
+<ul type="disc">
+<li>
+<div>
+Check the steering wheel spoke angle. If the steering spoke angles to the right and left are not equal (steering wheel and rack are not centered), correct the engagement of the joint/pinion shaft splines.
+</div>
+</li>
+<li>
+<div>
+Set the steering column to the center tilt position, and to the center telescopic position, then 
+<a href="javascript:CtsProc('0','000000000002590','i000')">
+do the front toe inspection.
+</a>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000315','1');">
+<img src="../tn/TL19E00F00000057101KDAD08.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00F00000057101KDAD08_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

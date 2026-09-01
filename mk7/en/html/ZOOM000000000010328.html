@@ -1,0 +1,397 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+<title>SEA6EJ7J36200000000FAAT05</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+var   totalImg = 2;
+var   dispNum=1;
+function prOnLoadProc() {
+	_prInitImageInfo(100);
+	var para_val = window.location.hash;
+	if(para_val.charAt(0) == '#') {
+		para_val = para_val.substring(1,para_val.length);
+	}
+	var   imgName;
+	imgName = "imgId" + dispNum;
+	document.getElementById(imgName).style.display = "none";
+	if(para_val.length == 0) {
+		dispNum = 1;
+	}
+	else{
+		dispNum = parseInt(para_val);
+	}
+	imgName = "imgId" + dispNum;
+	document.getElementById(imgName).style.display = "block";
+	_prResizeImage(100/100);
+	divBody.style.display = "block"
+	return;
+}
+function PrintFunc()
+{
+	divBody.style.display = "none";
+	var  img_hei = _prResizeImage(67/100);
+	divBody.style.display = "block";
+	var  graphTd = document.getElementById("graphTd");
+	if(graphTd.width == "100%")
+	{
+      var   current_pos;
+      var   img_pos = 0;
+         current_pos = graphTd.offsetTop;
+		var pageCnt = Math.floor(current_pos/950);
+		var img_pos = current_pos - (pageCnt*950);
+		if(img_pos+img_hei > 950)
+		{
+			var  pageElement = document.getElementById("page_onoff");
+			if(pageElement != null)
+			{
+				pageElement.style.display = "block";
+			}
+		}
+	}
+	window.print();
+	divBody.style.display = "none";
+	_prResizeImage(100/100);
+	divBody.style.display = "block";
+	window.scrollTo(0,0);
+}
+function NextFunc()
+{
+	window.location.replace("ZOOM000000000010329.html");
+}
+function CloseFunc()
+{
+	window.close();
+}
+function JumpFunc(strJump)
+{
+	window.location.replace(strJump);
+}
+function imgChange()
+{
+var   imgName;
+      imgName = "imgId" + dispNum;
+      document.getElementById(imgName).style.display = "none";
+      dispNum++;
+     if(dispNum > totalImg) {
+         dispNum = 1;
+      }
+      imgName = "imgId" + dispNum;
+      document.getElementById(imgName).style.display = "block";
+}
+//-->
+</script>
+<body onLoad="prOnLoadProc();" style="font-family:sans-serif;">
+<div id="divBody" style="display:none">
+<div>
+<div style="position:absolute;right=10;">
+<input type="image" src="../img/PRINT_PREVIEW.PNG" onClick="PrintFunc()">
+<input type="image" src="../img/GL_PREV_DISABLE.PNG" onClick="BackFunc()" disabled>
+<input type="image" src="../img/GL_NEXT.PNG" onClick="NextFunc()">
+<input type="image" src="../img/GL_CANCEL.PNG" onClick="CloseFunc()">
+</div><br><br>
+<hr width="100%" size="2" color="black">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<div class="test_procedure_title">
+<b>
+Picture is missing a color or tone
+</b>
+</div>
+<div>
+NOTE: Always check the connectors for poor connections or loose terminals.
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Go into the Diagnostic Menu and use
+<a href="javascript:opener.top.Cts('000000000004038','iG06')">
+‘‘RGB Color'' test under Monitor Check.
+</a>
+</div>
+</li>
+</ol>
+<div style="text-indent:40px;">
+<i>
+Are the red, green, and blue colored circles shown?
+</i>
+</div>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+The system is OK at this time.■
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to
+<a href="javascript:JumpFunc('ZOOM000000000010328.html#i020')">Step 2
+</a>
+.
+</div>
+</td>
+</tr>
+</table>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Turn the ignition switch to OFF.
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Disconnect the navigation unit connector A (20P) and display unit 20P connector.
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Check for loose terminals at navigation unit connector A (20P) and display unit 20P connector.
+</div>
+</li>
+</ol>
+<div style="text-indent:40px;">
+<i>
+Are there loose terminals?
+</i>
+</div>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Repair the terminal.■
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to
+<a href="javascript:JumpFunc('ZOOM000000000010328.html#i050')">Step 5
+</a>
+.
+</div>
+</td>
+</tr>
+</table>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+Check for continuity between the appropriate terminals of navigation unit connector A (20P) to display unit connector B (20P) based on the missing color(s).
+</div>
+<div>
+<table width="90%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="21%">
+<col width="31%">
+<col width="31%">
+<col width="15%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+Missing color
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+Navigation unit connector A (20P)
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+Display unit connector B (20P)
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+Wire color
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+Blue
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+A11
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+B18
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+YEL
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+Green
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+A2
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+B9
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+RED
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+Red
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+A1
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+B8
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+WHT
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</li>
+</ol>
+<div style="text-indent:40px;">
+<i>
+Is there continuity?
+</i>
+</div>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to
+<a href="javascript:JumpFunc('ZOOM000000000010329.html#i060')">Step 6
+</a>
+.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+There is an open in the circuit between the display unit and the navigation unit. Check for poor connections or loose terminals at the display and navigation units. If a poor connection or loose terminal is found, replace the affected shielded harness.■
+</div>
+</td>
+</tr>
+</table>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div style="display:none;" id="page_onoff">
+<div style="page-break-after:always;">
+</div>
+</div>
+<input onClick="imgChange()" type="image" src="../img/GL_NEXT.PNG" align="right">
+<br clear="right">
+<span style="display:block" id="imgId1">
+<div>
+<script src="../js/SEA6EJ7J36200000000FAAD04_1.js">
+</script>
+</div>
+</span>
+<span style="display:none" id="imgId2">
+<div>
+<script src="../js/SEA6EJ7J36200000000FAAD05_1.js">
+</script>
+</div>
+</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

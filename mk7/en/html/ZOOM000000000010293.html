@@ -1,0 +1,125 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+<title>SEA6EJ7J36200000000BBAT20</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+var   totalImg = 1;
+var   dispNum=1;
+function prOnLoadProc() {
+	_prInitImageInfo(100);
+	_prResizeImage(100/100);
+	divBody.style.display = "block"
+	return;
+}
+function PrintFunc()
+{
+	divBody.style.display = "none";
+	var  img_hei = _prResizeImage(67/100);
+	divBody.style.display = "block";
+	var  graphTd = document.getElementById("graphTd");
+	if(graphTd.width == "100%")
+	{
+      var   current_pos;
+      var   img_pos = 0;
+         current_pos = graphTd.offsetTop;
+		var pageCnt = Math.floor(current_pos/950);
+		var img_pos = current_pos - (pageCnt*950);
+		if(img_pos+img_hei > 950)
+		{
+			var  pageElement = document.getElementById("page_onoff");
+			if(pageElement != null)
+			{
+				pageElement.style.display = "block";
+			}
+		}
+	}
+	window.print();
+	divBody.style.display = "none";
+	_prResizeImage(100/100);
+	divBody.style.display = "block";
+	window.scrollTo(0,0);
+}
+function BackFunc()
+{
+	window.location.replace("ZOOM000000000010292.html");
+}
+function NextFunc()
+{
+	window.location.replace("ZOOM000000000010294.html");
+}
+function CloseFunc()
+{
+	window.close();
+}
+function JumpFunc(strJump)
+{
+	window.location.replace(strJump);
+}
+//-->
+</script>
+<body onLoad="prOnLoadProc();" style="font-family:sans-serif;">
+<div id="divBody" style="display:none">
+<div>
+<div style="position:absolute;right=10;">
+<input type="image" src="../img/PRINT_PREVIEW.PNG" onClick="PrintFunc()">
+<input type="image" src="../img/GL_PREV.PNG" onClick="BackFunc()">
+<input type="image" src="../img/GL_NEXT.PNG" onClick="NextFunc()">
+<input type="image" src="../img/GL_CANCEL.PNG" onClick="CloseFunc()">
+</div><br><br>
+<hr width="100%" size="2" color="black">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG07">
+</a>
+<div>
+<b>
+Display
+</b>
+</div>
+<div>
+This diagnostic performs additional checks on the communication bus between the control unit and the display. In addition, the internal electronics and touch screen functionality are confirmed.
+</div>
+<ul type="disc">
+<li>
+<div>
+When the connection is NG, first check for loose terminals at the navigation unit and the display unit connections. Next check for an open or short in the communication line between the navigation unit and the display unit. If the line is found to have an open or short, replace the affected shielded harness.
+</div>
+</li>
+<li>
+<div>
+If the ROM or RAM is NG, replace the display unit.
+</div>
+</li>
+<li>
+<div>
+The version represents the software version in the display.
+</div>
+<div>
+NOTE: When selecting this diagnostic from ‘‘Unit Check,'' quickly remove your fingers from the touch-screen to avoid a false detection of the infrared sensors.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div style="display:none;" id="page_onoff">
+<div style="page-break-after:always;">
+</div>
+</div>
+<span style="display:block" id="imgId1">
+<div>
+<script src="../js/SEA6EJ7J36200000000BBAD18_1.js">
+</script>
+</div>
+</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

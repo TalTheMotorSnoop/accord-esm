@@ -1,0 +1,199 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+
+<title>SEA6EL4E34151100000CAAT00</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+function Apf() {
+   _prInitImageInfo(100);
+   window.focus();
+   if(gImageGroupList_.length == 0) {
+      window.print();
+   }
+   else {
+      divBody.style.display = "none";
+      var  img_pos,img_hei;
+      var  img_rate = 1.0;
+      var  i;
+      var  obj;
+      var  paper_wid,paper_hei,paper_len;
+      paper_wid = 640.0;
+      paper_hei = 950.0;
+      paper_len = 980.0;
+      for(i=0; i<gImageGroupList_.length; i++){
+         if(gImageGroupList_[i].group != null){
+           obj = gImageGroupList_[i].group;
+         }
+      }
+      if(paper_wid > paper_hei) {
+         alert("For best printing result, select 'landscape' layout from the print menu.");
+      }
+      for(i=0; i<gImageGroupList_.length; i++){
+         if(gImageGroupList_[i].group != null){
+            obj = gImageGroupList_[i].group;
+            if(img_rate > paper_wid/obj.width) {
+               img_rate =  paper_wid/obj.width;
+            }
+            if(img_rate > paper_hei/obj.height) {
+               img_rate =  paper_hei/obj.height;
+            }
+         }
+      }
+      _prResizeImage(img_rate);
+      window.scrollTo(0,10000);
+      var totalHei = document.body.scrollTop+document.body.clientHeight-img_hei;
+      divBody.style.display = "block";
+      var  idObj;
+      var groupObject = document.getElementById("group" + i);
+      var   beforeOffset = 0;
+      var   current_pos;
+      var   img_pos = img_dis = 0;
+      for(i=0; i<gImageGroupList_.length; i++){
+         idObj =document.getElementById("imgId" + (i+1));
+         if(idObj != null) {
+            idObj.style.display = "block";
+            current_pos = idObj.offsetTop;
+            if(gImageGroupList_[i].group != null){
+               obj = gImageGroupList_[i].group;
+               img_dis = current_pos - beforeOffset;
+               if(i == 0) {
+                  var pageCnt = Math.floor(current_pos/paper_hei);
+                  img_dis = img_dis - paper_hei*pageCnt;
+               }
+               img_hei = obj.height*img_rate;
+               img_pos += parseInt(img_dis);
+               if(parseInt(img_pos) > paper_len) {
+                  img_pos = img_pos - paper_len;
+               }
+               img_pos += parseInt(img_hei);
+               idObj.style.display = "none";
+               if(parseInt(img_pos) > paper_len) {
+                  idObj.style.display = "block";
+                  img_pos = parseInt(img_hei) + 50;
+               }
+               beforeOffset = current_pos + parseInt(img_hei);
+            }
+         }
+      }
+      window.print();
+      divBody.style.display = "none";
+      _prResizeImage(100/100);
+      divBody.style.display = "block";
+      window.scrollTo(0,0);
+   }
+}
+-->
+</script>
+<body onload="try{if(parent&&parent.Old)parent.Old(this);}catch(e){}" style="font-family:sans-serif;">
+<div id="divBody" style="display:block">
+<div>
+<div class="top_title">
+M/T Reverse Lockout System Description
+</div>
+<div>
+<div>
+At a vehicle speed of 20 km/h (12 mph) or more, a signal from the ECM activates the reverse lockout solenoid, which pushes the select lock cam and select lock pin into the locked position. As a result, the interlock cannot rotate to the reverse select position, making it impossible to engage reverse gear. At a vehicle speed of 15 km/h (9 mph) or less, the signal from the ECM is interrupted which turns off the reverse lockout solenoid. The return spring pulls back the select lock pin enabling the interlock to move freely so reverse gear can be selected.
+</div>
+<div>
+<table width="100%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="42%">
+<col width="28%">
+<col width="28%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Vehicle speed
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Inhibitor
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Reverse selection
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+Above 20 km/h (12 mph)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+ON
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+Not allowed
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+Below 15 km/h (9 mph)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+OFF
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+OK
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+IG-S/W OFF
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+OFF
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+OK
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<span style="display:none" id="imgId1">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA6EL4E34151100000CAAD01_1.js">
+</script>
+</div>
+</div>
+</div></div>
+</body>
+</html>

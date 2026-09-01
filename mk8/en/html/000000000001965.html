@@ -1,0 +1,441 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E40A20326428331KDAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+High Pressure Fuel Pump Removal and Installation
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<table width="100%" rules="all" class="Viewer" frame="border">
+<tr>
+<th class="warning_head">
+<img src="../img/SYM832.PNG">
+</img>
+</th>
+</tr>
+<tr>
+<td class="ViewerTD">
+<div>
+Be careful not to jet when you removed or disconnected the high pressure line. Place a rag or shop towel over the high pressure line whenever you disconnect the high pressure line.
+</div>
+</td>
+</tr>
+</table>
+<br>
+<a name="iR01">
+</a>
+<div class="procedure_sub_title">
+<b>
+Removal
+</b>
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Remove the engine cover.
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+<a href="javascript:CtsProc('0','000000000000347','i000')">
+Remove the strut brace.
+</a>
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+<a href="javascript:CtsProc('0','000000000001975','i000')">
+Remove the air cleaner.
+</a>
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Remove the nut (A), then reposition the under-hood fuse/relay box (B).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000005132','1');">
+<img src="../tn/TL19E40A20326428331KDAD01.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E40A20326428331KDAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR01">
+</a>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+Disconnect the fuel temperature sensor connector (A), the turbocharger boost control valve position sensor connector (B).
+</div>
+</li>
+</ol>
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+Remove the engine wire harness holder (C), the ground cable bolt (D), and the stay (E).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000005133','1');">
+<img src="../tn/TL19E40A20326428331KDAD02.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E40A20326428331KDAD02_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR01">
+</a>
+<a name="i070">
+</a>
+<ol>
+<li value="7">
+<div>
+Remove the high pressure pipes (A).
+</div>
+</li>
+</ol>
+<a name="i080">
+</a>
+<ol>
+<li value="8">
+<div>
+Disconnect the fuel hoses (B) and FRP control valve connector (C).
+</div>
+</li>
+</ol>
+<a name="i090">
+</a>
+<ol>
+<li value="9">
+<div>
+Remove the high pressure fuel pump (D).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000005134','1');">
+<img src="../tn/TL19E40A20326428331KDAD03.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E40A20326428331KDAD03_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR02">
+</a>
+<div class="procedure_sub_title">
+<b>
+Installation
+</b>
+</div>
+<a name="i210">
+</a>
+<ol>
+<li value="1">
+<div>
+Position the high pressure fuel pump, then tighten the nuts (A) of the fuel rail side and the nuts (B) of the high pressure fuel pump side by the hand with a new high pressure pipes (C).
+</div>
+</li>
+</ol>
+<a name="i220">
+</a>
+<ol>
+<li value="2">
+<div>
+Install the high pressure fuel pump (D).
+</div>
+<div>
+NOTE: When installing the high pressure fuel pump, set the high pressure fuel pump and camshaft (E).
+</div>
+</li>
+</ol>
+<a name="i230">
+</a>
+<ol>
+<li value="3">
+<div>
+Tighten the nut of high pressure fuel pump side to 33 N·m (3.4 kgf·m, 25 lbf·ft).
+</div>
+</li>
+</ol>
+<a name="i240">
+</a>
+<ol>
+<li value="4">
+<div>
+Tighten the nut of fuel rail side to 33 N·m (3.4 kgf·m, 25 lbf·ft).
+</div>
+</li>
+</ol>
+<a name="i250">
+</a>
+<ol>
+<li value="5">
+<div>
+Install the high pressure pipe clamps and rubbers (F).
+</div>
+<div>
+NOTE: If the high pressure pipe clamp and rubber are not installed, fuel may leak from fuel pipe.
+</div>
+</li>
+</ol>
+<a name="i260">
+</a>
+<ol>
+<li value="6">
+<div>
+Install the fuel hoses (G), FRP control valve connector (H), fuel temperature sensor connector (I) with a new O-ring (J).
+</div>
+</li>
+</ol>
+<a name="i270">
+</a>
+<ol>
+<li value="7">
+<div>
+Install the engine wire harness holder, the hose clamp, and the under-hood fuse/relay box.
+</div>
+</li>
+</ol>
+<a name="i280">
+</a>
+<ol>
+<li value="8">
+<div>
+<a href="javascript:CtsProc('0','000000000001975','i000')">
+Install the air cleaner.
+</a>
+</div>
+</li>
+</ol>
+<a name="i290">
+</a>
+<ol>
+<li value="9">
+<div>
+Start the engine, then check that there is no leakage in the fuel supply system.
+</div>
+</li>
+</ol>
+<a name="i300">
+</a>
+<ol>
+<li value="10">
+<div>
+<a href="javascript:CtsProc('0','000000000000347','i000')">
+Install the strut brace.
+</a>
+</div>
+</li>
+</ol>
+<a name="i310">
+</a>
+<ol>
+<li value="11">
+<div>
+Install the engine cover.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000005135','1');">
+<img src="../tn/TL19E40A20326428331KDAD04.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E40A20326428331KDAD04_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

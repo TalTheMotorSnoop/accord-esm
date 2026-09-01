@@ -1,0 +1,37 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:475px; height:385px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:475px;height:385px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E00K773000Y1826FAAD01.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:475px;height:385px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:42px;top:337px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>POWER SEAT CONTROL UNIT CONNECTOR A (40P)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:133px;top:356px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b></b>Wire side of female terminals<br></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:63px;top:17px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>FRONT UP-DOWN MOTOR/POSITION SENSOR<br>5P CONNECTOR<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:179px;top:148px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>SEG<br>(GRN/BLK)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:313px;top:148px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>FHSE<br>(BLU/BLK)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:225px;top:306px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>SEG (GRN/BLK)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:129px;top:230px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>FHSE (BLU/BLK)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:133px;top:51px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b></b>Wire side of female terminals<br></nobr>");
+write("</p>");
+write("<p id=\"p1_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:323px;top:230px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>SVCC<br>(WHT/BLK)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_10\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:268px;top:89px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>SVCC (WHT/BLK)<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

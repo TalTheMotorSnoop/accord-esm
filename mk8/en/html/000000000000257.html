@@ -1,0 +1,836 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E00J10300000000FAAT20
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+Audio System Symptom Troubleshooting - Audio system information does not display on the audio/navigation switch panel display unit (with navigation system)
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<div class="test_procedure_title">
+<b>
+Audio system information does not display on the audio/navigation switch panel display unit (with navigation system)
+</b>
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+Check the vehicle battery condition first.
+</div>
+</li>
+<li>
+<div>
+Check the connectors for poor connections or loose terminals.
+</div>
+</li>
+</ul>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+<a href="javascript:CtsProc('0','000000000000277','i000')">
+Remove the audio/navigation switch panel.
+</a>
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Check the connections at the audio/navigation switch panel 24P connector and audio unit connector B (20P).
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Are the connectors and terminals connected properly?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i030');}catch(e){location.hash='i030';}">Step 3
+</a>
+.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Repair the connection and recheck.■
+</div>
+</td>
+</tr>
+</table>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Turn the ignition switch to ON (II).
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Measure the voltage between the audio/navigation switch panel 24P connector terminal No. 22 and body ground.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Is there battery voltage?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i050');}catch(e){location.hash='i050';}">Step 5
+</a>
+.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Repair open in the wire between No. 15 (10 A) fuse in the under-hood fuse/relay box and audio/navigation switch panel 24P connector terminal No. 22.■
+</div>
+</td>
+</tr>
+</table>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000695','1');">
+<img src="../tn/TL19E00J10300000000FAAD66.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J10300000000FAAD66_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+Measure the voltage between the audio/navigation switch panel 24P connector terminal No. 10 and body ground.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Is there less than 0.5 V?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i060');}catch(e){location.hash='i060';}">Step 6
+</a>
+.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+<a href="javascript:CtsProc('0','000000000000552','i000')">
+Repair open in the wire between the audio/navigation switch panel 24P connector terminal No. 10 and body ground (G401).
+</a>
+■
+</div>
+</td>
+</tr>
+</table>
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+Turn the ignition switch to LOCK (0).
+</div>
+</li>
+</ol>
+<a name="i070">
+</a>
+<ol>
+<li value="7">
+<div>
+Disconnect audio unit connector B (20P) and the audio/navigation switch panel 24P connector.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000696','1');">
+<img src="../tn/TL19E00J10300000000FAAD67.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J10300000000FAAD67_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i080">
+</a>
+<ol>
+<li value="8">
+<div>
+Check for continuity between audio unit connector B (20P) and the audio/navigation switch panel 24P connector according to the table.
+</div>
+<div>
+<table width="87%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="35%">
+<col width="45%">
+<col width="20%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Audio unit connector
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Audio/navigation switch panel connector
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Wire color
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+B6
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+16
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+RED
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+B7
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+15
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+GRN
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+B17
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+3
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+BLU
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Is there continuity?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i090');}catch(e){location.hash='i090';}">Step 9
+</a>
+.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Repair open in the wire(s) between the audio unit and audio/navigation switch panel.■
+</div>
+</td>
+</tr>
+</table>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000697','1');">
+<img src="../tn/TL19E00J10300000000FAAD68.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J10300000000FAAD68_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i090">
+</a>
+<ol>
+<li value="9">
+<div>
+Check for continuity between the terminals of the audio/navigation switch panel 24P connector and body ground according to the table.
+</div>
+<div>
+<table width="87%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="66%">
+<col width="33%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Audio/navigation switch panel connector
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Wire color
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+3
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+BLU
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+15
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+GRN
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+16
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+RED
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Is there continuity?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Repair short to body ground in the wire(s) between the audio unit and audio/navigation switch panel.■
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i100');}catch(e){location.hash='i100';}">Step 10
+</a>
+.
+</div>
+</td>
+</tr>
+</table>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000698','1');">
+<img src="../tn/TL19E00J10300000000FAAD69.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J10300000000FAAD69_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i100">
+</a>
+<ol>
+<li value="10">
+<div>
+Check for continuity between the terminals of the audio unit connector B (20P) according to the table.
+</div>
+<div>
+<table width="87%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="33%">
+<col width="66%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+From terminal
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+To terminals
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+B16 (BLK)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+B6 (RED), B7 (GRN)
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Is there continuity between any of the terminals?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Repair short in the wire(s) between the audio unit and audio/navigation switch panel (replace the appropriate shielded harness).■
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+<a href="javascript:CtsProc('0','000000000000277','i000')">
+Substitute a known-good audio/navigation switch panel,
+</a>
+ and recheck. If the symptom/indication goes away, 
+<a href="javascript:CtsProc('0','000000000000277','i000')">
+replace the original audio/navigation switch panel.
+</a>
+ 
+<a href="javascript:CtsProc('0','000000000000272','i000')">
+If the symptom is still present, substitute a known-good audio unit,
+</a>
+ and recheck. If the symptom/indication goes away, 
+<a href="javascript:CtsProc('0','000000000000272','i000')">
+replace the original audio unit.
+</a>
+■
+</div>
+</td>
+</tr>
+</table>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000699','1');">
+<img src="../tn/TL19E00J10300000000FAAD70.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J10300000000FAAD70_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

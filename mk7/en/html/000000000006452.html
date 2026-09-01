@@ -1,0 +1,173 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+
+<title>Delay Orifice Mechanism</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+function Apf() {
+   _prInitImageInfo(100);
+   window.focus();
+   if(gImageGroupList_.length == 0) {
+      window.print();
+   }
+   else {
+      divBody.style.display = "none";
+      var  img_pos,img_hei;
+      var  img_rate = 1.0;
+      var  i;
+      var  obj;
+      var  paper_wid,paper_hei,paper_len;
+      paper_wid = 640.0;
+      paper_hei = 950.0;
+      paper_len = 980.0;
+      for(i=0; i<gImageGroupList_.length; i++){
+         if(gImageGroupList_[i].group != null){
+           obj = gImageGroupList_[i].group;
+         }
+      }
+      if(paper_wid > paper_hei) {
+         alert("For best printing result, select 'landscape' layout from the print menu.");
+      }
+      for(i=0; i<gImageGroupList_.length; i++){
+         if(gImageGroupList_[i].group != null){
+            obj = gImageGroupList_[i].group;
+            if(img_rate > paper_wid/obj.width) {
+               img_rate =  paper_wid/obj.width;
+            }
+            if(img_rate > paper_hei/obj.height) {
+               img_rate =  paper_hei/obj.height;
+            }
+         }
+      }
+      _prResizeImage(img_rate);
+      window.scrollTo(0,10000);
+      var totalHei = document.body.scrollTop+document.body.clientHeight-img_hei;
+      divBody.style.display = "block";
+      var  idObj;
+      var groupObject = document.getElementById("group" + i);
+      var   beforeOffset = 0;
+      var   current_pos;
+      var   img_pos = img_dis = 0;
+      for(i=0; i<gImageGroupList_.length; i++){
+         idObj =document.getElementById("imgId" + (i+1));
+         if(idObj != null) {
+            idObj.style.display = "block";
+            current_pos = idObj.offsetTop;
+            if(gImageGroupList_[i].group != null){
+               obj = gImageGroupList_[i].group;
+               img_dis = current_pos - beforeOffset;
+               if(i == 0) {
+                  var pageCnt = Math.floor(current_pos/paper_hei);
+                  img_dis = img_dis - paper_hei*pageCnt;
+               }
+               img_hei = obj.height*img_rate;
+               img_pos += parseInt(img_dis);
+               if(parseInt(img_pos) > paper_len) {
+                  img_pos = img_pos - paper_len;
+               }
+               img_pos += parseInt(img_hei);
+               idObj.style.display = "none";
+               if(parseInt(img_pos) > paper_len) {
+                  idObj.style.display = "block";
+                  img_pos = parseInt(img_hei) + 50;
+               }
+               beforeOffset = current_pos + parseInt(img_hei);
+            }
+         }
+      }
+      window.print();
+      divBody.style.display = "none";
+      _prResizeImage(100/100);
+      divBody.style.display = "block";
+      window.scrollTo(0,0);
+   }
+}
+-->
+</script>
+<body onload="try{if(parent&&parent.Old)parent.Old(this);}catch(e){}" style="font-family:sans-serif;">
+<div id="divBody" style="display:block">
+<div>
+<div class="top_title">
+<b>
+Delay Orifice Mechanism
+</b>
+</div>
+<a name="iS03">
+</a>
+<a name="iT06">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Function
+</b>
+</div>
+<br>
+<div>
+The one-way orifice mechanism is designed to improve the operation performance of the clutch by delaying the slave cylinder releasing speed at the time of sudden release of the clutch pedal.
+</div>
+<a name="iT07">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Construction
+</b>
+</div>
+<br>
+<div>
+<div>
+The delay orifice mechanism is built into the cylinder, and cannot be disassembled.
+</div>
+<span style="display:none" id="imgId1">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA4E0AE34116300000CAAD07_1.js">
+</script>
+</div>
+</div>
+<a name="iT08">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Operation
+</b>
+</div>
+<br>
+<div>
+<div>
+When pressing down on the clutch pedal, the fluid pressure sent from the master cylinder moves the one-way valve in the direction shown in the illustration. At this time, the fluid pressure is sent into the slave cylinder going through two passages, the orifice part and the filter part, and then it releases the joint of the pressure plate and the clutch disc.
+</div>
+<span style="display:none" id="imgId2">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA5E2EE34116300000CAAD01_1.js">
+</script>
+</div>
+</div>
+<div>
+<div>
+When releasing the clutch pedal, the fluid pressure sent back from the slave cylinder moves the one-way valve in the direction shown in the illustration. At this time, the one-way valve blocks a passage of the filter part and delays the clutch releasing speed by returning the fluid to the master cylinder going through only a passage of the orifice part.
+</div>
+<span style="display:none" id="imgId3">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA4E0AE34116300000CAAD09_1.js">
+</script>
+</div>
+</div>
+</div></div>
+</body>
+</html>

@@ -1,0 +1,2787 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19EAPJ10300000000FAAT29
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+Audio System Symptom Troubleshooting - Booming sound while driving with audio unit on or off (without premium audio system)
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<div class="test_procedure_title">
+<b>
+Booming sound while driving with audio unit on or off (without premium audio system)
+</b>
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+Check the vehicle battery condition first.
+</div>
+</li>
+<li>
+<div>
+Check the connectors for poor connections or loose terminals.
+</div>
+</li>
+</ul>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Turn the ignition switch to ON (II).
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Operate the audio unit, and check the function of the speakers.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Is a booming sound heard from the speakers?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i030');}catch(e){location.hash='i030';}">Step 3
+</a>
+.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to no sound is heard from speaker(s).■
+</div>
+<ul type="disc">
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000243','i000')">
+4-door:
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003120','i000')">
+5-door:
+</a>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Open the driver's door, with the booming sound present.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Is the booming sound still present?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i620');}catch(e){location.hash='i620';}">Step 62
+</a>
+.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i040');}catch(e){location.hash='i040';}">Step 4
+</a>
+.
+</div>
+</td>
+</tr>
+</table>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Turn the audio power switch to off.
+</div>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+<a href="javascript:CtsProc('0','000000000003737','i000')">
+Do the active noise cancellation (ANC) self-diagnostic function.
+</a>
+</div>
+</li>
+</ol>
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+Press the No. 1 button.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Is the low-frequency hum sound heard?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i070');}catch(e){location.hash='i070';}">Step 7
+</a>
+.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i300');}catch(e){location.hash='i300';}">Step 30
+</a>
+.
+</div>
+</td>
+</tr>
+</table>
+<a name="i070">
+</a>
+<ol>
+<li value="7">
+<div>
+Check that the low-frequency hum sound continues sounding for about 1 minute.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Does the low-frequency hum sound continue sounding for about 1 minute?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i550');}catch(e){location.hash='i550';}">Step 55
+</a>
+.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i080');}catch(e){location.hash='i080';}">Step 8
+</a>
+.
+</div>
+</td>
+</tr>
+</table>
+<a name="i080">
+</a>
+<ol>
+<li value="8">
+<div>
+Turn the ignition switch to LOCK (0).
+</div>
+</li>
+</ol>
+<a name="i090">
+</a>
+<ol>
+<li value="9">
+<div>
+Check the No. 15 (20 A) fuse in the passenger's under-dash fuse/relay box.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Is the fuse OK?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i100');}catch(e){location.hash='i100';}">Step 10
+</a>
+.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Replace the fuse, and recheck.■
+</div>
+</td>
+</tr>
+</table>
+<a name="i100">
+</a>
+<ol>
+<li value="10">
+<div>
+Connect a voltmeter between active noise cancellation unit 16P connector terminal No. 3 and No. 11.
+</div>
+<div>
+NOTE: Use the voltmeter in AC range.
+</div>
+</li>
+</ol>
+<a name="i110">
+</a>
+<ol>
+<li value="11">
+<div>
+Turn the ignition switch to ACCESSORY (I).
+</div>
+</li>
+</ol>
+<a name="i120">
+</a>
+<ol>
+<li value="12">
+<div>
+Make a loud noise in front of the microphone.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Does the voltage change when making a loud noise in front of the microphone?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+<a href="javascript:CtsProc('0','000000000003741','iR02')">
+Replace the active noise cancellation unit.
+</a>
+■
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i130');}catch(e){location.hash='i130';}">Step 13
+</a>
+.
+</div>
+</td>
+</tr>
+</table>
+<a name="i130">
+</a>
+<ol>
+<li value="13">
+<div>
+Turn the ignition switch to LOCK (0).
+</div>
+</li>
+</ol>
+<a name="i140">
+</a>
+<ol>
+<li value="14">
+<div>
+Disconnect active noise cancellation unit 16P connector and the active noise cancellation front microphone 3P connector.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000010258','1');">
+<img src="../tn/TL19EAPJ10300000000FAAD25.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19EAPJ10300000000FAAD25_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i150">
+</a>
+<ol>
+<li value="15">
+<div>
+Connect active noise cancellation front microphone 3P connector terminals No. 1 and No. 3 with a jumper wire.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000010259','1');">
+<img src="../tn/TL19EAPJ10300000000FAAD26.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19EAPJ10300000000FAAD26_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i160">
+</a>
+<ol>
+<li value="16">
+<div>
+Check for continuity between active noise cancellation unit 16P connector terminals No. 3 and No. 11.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Is there continuity?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i170');}catch(e){location.hash='i170';}">Step 17
+</a>
+.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Open in the wire between active noise cancellation unit 16P connector and the active noise cancellation front microphone 3P connector. Replace the affected shielded harness.■
+</div>
+</td>
+</tr>
+</table>
+<a name="i170">
+</a>
+<ol>
+<li value="17">
+<div>
+Remove the jumper wire.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000010260','1');">
+<img src="../tn/TL19EAPJ10300000000FAAD27.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19EAPJ10300000000FAAD27_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i180">
+</a>
+<ol>
+<li value="18">
+<div>
+Check for continuity between active noise cancellation unit 16P connector terminals No. 3 and No. 11.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Is there continuity?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Short in the wire between active noise cancellation unit 16P connector and the active noise cancellation front microphone 3P connector. Replace the affected shielded harness.■
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i190');}catch(e){location.hash='i190';}">Step 19
+</a>
+.
+</div>
+</td>
+</tr>
+</table>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000010261','1');">
+<img src="../tn/TL19EAPJ10300000000FAAD28.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19EAPJ10300000000FAAD28_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i190">
+</a>
+<ol>
+<li value="19">
+<div>
+Check for continuity between active noise cancellation unit 16P connector terminal No. 3 and body ground.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Is there continuity?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Short to body ground in the wire between active noise cancellation unit 16P connector and the active noise cancellation front microphone 3P connector. Replace the affected shielded harness.■
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<ul type="disc">
+<li>
+<div>
+4-door, go to 
+<a href="javascript:try{parent.Jmp('i280');}catch(e){location.hash='i280';}">Step 28
+</a>
+.
+</div>
+</li>
+<li>
+<div>
+5-door, 
+<a href="javascript:CtsProc('0','000000000003739','iR01')">
+replace the active noise cancellation front microphone.
+</a>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000010262','1');">
+<img src="../tn/TL19EAPJ10300000000FAAD29.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19EAPJ10300000000FAAD29_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i200">
+</a>
+<ol>
+<li value="20">
+<div>
+Connect a voltmeter between active noise cancellation 16P connector terminals No. 4 and No. 5.
+</div>
+<div>
+NOTE: Use the voltmeter in AC range.
+</div>
+</li>
+</ol>
+<a name="i210">
+</a>
+<ol>
+<li value="21">
+<div>
+Turn the ignition switch to ACCESSORY (I).
+</div>
+</li>
+</ol>
+<a name="i220">
+</a>
+<ol>
+<li value="22">
+<div>
+Make a loud noise in front of the active noise cancellation rear microphone.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Does the voltage change when making a loud noise in front of the microphone?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+<a href="javascript:CtsProc('0','000000000003741','iR02')">
+Replace the active noise cancellation unit.
+</a>
+■
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i230');}catch(e){location.hash='i230';}">Step 23
+</a>
+.
+</div>
+</td>
+</tr>
+</table>
+<a name="i230">
+</a>
+<ol>
+<li value="23">
+<div>
+Turn the ignition switch to LOCK (0).
+</div>
+</li>
+</ol>
+<a name="i240">
+</a>
+<ol>
+<li value="24">
+<div>
+Disconnect active noise cancellation unit 16P connector and the active noise cancellation rear microphone 2P connector.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000010263','1');">
+<img src="../tn/TL19EAPJ10300000000FAAD30.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19EAPJ10300000000FAAD30_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i250">
+</a>
+<ol>
+<li value="25">
+<div>
+Connect active noise cancellation rear microphone 2P connector terminals No. 1 and No. 2 with a jumper wire.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000010264','1');">
+<img src="../tn/TL19EAPJ10300000000FAAD31.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19EAPJ10300000000FAAD31_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i260">
+</a>
+<ol>
+<li value="26">
+<div>
+Check for continuity between active noise cancellation 16P connector terminals No. 4 and No. 5.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Is there continuity?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i270');}catch(e){location.hash='i270';}">Step 27
+</a>
+.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Open in the wire between active noise cancellation unit 16P connector and the active noise cancellation rear microphone 2P connector. Replace the affected shielded harness.■
+</div>
+</td>
+</tr>
+</table>
+<a name="i270">
+</a>
+<ol>
+<li value="27">
+<div>
+Remove the jumper wire.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000010265','1');">
+<img src="../tn/TL19EAPJ10300000000FAAD32.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19EAPJ10300000000FAAD32_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i280">
+</a>
+<ol>
+<li value="28">
+<div>
+Check for continuity between active noise cancellation unit 16P connector terminals No. 4 and No. 5.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Is there continuity?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Short in the wire between active noise cancellation unit 16P connector and the active noise cancellation rear microphone 2P connector. Replace the affected shielded harness.■
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i290');}catch(e){location.hash='i290';}">Step 29
+</a>
+.
+</div>
+</td>
+</tr>
+</table>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000010266','1');">
+<img src="../tn/TL19EAPJ10300000000FAAD33.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19EAPJ10300000000FAAD33_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i290">
+</a>
+<ol>
+<li value="29">
+<div>
+Check for continuity between active noise cancellation unit 16P connector terminal No. 4 and body ground.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Is there continuity?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Short to body ground in the wire between active noise cancellation unit 16P connector and the active noise cancellation rear microphone 2P connector. Replace the affected shielded harness.■
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+<a href="javascript:CtsProc('0','000000000003739','iR01')">
+Replace the active noise cancellation front microphone
+</a>
+ and 
+<a href="javascript:CtsProc('0','000000000003739','iR02')">
+rear microphone
+</a>
+ at once, and recheck. If the symptom/indication still present, 
+<a href="javascript:CtsProc('0','000000000003741','i000')">
+replace the active noise cancellation unit.
+</a>
+■
+</div>
+</td>
+</tr>
+</table>
+<a name="i300">
+</a>
+<ol>
+<li value="30">
+<div>
+Check for the No. 15 (20 A) fuse in the passenger's under-dash fuse/relay box.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Are the fuses OK?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i310');}catch(e){location.hash='i310';}">Step 31
+</a>
+.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Replace the fuse, and recheck.■
+</div>
+</td>
+</tr>
+</table>
+<a name="i310">
+</a>
+<ol>
+<li value="31">
+<div>
+Disconnect the active noise cancellation unit 16P connector.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000010267','1');">
+<img src="../tn/TL19EAPJ10300000000FAAD34.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19EAPJ10300000000FAAD34_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i320">
+</a>
+<ol>
+<li value="32">
+<div>
+Measure the voltage between active noise cancellation unit 16P connector terminal No. 8 and body ground.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Is there battery voltage?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i330');}catch(e){location.hash='i330';}">Step 33
+</a>
+.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Repair open in the wire between the No. 15 (20 A) fuse in the passenger's under-dash fuse/relay box and active noise cancellation unit 16P connector terminal No. 8.■
+</div>
+</td>
+</tr>
+</table>
+<a name="i330">
+</a>
+<ol>
+<li value="33">
+<div>
+Turn the ignition switch ON (II).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000010268','1');">
+<img src="../tn/TL19EAPJ10300000000FAAD35.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19EAPJ10300000000FAAD35_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i340">
+</a>
+<ol>
+<li value="34">
+<div>
+Measure the voltage between active noise cancellation unit 16P connector terminal No. 6 and body ground.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Is there battery voltage?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i350');}catch(e){location.hash='i350';}">Step 35
+</a>
+.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Repair open in the wire between active noise cancellation unit 16P connector terminal No. 6 and audio unit connector A (24P) terminal No. 17.■
+</div>
+</td>
+</tr>
+</table>
+<a name="i350">
+</a>
+<ol>
+<li value="35">
+<div>
+Turn the ignition switch to LOCK (0).
+</div>
+</li>
+</ol>
+<a name="i360">
+</a>
+<ol>
+<li value="36">
+<div>
+Reconnect active noise cancellation unit 16P connector. 
+</div>
+</li>
+</ol>
+<a name="i370">
+</a>
+<ol>
+<li value="37">
+<div>
+Turn the ignition switch to ON (II).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000010269','1');">
+<img src="../tn/TL19EAPJ10300000000FAAD36.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19EAPJ10300000000FAAD36_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i380">
+</a>
+<ol>
+<li value="38">
+<div>
+Measure the voltage between the active noise cancellation unit 16P connector terminal No. 7 and body ground.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Is there less than 0.1 V?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i390');}catch(e){location.hash='i390';}">Step 39
+</a>
+.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Repair open in the wire between active noise cancellation unit 16P connector terminal No. 7 and body ground (G401).■
+</div>
+</td>
+</tr>
+</table>
+<a name="i390">
+</a>
+<ol>
+<li value="39">
+<div>
+Turn the ignition switch to LOCK (0).
+</div>
+</li>
+</ol>
+<a name="i400">
+</a>
+<ol>
+<li value="40">
+<div>
+<a href="javascript:CtsProc('0','000000000003737','i000')">
+Do the active noise cancellation (ANC) self-diagnostic function.
+</a>
+</div>
+</li>
+</ol>
+<a name="i410">
+</a>
+<ol>
+<li value="41">
+<div>
+Press the No. 1 button.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000010270','1');">
+<img src="../tn/TL19EAPJ10300000000FAAD37.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19EAPJ10300000000FAAD37_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i420">
+</a>
+<ol>
+<li value="42">
+<div>
+Measure the voltage between active noise cancellation unit 16P connector terminal No. 12 and body ground.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Is there about 5 V?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i480');}catch(e){location.hash='i480';}">Step 48
+</a>
+.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i430');}catch(e){location.hash='i430';}">Step 43
+</a>
+.
+</div>
+</td>
+</tr>
+</table>
+<a name="i430">
+</a>
+<ol>
+<li value="43">
+<div>
+Turn the ignition switch to LOCK (0).
+</div>
+</li>
+</ol>
+<a name="i440">
+</a>
+<ol>
+<li value="44">
+<div>
+Disconnect the active noise cancellation unit 16P connector and audio unit connector C (8P).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000010271','1');">
+<img src="../tn/TL19EAPJ10300000000FAAD38.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19EAPJ10300000000FAAD38_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i450">
+</a>
+<ol>
+<li value="45">
+<div>
+Check for continuity between active noise cancellation unit 16P connector terminal No. 12 and audio unit connector C (8P) terminal No. 1.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Is there continuity?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i460');}catch(e){location.hash='i460';}">Step 46
+</a>
+.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Repair open in the wire between active noise cancellation unit 16P connector and audio unit connector C (8P).■
+</div>
+</td>
+</tr>
+</table>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000010272','1');">
+<img src="../tn/TL19EAPJ10300000000FAAD39.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19EAPJ10300000000FAAD39_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i460">
+</a>
+<ol>
+<li value="46">
+<div>
+Check for continuity between body ground and the active noise cancellation unit 16P connector terminal No. 12.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Is there continuity?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Repair short in the wire between the active noise cancellation unit 16P connector and audio unit connector C (8P).■
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+<a href="javascript:CtsProc('0','000000000000273','i000')">
+Replace the audio unit.
+</a>
+■
+</div>
+</td>
+</tr>
+</table>
+<a name="i470">
+</a>
+<ol>
+<li value="47">
+<div>
+Reconnect the active noise cancellation unit 16P connector.
+</div>
+</li>
+</ol>
+<a name="i480">
+</a>
+<ol>
+<li value="48">
+<div>
+<a href="javascript:CtsProc('0','000000000003737','i000')">
+Do the active noise cancellation (ANC) self-diagnostic function.
+</a>
+</div>
+</li>
+</ol>
+<a name="i490">
+</a>
+<ol>
+<li value="49">
+<div>
+Press and release the No. 1 button.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000010273','1');">
+<img src="../tn/TL19EAPJ10300000000FAAD40.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19EAPJ10300000000FAAD40_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i500">
+</a>
+<ol>
+<li value="50">
+<div>
+Measure the voltage between the active noise cancellation unit 16P connector terminal No. 2 and body ground.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Is there about 2.5 V?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+<a href="javascript:CtsProc('0','000000000000272','i000')">
+Replace the audio unit.
+</a>
+■
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i510');}catch(e){location.hash='i510';}">Step 51
+</a>
+.
+</div>
+</td>
+</tr>
+</table>
+<a name="i510">
+</a>
+<ol>
+<li value="51">
+<div>
+Turn the ignition switch to LOCK (0).
+</div>
+</li>
+</ol>
+<a name="i520">
+</a>
+<ol>
+<li value="52">
+<div>
+Disconnect the active noise cancellation unit 16P connector and audio unit connector C (8P).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000010274','1');">
+<img src="../tn/TL19EAPJ10300000000FAAD41.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19EAPJ10300000000FAAD41_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i530">
+</a>
+<ol>
+<li value="53">
+<div>
+Check for continuity between the active noise cancellation unit 16P connector and audio unit connector C (8P).
+</div>
+<div>
+<table width="87%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="33%">
+<col width="33%">
+<col width="33%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Active noise cancellation unit connector
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Audio unit connector
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Wire color
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+No. 1
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+C7
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+BLK
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+No. 2
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+C5
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+RED
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+No. 9
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+C8
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+GRN
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+No. 10
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+C6
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+WHT
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Is there continuity?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i540');}catch(e){location.hash='i540';}">Step 54
+</a>
+.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Repair open in the wire(s) between the active noise cancellation unit 16P connector and audio unit connector C (8P).■
+</div>
+</td>
+</tr>
+</table>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000010275','1');">
+<img src="../tn/TL19EAPJ10300000000FAAD42.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19EAPJ10300000000FAAD42_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i540">
+</a>
+<ol>
+<li value="54">
+<div>
+Check for continuity between body ground and active noise cancellation unit 16P connector terminals No. 1, 2, 9, and 10 individually.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Is there continuity?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Repair short in the wire(s) between the active noise cancellation unit 16P connector and stereo amplifier connector C (5P).■
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+<a href="javascript:CtsProc('0','000000000003741','iR02')">
+Replace the active noise cancellation unit.
+</a>
+■
+</div>
+</td>
+</tr>
+</table>
+<a name="i550">
+</a>
+<ol>
+<li value="55">
+<div>
+Start the engine, and let the vehicle idle.
+</div>
+</li>
+</ol>
+<a name="i560">
+</a>
+<ol>
+<li value="56">
+<div>
+<a href="javascript:CtsProc('0','000000000003737','i000')">
+Do the active noise cancellation (ANC) self-diagnostic function.
+</a>
+</div>
+</li>
+</ol>
+<a name="i570">
+</a>
+<ol>
+<li value="57">
+<div>
+Press the No. 1 button.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Can you hear the low-frequency hum?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i580');}catch(e){location.hash='i580';}">Step 58
+</a>
+.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+The system is OK.■
+</div>
+</td>
+</tr>
+</table>
+<a name="i580">
+</a>
+<ol>
+<li value="58">
+<div>
+Turn the ignition switch to LOCK (0).
+</div>
+</li>
+</ol>
+<a name="i590">
+</a>
+<ol>
+<li value="59">
+<div>
+Disconnect the active noise cancellation unit 16P connector and ECM connector No. 2 (58P).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000010276','1');">
+<img src="../tn/TL19EAPJ10300000000FAAD43.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19EAPJ10300000000FAAD43_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i600">
+</a>
+<ol>
+<li value="60">
+<div>
+Check for continuity between active noise cancellation unit 16P connector terminal No. 15 and ECM connector No. 2 (58P) terminal No. 30.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Is there continuity?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i610');}catch(e){location.hash='i610';}">Step 61
+</a>
+.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Repair open in the wire between the active noise cancellation unit 16P connector terminal No. 15 and ECM connector No. 2 (58P) terminal No. 30.■
+</div>
+</td>
+</tr>
+</table>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000010277','1');">
+<img src="../tn/TL19EAPJ10300000000FAAD44.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19EAPJ10300000000FAAD44_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i610">
+</a>
+<ol>
+<li value="61">
+<div>
+Check for continuity between active noise cancellation unit 16P connector terminal No. 15 and body ground.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Is there continuity?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Repair short in the wire between body ground and active noise cancellation unit 16P connector and ECM connector No. 2 (58P).■
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+<a href="javascript:CtsProc('0','000000000001925','i000')">
+Update the ECM
+</a>
+ if it does not have the latest software or 
+<a href="javascript:CtsProc('0','000000000003578','i000')">
+substitute a known-good ECM.
+</a>
+■
+</div>
+</td>
+</tr>
+</table>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000010278','1');">
+<img src="../tn/TL19EAPJ10300000000FAAD45.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19EAPJ10300000000FAAD45_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i620">
+</a>
+<ol>
+<li value="62">
+<div>
+Measure the voltage between active noise cancellation unit 16P connector terminal No. 16 and body ground while the door is opening.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Is there about 5.0 V?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+<a href="javascript:CtsProc('0','000000000003741','iR02')">
+Replace the active noise cancellation unit.
+</a>
+■
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Repair open in the wire between the active noise cancellation unit and driver's under-dash fuse/relay box connector P (20P) terminal No. 4.■
+</div>
+</td>
+</tr>
+</table>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000010279','1');">
+<img src="../tn/TL19EAPJ10300000000FAAD46.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19EAPJ10300000000FAAD46_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

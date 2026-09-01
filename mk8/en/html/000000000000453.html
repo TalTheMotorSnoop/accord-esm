@@ -1,0 +1,255 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E00J34200057274MBAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+Resetting the Sunroof Control Unit (Motor)
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<div>
+Resetting the sunroof is required when any of the following have occurred:
+</div>
+<ul type="disc">
+<li>
+<div>
+The sunroof was moved manually while the battery was dead or disconnected.
+</div>
+</li>
+<li>
+<div>
+The sunroof motor was replaced with a new one.
+</div>
+</li>
+<li>
+<div>
+Any components related to the sunroof were replaced or removed and reinstalled.
+</div>
+</li>
+<table class="Viewer">
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Wind deflector
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Sunroof glass
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Sunroof seal
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Sunroof glass bracket
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Sunroof cables, etc.
+</div>
+</td>
+</tr>
+</table>
+</ul>
+<div>
+To reset the sunroof control unit, do these steps:
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Close the driver's door, and leave it closed until the procedure is complete.
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Turn the ignition switch to LOCK (0).
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Press and hold the tilt switch, and turn the ignition switch to ON (II).
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Release the tilt switch, and turn the ignition switch to LOCK (0).
+</div>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+Repeat steps 3 and 4 four times.
+</div>
+</li>
+</ol>
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+Check if the AUTO OPEN and AUTO CLOSE functions still work. If they still work, the AUTO functions have not been cleared, go back to 
+<a href="javascript:try{parent.Jmp('i010');}catch(e){location.hash='i010';}">Step 1
+</a>
+. If the AUTO functions have been cleared, go to 
+<a href="javascript:try{parent.Jmp('i070');}catch(e){location.hash='i070';}">Step 7
+</a>
+.
+</div>
+</li>
+</ol>
+<a name="i070">
+</a>
+<ol>
+<li value="7">
+<div>
+Press and hold the sunroof open switch for 3 additional seconds after the sunroof is fully opened.
+</div>
+</li>
+</ol>
+<a name="i080">
+</a>
+<ol>
+<li value="8">
+<div>
+Press and hold the sunroof close switch for 3 additional seconds after the sunroof is fully closed (tilted).
+</div>
+</li>
+</ol>
+<a name="i090">
+</a>
+<ol>
+<li value="9">
+<div>
+Confirm that the sunroof control unit is reset by using the sunroof AUTO OPEN and AUTO CLOSE function.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

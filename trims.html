@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trim Level Guide</title>
+<link href="./fonts/fonts.css" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Outfit',sans-serif;background:#fff;color:#2a2a2a;line-height:1.6}
+.wrap{max-width:920px;margin:0 auto;padding:30px 40px 60px}
+h1{font-family:'Rajdhani',sans-serif;font-size:24px;font-weight:700;color:#111;letter-spacing:-0.5px;margin-bottom:4px}
+.subtitle{font-size:13px;color:#999;margin-bottom:24px}
+.setup{background:#f9f9f9;border:1px solid #eee;border-radius:8px;padding:18px 20px;margin-bottom:20px}
+.stitle{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#666;margin-bottom:12px}
+.row{display:flex;gap:12px;align-items:end;flex-wrap:wrap;margin-bottom:10px}
+.fg{display:flex;flex-direction:column;gap:4px}
+.fg label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#888}
+.fg select{font-family:'Outfit',sans-serif;font-size:14px;padding:8px 12px;border:1px solid #ddd;border-radius:6px;outline:none;transition:border .2s;width:280px}
+.fg select:focus{border-color:#cc0000}
+.note{font-size:12px;color:#aaa;margin-bottom:16px;line-height:1.7}
+#out{display:none}
+.trim-cards{display:flex;flex-direction:column;gap:16px}
+.trim-card{border:1px solid #e8e8e8;border-radius:8px;overflow:hidden}
+.trim-hdr{padding:14px 18px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none;transition:background .15s}
+.trim-hdr:hover{background:#fafafa}
+.trim-name{font-family:'Rajdhani',sans-serif;font-size:18px;font-weight:700;color:#222}
+.trim-sub{font-size:12px;color:#999;margin-left:8px;font-weight:400}
+.trim-tag{font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px;text-transform:uppercase;letter-spacing:0.5px}
+.tag-base{background:#f0f0f0;color:#666}
+.tag-mid{background:#eff6ff;color:#2563eb}
+.tag-sport{background:#fef2f2;color:#cc0000}
+.tag-top{background:#f0fdf4;color:#16a34a}
+.trim-body{padding:0 18px 18px;display:none}
+.trim-body.open{display:block}
+.trim-desc{font-size:13px;color:#666;margin-bottom:14px;line-height:1.6}
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.feat-item{display:flex;align-items:baseline;gap:8px;padding:4px 0;font-size:13px;border-bottom:1px solid #f5f5f5}
+.feat-item:nth-child(odd){padding-right:10px}
+.feat-item:nth-child(even){padding-left:10px;border-left:1px solid #f5f5f5}
+.ck{color:#16a34a;font-weight:700;font-size:14px;flex-shrink:0;width:14px}
+.xk{color:#ddd;font-size:14px;flex-shrink:0;width:14px}
+.feat-name{color:#444}
+.feat-name.dim{color:#aaa}
+.sec-title{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#888;margin:14px 0 8px;padding-bottom:4px;border-bottom:1px solid #eee}
+.sec-title:first-of-type{margin-top:0}
+.opt-item{font-size:13px;color:#555;padding:3px 0 3px 24px;position:relative}
+.opt-item::before{content:'+';position:absolute;left:6px;color:#2563eb;font-weight:700}
+.arrow{font-size:12px;color:#999;transition:transform .2s;display:inline-block}
+.arrow.open{transform:rotate(90deg)}
+.eng-item{font-size:13px;color:#555;padding:4px 0}
+.eng-item strong{color:#333}
+.yr-note{font-size:11px;color:#cc0000;font-weight:500}
+@media(max-width:700px){.wrap{padding:20px 16px 40px}.fg select{width:100%}.feat-grid{grid-template-columns:1fr}.feat-item:nth-child(even){padding-left:0;border-left:none}}
+/* ── dark mode (driven by the launcher theme over the bridge) ── */
+html.darkmode body{background:#14171c;color:#c8cdd6}
+html.darkmode h1{color:#e8ebf0}
+html.darkmode .subtitle{color:#7a828e}
+html.darkmode .setup{background:#1b1f26;border-color:#262b33}
+html.darkmode .stitle{color:#9aa2ae}
+html.darkmode .fg label{color:#8a93a0}
+html.darkmode .fg select{background:#232830;border-color:#3a4150;color:#d5dae2}
+html.darkmode .note{color:#6a7280}
+html.darkmode .trim-card{border-color:#262b33}
+html.darkmode .trim-hdr:hover{background:#1a1e25}
+html.darkmode .trim-name{color:#dde2ea}
+html.darkmode .trim-sub{color:#7a828e}
+html.darkmode .tag-base{background:#232830;color:#9aa2ae}
+html.darkmode .tag-mid{background:#16233a;color:#7ab0ff}
+html.darkmode .tag-sport{background:#3a1c1c;color:#ff8080}
+html.darkmode .tag-top{background:#14301e;color:#4ade80}
+html.darkmode .trim-desc{color:#9aa2ae}
+html.darkmode .feat-item{border-color:#20252d}
+html.darkmode .feat-item:nth-child(even){border-left-color:#20252d}
+html.darkmode .xk{color:#3a4150}
+html.darkmode .feat-name{color:#aab1bc}
+html.darkmode .feat-name.dim{color:#5a626e}
+html.darkmode .sec-title{color:#8a93a0;border-color:#262b33}
+html.darkmode .opt-item{color:#9aa2ae}
+html.darkmode .eng-item{color:#9aa2ae}
+html.darkmode .eng-item strong{color:#d5dae2}
+html.darkmode .arrow{color:#7a828e}
+html.darkmode .yr-note{color:#ff8080}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Trim Level Guide</h1>
+<p class="subtitle">Standard equipment and optional extras by trim level — UK market</p>
+
+<div class="setup">
+  <div class="row">
+    <div class="fg"><label>Generation</label><select id="inGen" onchange="render()">
+      <option value="mk7pre">MK7 Pre-Facelift — CL7/CL9/CM1/CM2 (2003–2005)</option>
+      <option value="mk7fl">MK7 Facelift — CL7/CL9/CM1/CM2/CN1/CN2 (2006–2008)</option>
+      <option value="mk8">MK8 — CU1/CU2/CU3/CW1/CW2/CW3 (2009–2010)</option>
+    </select></div>
+  </div>
+</div>
+
+<p class="note"><strong>Note:</strong> Compiled from Honda UK brochures and community knowledge. Equipment varied by exact production date and some items listed as standard were introduced mid-year. Tourer (estate) models share the same trim levels as the Saloon. If your car is missing something listed here, a previous owner may have removed it — or it may be a market/date variation.</p>
+
+<div id="out"></div>
+</div>
+
+<script>
+function S(n){return{s:1,n:n}}  // standard
+function X(n){return{s:0,n:n}}  // not included
+
+var DATA={
+mk7pre:{
+  note:"Pre-facelift MK7. The 2.2 i-CDTi diesel (CM2) was introduced in late 2003/early 2004 depending on market.",
+  engines:[
+    {code:"CL7",name:"2.0 i-VTEC (K20A6)",hp:"155 PS",torque:"192 Nm",fuel:"Petrol"},
+    {code:"CL9",name:"2.4 i-VTEC (K24A3)",hp:"190 PS",torque:"229 Nm",fuel:"Petrol",notes:"Type-S only."},
+    {code:"CM1",name:"2.0 i-VTEC Tourer (K20A6)",hp:"155 PS",torque:"192 Nm",fuel:"Petrol"},
+    {code:"CM2",name:"2.2 i-CDTi (N22A1)",hp:"140 PS",torque:"340 Nm",fuel:"Diesel",notes:"From late 2003/2004."}
+  ],
+  trims:[
+    {name:"SE",tag:"Base",tagClass:"tag-base",years:"2003–2005",
+     desc:"Entry-level trim. Generous standard equipment by mid-2000s standards. Available with 2.0 petrol and 2.2 diesel.",
+     std:["ABS with EBD","Dual front airbags","Front side airbags","Curtain airbags (front & rear)","Manual air conditioning","Electric windows — all four","Heated electric door mirrors","Remote central locking with deadlocks","Immobiliser","CD player with 4 speakers","Tilt & telescopic steering column","Height-adjustable driver's seat","60/40 split-fold rear seats","Front fog lights","Body-coloured door handles","Body-coloured bumpers","15-inch alloy wheels (2.0) / 16-inch (2.2)","3 rear headrests","ISOFIX child seat mounts (x2)","Driver's seatbelt reminder","Thatcham Category 1 alarm"],
+     notStd:["Climate control","Cruise control","Leather seats","Heated seats","Parking sensors","Satellite navigation","Xenon headlights","Sunroof","CD changer","Rain-sensing wipers","Auto headlights","Auto-dimming mirror"],
+     opts:["Metallic paint","Rear parking sensors","CD changer"]
+    },
+    {name:"Sport",tag:"Sport",tagClass:"tag-sport",years:"2003–2005",
+     desc:"Sports suspension, styling, and interior. Available with 2.0 petrol, 2.4 petrol (as Type-S), and 2.2 diesel.",
+     std:["ABS with EBD","Dual front airbags","Front side airbags","Curtain airbags (front & rear)","Dual-zone automatic climate control","Cruise control","Electric windows — all four","Heated electric door mirrors","Remote central locking with deadlocks","Immobiliser","6-disc CD changer with 6 speakers","Leather steering wheel & gear knob","Tilt & telescopic steering column","Height-adjustable driver's seat","60/40 split-fold rear seats","Front fog lights","Body-coloured door handles & bumpers","Sports suspension (firmer dampers, lower ride height)","Sports front bumper & side skirts","Rear spoiler","17-inch alloy wheels","Half-leather sports seats","Aluminium sports pedals","Dark headlining","Rain-sensing wipers","Automatic headlights","Auto-dimming rear-view mirror","3 rear headrests","ISOFIX child seat mounts (x2)","Thatcham Category 1 alarm"],
+     notStd:["Full leather seats","Heated seats","Parking sensors","Satellite navigation","Xenon headlights","Sunroof","Electric driver's seat"],
+     opts:["Metallic paint","Rear parking sensors","Satellite navigation (DVD)"]
+    },
+    {name:"Type-S",tag:"Sport",tagClass:"tag-sport",years:"2003–2005",
+     desc:"Performance flagship. Only available with the 2.4 i-VTEC (CL9) or 2.2 i-CDTi diesel. More aggressive bodykit, larger wheels, and mechanical upgrades over Sport.",
+     std:["ABS with EBD","Dual front airbags","Front side airbags","Curtain airbags (front & rear)","Dual-zone automatic climate control","Cruise control","Electric windows — all four","Heated electric door mirrors","Remote central locking with deadlocks","Immobiliser","6-disc CD changer with 6 speakers","Leather steering wheel & gear knob","Tilt & telescopic steering column","Height-adjustable driver's seat","60/40 split-fold rear seats","Front fog lights","Body-coloured door handles & bumpers","Sports suspension (firmer dampers, lower ride height)","Type-S bodykit (unique front & rear bumpers, deep side skirts)","Rear spoiler","18-inch alloy wheels","Red-stitched leather & Alcantara seats","Aluminium drilled pedals","Dark headlining","Rain-sensing wipers","Automatic headlights","Auto-dimming rear-view mirror","Rear parking sensors","Xenon headlights with auto-levelling","LSD (Limited Slip Differential) — 2.4 petrol only","Uprated brakes","Type-S badging","3 rear headrests","ISOFIX child seat mounts (x2)","Thatcham Category 1 alarm"],
+     notStd:["Full leather seats","Heated seats","Satellite navigation","Sunroof","Electric driver's seat","Front parking sensors"],
+     opts:["Metallic paint","Satellite navigation (DVD)"]
+    },
+    {name:"Executive",tag:"Luxury",tagClass:"tag-top",years:"2003–2005",
+     desc:"The luxury flagship. Full leather, every electrical feature Honda offered on the MK7 at launch. Available with all engines.",
+     std:["ABS with EBD","Dual front airbags","Front side airbags","Curtain airbags (front & rear)","Dual-zone automatic climate control","Cruise control","Electric windows — all four, one-touch driver's","Heated electric door mirrors, auto-folding","Remote central locking with deadlocks","Immobiliser","6-disc CD changer with 6 speakers","Full perforated leather seats","Heated front seats","Electric driver's seat (8-way)","Leather steering wheel & gear knob","Tilt & telescopic steering column","60/40 split-fold rear seats","Front fog lights","Body-coloured door handles & bumpers","16-inch alloy wheels (2.0) / 17-inch (2.2 & 2.4)","Rain-sensing wipers","Automatic headlights","Auto-dimming rear-view mirror","Xenon headlights with auto-levelling & washers","Rear parking sensors","Sunroof","Wood-effect dashboard trim","Puddle lights","Rear privacy glass","3 rear headrests","ISOFIX child seat mounts (x2)","Thatcham Category 1 alarm"],
+     notStd:["Satellite navigation — available as option on later cars"],
+     opts:["Metallic paint","Satellite navigation (DVD) — standard on some later production"]
+    }
+  ]
+},
+mk7fl:{
+  note:"Facelift MK7 (2006–2008). Revised front end, updated interior, new CN chassis codes for Tourer. SE Executive trim added.",
+  engines:[
+    {code:"CL7/CN1",name:"2.0 i-VTEC (K20A6)",hp:"155 PS",torque:"192 Nm",fuel:"Petrol"},
+    {code:"CL9",name:"2.4 i-VTEC (K24A3)",hp:"190 PS",torque:"229 Nm",fuel:"Petrol",notes:"Type-S only."},
+    {code:"CM2/CN2",name:"2.2 i-CDTi (N22A1)",hp:"140 PS",torque:"340 Nm",fuel:"Diesel"}
+  ],
+  trims:[
+    {name:"SE",tag:"Base",tagClass:"tag-base",years:"2006–2008",
+     desc:"Revised entry-level for the facelift. Updated front styling and minor equipment changes.",
+     std:["ABS with EBD","Dual front airbags","Front side airbags","Curtain airbags (front & rear)","Manual air conditioning","Electric windows — all four","Heated electric door mirrors","Remote central locking with deadlocks","Immobiliser","CD player with AUX input & 4 speakers","Tilt & telescopic steering column","Height-adjustable driver's seat","60/40 split-fold rear seats","Front fog lights","Body-coloured door handles & bumpers","16-inch alloy wheels","3 rear headrests","ISOFIX child seat mounts (x2)","Thatcham Category 1 alarm"],
+     notStd:["Climate control","Cruise control","Leather seats","Heated seats","Parking sensors","Satellite navigation","Xenon headlights","Sunroof","CD changer","Rain-sensing wipers","Auto headlights","Auto-dimming mirror"],
+     opts:["Metallic paint","Rear parking sensors"]
+    },
+    {name:"SE Executive",tag:"Mid",tagClass:"tag-mid",years:"2006–2008",
+     desc:"New for the facelift. Bridges the gap between SE and Sport with comfort and convenience features. Became the volume seller.",
+     std:["ABS with EBD","Dual front airbags","Front side airbags","Curtain airbags (front & rear)","Dual-zone automatic climate control","Cruise control","Electric windows — all four","Heated electric door mirrors","Remote central locking with deadlocks","Immobiliser","6-disc CD changer with 6 speakers","Leather steering wheel & gear knob","Tilt & telescopic steering column","Height-adjustable driver's seat","60/40 split-fold rear seats","Front fog lights","Body-coloured door handles & bumpers","16-inch alloy wheels","Rain-sensing wipers","Automatic headlights","Auto-dimming rear-view mirror","Rear privacy glass","3 rear headrests","ISOFIX child seat mounts (x2)","Thatcham Category 1 alarm"],
+     notStd:["Full leather seats","Heated seats","Parking sensors","Satellite navigation","Xenon headlights","Sunroof","Electric driver's seat","Sports suspension"],
+     opts:["Metallic paint","Rear parking sensors","Leather seat pack","Satellite navigation (DVD)","Sunroof"]
+    },
+    {name:"Sport",tag:"Sport",tagClass:"tag-sport",years:"2006–2008",
+     desc:"Facelift Sport with updated bodykit. Available with 2.0 petrol and 2.2 diesel.",
+     std:["ABS with EBD","Dual front airbags","Front side airbags","Curtain airbags (front & rear)","Dual-zone automatic climate control","Cruise control","Electric windows — all four","Heated electric door mirrors","Remote central locking with deadlocks","Immobiliser","6-disc CD changer with 6 speakers","Leather steering wheel & gear knob","Tilt & telescopic steering column","Height-adjustable driver's seat","60/40 split-fold rear seats","Front fog lights","Body-coloured door handles & bumpers","Sports suspension (firmer dampers, lower ride height)","Revised sports front bumper & side skirts","Rear spoiler","17-inch alloy wheels","Half-leather sports seats with contrast stitching","Aluminium sports pedals","Dark headlining","Rain-sensing wipers","Automatic headlights","Auto-dimming rear-view mirror","Rear privacy glass","3 rear headrests","ISOFIX child seat mounts (x2)","Thatcham Category 1 alarm"],
+     notStd:["Full leather seats","Heated seats","Parking sensors","Satellite navigation","Xenon headlights","Sunroof","Electric driver's seat"],
+     opts:["Metallic paint","Rear parking sensors","Satellite navigation (DVD)"]
+    },
+    {name:"Type-S",tag:"Sport",tagClass:"tag-sport",years:"2006–2008",
+     desc:"Facelift performance flagship. 2.4 i-VTEC (CL9) or 2.2 i-CDTi diesel only. Updated bodykit.",
+     std:["ABS with EBD","Dual front airbags","Front side airbags","Curtain airbags (front & rear)","Dual-zone automatic climate control","Cruise control","Electric windows — all four","Heated electric door mirrors","Remote central locking with deadlocks","Immobiliser","6-disc CD changer with 6 speakers","Leather steering wheel & gear knob","Tilt & telescopic steering column","Height-adjustable driver's seat","60/40 split-fold rear seats","Front fog lights","Body-coloured door handles & bumpers","Sports suspension (firmer dampers, lower ride height)","Revised Type-S bodykit (unique bumpers, deep side skirts)","Rear spoiler","18-inch alloy wheels","Red-stitched leather & Alcantara seats","Aluminium drilled pedals","Dark headlining","Rain-sensing wipers","Automatic headlights","Auto-dimming rear-view mirror","Rear parking sensors","Xenon headlights with auto-levelling","LSD (Limited Slip Differential) — 2.4 petrol only","Uprated brakes","Type-S badging","Rear privacy glass","3 rear headrests","ISOFIX child seat mounts (x2)","Thatcham Category 1 alarm"],
+     notStd:["Full leather seats","Heated seats","Satellite navigation","Sunroof","Electric driver's seat","Front parking sensors"],
+     opts:["Metallic paint","Satellite navigation (DVD)"]
+    },
+    {name:"Executive",tag:"Luxury",tagClass:"tag-top",years:"2006–2008",
+     desc:"Facelift luxury flagship. Full leather, every comfort feature. Satellite navigation became standard on later production.",
+     std:["ABS with EBD","Dual front airbags","Front side airbags","Curtain airbags (front & rear)","Dual-zone automatic climate control","Cruise control","Electric windows — all four, one-touch driver's","Heated electric door mirrors, auto-folding","Remote central locking with deadlocks","Immobiliser","6-disc CD changer with 6 speakers","Full perforated leather seats","Heated front seats","Electric driver's seat (8-way)","Leather steering wheel & gear knob","Tilt & telescopic steering column","60/40 split-fold rear seats","Front fog lights","Body-coloured door handles & bumpers","17-inch alloy wheels","Rain-sensing wipers","Automatic headlights","Auto-dimming rear-view mirror","Xenon headlights with auto-levelling & washers","Rear parking sensors","Front parking sensors — later production","Sunroof","Wood-effect dashboard trim","Puddle lights","Rear privacy glass","Satellite navigation (DVD) — later production","3 rear headrests","ISOFIX child seat mounts (x2)","Thatcham Category 1 alarm"],
+     notStd:[],
+     opts:["Metallic paint"]
+    }
+  ]
+},
+mk8:{
+  note:"8th generation (2009–2010 EU). Significant step up in standard equipment across all trims. ADAS features (ACC, LKAS, CMBS) only available on the 2.2 i-DTEC diesel.",
+  engines:[
+    {code:"CU1/CW1",name:"2.0 i-VTEC (R20A3)",hp:"156 PS",torque:"192 Nm",fuel:"Petrol"},
+    {code:"CU2/CW2",name:"2.4 i-VTEC (K24Z3)",hp:"201 PS",torque:"234 Nm",fuel:"Petrol",notes:"Limited availability. Some markets only."},
+    {code:"CU3/CW3",name:"2.2 i-DTEC (N22B1)",hp:"150 PS",torque:"350 Nm",fuel:"Diesel",notes:"UK best-seller. Required for ADAS options."}
+  ],
+  trims:[
+    {name:"ES",tag:"Base",tagClass:"tag-base",years:"2009–2010",
+     desc:"Entry-level MK8. Honda raised the standard equipment bar significantly — climate control, cruise control, Bluetooth, and VSA are all standard from base.",
+     std:["ABS with EBD & Brake Assist","VSA (Vehicle Stability Assist) with traction control","Hill Start Assist","Dual front airbags","Front side airbags","Curtain airbags (front & rear)","Dual-zone automatic climate control","Cruise control","Electric windows — all four, one-touch","Heated electric door mirrors","Remote central locking with deadlocks","Immobiliser","Speed-sensitive power steering","CD/MP3 player with AUX input & 6 speakers","USB port","Bluetooth hands-free telephone","Tilt & telescopic steering column","Height-adjustable driver's seat","60/40 split-fold rear seats","Front fog lights","Body-coloured door handles & bumpers","16-inch alloy wheels","Rain-sensing wipers","Automatic headlights","3 rear headrests","ISOFIX child seat mounts (x2)","Thatcham Category 1 alarm"],
+     notStd:["Leather seats","Heated seats","Satellite navigation","Rearview camera","Parking sensors","Xenon headlights","Sunroof","Smart keyless entry","Electric driver's seat","Auto-dimming mirror","ACC","LKAS","CMBS"],
+     opts:["Metallic paint","Rear parking sensors"]
+    },
+    {name:"ES GT",tag:"Mid",tagClass:"tag-mid",years:"2009–2010",
+     desc:"Adds Honda's satellite navigation, rearview camera, and smart entry. The sweet spot for technology vs price.",
+     std:["ABS with EBD & Brake Assist","VSA (Vehicle Stability Assist) with traction control","Hill Start Assist","Dual front airbags","Front side airbags","Curtain airbags (front & rear)","Dual-zone automatic climate control","Cruise control","Electric windows — all four, one-touch","Heated electric door mirrors","Remote central locking with deadlocks","Immobiliser","Speed-sensitive power steering","CD/MP3 player with AUX input & 8 speakers","USB port","Bluetooth hands-free telephone","Honda Satellite Navigation with 7-inch touchscreen","Rearview camera","Rear parking sensors","Smart keyless entry & push-button start","Auto-dimming rear-view mirror","Tilt & telescopic steering column","Height-adjustable driver's seat","60/40 split-fold rear seats","Front fog lights","Body-coloured door handles & bumpers","16-inch alloy wheels","Rain-sensing wipers","Automatic headlights","3 rear headrests","ISOFIX child seat mounts (x2)","Thatcham Category 1 alarm"],
+     notStd:["Leather seats","Heated seats","Xenon headlights","Sunroof","Electric driver's seat","Front parking sensors","ACC","LKAS","CMBS"],
+     opts:["Metallic paint","Leather pack","ADAS pack: ACC + LKAS + CMBS — 2.2 i-DTEC only"]
+    },
+    {name:"Type-S",tag:"Sport",tagClass:"tag-sport",years:"2009–2010",
+     desc:"Sports-focused trim. Firmer suspension, aggressive bodykit, 18-inch wheels. Available with 2.0 petrol and 2.2 diesel.",
+     std:["ABS with EBD & Brake Assist","VSA (Vehicle Stability Assist) with traction control","Hill Start Assist","Dual front airbags","Front side airbags","Curtain airbags (front & rear)","Dual-zone automatic climate control","Cruise control","Electric windows — all four, one-touch","Heated electric door mirrors","Remote central locking with deadlocks","Immobiliser","Speed-sensitive power steering","CD/MP3 player with AUX input & 8 speakers","USB port","Bluetooth hands-free telephone","Honda Satellite Navigation with 7-inch touchscreen","Rearview camera","Rear parking sensors","Smart keyless entry & push-button start","Auto-dimming rear-view mirror","Tilt & telescopic steering column","Height-adjustable driver's seat","60/40 split-fold rear seats","Front fog lights","Body-coloured door handles & bumpers","Sports suspension (lower, firmer damping)","Type-S bodykit (unique bumpers, side skirts)","18-inch alloy wheels","Half-leather & Alcantara sports seats","Aluminium sports pedals","Paddle shifters (automatic only)","Rear spoiler","Dark chrome interior trim","Rain-sensing wipers","Automatic headlights","3 rear headrests","ISOFIX child seat mounts (x2)","Thatcham Category 1 alarm"],
+     notStd:["Full leather seats","Heated seats","Xenon headlights","Sunroof","Electric driver's seat","Front parking sensors","ACC","LKAS","CMBS"],
+     opts:["Metallic paint","Xenon headlight pack"]
+    },
+    {name:"EX",tag:"Luxury",tagClass:"tag-top",years:"2009–2010",
+     desc:"Full luxury specification. Leather, xenon headlights, front and rear parking sensors, electric seat.",
+     std:["ABS with EBD & Brake Assist","VSA (Vehicle Stability Assist) with traction control","Hill Start Assist","Dual front airbags","Front side airbags","Curtain airbags (front & rear)","Dual-zone automatic climate control","Cruise control","Electric windows — all four, one-touch","Heated electric door mirrors, auto-folding","Remote central locking with deadlocks","Immobiliser","Speed-sensitive power steering","CD/MP3 player with AUX input & 8 speakers","USB port","Bluetooth hands-free telephone","Honda Satellite Navigation with 7-inch touchscreen","Rearview camera","Front parking sensors","Rear parking sensors","Smart keyless entry & push-button start","Auto-dimming rear-view mirror","Full leather seats","Heated front seats","Electric driver's seat (8-way)","Leather steering wheel & gear knob","Tilt & telescopic steering column","60/40 split-fold rear seats","Front fog lights","Body-coloured door handles & bumpers","Xenon HID headlights with auto-levelling & washers","17-inch alloy wheels","Dual exhaust finisher","Ambient interior lighting","Rain-sensing wipers","Automatic headlights","3 rear headrests","ISOFIX child seat mounts (x2)","Thatcham Category 1 alarm"],
+     notStd:["Sunroof","Sports suspension","ACC","LKAS","CMBS"],
+     opts:["Metallic paint","Sunroof","ADAS pack: ACC + LKAS + CMBS — 2.2 i-DTEC only"]
+    },
+    {name:"EX GT",tag:"Luxury",tagClass:"tag-top",years:"2009–2010",
+     desc:"The absolute top of the range. Adds sunroof and Honda's advanced driver assistance systems where available.",
+     std:["ABS with EBD & Brake Assist","VSA (Vehicle Stability Assist) with traction control","Hill Start Assist","Dual front airbags","Front side airbags","Curtain airbags (front & rear)","Dual-zone automatic climate control","Cruise control","Electric windows — all four, one-touch","Heated electric door mirrors, auto-folding","Remote central locking with deadlocks","Immobiliser","Speed-sensitive power steering","CD/MP3 player with AUX input & 8 speakers","USB port","Bluetooth hands-free telephone","Honda Satellite Navigation with 7-inch touchscreen","Rearview camera","Front parking sensors","Rear parking sensors","Smart keyless entry & push-button start","Auto-dimming rear-view mirror","Full leather seats","Heated front seats","Electric driver's seat (8-way)","Leather steering wheel & gear knob","Tilt & telescopic steering column","60/40 split-fold rear seats","Front fog lights","Body-coloured door handles & bumpers","Xenon HID headlights with auto-levelling & washers","18-inch alloy wheels","Dual exhaust finisher","Ambient interior lighting","Sunroof","Active front headrests","Adaptive Cruise Control (ACC) — 2.2 i-DTEC only","Lane Keeping Assist System (LKAS) — 2.2 i-DTEC only","Collision Mitigation Braking System (CMBS) — 2.2 i-DTEC only","Rain-sensing wipers","Automatic headlights","3 rear headrests","ISOFIX child seat mounts (x2)","Thatcham Category 1 alarm"],
+     notStd:[],
+     opts:["Metallic paint"]
+    }
+  ]
+}
+};
+
+function render(){
+  var gen=document.getElementById('inGen').value;
+  var d=DATA[gen];if(!d)return;
+  var h='';
+
+  if(d.note)h+='<p class="note" style="margin-bottom:20px"><strong>'+d.note+'</strong></p>';
+
+  h+='<div class="setup"><div class="stitle">Available Engines</div>';
+  for(var i=0;i<d.engines.length;i++){
+    var e=d.engines[i];
+    h+='<div class="eng-item"><strong>'+e.code+'</strong> — '+e.name+' &middot; '+e.hp+' &middot; '+e.torque+' &middot; '+e.fuel;
+    if(e.notes)h+=' &middot; <span style="color:#888;font-size:12px">'+e.notes+'</span>';
+    h+='</div>';
+  }
+  h+='</div>';
+
+  h+='<div class="trim-cards">';
+  for(var i=0;i<d.trims.length;i++){
+    var t=d.trims[i];
+    h+='<div class="trim-card">';
+    h+='<div class="trim-hdr" onclick="tog('+i+')"><div><span class="trim-name">'+t.name+'</span><span class="trim-sub">'+t.years+'</span></div><div style="display:flex;align-items:center;gap:10px"><span class="trim-tag '+t.tagClass+'">'+t.tag+'</span><span class="arrow" id="a_'+i+'">&#9654;</span></div></div>';
+    h+='<div class="trim-body" id="b_'+i+'">';
+    h+='<div class="trim-desc">'+t.desc+'</div>';
+
+    h+='<div class="sec-title">Standard Equipment ('+t.std.length+' items)</div>';
+    h+='<div class="feat-grid">';
+    for(var j=0;j<t.std.length;j++)h+='<div class="feat-item"><span class="ck">&#10003;</span><span class="feat-name">'+t.std[j]+'</span></div>';
+    h+='</div>';
+
+    if(t.notStd.length>0){
+      h+='<div class="sec-title">Not Included at This Trim</div>';
+      h+='<div class="feat-grid">';
+      for(var j=0;j<t.notStd.length;j++)h+='<div class="feat-item"><span class="xk">&#10007;</span><span class="feat-name dim">'+t.notStd[j]+'</span></div>';
+      h+='</div>';
+    }
+
+    if(t.opts.length>0){
+      h+='<div class="sec-title">Optional Extras</div>';
+      for(var j=0;j<t.opts.length;j++)h+='<div class="opt-item">'+t.opts[j]+'</div>';
+    }
+    h+='</div></div>';
+  }
+  h+='</div>';
+
+  document.getElementById('out').innerHTML=h;
+  document.getElementById('out').style.display='block';
+}
+
+function tog(i){var b=document.getElementById('b_'+i);var a=document.getElementById('a_'+i);if(b)b.classList.toggle('open');if(a)a.classList.toggle('open')}
+
+render();
+</script>
+<script>
+(function(){try{
+  function T(d){document.documentElement.classList.toggle('darkmode',!!d)}
+  window.addEventListener('message',function(ev){var d=ev.data;if(d&&d.esm==='theme')T(d.dark)});
+  try{parent.postMessage({esm:'themehello'},'*')}catch(e){}
+}catch(e){}})();
+</script>
+</body>
+</html>

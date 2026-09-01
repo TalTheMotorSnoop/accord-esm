@@ -1,0 +1,31 @@
+with(document) {
+write("<div id=\"group4\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:959px;\">");
+write("<div id=\"rect4\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:959px;\">");
+write("<img id=\"img4\" name=\"PrtImgId\" src=\"../img/TL19EAPJ32100000000DAAD04.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:959px;border-color:#ffffff\">");
+write("<p id=\"p4_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:316px;top:89px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>LIGHTS-ON INDICATOR<br></b></nobr>");
+write("</p>");
+write("<p id=\"p4_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:393px;top:134px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>HIGH BEAM INDICATOR<br></b></nobr>");
+write("</p>");
+write("<p id=\"p4_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:222px;top:736px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>DAYTIME RUNNING LIGHTS RELAY<br><a href=\"javascript:CtsProc('0','000000000003760','i000')\"></b>Test,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p4_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:60px;top:788px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>DRIVER'S MICU<br>(Built into the driver's under-dash fuse/relay box)<br><a href=\"javascript:CtsProc('0','000000000000399','i000')\"></b>Input Test,</a><br> in the Shop Manual, P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000000549','i000')\">Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p4_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:554px;top:756px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>PASSENGER'S MICU<br>(Built into the passenger's under-dash fuse/relay box)<br><a href=\"javascript:CtsProc('0','000000000000399','iT02')\"></b>Input Test,</a><br> in the Shop Manual, P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000000550','i000')\">Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p4_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:327px;top:658px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>BRAKE PEDAL POSITION SWITCH<br><a href=\"javascript:CtsProc('0','000000000000402','i000')\"></b>Test,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p4_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:3px;top:931px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b></b>LHD model is shown, RHD model is similar.<br></nobr>");
+write("</p>");
+write("<p id=\"p4_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:264px;top:22px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>COMBINATION LIGHT SWITCH<br><a href=\"javascript:CtsProc('0','000000000000397','i000')\"></b>Test/Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

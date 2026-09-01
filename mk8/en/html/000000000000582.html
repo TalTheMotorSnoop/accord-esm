@@ -1,0 +1,451 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E00K70900000000BBAT20
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+How to Troubleshoot the CMBS
+</div>
+<div>
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG01">
+</a>
+<div class="servinfosub_title">
+<b>
+CMBS Indicator
+</b>
+</div>
+<div>
+If the system is OK, the CMBS indicator goes off 2 seconds after turning the ignition switch to ON (II). The CMBS indicator comes on when the adaptive cruise control (ACC) unit detects a problem in the system.
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+The CMBS indicator only indicates its system problems.
+</div>
+</li>
+<li>
+<div>
+The CMBS works with related systems such as the VSA system. If these related systems have a problem, the CMBS does not operate. In this case, the CMBS indicator and the related system indicator come on.
+</div>
+</li>
+</ul>
+<div>
+When a problem is detected by the self-diagnostic function, the CMBS stops operating, turns on the CMBS indicator, indicates the problem on the MID, and stores the DTC.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001561','1');">
+<img src="../tn/TL19E00K70900000000BBAD04.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00K70900000000BBAD04_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG02">
+</a>
+<div class="servinfosub_title">
+<b>
+CMBS OFF Switch
+</b>
+</div>
+<div>
+Press and hold the CMBS OFF switch for at least a second to turn the CMBS off and on.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG03">
+</a>
+<div class="servinfosub_title">
+<b>
+CMBS Indication
+</b>
+</div>
+<ul type="disc">
+<li>
+<div>
+When the system is activated, the word ‘‘BRAKE'' is indicated on the MID and the warning buzzer sounds.
+</div>
+</li>
+<li>
+<div>
+If the system stops operating because of a problem, the MID indicates the problem.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG04">
+</a>
+<div class="servinfosub_title">
+<b>
+Adaptive Cruise Control (ACC) Unit
+</b>
+</div>
+<div>
+The ACC unit controls the brake and warning when the system recognizes the danger of a collision.
+</div>
+<div>
+The ACC unit has a self-diagnostic function. If the system detects a problem, it stops the CMBS, and turns on the CMBS indicator.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG05">
+</a>
+<div class="servinfosub_title">
+<b>
+CMBS Initial Check
+</b>
+</div>
+<div>
+The ACC unit turns on the CMBS indicator if the CMBS initial check is not completed.
+</div>
+<div>
+NOTE: For proper CMBS operation, if the ACC unit or the VSA modulator-control unit is replaced, 
+<a href="javascript:CtsProc('0','000000000000596','i000')">
+do the CMBS initial check incomplete troubleshooting (DTC 100).
+</a>
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG06">
+</a>
+<div class="servinfosub_title">
+<b>
+Millimeter Wave Radar
+</b>
+</div>
+<div>
+The millimeter wave radar recognizes the position of the vehicle running ahead and detects the two vehicles speed differential.
+</div>
+<div>
+The ACC unit receives this information from the millimeter wave radar.
+</div>
+<div>
+The millimeter wave radar also has an error detect function, and sends a signal to the ACC unit if an error is detected.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG07">
+</a>
+<div class="servinfosub_title">
+<b>
+How to Retrieve DTCs
+</b>
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+With the ignition switch to LOCK (0), connect the HDS to the data link connector (DLC) (A) under the left side of the dashboard.
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Turn the ignition switch to ON (II).
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Make sure the HDS communicates with the vehicle and the ACC unit. If it does not communicate, 
+<a href="javascript:CtsProc('0','000000000001600','i000')">
+troubleshoot the DLC circuit.
+</a>
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Follow the prompts on the HDS to display the DTC(s) on the screen. After determining the DTC, refer to the DTC Troubleshooting.
+</div>
+<div>
+NOTE: See the HDS Help menu for specific instructions.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001567','1');">
+<img src="../tn/TL19E00K70900000000BBAD05.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00K70900000000BBAD05_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG08">
+</a>
+<div class="servinfosub_title">
+<b>
+How to Clear DTCs
+</b>
+</div>
+<div>
+NOTE: You cannot clear the DTCs manually.
+</div>
+<a name="i210">
+</a>
+<ol>
+<li value="1">
+<div>
+With the ignition switch to LOCK (0), connect the HDS to the DLC (A) under the left side of the dashboard.
+</div>
+</li>
+</ol>
+<a name="i220">
+</a>
+<ol>
+<li value="2">
+<div>
+Turn the ignition switch to ON (II).
+</div>
+</li>
+</ol>
+<a name="i230">
+</a>
+<ol>
+<li value="3">
+<div>
+Make sure the HDS communicates with the vehicle and the ACC unit. If it does not communicate, 
+<a href="javascript:CtsProc('0','000000000001600','i000')">
+troubleshoot the DLC circuit.
+</a>
+</div>
+</li>
+</ol>
+<a name="i240">
+</a>
+<ol>
+<li value="4">
+<div>
+Clear the DTC(s) by following the screen prompts on the HDS.
+</div>
+<div>
+NOTE: See the HDS Help menu for specific instructions.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001568','1');">
+<img src="../tn/TL19E00K70900000000BBAD06.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00K70900000000BBAD06_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:475px; height:898px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:475px;height:898px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E80R41100000000YDAD03.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:475px;height:898px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:2px;top:17px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>Unit: mm (in.)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:109px;top:48px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>Roof Panel<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:207px;top:80px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>5.5 (0.22)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:290px;top:88px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>1 (0.04)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:331px;top:49px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>Tailgate Spoiler<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:167px;top:719px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>5 (0.2)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:233px;top:718px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>0.7<br>(0.03)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:316px;top:687px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>Tailgate<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:50px;top:726px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>Outer Panel<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

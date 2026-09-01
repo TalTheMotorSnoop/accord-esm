@@ -1,0 +1,368 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+<title>SEA5E1DK72100092646FAAT00</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+var   totalImg = 1;
+var   dispNum=1;
+function prOnLoadProc() {
+	_prInitImageInfo(100);
+	_prResizeImage(100/100);
+	divBody.style.display = "block"
+	return;
+}
+function PrintFunc()
+{
+	divBody.style.display = "none";
+	var  img_hei = _prResizeImage(67/100);
+	divBody.style.display = "block";
+	var  graphTd = document.getElementById("graphTd");
+	if(graphTd.width == "100%")
+	{
+      var   current_pos;
+      var   img_pos = 0;
+         current_pos = graphTd.offsetTop;
+		var pageCnt = Math.floor(current_pos/950);
+		var img_pos = current_pos - (pageCnt*950);
+		if(img_pos+img_hei > 950)
+		{
+			var  pageElement = document.getElementById("page_onoff");
+			if(pageElement != null)
+			{
+				pageElement.style.display = "block";
+			}
+		}
+	}
+	window.print();
+	divBody.style.display = "none";
+	_prResizeImage(100/100);
+	divBody.style.display = "block";
+	window.scrollTo(0,0);
+}
+function BackFunc()
+{
+	window.location.replace("ZOOM000000000002170.html");
+}
+function CloseFunc()
+{
+	window.close();
+}
+function JumpFunc(strJump)
+{
+	window.location.replace(strJump);
+}
+//-->
+</script>
+<body onLoad="prOnLoadProc();" style="font-family:sans-serif;">
+<div id="divBody" style="display:none">
+<div>
+<div style="position:absolute;right=10;">
+<input type="image" src="../img/PRINT_PREVIEW.PNG" onClick="PrintFunc()">
+<input type="image" src="../img/GL_PREV.PNG" onClick="BackFunc()">
+<input type="image" src="../img/GL_NEXT_DISABLE.PNG" onClick="NextFunc()" disabled>
+<input type="image" src="../img/GL_CANCEL.PNG" onClick="CloseFunc()">
+</div><br><br>
+<hr width="100%" size="2" color="black">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i180">
+</a>
+<ol>
+<li value="18">
+<div>
+Check for continuity between ECM/PCM connector terminal B11 and body ground.
+</div>
+</li>
+</ol>
+<div style="text-indent:40px;">
+<i>
+Is there continuity?
+</i>
+</div>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Repair short in the wire between the ECM/PCM (B11) and the VTEC oil pressure switch, then go to
+<a href="javascript:JumpFunc('ZOOM000000000002171.html#i180')">Step 18
+</a>
+.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to
+<a href="javascript:JumpFunc('ZOOM000000000002171.html#i270')">Step 27
+</a>
+.
+</div>
+</td>
+</tr>
+</table>
+<a name="i190">
+</a>
+<ol>
+<li value="19">
+<div>
+Reconnect the VTEC oil pressure switch 2P connector.
+</div>
+</li>
+</ol>
+<a name="i200">
+</a>
+<ol>
+<li value="20">
+<div>
+Reconnect ECM/PCM connector B (24P).
+</div>
+</li>
+</ol>
+<a name="i210">
+</a>
+<ol>
+<li value="21">
+<div>
+Turn the ignition switch ON (II).
+</div>
+</li>
+</ol>
+<a name="i220">
+</a>
+<ol>
+<li value="22">
+<div>
+Reset the ECM/PCM with the HDS.
+</div>
+</li>
+</ol>
+<a name="i230">
+</a>
+<ol>
+<li value="23">
+<div>
+<a href="javascript:opener.top.Cts('000000000000757','i000')">
+Do the ECM/PCM idle learn procedure.
+</a>
+</div>
+</li>
+</ol>
+<a name="i240">
+</a>
+<ol>
+<li value="24">
+<div>
+Do the VTEC TEST in the INSPECTION MENU with the HDS.
+</div>
+</li>
+</ol>
+<a name="i250">
+</a>
+<ol>
+<li value="25">
+<div>
+Check for Temporary DTCs or DTCs in the DTCs MENU with the HDS.
+</div>
+</li>
+</ol>
+<div style="text-indent:40px;">
+<i>
+Are any Temporary DTCs or DTCs indicated?
+</i>
+</div>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+If DTC P2646 indicated, check for poor connections or loose terminals at the VTEC oil pressure switch, the VTEC solenoid valve and the ECM/PCM, then go to
+<a href="javascript:JumpFunc('ZOOM000000000002170.html#i010')">Step 1
+</a>
+. If any other Temporary DTCs or DTCs are indicated, go to the indicated DTC's troubleshooting.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to
+<a href="javascript:JumpFunc('ZOOM000000000002171.html#i260')">Step 26
+</a>
+.
+</div>
+</td>
+</tr>
+</table>
+<a name="i260">
+</a>
+<ol>
+<li value="26">
+<div>
+Monitor the OBD STATUS for DTC P2646 in the DTCs MENU with the HDS.
+</div>
+</li>
+</ol>
+<div style="text-indent:40px;">
+<i>
+Does the screen indicate PASSED?
+</i>
+</div>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Troubleshooting is complete.■
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+If the screen indicates FAILED, go to
+<a href="javascript:JumpFunc('ZOOM000000000002170.html#i010')">Step 1
+</a>
+ and recheck. If the screen indicates NOT COMPLETED, go to
+<a href="javascript:JumpFunc('ZOOM000000000002171.html#i240')">Step 24
+</a>
+ and recheck.
+</div>
+</td>
+</tr>
+</table>
+<a name="i270">
+</a>
+<ol>
+<li value="27">
+<div>
+<a href="javascript:opener.top.Cts('000000000001619','iG11')">
+Update the ECM/PCM if it does not have the latest software, or substitute a known-good ECM/PCM.
+</a>
+</div>
+</li>
+</ol>
+<a name="i280">
+</a>
+<ol>
+<li value="28">
+<div>
+Do the VTEC TEST in the INSPECTION MENU with the HDS.
+</div>
+</li>
+</ol>
+<a name="i290">
+</a>
+<ol>
+<li value="29">
+<div>
+Check for Temporary DTCs or DTCs in the DTCs MENU with the HDS.
+</div>
+</li>
+</ol>
+<div style="text-indent:40px;">
+<i>
+Are any temporary DTCs or DTCs indicated?
+</i>
+</div>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+If DTC P2646 is indicated, check for poor connections or loose terminals at the VTEC oil pressure switch, the VTEC solenoid valve and the ECM/PCM, then go to
+<a href="javascript:JumpFunc('ZOOM000000000002170.html#i010')">Step 1
+</a>
+. If any other Temporary DTCs or DTCs are indicated, go to the indicated DTC's troubleshooting.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+If the ECM/PCM was updated, troubleshooting is complete.
+<a href="javascript:opener.top.Cts('000000000001619','iG09')">
+If the ECM/PCM was substituted, replace the original ECM/PCM.
+</a>
+■
+</div>
+</td>
+</tr>
+</table>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div style="display:none;" id="page_onoff">
+<div style="page-break-after:always;">
+</div>
+</div>
+<span style="display:block" id="imgId1">
+<div>
+<script src="../js/SEA3E0CK72100092646FAAD02_1.js">
+</script>
+</div>
+</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

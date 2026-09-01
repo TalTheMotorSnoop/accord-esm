@@ -1,0 +1,34 @@
+with(document) {
+write("<div id=\"group2\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:991px;\">");
+write("<div id=\"rect2\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:991px;\">");
+write("<img id=\"img2\" name=\"PrtImgId\" src=\"../img/TL19E9PJ54300000000DAAD02.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:991px;border-color:#ffffff\">");
+write("<p id=\"p2_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:618px;top:211px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>WINDSHIELD WASHER NOZZLES<br><a href=\"javascript:CtsProc('0','000000000003013','i000')\"></b>Adjustment,</a><br> in the Shop Manual, P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000003012','i000')\">Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p2_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:395px;top:858px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>HEADLIGHT WASHER MOTOR<br><a href=\"javascript:CtsProc('0','000000000000559','i000')\"></b>Test,</a><br> in the Shop Manual, P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000000558','i000')\">Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p2_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:669px;top:797px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>WASHER MOTOR<br><a href=\"javascript:CtsProc('0','000000000000559','i000')\"></b>Test,</a><br> in the Shop Manual, P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000000558','i000')\">Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p2_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:171px;top:787px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>WASHER RESERVOIR<br><a href=\"javascript:CtsProc('0','000000000000558','i000')\"></b>Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p2_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:490px;top:16px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>AUTOMATIC LIGHTING/<br>RAIN SENSOR<br><a href=\"javascript:CtsProc('0','000000000000400','i000')\"></b>Input Test,</a><br> in the Shop Manual, P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000000401','i000')\">Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p2_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:762px;top:679px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>HEADLIGHT WASHER<br>NOZZLES<br><a href=\"javascript:CtsProc('0','000000000000560','i000')\"></b>Replacement,<br></a><br> in the Shop Manual,<br> P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p2_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:617px;top:130px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>HEADLIGHT WASHER<br>SWITCH<br><a href=\"javascript:CtsProc('0','000000000000557','i000')\"></b>Test/Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p2_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:3px;top:964px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b></b>LHD model is shown, RHD model is similar.<br></nobr>");
+write("</p>");
+write("<p id=\"p2_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:38px;top:657px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>WASHER TUBES<br><a href=\"javascript:CtsProc('0','000000000003493','i000')\"></b>Replacement,</a><br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

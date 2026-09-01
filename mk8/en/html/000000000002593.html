@@ -1,0 +1,672 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E50D14300014701MAAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+Brake Booster Inspection
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<div class="tool_list_title">
+<b>
+Special Tools Required
+</b>
+</div>
+<div>
+<a href="javascript:PrtProc('0','ZOOM000000000014175')">
+<br>
+Pressure gauge joint pipes, 12 x 1.0 mm
+<br>
+  07HAK-SG00110
+</a>
+</div>
+<div>
+<a href="javascript:PrtProc('0','ZOOM000000000014176')">
+<br>
+Pressure gauges set
+<br>
+ 07YAJ-0010410
+</a>
+</div>
+<div>
+<a href="javascript:PrtProc('0','ZOOM000000000014177')">
+<br>
+Vacuum gauge
+<br>
+ 07YAJ-0010610
+</a>
+</div>
+<div>
+<a href="javascript:PrtProc('0','ZOOM000000000014178')">
+<br>
+Attachments
+<br>
+ 07410-5790102
+</a>
+</div>
+<div>
+<a href="javascript:PrtProc('0','ZOOM000000000014179')">
+<br>
+Tube joint adapter
+<br>
+ 07410-5790503
+</a>
+</div>
+<a name="iR01">
+</a>
+<div class="procedure_sub_title">
+<b>
+Leak Test
+</b>
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Install the vacuum gauge (A) between the brake booster and check valve.
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Start the engine, adjust the engine speed with the accelerator pedal so that the vacuum gauge readings show 66.7 kPa (500 mmHg, 19.7 in.Hg), then stop the engine.
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Read the vacuum gauge.
+</div>
+<div>
+If the vacuum reading decreases 2.7 kPa (20 mmHg, 0.8 in.Hg) or more after 30 seconds, check following parts for leaks.
+</div>
+<ul type="disc">
+<li>
+<div>
+Check valve
+</div>
+</li>
+<li>
+<div>
+Vacuum hose, pipe
+</div>
+</li>
+<li>
+<div>
+Seals
+</div>
+</li>
+<li>
+<div>
+Brake booster
+</div>
+</li>
+<li>
+<div>
+Master cylinder
+</div>
+</li>
+</ul>
+<div>
+NOTE: Do not try to disassemble the brake booster. Replace the brake booster as an assembly with a new one.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000007132','1');">
+<img src="../tn/TL19E50D14300014701MAAD01.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E50D14300014701MAAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR02">
+</a>
+<div class="procedure_sub_title">
+<b>
+Function Test
+</b>
+</div>
+<a name="i210">
+</a>
+<ol>
+<li value="1">
+<div>
+Install the vacuum gauge as same as the leak test.
+</div>
+</li>
+</ol>
+<a name="i220">
+</a>
+<ol>
+<li value="2">
+<div>
+Connect the oil pressure gauges (A) to the master cylinder using the attachments pressure gauge joint pipes as shown.
+</div>
+</li>
+</ol>
+<a name="i230">
+</a>
+<ol>
+<li value="3">
+<div>
+Bleed air through the valves (B).
+</div>
+</li>
+</ol>
+<a name="i240">
+</a>
+<ol>
+<li value="4">
+<div>
+Start the engine, and let it idle.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000007133','1');">
+<img src="../tn/TL19E50D14300014701MAAD02.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E50D14300014701MAAD02_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR02">
+</a>
+<a name="i250">
+</a>
+<ol>
+<li value="5">
+<div>
+Have an assistant depress the brake pedal with a 98 N (10 kgf, 22 lbf) and 294 N (30 kgf, 66 lbf) of pressure measuring with a commercially available pressure gauge (A).
+</div>
+</li>
+</ol>
+<a name="i260">
+</a>
+<ol>
+<li value="6">
+<div>
+The following pressures should be observed at the pressure gauges in each vacuum.
+</div>
+<div>
+<br>
+<div class="table_title">
+<b>
+Except KQ model
+</b>
+</div>
+<br>
+<table width="87%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="35%">
+<col width="30%">
+<col width="35%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Vacuum booster Vacuum kPa (mmHg, in.Hg)
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Brake pedal pressure N (kgf, lbf)
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Master cylinder oil pressure kPa (kgf/cm
+<sup>
+2
+</sup>
+, psi)
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" rowspan="2" align="center">
+<div>
+0 (0, 0)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+98 (10, 22)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+0 (0, 0)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+294 (30, 66)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1,539 (15.7, 223)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" rowspan="2" align="center">
+<div>
+66.7 (500, 19.7)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+98 (10, 22)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+4,988 (50.9, 723)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+294 (30, 66)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+9,055 (92.3, 1,313)
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<div>
+<br>
+<div class="table_title">
+<b>
+KQ model
+</b>
+</div>
+<br>
+<table width="87%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="35%">
+<col width="30%">
+<col width="35%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Vacuum booster Vacuum kPa (mmHg, in.Hg)
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Brake pedal pressure N (kgf, lbf)
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Master cylinder oil pressure kPa (kgf/cm
+<sup>
+2
+</sup>
+, psi)
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" rowspan="2" align="center">
+<div>
+0 (0, 0)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+98 (10, 22)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+0 (0, 0)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+294 (30, 66)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1,754 (17.9, 254)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" rowspan="2" align="center">
+<div>
+66.7 (500, 19.7)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+98 (10, 22)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+6,399 (65.3, 928)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+294 (30, 66)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+11,809 (120.4, 1,713)
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</li>
+</ol>
+<a name="i270">
+</a>
+<ol>
+<li value="7">
+<div>
+Inspect the master cylinder for leaks if the readings do not fall within the limits shown above.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000007134','1');">
+<img src="../tn/TL19E50D14300014701MAAD03.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E50D14300014701MAAD03_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR03">
+</a>
+<div class="procedure_sub_title">
+<b>
+Booster Check Valve Test
+</b>
+</div>
+<a name="i410">
+</a>
+<ol>
+<li value="1">
+<div>
+Disconnect the brake booster vacuum hose (A) at the booster. The check valve (B) is built into the hose.
+</div>
+<div>
+NOTE: If the check valve is faulty, replace the brake booster vacuum hose/check valve as an assembly.
+</div>
+</li>
+</ol>
+<a name="i420">
+</a>
+<ol>
+<li value="2">
+<div>
+Start the engine, and let it idle. There should be vacuum available. If no vacuum is available, the check valve is not working properly. Replace the brake booster vacuum hose and check valve, and retest.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000007135','1');">
+<img src="../tn/TL19E50D14300014701MAAD04.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E50D14300014701MAAD04_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<div class="procedure_sub_title">
+<b>
+Brake Booster Pushrod Thickness (Reference)
+</b>
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000007136','1');">
+<img src="../tn/TL19E50D14300014701MAAD05.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E50D14300014701MAAD05_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

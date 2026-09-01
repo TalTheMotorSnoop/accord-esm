@@ -1,0 +1,247 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E00J10300000000FAAT23
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+Audio System Symptom Troubleshooting - Audio unit button does not work
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<div class="test_procedure_title">
+<b>
+Audio unit button does not work
+</b>
+</div>
+<div>
+NOTE: 
+<a href="javascript:CtsProc('0','000000000000241','i000')">
+In order to troubleshoot the main power switch, go to Power switch will not turn on.
+</a>
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+<a href="javascript:CtsProc('0','000000000000271','i000')">
+Go to the audio button, knob, and remote switch detection mode in the audio self-diagnostic function.
+</a>
+ Operate all items in the appropriate switch list.
+</div>
+<div>
+<table width="87%" class="Viewer" frame="void" style="table-layout:fixed;">
+<col width="37%">
+<col width="62%">
+<tbody>
+<tr>
+<td class="ViewerTD" colspan="2" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Switch list
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+With navigation:
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+FM, AM, TA, VOL, 
+<img src="../img/symbol/SYM140.PNG">
+</img>
+, CD, AUX, 1-6, FOLDER, TUNE, SKIP, SCAN/A.SEL, MAP/GUIDE, CANCEL, MENU, AUDIO, 
+<img src="../img/symbol/SYM137.PNG">
+</img>
+, INFO, ENTER
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+With premium:
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+1-6, LOAD, EJECT, FM, AM, TA, CD/AUX, TITLE, CLOCK, SCAN, RTY/FOLDER, SKIP, A.SEL, RETURN, ENTER, MENU
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+Without premium:
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+1-6, EJECT, FM, AM, CD, TA, CD, AUX, TITLE, CLOCK, SCAN, PIY/FOLDER, A.SEL, SKIP, VOL, RETURN, ENTER, MENU
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Are all the items in the appropriate switch list detected?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Operation is normal.■
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+<a href="javascript:CtsProc('0','000000000000272','iR01')">
+Substitute a known-good audio unit with navigation system,
+</a>
+ 
+<a href="javascript:CtsProc('0','000000000000273','iR01')">
+without navigation system
+</a>
+ and recheck. If the symptom/indicated goes away, 
+<a href="javascript:CtsProc('0','000000000000272','iR01')">
+replace the original audio unit with navigation system,
+</a>
+ 
+<a href="javascript:CtsProc('0','000000000000273','iR01')">
+without navigation system.
+</a>
+ If the symptom is still present, 
+<a href="javascript:CtsProc('0','000000000000277','i000')">
+substitute a known-good audio/navigation switch panel
+</a>
+ and recheck. If the symptom/indication goes away, 
+<a href="javascript:CtsProc('0','000000000000277','i000')">
+replace the original audio/navigation switch panel.
+</a>
+■
+</div>
+</td>
+</tr>
+</table>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+
+<title>Lock-up System</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+function Apf() {
+   _prInitImageInfo(100);
+   window.focus();
+   if(gImageGroupList_.length == 0) {
+      window.print();
+   }
+   else {
+      divBody.style.display = "none";
+      var  img_pos,img_hei;
+      var  img_rate = 1.0;
+      var  i;
+      var  obj;
+      var  paper_wid,paper_hei,paper_len;
+      paper_wid = 640.0;
+      paper_hei = 950.0;
+      paper_len = 980.0;
+      for(i=0; i<gImageGroupList_.length; i++){
+         if(gImageGroupList_[i].group != null){
+           obj = gImageGroupList_[i].group;
+         }
+      }
+      if(paper_wid > paper_hei) {
+         alert("For best printing result, select 'landscape' layout from the print menu.");
+      }
+      for(i=0; i<gImageGroupList_.length; i++){
+         if(gImageGroupList_[i].group != null){
+            obj = gImageGroupList_[i].group;
+            if(img_rate > paper_wid/obj.width) {
+               img_rate =  paper_wid/obj.width;
+            }
+            if(img_rate > paper_hei/obj.height) {
+               img_rate =  paper_hei/obj.height;
+            }
+         }
+      }
+      _prResizeImage(img_rate);
+      window.scrollTo(0,10000);
+      var totalHei = document.body.scrollTop+document.body.clientHeight-img_hei;
+      divBody.style.display = "block";
+      var  idObj;
+      var groupObject = document.getElementById("group" + i);
+      var   beforeOffset = 0;
+      var   current_pos;
+      var   img_pos = img_dis = 0;
+      for(i=0; i<gImageGroupList_.length; i++){
+         idObj =document.getElementById("imgId" + (i+1));
+         if(idObj != null) {
+            idObj.style.display = "block";
+            current_pos = idObj.offsetTop;
+            if(gImageGroupList_[i].group != null){
+               obj = gImageGroupList_[i].group;
+               img_dis = current_pos - beforeOffset;
+               if(i == 0) {
+                  var pageCnt = Math.floor(current_pos/paper_hei);
+                  img_dis = img_dis - paper_hei*pageCnt;
+               }
+               img_hei = obj.height*img_rate;
+               img_pos += parseInt(img_dis);
+               if(parseInt(img_pos) > paper_len) {
+                  img_pos = img_pos - paper_len;
+               }
+               img_pos += parseInt(img_hei);
+               idObj.style.display = "none";
+               if(parseInt(img_pos) > paper_len) {
+                  idObj.style.display = "block";
+                  img_pos = parseInt(img_hei) + 50;
+               }
+               beforeOffset = current_pos + parseInt(img_hei);
+            }
+         }
+      }
+      window.print();
+      divBody.style.display = "none";
+      _prResizeImage(100/100);
+      divBody.style.display = "block";
+      window.scrollTo(0,0);
+   }
+}
+-->
+</script>
+<body onload="try{if(parent&&parent.Old)parent.Old(this);}catch(e){}" style="font-family:sans-serif;">
+<div id="divBody" style="display:block">
+<div>
+<div class="top_title">
+<b>
+Lock-up System
+</b>
+</div>
+<a name="iS01">
+</a>
+<div>
+The lock-up mechanism of the torque converter clutch operates in D position (2nd, 3rd, 4th, and 5th), in D3 position (2nd and 3rd), and M (manual shift mode) position (3rd, 4th, and 5th). The pressurized fluid is drained from the back of the torque converter through a fluid passage, causing the torque converter clutch piston to be held against the torque converter cover. As this takes place, the mainshaft rotates at the same speed as the engine crankshaft. Together with the hydraulic control, the PCM optimizes the timing and volume of the lock-up mechanism. When shift solenoid valve E is turned on by the PCM, shift solenoid valve E pressure switches the lock-up shift valve lock-up on and off. A/T clutch pressure control solenoid valve A and the lock-up control valve control the amount of the lock-up.
+</div>
+<a name="iT01">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Torque Converter Clutch Lock-up ON (Engaging Torque Converter Clutch)
+</b>
+</div>
+<br>
+<div>
+<div>
+Fluid in the chamber between the torque converter cover and the torque converter clutch piston is drained off, and fluid entering from the chamber between the pump and stator exerts pressure through the torque converter clutch piston against the torque converter cover. The torque converter clutch piston engages with the torque converter cover; the torque converter clutch lock-up is ON, and the mainshaft rotates at the same speed as the engine.
+</div>
+<span style="display:none" id="imgId1">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA6ELPE10474000000CAAD01_1.js">
+</script>
+</div>
+</div>
+<a name="iT02">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Torque Converter Clutch Lock-up OFF (Disengaging Torque Converter Clutch)
+</b>
+</div>
+<br>
+<div>
+<div>
+Fluid entering from the chamber between the torque converter cover and the torque converter clutch piston passes through the torque converter and goes out through the chambers between the turbine and the stator, and between the pump and the stator. As a result, the torque converter clutch piston moves away from the torque converter, and the torque converter lock-up clutch is released; torque converter clutch lock-up is OFF.
+</div>
+<span style="display:none" id="imgId2">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA6ELPE10474000000CAAD02_1.js">
+</script>
+</div>
+</div>
+<a name="iT03">
+</a>
+<br>
+<div class="topic_title">
+<b>
+No Lock-up
+</b>
+</div>
+<br>
+<div>
+<div>
+Shift solenoid valve E is turned OFF by the PCM, and shift solenoid valve E pressure (SE) is not applied to the lock-up shift valve. The lock-up shift valve stays to the right to uncover the torque converter pressure ports leading to the left side of the torque converter and releasing pressure from the right side of the torque converter. Torque converter pressure (92) changes to (94) at the lock-up shift valve, and enters into the left side of the torque converter to disengage the torque converter clutch. This keeps the torque converter clutch piston keeps away from the torque converter cover and the torque converter lock-up clutch is OFF.
+</div>
+<div>
+NOTE: When used, ‘‘left'' or ‘‘right'' indicates direction on the hydraulic circuit.
+</div>
+<span style="display:none" id="imgId3">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA6ELPE10474000000CAAD03_1.js">
+</script>
+</div>
+</div>
+</div></div>
+</body>
+</html>

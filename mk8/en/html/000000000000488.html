@@ -1,0 +1,4027 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E00J36100000000FEAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+Navigation System Diagnostic Mode
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR01">
+</a>
+<div class="procedure_sub_title">
+<b>
+Start-up procedure and Diagnostic Menu
+</b>
+</div>
+<div>
+There are two ways to enter the diagnostic mode:
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+<a href="javascript:CtsProc('0','000000000002991','i000')">
+Start the vehicle and at the globe screen connect the SCS service connector
+</a>
+ to the navigation service connector located behind the navigation unit in the trunk. The screen changes to the System Links screen automatically begins running the self-diagnostic. See the System Links section for more information.
+</div>
+<div>
+NOTE: When finished troubleshooting, make sure to remove the SCS service connector.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001273','1');">
+<img src="../tn/TL19E00J36100000000FEAD01.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR01">
+</a>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Start the vehicle, and at the disclaimer screen use the navigation display hard buttons as described below:
+</div>
+<div>
+Make sure the battery is in good condition then press and hold the three buttons (MAP/GUIDE, MENU, and CANCEL), and keep them pressed for about 3 seconds. The display screen will go directly to the Select Diagnosis Items menu shown below.
+</div>
+<ul type="disc">
+<li>
+<div>
+Self-Diagnosis Mode (runs the automatic diagnosis of the navigation system)
+</div>
+</li>
+<li>
+<div>
+Detail Information &amp; Setting (allows you to manually diagnose the navigation system)
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001274','1');">
+<img src="../tn/TL19E00J36100000000FEAD02.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD02_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR02">
+</a>
+<div class="procedure_sub_title">
+<b>
+System Links
+</b>
+</div>
+<a name="i210">
+</a>
+<ol>
+<li value="1">
+<div>
+Enter this screen by connecting the SCS connector or by selecting Self-Diagnosis Mode from the navigation screen main menu, The message at the bottom of the screen flashes indicating the diagnostic is running.
+</div>
+<div>
+NOTE: the system cannot complete a full diagnosis unless the engine is running.
+</div>
+</li>
+</ol>
+<a name="i220">
+</a>
+<ol>
+<li value="2">
+<div>
+Rotate the interface dial to select the icon you want to diagnose. Push in the selector to see the details of that diagnostic function.
+</div>
+<div>
+The System Links function runs automatically and displays a flashing message at the bottom of the screen reminding you to have the engine running for the test. The diagnostic tests the following:
+</div>
+<ul type="disc">
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000469','iS02')">
+The cables connecting the navigation components shown in the block diagram.
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000469','iS02')">
+The results from the various components shown in the block diagram.
+</a>
+</div>
+</li>
+<li>
+<div>
+The microphone is tested by listening to the bong sound produced by the navigation unit from the speakers when the diagnostic is started. This requires that the audio system be operating normally.
+</div>
+</li>
+</ul>
+<div>
+When the diagnostic finishes, the icons turn different colors based on their test status. The color definitions are shown below and can also be seen by selecting Help on the System Links screen.
+</div>
+<div>
+The indication on the screen may not change until you exit and re-enter the Self-Diagnosis mode. In some cases, you may have to restart the engine for the indication to change. After you repair the affected component or harness, repeat this diagnostic.
+</div>
+<div>
+Explanation of each icon
+</div>
+<div>
+Each color of the icon are explained in the table below.
+</div>
+<div>
+<table width="87%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="28%">
+<col width="71%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Icon Colors
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Description
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+Green
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+The system ran a diagnosis and the results are OK.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+Red
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Errors that require replacement of hardware or harness. Examples are connection error or memory diagnosis error.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+Yellow
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Errors that doesn't require hardware replacement, such as an open display cover, an inserted different model's disc, leaving the vehicle in ACC (I), or because of a missing accessory.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+White
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+The diagnosis is running. The screen functions are locked out while the diagnosis is running.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+Gray
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+The system cannot automatically check this function. You have to select the diagnosis item and manually do additional testing, like checking the navigation buttons in the Hard Key test. When you complete the Hared Key test and return to the System Links menu, the gray icon turns green.
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<div>
+NOTE: By selecting the HELP icon, you can see a description for each color.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001275','1');">
+<img src="../tn/TL19E00J36100000000FEAD03.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD03_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR03">
+</a>
+<div class="procedure_sub_title">
+<b>
+Icon Color Information
+</b>
+</div>
+<div>
+<table width="100%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="16%">
+<col width="16%">
+<col width="16%">
+<col width="16%">
+<col width="16%">
+<col width="16%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" rowspan="2" align="center">
+<div>
+<b>
+Icon
+</b>
+</div>
+</th>
+<th class="ViewerTH" colspan="5" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Icon Color
+</b>
+</div>
+</th>
+</tr>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+GREEN
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+RED
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+YELLOW
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+WHITE
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+GRAY
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Display
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Result of ‘‘Connection'' under the ‘‘Display'' diagnosis menu is OK.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Result of ‘‘Connection'' under the ‘‘Display'' diagnosis menu is NG.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+———
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Executing (Not completed)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+———
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Radio
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Result of ‘‘Connection'' under the ‘‘Radio'' diagnosis menu is OK.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Result of ‘‘Connection'' under the ‘‘Radio'' diagnosis menu is NG.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+———
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Executing (Not completed)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+———
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+GPS Ant.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+All result of ‘‘Antenna'' and ‘‘Receiver in NAVI ECU'' is OK.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Any result of ‘‘Antenna'' and ‘‘Receiver in NAVI ECU'' is NG.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+———
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Executing (Not completed)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+———
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+R-Camera
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Result of ‘‘Connection'' under the ‘‘R-Cammera'' diagnosis menu is OK.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Result of ‘‘Connection'' under the ‘‘R-Cammera'' diagnosis menu is NG.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+———
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Executing (Not completed)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+———
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+TMC Ant.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+All result of ‘‘Antenna'' and ‘‘Receiver in NAVI ECU'' is OK.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Any result of ‘‘Antenna'' and ‘‘Receiver in NAVI ECU'' is NG.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+———
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Executing (Not completed)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+———
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A/C
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Result of ‘‘Connection'' under the ‘‘Aircon'' diagnosis menu is OK while ‘‘Ignition'' is ON.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Result of ‘‘Connection'' under the ‘‘Aircon'' diagnosis menu is NG while ‘‘Ignition'' is ON
+<sup>
+*
+</sup>
+.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+While ‘‘Ignition'' is OFF.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Executing (Not completed)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+———
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Meter (F-CAN)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+All result of F-CAN related units are OK.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Any result of F-CAN related units are NG.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+———
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Executing (Not completed)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+———
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+HFT
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Result of ‘‘Connection'' under the ‘‘HFT'' diagnosis menu is OK.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Result of ‘‘Connection'' under the ‘‘HFT'' diagnosis menu is NG.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+———
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Executing (Not completed)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+———
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<div>
+<table width="100%" class="Viewer" frame="void" style="table-layout:fixed;">
+<col width="3%">
+<col width="96%">
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+*:
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+DTC 2703 can be stored when the ignition switch is at ACCESORY (I). With the ignition switch in ACCESORY (I), the A/C unit is turned off and the navigation unit loses communication and stores DTCs. It is possible that the system is normal with DTC 2703 stored. Check the system links with the engine running, and if it shows normal, the system is OK at this time.
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<div>
+<table width="100%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="16%">
+<col width="16%">
+<col width="16%">
+<col width="16%">
+<col width="16%">
+<col width="16%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" rowspan="2" align="center">
+<div>
+<b>
+Icon
+</b>
+</div>
+</th>
+<th class="ViewerTH" colspan="5" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Icon Color
+</b>
+</div>
+</th>
+</tr>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+GREEN
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+RED
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+YELLOW
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+WHITE
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+GRAY
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Mic
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+The microphone detects the sound ‘‘Pi-Pi-Pon'' at the system link menu.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+The microphone could not detects the sound ‘‘Pi-Pi-Pon'' at the system link menu.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+———
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Executing (Not completed)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+———
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+ECU Info.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Both V-RAM or D-RAM is OK, and all ‘‘Program Flash'', ‘‘Serial No.'', ‘‘Model'' is available, and the DVD lid is closed.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Either the V-RAM or D-RAM is NG, or any of the ‘‘Program Flash'', ‘‘Serial No.'', ‘‘Model'' is unavailable.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+DVD lid is opened
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Executing (Not completed)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+———
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Hard Key
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+All buttons are pressed and are detected under ‘‘Hard key'' menu.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+All buttons are not pressed or pressed but not detected under ‘‘Hard key'' menu, or exit from ‘‘Hard key'' menu without the button not detected.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+———
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+———
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Until changing to ‘‘Hard key'' menu.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Error History
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+———
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+———
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+‘‘Hard Error'' or ‘‘Soft Error'' is detected under ‘‘Error History'' menu.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Executing (Not completed)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+‘‘Hard Error'' or ‘‘Soft Error'' is not detected under ‘‘Error History'' menu.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+DVD
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+DVD mechanism is normal and the proper DVD is installed.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+———
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Improper DVD is installed, or DVD is not installed, or can not identify software version from the DVD or internal mechanism failure.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Executing (Not completed)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+———
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Yaw Sensor
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Result of the ‘‘Yaw Sensor'' diagnosis menu is OK.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Result of the ‘‘Yaw Sensor'' diagnosis menu is NG.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Result of the ‘‘Zero Point Output'' under the ‘‘Yaw Sensor'' diagnosis menu is NO CHECK.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Executing (Not completed)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+———
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Car Status
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+———
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+———
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+———
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+———
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Check these systems manually.
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<div class="procedure_sub_title">
+<b>
+Factory diagnostic screen In Line Diag
+</b>
+</div>
+<div>
+NOTE: If the vehicle left the factory in the factory diagnostic mode, you will see this screen every time you turn on the ignition.
+</div>
+<div>
+When a navigation control unit is powered up for the first time at the factory or after replacement with a new or remanufactured navigation unit, the factory diagnosis screen (In Line Diag) shows up. Normally the factory does the steps necessary to verify proper operation and terminate the factory diagnostic.
+</div>
+<div>
+Until the proper confirmation sequence is done, the screen will show up every time the vehicle is started.
+</div>
+<div>
+Follow the steps below to prevent the screen from showing up in the future:
+</div>
+<ul type="disc">
+<li>
+<div>
+Press and hold the buttons (MENU + MAP/GUIDE + CANCEL) for about 3 seconds (the Select Diagnosis items screen appears).
+</div>
+</li>
+<li>
+<div>
+Press and hold the MAP/GUIDE button for 5−10 seconds (a screen with a Complete button, appears).
+</div>
+</li>
+<li>
+<div>
+Complete, then Return, and then shut the key off for 5 seconds. Do not disconnect the battery during this period as the unit is saving the setting to the SRAM memory. The In Line Diag should not appear again.
+</div>
+</li>
+<li>
+<div>
+Restart the vehicle, and confirm normal operation by completing the TQI of the Navigation System Service Bulletin.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<div class="figure_title">
+<b>
+KG and KE models
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001277','1');">
+<img src="../tn/TL19E00J36100000000FEAD04.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD04_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+<div>
+<div class="figure_title">
+<b>
+KQ model
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001277','2');">
+<img src="../tn/TL19E00J36100000000FEAD05.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD05_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR05">
+</a>
+<div class="procedure_sub_title">
+<b>
+Monitor Check
+</b>
+</div>
+<div>
+Overview of display unit
+</div>
+<ul type="disc">
+<li>
+<div>
+The display unit communicates with the navigation unit over its own GA-Net bus. Information sent by the navigation unit to the display unit includes commands to control the LCD back light.
+</div>
+</li>
+<li>
+<div>
+The security system protects the navigation display unit by daisy-chaining the security signal through it, and then passing the signal to the audio unit.
+</div>
+</li>
+<li>
+<div>
+The illumination input from the gauge brightness control provides back lighting for the buttons surrounding the screen.
+</div>
+</li>
+</ul>
+<div>
+These screens allow you to troubleshoot the display unit. Select the item you want to troubleshoot, and follow the diagnostic instructions.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001278','1');">
+<img src="../tn/TL19E00J36100000000FEAD06.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD06_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR05">
+</a>
+<div>
+<b>
+Detailed Information &amp; Settings
+</b>
+</div>
+<div>
+These section allows you to run a specific diagnostic and allows additional setting choices for some screens that are not shown when selecting an icon from the System Links screen.
+</div>
+<div>
+When the menu item Detail Information &amp; Setting is selected, the main diagnosis menu is displayed.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001279','1');">
+<img src="../tn/TL19E00J36100000000FEAD07.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD07_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR05">
+</a>
+<div>
+<b>
+RGB Color
+</b>
+</div>
+<div>
+This screen verifies that the display unit is receiving the video (R, G, B and Composite sync) signals properly. The three primary colors should all be shown without distortion. The combination of all three should produce a central white section. 
+<a href="javascript:CtsProc('0','000000000000476','i000')">
+If any of the colors are missing, troubleshoot for the color signal.
+</a>
+ 
+<a href="javascript:CtsProc('0','000000000000475','i000')">
+If the picture has lines in it or rolls horizontally, or vertically, troubleshoot for a Composite sync problem.
+</a>
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001280','1');">
+<img src="../tn/TL19E00J36100000000FEAD08.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD08_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR05">
+</a>
+<div>
+<b>
+Gray Tone
+</b>
+</div>
+<div>
+This screen diagnoses problems with contrast. You should be able to see the changes from bar to bar across the scale. It is normal for the two bars on either side to appear the same. If you can't see changes from bar to bar, replace the navigation unit.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001281','1');">
+<img src="../tn/TL19E00J36100000000FEAD09.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD09_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR05">
+</a>
+<div>
+<b>
+Black Raster
+</b>
+</div>
+<div>
+This diagnostic screen checks for pixels that may be stuck on. The entire display must be black. Is pixels are stuck on, replace the navigation unit.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001282','1');">
+<img src="../tn/TL19E00J36100000000FEAD10.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD10_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR05">
+</a>
+<div>
+<b>
+Color Pattern
+</b>
+</div>
+<div>
+The chart below shows the colors being used for the map and menu screens. This is for factory use only. To check the color signal use the RGB Color diagnostic found under the Monitor Check.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001283','1');">
+<img src="../tn/TL19E00J36100000000FEAD11.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD11_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR05">
+</a>
+<div>
+<b>
+White Raster
+</b>
+</div>
+<div>
+This diagnostic screen checks for pixels that may be dead (off). The entire display must be white. If there are dead pixels, replace the navigation unit.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001284','1');">
+<img src="../tn/TL19E00J36100000000FEAD12.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD12_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR05">
+</a>
+<div>
+<b>
+Monitor Adjustment
+</b>
+</div>
+<div>
+This allows you to center the navigation display. Use the joystick to move the picture up/down or left/right. It is unlikely that you will ever need to adjust the monitor position. The Default button will reset the display position to factory specifications.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001285','1');">
+<img src="../tn/TL19E00J36100000000FEAD13.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD13_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR06">
+</a>
+<div class="procedure_sub_title">
+<b>
+Unit Check (Quick Check)
+</b>
+</div>
+<div>
+Some of the tests and screens that are displayed under the Unit Check are different from the more detailed checks listed in other areas of this service manual.
+</div>
+<div>
+To start the test, select the item you want to check.
+</div>
+<ul type="disc">
+<li>
+<div>
+Display
+</div>
+</li>
+<li>
+<div>
+Radio
+</div>
+</li>
+<li>
+<div>
+GPS
+</div>
+</li>
+<li>
+<div>
+ECU Info.
+</div>
+</li>
+<li>
+<div>
+Rear Camera
+</div>
+</li>
+<li>
+<div>
+PC Card Info. (KQ model)
+</div>
+</li>
+<li>
+<div>
+Hard Key
+</div>
+</li>
+<li>
+<div>
+Yaw Sensor
+</div>
+</li>
+<li>
+<div>
+DVD
+</div>
+</li>
+<li>
+<div>
+Aircon
+</div>
+</li>
+<li>
+<div>
+HFT (KG and KE models)
+</div>
+</li>
+<li>
+<div>
+TMC Status (KG and KE models)
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<div class="figure_title">
+<b>
+KG and KE models
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001286','1');">
+<img src="../tn/TL19E00J36100000000FEAD14.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD14_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+<div>
+<div class="figure_title">
+<b>
+KQ model
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001286','2');">
+<img src="../tn/TL19E00J36100000000FEAD15.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD15_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR06">
+</a>
+<div>
+<b>
+Display
+</b>
+</div>
+<div>
+This diagnostic does additional checks on the communication bus between the control unit and the display. In addition, the internal electronics functionality are confirmed.
+</div>
+<ul type="disc">
+<li>
+<div>
+When the connection is NG, first check for loose terminals at the navigation unit and the display unit connections. Next check for an open or short in the communication line between the navigation unit and the display unit. If you find the line has an open or short, replace the affected shielded harness.
+</div>
+</li>
+<li>
+<div>
+If the ROM or RAM is NG, replace the display unit.
+</div>
+</li>
+<li>
+<div>
+The version represents the software version in the display.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001287','1');">
+<img src="../tn/TL19E00J36100000000FEAD16.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD16_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR06">
+</a>
+<div>
+<b>
+Radio
+</b>
+</div>
+<div>
+If NG is indicated, check for loose audio unit connectors.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001288','1');">
+<img src="../tn/TL19E00J36100000000FEAD17.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD17_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR06">
+</a>
+<div>
+<b>
+GPS
+</b>
+</div>
+<div>
+If GPS indicates NG (ANT), then check the entire GPS antenna wire from the navigation unit to the antenna. If the wire is crushed or damaged, try a known good antenna. If this diagnostic reads OK, then order a new GPS antenna. If the diagnostic still reads NG (ANT), then replace the navigation unit.
+</div>
+<div>
+Select information to see the GPS satellite details.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001289','1');">
+<img src="../tn/TL19E00J36100000000FEAD18.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD18_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR06">
+</a>
+<div>
+<b>
+ECU Info.
+</b>
+</div>
+<div>
+This screen looks for problems in the navigation unit. When you initiate this diagnosis, the navigation unit may delay up to a minute while the diagnosis runs.
+</div>
+<div>
+NOTE: Do not try to end this diagnostic by pressing OK or Mem clear before it finishes, otherwise the system may reboot.
+</div>
+<ul type="disc">
+<li>
+<div>
+If V-RAM or D-RAM is NG, then replace the navigation unit.
+</div>
+</li>
+<li>
+<div>
+DVD lid displays the state of DVD Lid of navigation unit.
+</div>
+</li>
+<li>
+<div>
+Program Flash: Displays the version of the navi software in memory.
+</div>
+</li>
+<li>
+<div>
+Program on DVD: If displayed, this value represents the version of the navi software on the navi DVD.
+</div>
+</li>
+<li>
+<div>
+DVD version represents the database version on the DVD. You can find this information in either the Setup Screen Version, or in the Diagnostic Screen Version.
+</div>
+</li>
+<li>
+<div>
+Serial No. should be the same as the serial number found on the underside of the navigation unit.
+</div>
+</li>
+<li>
+<div>
+The Mem Clear is for factory use and should not be used unless instructed by the factory.
+</div>
+<div>
+Selecting this will clear the customer's settings, personal information, GPS orbital data, and anything else stored in memory.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001290','1');">
+<img src="../tn/TL19E00J36100000000FEAD19.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD19_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR06">
+</a>
+<div>
+<b>
+Rear Camera
+</b>
+</div>
+<ul type="disc">
+<li>
+<div>
+If checks whether rearview camera is connected.
+</div>
+</li>
+<li>
+<div>
+When connection is shown NG, confirm a rearview camera signal line.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001291','1');">
+<img src="../tn/TL19E00J36100000000FEAD20.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD20_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR06">
+</a>
+<div>
+<b>
+PC Card info. (KQ model)
+</b>
+</div>
+<div>
+There is no PC Card in the PC slot, and the screen should say, ‘‘PC Card is not inserted''.
+</div>
+<div>
+NOTE: Do not insert any card or object into the slot.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001292','1');">
+<img src="../tn/TL19E00J36100000000FEAD21.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD21_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR06">
+</a>
+<div>
+If the factory provides a PC card and instructs you to insert a card, then the screen displays the Manufacturer, and Product Name as shown in the following screen.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001293','1');">
+<img src="../tn/TL19E00J36100000000FEAD22.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD22_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR06">
+</a>
+<div>
+<b>
+Hard Key
+</b>
+</div>
+<div>
+This diagnostic tests the interface dial, and the buttons that surround it. For this model, the interface dial and buttons do not use the GA-Net bus for communications.
+</div>
+<div>
+To complete the test, touch each button on the vehicle's control panel, and move the interface dial to each indicated position. As each function is tested, the corresponding button on the display should highlight.
+</div>
+<div>
+ To exit, push in and hold the selector knob.
+</div>
+<div>
+NOTE: You cannot use the onscreen return button to exit this function
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001294','1');">
+<img src="../tn/TL19E00J36100000000FEAD23.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD23_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR06">
+</a>
+<div>
+<b>
+Yaw Sensor
+</b>
+</div>
+<div>
+This screen gives a quick test of the yaw sensor functionality based on the two voltages Sensor and Offset. For more information see the Yaw Sensor Diagnostic.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001295','1');">
+<img src="../tn/TL19E00J36100000000FEAD24.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD24_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR06">
+</a>
+<div>
+<b>
+DVD
+</b>
+</div>
+<div>
+This diagnostic tests the navigation DVD reader.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001296','1');">
+<img src="../tn/TL19E00J36100000000FEAD25.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD25_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR06">
+</a>
+<div>
+<b>
+Aircon
+</b>
+</div>
+<div>
+This diagnostic tests the climate bus connection (AC-SI and AC-SO) between the navigation unit and climate control unit. Make sure the engine is running for this test.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001297','1');">
+<img src="../tn/TL19E00J36100000000FEAD26.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD26_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR06">
+</a>
+<div>
+<b>
+HFT (KG and KE models)
+</b>
+</div>
+<div>
+This checks the 4 wire communication bus between the HFT and the navigation unit.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001298','1');">
+<img src="../tn/TL19E00J36100000000FEAD27.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD27_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR06">
+</a>
+<div>
+<b>
+TMC Status (KG and KE models)
+</b>
+</div>
+<div>
+This screen displays a state about the RDS-TMC reception.
+</div>
+<div>
+Frequency: Frequency receiving in this time.
+</div>
+<div>
+Field Strength: Display reception sensitivity with 0−15.
+</div>
+<div>
+0−5: Cannot receive
+</div>
+<div>
+6: Instability
+</div>
+<div>
+7−8: Can receive it somehow
+</div>
+<div>
+9−15: Can receive it clear
+</div>
+<div>
+Error Rate Correction: RDS block error.
+</div>
+<div>
+0: No error
+</div>
+<div>
+1: Synchronous error
+</div>
+<div>
+2: Block number error
+</div>
+<div>
+Others: Undefined
+</div>
+<div>
+Uncorrected Block/min: The number of block errors per one minute.
+</div>
+<div>
+TMC Group Counter: The number of message which l received.
+</div>
+<div>
+Provider Count: The number of providers which l can receive.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001299','1');">
+<img src="../tn/TL19E00J36100000000FEAD30.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD30_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR07">
+</a>
+<div class="procedure_sub_title">
+<b>
+Functional Setup
+</b>
+</div>
+<div>
+Select the item you want to check.
+</div>
+<ul type="disc">
+<li>
+<div>
+Mic Level (KG and KE models)
+</div>
+</li>
+<li>
+<div>
+Save Users Memory (KQ model)
+</div>
+</li>
+<li>
+<div>
+Demo Mode (KQ model)
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<div class="figure_title">
+<b>
+KG and KE models
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001300','1');">
+<img src="../tn/TL19E00J36100000000FEAD28.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD28_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+<div>
+<div class="figure_title">
+<b>
+KQ model
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001300','2');">
+<img src="../tn/TL19E00J36100000000FEAD29.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD29_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR08">
+</a>
+<div class="procedure_sub_title">
+<b>
+Save Users Memory (KQ model)
+</b>
+</div>
+<div>
+When replacing the navigation unit, this function allows the dealer to transfer the customer's personal data to the new navigation unit.
+</div>
+<div>
+This is similar to saving and entering the customer's audio presets when replacing an audio unit. The transferred information includes their Setup settings and personal addresses. The dealer inserts a PC card (like the PC card in the HDS), and then selects the Save Users Memory function. The two functions in this diagnostic screen are Export. Export and Import saves the customer's data to the PC card, and Import moves the PC card files to the new core.
+</div>
+<div>
+See the FAQs below for information regarding PC cards, and the use of this function.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001301','1');">
+<img src="../tn/TL19E00J36100000000FEAD31.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD31_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR08">
+</a>
+<div>
+<b>
+Export
+</b>
+</div>
+<div>
+Select this button to move the customer's data from the original navigation unit to the PC card. Select YES on the Export User Data Confirmation screen. The process takes only a couple of seconds. The system stores two files on the card.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001302','1');">
+<img src="../tn/TL19E00J36100000000FEAD32.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD32_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR08">
+</a>
+<div>
+<b>
+Import
+</b>
+</div>
+<div>
+After installing the customer's original DVD in the new navigation control unit, allow the system to boot up. Insert the PC card in the new navigation control unit and enter the navigation diagnostic mode.
+</div>
+<div>
+Select YES on the Import Confirmation screen.
+</div>
+<div>
+Import moves the two files stored by the Export process from the PC card to the new navigation unit. When the transfer is finished (a few seconds) the system will automatically reboot. After the system reboots, remove the PC card from the PC slot.
+</div>
+<div>
+If the Import button is grayed out, follow the troubleshooting in the FAQs below. The customer's files can only be transferred to a new navigation control unit if the Model and the Program Flash shown on the Version screen are the same. These files cannot be transferred from an Accord to a Civic, or from an Accord with version 1.07.00 to a another Accord with version 1.32.00.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001303','1');">
+<img src="../tn/TL19E00J36100000000FEAD33.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD33_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR09">
+</a>
+<div class="procedure_sub_title">
+<b>
+Demo Mode (KQ model)
+</b>
+</div>
+<div>
+This screen is for factory use only, and should always be set to OFF. Occasionally the DEMO setting is turned ON when vehicles are being used at Auto Shows or similar events. Turning this feature on, allows the navigation system to automatically follow a route to a destination when the vehicle is stationary. The Speed changes the speed of the demo mode.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001304','1');">
+<img src="../tn/TL19E00J36100000000FEAD34.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD34_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR10">
+</a>
+<div class="procedure_sub_title">
+<b>
+Mic Level (KG and KE models)
+</b>
+</div>
+<div>
+This diagnostic allows you to independently test the microphone and the navigation TALK and BACK buttons. They are used to activate the voice control system. The microphone is located near the map light in the roof console. It is directional, and works only with the voice coming from the drivers seat.
+</div>
+<ul type="disc">
+<li>
+<div>
+Press the TALK button on the steering wheel, and in a normal voice say testing. The TALK indicator on the screen should momentarily turn green, and the text Now Recording... should appear in yellow. In addition, the Mic Level indicator shown on the screen does not briefly turn green, then check the wiring from the steering wheel talk button to the navigation unit. If there is no Mic Level movement when you speak, then you should check the wires running from the microphone in the roof console to the Hands Free Telephone control unit and the navigation unit. If the wires are OK, the microphone must be faulty; 
+<a href="javascript:CtsProc('0','000000000000490','i000')">
+replace the microphone located in roof console.
+</a>
+</div>
+</li>
+<li>
+<div>
+Press the BACK button on the steering wheel. This should cause the Cancel indicator on the screen to momentarily turn green. If it does not briefly turn green, check the wiring from the steering wheel BACK button to the navigation unit.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001305','1');">
+<img src="../tn/TL19E00J36100000000FEAD35.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD35_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR11">
+</a>
+<div class="procedure_sub_title">
+<b>
+F-CAN System Link
+</b>
+</div>
+<div>
+F-CAN (Fast Controller Area Network) passes information between processors on the network. For example, the F-CAN network passes trip computer information between the gauge and the navigation unit for the trip computer function. The F-CAN network uses a communication protocol that transmits data at 500 Kbps.
+</div>
+<ul type="disc">
+<li>
+<div>
+If the diagnostic screen below reads NG with the ignition switch ON (II), then diagnostic trouble codes (DTCs) for the F-CAN can be retrieved with the HDS (Honda Diagnostic System). The data displayed in the ID boxes is irrelevant.
+</div>
+</li>
+<li>
+<div>
+For more details on troubleshooting the F-CAN.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001306','1');">
+<img src="../tn/TL19E00J36100000000FEAD36.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD36_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR13">
+</a>
+<div class="procedure_sub_title">
+<b>
+GPS Information
+</b>
+</div>
+<div>
+This screen shows the current status of GPS reception. The circular diagram shows the current location of the GPS satellites (yellow numbers) as they would appear in the sky. The outer circle represents the horizon (0 degrees elevation). The middle and inner circles represents 30 and 60 degrees respectively. The very center of the diagram (90 degrees elevation) is directly overhead. Nearby obstructions, like tall buildings will block satellites in that direction. That is why it is necessary to be in an open area to effectively troubleshoot GPS reception issues. The satellite numbers shown on the diagram correspond to the PRN number in the GPS Details screen. There are always at least 24 active GPS satellites in orbit. Because satellites fail, and have to be removed from service, spares are always parked in orbit, ready to be activated. This is why the PRN (satellite ID number) can be greater than 24.
+</div>
+<div>
+NOTE: To use this screen for troubleshooting, the vehicle should be outside away from buildings, tall trees, and high-tension wires for at least 10 minutes with the engine running.
+</div>
+<ul type="disc">
+<li>
+<div>
+The Number of Satellites box shows the number of acquired satellites (maximum of 12). It should contain three or more icons. 
+<a href="javascript:CtsProc('0','000000000000472','i000')">
+If not troubleshoot for GPS icon is white or not shown.
+</a>
+</div>
+</li>
+<li>
+<div>
+The Current Position shows latitude, longitude, and elevation (in feet). If there are less than four satellites, the elevation can be grossly inaccurate.
+</div>
+</li>
+<li>
+<div>
+The Date/Time field shows the current date, and also a time that includes daylight savings and other offsets entered by the customer in Setup screen 2 Adjust Time Zone/Clock.
+</div>
+</li>
+</ul>
+<div>
+NOTE: Pressing the map guide button displays the satellite number on each circle.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001307','1');">
+<img src="../tn/TL19E00J36100000000FEAD38.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD38_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR14">
+</a>
+<div class="procedure_sub_title">
+<b>
+GPS Detail
+</b>
+</div>
+<div>
+By pressing and holding the MENU button for 2 seconds, a GPS Detail screen appears. This screen displays real time incoming satellite positional data when the vehicle is outside in the open. The information shown on this screen is for factory use.
+</div>
+<ul type="disc">
+<li>
+<div>
+The box TS/AS and H Dop/V Dop is for factory use.
+</div>
+</li>
+<li>
+<div>
+The Speed and Direction information is updated in real time when driving.
+</div>
+</li>
+<li>
+<div>
+The Date/Time Information is the same as in Setup screen 2 Adjust Time Zone/Clock.
+</div>
+</li>
+<li>
+<div>
+If the 3D icon is shown above the yellow dots, this implies that at least four satellites are available for map positioning, and the GPS indicator on the map screen will be green. See the Global Positioning System detailed explanation in the System Description.
+</div>
+</li>
+<li>
+<div>
+If the row of data in the table below begins with a yellow dot, the AZI and EL fields can be used to locate each satellite on the circular GPS diagram (see prior screen).
+</div>
+</li>
+</ul>
+<div>
+NOTE: The data shown in the GPS Detail screen is an example only.
+</div>
+<div>
+The table of values shown on the screen has the following columns:
+</div>
+<div>
+<table width="100%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="18%">
+<col width="40%">
+<col width="40%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Column
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Description
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Problem indication
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+3D
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Active satellites (Yellow Dot)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('0','000000000000479','i000')">
+If 3D or 2D is missing when the vehicle is parked outside, follow GPS icon is white or not shown troubleshooting.
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+PRN
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+The satellite ID number
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+ST
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+The status: 0 = cannot view or searching, 2 = acquiring
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('0','000000000000479','i000')">
+If all 0, then, follow GPS icon is white or not shown troubleshooting.
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+AZI
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Azimuth, the angle (0−360) clockwise from north
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+EL
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Elevation from the horizon (90 deg. is overhead)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+C/N
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+N/A
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Normal signal is 49-52, no signal: 27-33
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+ACC
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+N/A
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+△ 1/2 or 2/2 ▽
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Shows view of all satellites in two screen views 1/2 or 2/2
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001308','1');">
+<img src="../tn/TL19E00J36100000000FEAD39.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD39_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR15">
+</a>
+<div class="procedure_sub_title">
+<b>
+Yaw Rate
+</b>
+</div>
+<div>
+This diagnostic checks the yaw rate sensor in the control unit. This device detects when the vehicle turns, and repositions the vehicle position icon on the map screen. 
+<a href="javascript:CtsProc('0','000000000000469','iT02')">
+For more detailed information, see the yaw rate sensor theory of operation under System Description.
+</a>
+</div>
+<ul type="disc">
+<li>
+<div>
+Sensor indicates the voltage output from the yaw rate sensor. It should indicate about 2.500 V when stopped.
+</div>
+</li>
+<li>
+<div>
+Offset is the reference voltage or standard within the yaw rate sensor. It also should indicate about 2.500 V when stopped.
+</div>
+</li>
+<li>
+<div>
+A sensor output voltage LOWER than the Offset voltage indicates that the vehicle is turning to the right.
+</div>
+<div>
+A sensor output voltage HIGHER than the Offset voltage indicates that the vehicle is turning to the left.
+</div>
+</li>
+<li>
+<div>
+The yaw rate offset, and sensor should both indicate about 2.500 V when stopped. If either reads zero, or 5.000 V, replace the navigation unit.
+</div>
+</li>
+<li>
+<div>
+The yaw rate offset and sensor should be within +/−0.01 V of each other when stopped. The sensor value should change relative to the offset as the car is turned while driving. If not, replace the navigation unit.
+</div>
+</li>
+</ul>
+<div>
+<br>
+<div class="table_title">
+<b>
+Example: Vehicle stopped
+</b>
+</div>
+<br>
+<table width="100%" class="Viewer" frame="void" style="table-layout:fixed;">
+<col width="19%">
+<col width="30%">
+<col width="19%">
+<col width="30%">
+<thead>
+<tr>
+<th class="ViewerTH" colspan="2" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Normal
+</b>
+</div>
+</th>
+<th class="ViewerTH" colspan="2" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Abnormal
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+Offset
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+2.526 V
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+Offset
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+2.526 V
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+Sensor
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+2.516−2.536 V
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+Sensor
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+2.623 V
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<div>
+<br>
+<div class="table_title">
+<b>
+Example: Vehicle turning
+</b>
+</div>
+<br>
+<table width="100%" class="Viewer" frame="void" style="table-layout:fixed;">
+<col width="19%">
+<col width="30%">
+<col width="19%">
+<col width="30%">
+<thead>
+<tr>
+<th class="ViewerTH" colspan="2" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Normal
+</b>
+</div>
+</th>
+<th class="ViewerTH" colspan="2" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Abnormal
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+Offset
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+2.526 V
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+Offset
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+2.526 V
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+Sensor
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+2.678 V (left turn)
+</div>
+<div>
+2.478 V (right turn)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+Sensor
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+2.623 V(no change on turns)
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<ul type="disc">
+<li>
+<div>
+Sensitivity study represents the status of the internal tuning function. At initialization, this value starts at 6 and increases to 10 as the internal correction values become more accurate.
+</div>
+</li>
+<li>
+<div>
+The settings CCW Cal Factor, CW Cal Factor, and Set are for factory use only. THIS SHOULD NEVER BE ADJUSTED.
+</div>
+</li>
+<li>
+<div>
+For detailed analysis of the yaw rate select tuning.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001309','1');">
+<img src="../tn/TL19E00J36100000000FEAD40.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD40_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR16">
+</a>
+<div class="procedure_sub_title">
+<b>
+Yaw Rate Tuning
+</b>
+</div>
+<div>
+This diagnostic allows you to graphically display problems with the yaw rate sensor.
+</div>
+<ul type="disc">
+<li>
+<div>
+The ANG-Disp value accumulates any differences between the offset, and sensor voltages (see Yaw Rate diagnostic). When the sensor is functioning properly, the random changes in these two voltages generally cancels out, so the value is 0. However if one voltage is consistently higher than the other, then the ANG-Disp value accumulates the constant change.
+</div>
+</li>
+<li>
+<div>
+The Reset button temporarily clears the angular accumulation (ANG-Disp), and clears the display dots.
+</div>
+</li>
+<li>
+<div>
+Do not touch the CCW, CW, or Set buttons. These are used for factory setup only.
+</div>
+</li>
+</ul>
+<div>
+Two tests are explained below. For large problems with the sensor values, the stationary test usually confirms whether the sensor is defective. For yaw rate issues related to driving, do the road test described below.
+</div>
+<a name="i410">
+</a>
+<ol>
+<li value="1">
+<div>
+Stationary test: If the VP icon spins in place and the ANG-Disp value slowly increases or decreases in value, the yaw rate sensor is defective. Replace the navigation control unit.
+</div>
+</li>
+</ol>
+<a name="i420">
+</a>
+<ol>
+<li value="2">
+<div>
+Road test: Drive the vehicle on a very straight road. Enter the diagnostic mode, select Yaw rate, and touch the Tuning button. While driving down a straight road, the white dots should trace a straight line across the screen. However, if you are driving on a straight road, and you notice the dots constantly dropping down or heading up as you drive, the navigation control unit's yaw sensor is defective. You can touch Reset to clear ANG-Disp, and dotted lines.
+</div>
+<div>
+If either test above fails, please enter Yaw rate sensor defective for the problem description, on the Navigation core return form.
+</div>
+<div>
+NOTE: The CCW, CW and Set buttons are disabled and cannot be activated.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001310','1');">
+<img src="../tn/TL19E00J36100000000FEAD41.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD41_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR17">
+</a>
+<div class="procedure_sub_title">
+<b>
+Car Status
+</b>
+</div>
+<div>
+Use this screen to confirm that the navigation unit is properly receiving input signals. Signals equal to (0) are OFF, and signals equal to (1) are ON. If the value on the display does not match the actual vehicle status, then check the wire carrying the signal.
+</div>
+<ul type="disc">
+<li>
+<div>
+VSP-Vehicle Speed Pulse from PCM (Pin 6 of A-connector)
+</div>
+<div>
+a) OFF (0) when vehicle is not moving
+</div>
+<div>
+b) ON (1) when vehicle is moving
+</div>
+</li>
+</ul>
+<div>
+The VSP comes from the PCM as a dedicated signal. Internally, the navigation unit compares the actual VP on the map against street data to adjust the pulse to speed scaling factor. As this scaling factor becomes more accurate, the Level gradually increases from 0 to 10 (see the Tire Calibrate diagnostic screen).
+</div>
+<ul type="disc">
+<li>
+<div>
+BACK-Reverse indication from taillight relay (Pin 5 of A-connector)
+</div>
+<div>
+a) OFF (0) when the shift lever is in any position other than reverse
+</div>
+<div>
+b) ON (1) when the shift lever is in reverse
+</div>
+</li>
+</ul>
+<div>
+The Back signal is used by the navigation unit to allow the map screen to show the VP moving backwards when in reverse. This signal is needed because the Speed Pulse has no direction indication.
+</div>
+<ul type="disc">
+<li>
+<div>
+IGNITION-Ignition Switch Position Indication (Pin 1 or 2 of A-connector) Detects if the engine is running using information provided over the F-CAN bus.
+</div>
+<div>
+a) OFF (0) when the ignition switch position is ACCESSORY (I)
+</div>
+<div>
+b) ON (1) when the ignition switch position is ON (II)
+</div>
+</li>
+</ul>
+<ul type="disc">
+<li>
+<div>
+ILL-Illumination Indication (Pin 5 of navigation unit B-connector)
+</div>
+<div>
+a) OFF (0) when parking lights, or headlights are off
+</div>
+<div>
+b) ON (1) when parking lights, or headlights are on
+</div>
+</li>
+</ul>
+<div>
+The navigation uses the signal to determine whether to put the navigation screen into the Day or Night brightness mode. (Setup screen 1)
+</div>
+<div>
+ILL CANCEL
+</div>
+<div>
+This item detects whether the illumination cancel function is in use.
+</div>
+<div>
+a) OFF (0) if illumination cancel is not selected
+</div>
+<div>
+b) ON (1) if illumination cancel is activated
+</div>
+<div>
+The illumination cancel function is activated by increasing the dash brightness to MAX. The F-CAN bus passes this information from the gauge assembly to the navigation control unit.
+</div>
+<div>
+NOTE: This setting is unaffected by the display mode hard button located below and to the left of the interface dial.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001311','1');">
+<img src="../tn/TL19E00J36100000000FEAD42.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD42_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR18">
+</a>
+<div class="procedure_sub_title">
+<b>
+Version
+</b>
+</div>
+<div>
+This screen displays the current version information for the navigation system software. In addition, this screen allows the loading of updated software if requested by the factory, or instructed by a Service Bulletin. Software may be loaded from a CD or a PC card.
+</div>
+<ul type="disc">
+<li>
+<div>
+Program Flash: Displays the version of the navi software in memory.
+</div>
+</li>
+<li>
+<div>
+Program Disc: If displayed, this value represents the version of the navi software on the navi DVD.
+</div>
+</li>
+<li>
+<div>
+IPL, APL, DBOOT, and System uCom, are all for factory use.
+</div>
+</li>
+<li>
+<div>
+Model: For this model, the field should begin with TC0.
+</div>
+</li>
+<li>
+<div>
+Download: Do not touch, unless instructed by the factory.
+</div>
+<div>
+Check any official Honda service website for more service information about navigation DVDs.
+</div>
+</li>
+</ul>
+<div>
+There are two navigation DVDs produced for this model.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001312','1');">
+<img src="../tn/TL19E00J36100000000FEAD43.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J36100000000FEAD43_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR19">
+</a>
+<div class="procedure_sub_title">
+<b>
+PC Card FAQs
+</b>
+</div>
+<div>
+<table width="100%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="34%">
+<col width="65%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Question
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Answer
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Where do we buy the flash memory or adaptors, and what do we ask for?
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+You need a PCMCIA type II adaptor and a flash memory chip. They can be purchased at a computer, or office supply store. The card will have the same size and shape as the PC card in the HDS. Adaptors that accept multiple flash types are not recommended.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+What memory flash chips will work with what adaptors?
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+The flash memory devices that have been tested include Compact Flash (CF), and ATA style (like the card in the HDS). Other card types and flash memory chips may work, but have not been tested.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+What capacity card do I need for this function?
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A memory chip with capacity of 64 MB to 2 GB will work. The two files moved to the card during export are less than a megabyte in size. An adaptor and flash memory can be obtained for less than 50 dollars.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Should the dealer have a dedicated PC card for the Export and Import navigation function?
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Yes, treat the PC card as a dedicated special tool that should be used anytime a '08 or later vehicle needs the navi personal files transferred to a new navigation control unit.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+What device can I use to maintain the PC card, and delete files?
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Any computer store sells USB style PC card readers that accept the card, and a allow you to perform file maintenance on your card. Most laptops will also accept the card.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Can we move the customer's data to different models (like moving Accord navi data to a Civic)?
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+No, the files are model specific and will only load into a navi ECU with the same part number.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Can we move the customer's data to the same vehicle with a different software version (Like moving version 4.51)?
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+The customer's files can only be transferred to a new navigation control unit, if the Model and the Program Flash shown on the Version screen are the same. Files cannot be transferred from Accord to Civic (different model code), or '07 Accord to '08 Accord (different versions)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+The Export button is grayed out. Why?
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+A PC card with it's media memory chip is not inserted properly.
+</div>
+</li>
+<li>
+<div>
+Check the card's edge connector, and the pins inside the navigation unit (with a flashlight) for damage.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+The Import button is grayed out. Why is this?
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+A PC card with it's media memory chip is not inserted.
+</div>
+</li>
+<li>
+<div>
+The model code of the files stored during export do not match the model code of the new navi ECU.
+</div>
+</li>
+<li>
+<div>
+The version of the files from the original navi ECU are not the same as the version in the new ECU.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Will other files on the card like images or music files prevent the Export/Import function from working?
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+No, the system simply adds two small files that are recognized by the new navigation control unit when doing the import function. However, if the card is full, the Export function won't work correctly.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Do I have to delete the files on the card after each transfer of the customer's data?
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+After the transfer of customer data to the new navigation control unit, the files remain on the card. Since this is confidential information, we recommend that you delete these files after each use. Please note that each time you export navigation files of the same model and version, the files are overwritten. If you do not delete the file after use, over time the PC card will accumulate two files for each version of the Honda navigation equipped models.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+What format should be used if the card needs reformatting?
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+It is unlikely that the card will ever need formatting, however the FAT (file allocation table) file system should be used.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+I can't enter the navi diagnostic mode to do the Export/Import function. How can I transfer the customer's data?
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Some internal navigation ECU failures may make it impossible to use the Export/Import function.
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<div>
+<table width="100%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="38%">
+<col width="61%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Question
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Answer
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Why won't the Export or Import functions work? What do I check as part of troubleshooting?
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+The card may not be fully inserted into the slot. Eject the card, and inspect for warping or damage to the edge connector. Never use excessive force to insert a card. This can result in damage to the pins in the rear of the slot.
+</div>
+</li>
+<li>
+<div>
+The card may not contain files that are recognized by the new navigation control. Navi date can only be transferred between navigation control unit with the same Model code, and with the same navi Program flash version.
+</div>
+</li>
+<li>
+<div>
+The flash memory chip type may not be accepted by the system. Only Compact Flash, and ATA cards have been tested.
+</div>
+</li>
+<li>
+<div>
+The card's PCMCIA adaptor may be preventing a known good card from being recognize. Avoid multi slot type PCMCIA adaptors that accept several different flash memory types
+</div>
+</li>
+<li>
+<div>
+The card may be full and as a result the files are stored, but without any data. Export and import appear to function, but move nothing. Delete unused files from the card.
+</div>
+</li>
+<li>
+<div>
+There may not be any files on the card. If the card has a write protection switch, make sure it is turned off before attempting to use the Export function.
+</div>
+</li>
+<li>
+<div>
+Although flash memory chips are reliable, occasionally they develop bad sectors or other formatting errors that prevents them from accepting files. The card should be reformatted using the FAT format.
+</div>
+</li>
+<li>
+<div>
+The card may have been formatted using the format NTFS. Only the FAT format is accepted by the system.
+</div>
+</li>
+<li>
+<div>
+Hard Disc Drive (HDD) cards may not work properly in the system and can overheat or quit functioning, particularly in a hot vehicle. They are not recommended.
+</div>
+</li>
+<li>
+<div>
+Before doing the import function, ensure that the customer's original DVD is loaded into the new core and working properly.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Are there any error messages to tell me what is wrong?
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+There are no error message associated with the Import/Export feature. Follow the troubleshooting steps above.
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR20">
+</a>
+<div class="procedure_sub_title">
+<b>
+Error Message Table
+</b>
+</div>
+<div>
+<table width="100%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="38%">
+<col width="61%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Screen Error Message
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Solution
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Navigation system is unable to acquire a proper GPS signal.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Make sure there is nothing on the dashboard blocking the GPS antenna.
+</div>
+<div>
+If not, move the vehicle to an open space away from tall buildings, trees, etc.
+</div>
+<div>
+Window tinting and after-market devices can affect the GPS reception.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Navigation unit door is open or No DVD disc installed. Please check system.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Make sure the navigation DVD is the correct color and is not scratched or damaged. Make sure it is installed with the label side up and the navigation unit door is snapped fully closed.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+No DVD disc, please check system.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Check that the navigation DVD is installed with the label side up.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Display temp is too high. System will shut down until display cools down.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+This message will appear briefly when the display temperature is too high, and then the display will turn off until the temperature cools down. The system will turn back on when the display cools down.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Outside temperature is low, system will take a while to start up.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+The temperature is below −30 °C and the navigation unit has difficulties reading the DVD. The system will start up when the temperate warms up.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+DVD disc reading error (unformatted), please consult your dealer.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Check the DVD for the correct color and software version. Also check for deep scratches or other damage. Make sure you are using an official Honda navigation DVD (white in color). The system cannot read other mapping databases or video DVDs. If the problem persists, see your dealer. Check any official Honda service website for more service information about the navigation system.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Route has not been completed. Please try again from a different location.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Routing to or from a place (new area) that is not in the database. Try planning a different route to or from a different location that is clearly displayed on the map (map matched).
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+No alternate route found. Original route will be guided.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+No alternate route method was found. The original route method will be used.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+This destination cannot be found in database.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+The destination was not found in the database. Try another destination nearby, or select the destination with the interface dial.
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

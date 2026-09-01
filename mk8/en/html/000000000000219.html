@@ -1,0 +1,599 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E00H46400016251KBAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+Cable Reel Replacement
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR01">
+</a>
+<div class="procedure_sub_title">
+<b>
+Removal
+</b>
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Make sure the front wheels are aligned straight ahead.
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+<a href="javascript:CtsProc('0','000000000002660','iR01')">
+Do the battery terminal disconnection procedure,
+</a>
+ then wait for 3 minutes.
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+<a href="javascript:CtsProc('0','000000000000215','i000')">
+Remove the driver's airbag.
+</a>
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Disconnect the connector (A) from the cable reel, then remove the steering wheel bolt (B).
+</div>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+Confirm that the front wheels point straight ahead, then 
+<a href="javascript:CtsProc('0','000000000000083','i000')">
+remove the steering wheel with a steering wheel puller.
+</a>
+Do not tap on the steering wheel or steering column shaft when removing the steering wheel.
+</div>
+</li>
+</ol>
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+<a href="javascript:CtsProc('0','000000000000391','i000')">
+Remove the column cover.
+</a>
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000606','1');">
+<img src="../tn/TL19E00H46400016251KBAD01.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H46400016251KBAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR01">
+</a>
+<a name="i070">
+</a>
+<ol>
+<li value="7">
+<div>
+Disconnect the dashboard wire harness 4P connector (A) from the cable reel 4P connector (B), then disconnect the dashboard wire harness 20P connector (C) from the cable reel (D).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000607','1');">
+<img src="../tn/TL19E00H46400016251KBAD02.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H46400016251KBAD02_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR01">
+</a>
+<a name="i080">
+</a>
+<ol>
+<li value="8">
+<div>
+Release the lock tab (A) under the cable reel connector with a 90 ° hook shaped tool (B). Slide the tool below the cable reel connector just above the lock tab. Release the lower lock tab (C), and slide the cable reel off the column.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000608','1');">
+<img src="../tn/TL19E00H46400016251KBAD03.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H46400016251KBAD03_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR02">
+</a>
+<div class="procedure_sub_title">
+<b>
+Installation
+</b>
+</div>
+<a name="i210">
+</a>
+<ol>
+<li value="1">
+<div>
+Before installing the steering wheel, align the front wheels straight ahead.
+</div>
+</li>
+</ol>
+<a name="i220">
+</a>
+<ol>
+<li value="2">
+<div>
+If not already done, disconnect the negative cable from the battery, then wait for 3 minutes.
+</div>
+</li>
+</ol>
+<a name="i230">
+</a>
+<ol>
+<li value="3">
+<div>
+Set the turn signal canceling sleeve (A) so that the projections (B) are aligned vertically.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000609','1');">
+<img src="../tn/TL19E00H46400016251KBAD04.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H46400016251KBAD04_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR02">
+</a>
+<a name="i240">
+</a>
+<ol>
+<li value="4">
+<div>
+Carefully install the cable reel (A) on the steering column shaft. Then connect 20P connector (B) to the cable reel, and connect the 4P connector (C) to the dashboard wire harness 4P connector (D).
+</div>
+</li>
+</ol>
+<a name="i250">
+</a>
+<ol>
+<li value="5">
+<div>
+Install the steering column covers.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000610','1');">
+<img src="../tn/TL19E00H46400016251KBAD05.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H46400016251KBAD05_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR02">
+</a>
+<a name="i260">
+</a>
+<ol>
+<li value="6">
+<div>
+If necessary, center the cable reel (New replacement cable reels come centered.). Do this by first rotating the cable reel clockwise until it stops. Then rotate it counterclockwise (about three turns) until the arrow mark (A) on the cable reel label points straight up.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000611','1');">
+<img src="../tn/TL19E00H46400016251KBAD06.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H46400016251KBAD06_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR02">
+</a>
+<a name="i270">
+</a>
+<ol>
+<li value="7">
+<div>
+Position the two tabs (A) of the turn signal canceling sleeve (B) as shown, and install the steering wheel on to the steering column shaft, making sure the steering wheel hub (C) engages the pins (D) of the cable reel and tabs of the turn signal canceling sleeve. Do not tap on the steering wheel or steering column shaft when installing the steering wheel.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000612','1');">
+<img src="../tn/TL19E00H46400016251KBAD07.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H46400016251KBAD07_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR02">
+</a>
+<a name="i280">
+</a>
+<ol>
+<li value="8">
+<div>
+Install and torque a new steering wheel bolt (A), then reconnect the connectors.
+</div>
+</li>
+</ol>
+<a name="i290">
+</a>
+<ol>
+<li value="9">
+<div>
+<a href="javascript:CtsProc('0','000000000000215','i000')">
+Install the driver's airbag.
+</a>
+</div>
+</li>
+</ol>
+<a name="i300">
+</a>
+<ol>
+<li value="10">
+<div>
+<a href="javascript:CtsProc('0','000000000002660','iR02')">
+Do the battery terminal reconnection procedure.
+</a>
+</div>
+</li>
+</ol>
+<a name="i310">
+</a>
+<ol>
+<li value="11">
+<div>
+Connect the HDS and clear any DTCs.
+</div>
+</li>
+</ol>
+<a name="i320">
+</a>
+<ol>
+<li value="12">
+<div>
+After installing the cable reel, confirm proper system operation:
+</div>
+<ul type="disc">
+<li>
+<div>
+Turn the ignition switch to ON (II); the SRS indicator should come on for about 6 seconds and then go off.
+</div>
+</li>
+<li>
+<div>
+After the SRS indicator has turned off, turn the steering wheel fully left and right to confirm the SRS indicator does not come on.
+</div>
+</li>
+<li>
+<div>
+Make sure the horn works.
+</div>
+</li>
+<li>
+<div>
+Make sure the cruise control buttons work.
+</div>
+</li>
+<li>
+<div>
+Make sure the steering wheel audio controls work.
+</div>
+</li>
+<li>
+<div>
+Make sure the INFO/SEL buttons works.
+</div>
+</li>
+<li>
+<div>
+Make sure there are no DTCs.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000613','1');">
+<img src="../tn/TL19E00H46400016251KBAD08.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H46400016251KBAD08_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

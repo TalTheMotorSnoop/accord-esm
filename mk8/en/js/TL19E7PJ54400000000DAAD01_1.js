@@ -1,0 +1,37 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:557px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:557px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E7PJ54400000000DAAD01.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:557px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:7px;top:512px;font-weight:normal;font-size:8.65pt;\">");
+write("<nobr><b>WINDSHIELD<br><a href=\"javascript:CtsProc('0','000000000002665','i000')\"></b>Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:86px;top:205px;font-weight:normal;font-size:8.65pt;\">");
+write("<nobr><b>WINDSHIELD MOLDING<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:197px;top:171px;font-weight:normal;font-size:8.65pt;\">");
+write("<nobr><b>WINDSHIELD UPPER SEAL<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:524px;top:512px;font-weight:normal;font-size:8.65pt;\">");
+write("<nobr><b>RUBBER DAM B<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:639px;top:480px;font-weight:normal;font-size:8.65pt;\">");
+write("<nobr><b>RUBBER DAM A<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:696px;top:93px;font-weight:normal;font-size:8.65pt;\">");
+write("<nobr><b>RAIN SENSOR COVER BASE<br>(With lane keep assist system)<br><a href=\"javascript:CtsProc('0','000000000000566','i000')\"></b>Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:716px;top:401px;font-weight:normal;font-size:8.65pt;\">");
+write("<nobr><b>DASHBOARD SEAL, 2<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:290px;top:120px;font-weight:normal;font-size:8.65pt;\">");
+write("<nobr><b>UPPER CLIP, 2<br>(Self-adhesive-type, glass side)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:582px;top:17px;font-weight:normal;font-size:8.65pt;\">");
+write("<nobr><b>RAIN SENSOR COVER BASE<br>(Without lane keep assist system<br>and with automatic wiper)<br><a href=\"javascript:CtsProc('0','000000000000566','i000')\"></b>Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_10\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:729px;top:154px;font-weight:normal;font-size:8.65pt;\">");
+write("<nobr><b>REARVIEW MIRROR<br>HARNESS COVER BASE<br>(For some models with<br>automatic dimming mirror)<br><a href=\"javascript:CtsProc('0','000000000000565','i000')\"></b>Replacement,</a><br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

@@ -1,0 +1,744 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+
+<title>Navigation Unit Inputs and Outputs for Connector A (20P)</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+function Apf() {
+   _prInitImageInfo(100);
+   window.focus();
+   if(gImageGroupList_.length == 0) {
+      window.print();
+   }
+   else {
+      divBody.style.display = "none";
+      var  img_pos,img_hei;
+      var  img_rate = 1.0;
+      var  i;
+      var  obj;
+      var  paper_wid,paper_hei,paper_len;
+      paper_wid = 640.0;
+      paper_hei = 950.0;
+      paper_len = 980.0;
+      for(i=0; i<gImageGroupList_.length; i++){
+         if(gImageGroupList_[i].group != null){
+           obj = gImageGroupList_[i].group;
+         }
+      }
+      if(paper_wid > paper_hei) {
+         alert("For best printing result, select 'landscape' layout from the print menu.");
+      }
+      for(i=0; i<gImageGroupList_.length; i++){
+         if(gImageGroupList_[i].group != null){
+            obj = gImageGroupList_[i].group;
+            if(img_rate > paper_wid/obj.width) {
+               img_rate =  paper_wid/obj.width;
+            }
+            if(img_rate > paper_hei/obj.height) {
+               img_rate =  paper_hei/obj.height;
+            }
+         }
+      }
+      _prResizeImage(img_rate);
+      window.scrollTo(0,10000);
+      var totalHei = document.body.scrollTop+document.body.clientHeight-img_hei;
+      divBody.style.display = "block";
+      var  idObj;
+      var groupObject = document.getElementById("group" + i);
+      var   beforeOffset = 0;
+      var   current_pos;
+      var   img_pos = img_dis = 0;
+      for(i=0; i<gImageGroupList_.length; i++){
+         idObj =document.getElementById("imgId" + (i+1));
+         if(idObj != null) {
+            idObj.style.display = "block";
+            current_pos = idObj.offsetTop;
+            if(gImageGroupList_[i].group != null){
+               obj = gImageGroupList_[i].group;
+               img_dis = current_pos - beforeOffset;
+               if(i == 0) {
+                  var pageCnt = Math.floor(current_pos/paper_hei);
+                  img_dis = img_dis - paper_hei*pageCnt;
+               }
+               img_hei = obj.height*img_rate;
+               img_pos += parseInt(img_dis);
+               if(parseInt(img_pos) > paper_len) {
+                  img_pos = img_pos - paper_len;
+               }
+               img_pos += parseInt(img_hei);
+               idObj.style.display = "none";
+               if(parseInt(img_pos) > paper_len) {
+                  idObj.style.display = "block";
+                  img_pos = parseInt(img_hei) + 50;
+               }
+               beforeOffset = current_pos + parseInt(img_hei);
+            }
+         }
+      }
+      window.print();
+      divBody.style.display = "none";
+      _prResizeImage(100/100);
+      divBody.style.display = "block";
+      window.scrollTo(0,0);
+   }
+}
+-->
+</script>
+<body onload="try{if(parent&&parent.Old)parent.Old(this);}catch(e){}" style="font-family:sans-serif;">
+<div id="divBody" style="display:block">
+<div>
+<div class="top_title">
+<b>
+Navigation Unit Inputs and Outputs for Connector A (20P)
+</b>
+</div>
+<a name="iS03">
+</a>
+<span style="display:none" id="imgId1">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA6EJ4J36200000000CAAD08_1.js">
+</script>
+</div>
+<div>
+<table width="100%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="8%">
+<col width="8%">
+<col width="13%">
+<col width="15%">
+<col width="13%">
+<col width="40%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Terminal Number
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Wire Color
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Terminal Name
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Description
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Voltage (about)
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Symptom
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+WHT
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+R SIG (Red signal)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Red color signal
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+0−1 V AC
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+If open: Red color missing (see ‘‘RGB Color'' diagnostic).
+</div>
+<div>
+If short to ground: Red color missing (see ‘‘RGB Color'' diagnostic).
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+2
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+RED
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+G SIG (Green signal)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Green color signal
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+0−1 V AC
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+If open: Green color missing (see ‘‘RGB Color'' diagnostic).
+</div>
+<div>
+If short to ground: Green color missing (see ‘‘RGB Color'' diagnostic).
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+3
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+GRY
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+SH SIG (Shield signal)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Shield for terminal No. 1, 2, 11, 12, 13
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+0 V
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+If open: No change to display.
+</div>
+<div>
+If short to ground: No change to display.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+5
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+RED/BLK
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+ILL (+) (Illumination positive)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Parking light on signal from dash and console lights, under-hood ‘‘Relay fuse box''
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Lights on=battery voltage, Lights off=0 V
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+If open: When brightness=‘‘Auto'', night mode for the display is inoperative when lights on.
+</div>
+<div>
+If short to ground: Blows fuse 4 in under-hood fuse/relay box.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+8
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+WHT
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+CAN-H (CAN high)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+F-CAN bus communication with the ‘‘gauge control module''
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Pulses 2.5−6 V average 3 V
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+If open:
+</div>
+<div>
+1) System Links FI-ECU, and Meter both show ‘‘NG''.
+</div>
+<div>
+2) F-CAN diagnostic=‘‘NG''.
+</div>
+<div>
+3) B-CAN diagnostic=‘‘NG''.
+</div>
+<div>
+4) Car status CHG (CAN)=0.
+</div>
+<div>
+5) Functional Setup, Trip into, FUP &amp; Sampled FL=0.
+</div>
+<div>
+If short to ground: Same diagnostic conditions as when open, and also sets the following DTCs.
+</div>
+<ul type="disc">
+<li>
+<div>
+B1168 Gauge Control Module loss of Comm. (Engine)
+</div>
+</li>
+<li>
+<div>
+B1169 Gauge Control Module loss of Comm. (A/T)
+</div>
+</li>
+<li>
+<div>
+B1178 F-CAN communication Circuit error.
+</div>
+</li>
+<li>
+<div>
+U0073 (F-CAN Bus off)
+</div>
+</li>
+<li>
+<div>
+U0155 (F-CAN Gauge control)
+</div>
+</li>
+<li>
+<div>
+U0121 (F-CAN TCS control)
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+9
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+GRY
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+SH DISP BUS (Shield display bus)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Shield for display bus terminal No. 10, 20
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+0 V
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+If open: No change to display.
+</div>
+<div>
+If short to ground: No change to display.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+10
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+LT BLU
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+DISP BUS (+) (Display bus positive)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Date bus (+) GA-Net
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+0 V−5 V pulses average 2.5 V depends on bus traffic
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+If open: Navigation buttons and touch screen do not work.
+</div>
+<div>
+If short to ground: Navigation buttons and touch screen do not work.
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<div>
+<table width="100%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="8%">
+<col width="8%">
+<col width="13%">
+<col width="15%">
+<col width="13%">
+<col width="40%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Terminal Number
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Wire Color
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Terminal Name
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Description
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Voltage (about)
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Symptom
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+11
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+YEL
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+B SIG (Blue signal)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Blue color signal
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+0−1 V AC
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+If open: Blue color missing (see ‘‘RGB Color'' diagnostic).
+</div>
+<div>
+If short to ground: Blue color missing (see ‘‘RGB Color'' diagnostic).
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+12
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+BRN
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+C SIG (Composite signal)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Composite video (vertical/horizontal) Synchronizing signal
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+0.3 V AC
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+If open: Picture rolls horizontally, colors still visible.
+</div>
+<div>
+If short to ground: Picture rolls horizontally, colors still visible.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+13
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+GRN
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+GND SIG (Ground signal)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Ground for color signal
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+0 V
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+If open: No change to display.
+</div>
+<div>
+If short to ground: No change to display.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+18
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+RED
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+CAN-L (CAN low)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+F-CAN bus communication with the ‘‘gauge control module''
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Pulses 2.5−6 V average 3 V
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+If open:
+</div>
+<div>
+1) System Links FI-ECU, and Meter both show ‘‘NG''.
+</div>
+<div>
+2) F-CAN diagnostic=‘‘NG''.
+</div>
+<div>
+3) B-CAN diagnostic=‘‘NG''.
+</div>
+<div>
+4) Car status CHG (CAN)=0.
+</div>
+<div>
+5) Functional Setup, Trip into, FUP &amp; Sampled FL=0.
+</div>
+<div>
+If short to ground: Same diagnostic conditions as when open, and also sets the following DTCs.
+</div>
+<ul type="disc">
+<li>
+<div>
+B1168 Gauge Control Module loss of Comm. (Engine)
+</div>
+</li>
+<li>
+<div>
+B1169 Gauge Control Module loss of Comm. (A/T)
+</div>
+</li>
+<li>
+<div>
+B1178 F-CAN communication Circuit error.
+</div>
+</li>
+<li>
+<div>
+U0073 (F-CAN Bus off)
+</div>
+</li>
+<li>
+<div>
+U0155 (F-CAN Gauge control)
+</div>
+</li>
+<li>
+<div>
+U0121 (F-CAN TCS control)
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+20
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+PUR
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+DISP BUS (−) (Display bus negative)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Date bus (−) GA-Net
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+0 V−5 V pulses nominally 2.5 V
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+If open: Navigation buttons and touch screen do not work.
+</div>
+<div>
+If short to ground: Hard and touch buttons work OK.
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</div></div>
+</body>
+</html>

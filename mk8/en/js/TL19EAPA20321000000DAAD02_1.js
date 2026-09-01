@@ -1,0 +1,31 @@
+with(document) {
+write("<div id=\"group2\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:815px;\">");
+write("<div id=\"rect2\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:815px;\">");
+write("<img id=\"img2\" name=\"PrtImgId\" src=\"../img/TL19EAPA20321000000DAAD02.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:815px;border-color:#ffffff\">");
+write("<p id=\"p2_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:391px;top:17px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>INERTIA SWITCH (KE, KG models)<br><a href=\"javascript:CtsProc('0','000000000001935','i000')\"></b>Replacement,</a><br> in the Shop Manual Supplement, P/N 62TL120<br></nobr>");
+write("</p>");
+write("<p id=\"p2_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:781px;top:280px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>ACCELERATOR<br>PEDAL POSITION<br>(APP) SENSOR<br><a href=\"javascript:CtsProc('0','000000000001929','i000')\"></b>Signal Inspection,<br></a><br> in the Shop Manual<br> Supplement,<br> P/N 62TL120<br></nobr>");
+write("</p>");
+write("<p id=\"p2_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:743px;top:479px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>ACCELERATOR PEDAL<br>MODULE<br><a href=\"javascript:CtsProc('0','000000000001928','i000')\"></b>Removal/Installation,<br></a><br> in the Shop Manual<br> Supplement, P/N 62TL120<br></nobr>");
+write("</p>");
+write("<p id=\"p2_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:335px;top:683px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>CLUTCH PEDAL POSITION SWITCH A (M/T)<br><a href=\"javascript:CtsProc('0','000000000002243','i000')\"></b>Shift Indicator Lamp Troubleshooting,</a><br> in the Shop Manual Supplement, P/N 62TL120<br></nobr>");
+write("</p>");
+write("<p id=\"p2_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:266px;top:745px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>CLUTCH PEDAL POSITION SWITCH B (M/T)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:5px;top:674px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>DATA LINK CONNECTOR (DLC)<br></b>General Troubleshooting<br><a href=\"javascript:CtsProc('0','000000000003767','i000')\"> Information,</a><br><a href=\"javascript:CtsProc('0','000000000003669','i000')\">Circuit Troubleshooting,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:1px;top:515px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>PGM-FI MAIN<br>RELAY 3<br>(FUEL PUMP)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:17px;top:785px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b></b>*: This illustration shows LHD model (M/T).<br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

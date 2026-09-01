@@ -1,0 +1,172 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+<title>SEA6EJ4J36200000000BBAT20</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+var   totalImg = 1;
+var   dispNum=1;
+function prOnLoadProc() {
+	_prInitImageInfo(100);
+	_prResizeImage(100/100);
+	divBody.style.display = "block"
+	return;
+}
+function PrintFunc()
+{
+	divBody.style.display = "none";
+	var  img_hei = _prResizeImage(67/100);
+	divBody.style.display = "block";
+	var  graphTd = document.getElementById("graphTd");
+	if(graphTd.width == "100%")
+	{
+      var   current_pos;
+      var   img_pos = 0;
+         current_pos = graphTd.offsetTop;
+		var pageCnt = Math.floor(current_pos/950);
+		var img_pos = current_pos - (pageCnt*950);
+		if(img_pos+img_hei > 950)
+		{
+			var  pageElement = document.getElementById("page_onoff");
+			if(pageElement != null)
+			{
+				pageElement.style.display = "block";
+			}
+		}
+	}
+	window.print();
+	divBody.style.display = "none";
+	_prResizeImage(100/100);
+	divBody.style.display = "block";
+	window.scrollTo(0,0);
+}
+function BackFunc()
+{
+	window.location.replace("ZOOM000000000009972.html");
+}
+function NextFunc()
+{
+	window.location.replace("ZOOM000000000009974.html");
+}
+function CloseFunc()
+{
+	window.close();
+}
+function JumpFunc(strJump)
+{
+	window.location.replace(strJump);
+}
+//-->
+</script>
+<body onLoad="prOnLoadProc();" style="font-family:sans-serif;">
+<div id="divBody" style="display:none">
+<div>
+<div style="position:absolute;right=10;">
+<input type="image" src="../img/PRINT_PREVIEW.PNG" onClick="PrintFunc()">
+<input type="image" src="../img/GL_PREV.PNG" onClick="BackFunc()">
+<input type="image" src="../img/GL_NEXT.PNG" onClick="NextFunc()">
+<input type="image" src="../img/GL_CANCEL.PNG" onClick="CloseFunc()">
+</div><br><br>
+<hr width="100%" size="2" color="black">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG06">
+</a>
+<div class="servinfosub_title">
+<b>
+Car Status
+</b>
+</div>
+<div>
+This screen is used to confirm that navigation unit is properly receiving input signals. Signals equal to (0) are OFF, and signals equal to (1) are ON. If the value on the display does not match the actual vehicle status, then check the wire carrying the signal.
+</div>
+<ul type="disc">
+<li>
+<div>
+VSP-Vehicle Speed Pulse from PCM (Pin 6 of C-connector)
+</div>
+<div>
+a) OFF (0) when vehicle is not moving
+</div>
+<div>
+b) ON (1) when vehicle is moving
+</div>
+</li>
+</ul>
+<div>
+The VSP comes from the PCM as a dedicated signal. Internally, the navigation unit compares the actual VP on the map against street data to adjust the pulse to speed scaling factor. As this scaling factor becomes more accurate, the ‘‘Level'' gradually increases from 0 to 10 (see the Tire Calibrate diagnostic screen).
+</div>
+<ul type="disc">
+<li>
+<div>
+BACK-Reverse indication from taillight relay (Pin 5 of C-connector)
+</div>
+<div>
+a) OFF (0) when shift lever is in any position other than reverse
+</div>
+<div>
+b) ON (1) when shift lever is in reverse
+</div>
+</li>
+</ul>
+<div>
+The Back signal is used by the navigation unit to allow the map screen to show the VP moving backwards when in reverse and to activate the rearview camera. This signal is needed because the Speed Pulse has no direction indication.
+</div>
+<div>
+This signal is obtained off of the F-CAN bus. For problems, perform F-CAN troubleshooting. Diagnostic trouble codes (DTCs) for the F-CAN can be retrieved with the HDS (Honda Diagnostic System).
+</div>
+<ul type="disc">
+<li>
+<div>
+ILL-Illumination Indication (Pin 5 of navigation unit A-connector)
+</div>
+<div>
+a) OFF (0) when parking lights, or headlights are off
+</div>
+<div>
+b) ON (1) when parking lights, or headlights are off
+</div>
+</li>
+</ul>
+<div>
+This signal is used by the navigation unit to determine whether to put the navigation screen into the Day or Night brightness mode. (Setup screen 1)
+</div>
+<ul type="disc">
+<li>
+<div>
+DVD Lid-senses if DVD door is open
+</div>
+<div>
+a) (Close) when door is closed
+</div>
+<div>
+b) (Open) when door is open
+</div>
+</li>
+</ul>
+<div>
+The navigation unit has a micro switch to detect this. If open is indicated when the door is closed, replace the navigation unit.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div style="display:none;" id="page_onoff">
+<div style="page-break-after:always;">
+</div>
+</div>
+<span style="display:block" id="imgId1">
+<div>
+<script src="../js/SEA6EJ4J36200000000BBAD21_1.js">
+</script>
+</div>
+</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

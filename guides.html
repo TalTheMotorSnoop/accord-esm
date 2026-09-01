@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Common Jobs</title>
+<link href="./fonts/fonts.css" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Outfit',sans-serif;background:#fff;color:#2a2a2a;line-height:1.6}
+.wrap{max-width:900px;margin:0 auto;padding:30px 40px 60px}
+h1{font-family:'Rajdhani',sans-serif;font-size:24px;font-weight:700;color:#111;letter-spacing:-0.5px;margin-bottom:4px}
+.subtitle{font-size:13px;color:#999;margin-bottom:20px}
+.intro{background:#f9f9f9;border:1px solid #eee;border-radius:8px;padding:14px 18px;font-size:13px;color:#555;margin-bottom:10px}
+.intro b{color:#333}
+.tip{background:#fffbeb;border:1px solid #fde68a;border-radius:6px;padding:10px 14px;font-size:12.5px;color:#92400e;margin-bottom:24px}
+.job{border:1px solid #eee;border-radius:8px;padding:14px 18px;margin-bottom:12px}
+.job:hover{border-color:#e0c0c0}
+.jname{font-family:'Rajdhani',sans-serif;font-size:16px;font-weight:700;color:#111;margin-bottom:2px}
+.jdesc{font-size:12px;color:#999;margin-bottom:8px}
+.links{display:flex;flex-wrap:wrap;gap:6px}
+.lnk{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:500;color:#cc0000;text-decoration:none;border:1px solid #f0d0d0;border-radius:14px;padding:3px 12px;cursor:pointer;transition:all .15s}
+.lnk:hover{background:#fef2f2;border-color:#cc0000}
+.gen{font-size:9px;font-weight:700;letter-spacing:0.5px;color:#888;background:#f3f4f6;border-radius:8px;padding:1px 6px}
+.gen.g8{color:#2563eb;background:#eff6ff}
+.gen.g7{color:#16a34a;background:#f0fdf4}
+.na{font-size:11.5px;color:#b0b0b0;font-style:italic;margin-top:4px}
+.footer{margin-top:36px;padding-top:18px;border-top:1px solid #eee;font-size:11.5px;color:#bbb;line-height:1.7}
+/* ── dark mode (driven by the launcher theme over the bridge) ── */
+html.darkmode body{background:#14171c;color:#c8cdd6}
+html.darkmode h1{color:#e8ebf0}
+html.darkmode .subtitle{color:#7a828e}
+html.darkmode .intro{background:#1b1f26;border-color:#262b33;color:#9aa2ae}
+html.darkmode .intro b{color:#d5dae2}
+html.darkmode .tip{background:#33290f;border-color:#5a4a1a;color:#d8b860}
+html.darkmode .job{border-color:#262b33}
+html.darkmode .job:hover{border-color:#5a3535}
+html.darkmode .jname{color:#dde2ea}
+html.darkmode .jdesc{color:#7a828e}
+html.darkmode .lnk{color:#ff8080;border-color:#4a2a2a}
+html.darkmode .lnk:hover{background:#2a1717;border-color:#cc4444}
+html.darkmode .gen{background:#232830;color:#8a93a0}
+html.darkmode .gen.g8{background:#16233a;color:#7ab0ff}
+html.darkmode .gen.g7{background:#14301e;color:#4ade80}
+html.darkmode .na{color:#5a626e}
+html.darkmode .footer{border-color:#242932;color:#5a626e}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Common Jobs</h1>
+<div class="subtitle">A curated index of Honda's own service procedures for the jobs owners do most often.</div>
+
+<div class="intro"><b>Nothing on this page is new content.</b> Every link below opens the official Honda procedure from this manual — this page just gathers the ones most owners look for into one place. Pick your <b>model and year in the sidebar first</b>: each link runs a search against your selected model, so you always land on the correct pages for your exact car and engine.</div>
+
+<div class="tip"><b>Please read before starting any job.</b> The procedures linked on this page come from Honda's factory service manuals, which were written for trained technicians &mdash; they assume mechanical experience, workshop judgment, and access to the correct tools. Only attempt a job if you are confident you can complete it safely and have the right tools and parts before you start. Always use appropriate safety equipment, and support a raised vehicle on rated axle stands at Honda's designated points (see <a class="lnk" style="border:none;padding:0" onclick="go('Lift and Support Points')">Lift and Support Points</a>) &mdash; never work under a vehicle held only by a jack. Some of these jobs involve safety-critical systems such as brakes: work on them must be completed correctly, checked, and tested before the vehicle is driven on the road. If you are unsure at any point, stop and consult a qualified mechanic. You proceed at your own risk &mdash; the author and contributors accept no responsibility or liability for injury, or for damage to vehicles or property, arising from the use of this page or the procedures it links to.</div>
+
+<div class="job">
+  <div class="jname">Safe jacking &amp; supporting the car</div>
+  <div class="jdesc">Where Honda says to place a jack, hoist blocks and safety stands.</div>
+  <div class="links">
+    <a class="lnk" onclick="go('Lift and Support Points')">Lift and Support Points <span class="gen">MK7 + MK8</span></a>
+  </div>
+</div>
+
+<div class="job">
+  <div class="jname">Engine oil &amp; filter</div>
+  <div class="links">
+    <a class="lnk" onclick="go('Engine Oil Replacement')">Engine Oil Replacement <span class="gen">MK7 + MK8</span></a>
+    <a class="lnk" onclick="go('Engine Oil Filter Replacement')">Engine Oil Filter Replacement <span class="gen">MK7 + MK8</span></a>
+    <a class="lnk" onclick="go('Engine Oil Level Check')">Engine Oil Level Check <span class="gen g8">MK8</span></a>
+  </div>
+</div>
+
+<div class="job">
+  <div class="jname">Fluid level checks</div>
+  <div class="links">
+    <a class="lnk" onclick="go('Coolant Check')">Coolant Check <span class="gen">MK7 + MK8</span></a>
+    <a class="lnk" onclick="go('ATF Level Check')">ATF Level Check <span class="gen">MK7 + MK8</span></a>
+    <a class="lnk" onclick="go('Engine Oil Level Check')">Engine Oil Level Check <span class="gen g8">MK8</span></a>
+  </div>
+</div>
+
+<div class="job">
+  <div class="jname">Engine air filter</div>
+  <div class="links">
+    <a class="lnk" onclick="go('Air Cleaner Element')">Air Cleaner Element Replacement <span class="gen">MK7 + MK8</span></a>
+    <a class="lnk" onclick="go('Air Cleaner Removal')">Air Cleaner Removal/Installation <span class="gen">MK7 + MK8</span></a>
+  </div>
+</div>
+
+<div class="job">
+  <div class="jname">Cabin (dust &amp; pollen) filter</div>
+  <div class="links">
+    <a class="lnk" onclick="go('Dust and Pollen Filter Replacement')">Dust and Pollen Filter Replacement <span class="gen">MK7 + MK8</span></a>
+  </div>
+</div>
+
+<div class="job">
+  <div class="jname">Spark plugs <span class="gen">petrol engines</span></div>
+  <div class="links">
+    <a class="lnk" onclick="go('Spark Plug Inspection')">Spark Plug Inspection <span class="gen">MK7 + MK8</span></a>
+  </div>
+</div>
+
+<div class="job">
+  <div class="jname">Fuel filter</div>
+  <div class="links">
+    <a class="lnk" onclick="go('Fuel Filter Replacement')">Fuel Filter Replacement <span class="gen">MK7 + MK8</span></a>
+  </div>
+</div>
+
+<div class="job">
+  <div class="jname">Front brake pads</div>
+  <div class="links">
+    <a class="lnk" onclick="go('Front Brake Pad Inspection and Replacement')">Front Brake Pad Inspection and Replacement <span class="gen">MK7 + MK8</span></a>
+    <a class="lnk" onclick="go('Brake System Inspection and Test')">Brake System Inspection and Test <span class="gen">MK7 + MK8</span></a>
+  </div>
+</div>
+
+<div class="job">
+  <div class="jname">Rear brake pads</div>
+  <div class="links">
+    <a class="lnk" onclick="go('Rear Brake Pad Inspection and Replacement')">Rear Brake Pad Inspection and Replacement <span class="gen">MK7 + MK8</span></a>
+  </div>
+</div>
+
+<div class="job">
+  <div class="jname">Automatic transmission fluid (ATF)</div>
+  <div class="links">
+    <a class="lnk" onclick="go('ATF Level Check')">ATF Level Check <span class="gen">MK7 + MK8</span></a>
+    <a class="lnk" onclick="go('ATF Replacement')">ATF Replacement <span class="gen">MK7 + MK8</span></a>
+  </div>
+</div>
+
+<div class="job">
+  <div class="jname">Wiper blades</div>
+  <div class="links">
+    <a class="lnk" onclick="go('Wiper Blade Replacement')">Wiper Blade Replacement <span class="gen g8">MK8</span></a>
+  </div>
+  <div class="na">The MK7 (2003&ndash;2008) manual does not include a wiper blade procedure.</div>
+</div>
+
+<div class="job">
+  <div class="jname">Bulbs &amp; lights</div>
+  <div class="links">
+    <a class="lnk" onclick="go('Headlight Replacement')">Headlight Replacement <span class="gen">MK7 + MK8</span></a>
+    <a class="lnk" onclick="go('HID Bulb Replacement')">HID Bulb Replacement <span class="gen g7">MK7</span></a>
+    <a class="lnk" onclick="go('Exterior Light Bulb Replacement')">Exterior Light Bulb Replacement <span class="gen g8">MK8</span></a>
+    <a class="lnk" onclick="go('Front Fog Light Bulb Replacement')">Front Fog Light Bulb Replacement <span class="gen g8">MK8</span></a>
+    <a class="lnk" onclick="go('Taillight Replacement')">Taillight Replacement <span class="gen">MK7 + MK8</span></a>
+    <a class="lnk" onclick="go('License Plate Light Replacement')">License Plate Light Replacement <span class="gen">MK7 + MK8</span></a>
+  </div>
+</div>
+
+<div class="job">
+  <div class="jname">Battery</div>
+  <div class="links">
+    <a class="lnk" onclick="go('Battery Removal')">Battery Removal/Installation <span class="gen g8">MK8</span></a>
+    <a class="lnk" onclick="go('Battery Terminal Disconnection')">Battery Terminal Disconnection/Reconnection <span class="gen g8">MK8</span></a>
+    <a class="lnk" onclick="go('Battery Test')">Battery Test <span class="gen">MK7 + MK8</span></a>
+  </div>
+</div>
+
+<div class="footer">
+Generation tags show where each procedure appears: <span class="gen">MK7 + MK8</span> both manuals &middot; <span class="gen g7">MK7</span> 2003&ndash;2008 only &middot; <span class="gen g8">MK8</span> 2008&ndash;2010 only. A link tagged for the other generation will simply find no results for your model.<br>
+All procedures are the property of Honda Motor Co., Ltd. This page adds no technical content &mdash; it is an index only. Anything not listed here can be found through search or the System/Component tree.
+</div>
+</div>
+<script>
+function go(kw){try{if(parent&&parent.GuideGo){parent.GuideGo(kw);return}}catch(e){}try{if(parent&&parent!==window){parent.postMessage({esm:'guidego',kw:kw},'*');return}}catch(e2){}}
+</script>
+<script>
+(function(){try{
+  function T(d){document.documentElement.classList.toggle('darkmode',!!d)}
+  window.addEventListener('message',function(ev){var d=ev.data;if(d&&d.esm==='theme')T(d.dark)});
+  try{parent.postMessage({esm:'themehello'},'*')}catch(e){}
+}catch(e){}})();
+</script>
+</body>
+</html>

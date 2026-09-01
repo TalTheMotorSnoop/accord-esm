@@ -1,0 +1,212 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+<title>SEA5E44A14600000000KCAT00</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+var   totalImg = 2;
+var   dispNum=1;
+function prOnLoadProc() {
+	_prInitImageInfo(100);
+	var para_val = window.location.hash;
+	if(para_val.charAt(0) == '#') {
+		para_val = para_val.substring(1,para_val.length);
+	}
+	var   imgName;
+	imgName = "imgId" + dispNum;
+	document.getElementById(imgName).style.display = "none";
+	if(para_val.length == 0) {
+		dispNum = 1;
+	}
+	else{
+		dispNum = parseInt(para_val);
+	}
+	imgName = "imgId" + dispNum;
+	document.getElementById(imgName).style.display = "block";
+	_prResizeImage(100/100);
+	divBody.style.display = "block"
+	return;
+}
+function PrintFunc()
+{
+	divBody.style.display = "none";
+	var  img_hei = _prResizeImage(67/100);
+	divBody.style.display = "block";
+	var  graphTd = document.getElementById("graphTd");
+	if(graphTd.width == "100%")
+	{
+      var   current_pos;
+      var   img_pos = 0;
+         current_pos = graphTd.offsetTop;
+		var pageCnt = Math.floor(current_pos/950);
+		var img_pos = current_pos - (pageCnt*950);
+		if(img_pos+img_hei > 950)
+		{
+			var  pageElement = document.getElementById("page_onoff");
+			if(pageElement != null)
+			{
+				pageElement.style.display = "block";
+			}
+		}
+	}
+	window.print();
+	divBody.style.display = "none";
+	_prResizeImage(100/100);
+	divBody.style.display = "block";
+	window.scrollTo(0,0);
+}
+function NextFunc()
+{
+	window.location.replace("ZOOM000000000005029.html");
+}
+function CloseFunc()
+{
+	window.close();
+}
+function JumpFunc(strJump)
+{
+	window.location.replace(strJump);
+}
+function imgChange()
+{
+var   imgName;
+      imgName = "imgId" + dispNum;
+      document.getElementById(imgName).style.display = "none";
+      dispNum++;
+     if(dispNum > totalImg) {
+         dispNum = 1;
+      }
+      imgName = "imgId" + dispNum;
+      document.getElementById(imgName).style.display = "block";
+}
+//-->
+</script>
+<body onLoad="prOnLoadProc();" style="font-family:sans-serif;">
+<div id="divBody" style="display:none">
+<div>
+<div style="position:absolute;right=10;">
+<input type="image" src="../img/PRINT_PREVIEW.PNG" onClick="PrintFunc()">
+<input type="image" src="../img/GL_PREV_DISABLE.PNG" onClick="BackFunc()" disabled>
+<input type="image" src="../img/GL_NEXT.PNG" onClick="NextFunc()">
+<input type="image" src="../img/GL_CANCEL.PNG" onClick="CloseFunc()">
+</div><br><br>
+<hr width="100%" size="2" color="black">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<div>
+Install the cylinder head in the reverse order of removal.
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Clean the cylinder head, piston head, and block surface.
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+<a href="javascript:opener.top.Cts('000000000001945','i000')">
+Inspect the cylinder head warpage.
+</a>
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Measure the piston head projection value for each cylinder using the dial indicator.
+</div>
+<table class="Viewer">
+<tr>
+<td width="30" class="ViewerTD" align="right">
+<a name="i031">
+</a>
+<div>-1.
+</div>
+</td>
+<td class="ViewerTD" align="left">
+<div>
+Set the dial indicator (A) on the block.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD" align="right">
+<a name="i032">
+</a>
+<div>-2.
+</div>
+</td>
+<td class="ViewerTD" align="left">
+<div>
+Zero the dial indicator at the point B on the block, then measure the projection value at the point C on the piston head. Do the same procedure at the point D, after zero the indicator at the point E.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD" align="right">
+<a name="i033">
+</a>
+<div>-3.
+</div>
+</td>
+<td class="ViewerTD" align="left">
+<div>
+Average of the measured values.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD" align="right">
+<a name="i034">
+</a>
+<div>-4.
+</div>
+</td>
+<td class="ViewerTD" align="left">
+<div>
+Measure the piston head projection value at other three pistons, and note the highest piston head projection value.
+</div>
+</td>
+</tr>
+</table>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div style="display:none;" id="page_onoff">
+<div style="page-break-after:always;">
+</div>
+</div>
+<input onClick="imgChange()" type="image" src="../img/GL_NEXT.PNG" align="right">
+<br clear="right">
+<span style="display:block" id="imgId1">
+<div>
+<script src="../js/SEA4E0AA14600000000KCAD01_1.js">
+</script>
+</div>
+</span>
+<span style="display:none" id="imgId2">
+<div>
+<script src="../js/SEA4E0AA14600000000KCAD02_1.js">
+</script>
+</div>
+</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

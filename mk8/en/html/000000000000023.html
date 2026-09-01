@@ -1,0 +1,347 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E00B54100000000MAAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+Wheel Runout Inspection
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<div>
+NOTE: When measuring the front wheel runout, turn the back side of the wheel slowly by hand.
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Raise the vehicle, and 
+<a href="javascript:CtsProc('0','000000000002895','i000')">
+support it with safety stands in the proper locations.
+</a>
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Check for a bent or deformed wheel.
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Set up the dial gauge as shown, and measure the axial runout by turning the wheel.
+</div>
+<div>
+<table width="87%" class="Viewer" frame="void" style="table-layout:fixed;">
+<col width="4%">
+<col width="4%">
+<col width="91%">
+<tbody>
+<tr>
+<td class="ViewerTD" colspan="3" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Front and rear wheel axial runout:
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="center">
+</td>
+<td class="ViewerTD" colspan="2" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Standard:
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="center">
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Steel wheel: 0−1.0 mm (0−0.04 in.)
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="center">
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Aluminum wheel: 0−0.7 mm (0−0.03 in.)
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="center">
+</td>
+<td class="ViewerTD" colspan="2" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Service limit: 2.0 mm (0.08 in.)
+</b>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000123','1');">
+<img src="../tn/TL19E00B54100000000MAAD01.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00B54100000000MAAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Reset the dial gauge to the position shown, and measure the radial runout.
+</div>
+<div>
+<table width="87%" class="Viewer" frame="void" style="table-layout:fixed;">
+<col width="4%">
+<col width="4%">
+<col width="91%">
+<tbody>
+<tr>
+<td class="ViewerTD" colspan="3" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Front and rear wheel radial runout:
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="center">
+</td>
+<td class="ViewerTD" colspan="2" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Standard:
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="center">
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Steel wheel: 0−1.0 mm (0−0.04 in.)
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="center">
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Aluminum wheel: 0−0.7 mm (0−0.03 in.)
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="center">
+</td>
+<td class="ViewerTD" colspan="2" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Service limit: 1.5 mm (0.06 in.)
+</b>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+If the wheel runout is not within the specification, 
+<a href="javascript:CtsProc('0','000000000000013','i000')">
+check the wheel bearing end play,
+</a>
+ and make sure the mating surfaces on the brake disc or the brake disc/drum and the inside of the wheel are clean.
+</div>
+</li>
+</ol>
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+If the bearing end play is within the specification but the wheel runout is more than the service limit, replace the wheel.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000124','1');">
+<img src="../tn/TL19E00B54100000000MAAD02.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00B54100000000MAAD02_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,1333 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E00J34356541902FCAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+Power Mirrors (Door Multiplex Control Unit) Input Test
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<span style="display:block" id="imgDispId">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+<a href="javascript:CtsProc('0','000000000000577','i000')">
+Turn the ignition switch to LOCK (0), and remove the power window master switch.
+</a>
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Disconnect the 37P connector (A) from the power window master switch (B).
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Inspect the connector and socket terminals to be sure they are all making good contact.
+</div>
+<ul type="disc">
+<li>
+<div>
+If the terminals are bent, loose, or corroded, repair them as necessary, and recheck the system.
+</div>
+</li>
+<li>
+<div>
+If the terminals look OK, go to 
+<a href="javascript:try{parent.Jmp('i040');}catch(e){location.hash='i040';}">Step 4
+</a>
+.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+With the connector still disconnected, make these input tests at the connector.
+</div>
+<ul type="disc">
+<li>
+<div>
+If any test indicates a problem, find and correct the cause, then recheck the system.
+</div>
+</li>
+<li>
+<div>
+If all the input tests prove OK, replace the power window master switch.
+</div>
+</li>
+</ul>
+<div>
+NOTE: 
+<a href="javascript:CtsProc('0','000000000000570','i000')">
+After replacing the power window master switch, reset the power window control unit.
+</a>
+</div>
+<div>
+<table width="87%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="5%">
+<col width="10%">
+<col width="25%">
+<col width="29%">
+<col width="29%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Cavity
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Wire
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Test condition
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Test: Desired result
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Possible cause if desired result is not obtained
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+32
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+BLK
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Under all conditions
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Check for continuity to ground: There should be continuity.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Poor ground (G501)
+</div>
+</li>
+<li>
+<div>
+An open in the wire
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+37
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+BLK
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Under all conditions
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Check for continuity to ground: There should be continuity.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Poor ground (G502)
+</div>
+</li>
+<li>
+<div>
+An open in the wire
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+14
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+LT GRN
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Ignition switch ON (II)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Measure the voltage to ground: There should be battery voltage.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Blown No. 16 (7.5 A) fuse in the driver's under-dash fuse/relay box
+</div>
+</li>
+<li>
+<div>
+An open in the wire
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+5
+<sup>
+*1
+</sup>
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+BLU
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Ignition switch ON (II), retractable mirror switch pressed
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Measure the voltage to ground: There should be battery voltage.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Blown No. 16 (7.5 A) fuse in the driver's under-dash fuse/relay box
+</div>
+</li>
+<li>
+<div>
+Faulty power mirror switch
+</div>
+</li>
+<li>
+<div>
+An open in the wire
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+9
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+WHT[PUR]
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Ignition switch ON (II), power mirror switch in RIGHT [LEFT] mirror position
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Measure the voltage to ground: There should be battery voltage when the power mirror switch LEFT or DOWN is pressed.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Blown No. 16 (7.5 A) fuse in the driver's under-dash fuse/relay box
+</div>
+</li>
+<li>
+<div>
+Faulty power mirror switch
+</div>
+</li>
+<li>
+<div>
+An open in the wire
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+10
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+RED[YEL]
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Ignition switch ON (II), power mirror switch in RIGHT [LEFT] mirror position
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Measure the voltage to ground: There should be battery voltage when the power mirror switch RIGHT is pressed.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Blown No. 16 (7.5 A) fuse in the driver's under-dash fuse/relay box
+</div>
+</li>
+<li>
+<div>
+Faulty power mirror switch
+</div>
+</li>
+<li>
+<div>
+An open in the wire
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+11
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+GRY[LT BLU]
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Ignition switch ON (II), power mirror switch in RIGHT [LEFT] mirror position
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Measure the voltage to ground: There should be battery voltage when the power mirror switch UP is pressed.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Blown No. 16 (7.5 A) fuse in the driver's under-dash fuse/relay box
+</div>
+</li>
+<li>
+<div>
+Faulty power mirror switch
+</div>
+</li>
+<li>
+<div>
+An open in the wire
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1
+<sup>
+*2
+</sup>
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+ORN
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Ignition switch ON (II), connect No. 14 and No. 1 terminals with a jumper wire
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Check the left [right] power mirror defogger operation: The left [right] power mirror defogger should work (the inside lower edge becomes warm).
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Faulty left [right] power mirror defogger
+</div>
+</li>
+<li>
+<div>
+Poor ground (G503)
+</div>
+</li>
+<li>
+<div>
+An open in the wire
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+7
+<sup>
+*1
+</sup>
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+LT BLU
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" rowspan="2" align="left">
+<div>
+Ignition switch ON (II), connect No. 14 and No. 7 [or No. 8] terminals and No. 8 [or No. 7] and No. 32 terminals with jumper wires
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" rowspan="2" align="left">
+<div>
+Check the retract actuator operation: The left [right] mirror should extend (or retract).
+</div>
+<div>
+NOTE: if the mirror stops moving, disconnect battery power immediately.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" rowspan="2" align="left">
+<ul type="disc">
+<li>
+<div>
+Faulty left [right] power mirror
+</div>
+</li>
+<li>
+<div>
+An open in the wire
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+8
+<sup>
+*1
+</sup>
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+LT GRN
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+26
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+PNK
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Ignition switch ON (II), connect No. 14 and No. 26 terminals with a jumper wire
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Check the power mirror switch light operation: The power mirror switch light should come on.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Faulty LED
+</div>
+</li>
+<li>
+<div>
+Faulty power mirror switch
+</div>
+</li>
+<li>
+<div>
+Poor ground (G501)
+</div>
+</li>
+<li>
+<div>
+An open in the wire
+</div>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<div>
+<table width="87%" class="Viewer" frame="void" style="table-layout:fixed;">
+<col width="5%">
+<col width="94%">
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+[  ]:
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+RHD model
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<div>
+<table width="87%" class="Viewer" frame="void" style="table-layout:fixed;">
+<col width="9%">
+<col width="90%">
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+*1:
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+With retractable mirror
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+*2:
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+With mirror defogger
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001219','1');">
+<img src="../tn/TL19E00J34356541902FCAD01.png">
+</a>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</span>
+<span style="display:none" id="imgPrtId">
+<table width="100%" class="Viewer">
+<tr>
+<td width="100%" class="ViewerTD" id="textTd" valign="top">
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+<a href="javascript:CtsProc('2','000000000000577','i000')">
+Turn the ignition switch to LOCK (0), and remove the power window master switch.
+</a>
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Disconnect the 37P connector (A) from the power window master switch (B).
+</div>
+</li>
+</ol>
+</td>
+</tr>
+<tr>
+<td width="100%" class="ViewerTD" id="graphTd" valign="top">
+<span style="display:block" id="imgId1">
+<div>
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J34356541902FCAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</div>
+</span>
+</td>
+</tr>
+<tr>
+<td width="100%" class="ViewerTD" valign="top">
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Inspect the connector and socket terminals to be sure they are all making good contact.
+</div>
+<ul type="disc">
+<li>
+<div>
+If the terminals are bent, loose, or corroded, repair them as necessary, and recheck the system.
+</div>
+</li>
+<li>
+<div>
+If the terminals look OK, go to 
+<a href="#i040">Step 4
+</a>
+.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+With the connector still disconnected, make these input tests at the connector.
+</div>
+<ul type="disc">
+<li>
+<div>
+If any test indicates a problem, find and correct the cause, then recheck the system.
+</div>
+</li>
+<li>
+<div>
+If all the input tests prove OK, replace the power window master switch.
+</div>
+</li>
+</ul>
+<div>
+NOTE: 
+<a href="javascript:CtsProc('2','000000000000570','i000')">
+After replacing the power window master switch, reset the power window control unit.
+</a>
+</div>
+<div>
+<table width="87%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="5%">
+<col width="10%">
+<col width="25%">
+<col width="29%">
+<col width="29%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Cavity
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Wire
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Test condition
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Test: Desired result
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Possible cause if desired result is not obtained
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+32
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+BLK
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Under all conditions
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Check for continuity to ground: There should be continuity.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Poor ground (G501)
+</div>
+</li>
+<li>
+<div>
+An open in the wire
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+37
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+BLK
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Under all conditions
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Check for continuity to ground: There should be continuity.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Poor ground (G502)
+</div>
+</li>
+<li>
+<div>
+An open in the wire
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+14
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+LT GRN
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Ignition switch ON (II)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Measure the voltage to ground: There should be battery voltage.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Blown No. 16 (7.5 A) fuse in the driver's under-dash fuse/relay box
+</div>
+</li>
+<li>
+<div>
+An open in the wire
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+5
+<sup>
+*1
+</sup>
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+BLU
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Ignition switch ON (II), retractable mirror switch pressed
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Measure the voltage to ground: There should be battery voltage.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Blown No. 16 (7.5 A) fuse in the driver's under-dash fuse/relay box
+</div>
+</li>
+<li>
+<div>
+Faulty power mirror switch
+</div>
+</li>
+<li>
+<div>
+An open in the wire
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+9
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+WHT[PUR]
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Ignition switch ON (II), power mirror switch in RIGHT [LEFT] mirror position
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Measure the voltage to ground: There should be battery voltage when the power mirror switch LEFT or DOWN is pressed.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Blown No. 16 (7.5 A) fuse in the driver's under-dash fuse/relay box
+</div>
+</li>
+<li>
+<div>
+Faulty power mirror switch
+</div>
+</li>
+<li>
+<div>
+An open in the wire
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+10
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+RED[YEL]
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Ignition switch ON (II), power mirror switch in RIGHT [LEFT] mirror position
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Measure the voltage to ground: There should be battery voltage when the power mirror switch RIGHT is pressed.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Blown No. 16 (7.5 A) fuse in the driver's under-dash fuse/relay box
+</div>
+</li>
+<li>
+<div>
+Faulty power mirror switch
+</div>
+</li>
+<li>
+<div>
+An open in the wire
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+11
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+GRY[LT BLU]
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Ignition switch ON (II), power mirror switch in RIGHT [LEFT] mirror position
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Measure the voltage to ground: There should be battery voltage when the power mirror switch UP is pressed.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Blown No. 16 (7.5 A) fuse in the driver's under-dash fuse/relay box
+</div>
+</li>
+<li>
+<div>
+Faulty power mirror switch
+</div>
+</li>
+<li>
+<div>
+An open in the wire
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1
+<sup>
+*2
+</sup>
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+ORN
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Ignition switch ON (II), connect No. 14 and No. 1 terminals with a jumper wire
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Check the left [right] power mirror defogger operation: The left [right] power mirror defogger should work (the inside lower edge becomes warm).
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Faulty left [right] power mirror defogger
+</div>
+</li>
+<li>
+<div>
+Poor ground (G503)
+</div>
+</li>
+<li>
+<div>
+An open in the wire
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+7
+<sup>
+*1
+</sup>
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+LT BLU
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" rowspan="2" align="left">
+<div>
+Ignition switch ON (II), connect No. 14 and No. 7 [or No. 8] terminals and No. 8 [or No. 7] and No. 32 terminals with jumper wires
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" rowspan="2" align="left">
+<div>
+Check the retract actuator operation: The left [right] mirror should extend (or retract).
+</div>
+<div>
+NOTE: if the mirror stops moving, disconnect battery power immediately.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" rowspan="2" align="left">
+<ul type="disc">
+<li>
+<div>
+Faulty left [right] power mirror
+</div>
+</li>
+<li>
+<div>
+An open in the wire
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+8
+<sup>
+*1
+</sup>
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+LT GRN
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+26
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+PNK
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Ignition switch ON (II), connect No. 14 and No. 26 terminals with a jumper wire
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Check the power mirror switch light operation: The power mirror switch light should come on.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Faulty LED
+</div>
+</li>
+<li>
+<div>
+Faulty power mirror switch
+</div>
+</li>
+<li>
+<div>
+Poor ground (G501)
+</div>
+</li>
+<li>
+<div>
+An open in the wire
+</div>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<div>
+<table width="87%" class="Viewer" frame="void" style="table-layout:fixed;">
+<col width="5%">
+<col width="94%">
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+[  ]:
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+RHD model
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<div>
+<table width="87%" class="Viewer" frame="void" style="table-layout:fixed;">
+<col width="9%">
+<col width="90%">
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+*1:
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+With retractable mirror
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+*2:
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+With mirror defogger
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</li>
+</ol>
+</td>
+</tr>
+</table>
+</span>
+</div>
+</body>
+</html>

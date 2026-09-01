@@ -1,0 +1,439 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E50E16236500000LDAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+Intermediate Shaft Reassembly
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<br>
+<div class="exploded_view_title">
+<a href="javascript:PrtProc('0','ZOOM000000000014191_PR')">
+<b>
+Exploded View - R20A3 Engine Model
+</b>
+</a>
+</div>
+<br>
+<div class="exploded_view_title">
+<a href="javascript:PrtProc('0','ZOOM000000000014192_PR')">
+<b>
+Exploded View - K24Z3 Engine Model
+</b>
+</a>
+</div>
+<div class="tool_list_title">
+<b>
+Special Tools Required
+</b>
+</div>
+<div>
+<a href="javascript:PrtProc('0','ZOOM000000000014193')">
+<br>
+Oil seal driver, 64 mm
+<br>
+ 07GAD-PH70201
+</a>
+</div>
+<div>
+<a href="javascript:PrtProc('0','ZOOM000000000014194')">
+<br>
+Half shaft base
+<br>
+ 07NAF-SR30101
+</a>
+</div>
+<div>
+<a href="javascript:PrtProc('0','ZOOM000000000014195')">
+<br>
+Bearing driver attachment, 52 x 55 mm
+<br>
+ 07746-0010400
+</a>
+</div>
+<div>
+<a href="javascript:PrtProc('0','ZOOM000000000014196')">
+<br>
+Inner bearing driver attachment, 35 mm
+<br>
+  07746-0030400
+</a>
+</div>
+<div>
+<a href="javascript:PrtProc('0','ZOOM000000000014197')">
+<br>
+Driver handle, 15 x 135L
+<br>
+ 07749-0010000
+</a>
+</div>
+<div>
+<a href="javascript:PrtProc('0','ZOOM000000000014198')">
+<br>
+Installer attachment, 45 mm
+<br>
+ 07MAD-PR90100
+</a>
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+Refer to the Exploded View, as needed, during this procedure.
+</div>
+</li>
+<li>
+<div>
+The illustrations show K24Z3 engine model.
+</div>
+</li>
+</ul>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Clean the disassembled parts with solvent, and dry them with compressed air.
+</div>
+<div>
+NOTE: Do not wash the rubber parts with solvent.
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Press a new intermediate shaft bearing (A) into the bearing support (B) using the 52 x 55 mm bearing driver attachment (C), the 15 x 135L driver handle (D), the half shaft base (E), and a press.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000007173','1');">
+<img src="../tn/TL19E50E16236500000LDAD03.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E50E16236500000LDAD03_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Install the internal snap ring (A) in the groove (B) of the bearing support.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000007174','1');">
+<img src="../tn/TL19E50E16236500000LDAD04.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E50E16236500000LDAD04_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Press the intermediate shaft (A) into the new shaft bearing (B) using the 35 mm inner bearing driver attachment (C) and a press.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000007175','1');">
+<img src="../tn/TL19E50E16236500000LDAD05.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E50E16236500000LDAD05_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+Install the external snap ring (A) in the groove of the intermediate shaft (B).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000007176','1');">
+<img src="../tn/TL19E50E16236500000LDAD06.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E50E16236500000LDAD06_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+Install a new outer seal (A) into the bearing support (B) using the 45 mm installer attachment (C), 64 mm oil seal driver (D), the half shaft base (E), and a press.
+</div>
+<ul type="disc">
+<li>
+<div>
+R20A3 engine model: Press the seal until it is 0±0.2 mm (0±0.008 in.) below the surface of the bearing support end.
+</div>
+</li>
+<li>
+<div>
+K24Z3 engine model: Press the seal until it is 4±0.2 mm (0.16±0.008 in.) below the surface of bearing support end.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000007177','1');">
+<img src="../tn/TL19E50E16236500000LDAD07.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E50E16236500000LDAD07_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i070">
+</a>
+<ol>
+<li value="7">
+<div>
+K24Z3 engine model: Install the heat shield (A).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000007178','1');">
+<img src="../tn/TL19E50E16236500000LDAD08.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E50E16236500000LDAD08_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E40K7210009104AFAAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+DTC Troubleshooting: P104A (71), P104B (72), P104C (73), P104D (74)
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<b>
+DTC P104A:
+</b>
+<div>
+ No. 1 Injector System Malfunction
+</div>
+<b>
+DTC P104B:
+</b>
+<div>
+ No. 2 Injector System Malfunction
+</div>
+<b>
+DTC P104C:
+</b>
+<div>
+ No. 3 Injector System Malfunction
+</div>
+<b>
+DTC P104D:
+</b>
+<div>
+ No. 4 Injector System Malfunction
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+Before you troubleshoot, record all freeze data, and 
+<a href="javascript:CtsProc('0','000000000003612','i000')">
+review the general troubleshooting information.
+</a>
+</div>
+</li>
+<li>
+<div>
+If any of DTCs listed below are indicated at the same time as DTC P104A, P104B, P104C, and/or P104D, troubleshoot those DTCs first, then recheck for DTC P104A, P104B, P104C, and/or P104D.
+</div>
+<div>
+DTC P0201, P0202, P0203, P0204: No. 1−No. 4 cylinder injector circuit open
+</div>
+<div>
+DTC P1041, DTC P1042, DTC P1043, DTC P1044: No. 1−No. 4 cylinder injector circuit shorted
+</div>
+<div>
+DTC P2146: No. 1, No. 2, No. 3, or No. 4 cylinder injector circuit malfunction
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

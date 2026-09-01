@@ -1,0 +1,246 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+<title>SEA5E00J16126700000MBAT00</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+var   totalImg = 2;
+var   dispNum=1;
+function prOnLoadProc() {
+	_prInitImageInfo(100);
+	var para_val = window.location.hash;
+	if(para_val.charAt(0) == '#') {
+		para_val = para_val.substring(1,para_val.length);
+	}
+	var   imgName;
+	imgName = "imgId" + dispNum;
+	document.getElementById(imgName).style.display = "none";
+	if(para_val.length == 0) {
+		dispNum = 1;
+	}
+	else{
+		dispNum = parseInt(para_val);
+	}
+	imgName = "imgId" + dispNum;
+	document.getElementById(imgName).style.display = "block";
+	_prResizeImage(100/100);
+	divBody.style.display = "block"
+	return;
+}
+function PrintFunc()
+{
+	divBody.style.display = "none";
+	var  img_hei = _prResizeImage(67/100);
+	divBody.style.display = "block";
+	var  graphTd = document.getElementById("graphTd");
+	if(graphTd.width == "100%")
+	{
+      var   current_pos;
+      var   img_pos = 0;
+         current_pos = graphTd.offsetTop;
+		var pageCnt = Math.floor(current_pos/950);
+		var img_pos = current_pos - (pageCnt*950);
+		if(img_pos+img_hei > 950)
+		{
+			var  pageElement = document.getElementById("page_onoff");
+			if(pageElement != null)
+			{
+				pageElement.style.display = "block";
+			}
+		}
+	}
+	window.print();
+	divBody.style.display = "none";
+	_prResizeImage(100/100);
+	divBody.style.display = "block";
+	window.scrollTo(0,0);
+}
+function NextFunc()
+{
+	window.location.replace("ZOOM000000000000442.html");
+}
+function CloseFunc()
+{
+	window.close();
+}
+function JumpFunc(strJump)
+{
+	window.location.replace(strJump);
+}
+function imgChange()
+{
+var   imgName;
+      imgName = "imgId" + dispNum;
+      document.getElementById(imgName).style.display = "none";
+      dispNum++;
+     if(dispNum > totalImg) {
+         dispNum = 1;
+      }
+      imgName = "imgId" + dispNum;
+      document.getElementById(imgName).style.display = "block";
+}
+//-->
+</script>
+<body onLoad="prOnLoadProc();" style="font-family:sans-serif;">
+<div id="divBody" style="display:none">
+<div>
+<div style="position:absolute;right=10;">
+<input type="image" src="../img/PRINT_PREVIEW.PNG" onClick="PrintFunc()">
+<input type="image" src="../img/GL_PREV_DISABLE.PNG" onClick="BackFunc()" disabled>
+<input type="image" src="../img/GL_NEXT.PNG" onClick="NextFunc()">
+<input type="image" src="../img/GL_CANCEL.PNG" onClick="CloseFunc()">
+</div><br><br>
+<hr width="100%" size="2" color="black">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<div>
+SRS components are located in this area.
+<a href="javascript:opener.top.Cts('000000000001620','i000')">
+Review the SRS component locations LHD,
+</a>
+
+<a href="javascript:opener.top.Cts('000000000001625','i000')">
+SRS component locations RHD
+</a>
+ and
+<a href="javascript:opener.top.Cts('000000000000116','i000')">
+the precautions and procedures
+</a>
+ before performing repairs or service.
+</div>
+<div>
+NOTE: Check for a flush fit with the body, then check for equal gaps between the front, rear, and bottom door edges and the body. Check that the door and body edges are parallel.
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Place the vehicle on a firm, level surface when adjusting the doors.
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Adjust at the hinges (A):
+</div>
+<ul type="disc">
+<li>
+<div>
+Pad a floor jack (B) with a shop towel (C), and use the jack to support the door during the adjustment procedure.
+</div>
+</li>
+<li>
+<div>
+On the front door:
+<a href="javascript:opener.top.Cts('000000000000153','i000')">
+Remove the front inner fender
+</a>
+ and
+<a href="javascript:opener.top.Cts('000000000000152','i000')">
+front fender fairing.
+</a>
+ Loosen the hinge mounting bolts (D) slightly, and move the door backward or forward, up or down as necessary to equalize the gaps.
+</div>
+</li>
+<li>
+<div>
+On the rear door: Remove these items:
+</div>
+</li>
+<table class="Viewer">
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+<a href="javascript:opener.top.Cts('000000000001061','iR02')">
+Center pillar lower trim, without side curtain airbag
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+<a href="javascript:opener.top.Cts('000000000000186','iR02')">
+Center pillar lower trim, with side curtain airbag
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+<a href="javascript:opener.top.Cts('000000000001023','i000')">
+Front seat belt and retractor
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Plug seal
+</div>
+</td>
+</tr>
+</table>
+<li>
+<div>
+Loosen the hinge mounting nuts (E) slightly, and move the door backward or forward, up or down as necessary to equalize the gaps.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div style="display:none;" id="page_onoff">
+<div style="page-break-after:always;">
+</div>
+</div>
+<input onClick="imgChange()" type="image" src="../img/GL_NEXT.PNG" align="right">
+<br clear="right">
+<span style="display:block" id="imgId1">
+<div>
+<div class="figure_title">
+<b>
+Front door
+</b>
+</div>
+<script src="../js/SEA5E00J16126700000MBAD01_1.js">
+</script>
+</div>
+</span>
+<span style="display:none" id="imgId2">
+<div>
+<div class="figure_title">
+<b>
+Rear door
+</b>
+</div>
+<script src="../js/SEA5E00J16126700000MBAD02_1.js">
+</script>
+</div>
+</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

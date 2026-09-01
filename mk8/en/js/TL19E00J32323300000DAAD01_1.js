@@ -1,0 +1,31 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:767px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:767px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E00J32323300000DAAD01.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:767px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:4px;top:467px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>DRIVER'S MICU<br>(Built into the driver's <br>under-dash fuse/relay box)<br><a href=\"javascript:CtsProc('0','000000000000571','iT02')\"></b>Input Test,</a><br><a href=\"javascript:CtsProc('0','000000000000549','i000')\">Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:392px;top:19px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>DOOR MULTIPLEX CONTROL UNIT<br>(Built into the power window master switch)<br><a href=\"javascript:CtsProc('0','000000000000434','i000')\"></b>Input Test,</a><br><a href=\"javascript:CtsProc('0','000000000000577','i000')\">Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:466px;top:126px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>IGNITION KEY LIGHT<br><a href=\"javascript:CtsProc('0','000000000000432','i000')\"></b>Test,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:466px;top:93px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>IGNITION KEY SWITCH<br><a href=\"javascript:CtsProc('0','000000000000433','i000')\"></b>Test,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:629px;top:637px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>LEFT REAR DOOR SWITCH<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:367px;top:637px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>DRIVER'S DOOR SWITCH<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:179px;top:568px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>DRIVER'S DOOR LOCK<br>KNOB SWITCH<br><a href=\"javascript:CtsProc('0','000000000000534','i000')\"></b>Test,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:2px;top:739px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b></b>LHD model is shown, RHD model is similar.<br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

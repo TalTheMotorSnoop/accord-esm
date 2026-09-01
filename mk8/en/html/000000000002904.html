@@ -1,0 +1,1879 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E60H46400000000AAAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+SRS Precautions and Procedures
+</div>
+<div>
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG01">
+</a>
+<div class="servinfosub_title">
+<b>
+General Precautions
+</b>
+</div>
+<div>
+Please read the following precautions carefully before servicing the airbag system. Observe the instructions described in this manual, or the airbags could accidentally deploy and cause damage or injuries.
+</div>
+<ul type="disc">
+<li>
+<div>
+Except when doing electrical inspections, always turn the ignition switch to LOCK (0), disconnect the negative cable from the battery, then wait for 3 minutes before starting work.
+</div>
+<div>
+NOTE: The SRS memory is not erased even if the ignition switch is turned to LOCK (0) or the battery cables are disconnected from the battery.
+</div>
+</li>
+<li>
+<div>
+Use replacement parts which are manufactured to the same standards and quality as the original parts. Do not install used SRS parts. Use only new parts when making SRS repairs.
+</div>
+</li>
+<li>
+<div>
+Carefully inspect any SRS part before you install it.
+</div>
+<div>
+Do not install any part that shows signs of being dropped or improperly handled, such as dents, cracks or deformation.
+</div>
+</li>
+</ul>
+<ul type="disc">
+<li>
+<div>
+Before disconnecting the SRS unit connectors, always disconnect the appropriate SRS parts connectors.
+</div>
+</li>
+<li>
+<div>
+Use only a digital multimeter to check the system. If it is not a Honda multimeter, make sure its output is 10 mA (0.01 A) or less when switched to the lowest value in the ohmmeter range. A tester with a higher output could cause accidental deployment and possible injury.
+</div>
+</li>
+<li>
+<div>
+Do not put objects on the front passenger's airbag.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008051','1');">
+<img src="../tn/TL19E60H46400000000AAAD01.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E60H46400000000AAAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG02">
+</a>
+<div class="servinfosub_title">
+<b>
+Steering-Related Precautions
+</b>
+</div>
+<a name="iT01">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Cable Reel Alignment
+</b>
+</div>
+<br>
+<ul type="disc">
+<li>
+<div>
+Misalignment of the cable reel could cause an open in the wiring, making the SRS system, remote steering wheel controls, and the horn inoperative. 
+<a href="javascript:CtsProc('0','000000000000219','i260')">
+Center the cable reel whenever you do the following.
+</a>
+</div>
+</li>
+<table class="Viewer">
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Installation of the steering wheel
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Installation of the cable reel
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Installation of the steering column
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Other steering-related adjustment or installation
+</div>
+</td>
+</tr>
+</table>
+<li>
+<div>
+Do not disassemble the cable reel.
+</div>
+</li>
+<li>
+<div>
+Do not apply grease to the cable reel.
+</div>
+</li>
+<li>
+<div>
+If the cable reel shows any signs of damage, replace it with a new one. For example, if it does not rotate smoothly, replace the cable reel.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG03">
+</a>
+<div class="servinfosub_title">
+<b>
+Airbag Handling and Storage
+</b>
+</div>
+<div>
+Do not disassemble an airbag. It has no serviceable parts. Once an airbag has been deployed, it cannot be repaired or reused.
+</div>
+<div>
+For temporary storage of an airbag during service, observe the following precautions.
+</div>
+<ul type="disc">
+<li>
+<div>
+Store the removed airbag with the pad surface up. Never put anything on the airbag.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008053','1');">
+<img src="../tn/TL19E60H46400000000AAAD02.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E60H46400000000AAAD02_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG03">
+</a>
+<ul type="disc">
+<li>
+<div>
+To prevent damage to the airbag, keep it away from any oil, grease, detergent, or water.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008054','1');">
+<img src="../tn/TL19E60H46400000000AAAD03.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E60H46400000000AAAD03_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG03">
+</a>
+<ul type="disc">
+<li>
+<div>
+Store the removed airbag on a secure, flat surface away from any high heat source (exceeding 200 °F/93 °C).
+</div>
+</li>
+</ul>
+<ul type="disc">
+<li>
+<div>
+Never do electrical tests on the airbags, such as measuring resistance.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008055','1');">
+<img src="../tn/TL19E60H46400000000AAAD04.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E60H46400000000AAAD04_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG03">
+</a>
+<ul type="disc">
+<li>
+<div>
+Do not position yourself in front of the airbag during removal, inspection, or replacement.
+</div>
+</li>
+</ul>
+<ul type="disc">
+<li>
+<div>
+For proper disposal of a damaged airbag
+<a href="javascript:CtsProc('0','000000000002907','i000')">
+, refer to airbag disposal.
+</a>
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008056','1');">
+<img src="../tn/TL19E60H46400000000AAAD05.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E60H46400000000AAAD05_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG03">
+</a>
+<ul type="disc">
+<li>
+<div>
+The side curtain airbag module assembly is a long, jointed part containing an inflator (A), a flexible bag (B), and brackets (C). When removing or installing the side curtain airbag inflator assembly, never do these things:
+</div>
+</li>
+<table class="Viewer">
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Drop the curtain airbag.
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Cut, tear, or real the tape.
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Handle the flexible bag (B).
+</div>
+</td>
+</tr>
+</table>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008057','1');">
+<img src="../tn/TL19E60H46400000000AAAD06.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E60H46400000000AAAD06_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG04">
+</a>
+<div class="servinfosub_title">
+<b>
+SRS Unit, Front Impact Sensors, and Side Impact Sensors
+</b>
+</div>
+<ul type="disc">
+<li>
+<div>
+Turn the ignition switch to LOCK (0), disconnect the negative cable from the battery, and wait at least 3 minutes before beginning installation or replacement of the SRS unit or disconnecting the connectors from the SRS unit.
+</div>
+</li>
+<li>
+<div>
+Be careful not to bump or impact the SRS unit, front impact sensors, or side impact sensors when the ignition switch is at ON (II), or for at least 3 minutes after the ignition switch is turned to LOCK (0).
+</div>
+</li>
+<li>
+<div>
+During installation or replacement, be careful not to bump (by impact wrench, hammer, etc.) the area around the SRS unit, front impact sensors, or side impact sensors. The airbags could accidentally deploy and cause damage or injury.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008058','1');">
+<img src="../tn/TL19E60H46400000000AAAD07.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E60H46400000000AAAD07_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG04">
+</a>
+<ul type="disc">
+<li>
+<div>
+After a collision where a front airbag, side airbags, side curtain airbags, seat belt tensioner, or seat belt outer lap tensioner deployed, 
+<a href="javascript:CtsProc('0','000000000002906','i000')">
+go to Component Replacement/Inspection after Deployment.
+</a>
+ After a collision where the airbags or the side airbags did not deploy, inspect for any damage or any deformation on the SRS unit, front impact sensors, and side impact sensors. Replace all damaged parts.
+</div>
+</li>
+</ul>
+<ul type="disc">
+<li>
+<div>
+Do not disassemble the SRS unit, front impact sensors, and side impact sensors.
+</div>
+</li>
+<li>
+<div>
+Be sure the SRS unit, front impact sensors, and side impact sensors are installed securely with the mounting bolts torqued to 9.8 N·m (1.0 kgf·m, 7.2 lbf·ft) whenever you remove or replace the SRS unit, rear safing sensor, all impact sensors, always install the components with new bolts.
+</div>
+</li>
+<li>
+<div>
+Do not spill water or oil on the SRS unit or the side impact sensors.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008059','1');">
+<img src="../tn/TL19E60H46400000000AAAD08.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E60H46400000000AAAD08_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG05">
+</a>
+<div class="servinfosub_title">
+<b>
+Wiring Precautions
+</b>
+</div>
+<div>
+Some of the SRS wiring can be identified by special yellow outer covering, and the SRS connectors can be identified by their yellow color. Observe the instructions.
+</div>
+<ul type="disc">
+<li>
+<div>
+Never attempt to modify, splice, or repair SRS wiring.
+</div>
+<div>
+If there is an open or damage in SRS wiring, replace the harness.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008060','1');">
+<img src="../tn/TL19E60H46400000000AAAD09.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E60H46400000000AAAD09_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG05">
+</a>
+<ul type="disc">
+<li>
+<div>
+Be sure to install the harness wires so they do not get pinched or interfere with other parts.
+</div>
+</li>
+</ul>
+<ul type="disc">
+<li>
+<div>
+Make sure all SRS ground locations are clean, and grounds are securely fastened for optimum metal-to-metal contact. Poor grounds can cause intermittent problems that are difficult to diagnose.
+</div>
+</li>
+<li>
+<div>
+Do not use any silicone based cleaners or lubricants on any SRS connectors or terminals.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008061','1');">
+<img src="../tn/TL19E60H46400000000AAAD10.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E60H46400000000AAAD10_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG06">
+</a>
+<div class="servinfosub_title">
+<b>
+Precautions for Electrical Inspections
+</b>
+</div>
+<ul type="disc">
+<li>
+<div>
+When using electrical test equipment, insert the probe of the tester into the wire side of the connector. Do not insert the probe of the tester into the terminal side of the connector, and do not tamper with the connector.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008062','1');">
+<img src="../tn/TL19E60H46400000000AAAD11.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E60H46400000000AAAD11_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG06">
+</a>
+<ul type="disc">
+<li>
+<div>
+Use a U-shaped probe. Do not insert the probe forcibly.
+</div>
+</li>
+</ul>
+<ul type="disc">
+<li>
+<div>
+Use specified service connectors in troubleshooting.
+</div>
+<div>
+Using improper tools could cause an error in inspection due to poor metal-to-metal contact.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008063','1');">
+<img src="../tn/TL19E60H46400000000AAAD12.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E60H46400000000AAAD12_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG07">
+</a>
+<div class="servinfosub_title">
+<b>
+Lever-Locked Connector
+</b>
+</div>
+<div>
+The SRS unit connectors have a lever lock.
+</div>
+<a name="iT02">
+</a>
+<br>
+<div class="topic_title">
+<b>
+SRS Unit Connectors
+</b>
+</div>
+<br>
+<div>
+<b>
+Disconnecting
+</b>
+</div>
+<div>
+To release the lock, pull the lever (A) while pushing the lock (B), on the outside of the connector, then pull the connector (C).
+</div>
+<div>
+<b>
+Connecting
+</b>
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008064','1');">
+<img src="../tn/TL19E60H46400000000AAAD13.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E60H46400000000AAAD13_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG07">
+</a>
+<a name="iT02">
+</a>
+<div>
+To reconnect the connector, push in on the connector sleeve (A). As the connector is pressed in, the lever (B) moves to the locked position.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008065','1');">
+<img src="../tn/TL19E60H46400000000AAAD14.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E60H46400000000AAAD14_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG08">
+</a>
+<div class="servinfosub_title">
+<b>
+Spring-Loaded Lock Connector
+</b>
+</div>
+<div>
+Some SRS system connectors have a spring-loaded lock.
+</div>
+<a name="iT03">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Front Airbag Connectors
+</b>
+</div>
+<br>
+<div>
+<b>
+Disconnecting
+</b>
+</div>
+<div>
+To release the lock, pull the spring-loaded sleeve (A) toward the stop (B) while holding the opposite half of the connector. Then pull the connector halves apart. Be sure to pull on the sleeve and not on the connector.
+</div>
+<div>
+<b>
+Connecting
+</b>
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008066','1');">
+<img src="../tn/TL19E60H46400000000AAAD15.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E60H46400000000AAAD15_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG08">
+</a>
+<a name="iT03">
+</a>
+<div>
+To reconnect, hold the pawl-side connector, and press on the back of the sleeve-side connector in the direction shown. As the two connector halves are pressed together, the sleeve (A) is pushed back by the pawl (C). Do not touch the sleeve.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008067','1');">
+<img src="../tn/TL19E60H46400000000AAAD16.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E60H46400000000AAAD16_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG08">
+</a>
+<a name="iT04">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Side Airbag Connector
+</b>
+</div>
+<br>
+<div>
+<b>
+Disconnecting
+</b>
+</div>
+<div>
+To release the lock, pull the spring-loaded sleeve (A) toward the stop (B) while holding the opposite half of the connector. Then pull the connector halves apart. Be sure to pull on the sleeve and not on the connector half.
+</div>
+<div>
+<b>
+Connecting
+</b>
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008068','1');">
+<img src="../tn/TL19E60H46400000000AAAD17.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E60H46400000000AAAD17_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG08">
+</a>
+<a name="iT04">
+</a>
+<div>
+Hold both connector halves, and press them firmly together until the projection (C) of the sleeve-side connector clicks.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008069','1');">
+<img src="../tn/TL19E60H46400000000AAAD18.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E60H46400000000AAAD18_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG09">
+</a>
+<div class="servinfosub_title">
+<b>
+Opening the SRS Unit Shorting Connectors for Diagnosis
+</b>
+</div>
+<div class="tool_list_title">
+<b>
+Special Tools Required
+</b>
+</div>
+<div>
+<a href="javascript:PrtProc('0','ZOOM000000000014405')">
+<br>
+SRS short canceller
+<br>
+ 070AZ-SAA0100
+</a>
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+To prevent damaging the connector cavity, insert the short canceller straight into the cavity from the terminal side.
+</div>
+</li>
+<li>
+<div>
+Before installing the short canceller, wash it with electrical contact cleaner, then dry it with compressed air.
+</div>
+</li>
+<li>
+<div>
+Do not use the short canceller if it is damaged.
+</div>
+</li>
+<li>
+<div>
+Make sure to remove the short canceller before reconnection.
+</div>
+</li>
+</ul>
+<div>
+When SRS unit connectors A (39P) or B (39P) are disconnected, a short circuit is created in the connector by its own function to prevent an airbag deployment. The circuit may need to be open sometimes when diagnosis is done on the system. Insert the short canceller (No. 070AZ-SAA0100) in the specified cavities when it is necessary to keep the circuit open for diagnosis.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008070','1');">
+<img src="../tn/TL19E60H46400000000AAAD19.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E60H46400000000AAAD19_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG09">
+</a>
+<div>
+Terminal numbers are shown from the wire side of the female terminals. Insert the short canceller(s) into the cavities on the terminal side of the connector.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008071','1');">
+<img src="../tn/TL19E60H46400000000AAAD20.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E60H46400000000AAAD20_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008071','2');">
+<img src="../tn/TL19E60H46400000000AAAD21.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E60H46400000000AAAD21_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG10">
+</a>
+<div class="servinfosub_title">
+<b>
+Seats with Side Airbags
+</b>
+</div>
+<div>
+Seats with side airbags have a ‘‘SIDE AIRBAG'' label on the seat-back.
+</div>
+<ul type="disc">
+<li>
+<div>
+When cleaning, use a damp cloth to clean the seat. Do not soak the seat with liquid. Do not spray steam on the seat.
+</div>
+</li>
+<li>
+<div>
+Do not repair a torn or frayed seat-back cover. Replace the seat-back cover.
+</div>
+</li>
+<li>
+<div>
+After a collision where the side airbag was deployed, replace the side airbag and seat frame with new parts. If the seat-back cushion is split, it must be replaced.
+</div>
+</li>
+<li>
+<div>
+Never put aftermarket accessories on the seat (covers, pads, seat heaters, lights, etc.).
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008072','1');">
+<img src="../tn/TL19E60H46400000000AAAD22.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E60H46400000000AAAD22_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<span style="display:block" id="imgDispId">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG10">
+</a>
+<a name="iG11">
+</a>
+<div class="procedure_sub_title">
+<b>
+Disconnecting System Connectors
+</b>
+</div>
+<div>
+Turn the ignition switch to LOCK (0). Disconnect the negative cable from the battery. Wait for 3 minutes before starting the following procedures.
+</div>
+<ul type="disc">
+<li>
+<div>
+Before disconnecting the cable reel 4P connector (1), disconnect the driver's airbag 4P connector (2).
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<div class="figure_title">
+<b>
+LHD model
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008073','1');">
+<img src="../tn/TL19E60H46400000000AAAD23.png">
+</a>
+</span>
+</div>
+<div>
+<div class="figure_title">
+<b>
+RHD model
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008073','2');">
+<img src="../tn/TL19E60H46400000000AAAD24.png">
+</a>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</span>
+<span style="display:none" id="imgPrtId">
+<table width="100%" class="Viewer">
+<tr>
+<td width="100%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG10">
+</a>
+<a name="iG11">
+</a>
+<div class="procedure_sub_title">
+<b>
+Disconnecting System Connectors
+</b>
+</div>
+<div>
+Turn the ignition switch to LOCK (0). Disconnect the negative cable from the battery. Wait for 3 minutes before starting the following procedures.
+</div>
+<ul type="disc">
+<li>
+<div>
+Before disconnecting the cable reel 4P connector (1), disconnect the driver's airbag 4P connector (2).
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td width="100%" class="ViewerTD" id="graphTd" valign="top">
+<span style="display:block" id="imgId1">
+<div>
+<div class="figure_title">
+<b>
+LHD model
+</b>
+</div>
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E60H46400000000AAAD23_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</div>
+</span>
+<span style="display:none" id="imgId2">
+<div>
+<div class="figure_title">
+<b>
+RHD model
+</b>
+</div>
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E60H46400000000AAAD24_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</div>
+</span>
+</td>
+</tr>
+<tr>
+<td width="100%" class="ViewerTD" valign="top">
+</td>
+</tr>
+<tr>
+<td width="100%" class="ViewerTD" valign="top">
+</td>
+</tr>
+</table>
+</span>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG10">
+</a>
+<a name="iG11">
+</a>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Turn the ignition to LOCK (0). Disconnect the negative cable from the battery, then wait for 3 minutes.
+</div>
+</li>
+</ol>
+<a name="iT05">
+</a>
+<div class="procedure_topic_title">
+<b>
+Driver's Airbag
+</b>
+</div>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Remove the access panel (A) from the steering wheel, then disconnect the driver's airbag 4P connector (B) from the cable reel.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008074','1');">
+<img src="../tn/TL19E60H46400000000AAAD25.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E60H46400000000AAAD25_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG10">
+</a>
+<a name="iG11">
+</a>
+<a name="iT06">
+</a>
+<div class="procedure_topic_title">
+<b>
+Front Passenger's Airbag
+</b>
+</div>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+<a href="javascript:CtsProc('0','000000000000386','i000')">
+Remove the glove box,
+</a>
+ then disconnect the connector clip, then disconnect the front passenger's airbag 4P connector from the dashboard wire harness (A).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008075','1');">
+<img src="../tn/TL19E60H46400000000AAAD26.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E60H46400000000AAAD26_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG10">
+</a>
+<a name="iG11">
+</a>
+<a name="iT07">
+</a>
+<div class="procedure_topic_title">
+<b>
+Side Airbag
+</b>
+</div>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Disconnect both side airbag 2P connectors from the SRS floor wire harness (A).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008076','1');">
+<img src="../tn/TL19E60H46400000000AAAD27.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E60H46400000000AAAD27_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG10">
+</a>
+<a name="iG11">
+</a>
+<a name="iT08">
+</a>
+<div class="procedure_topic_title">
+<b>
+Side Curtain Airbag
+</b>
+</div>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+<a href="javascript:CtsProc('0','000000000000388','iR03')">
+Remove rear pillar trim.
+</a>
+</div>
+</li>
+</ol>
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+Disconnect both SRS floor wire harness 2P connectors (A) from the side curtain airbags.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008077','1');">
+<img src="../tn/TL19E60H46400000000AAAD28.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E60H46400000000AAAD28_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG10">
+</a>
+<a name="iG11">
+</a>
+<a name="iT09">
+</a>
+<div class="procedure_topic_title">
+<b>
+Seat Belt Tensioner
+</b>
+</div>
+<a name="i070">
+</a>
+<ol>
+<li value="7">
+<div>
+<a href="javascript:CtsProc('0','000000000000388','iR02')">
+Remove the center pillar lower trim,
+</a>
+ then disconnect both SRS floor wire harness 4P connectors (A) from the seat belt tensioners.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008078','1');">
+<img src="../tn/TL19E60H46400000000AAAD29.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E60H46400000000AAAD29_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG10">
+</a>
+<a name="iG11">
+</a>
+<a name="iT10">
+</a>
+<div class="procedure_topic_title">
+<b>
+Seat Belt Outer Lap Tensioner
+</b>
+</div>
+<a name="i080">
+</a>
+<ol>
+<li value="8">
+<div>
+<a href="javascript:CtsProc('0','000000000000388','iR02')">
+Remove the center pillar lower trim,
+</a>
+ then disconnect the SRS floor wire harness 2P connectors (A) from the seat belt outer lap tensioners.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008079','1');">
+<img src="../tn/TL19E60H46400000000AAAD30.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E60H46400000000AAAD30_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG10">
+</a>
+<a name="iG11">
+</a>
+<a name="iT11">
+</a>
+<div class="procedure_topic_title">
+<b>
+SRS Unit
+</b>
+</div>
+<a name="i090">
+</a>
+<ol>
+<li value="9">
+<div>
+<a href="javascript:CtsProc('0','000000000000272','i000')">
+Remove the audio unit (with navigation)
+</a>
+ or 
+<a href="javascript:CtsProc('0','000000000000371','i000')">
+dashboard center pocket (without navigation),
+</a>
+ then disconnect SRS unit connector A and SRS unit connector B from the SRS unit.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008080','1');">
+<img src="../tn/TL19E60H46400000000AAAD31.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E60H46400000000AAAD31_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

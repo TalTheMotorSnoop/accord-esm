@@ -1,0 +1,361 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+<title>SEA6EJDK72100090141FAAT00</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+var   totalImg = 1;
+var   dispNum=1;
+function prOnLoadProc() {
+	_prInitImageInfo(100);
+	_prResizeImage(100/100);
+	divBody.style.display = "block"
+	return;
+}
+function PrintFunc()
+{
+	divBody.style.display = "none";
+	var  img_hei = _prResizeImage(67/100);
+	divBody.style.display = "block";
+	var  graphTd = document.getElementById("graphTd");
+	if(graphTd.width == "100%")
+	{
+      var   current_pos;
+      var   img_pos = 0;
+         current_pos = graphTd.offsetTop;
+		var pageCnt = Math.floor(current_pos/950);
+		var img_pos = current_pos - (pageCnt*950);
+		if(img_pos+img_hei > 950)
+		{
+			var  pageElement = document.getElementById("page_onoff");
+			if(pageElement != null)
+			{
+				pageElement.style.display = "block";
+			}
+		}
+	}
+	window.print();
+	divBody.style.display = "none";
+	_prResizeImage(100/100);
+	divBody.style.display = "block";
+	window.scrollTo(0,0);
+}
+function BackFunc()
+{
+	window.location.replace("ZOOM000000000010861.html");
+}
+function CloseFunc()
+{
+	window.close();
+}
+function JumpFunc(strJump)
+{
+	window.location.replace(strJump);
+}
+//-->
+</script>
+<body onLoad="prOnLoadProc();" style="font-family:sans-serif;">
+<div id="divBody" style="display:none">
+<div>
+<div style="position:absolute;right=10;">
+<input type="image" src="../img/PRINT_PREVIEW.PNG" onClick="PrintFunc()">
+<input type="image" src="../img/GL_PREV.PNG" onClick="BackFunc()">
+<input type="image" src="../img/GL_NEXT_DISABLE.PNG" onClick="NextFunc()" disabled>
+<input type="image" src="../img/GL_CANCEL.PNG" onClick="CloseFunc()">
+</div><br><br>
+<hr width="100%" size="2" color="black">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i220">
+</a>
+<ol>
+<li value="22">
+<div>
+Measure voltage between ECM/PCM connector terminal A5 and E21.
+</div>
+</li>
+</ol>
+<div style="text-indent:40px;">
+<i>
+Is there 0.1 V or less?
+</i>
+</div>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Repair open in the wire between the ECM/PCM (E21) and the secondary HO2S (Sensor 2), then go to
+<a href="javascript:JumpFunc('ZOOM000000000010862.html#i250')">Step 25
+</a>
+.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to
+<a href="javascript:JumpFunc('ZOOM000000000010862.html#i300')">Step 30
+</a>
+.
+</div>
+</td>
+</tr>
+</table>
+<a name="i230">
+</a>
+<ol>
+<li value="23">
+<div>
+Turn the ignition switch OFF.
+</div>
+</li>
+</ol>
+<a name="i240">
+</a>
+<ol>
+<li value="24">
+<div>
+<a href="javascript:opener.top.Cts('000000000000587','i000')">
+Replace the secondary HO2S (Sensor 2).
+</a>
+</div>
+</li>
+</ol>
+<a name="i250">
+</a>
+<ol>
+<li value="25">
+<div>
+Reconnect all connectors.
+</div>
+</li>
+</ol>
+<a name="i260">
+</a>
+<ol>
+<li value="26">
+<div>
+Turn the ignition switch ON (II).
+</div>
+</li>
+</ol>
+<a name="i270">
+</a>
+<ol>
+<li value="27">
+<div>
+Reset the ECM/PCM with the HDS.
+</div>
+</li>
+</ol>
+<a name="i280">
+</a>
+<ol>
+<li value="28">
+<div>
+<a href="javascript:opener.top.Cts('000000000000757','i000')">
+Do the ECM/PCM idle learn procedure.
+</a>
+</div>
+</li>
+</ol>
+<a name="i290">
+</a>
+<ol>
+<li value="29">
+<div>
+Check for Temporary DTCs or DTCs with the HDS.
+</div>
+</li>
+</ol>
+<div style="text-indent:40px;">
+<i>
+Are any Temporary DTCs or DTCs indicated?
+</i>
+</div>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+If DTC P0141 is indicated, check for poor connections or loose terminals at the secondary HO2S (Sensor 2) and the ECM/PCM, then go to
+<a href="javascript:JumpFunc('ZOOM000000000010857.html#i010')">Step 1
+</a>
+. If any other Temporary DTCs or DTCs are indicated, go to the indicated DTC's troubleshooting.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to
+<a href="javascript:JumpFunc('ZOOM000000000010862.html#i300')">Step 30
+</a>
+.
+</div>
+</td>
+</tr>
+</table>
+<a name="i300">
+</a>
+<ol>
+<li value="30">
+<div>
+Monitor the OBD STATUS for DTC P0141 in the DTCs MENU with the HDS.
+</div>
+</li>
+</ol>
+<div style="text-indent:40px;">
+<i>
+Does the screen indicate PASSED?
+</i>
+</div>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Troubleshooting is complete.■
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+If the screen indicates FAILED, check for poor connections or loose terminals at the secondary HO2S (Sensor 2) and the ECM/PCM, then go to
+<a href="javascript:JumpFunc('ZOOM000000000010857.html#i010')">Step 1
+</a>
+. If the screen indicates NOT COMPLETED, go to
+<a href="javascript:JumpFunc('ZOOM000000000010862.html#i280')">Step 28
+</a>
+ and recheck.
+</div>
+</td>
+</tr>
+</table>
+<a name="i310">
+</a>
+<ol>
+<li value="31">
+<div>
+<a href="javascript:opener.top.Cts('000000000001619','iG11')">
+Update the ECM/PCM if it does not have the latest software, or substitute a known-good ECM/PCM.
+</a>
+</div>
+</li>
+</ol>
+<a name="i320">
+</a>
+<ol>
+<li value="32">
+<div>
+Check for Temporary DTCs or DTCs with the HDS.
+</div>
+</li>
+</ol>
+<div style="text-indent:40px;">
+<i>
+Are any Temporary DTCs or DTCs indicated?
+</i>
+</div>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+If DTC P0141 is indicated, check for poor connections or loose terminals at the secondary HO2S (Sensor 2) and the ECM/PCM, then go to
+<a href="javascript:JumpFunc('ZOOM000000000010857.html#i010')">Step 1
+</a>
+. If any other Temporary DTCs or DTCs are indicated, go to the indicated DTC's troubleshooting.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+If the ECM/PCM was updated, troubleshooting is complete. If the ECM/PCM was substituted,
+<a href="javascript:opener.top.Cts('000000000001619','iG09')">
+replace the original ECM/PCM.
+</a>
+■
+</div>
+</td>
+</tr>
+</table>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div style="display:none;" id="page_onoff">
+<div style="page-break-after:always;">
+</div>
+</div>
+<span style="display:block" id="imgId1">
+<div>
+<script src="../js/SEA6EJDK72100090141FAAD06_1.js">
+</script>
+</div>
+</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

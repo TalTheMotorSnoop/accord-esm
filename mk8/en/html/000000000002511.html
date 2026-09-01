@@ -1,0 +1,408 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E4PE10474000000FEAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+A/T Stall Speed Test
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+<a href="javascript:CtsProc('0','000000000002423','i000')">
+Make sure the transmission fluid is filled to the proper level.
+</a>
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Apply the parking brake, and block all four wheels.
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Connect the HDS to the DLC (A) located under the driver's side of the dashboard.
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Turn the ignition switch to ON (II).
+</div>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+Make sure the HDS communicates with the TCM. If the does not, go to the 
+<a href="javascript:CtsProc('0','000000000003669','i000')">
+DLC circuit troubleshooting.
+</a>
+</div>
+</li>
+</ol>
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+Make sure the A/C switch OFF.
+</div>
+</li>
+</ol>
+<a name="i070">
+</a>
+<ol>
+<li value="7">
+<div>
+Start the engine, and warm it up to normal operating temperature (the radiator fan comes on).
+</div>
+</li>
+</ol>
+<a name="i080">
+</a>
+<ol>
+<li value="8">
+<div>
+Shift to D while pressing the brake pedal firmly, then press the accelerator pedal for 6 to 8 seconds, and note the engine speed. Do not move the shift lever or remove your foot off the brake pedal, while raising the engine speed.
+</div>
+</li>
+</ol>
+<a name="i090">
+</a>
+<ol>
+<li value="9">
+<div>
+Allow 2 minutes for cooling, then repeat the test with the shift lever in S and R.
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+Do not test stall speed for more than 10 seconds at a time.
+</div>
+</li>
+<li>
+<div>
+Record the engine speed at 6−8 seconds after pressing the accelerator pedal. Higher engine speed will be indicated for 5 seconds.
+</div>
+</li>
+<li>
+<div>
+Stall speed tests should be used for diagnostic purposes only.
+</div>
+</li>
+<li>
+<div>
+The stall speed should be the same in D, S, and R.
+</div>
+</li>
+<li>
+<div>
+Do not test stall speed with the A/T oil pressure gauges installed.
+</div>
+</li>
+</ul>
+<div>
+<table width="87%" class="Viewer" frame="void" style="table-layout:fixed;">
+<col width="29%">
+<col width="70%">
+<tbody>
+<tr>
+<td class="ViewerTD" colspan="2" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Stall Speed rpm
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Specification:
+</b>
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+2,130 rpm (min
+<sup>
+−1
+</sup>
+)
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Service Limit:
+</b>
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+1,980−2,280 rpm (min
+<sup>
+−1
+</sup>
+)
+</b>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</li>
+</ol>
+<a name="i100">
+</a>
+<ol>
+<li value="10">
+<div>
+If any of the stall speeds are out of the service limit, refer to the problems and probable causes listed in the table.
+</div>
+<div>
+<table width="87%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="47%">
+<col width="52%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Problem
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Probable causes
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Stall speed rpm (min
+<sup>
+−1
+</sup>
+) high in D, S, and R
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+ATF pump output low
+</div>
+</li>
+<li>
+<div>
+Clogged ATF strainer
+</div>
+</li>
+<li>
+<div>
+Regulator valve stuck
+</div>
+</li>
+<li>
+<div>
+Slipping clutch
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Stall speed rpm (min
+<sup>
+−1
+</sup>
+) high in R
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Slippage of 5th clutch
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Stall speed rpm (min
+<sup>
+−1
+</sup>
+) low in D, S, and R
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Engine output low
+</div>
+</li>
+<li>
+<div>
+Engine throttle valve closed
+</div>
+</li>
+<li>
+<div>
+Torque converter one-way clutch slipping
+</div>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000006940','1');">
+<img src="../tn/TL19E4PE10474000000FEAD01.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E4PE10474000000FEAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

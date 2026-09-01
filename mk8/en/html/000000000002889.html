@@ -1,0 +1,229 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E5ZH32500036865BAAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+Lane Keeping Assist System (LKAS) DTC Troubleshooting: 10, 11, 30
+</div>
+<div>
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG01">
+</a>
+<div class="servinfosub_title">
+<b>
+How to Troubleshoot DTCs
+</b>
+</div>
+<div>
+Check and clear the DTCs with the HDS.
+</div>
+<div>
+Before troubleshooting, check and note these items:
+</div>
+<ul type="disc">
+<li>
+<div>
+Ask the customer about the conditions when the problem occurred, and try to reproduce the same conditions for troubleshooting.
+</div>
+</li>
+<li>
+<div>
+If the symptom does not appear and the LKAS indicator does not come on during the test-drive, but troubleshooting is done based on the DTC, check for poor connections or loose terminals at all connectors related to the circuit that you are troubleshooting.
+</div>
+</li>
+<li>
+<div>
+After the troubleshooting or repairs are done, clear the DTCs, and test-drive the vehicle under same conditions as when the DTC was originally set. Make sure the LKAS indicator (orange) does not come on.
+</div>
+</li>
+<li>
+<div>
+LKAS system sometimes stops control because of the environment (weather, road conditions, driving conditions, etc.). A DTC may be stored in these cases.
+</div>
+</li>
+</ul>
+<div>
+<b>
+DTCs that may be stored even when the system is normal:
+</b>
+</div>
+<a name="iG02">
+</a>
+<div class="servinfosub_title">
+<b>
+LKAS Camera
+</b>
+</div>
+<a name="iT01">
+</a>
+<br>
+<div class="topic_title">
+<b>
+DTC 7 and DTC 8: High/Low temperature detection with LKAS camera
+</b>
+</div>
+<br>
+<div>
+There was status that a vehicle was put on the environment that indoors becomes the high temperature (or the low temperature) which is extraordinary. It detects LKAS camera (at −10 °C/14 °F) low temperature (more than 60 °C/140 °F).
+</div>
+<a name="iT02">
+</a>
+<br>
+<div class="topic_title">
+<b>
+DTC 10: Incomplete static camera aiming with LKAS camera
+</b>
+</div>
+<br>
+<a name="iT03">
+</a>
+<br>
+<div class="topic_title">
+<b>
+DTC 11: Dynamic camera aiming falled with LKAS camera
+</b>
+</div>
+<br>
+<a name="iG03">
+</a>
+<div class="servinfosub_title">
+<b>
+LKAS Control Unit
+</b>
+</div>
+<a name="iT04">
+</a>
+<br>
+<div class="topic_title">
+<b>
+DTC 21: VSA modulator-control unit malfunction
+</b>
+</div>
+<br>
+<a name="iT05">
+</a>
+<br>
+<div class="topic_title">
+<b>
+DTC 22: ECM/PCM (PGM-FI system) unit malfunction
+</b>
+</div>
+<br>
+<a name="iT06">
+</a>
+<br>
+<div class="topic_title">
+<b>
+DTC 23: Gauge control module malfunctio
+</b>
+</div>
+<br>
+<a name="iT07">
+</a>
+<br>
+<div class="topic_title">
+<b>
+DTC 25: PCM (A/T system) malfunction
+</b>
+</div>
+<br>
+<a name="iT08">
+</a>
+<br>
+<div class="topic_title">
+<b>
+DTC 30: No memorizing the steering angle sensor neutral position
+</b>
+</div>
+<br>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,219 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+
+<title>ABS Control Unit</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+function Apf() {
+   _prInitImageInfo(100);
+   window.focus();
+   if(gImageGroupList_.length == 0) {
+      window.print();
+   }
+   else {
+      divBody.style.display = "none";
+      var  img_pos,img_hei;
+      var  img_rate = 1.0;
+      var  i;
+      var  obj;
+      var  paper_wid,paper_hei,paper_len;
+      paper_wid = 640.0;
+      paper_hei = 950.0;
+      paper_len = 980.0;
+      for(i=0; i<gImageGroupList_.length; i++){
+         if(gImageGroupList_[i].group != null){
+           obj = gImageGroupList_[i].group;
+         }
+      }
+      if(paper_wid > paper_hei) {
+         alert("For best printing result, select 'landscape' layout from the print menu.");
+      }
+      for(i=0; i<gImageGroupList_.length; i++){
+         if(gImageGroupList_[i].group != null){
+            obj = gImageGroupList_[i].group;
+            if(img_rate > paper_wid/obj.width) {
+               img_rate =  paper_wid/obj.width;
+            }
+            if(img_rate > paper_hei/obj.height) {
+               img_rate =  paper_hei/obj.height;
+            }
+         }
+      }
+      _prResizeImage(img_rate);
+      window.scrollTo(0,10000);
+      var totalHei = document.body.scrollTop+document.body.clientHeight-img_hei;
+      divBody.style.display = "block";
+      var  idObj;
+      var groupObject = document.getElementById("group" + i);
+      var   beforeOffset = 0;
+      var   current_pos;
+      var   img_pos = img_dis = 0;
+      for(i=0; i<gImageGroupList_.length; i++){
+         idObj =document.getElementById("imgId" + (i+1));
+         if(idObj != null) {
+            idObj.style.display = "block";
+            current_pos = idObj.offsetTop;
+            if(gImageGroupList_[i].group != null){
+               obj = gImageGroupList_[i].group;
+               img_dis = current_pos - beforeOffset;
+               if(i == 0) {
+                  var pageCnt = Math.floor(current_pos/paper_hei);
+                  img_dis = img_dis - paper_hei*pageCnt;
+               }
+               img_hei = obj.height*img_rate;
+               img_pos += parseInt(img_dis);
+               if(parseInt(img_pos) > paper_len) {
+                  img_pos = img_pos - paper_len;
+               }
+               img_pos += parseInt(img_hei);
+               idObj.style.display = "none";
+               if(parseInt(img_pos) > paper_len) {
+                  idObj.style.display = "block";
+                  img_pos = parseInt(img_hei) + 50;
+               }
+               beforeOffset = current_pos + parseInt(img_hei);
+            }
+         }
+      }
+      window.print();
+      divBody.style.display = "none";
+      _prResizeImage(100/100);
+      divBody.style.display = "block";
+      window.scrollTo(0,0);
+   }
+}
+-->
+</script>
+<body onload="try{if(parent&&parent.Old)parent.Old(this);}catch(e){}" style="font-family:sans-serif;">
+<div id="divBody" style="display:block">
+<div>
+<div class="top_title">
+<b>
+ABS Control Unit
+</b>
+</div>
+<a name="iS03">
+</a>
+<a name="iT01">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Main Control
+</b>
+</div>
+<br>
+<div>
+<div>
+The ABS control unit detects the wheel speed based on the wheel sensor signal it received, then it calculates the vehicle speed based on the detected wheel speed. The control unit detects the vehicle speed during deceleration based on the rate of deceleration.
+</div>
+<div>
+The ABS control unit calculates the slip rate of each wheel, and transmits the control signal to the modulator unit solenoid valve when the slip rate is high.
+</div>
+<div>
+The hydraulic control has three modes: Pressure reducing, pressure retaining, and pressure intensifying.
+</div>
+<span style="display:none" id="imgId1">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA5E24D10600000000CAAD04_1.js">
+</script>
+</div>
+</div>
+<a name="iT02">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Electronic Brake Distribution (EBD) Control
+</b>
+</div>
+<br>
+<div>
+The electronic brake distribution (EBD) function helps control vehicle braking by adjusting the rear brake force before the ABS operates. Based on wheel sensor signals, the ABS control unit uses the modulator to control the rear brakes individually. When the rear wheel speed is less than the front wheel speed, the ABS control unit retains the current rear brake fluid pressure by closing the inlet valve in the modulator. As the rear wheel speed increases and approaches the front wheel speed, the control unit increases the rear brake fluid pressure by momentarily opening the inlet valve. This whole process is repeated very rapidly. While this is happening, there is kickback at the brake pedal.
+</div>
+<div>
+During self-diagnosis, if the ABS control unit detects a problem that affects the EBD, it turns on the brake system indicator and the ABS indicator.
+</div>
+<a name="iT03">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Self-diagnosis Function
+</b>
+</div>
+<br>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+The ABS control unit is equipped with a CPU and a monitor IC. They check each other for problems.
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+The CPU check the system circuits.
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+The ABS control unit turns on the ABS and possibly the brake system indicator when the unit detects a problem, and the unit stops ABS operation.
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+The self-diagnosis can be classified into these two categories:
+</div>
+<ul type="disc">
+<li>
+<div>
+Initial diagnosis
+</div>
+</li>
+<li>
+<div>
+Regular diagnosis
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="iT04">
+</a>
+<br>
+<div class="topic_title">
+<b>
+On-board Diagnosis Function
+</b>
+</div>
+<br>
+<div>
+The ABS can be diagnosed with the HDS.
+</div>
+<div>
+The ALB Checker cannot be used with this system. For air bleeding, and checking wheel sensor signals, use the HDS. See the HDS Help menu for specific operating instructions.
+</div>
+</div></div>
+</body>
+</html>

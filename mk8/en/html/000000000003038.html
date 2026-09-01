@@ -1,0 +1,720 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E7AJ54200046123FEAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+Relay Circuit Board Test
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR01">
+</a>
+<div class="procedure_sub_title">
+<b>
+Radiator Fan Relay Circuit and Fan Control Relay Circuit
+</b>
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+<a href="javascript:CtsProc('0','000000000002065','iR01')">
+Do the battery terminal disconnection procedure.
+</a>
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Disconnect the connectors B (14P) and C (10P) from under-hood fuse/relay box (the relay circuit board).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008428','1');">
+<img src="../tn/TL19E7AJ54200046123FEAD01.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E7AJ54200046123FEAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR01">
+</a>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Test each relay circuit as shown:
+</div>
+<ul type="disc">
+<li>
+<div>
+Radiator fan relay circuit
+</div>
+</li>
+<table class="Viewer">
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+When power is connected to the B2 or B8 terminal and ground is connected to the B1 terminal, there should be continuity between the C1 and C7 terminals.
+</div>
+<div>
+When power is disconnected, there should be no continuity between the C1 and C7 terminals.
+</div>
+</td>
+</tr>
+</table>
+</ul>
+<ul type="disc">
+<li>
+<div>
+Fan control relay circuit
+</div>
+</li>
+<table class="Viewer">
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+When power is connected to the B2 or B8 terminal and ground is connected to the B1 terminal, there should be continuity between the C10 and B7 terminals.
+</div>
+<div>
+When power is disconnected, there should be no continuity between the C10 and C7 terminals.
+</div>
+</td>
+</tr>
+</table>
+</ul>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+If any of these relay circuit fails the test, replace the relay circuit board.
+</div>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+<a href="javascript:CtsProc('0','000000000002065','iR02')">
+Do the battery terminal reconnection procedure.
+</a>
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008429','1');">
+<img src="../tn/TL19E7AJ54200046123FEAD02.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E7AJ54200046123FEAD02_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR02">
+</a>
+<div class="procedure_sub_title">
+<b>
+Wiper Relay Circuit, Wiper Motor HIGH/LOW Relay Circuit and Wiper Motor Intermittent Relay Circuit
+</b>
+</div>
+<a name="i210">
+</a>
+<ol>
+<li value="1">
+<div>
+<a href="javascript:CtsProc('0','000000000002065','iR01')">
+Do the battery terminal disconnection procedure.
+</a>
+</div>
+</li>
+</ol>
+<a name="i220">
+</a>
+<ol>
+<li value="2">
+<div>
+Disconnect the connectors B (14P) and C (10P) from under-hood fuse/relay box (the relay circuit board).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008430','1');">
+<img src="../tn/TL19E7AJ54200046123FEAD03.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E7AJ54200046123FEAD03_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR02">
+</a>
+<a name="i230">
+</a>
+<ol>
+<li value="3">
+<div>
+Test each relay circuit as shown:
+</div>
+<ul type="disc">
+<li>
+<div>
+Wiper motor relay circuit
+</div>
+</li>
+<table class="Viewer">
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+When power is connected to the B3 and C9 terminal and ground is connected to the B11 and B14 terminal, there should be continuity between the B3 and B6 terminals.
+</div>
+<div>
+When power is disconnected, there should be no continuity between the B3 and B6 terminals.
+</div>
+</td>
+</tr>
+</table>
+</ul>
+<ul type="disc">
+<li>
+<div>
+Wiper motor HIGH/LOW relay circuit
+</div>
+</li>
+<table class="Viewer">
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+When power is connected to the B3 and C9 terminal and ground is connected to the B5 and B11 terminal, there should be voltage between the B3 and B4 terminals.
+</div>
+<div>
+When power is disconnected, there should be continuity between the B6 and C9 terminals.
+</div>
+</td>
+</tr>
+</table>
+</ul>
+<ul type="disc">
+<li>
+<div>
+Wiper motor intermittent relay circuit
+</div>
+</li>
+<table class="Viewer">
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+When power is connected to the B3 and C9 terminal and ground is connected to the B11 and B14 terminal, there should be voltage between the B3 and B6 terminals.
+</div>
+<div>
+When power is disconnected, there should be continuity between the B6 and C9 terminals.
+</div>
+</td>
+</tr>
+</table>
+</ul>
+</li>
+</ol>
+<a name="i240">
+</a>
+<ol>
+<li value="4">
+<div>
+If any of these relay circuit fails the test, replace the relay circuit board.
+</div>
+</li>
+</ol>
+<a name="i250">
+</a>
+<ol>
+<li value="5">
+<div>
+<a href="javascript:CtsProc('0','000000000002065','iR02')">
+Do the battery terminal reconnection procedure.
+</a>
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008431','1');">
+<img src="../tn/TL19E7AJ54200046123FEAD04.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E7AJ54200046123FEAD04_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR03">
+</a>
+<div class="procedure_sub_title">
+<b>
+ACC Relay Circuit
+</b>
+</div>
+<a name="i410">
+</a>
+<ol>
+<li value="1">
+<div>
+<a href="javascript:CtsProc('0','000000000002065','iR01')">
+Do the battery terminal disconnection procedure.
+</a>
+</div>
+</li>
+</ol>
+<a name="i420">
+</a>
+<ol>
+<li value="2">
+<div>
+Disconnect the connectors B (14P) and C (10P) from under-hood fuse/relay box (the relay circuit board).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008432','1');">
+<img src="../tn/TL19E7AJ54200046123FEAD05.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E7AJ54200046123FEAD05_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR03">
+</a>
+<a name="i430">
+</a>
+<ol>
+<li value="3">
+<div>
+Test each relay circuit as shown:
+</div>
+<ul type="disc">
+<li>
+<div>
+ACC relay circuit
+</div>
+</li>
+<table class="Viewer">
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+When power is connected to the C8 terminal and ground is connected to the B12 terminal, there should be continuity between the C3 and C6 terminals.
+</div>
+<div>
+When power is disconnected, there should be continuity between the C2 and C3 terminals.
+</div>
+</td>
+</tr>
+</table>
+</ul>
+</li>
+</ol>
+<a name="i440">
+</a>
+<ol>
+<li value="4">
+<div>
+If any of these relay circuit fails the test, replace the relay circuit board.
+</div>
+</li>
+</ol>
+<a name="i450">
+</a>
+<ol>
+<li value="5">
+<div>
+<a href="javascript:CtsProc('0','000000000002065','iR02')">
+Do the battery terminal reconnection procedure.
+</a>
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008433','1');">
+<img src="../tn/TL19E7AJ54200046123FEAD06.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E7AJ54200046123FEAD06_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<div class="procedure_sub_title">
+<b>
+ISV Relay Circuit
+</b>
+</div>
+<a name="i610">
+</a>
+<ol>
+<li value="1">
+<div>
+<a href="javascript:CtsProc('0','000000000002065','iR01')">
+Do the battery terminal disconnection procedure.
+</a>
+</div>
+</li>
+</ol>
+<a name="i620">
+</a>
+<ol>
+<li value="2">
+<div>
+Disconnect the connectors B (14P) and C (10P) from under-hood fuse/relay box (the relay circuit board).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008434','1');">
+<img src="../tn/TL19E7AJ54200046123FEAD07.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E7AJ54200046123FEAD07_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="i630">
+</a>
+<ol>
+<li value="3">
+<div>
+Test each relay circuit as shown:
+</div>
+<ul type="disc">
+<li>
+<div>
+ISV relay circuit
+</div>
+</li>
+<table class="Viewer">
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+When power is connected to the B2 or B8 terminal and ground is connected to the B13 terminal, there should be continuity between the C4 and C5 terminals.
+</div>
+<div>
+When power is disconnected, there should be continuity between the C4 and C5 terminals.
+</div>
+</td>
+</tr>
+</table>
+</ul>
+</li>
+</ol>
+<a name="i640">
+</a>
+<ol>
+<li value="4">
+<div>
+If any of these relay circuit fails the test, replace the relay circuit board.
+</div>
+</li>
+</ol>
+<a name="i650">
+</a>
+<ol>
+<li value="5">
+<div>
+<a href="javascript:CtsProc('0','000000000002065','iR02')">
+Do the battery terminal reconnection procedure.
+</a>
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008435','1');">
+<img src="../tn/TL19E7AJ54200046123FEAD08.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E7AJ54200046123FEAD08_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

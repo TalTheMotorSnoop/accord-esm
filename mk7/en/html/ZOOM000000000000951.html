@@ -1,0 +1,153 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+<title>SEA5E00K79100000000BBAT00</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+var   totalImg = 0;
+var   dispNum=1;
+function prOnLoadProc() {
+	_prInitImageInfo(100);
+	_prResizeImage(100/100);
+	divBody.style.display = "block"
+	return;
+}
+function PrintFunc()
+{
+	divBody.style.display = "none";
+	var  img_hei = _prResizeImage(67/100);
+	divBody.style.display = "block";
+	var  graphTd = document.getElementById("graphTd");
+	if(graphTd.width == "100%")
+	{
+      var   current_pos;
+      var   img_pos = 0;
+         current_pos = graphTd.offsetTop;
+		var pageCnt = Math.floor(current_pos/950);
+		var img_pos = current_pos - (pageCnt*950);
+		if(img_pos+img_hei > 950)
+		{
+			var  pageElement = document.getElementById("page_onoff");
+			if(pageElement != null)
+			{
+				pageElement.style.display = "block";
+			}
+		}
+	}
+	window.print();
+	divBody.style.display = "none";
+	_prResizeImage(100/100);
+	divBody.style.display = "block";
+	window.scrollTo(0,0);
+}
+function NextFunc()
+{
+	window.location.replace("ZOOM000000000000952.html");
+}
+function CloseFunc()
+{
+	window.close();
+}
+function JumpFunc(strJump)
+{
+	window.location.replace(strJump);
+}
+//-->
+</script>
+<body onLoad="prOnLoadProc();" style="font-family:sans-serif;">
+<div id="divBody" style="display:none">
+<div>
+<div style="position:absolute;right=10;">
+<input type="image" src="../img/PRINT_PREVIEW.PNG" onClick="PrintFunc()">
+<input type="image" src="../img/GL_PREV_DISABLE.PNG" onClick="BackFunc()" disabled>
+<input type="image" src="../img/GL_NEXT.PNG" onClick="NextFunc()">
+<input type="image" src="../img/GL_CANCEL.PNG" onClick="CloseFunc()">
+</div><br><br>
+<hr width="100%" size="2" color="black">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG01">
+</a>
+<div class="servinfosub_title">
+<b>
+DTC (Diagnostic Trouble Codes)
+</b>
+</div>
+<div>
+The self-diagnostic function of the SRS system allows it to locate the causes of system problems and then store this information in memory. For easier troubleshooting, this data can be retrieved via a data link circuit.
+</div>
+<ul type="disc">
+<li>
+<div>
+When you turn the ignition switch ON (II), the SRS indicator will come on. If it goes off after 6 seconds, the system is normal.
+</div>
+</li>
+<li>
+<div>
+If there is an abnormality, the system locates and defines the problem, stores this information in memory, and turns the SRS indicator on. The data will remain in the memory even when the ignition switch is turned off or if the battery is disconnected.
+</div>
+</li>
+<li>
+<div>
+When you connect the HDS to the 16P data link connector (DLC), you can retrieve the DTC in the Honda Systems ‘‘SRS'' menu.
+</div>
+</li>
+<li>
+<div>
+After reading and recording the DTC, proceed with the troubleshooting procedure for this code.
+</div>
+</li>
+</ul>
+<a name="iT01">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Precautions
+</b>
+</div>
+<br>
+<ul type="disc">
+<li>
+<div>
+Use only a digital multimeter to check the system. If it's not a Honda multimeter, make sure its output is 10 mA (0.01 A) or less when switched to the smallest value in the ohmmeter range. A tester with a higher output could damage the airbag circuit or cause accidental airbag deployment and possible injury.
+</div>
+</li>
+<li>
+<div>
+Whenever the ignition switch is ON (II), or has been turned OFF for less than 3 minutes, be careful not to bump the SRS unit; the airbags could accidentally deploy and cause damage or injuries.
+</div>
+</li>
+<li>
+<div>
+Before you remove the SRS harness, disconnect the driver's airbag connector, the front passenger's airbag connector, both side airbag connectors, and both seat belt tensioner connectors.
+</div>
+</li>
+<li>
+<div>
+Make sure the battery is sufficiently charged. If the battery is dead or low, measuring values may not be correct.
+</div>
+</li>
+<li>
+<div>
+Do not touch a tester probe to the terminals in the SRS unit or harness connectors, and do not connect the terminals with a jumper wire. Use only the backprobe set and the multimeter. Backprobe spring-loaded lock type connectors correctly.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div style="display:none;" id="page_onoff">
+<div style="page-break-after:always;">
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

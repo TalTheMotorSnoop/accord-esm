@@ -1,0 +1,156 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+<title>SEA6EJ6J36200000000BBAT20</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+var   totalImg = 1;
+var   dispNum=1;
+function prOnLoadProc() {
+	_prInitImageInfo(100);
+	_prResizeImage(100/100);
+	divBody.style.display = "block"
+	return;
+}
+function PrintFunc()
+{
+	divBody.style.display = "none";
+	var  img_hei = _prResizeImage(67/100);
+	divBody.style.display = "block";
+	var  graphTd = document.getElementById("graphTd");
+	if(graphTd.width == "100%")
+	{
+      var   current_pos;
+      var   img_pos = 0;
+         current_pos = graphTd.offsetTop;
+		var pageCnt = Math.floor(current_pos/950);
+		var img_pos = current_pos - (pageCnt*950);
+		if(img_pos+img_hei > 950)
+		{
+			var  pageElement = document.getElementById("page_onoff");
+			if(pageElement != null)
+			{
+				pageElement.style.display = "block";
+			}
+		}
+	}
+	window.print();
+	divBody.style.display = "none";
+	_prResizeImage(100/100);
+	divBody.style.display = "block";
+	window.scrollTo(0,0);
+}
+function BackFunc()
+{
+	window.location.replace("ZOOM000000000010179.html");
+}
+function NextFunc()
+{
+	window.location.replace("ZOOM000000000010181.html");
+}
+function CloseFunc()
+{
+	window.close();
+}
+function JumpFunc(strJump)
+{
+	window.location.replace(strJump);
+}
+//-->
+</script>
+<body onLoad="prOnLoadProc();" style="font-family:sans-serif;">
+<div id="divBody" style="display:none">
+<div>
+<div style="position:absolute;right=10;">
+<input type="image" src="../img/PRINT_PREVIEW.PNG" onClick="PrintFunc()">
+<input type="image" src="../img/GL_PREV.PNG" onClick="BackFunc()">
+<input type="image" src="../img/GL_NEXT.PNG" onClick="NextFunc()">
+<input type="image" src="../img/GL_CANCEL.PNG" onClick="CloseFunc()">
+</div><br><br>
+<hr width="100%" size="2" color="black">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG10">
+</a>
+<a name="iT01">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Yaw Rate Tuning
+</b>
+</div>
+<br>
+<div>
+This diagnostic allows you to graphically display problems with the yaw rate sensor.
+</div>
+<ul type="disc">
+<li>
+<div>
+The ‘‘ANG-Disp'' value accumulates any differences between the ‘‘offset'', and ‘‘sensor'' voltages (see Yaw Rate diagnostic). When the sensor is healthy, the random changes in these two voltages generally cancels out, so the value is 0. However if one voltage is consistently higher than the other, then the ‘‘ANG-Disp'' value accumulates the constant change.
+</div>
+</li>
+<li>
+<div>
+The ‘‘Reset'' button temporarily clears the angular accumulation (ANG-Disp), and clears the display dots.
+</div>
+</li>
+<li>
+<div>
+Do not touch the ‘‘CCW'' or ‘‘CW'', or ‘‘Set'' buttons. These are used for factory setup only.
+</div>
+</li>
+</ul>
+<div>
+Two tests are explained below. For gross problems with the sensor, the stationary test usually confirms whether the sensor is defective. For yaw rate issues related to driving, perform the road test described below.
+</div>
+<a name="i210">
+</a>
+<ol>
+<li value="1">
+<div>
+Stationary test: If the ‘‘VP'' icon spins in place and the ‘‘ANG-Disp'' value slowly increases or decreases in value, the yaw rate sensor is defective. Replace the Navigation control unit.
+</div>
+</li>
+</ol>
+<a name="i220">
+</a>
+<ol>
+<li value="2">
+<div>
+Road test: Drive the vehicle on a very straight road. Enter the diagnostic mode, select ‘‘Yaw rate'', and touch the ‘‘Tuning'' button. While driving down a straight road, the white ‘‘dots'' should trace a straight line across the screen. However, if you are driving on a straight road, and you notice the dots constantly dropping down or heading up as you drive, the navigation control unit's yaw sensor is defective. You can touch ‘‘Reset'' to clear ‘‘ANG-Disp'', and dotted line.
+</div>
+</li>
+</ol>
+<a name="i230">
+</a>
+<ol>
+<li value="3">
+<div>
+If either test above fails, please enter ‘‘Yaw rate sensor defective'' for the problem description, on the ‘‘Navigation core return form''.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div style="display:none;" id="page_onoff">
+<div style="page-break-after:always;">
+</div>
+</div>
+<span style="display:block" id="imgId1">
+<div>
+<script src="../js/SEA6EJ6J36200000000BBAD26_1.js">
+</script>
+</div>
+</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

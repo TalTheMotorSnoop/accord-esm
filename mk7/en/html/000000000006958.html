@@ -1,0 +1,309 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+
+<title>Diesel Engine Management System</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+function Apf() {
+   _prInitImageInfo(100);
+   window.focus();
+   if(gImageGroupList_.length == 0) {
+      window.print();
+   }
+   else {
+      divBody.style.display = "none";
+      var  img_pos,img_hei;
+      var  img_rate = 1.0;
+      var  i;
+      var  obj;
+      var  paper_wid,paper_hei,paper_len;
+      paper_wid = 640.0;
+      paper_hei = 950.0;
+      paper_len = 980.0;
+      for(i=0; i<gImageGroupList_.length; i++){
+         if(gImageGroupList_[i].group != null){
+           obj = gImageGroupList_[i].group;
+         }
+      }
+      if(paper_wid > paper_hei) {
+         alert("For best printing result, select 'landscape' layout from the print menu.");
+      }
+      for(i=0; i<gImageGroupList_.length; i++){
+         if(gImageGroupList_[i].group != null){
+            obj = gImageGroupList_[i].group;
+            if(img_rate > paper_wid/obj.width) {
+               img_rate =  paper_wid/obj.width;
+            }
+            if(img_rate > paper_hei/obj.height) {
+               img_rate =  paper_hei/obj.height;
+            }
+         }
+      }
+      _prResizeImage(img_rate);
+      window.scrollTo(0,10000);
+      var totalHei = document.body.scrollTop+document.body.clientHeight-img_hei;
+      divBody.style.display = "block";
+      var  idObj;
+      var groupObject = document.getElementById("group" + i);
+      var   beforeOffset = 0;
+      var   current_pos;
+      var   img_pos = img_dis = 0;
+      for(i=0; i<gImageGroupList_.length; i++){
+         idObj =document.getElementById("imgId" + (i+1));
+         if(idObj != null) {
+            idObj.style.display = "block";
+            current_pos = idObj.offsetTop;
+            if(gImageGroupList_[i].group != null){
+               obj = gImageGroupList_[i].group;
+               img_dis = current_pos - beforeOffset;
+               if(i == 0) {
+                  var pageCnt = Math.floor(current_pos/paper_hei);
+                  img_dis = img_dis - paper_hei*pageCnt;
+               }
+               img_hei = obj.height*img_rate;
+               img_pos += parseInt(img_dis);
+               if(parseInt(img_pos) > paper_len) {
+                  img_pos = img_pos - paper_len;
+               }
+               img_pos += parseInt(img_hei);
+               idObj.style.display = "none";
+               if(parseInt(img_pos) > paper_len) {
+                  idObj.style.display = "block";
+                  img_pos = parseInt(img_hei) + 50;
+               }
+               beforeOffset = current_pos + parseInt(img_hei);
+            }
+         }
+      }
+      window.print();
+      divBody.style.display = "none";
+      _prResizeImage(100/100);
+      divBody.style.display = "block";
+      window.scrollTo(0,0);
+   }
+}
+-->
+</script>
+<body onload="try{if(parent&&parent.Old)parent.Old(this);}catch(e){}" style="font-family:sans-serif;">
+<div id="divBody" style="display:block">
+<div>
+<div class="top_title">
+<b>
+Diesel Engine Management System
+</b>
+</div>
+<a name="iS01">
+</a>
+<a name="iT01">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Accelerator Pedal Position (APP) Sensor
+</b>
+</div>
+<br>
+<div>
+<div>
+As the accelerator pedal position changes, the sensor varies the signal voltage to the ECM.
+</div>
+<span style="display:none" id="imgId1">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA6EL4A20321000000CAAD01_1.js">
+</script>
+</div>
+</div>
+<a name="iT02">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Air Conditioning (A/C) Compressor Clutch Relay
+</b>
+</div>
+<br>
+<div>
+When the engine control module (ECM) receives a demand for cooling from the A/C system, it delays the compressor from being energized, and enriches the mixture to assure smooth transition to the A/C mode.
+</div>
+<a name="iT03">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Alternator Control
+</b>
+</div>
+<br>
+<div>
+The alternator signals the ECM during charging.
+</div>
+<a name="iT04">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Barometric Pressure (BARO) Sensor
+</b>
+</div>
+<br>
+<div>
+The BARO sensor is inside the ECM. It converts atmospheric pressure into a voltage signal that modifies the basic duration of the fuel injection discharge.
+</div>
+<a name="iT05">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Brake Pedal Position Switch
+</b>
+</div>
+<br>
+<div>
+The brake pedal position switch signals the ECM when the brake pedal is pressed.
+</div>
+<a name="iT06">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Camshaft Position (CMP) Sensor
+</b>
+</div>
+<br>
+<div>
+<div>
+The CMP sensor detects the angle of camshaft as a reference for sequential fuel injection to each cylinder.
+</div>
+<span style="display:none" id="imgId2">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA6EL4A20321000000CAAD02_1.js">
+</script>
+</div>
+</div>
+<a name="iT07">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Crankshaft Position (CKP) Sensor
+</b>
+</div>
+<br>
+<div>
+<div>
+The CKP sensor detects engine speed and determines ignition timing and timing for fuel injection of each cylinder.
+</div>
+<span style="display:none" id="imgId3">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA6EL4A20321000000CAAD03_1.js">
+</script>
+</div>
+</div>
+<a name="iT08">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Engine Coolant Temperature (ECT) Sensor
+</b>
+</div>
+<br>
+<div>
+<div>
+The ECT sensor is a temperature dependent resistor (thermistor). The resistor of the thermistor decreases as the engine coolant temperature increases.
+</div>
+<span style="display:none" id="imgId4">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA6EL4A20321000000CAAD04_1.js">
+</script>
+</div>
+</div>
+<a name="iT09">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Intake Air Temperature/Manifold Absolute Pressure (IAT/MAP) Sensor
+</b>
+</div>
+<br>
+<div>
+<div>
+The IAT sensor is a temperature dependant resistor (thermistor). The resistance of the thermistor decreases as the intake air temperature increases.
+</div>
+<div>
+The MAP sensor converts manifold absolute pressure into electrical signals to the ECM.
+</div>
+<span style="display:none" id="imgId5">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA6EL4A20321000000CAAD05_1.js">
+</script>
+</div>
+</div>
+<a name="iT10">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Mass Air Flow (MAF) Sensor
+</b>
+</div>
+<br>
+<div>
+<div>
+The MAF sensor contains hot wire and a thermistor. It is located in the intake air passage. The resistance of the hot wire and thermistor change due to intake air temperature and air flow. The control circuit in the MAF sensor controls the current to keep the hot wire at a set temperature. The current is coverted to voltage in the control circuit, then output to the ECM.
+</div>
+<span style="display:none" id="imgId6">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA6EL4A20321000000CAAD06_1.js">
+</script>
+</div>
+</div>
+<a name="iT11">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Vacuum Pump
+</b>
+</div>
+<br>
+<div>
+<div>
+Because the vacuum is not produced on the diesel engine, the vacuum pump is driven by the cam chain to produce the vacuum.
+</div>
+<span style="display:none" id="imgId7">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA6EL4A20321000000CAAD07_1.js">
+</script>
+</div>
+</div>
+</div></div>
+</body>
+</html>

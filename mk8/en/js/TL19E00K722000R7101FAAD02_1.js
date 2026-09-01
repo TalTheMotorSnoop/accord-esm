@@ -1,0 +1,31 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:475px; height:411px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:475px;height:411px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E00K722000R7101FAAD02.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:475px;height:411px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:200px;top:197px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>S3 (GRN)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:128px;top:363px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b></b>Wire side of female terminals<br></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:94px;top:37px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>EPS CONTROL UNIT CONNECTOR D (28P)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:238px;top:223px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>R2 (PNK)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:274px;top:246px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>S4 (BLU)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:336px;top:110px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>S2 (BRN)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:313px;top:88px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>R1 (BLU)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:291px;top:63px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>S1 (PNK)<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

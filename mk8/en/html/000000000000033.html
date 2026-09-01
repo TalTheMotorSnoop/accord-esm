@@ -1,0 +1,783 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E00D14300014711LAAT10
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+Front Brake Caliper Overhaul
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<br>
+<div class="exploded_view_title">
+<a href="javascript:PrtProc('0','ZOOM000000000013597_PR')">
+<b>
+Exploded View - 1-piston caliper type
+</b>
+</a>
+</div>
+<br>
+<div class="exploded_view_title">
+<a href="javascript:PrtProc('0','ZOOM000000000013598_PR')">
+<b>
+Exploded View - 2-piston caliper type
+</b>
+</a>
+</div>
+<table width="100%" rules="all" class="Viewer" frame="border">
+<tr>
+<th class="caution_head">
+<img src="../img/SYM833.PNG">
+</img>
+</th>
+</tr>
+<tr>
+<td class="ViewerTD">
+<div>
+Frequent inhalation of brake pad dust, regardless of material composition, could be hazardous to your health.
+</div>
+<ul type="disc">
+<li>
+<div>
+Avoid breathing dust particles.
+</div>
+</li>
+<li>
+<div>
+Never use an air hose or brush to clean brake assemblies. Use an appropriate vacuum cleaner.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+<br>
+<div>
+NOTE:
+</div>
+<div>
+2-piston caliper type: Make sure that the caliper pins are installed correctly. Upper caliper pin B and lower caliper pin A are different. If these caliper pins are installed in the wrong location, it will cause vibration, uneven or rapid pad wear, and possibly uneven tyre wear.
+</div>
+<ul type="disc">
+<li>
+<div>
+Do not spill brake fluid on the vehicle; it may damage the paint; if brake fluid gets on the paint, wash it off immediately with water.
+</div>
+</li>
+<li>
+<div>
+To prevent dripping brake fluid, cover disconnected hose joints with rags or shop towels.
+</div>
+</li>
+<li>
+<div>
+Clean all parts in brake fluid and air dry; blow out all passages with compressed air.
+</div>
+</li>
+<li>
+<div>
+Before reassembling, check that all parts are free of dirt and other foreign particles.
+</div>
+</li>
+<li>
+<div>
+Replace parts with new ones as specified in the illustration.
+</div>
+</li>
+<li>
+<div>
+Make sure no dirt or other foreign matter gets in the brake fluid.
+</div>
+</li>
+<li>
+<div>
+Make sure no grease or oil gets on the brake discs or the brake pads.
+</div>
+</li>
+<li>
+<div>
+When reusing brake pads, always reinstall them in their original positions to prevent loss of braking efficiency.
+</div>
+</li>
+<li>
+<div>
+Do not reuse drained brake fluid. Use only clean genuine Honda DOT 3 or DOT 4 Brake Fluid from an unopened container. Using a non-Honda brake fluid can cause corrosion and shorten the life of the system.
+</div>
+</li>
+<li>
+<div>
+Coat the piston, the piston seal groove, and the caliper bore with clean brake fluid.
+</div>
+</li>
+<li>
+<div>
+Replace all rubber parts with new ones whenever disassembled.
+</div>
+</li>
+<li>
+<div>
+2-piston caliper type: Use recommended greases in the front caliper set.
+</div>
+</li>
+<li>
+<div>
+After installing the caliper, check the brake hose and line for leaks, interference, and twisting.
+</div>
+</li>
+<li>
+<div>
+When you apply the silicone grease, make sure not to adhere to the terminal part of connectors and surrounding switches. Also do not touch the switches and the terminal part of connector by hands or glove that adheres the silicone grease.
+</div>
+</li>
+</ul>
+<a name="iR01">
+</a>
+<div class="procedure_sub_title">
+<b>
+Disassembly - 1-piston caliper type
+</b>
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Remove the caliper body.
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Set the wooden block (A) or several shop towels to the caliper body (B) as shown. Blow out the piston with compressed air gradually, and remove the piston from the caliper body.
+</div>
+<div>
+NOTE: Do not put the hand into the caliper body because the piston will come out hardly from the caliper body.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000154','1');">
+<img src="../tn/TL19E00D14300014711LAAD03.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00D14300014711LAAD03_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR01">
+</a>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Remove the piston boot (A) and the piston seal (B) from the caliper body (C).
+</div>
+<div>
+NOTE: Be careful not to damage the inner surface of the cylinder wall with the tool.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000155','1');">
+<img src="../tn/TL19E00D14300014711LAAD04.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00D14300014711LAAD04_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR02">
+</a>
+<div class="procedure_sub_title">
+<b>
+Reassembly - 1-piston caliper type
+</b>
+</div>
+<a name="i210">
+</a>
+<ol>
+<li value="1">
+<div>
+Apply a thin coat of rubber grease to the new piston seal (A), then install it into the groove in the caliper body.
+</div>
+</li>
+</ol>
+<a name="i220">
+</a>
+<ol>
+<li value="2">
+<div>
+Apply the brake fluid to the new piston boot (B), then install it into the groove in the caliper body.
+</div>
+</li>
+</ol>
+<a name="i230">
+</a>
+<ol>
+<li value="3">
+<div>
+Apply the brake fluid to the outer surface of the piston, then set the piston in place on the caliper body.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000156','1');">
+<img src="../tn/TL19E00D14300014711LAAD05.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00D14300014711LAAD05_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR02">
+</a>
+<a name="i240">
+</a>
+<ol>
+<li value="4">
+<div>
+Mount the commercially available brake caliper piston compressor tool (A) on the caliper body (B).
+</div>
+</li>
+</ol>
+<a name="i250">
+</a>
+<ol>
+<li value="5">
+<div>
+Press in the piston with the brake caliper piston compressor tool. Make sure that the piston boot is properly positioned into the groove of the piston.
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+Do not press the piston diagonally, and do not press it forcibly.
+</div>
+</li>
+<li>
+<div>
+Be careful not to damage the piston boot when press the piston.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i260">
+</a>
+<ol>
+<li value="6">
+<div>
+Install the caliper body.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000157','1');">
+<img src="../tn/TL19E00D14300014711LAAD06.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00D14300014711LAAD06_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR03">
+</a>
+<div class="procedure_sub_title">
+<b>
+Disassembly - 2-piston caliper type
+</b>
+</div>
+<a name="i410">
+</a>
+<ol>
+<li value="1">
+<div>
+Remove the caliper body.
+</div>
+</li>
+</ol>
+<a name="i420">
+</a>
+<ol>
+<li value="2">
+<div>
+Mount the commercially available brake caliper piston compressor tool (A) on the caliper body (B) as shown. Blow out the pistons with compressed air gradually, and remove the pistons from the caliper body.
+</div>
+<div>
+NOTE: Do not put the hand into the caliper body. Because the piston might dash out mightily in the caliper body.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000158','1');">
+<img src="../tn/TL19E00D14300014711LAAD07.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00D14300014711LAAD07_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR03">
+</a>
+<a name="i430">
+</a>
+<ol>
+<li value="3">
+<div>
+Remove the piston boots (A) and the piston seals (B) from the caliper body (C).
+</div>
+<div>
+NOTE: Be careful not to damage the inner surface of the cylinder walls with the tool.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000159','1');">
+<img src="../tn/TL19E00D14300014711LAAD08.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00D14300014711LAAD08_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<div class="procedure_sub_title">
+<b>
+Reassembly - 2-piston caliper type
+</b>
+</div>
+<div>
+NOTE: Two pistons have different diameters. Be careful when installing the pistons, the piston seals, and the piston boots.
+</div>
+<a name="i610">
+</a>
+<ol>
+<li value="1">
+<div>
+Apply the brake fluid to the new piston seals (A), then install them into the grooves (B) in the caliper body.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000160','1');">
+<img src="../tn/TL19E00D14300014711LAAD09.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00D14300014711LAAD09_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="i620">
+</a>
+<ol>
+<li value="2">
+<div>
+Apply a thin coat of silicone grease to the new piston boots (A), then install them into the grooves (B) in the caliper body.
+</div>
+</li>
+</ol>
+<a name="i630">
+</a>
+<ol>
+<li value="3">
+<div>
+Apply the brake fluid to the outer surface of the pistons (C), then set the pistons in place on the caliper body.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000161','1');">
+<img src="../tn/TL19E00D14300014711LAAD10.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00D14300014711LAAD10_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="i640">
+</a>
+<ol>
+<li value="4">
+<div>
+Mount the commercially available brake caliper piston compressor tool (A) on the caliper body (B).
+</div>
+</li>
+</ol>
+<a name="i650">
+</a>
+<ol>
+<li value="5">
+<div>
+Press in the pistons with the brake caliper piston compressor tool.
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+Do not set the piston diagonally, and do not press it forcibly.
+</div>
+</li>
+<li>
+<div>
+Be careful not to damage the piston boot when press the piston.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000162','1');">
+<img src="../tn/TL19E00D14300014711LAAD11.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00D14300014711LAAD11_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="i660">
+</a>
+<ol>
+<li value="6">
+<div>
+Make sure that the piston boots (A) are properly positioned into the grooves (B) of the piston and the grooves (C) of the caliper body.
+</div>
+</li>
+</ol>
+<a name="i670">
+</a>
+<ol>
+<li value="7">
+<div>
+Install the caliper body.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000163','1');">
+<img src="../tn/TL19E00D14300014711LAAD12.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00D14300014711LAAD12_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

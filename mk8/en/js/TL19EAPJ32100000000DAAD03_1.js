@@ -1,0 +1,37 @@
+with(document) {
+write("<div id=\"group3\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:1055px;\">");
+write("<div id=\"rect3\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:1055px;\">");
+write("<img id=\"img3\" name=\"PrtImgId\" src=\"../img/TL19EAPJ32100000000DAAD03.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:1055px;border-color:#ffffff\">");
+write("<p id=\"p3_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:700px;top:17px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>HIGH MOUNT BRAKE LIGHT<br><a href=\"javascript:CtsProc('0','000000000003168','i000')\"></b>Replacement,</a><br> in the Shop Manual Supplement,<br> P/N 62TL122<br></nobr>");
+write("</p>");
+write("<p id=\"p3_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:491px;top:717px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>LICENSE PLATE LIGHT<br><a href=\"javascript:CtsProc('0','000000000000398','i000')\"></b>Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p3_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:17px;top:792px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>TAILLIGHT and BRAKE LIGHT<br><a href=\"javascript:CtsProc('0','000000000003171','i000')\"></b>Replacement,</a><br> in the Shop Manual Supplement, P/N 62TL122<br><a href=\"javascript:CtsProc('0','000000000003173','i000')\">Bulb Replacement,</a><br> in the Shop Manual Supplement, P/N 62TL122<br></nobr>");
+write("</p>");
+write("<p id=\"p3_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:17px;top:870px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>REAR TURN SIGNAL LIGHT<br><a href=\"javascript:CtsProc('0','000000000003171','i000')\"></b>Replacement,</a><br> in the Shop Manual Supplement, P/N 62TL122<br><a href=\"javascript:CtsProc('0','000000000003173','i000')\">Bulb Replacement,</a><br> in the Shop Manual Supplement, P/N 62TL122<br></nobr>");
+write("</p>");
+write("<p id=\"p3_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:412px;top:811px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>REAR FOG LIGHT (LHD model)<br><a href=\"javascript:CtsProc('0','000000000003171','i000')\"></b>Replacement,</a><br> in the Shop Manual Supplement, P/N 62TL122<br><a href=\"javascript:CtsProc('0','000000000003173','i000')\">Bulb Replacement,</a><br> in the Shop Manual Supplement, P/N 62TL122<br></nobr>");
+write("</p>");
+write("<p id=\"p3_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:412px;top:889px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>BACK-UP LIGHT<br><a href=\"javascript:CtsProc('0','000000000003171','i000')\"></b>Replacement,</a><br> in the Shop Manual Supplement, P/N 62TL122<br><a href=\"javascript:CtsProc('0','000000000003173','i000')\">Bulb Replacement,</a><br> in the Shop Manual Supplement, P/N 62TL122<br></nobr>");
+write("</p>");
+write("<p id=\"p3_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:412px;top:967px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>INNER TAILLIGHT<br><a href=\"javascript:CtsProc('0','000000000003172','i000')\"></b>Replacement,</a><br> in the Shop Manual Supplement, P/N 62TL122<br><a href=\"javascript:CtsProc('0','000000000003173','i000')\">Bulb Replacement,</a><br> in the Shop Manual Supplement, P/N 62TL122<br></nobr>");
+write("</p>");
+write("<p id=\"p3_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:706px;top:400px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>REAR FOG LIGHT (RHD model)<br><a href=\"javascript:CtsProc('0','000000000003171','i000')\"></b>Replacement,</a><br> in the Shop Manual Supplement,<br> P/N 62TL122<br><a href=\"javascript:CtsProc('0','000000000003173','i000')\">Bulb Replacement,</a><br> in the Shop Manual Supplement,<br> P/N 62TL122<br></nobr>");
+write("</p>");
+write("<p id=\"p3_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:706px;top:507px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>BACK-UP LIGHT<br><a href=\"javascript:CtsProc('0','000000000003171','i000')\"></b>Replacement,</a><br> in the Shop Manual Supplement,<br> P/N 62TL122<br><a href=\"javascript:CtsProc('0','000000000003173','i000')\">Bulb Replacement,</a><br> in the Shop Manual Supplement,<br> P/N 62TL122<br></nobr>");
+write("</p>");
+write("<p id=\"p3_10\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:707px;top:613px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>INNER TAILLIGHT<br><a href=\"javascript:CtsProc('0','000000000003172','i000')\"></b>Replacement,</a><br> in the Shop Manual Supplement,<br> P/N 62TL122<br><a href=\"javascript:CtsProc('0','000000000003173','i000')\">Bulb Replacement,</a><br> in the Shop Manual Supplement,<br> P/N 62TL122<br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

@@ -1,0 +1,3606 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E4PE10400000000HBAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+function jsResetImage() {
+	_prResetPosition();
+	_prResetImage();
+	return;
+}
+function jsResizeImage(rate) {
+	_prResizeImage(rate);
+	return;
+}
+var z,x,y;
+var gImageGroupList_	= new Array;
+var gIdx_				= 0;
+function _prImageGroupStruct(group_size,rect_size,img_size,p_tag,tp_obj,bl_obj,ul_obj) {
+	this.group		= group_size;
+	this.rect		= rect_size;
+	this.img		= img_size;
+	this.p			= p_tag;
+	this.tp			= tp_obj;
+	this.bl			= bl_obj;
+	this.ul			= ul_obj;
+}
+function _prSizeStruct(newObj,newWidth,newHeight) {
+	this.obj		= newObj;
+	this.width		= newWidth;
+	this.height		= newHeight;
+}
+function _prPTagStruct(newObj,newLeft,newTop,newFontSize) {
+	this.obj		= newObj;
+	this.left		= newLeft;
+	this.top		= newTop;
+	this.fontsize	= newFontSize;
+}
+function _prLineTagStruct(newObj,newFromx,newFromy, newTox, newToy) {
+	this.obj			= newObj;
+	this.fromx		= newFromx;
+	this.fromy		= newFromy;
+	this.tox		= newTox;
+	this.toy		= newToy;
+}
+function _prTPTagStruct(newObj,newFontSize) {
+	this.obj		= newObj;
+	this.fontsize	= newFontSize;
+}
+function _prInitImageInfo(rate) {
+	var endFlag = false;
+	gDefaultRate_ = rate;
+	gIdx_ = 0;
+	var save_i;
+	var iii = 100;
+	for(var i = 1; !endFlag; i++){
+		save_i = i;
+		var groupObject = document.getElementById("group" + i);
+		if(groupObject == null){
+			groupObject = document.getElementById("group" + iii);
+			if(groupObject == null){
+				groupObject = document.getElementById("group" + i + "_noresize");
+				if(groupObject == null){
+					endFlag = true;	
+					break;
+				}
+				continue;
+			}
+			else {
+				i = iii
+				iii++;
+			}
+		}
+		var groupWidth	= _prRemoveUnit(groupObject.style.width);
+		var groupHeight	= _prRemoveUnit(groupObject.style.height);
+		var rectObject	= document.getElementById("rect" + i);
+		var rectWidth	= null;
+		var rectHeight	= null;
+		if(rectObject != null){
+			rectWidth	= _prRemoveUnit(rectObject.style.width);
+			rectHeight	= _prRemoveUnit(rectObject.style.height);
+		}
+		var imgObject	= document.getElementById("img" + i);
+		var imgWidth	= null;
+		var imgHeight	= null;
+		if(imgObject != null){
+			imgWidth	= _prRemoveUnit(imgObject.style.width);
+			imgHeight	= _prRemoveUnit(imgObject.style.height);
+		}
+		var pObject		= null;
+		for(var j = 1; !endFlag; j++){
+			var pTag = document.getElementById("p" + i + "_" + j);
+			if(pTag == null){
+				if(j == 1){
+					endFlag = true;
+				}
+				break;
+			}
+			if(j == 1){
+				pObject		= new Array();
+			}
+			pObject[j-1] = new _prPTagStruct(
+									pTag,
+									_prRemoveUnit(pTag.style.left),
+									_prRemoveUnit(pTag.style.top),
+									_prRemoveUnit(pTag.style.fontSize)
+								);
+		}
+		endFlag = false;
+		var tpObject		= null;
+		for(var j = 1; !endFlag; j++){
+			var tpTag = document.getElementById("tp" + i + "_" + j);
+			if(tpTag == null){
+				if(j == 1){
+					endFlag = true;  
+				}
+				break;
+			}
+			if(j == 1){
+				tpObject		= new Array();
+			}
+			tpObject[j-1] = new _prTPTagStruct(
+									tpTag,
+									_prRemoveUnit(tpTag.style.fontSize)
+								);
+		}
+		endFlag = false;
+		var blObject		= null;
+		for(var j = 1; !endFlag; j++){
+			var baseline = document.getElementById("bl" + i + "_" + j);
+			if(baseline == null){
+				if(j == 1){
+					endFlag = true;  
+				}
+				break;
+			}
+			if(j == 1){
+				blObject		= new Array();
+			}
+			blObject[j-1] = new _prLineTagStruct(
+									baseline,
+									(baseline.getAttribute('from')+'').substring(0,(baseline.getAttribute('from')+'').indexOf(",")),
+									(baseline.getAttribute('from')+'').substring((baseline.getAttribute('from')+'').indexOf(",")+1,(baseline.getAttribute('from')+'').length),
+									(baseline.getAttribute('to')+'').substring(0,(baseline.getAttribute('to')+'').indexOf(",")),
+									(baseline.getAttribute('to')+'').substring((baseline.getAttribute('to')+'').indexOf(",")+1, (baseline.getAttribute('to')+'').length)
+								);
+		}
+		endFlag = false;
+		var ulObject		= null;
+		for(var j = 1; !endFlag; j++){
+			var underline = document.getElementById("ul" + i + "_" + j);
+			if(underline == null){
+				if(j == 1){
+					endFlag = true;  
+				}
+				break;
+			}
+			if(j == 1){
+				ulObject		= new Array();
+			}
+			ulObject[j-1] = new _prLineTagStruct(
+									underline,
+									(underline.getAttribute('from')+'').substring(0,(underline.getAttribute('from')+'').indexOf(",",0)),
+									(underline.getAttribute('from')+'').substring((underline.getAttribute('from')+'').indexOf(",")+1,(underline.getAttribute('from')+'').length),
+									(underline.getAttribute('to')+'').substring(0,(underline.getAttribute('to')+'').indexOf(",")),
+									(underline.getAttribute('to')+'').substring((underline.getAttribute('to')+'').indexOf(",")+1, (underline.getAttribute('to')+'').length)
+								);
+		}
+		endFlag = false;
+		gImageGroupList_[gIdx_] = new _prImageGroupStruct (
+			new _prSizeStruct(groupObject,groupWidth,groupHeight),
+			new _prSizeStruct(rectObject,rectWidth,rectHeight),
+			new _prSizeStruct(imgObject,imgWidth,imgHeight),
+			pObject,
+			tpObject,
+			blObject,
+			ulObject
+		);
+		gIdx_++;
+		i = save_i;
+	}
+	return ;
+}
+function _prResizeImage(rate) {
+	var  hei = 0;
+	for(var i=0; i<gImageGroupList_.length; i++){
+		if(gImageGroupList_[i].group != null){
+			var obj = gImageGroupList_[i].group;
+			obj.obj.style.width = (obj.width * rate) + 'px';
+			obj.obj.style.height = (obj.height * rate) + 'px';
+			obj.obj.coordsize = (obj.width * rate) + ',' + (obj.height * rate);
+			hei = obj.height * rate
+		}
+		if(gImageGroupList_[i].rect != null){
+			var obj = gImageGroupList_[i].rect;
+			obj.obj.style.width = (obj.width * rate) + 'px';
+			obj.obj.style.height = (obj.height * rate) + 'px';
+		}
+		if(gImageGroupList_[i].img != null){
+			var obj = gImageGroupList_[i].img;
+			obj.obj.style.width = (obj.width * rate) + 'px';
+			obj.obj.style.height = (obj.height * rate) + 'px';
+		}
+		if(gImageGroupList_[i].p != null){
+			var obj = gImageGroupList_[i].p;
+			for(var j=0; j<obj.length; j++){
+				var p = obj[j];
+				if(p.left != ""){
+					p.obj.style.left		= (p.left * rate) + 'px';
+				}
+				if(p.top != ""){
+					p.obj.style.top			= (p.top * rate) + 'px';
+				}
+				if(p.fontsize != ""){
+					p.obj.style.fontSize	= (p.fontsize * rate) + 'pt';
+				}
+			}
+		}
+		if(gImageGroupList_[i].tp != null){
+			var obj = gImageGroupList_[i].tp;
+			for(var j=0; j<obj.length; j++){
+				var tp = obj[j];
+				if(tp.fontsize != ""){
+					if(tp.fontsize*rate < 5.5){
+						tp.obj.style.fontSize	= '5.5pt';
+					}
+					else{
+						tp.obj.style.fontSize	= (tp.fontsize * rate) + 'pt';
+					}
+				}
+			}
+		}
+		if(gImageGroupList_[i].bl != null){
+			var obj = gImageGroupList_[i].bl;
+			for(var j=0; j<obj.length; j++){
+				var bl = obj[j];
+				var fromx,tox;
+				if(bl.fromx != ""){
+					fromx = bl.fromx * rate;
+					bl.obj.setAttribute("from", fromx + "," + (bl.fromy * rate));
+				}
+				if(bl.tox != ""){
+					tox = bl.tox * rate;
+					if((0 >=tox-fromx) && (fromx-tox) < 1) {
+						tox = tox-1;
+					}
+					if((0 <= tox-fromx) && (tox-fromx) < 1) {
+						tox = tox+1;
+					}
+					bl.obj.setAttribute("to", tox + "," + (bl.toy * rate));
+				}
+			}
+		}
+		if(gImageGroupList_[i].ul != null){
+			var obj = gImageGroupList_[i].ul;
+			for(var j=0; j<obj.length; j++){
+				var ul = obj[j];
+				if(ul.fromx != ""){
+					ul.obj.setAttribute("from", (ul.fromx * rate) + "," + (ul.fromy * rate));
+				}
+				if(ul.tox != ""){
+					ul.obj.setAttribute("to", (ul.tox * rate) + "," + (ul.toy * rate));
+				}
+			}
+		}
+	}
+	return hei;
+}
+function _prResizeImageAt(idx,rate) {
+	var  hei = 0;
+		if(gImageGroupList_[idx].group != null){
+			var obj = gImageGroupList_[idx].group;
+			obj.obj.style.width = (obj.width * rate) + 'px';
+			obj.obj.style.height = (obj.height * rate) + 'px';
+			obj.obj.coordsize = (obj.width * rate) + ',' + (obj.height * rate);
+			hei = obj.height * rate
+		}
+		if(gImageGroupList_[idx].rect != null){
+			var obj = gImageGroupList_[idx].rect;
+			obj.obj.style.width = (obj.width * rate) + 'px';
+			obj.obj.style.height = (obj.height * rate) + 'px';
+		}
+		if(gImageGroupList_[idx].img != null){
+			var obj = gImageGroupList_[idx].img;
+			obj.obj.style.width = (obj.width * rate) + 'px';
+			obj.obj.style.height = (obj.height * rate) + 'px';
+		}
+		if(gImageGroupList_[idx].p != null){
+			var obj = gImageGroupList_[idx].p;
+			for(var j=0; j<obj.length; j++){
+				var p = obj[j];
+				if(p.left != ""){
+					p.obj.style.left		= (p.left * rate) + 'px';
+				}
+				if(p.top != ""){
+					p.obj.style.top			= (p.top * rate) + 'px';
+				}
+				if(p.fontsize != ""){
+					p.obj.style.fontSize	= (p.fontsize * rate) + 'pt';
+				}
+			}
+		}
+		if(gImageGroupList_[idx].tp != null){
+			var obj = gImageGroupList_[idx].tp;
+			for(var j=0; j<obj.length; j++){
+				var tp = obj[j];
+				if(tp.fontsize != ""){
+					if(tp.fontsize*rate < 5.5){
+						tp.obj.style.fontSize	= '5.5pt';
+					}
+					else{
+						tp.obj.style.fontSize	= (tp.fontsize * rate) + 'pt';
+					}
+				}
+			}
+		}
+		if(gImageGroupList_[idx].bl != null){
+			var obj = gImageGroupList_[idx].bl;
+			for(var j=0; j<obj.length; j++){
+				var bl = obj[j];
+				var fromx,tox;
+				if(bl.fromx != ""){
+					fromx = bl.fromx * rate;
+					bl.obj.setAttribute("from", fromx + "," + (bl.fromy * rate));
+				}
+				if(bl.tox != ""){
+					tox = bl.tox * rate;
+					if((0 >=tox-fromx) && (fromx-tox) < 1) {
+						tox = tox-1;
+					}
+					if((0 <= tox-fromx) && (tox-fromx) < 1) {
+						tox = tox+1;
+					}
+					bl.obj.setAttribute("to", tox + "," + (bl.toy * rate));
+				}
+			}
+		}
+		if(gImageGroupList_[idx].ul != null){
+			var obj = gImageGroupList_[idx].ul;
+			for(var j=0; j<obj.length; j++){
+				var ul = obj[j];
+				if(ul.fromx != ""){
+					ul.obj.setAttribute("from", (ul.fromx * rate) + "," + (ul.fromy * rate));
+				}
+				if(ul.tox != ""){
+					ul.obj.setAttribute("to", (ul.tox * rate) + "," + (ul.toy * rate));
+				}
+			}
+		}
+	return hei;
+}
+function _prRemoveUnit(src){
+	var dst = src.substring(0,src.length-2);
+	return dst;
+}
+-->
+</script>
+<script>
+<!--
+function Apf() {
+   _prInitImageInfo(100);
+   window.focus();
+   if(gImageGroupList_.length == 0) {
+      window.print();
+   }
+   else {
+      document.getElementById("divBody").style.display = "none";
+      var  img_pos,img_hei;
+      var  img_rate = 1.0;
+      var  i;
+      var  obj;
+      var  paper_wid,paper_hei,paper_len;
+      paper_wid = 640.0;
+      paper_hei = 950.0;
+      paper_len = 980.0;
+      for(i=0; i<gImageGroupList_.length; i++){
+         if(gImageGroupList_[i].group != null){
+           obj = gImageGroupList_[i].group;
+         }
+      }
+      if(paper_wid > paper_hei) {
+         alert("For best printing result, select 'landscape' layout from the print menu.");
+      }
+      for(i=0; i<gImageGroupList_.length; i++){
+         if(gImageGroupList_[i].group != null){
+            obj = gImageGroupList_[i].group;
+            if(img_rate > paper_wid/obj.width) {
+               img_rate =  paper_wid/obj.width;
+            }
+            if(img_rate > paper_hei/obj.height) {
+               img_rate =  paper_hei/obj.height;
+            }
+         }
+      }
+      _prResizeImage(img_rate);
+      window.scrollTo(0,10000);
+      var totalHei = document.body.scrollTop+(document.documentElement.clientHeight||document.body.clientHeight)-img_hei;
+      document.getElementById("divBody").style.display = "block";
+      var  idObj;
+      var groupObject = document.getElementById("group" + i);
+      var   beforeOffset = 0;
+      var   current_pos;
+      var   img_pos = img_dis = 0;
+      for(i=0; i<gImageGroupList_.length; i++){
+         idObj =document.getElementById("imgId" + (i+1));
+         if(idObj != null) {
+            idObj.style.display = "block";
+            current_pos = idObj.offsetTop;
+            if(gImageGroupList_[i].group != null){
+               obj = gImageGroupList_[i].group;
+               img_dis = current_pos - beforeOffset;
+               if(i == 0) {
+                  var pageCnt = Math.floor(current_pos/paper_hei);
+                  img_dis = img_dis - paper_hei*pageCnt;
+               }
+               img_hei = obj.height*img_rate;
+               img_pos += parseInt(img_dis);
+               if(parseInt(img_pos) > paper_len) {
+                  img_pos = img_pos - paper_len;
+               }
+               img_pos += parseInt(img_hei);
+               idObj.style.display = "none";
+               if(parseInt(img_pos) > paper_len) {
+                  idObj.style.display = "block";
+                  img_pos = parseInt(img_hei) + 50;
+               }
+               beforeOffset = current_pos + parseInt(img_hei);
+            }
+         }
+      }
+      window.print();
+      document.getElementById("divBody").style.display = "none";
+      _prResizeImage(100/100);
+      document.getElementById("divBody").style.display = "block";
+      window.scrollTo(0,0);
+   }
+}
+-->
+</script>
+<body onload="javascript:try{parent.Old(this);}catch(e){}" style="font-family:sans-serif;">
+<div id="divBody" style="display:block">
+<div>
+<div class="top_title">
+A/T System Symptom Troubleshooting Index
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<div>
+<table width="100%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="18%">
+<col width="10%">
+<col width="24%">
+<col width="48%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Symptom
+</b>
+</div>
+</th>
+<th class="ViewerTH" colspan="2" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Probable cause(s)
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Notes
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+When you turn the ignition switch to ON (II), the D indicator comes on and stays on in all shift lever positions, or it never comes on at all
+</div>
+</td>
+<td class="ViewerTD" colspan="2" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+F-CAN communication line error
+</div>
+</li>
+<li>
+<div>
+Gauge control module defective
+</div>
+</li>
+<li>
+<div>
+TCM defective
+</div>
+</li>
+</ul>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003799','i000')">
+Check the F-CAN communication line for a DTC.
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003745','iG08')">
+Check the F-CAN communication line by using the gauge control module self-diagnostic function.
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003745','iG03')">
+Check the indicator drive circuit in the gauge control module by using the gauge control module self-diagnostic function.
+</a>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A/T gear position indicator does not come on while the shift lever is in that position
+</div>
+</td>
+<td class="ViewerTD" colspan="2" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+F-CAN communication line error
+</div>
+</li>
+<li>
+<div>
+Gauge control module defective
+</div>
+</li>
+<li>
+<div>
+TCM defective
+</div>
+</li>
+<li>
+<div>
+Transmission range switch
+ defective
+</div>
+</li>
+</ul>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003799','i000')">
+Check the F-CAN communication line for a DTC.
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003745','iG08')">
+Check the F-CAN communication line by using the gauge control module self-diagnostic function.
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003745','iG03')">
+Check the indicator drive circuit in the gauge control module by using the gauge control module self-diagnostic function.
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000002465','i000')">
+Inspect the transmission range switch.
+</a>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Shift indicator does not work
+</div>
+</td>
+<td class="ViewerTD" colspan="2" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+F-CAN communication line error
+</div>
+</li>
+<li>
+<div>
+Gauge control module defective
+</div>
+</li>
+<li>
+<div>
+TCM defective
+</div>
+</li>
+<li>
+<div>
+Transmission range switch
+ defective
+</div>
+</li>
+</ul>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003799','i000')">
+Check the F-CAN communication line for a DTC.
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003745','iG08')">
+Check the F-CAN communication line by using the gauge control module self-diagnostic function.
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003745','iG03')">
+Check the indicator drive circuit in the gauge control module by using the gauge control module self-diagnostic function.
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000002465','i000')">
+Inspect the transmission range switch.
+</a>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+When you press the paddle shifter + (upshift switch) in D and S, the transmission does not upshift
+</div>
+</td>
+<td class="ViewerTD" colspan="2" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A problem in the paddle shifter + (upshift switch) circuit
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('0','000000000002462','i000')">
+Check the paddle shifter + (upshift switch) circuit.
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+When you press the paddle shifter − (downshift switch) in D and S, the transmission does not downshift
+</div>
+</td>
+<td class="ViewerTD" colspan="2" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A problem in the paddle shifter − (downshift switch) circuit
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('0','000000000002461','i000')">
+Check the paddle shifter − (downshift switch) circuit.
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<div>
+<table width="100%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="18%">
+<col width="4%">
+<col width="30%">
+<col width="48%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Symptom
+</b>
+</div>
+</th>
+<th class="ViewerTH" colspan="2" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Probable cause(s)
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Notes
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+M indicator does not come on even when the paddle shifter + (upshift switch) or paddle shifter − (downshift switch) is operated in sequential shift mode
+</div>
+</td>
+<td class="ViewerTD" colspan="2" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+F-CAN communication line error
+</div>
+</li>
+<li>
+<div>
+Gauge control module defective
+</div>
+</li>
+<li>
+<div>
+TCM defective
+</div>
+</li>
+</ul>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003799','i000')">
+Check the F-CAN communication line for a DTC.
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003745','iG08')">
+Check the F-CAN communication line by using the gauge control module self-diagnostic function.
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003745','iG03')">
+Check the indicator drive circuit in the gauge control module by using the gauge control module self-diagnostic function.
+</a>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Shift lever cannot be moved from P while pressing on the brake pedal
+</div>
+</td>
+<td class="ViewerTD" colspan="2" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Accelerator pedal position sensor circuit
+</div>
+</li>
+<li>
+<div>
+Accelerator pedal position sensor
+ defective
+</div>
+</li>
+<li>
+<div>
+Brake pedal position switch circuit
+</div>
+</li>
+<li>
+<div>
+Brake pedal position switch
+ defective
+</div>
+</li>
+<li>
+<div>
+Shift lock solenoid
+ defective
+</div>
+</li>
+<li>
+<div>
+Shift lock solenoid control circuit
+</div>
+</li>
+<li>
+<div>
+Shift lock mechanism defective
+</div>
+</li>
+<li>
+<div>
+Throttle body defective
+</div>
+</li>
+<li>
+<div>
+Transmission range switch ATPP switch stuck OFF
+</div>
+</li>
+<li>
+<div>
+Transmission range switch ATPP switch line opened
+</div>
+</li>
+</ul>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000001929','i000')">
+Inspect the APP sensor signal.
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000002509','i000')">
+Troubleshoot the shift lock system circuit.
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000998','i000')">
+Test the shift lock solenoid.
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000002465','i000')">
+Inspect the transmission range switch.
+</a>
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Ignition switch cannot be moved from ACCESSORY (I) to LOCK (0) (key is pushed in, the shift lever in P)
+</div>
+</td>
+<td class="ViewerTD" colspan="2" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A problem in the key interlock system of the interlock system
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('0','000000000000996','i000')">
+Check the interlock system - key interlock system circuit.
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+HDS does not communicate with the TCM
+</div>
+</td>
+<td class="ViewerTD" colspan="2" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+DLC circuit
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('0','000000000003669','i000')">
+Troubleshoot the DLC circuit.
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+At the same time symptoms that occur are DTC U0047 comes on, A/T gear position indicator does not work, poor acceleration, transmission does not shift (stuck on 4th gear), and vehicle does not move in R
+</div>
+</td>
+<td class="ViewerTD" colspan="2" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+TCM defective
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('0','000000000002429','i000')">
+Troubleshooting the transmission control module (TCM) circuit.
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Engine runs, but vehicle does not move in any gear
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1.
+</div>
+<div>
+2.
+</div>
+<div>
+3.
+</div>
+<div>
+4.
+</div>
+<div>
+5.
+</div>
+<div>
+6.
+</div>
+<div>
+7.
+</div>
+<div>
+8.
+</div>
+<div>
+9.
+</div>
+<div>
+10.
+</div>
+<div>
+11.
+</div>
+<div>
+12.
+</div>
+<div>
+13.
+</div>
+<div>
+14.
+</div>
+<div>
+15.
+</div>
+<div>
+16.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Low ATF level
+</div>
+<div>
+Shift cable broken or out of adjustment
+</div>
+<div>
+Connection between shift cable and transmission or shift lever is worn
+</div>
+<div>
+ATF pump worn or binding
+</div>
+<div>
+Regulator valve stuck or spring worn
+</div>
+<div>
+ATF strainer clogged
+</div>
+<div>
+Foreign material in separator plate orifice
+</div>
+<div>
+Mainshaft worn or damaged
+</div>
+<div>
+Countershaft worn or damaged
+</div>
+<div>
+Final gears worn or damaged
+</div>
+<div>
+Park mechanism defective
+</div>
+<div>
+Selector control shaft worn or damaged
+</div>
+<div>
+Drive plate defective
+</div>
+<div>
+Torque converter defective
+</div>
+<div>
+Transmission-to-engine assembly error
+</div>
+<div>
+Axle disengaged
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Check the ATF level, and check the ATF cooler line for leaks and loose connections. If necessary, clean the ATF warmer and the ATF cooler lines.
+</div>
+</li>
+<li>
+<div>
+Check for a loose shift cable at the shift lever and the transmission control lever.
+</div>
+</li>
+<li>
+<div>
+Check the stall speed.
+</div>
+</li>
+<li>
+<div>
+Check the line pressure.
+</div>
+</li>
+<li>
+<div>
+Improper alignment of the ATF pump and the torque converter housing may cause the ATF pump seizure. The symptoms are mostly an rpm-related ticking noise or a high pitched squeak.
+</div>
+</li>
+<li>
+<div>
+Check the regulator valve in the regulator valve body for free movement, and check the valve springs for wear and damage.
+</div>
+</li>
+<li>
+<div>
+Check the ATF strainer for debris. If the strainer is clogged, find the damaged components that caused the debris. If no cause for contamination is found, replace the torque converter.
+</div>
+</li>
+<li>
+<div>
+Check for a clogged orifice in the separator plate. If the orifice is clogged, remove it and clean the separator plate orifice.
+</div>
+</li>
+<li>
+<div>
+Inspect the differential pinion gears for wear. If the differential pinion gears are worn, replace the differential assembly, replace the ATF strainer, thoroughly clean the transmission, and clean the cooler and lines.
+</div>
+</li>
+<li>
+<div>
+Replace the torque converter.
+</div>
+</li>
+<li>
+<div>
+Be careful not to damage the torque converter housing when replacing the main ball bearing. You may also damage the ATF pump when you torque down the main valve body. This will cause the ATF pump seizure, use the proper tools.
+</div>
+</li>
+<li>
+<div>
+Install the main seal flush with the torque converter housing. If you push it into the torque converter housing until it bottoms out, it will block the fluid return passage and result in damage.
+</div>
+</li>
+<li>
+<div>
+Inspect the countershaft and the secondary shaft for wear and damage.
+</div>
+</li>
+<li>
+<div>
+Inspect the park mechanism at the park lever link, park gear, and 2nd gears.
+</div>
+</li>
+<li>
+<div>
+Check the drive plate for wear and damage, replace the drive plate if it is worn or damaged.
+</div>
+</li>
+<li>
+<div>
+Check for a misinstalled transmission.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<div>
+</div>
+<br>
+<div>
+<table width="100%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="18%">
+<col width="2%">
+<col width="32%">
+<col width="48%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Symptom
+</b>
+</div>
+</th>
+<th class="ViewerTH" colspan="2" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Probable cause(s)
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Notes
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Vehicle moves in R, but not in D or S
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1.
+</div>
+<div>
+2.
+</div>
+<div>
+3.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1st accumulator defective
+</div>
+<div>
+Idler gears worn or damaged
+</div>
+<div>
+1st clutch defective
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Check the 1st clutch pressure.
+</div>
+</li>
+<li>
+<div>
+Inspect the secondary shaft and 1st/1st-hold clutch assembly for wear and damage.
+</div>
+</li>
+<li>
+<div>
+Inspect the clutch piston, the clutch piston check valve, and the O-rings. Check the spring retainer for wear and damage. Inspect the clearance between the clutch end-plate and the top disc. If the clearance is out of tolerance, inspect the clutch discs and the plates for wear and damage, and inspect the clutch wave-plate height. If the discs and the flat-plates are worn or damaged, replace the discs and the flat-plates as a set. If the wave-plate height is out of tolerance, replace the wave-plate. If the discs and the plates are OK, adjust the clearance with the clutch end-plate.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Vehicle moves in D and R, but not in 1st in S
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1.
+</div>
+<div>
+2.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1st-hold accumulator defective
+</div>
+<div>
+1st-hold clutch defective
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Check the 1st-hold clutch pressure.
+</div>
+</li>
+<li>
+<div>
+Inspect the secondary shaft and 1st/1st-hold clutch assembly for wear and damage.
+</div>
+</li>
+<li>
+<div>
+Inspect the clutch piston, the clutch piston check valve, and the O-rings. Check the spring retainer for wear and damage. Inspect the clearance between the clutch end-plate and the top disc. If the clearance is out of tolerance, inspect the clutch discs and the plates for wear and damage, and inspect the clutch wave-plate height. If the discs and the flat-plates are worn or damaged, replace the discs and the flat-plates as a set. If the wave-plate height is out of tolerance, replace the wave-plate. If the discs and the plates are OK, adjust the clearance with the clutch end-plate.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Vehicle moves in D and R, but not in 2nd in S
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1.
+</div>
+<div>
+2.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+2nd accumulator defective
+</div>
+<div>
+2nd clutch defective
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Check the 2nd clutch pressure.
+</div>
+</li>
+<li>
+<div>
+Inspect the secondary shaft and 2nd clutch assembly for wear and damage.
+</div>
+</li>
+<li>
+<div>
+Inspect the clutch piston, the clutch piston check valve, and the O-rings. Check the spring retainer for wear and damage. Inspect the clearance between the clutch end-plate and the top disc. If the clearance is out of tolerance, inspect the clutch discs and the plates for wear and damage, and inspect the clutch wave-plate height. If the discs and the flat-plates are worn or damaged, replace the discs and the flat-plates as a set. If the wave-plate height is out of tolerance, replace the wave-plate. If the discs and the plates are OK, adjust the clearance with the clutch end-plate.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Vehicle moves in D and S, but not in R (or moves forward in R)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1.
+</div>
+<div>
+2.
+</div>
+<div>
+3.
+</div>
+<div>
+4.
+</div>
+<div>
+5.
+</div>
+<div>
+6.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Shift fork shaft stuck
+</div>
+<div>
+Modulator valve defective
+</div>
+<div>
+Reverse CPC valve defective
+</div>
+<div>
+5th accumulator defective
+</div>
+<div>
+5th clutch defective
+</div>
+<div>
+Reverse gears worn or damaged
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Check the line pressure and 5th clutch pressure.
+</div>
+</li>
+<li>
+<div>
+Check for a missing shift fork bolt on the shift fork shaft.
+</div>
+</li>
+<li>
+<div>
+Inspect the reverse selector gear teeth chamfers, and inspect the engagement teeth chamfers of the countershaft 5th gear and reverse gear. Replace the reverse gears and the reverse selector if they are worn or damaged. If the transmission makes clicking, grinding, or whirring noises, also replace the mainshaft 5th gear, reverse idler gear, and countershaft 5th gear.
+</div>
+</li>
+<li>
+<div>
+Inspect the clutch piston, the clutch piston check valve, and the O-rings. Check the spring retainer for wear and damage. Inspect the clearance between the clutch end-plate and the top disc. If the clearance is out of tolerance, inspect the clutch discs and the plates for wear and damage, and inspect the clutch wave-plate height. If the discs and the flat-plates are worn or damaged, replace the discs and the flat-plates as a set. If the wave-plate height is out of tolerance, replace the wave-plate. If the discs and the plates are OK, adjust the clearance with the clutch end-plate.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Poor acceleration; flares when starting off in D, S, and R
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1.
+</div>
+<div>
+2.
+</div>
+<div>
+3.
+</div>
+<div>
+4.
+</div>
+<div>
+5.
+</div>
+<div>
+6.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Low ATF level
+</div>
+<div>
+Shift cable broken or out of adjustment
+</div>
+<div>
+ATF pump worn or binding
+</div>
+<div>
+Regulator valve stuck or spring worn
+</div>
+<div>
+ATF strainer clogged
+</div>
+<div>
+Torque converter check valve defective
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Check the ATF level and check the ATF cooler lines for leakage and loose connections. If necessary, clean the ATF cooler lines.
+</div>
+</li>
+<li>
+<div>
+Check for a loose shift cable at the shift lever and the transmission control lever.
+</div>
+</li>
+<li>
+<div>
+Check the line pressure.
+</div>
+</li>
+<li>
+<div>
+Check the ATF strainer for debris. If the strainer is clogged, find the damaged components that caused the debris.
+</div>
+</li>
+<li>
+<div>
+Improper alignment of the ATF pump and the torque converter housing may cause ATF pump seizure. The symptom is mostly an rpm-related ticking noise or a high pitched squeak.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Poor acceleration; flares when starting off in D, S, and R; stall speed high in D
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1.
+</div>
+<div>
+2.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1st accumulator defective
+</div>
+<div>
+1st clutch defective
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Check the 1st clutch pressure.
+</div>
+</li>
+<li>
+<div>
+Inspect the clutch piston, the clutch piston check valve, and the O-rings. Check the spring retainer for wear and damage. Inspect the clearance between the clutch end-plate and the top disc. If the clearance is out of tolerance, inspect the clutch discs and the plates for wear and damage, and inspect the clutch wave-plate height. If the discs and the flat-plates are worn or damaged, replace the discs and the flat-plates as a set. If the wave-plate height is out of tolerance, replace the wave-plate. If the discs and the plates are OK, adjust the clearance with the clutch end-plate.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Poor acceleration; flares when starting off in D, S, and R; stall speed high in R
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1.
+</div>
+<div>
+2.
+</div>
+<div>
+3.
+</div>
+<div>
+4.
+</div>
+<div>
+5.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Shift solenoid valve C defective
+</div>
+<div>
+Shift cable broken or out of adjustment
+</div>
+<div>
+Reverse CPC valve defective
+</div>
+<div>
+5th accumulator defective
+</div>
+<div>
+5th clutch defective
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Check for a stored DTC, and check for loose connectors. Inspect the O-ring, and check for a seized shift solenoid valve.
+</div>
+</li>
+<li>
+<div>
+Check for a loose shift cable at the shift lever and the transmission control lever.
+</div>
+</li>
+<li>
+<div>
+Check the 5th clutch pressure.
+</div>
+</li>
+<li>
+<div>
+Inspect the clutch piston, the clutch piston check valve, and the O-rings. Check the spring retainer for wear and damage. Inspect the clearance between the clutch end-plate and the top disc. If the clearance is out of tolerance, inspect the clutch discs and the plates for wear and damage, and inspect the clutch wave-plate height. If the discs and the flat-plates are worn or damaged, replace the discs and the flat-plates as a set. If the wave-plate height is out of tolerance, replace the wave-plate. If the discs and the plates are OK, adjust the clearance with the clutch end-plate.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Poor acceleration; flares when starting off in D, S, and R; stall speed low
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1.
+</div>
+<div>
+2.
+</div>
+<div>
+3.
+</div>
+<div>
+4.
+</div>
+<div>
+5.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Shift solenoid valve D defective
+</div>
+<div>
+Torque converter one-way clutch defective
+</div>
+<div>
+Engine output low
+</div>
+<div>
+Torque converter clutch piston defective
+</div>
+<div>
+Lock-up shift valve defective
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Check for a stuck lock-up valve in the valve body.
+</div>
+</li>
+<li>
+<div>
+Check for a stored DTC, and check for loose connectors. Inspect the O-ring, and check the shift solenoid valve seizure.
+</div>
+</li>
+<li>
+<div>
+Replace the torque converter.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Engine idle vibration
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1.
+</div>
+<div>
+2.
+</div>
+<div>
+3.
+</div>
+<div>
+4.
+</div>
+<div>
+5.
+</div>
+<div>
+6.
+</div>
+<div>
+7.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Low ATF level
+</div>
+<div>
+Shift solenoid valve D defective
+</div>
+<div>
+Drive plate defective or transmission misassembled
+</div>
+<div>
+Engine output low
+</div>
+<div>
+Torque converter clutch piston defective
+</div>
+<div>
+ATF pump worn or binding
+</div>
+<div>
+Lock-up shift valve defective
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Adjust the engine and transmission mounts.
+</div>
+</li>
+<li>
+<div>
+Check the ATF level and check the ATF cooler lines for leakage and loose connections. If necessary, clean the ATF cooler lines.
+</div>
+</li>
+<li>
+<div>
+Check for a stored DTC, and check for loose connectors. Inspect the O-ring, and check for a seized shift solenoid valve.
+</div>
+</li>
+<li>
+<div>
+Replace the torque converter.
+</div>
+</li>
+<li>
+<div>
+Improper alignment of the ATF pump and the torque converter housing may cause the ATF pump seizure. The symptom is mostly an rpm-related ticking noise or a high pitched squeak.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<div>
+</div>
+<br>
+<div>
+</div>
+<br>
+<div>
+<table width="100%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="18%">
+<col width="4%">
+<col width="34%">
+<col width="44%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Symptom
+</b>
+</div>
+</th>
+<th class="ViewerTH" colspan="2" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Probable cause(s)
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Notes
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Vehicle moves in N
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1.
+</div>
+<div>
+2.
+</div>
+<div>
+3.
+</div>
+<div>
+4.
+</div>
+<div>
+5.
+</div>
+<div>
+6.
+</div>
+<div>
+7.
+</div>
+<div>
+8.
+</div>
+<div>
+9.
+</div>
+<div>
+10.
+</div>
+<div>
+11.
+</div>
+<div>
+12.
+</div>
+<div>
+13.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Excessive ATF
+</div>
+<div>
+Foreign material in separator plate orifice
+</div>
+<div>
+Relief valve defective
+</div>
+<div>
+Lubrication control valve defective
+</div>
+<div>
+1st-hold clutch defective
+</div>
+<div>
+1st clutch defective
+</div>
+<div>
+2nd clutch defective
+</div>
+<div>
+3rd clutch defective
+</div>
+<div>
+4th clutch defective
+</div>
+<div>
+5th clutch defective
+</div>
+<div>
+Clutch end plate clearance incorrect
+</div>
+<div>
+Needle bearing seized, worn, or damaged
+</div>
+<div>
+Thrust washer seized, worn, or damaged
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Check the ATF level, and drain the ATF if necessary.
+</div>
+</li>
+<li>
+<div>
+Check all clutch pressures.
+</div>
+</li>
+<li>
+<div>
+Inspect the clutch piston, the clutch piston check valve, and the O-rings. Check the spring retainer for wear and damage. Inspect the clearance between the clutch end-plate and the top disc. If the clearance is out of tolerance, inspect the clutch discs and the plates for wear and damage, and inspect the clutch wave-plate height. If the discs and the flat-plates are worn or damaged, replace the discs and the flat-plates as a set. If the wave-plate height is out of tolerance, replace the wave-plate. If the discs and the plates are OK, adjust the clearance with the clutch end-plate.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Late shift after shifting from N to D or S, or excessive shock when shifting
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1.
+</div>
+<div>
+2.
+</div>
+<div>
+3.
+</div>
+<div>
+4.
+</div>
+<div>
+5.
+</div>
+<div>
+6.
+</div>
+<div>
+7.
+</div>
+<div>
+8.
+</div>
+<div>
+9.
+</div>
+<div>
+10.
+</div>
+<div>
+11.
+</div>
+<div>
+12.
+</div>
+<div>
+13.
+</div>
+<div>
+14.
+</div>
+<div>
+15.
+</div>
+<div>
+16.
+</div>
+<div>
+17.
+</div>
+<div>
+18.
+</div>
+<div>
+19.
+</div>
+<div>
+20.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Shift solenoid valve C defective
+</div>
+<div>
+A/T clutch pressure control solenoid valve A defective
+</div>
+<div>
+A/T clutch pressure control solenoid valve B defective
+</div>
+<div>
+A/T clutch pressure control solenoid valve C defective
+</div>
+<div>
+Shift cable broken or out of adjustment
+</div>
+<div>
+Connection between shift cable and transmission or body is worn
+</div>
+<div>
+Input shaft (mainshaft) speed sensor
+ defective
+</div>
+<div>
+Output shaft (countershaft) speed sensor
+ defective
+</div>
+<div>
+ATF temperature sensor
+ defective
+</div>
+<div>
+CPC valve A defective
+</div>
+<div>
+CPC valve B defective
+</div>
+<div>
+CPC valve C stuck
+</div>
+<div>
+Foreign material in separator plate orifice
+</div>
+<div>
+Shift valve C defective
+</div>
+<div>
+Shift valve E defective
+</div>
+<div>
+Servo control valve defective
+</div>
+<div>
+1st accumulator defective
+</div>
+<div>
+1st check ball stuck
+</div>
+<div>
+One-way check ball stuck
+</div>
+<div>
+1st clutch defective
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Check for a stored DTC, and check for loose connectors.
+</div>
+</li>
+<li>
+<div>
+Inspect the O-ring, and check for a seized shift solenoid valve.
+</div>
+</li>
+<li>
+<div>
+Inspect the A/T clutch pressure control solenoid valve body gasket and the ATF feed pipes for wear and damage. If the A/T clutch pressure control solenoid valve is stuck, inspect the CPC valves.
+</div>
+</li>
+<li>
+<div>
+Check for a loose shift cable at the shift lever and the transmission control lever.
+</div>
+</li>
+<li>
+<div>
+Inspect the sensor O-rings.
+</div>
+</li>
+<li>
+<div>
+Check the 1st clutch pressure.
+</div>
+</li>
+<li>
+<div>
+Inspect the clutch piston, the clutch piston check valve, and the O-rings. Check the spring retainer for wear and damage. Inspect the clearance between the clutch end-plate and the top disc. If the clearance is out of tolerance, inspect the clutch discs and the plates for wear and damage, and inspect the clutch wave-plate height. If the discs and the flat-plates are worn or damaged, replace the discs and the flat-plates as a set. If the wave-plate height is out of tolerance, replace the wave-plate. If the discs and the plates are OK, adjust the clearance with the clutch end-plate.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<div>
+<table width="100%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="18%">
+<col width="4%">
+<col width="30%">
+<col width="48%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Symptom
+</b>
+</div>
+</th>
+<th class="ViewerTH" colspan="2" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Probable cause(s)
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Notes
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Late shift after shifting from N to R, or excessive shock when shifting
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1.
+</div>
+<div>
+2.
+</div>
+<div>
+3.
+</div>
+<div>
+4.
+</div>
+<div>
+5.
+</div>
+<div>
+6.
+</div>
+<div>
+7.
+</div>
+<div>
+8.
+</div>
+<div>
+9.
+</div>
+<div>
+10.
+</div>
+<div>
+11.
+</div>
+<div>
+12.
+</div>
+<div>
+13.
+</div>
+<div>
+14.
+</div>
+<div>
+15.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Shift solenoid valve C defective
+</div>
+<div>
+A/T clutch pressure control solenoid valve B defective
+</div>
+<div>
+A/T clutch pressure control solenoid valve C defective
+</div>
+<div>
+Shift cable broken or out of adjustment
+</div>
+<div>
+Connection between shift cable and transmission or body is worn
+</div>
+<div>
+Input shaft (mainshaft) speed sensor
+ defective
+</div>
+<div>
+Output shaft (countershaft) speed sensor
+ defective
+</div>
+<div>
+ATF temperature sensor
+ defective
+</div>
+<div>
+Shift fork shaft stuck
+</div>
+<div>
+CPC valve C stuck
+</div>
+<div>
+Reverse CPC valve defective
+</div>
+<div>
+Foreign material in separator plate orifice
+</div>
+<div>
+Shift valve E defective
+</div>
+<div>
+5th accumulator defective
+</div>
+<div>
+5th clutch defective
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Check for a stored DTC, and check for loose connectors.
+</div>
+</li>
+<li>
+<div>
+Inspect the O-ring, and check for a seized shift solenoid valve.
+</div>
+</li>
+<li>
+<div>
+Inspect the A/T clutch pressure control solenoid valve body gasket and ATF feed pipes for wear and damage. If the A/T clutch pressure control solenoid valve is stuck, inspect the CPC valves.
+</div>
+</li>
+<li>
+<div>
+Check for a loose shift cable at the shift lever and the transmission control lever.
+</div>
+</li>
+<li>
+<div>
+Inspect the sensor O-rings.
+</div>
+</li>
+<li>
+<div>
+Check the 5th clutch pressure.
+</div>
+</li>
+<li>
+<div>
+Inspect the clutch piston, the clutch piston check valve, and the O-rings. Check the spring retainer for wear and damage. Inspect the clearance between the clutch end-plate and the top disc. If the clearance is out of tolerance, inspect the clutch discs and the plates for wear and damage, and inspect the clutch wave-plate height. If the discs and the flat-plates are worn or damaged, replace the discs and the flat-plates as a set. If the wave-plate height is out of tolerance, replace the wave-plate. If the discs and the plates are OK, adjust the clearance with the clutch end-plate.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Transmission does not shift
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1.
+</div>
+<div>
+2.
+</div>
+<div>
+3.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Input shaft (mainshaft) speed sensor
+ defective
+</div>
+<div>
+Output shaft (countershaft) speed sensor
+ defective
+</div>
+<div>
+Modulator valve defective
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Check for a stored DTC, and check for loose connectors.
+</div>
+</li>
+<li>
+<div>
+Inspect the sensor O-rings.
+</div>
+</li>
+<li>
+<div>
+Check the line pressure.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Erratic shifting: fails to shift in D and S; starts off in 5th
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1.
+</div>
+<div>
+2.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Shift solenoid valve B defective
+</div>
+<div>
+Shift valve B defective
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Check for a stored DTC, and check for loose connectors.
+</div>
+</li>
+<li>
+<div>
+Inspect the O-ring, and check for a seized shift solenoid valve.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Erratic shifting: fails to shift in 2nd in S; starts off in 4th
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1.
+</div>
+<div>
+2.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Shift solenoid valve B defective
+</div>
+<div>
+Shift valve B defective
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Check for a stored DTC, and check for loose connectors.
+</div>
+</li>
+<li>
+<div>
+Inspect the O-ring, and check for a seized shift solenoid valve.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Erratic shifting: fails to shift in D, S, and 1st in S; starts off in 3rd
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1.
+</div>
+<div>
+2.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Shift solenoid valve A defective
+</div>
+<div>
+Shift valve A defective
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Check for a stored DTC, and check for loose connectors.
+</div>
+</li>
+<li>
+<div>
+Inspect the O-ring, and check for a seized shift solenoid valve.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Erratic shifting: fails to shift in 2nd in S; starts off in 1st
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1.
+</div>
+<div>
+2.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Shift solenoid valve A defective
+</div>
+<div>
+Shift valve A defective
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Check for a stored DTC, and check for loose connectors.
+</div>
+</li>
+<li>
+<div>
+Inspect the O-ring, and check for a seized shift solenoid valve.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<div>
+<table width="100%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="18%">
+<col width="2%">
+<col width="32%">
+<col width="48%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Symptom
+</b>
+</div>
+</th>
+<th class="ViewerTH" colspan="2" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Probable cause(s)
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Notes
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Excessive shock or flares on all upshifts and downshifts
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1.
+</div>
+<div>
+2.
+</div>
+<div>
+3.
+</div>
+<div>
+4.
+</div>
+<div>
+5.
+</div>
+<div>
+6.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A/T clutch pressure control solenoid valve A defective
+</div>
+<div>
+Input shaft (mainshaft) speed sensor
+ defective
+</div>
+<div>
+Output shaft (countershaft) speed sensor
+ defective
+</div>
+<div>
+ATF temperature sensor
+ defective
+</div>
+<div>
+CPC valve A defective
+</div>
+<div>
+Foreign material in separator plate orifice
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Check for a stored DTC, and check for loose connectors.
+</div>
+</li>
+<li>
+<div>
+Inspect the A/T clutch pressure control solenoid valve body gasket and the ATF feed pipes for wear and damage. If the A/T clutch pressure control solenoid valve is stuck, inspect the CPC valves.
+</div>
+</li>
+<li>
+<div>
+Inspect the sensor O-rings.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Excessive shock or flares on 1-2 upshift or 2-1 downshift
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1.
+</div>
+<div>
+2.
+</div>
+<div>
+3.
+</div>
+<div>
+4.
+</div>
+<div>
+5.
+</div>
+<div>
+6.
+</div>
+<div>
+7.
+</div>
+<div>
+8.
+</div>
+<div>
+9.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A/T clutch pressure control solenoid valve A defective
+</div>
+<div>
+A/T clutch pressure control solenoid valve C defective
+</div>
+<div>
+2nd clutch transmission fluid pressure switch
+ defective
+</div>
+<div>
+CPC valve A defective
+</div>
+<div>
+CPC valve C defective
+</div>
+<div>
+Foreign material in separator plate orifice
+</div>
+<div>
+2nd accumulator defective
+</div>
+<div>
+2nd check ball stuck
+</div>
+<div>
+2nd clutch defective
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Check for a stored DTC, and check for loose connectors.
+</div>
+</li>
+<li>
+<div>
+Inspect the A/T clutch pressure control solenoid valve body gasket and the ATF feed pipes for wear and damage. If the A/T clutch pressure control solenoid valve is stuck, inspect the CPC valves.
+</div>
+</li>
+<li>
+<div>
+Check for a clogged orifice in the transmission fluid pressure switch connector. If the orifice is clogged, remove it and clean the connector.
+</div>
+</li>
+<li>
+<div>
+Check the 1st and 2nd clutch pressures.
+</div>
+</li>
+<li>
+<div>
+Inspect the clutch piston, the clutch piston check valve, and the O-rings. Check the spring retainer for wear and damage. Inspect the clearance between the clutch end-plate and the top disc. If the clearance is out of tolerance, inspect the clutch discs and the plates for wear and damage, and inspect the clutch wave-plate height. If the discs and the flat-plates are worn or damaged, replace the discs and the flat-plates as a set. If the wave-plate height is out of tolerance, replace the wave-plate. If the discs and the plates are OK, adjust the clearance with the clutch end-plate.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<div>
+<table width="100%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="18%">
+<col width="4%">
+<col width="30%">
+<col width="48%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Symptom
+</b>
+</div>
+</th>
+<th class="ViewerTH" colspan="2" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Probable cause(s)
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Notes
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Excessive shock or flares on 2-3 upshift or 3-2 downshift
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1.
+</div>
+<div>
+2.
+</div>
+<div>
+3.
+</div>
+<div>
+4.
+</div>
+<div>
+5.
+</div>
+<div>
+6.
+</div>
+<div>
+7.
+</div>
+<div>
+8.
+</div>
+<div>
+9.
+</div>
+<div>
+10.
+</div>
+<div>
+11.
+</div>
+<div>
+12.
+</div>
+<div>
+13.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Shift solenoid valve C defective
+</div>
+<div>
+A/T clutch pressure control solenoid valve B defective
+</div>
+<div>
+A/T clutch pressure control solenoid valve C defective
+</div>
+<div>
+3rd clutch transmission fluid pressure switch
+ defective
+</div>
+<div>
+CPC valve B defective
+</div>
+<div>
+CPC valve C defective
+</div>
+<div>
+Foreign material in separator plate orifice
+</div>
+<div>
+Shift valve C defective
+</div>
+<div>
+2nd accumulator defective
+</div>
+<div>
+3rd accumulator defective
+</div>
+<div>
+2nd check ball stuck
+</div>
+<div>
+2nd clutch defective
+</div>
+<div>
+3rd clutch defective
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Check for a stored DTC, and check for loose connectors.
+</div>
+</li>
+<li>
+<div>
+Inspect the O-rings, and check for a seized shift solenoid valve.
+</div>
+</li>
+<li>
+<div>
+Inspect the A/T clutch pressure control solenoid valve body gasket and the ATF feed pipes for wear and damage. If the A/T clutch pressure control solenoid valve is stuck, inspect the CPC valves.
+</div>
+</li>
+<li>
+<div>
+Check for a clogged orifice in the transmission fluid pressure switch connector. If the orifice is clogged, remove it and clean the connector.
+</div>
+</li>
+<li>
+<div>
+Check the 2nd and 3rd clutch pressures.
+</div>
+</li>
+<li>
+<div>
+Inspect the clutch piston, the clutch piston check valve, and the O-rings. Check the spring retainer for wear and damage. Inspect the clearance between the clutch end-plate and the top disc. If the clearance is out of tolerance, inspect the clutch discs and the plates for wear and damage, and inspect the clutch wave-plate height. If the discs and the flat-plates are worn or damaged, replace the discs and the flat-plates as a set. If the wave-plate height is out of tolerance, replace the wave-plate. If the discs and the plates are OK, adjust the clearance with the clutch end-plate.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Excessive shock or flares on 3-4 upshift or 4-3 downshift
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1.
+</div>
+<div>
+2.
+</div>
+<div>
+3.
+</div>
+<div>
+4.
+</div>
+<div>
+5.
+</div>
+<div>
+6.
+</div>
+<div>
+7.
+</div>
+<div>
+8.
+</div>
+<div>
+9.
+</div>
+<div>
+10.
+</div>
+<div>
+11.
+</div>
+<div>
+12.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Shift solenoid valve C defective
+</div>
+<div>
+A/T clutch pressure control solenoid valve B defective
+</div>
+<div>
+A/T clutch pressure control solenoid valve A defective
+</div>
+<div>
+4th clutch transmission fluid pressure switch
+ defective
+</div>
+<div>
+CPC valve A defective
+</div>
+<div>
+CPC valve B defective
+</div>
+<div>
+Foreign material in separator plate orifice
+</div>
+<div>
+Shift valve C defective
+</div>
+<div>
+3rd accumulator defective
+</div>
+<div>
+4th accumulator defective
+</div>
+<div>
+3rd clutch defective
+</div>
+<div>
+4th clutch defective
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Check for a stored DTC, and check for loose connectors.
+</div>
+</li>
+<li>
+<div>
+Inspect the O-rings, and check for a seized shift solenoid valve.
+</div>
+</li>
+<li>
+<div>
+Inspect the A/T clutch pressure control solenoid valve body gasket and the ATF feed pipes for wear and damage. If the A/T clutch pressure control solenoid valve is stuck, inspect the CPC valves.
+</div>
+</li>
+<li>
+<div>
+Check for a clogged orifice in the transmission fluid pressure switch connector. If the orifice is clogged, remove it and clean the connector.
+</div>
+</li>
+<li>
+<div>
+Check the 3rd and 4th clutch pressures.
+</div>
+</li>
+<li>
+<div>
+Inspect the clutch piston, the clutch piston check valve, and the O-rings. Check the spring retainer for wear and damage. Inspect the clearance between the clutch end-plate and the top disc. If the clearance is out of tolerance, inspect the clutch discs and the plates for wear and damage, and inspect the clutch wave-plate height. If the discs and the flat-plates are worn or damaged, replace the discs and the flat-plates as a set. If the wave-plate height is out of tolerance, replace the wave-plate. If the discs and the plates are OK, adjust the clearance with the clutch end-plate.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Excessive shock or flares on 4-5 upshift or 5-4 downshift
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1.
+</div>
+<div>
+2.
+</div>
+<div>
+3.
+</div>
+<div>
+4.
+</div>
+<div>
+5.
+</div>
+<div>
+6.
+</div>
+<div>
+7.
+</div>
+<div>
+8.
+</div>
+<div>
+9.
+</div>
+<div>
+10.
+</div>
+<div>
+11.
+</div>
+<div>
+12.
+</div>
+<div>
+13.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Shift solenoid valve C defective
+</div>
+<div>
+A/T clutch pressure control solenoid valve B defective
+</div>
+<div>
+A/T clutch pressure control solenoid valve C defective
+</div>
+<div>
+CPC valve B defective
+</div>
+<div>
+CPC valve C defective
+</div>
+<div>
+Foreign material in separator plate orifice
+</div>
+<div>
+Shift valve C defective
+</div>
+<div>
+Shift valve E defective
+</div>
+<div>
+Kick-down valve or kick-down short valve defective
+</div>
+<div>
+4th accumulator defective
+</div>
+<div>
+5th accumulator defective
+</div>
+<div>
+4th clutch defective
+</div>
+<div>
+5th clutch defective
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Check for a stored DTC, and check for loose connectors.
+</div>
+</li>
+<li>
+<div>
+Inspect the O-rings, and check for a seized shift solenoid valve.
+</div>
+</li>
+<li>
+<div>
+Inspect the A/T clutch pressure control solenoid valve body gasket and ATF feed pipes for wear and damage. If the A/T clutch pressure control solenoid valve is stuck, inspect the CPC valves.
+</div>
+</li>
+<li>
+<div>
+Check the 4th and 5th clutch pressures.
+</div>
+</li>
+<li>
+<div>
+Inspect the clutch piston, the clutch piston check valve, and the O-rings. Check the spring retainer for wear and damage. Inspect the clearance between the clutch end-plate and the top disc. If the clearance is out of tolerance, inspect the clutch discs and the plates for wear and damage, and inspect the clutch wave-plate height. If the discs and the flat-plates are worn or damaged, replace the discs and the flat-plates as a set. If the wave-plate height is out of tolerance, replace the wave-plate. If the discs and the plates are OK, adjust the clearance with the clutch end-plate.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Noise from transmission in all shift lever positions
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1.
+</div>
+<div>
+2.
+</div>
+<div>
+3.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+ATF pump worn or binding
+</div>
+<div>
+Idler gears worn or damaged
+</div>
+<div>
+Thrust washer seized up, worn, or damaged
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Improper alignment of the ATF pump and the torque converter housing may cause the ATF pump seizure. The symptoms are mostly an rpm-related ticking noise or a high pitched squeak.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Vehicle does not accelerate above 50 km/h (31 mph)
+</div>
+</td>
+<td class="ViewerTD" colspan="2" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Torque converter one-way clutch defective
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Replace torque converter.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Vibration in all shift lever positions
+</div>
+</td>
+<td class="ViewerTD" colspan="2" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Drive plate defective or transmission misassembled
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Check for a misinstalled/damaged drive plate.
+</div>
+</li>
+<li>
+<div>
+Adjust the engine and transmission mounts.
+</div>
+</li>
+<li>
+<div>
+Check the stall speed.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Shift lever does not operate smoothly
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1.
+</div>
+<div>
+2.
+</div>
+<div>
+3.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Transmission range switch
+ defective or out of adjustment
+</div>
+<div>
+Shift cable broken or out of adjustment
+</div>
+<div>
+Connection between shift cable and transmission or body is worn
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Check for a stored DTC, and check for loose connectors.
+</div>
+</li>
+<li>
+<div>
+Inspect the transmission range switch. If the transmission range switch is faulty, replace it. If the transmission range switch is out of adjustment, adjust it and the shift cable.
+</div>
+</li>
+<li>
+<div>
+Check for a loose shift cable at the shift lever and the transmission control lever.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Transmission does not shift into P
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1.
+</div>
+<div>
+2.
+</div>
+<div>
+3.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Shift cable broken or out of adjustment
+</div>
+<div>
+Connection between shift cable and transmission or body is worn
+</div>
+<div>
+Park mechanism defective
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Check for a loose shift cable at the shift lever and the transmission control lever.
+</div>
+</li>
+<li>
+<div>
+Check the park pawl, the control shaft, and the park lever link for wear and damage. Check if the control shaft lever pin is disengaged from the manual valve guide.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<div>
+</div>
+<br>
+<div>
+<table width="100%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="18%">
+<col width="2%">
+<col width="32%">
+<col width="48%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Symptom
+</b>
+</div>
+</th>
+<th class="ViewerTH" colspan="2" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Probable cause(s)
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Notes
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Torque converter clutch does not disengage
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1.
+</div>
+<div>
+2.
+</div>
+<div>
+3.
+</div>
+<div>
+4.
+</div>
+<div>
+5.
+</div>
+<div>
+6.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Shift solenoid valve D defective
+</div>
+<div>
+A/T clutch pressure control solenoid valve C defective
+</div>
+<div>
+Torque converter clutch piston defective
+</div>
+<div>
+Lock-up shift valve defective
+</div>
+<div>
+Lock-up control valve defective
+</div>
+<div>
+Lock-up timing valve defective
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Check for a stored DTC, and check for loose connectors.
+</div>
+</li>
+<li>
+<div>
+Inspect the O-rings, and check for a seized shift solenoid valve.
+</div>
+</li>
+<li>
+<div>
+Inspect the A/T clutch pressure control solenoid valve C body gasket for wear and damage. If the A/T clutch pressure control solenoid valve C is stuck, inspect the CPC valves.
+</div>
+</li>
+<li>
+<div>
+Replace the torque converter.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Torque converter clutch does not operate smoothly
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1.
+</div>
+<div>
+2.
+</div>
+<div>
+3.
+</div>
+<div>
+4.
+</div>
+<div>
+5.
+</div>
+<div>
+6.
+</div>
+<div>
+7.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Shift solenoid valve D defective
+</div>
+<div>
+A/T clutch pressure control solenoid valve C defective
+</div>
+<div>
+Torque converter clutch piston defective
+</div>
+<div>
+Torque converter check valve defective
+</div>
+<div>
+Lock-up shift valve defective
+</div>
+<div>
+Lock-up control valve defective
+</div>
+<div>
+Lock-up timing valve defective
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Check for a stored DTC, and check for loose connectors.
+</div>
+</li>
+<li>
+<div>
+Inspect the O-rings, and check for a seized shift solenoid valve.
+</div>
+</li>
+<li>
+<div>
+Inspect the A/T clutch pressure control solenoid valve C body gasket for wear and damage. If the A/T clutch pressure control solenoid valve C is stuck, inspect the CPC valves.
+</div>
+</li>
+<li>
+<div>
+Center all engine mounts.
+</div>
+</li>
+<li>
+<div>
+Replace the torque converter.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Torque converter clutch does not engage
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1.
+</div>
+<div>
+2.
+</div>
+<div>
+3.
+</div>
+<div>
+4.
+</div>
+<div>
+5.
+</div>
+<div>
+6.
+</div>
+<div>
+7.
+</div>
+<div>
+8.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Shift solenoid valve D defective
+</div>
+<div>
+A/T clutch pressure control solenoid valve C defective
+</div>
+<div>
+Input shaft (mainshaft) speed sensor
+ defective
+</div>
+<div>
+Output shaft (countershaft) speed sensor
+ defective
+</div>
+<div>
+Torque converter clutch piston defective
+</div>
+<div>
+Torque converter check valve defective
+</div>
+<div>
+Lock-up shift valve defective
+</div>
+<div>
+Lock-up control valve defective
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Check for a stored DTC, and check for loose connectors.
+</div>
+</li>
+<li>
+<div>
+Inspect the O-rings, and check for a seized shift solenoid valve.
+</div>
+</li>
+<li>
+<div>
+Inspect the A/T clutch pressure control solenoid valve C body gasket for wear and damage. If the A/T clutch pressure control solenoid valve C is stuck, inspect the CPC valves.
+</div>
+</li>
+<li>
+<div>
+Inspect the sensor O-rings.
+</div>
+</li>
+<li>
+<div>
+Replace the torque converter.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A/T gear position indicator does not indicate shift lever positions
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1.
+</div>
+<div>
+2.
+</div>
+<div>
+3.
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Transmission range switch
+ defective or out of adjustment
+</div>
+<div>
+Shift cable broken or out of adjustment
+</div>
+<div>
+Connection between shift cable and transmission or body is worn
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Check for a stored DTC, and check for loose connectors.
+</div>
+</li>
+<li>
+<div>
+Inspect the transmission range switch. If the transmission range switch is faulty, replace it. If the transmission range switch is out of adjustment, adjust it and the shift cable.
+</div>
+</li>
+<li>
+<div>
+Check for a loose shift cable at the shift lever and the transmission control lever.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Speedometer and odometer do not work
+</div>
+</td>
+<td class="ViewerTD" colspan="2" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Output shaft (countershaft) speed sensor
+ defective
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<ul type="disc">
+<li>
+<div>
+Check for a stored DTC, and check for loose connectors.
+</div>
+</li>
+<li>
+<div>
+Inspect the sensor O-ring.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Engine does not rev to high rpm, and the transmission upshifts at low rpm (engine at normal operating temperature)
+</div>
+</td>
+<td class="ViewerTD" colspan="2" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Rocker arms defective
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Check the engine rocker arms.
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</div></div>
+</body>
+</html>

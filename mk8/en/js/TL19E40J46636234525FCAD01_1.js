@@ -1,0 +1,37 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:863px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:863px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E40J46636234525FCAD01.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:863px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:132px;top:660px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b></b>Wire side of<br>female terminals<br></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:778px;top:48px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>B<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:793px;top:367px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>A<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:227px;top:572px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>VBU (WHT)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:317px;top:787px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>IG1<br>(YEL)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:389px;top:787px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>B-CAN LO<br>(BLU)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:478px;top:788px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>B-CAN HI<br>(PNK)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:628px;top:788px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>IMOCD (S-NET)<br>(LT GRN)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:688px;top:570px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>LG (BRN)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_10\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:40px;top:833px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b></b>LHD model is shown, RHD model is similar.<br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

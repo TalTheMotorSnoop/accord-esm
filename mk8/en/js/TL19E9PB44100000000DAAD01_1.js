@@ -1,0 +1,37 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:1103px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:1103px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E9PB44100000000DAAD01.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:1103px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:688px;top:275px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>KNUCKLE/<br>HUB BEARING UNIT<br>(MAGNETIC ENCODER)<br><a href=\"javascript:CtsProc('0','000000000000016','iR01')\"></b>Hub Bearing Unit Replacement,<br></a><br> in the Shop Manual, P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000000016','iR02')\">Knuckle Replacement,<br></a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:9px;top:884px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>LOWER ARM A<br><a href=\"javascript:CtsProc('0','000000000000017','i000')\"></b>Replacement,</a><br> in the Shop Manual,<br> P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:4px;top:658px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>LOWER ARM B<br><a href=\"javascript:CtsProc('0','000000000000018','i000')\"></b>Replacement,</a><br> in the Shop Manual,<br> P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:139px;top:979px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>CONTROL ARM<br><a href=\"javascript:CtsProc('0','000000000000014','i000')\"></b>Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:557px;top:144px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>UPPER ARM<br><a href=\"javascript:CtsProc('0','000000000000021','i000')\"></b>Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:2px;top:509px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>STABILIZER LINK<br><a href=\"javascript:CtsProc('0','000000000000020','i000')\"></b>Removal/Installation,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:437px;top:17px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>DAMPER/SPRING<br><a href=\"javascript:CtsProc('0','000000000000006','i000')\"></b>Damper Disposal,</a><br> in the Shop Manual, P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000003294','iR01')\">Removal,</a><br><a href=\"javascript:CtsProc('0','000000000003294','iR02')\">Installation,</a><br><a href=\"javascript:CtsProc('0','000000000000015','i000')\">Disassembly, Inspection, and Reassembly,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:2px;top:461px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>STABILIZER BAR<br><a href=\"javascript:CtsProc('0','000000000000019','i000')\"></b>Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p1_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:381px;top:1047px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>WHEEL BOLT<br><a href=\"javascript:CtsProc('0','000000000000024','iR02')\"></b>Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p1_10\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:557px;top:193px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>BALL JOINT<br><a href=\"javascript:CtsProc('0','000000000000005','i000')\"></b>Boot Inspection/Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

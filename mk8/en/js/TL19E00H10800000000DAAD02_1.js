@@ -1,0 +1,31 @@
+with(document) {
+write("<div id=\"group2\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:879px;\">");
+write("<div id=\"rect2\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:879px;\">");
+write("<img id=\"img2\" name=\"PrtImgId\" src=\"../img/TL19E00H10800000000DAAD02.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:879px;border-color:#ffffff\">");
+write("<p id=\"p2_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:24px;top:722px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>DRIVER'S UNDER-DASH<br>FUSE/RELAY BOX<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:167px;top:787px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>DATA LINK<br>CONNECTOR (DLC)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:590px;top:688px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>DISTANCE SWITCH<br><a href=\"javascript:CtsProc('0','000000000000163','i000')\"></b>Removal/Installation,</a><br><a href=\"javascript:CtsProc('0','000000000000161','i000')\">Test,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:806px;top:592px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>PASSENGER'S<br>UNDER-DASH<br>FUSE/RELAY BOX<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:171px;top:135px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>GAUGE CONTROL MODULE<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:630px;top:17px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>ADAPTIVE CRUISE CONTROL (ACC)<br>COMBINATION SWITCH<br><a href=\"javascript:CtsProc('0','000000000000163','i000')\"></b>Removal/Installation,</a><br><a href=\"javascript:CtsProc('0','000000000000162','i000')\">Test,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:17px;top:847px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b></b>This illustration shows LHD model, RHD model is similar.<br></nobr>");
+write("</p>");
+write("<p id=\"p2_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:258px;top:711px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>ADAPTIVE CRUISE<br>CONTROL (ACC) UNIT<br><a href=\"javascript:CtsProc('0','000000000000165','i000')\"></b>Removal/Installation,</a><br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

@@ -1,0 +1,10 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:475px; height:336px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:475px;height:336px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL1AEJ8E10410400000KCAD12.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:475px;height:336px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:201px;top:293px;font-weight:normal;font-size:9.20pt;\">");
+write("<nobr><b>A<br>10 x 1.25 mm<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

@@ -1,0 +1,31 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:475px; height:401px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:475px;height:401px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E00K737000Y1238FAAD01.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:475px;height:401px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:128px;top:34px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b></b>Wire side of female terminals<br></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:61px;top:17px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>HEATER CONTROL UNIT CONNECTOR A (28P)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:20px;top:348px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>PASSENGER'S AIR MIX CONTROL MOTOR 7P CONNECTOR<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:128px;top:367px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b></b>Wire side of female terminals<br></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:106px;top:104px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>WHT<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:21px;top:71px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>LT GRN<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:120px;top:285px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>BRN<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:190px;top:270px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>LT GRN<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

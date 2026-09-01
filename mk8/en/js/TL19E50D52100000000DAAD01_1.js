@@ -1,0 +1,34 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:591px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:591px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E50D52100000000DAAD01.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:591px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:581px;top:17px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>RIGHT-REAR WHEEL<br>SPEED SENSOR<br><a href=\"javascript:CtsProc('0','000000000000064','iR02')\"></b>Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:2px;top:366px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>RIGHT-FRONT<br>WHEEL SPEED<br>SENSOR<br><a href=\"javascript:CtsProc('0','000000000000064','iR01')\"></b>Replacement,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:58px;top:481px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>RIGHT-FRONT<br>WHEEL BEARING<br>(MAGNETIC ENCODER)<br><a href=\"javascript:CtsProc('0','000000000000009','i000')\"></b>Replacement,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:289px;top:502px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>LEFT-FRONT WHEEL<br>SPEED SENSOR<br><a href=\"javascript:CtsProc('0','000000000000064','iR01')\"></b>Replacement,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:459px;top:502px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>LEFT-FRONT<br>WHEEL BEARING<br>(MAGNETIC ENCODER)<br><a href=\"javascript:CtsProc('0','000000000000009','i000')\"></b>Replacement,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:612px;top:428px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>LEFT-REAR WHEEL<br>SPEED SENSOR<br><a href=\"javascript:CtsProc('0','000000000000064','iR02')\"></b>Replacement,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:777px;top:398px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>LEFT-REAR<br>HUB BEARING UNIT<br>(MAGNETIC ENCODER)<br><a href=\"javascript:CtsProc('0','000000000000016','i000')\"></b>Replacement,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:262px;top:17px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>VSA MODULATOR-CONTROL UNIT<br><a href=\"javascript:CtsProc('0','000000000000061','i000')\"></b>Update,</a><br><a href=\"javascript:CtsProc('0','000000000002596','i000')\">Removal and Installation,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:687px;top:76px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>RIGHT-REAR HUB BEARING UNIT<br>(MAGNETIC ENCODER)<br><a href=\"javascript:CtsProc('0','000000000000016','i000')\"></b>Replacement,</a><br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

@@ -1,0 +1,352 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+<title>SEA5E13K711000Y1205FAAT00</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+var   totalImg = 1;
+var   dispNum=1;
+function prOnLoadProc() {
+	_prInitImageInfo(100);
+	_prResizeImage(100/100);
+	divBody.style.display = "block"
+	return;
+}
+function PrintFunc()
+{
+	divBody.style.display = "none";
+	var  img_hei = _prResizeImage(67/100);
+	divBody.style.display = "block";
+	var  graphTd = document.getElementById("graphTd");
+	if(graphTd.width == "100%")
+	{
+      var   current_pos;
+      var   img_pos = 0;
+         current_pos = graphTd.offsetTop;
+		var pageCnt = Math.floor(current_pos/950);
+		var img_pos = current_pos - (pageCnt*950);
+		if(img_pos+img_hei > 950)
+		{
+			var  pageElement = document.getElementById("page_onoff");
+			if(pageElement != null)
+			{
+				pageElement.style.display = "block";
+			}
+		}
+	}
+	window.print();
+	divBody.style.display = "none";
+	_prResizeImage(100/100);
+	divBody.style.display = "block";
+	window.scrollTo(0,0);
+}
+function CloseFunc()
+{
+	window.close();
+}
+function JumpFunc(strJump)
+{
+	window.location.replace(strJump);
+}
+//-->
+</script>
+<body onLoad="prOnLoadProc();" style="font-family:sans-serif;">
+<div id="divBody" style="display:none">
+<div>
+<div style="position:absolute;right=10;">
+<input type="image" src="../img/PRINT_PREVIEW.PNG" onClick="PrintFunc()">
+<input type="image" src="../img/GL_PREV_DISABLE.PNG" onClick="BackFunc()" disabled>
+<input type="image" src="../img/GL_NEXT_DISABLE.PNG" onClick="NextFunc()" disabled>
+<input type="image" src="../img/GL_CANCEL.PNG" onClick="CloseFunc()">
+</div><br><br>
+<hr width="100%" size="2" color="black">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<b>
+DTC B1205:
+</b>
+<div>
+ Climate Control Unit Lost Communication with the Gauge Control Module (VSP/NE messages)
+</div>
+<b>
+DTC B1206:
+</b>
+<div>
+ Climate Control Unit Lost Communication with the Gauge Control Module (ECT messages)
+</div>
+<b>
+DTC B1207:
+</b>
+<div>
+ Climate Control Unit Lost Communication with the Gauge Control Module (ILLUMI messages)
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Turn the ignition switch ON (II).
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Push the AUTO button.
+</div>
+</li>
+</ol>
+<div style="text-indent:40px;">
+<i>
+Does the climate control turn on?
+</i>
+</div>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to
+<a href="javascript:JumpFunc('ZOOM000000000001724.html#i030')">Step 3
+</a>
+.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+<a href="javascript:opener.top.Cts('000000000000676','i000')">
+Go to climate control power and ground circuits troubleshooting
+</a>
+.■
+</div>
+</td>
+</tr>
+</table>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Clear the DTCs using the HDS.
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Turn the ignition switch OFF, and then ON.
+</div>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+Turn the climate control system on and operate several functions. (A/C on/off, air mix and blend door operations, temperature settings etc.)
+</div>
+</li>
+</ol>
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+Check the DTCs by selecting the DTCs MENU (DTCs) from the HDS.
+</div>
+</li>
+</ol>
+<div style="text-indent:40px;">
+<i>
+Is DTC B1205, B1206, and/or B1207 indicated?
+</i>
+</div>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to
+<a href="javascript:JumpFunc('ZOOM000000000001724.html#i070')">Step 7
+</a>
+.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Intermittent failure, the gauge control module and climate control unit are OK at this time.■
+</div>
+</td>
+</tr>
+</table>
+<a name="i070">
+</a>
+<ol>
+<li value="7">
+<div>
+Check the DTCs by selecting the DTCs MENU (DTCs) from the HDS.
+</div>
+</li>
+</ol>
+<div style="text-indent:40px;">
+<i>
+Is DTC B1008, B1060, and/or B1061 indicated?
+</i>
+</div>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+<a href="javascript:opener.top.Cts('000000000000354','i000')">
+Perform the gauge control module self-diagnostic procedure.
+</a>
+■
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to
+<a href="javascript:JumpFunc('ZOOM000000000001724.html#i080')">Step 8
+</a>
+.
+</div>
+</td>
+</tr>
+</table>
+<a name="i080">
+</a>
+<ol>
+<li value="8">
+<div>
+Disconnect climate control unit connector B (16P).
+</div>
+</li>
+</ol>
+<a name="i090">
+</a>
+<ol>
+<li value="9">
+<div>
+Disconnect under-dash fuse/relay box connector N (45P) from the fuse/relay box.
+</div>
+</li>
+</ol>
+<a name="i100">
+</a>
+<ol>
+<li value="10">
+<div>
+Check for continuity between the No. 22 terminal of under-dash fuse/relay box connector N (45P) and the No. 14 terminal of climate control unit connector B (16P).
+</div>
+</li>
+</ol>
+<div style="text-indent:40px;">
+<i>
+Is there continuity?
+</i>
+</div>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+The climate control unit is faulty, replace the
+climate control unit
+.■
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Repair open in the wire between the gauge control module and the climate control unit.■
+</div>
+</td>
+</tr>
+</table>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div style="display:none;" id="page_onoff">
+<div style="page-break-after:always;">
+</div>
+</div>
+<span style="display:block" id="imgId1">
+<div>
+<script src="../js/SEA4E0AK711000Y1205FAAD01_1.js">
+</script>
+</div>
+</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

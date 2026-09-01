@@ -1,0 +1,459 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E00K761000N1701FAAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+Navigation System DTC Troubleshooting: 1701, 2608
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<b>
+DTC 1701:
+</b>
+<div>
+ Rear Camera Error
+</div>
+<b>
+DTC 2608:
+</b>
+<div>
+ Rear Camera Diag
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+Check the vehicle battery condition first.
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000705','i000')">
+Before you troubleshoot, make sure to follow the general troubleshooting information.
+</a>
+</div>
+</li>
+</ul>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+<a href="javascript:CtsProc('0','000000000000705','iG21')">
+Clear the hard error code.
+</a>
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Turn the ignition switch to LOCK (0), and then back to ON (II).
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+<a href="javascript:CtsProc('0','000000000000488','i000')">
+Go into the Diagnostic Menu and select the Self-Diagnosis Mode in the Select Diagnosis Items menu.
+</a>
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Check the System Links.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Is the Rear camera icon red?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i050');}catch(e){location.hash='i050';}">Step 5
+</a>
+.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Intermittent failure, the system is OK at this time.■
+</div>
+</td>
+</tr>
+</table>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+Check for poor connection or loose terminal at rearview camera 6P connector.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Are there connection OK?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i060');}catch(e){location.hash='i060';}">Step 6
+</a>
+.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Repair poor connection or loose terminal.■
+</div>
+</td>
+</tr>
+</table>
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+Turn the ignition switch to LOCK (0).
+</div>
+</li>
+</ol>
+<a name="i070">
+</a>
+<ol>
+<li value="7">
+<div>
+Disconnect rearview camera 6P connector.
+</div>
+</li>
+</ol>
+<a name="i080">
+</a>
+<ol>
+<li value="8">
+<div>
+Turn the ignition switch to ON (II).
+</div>
+</li>
+</ol>
+<a name="i090">
+</a>
+<ol>
+<li value="9">
+<div>
+Measure the voltage between rearview camera 6P connector terminal No. 6 and body ground individually.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Is there voltage about 3.0 V?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+<a href="javascript:CtsProc('0','000000000002995','i000')">
+Replace the rearview camera.
+</a>
+■
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i100');}catch(e){location.hash='i100';}">Step 10
+</a>
+.
+</div>
+</td>
+</tr>
+</table>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001869','1');">
+<img src="../tn/TL19E00K761000N1701FAAD01.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00K761000N1701FAAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i100">
+</a>
+<ol>
+<li value="10">
+<div>
+Measure the voltage between navigation display unit 28P connector terminal No. 28 and body ground individually.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Is there voltage about 3.0 V?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Repair open in the wire between the navigation display unit and rearview camera.■
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+<a href="javascript:CtsProc('0','000000000000491','i000')">
+Replace the navigation display unit.
+</a>
+■
+</div>
+</td>
+</tr>
+</table>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001870','1');">
+<img src="../tn/TL19E00K761000N1701FAAD02.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00K761000N1701FAAD02_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,279 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+
+<title>Fuel Supply System</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+function Apf() {
+   _prInitImageInfo(100);
+   window.focus();
+   if(gImageGroupList_.length == 0) {
+      window.print();
+   }
+   else {
+      divBody.style.display = "none";
+      var  img_pos,img_hei;
+      var  img_rate = 1.0;
+      var  i;
+      var  obj;
+      var  paper_wid,paper_hei,paper_len;
+      paper_wid = 640.0;
+      paper_hei = 950.0;
+      paper_len = 980.0;
+      for(i=0; i<gImageGroupList_.length; i++){
+         if(gImageGroupList_[i].group != null){
+           obj = gImageGroupList_[i].group;
+         }
+      }
+      if(paper_wid > paper_hei) {
+         alert("For best printing result, select 'landscape' layout from the print menu.");
+      }
+      for(i=0; i<gImageGroupList_.length; i++){
+         if(gImageGroupList_[i].group != null){
+            obj = gImageGroupList_[i].group;
+            if(img_rate > paper_wid/obj.width) {
+               img_rate =  paper_wid/obj.width;
+            }
+            if(img_rate > paper_hei/obj.height) {
+               img_rate =  paper_hei/obj.height;
+            }
+         }
+      }
+      _prResizeImage(img_rate);
+      window.scrollTo(0,10000);
+      var totalHei = document.body.scrollTop+document.body.clientHeight-img_hei;
+      divBody.style.display = "block";
+      var  idObj;
+      var groupObject = document.getElementById("group" + i);
+      var   beforeOffset = 0;
+      var   current_pos;
+      var   img_pos = img_dis = 0;
+      for(i=0; i<gImageGroupList_.length; i++){
+         idObj =document.getElementById("imgId" + (i+1));
+         if(idObj != null) {
+            idObj.style.display = "block";
+            current_pos = idObj.offsetTop;
+            if(gImageGroupList_[i].group != null){
+               obj = gImageGroupList_[i].group;
+               img_dis = current_pos - beforeOffset;
+               if(i == 0) {
+                  var pageCnt = Math.floor(current_pos/paper_hei);
+                  img_dis = img_dis - paper_hei*pageCnt;
+               }
+               img_hei = obj.height*img_rate;
+               img_pos += parseInt(img_dis);
+               if(parseInt(img_pos) > paper_len) {
+                  img_pos = img_pos - paper_len;
+               }
+               img_pos += parseInt(img_hei);
+               idObj.style.display = "none";
+               if(parseInt(img_pos) > paper_len) {
+                  idObj.style.display = "block";
+                  img_pos = parseInt(img_hei) + 50;
+               }
+               beforeOffset = current_pos + parseInt(img_hei);
+            }
+         }
+      }
+      window.print();
+      divBody.style.display = "none";
+      _prResizeImage(100/100);
+      divBody.style.display = "block";
+      window.scrollTo(0,0);
+   }
+}
+-->
+</script>
+<body onload="try{if(parent&&parent.Old)parent.Old(this);}catch(e){}" style="font-family:sans-serif;">
+<div id="divBody" style="display:block">
+<div>
+<div class="top_title">
+<b>
+Fuel Supply System
+</b>
+</div>
+<a name="iS01">
+</a>
+<div>
+The fuel from the fuel tank is pressured by the fuel pump and is accumulated in the common rail. Fuel injection timing and injection amount are controlled precisely by the ECM by sending the signal to the electromagnetic valve of each fuel injector.
+</div>
+<div>
+Refer to the system diagram to see the functional layout of the system.
+</div>
+<a name="iT01">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Glow Relay Control
+</b>
+</div>
+<br>
+<div>
+<div>
+It controls the timing and duration when the glow plug control module is electrically ON at the engine start in accordance with the coolant temperature.
+</div>
+<span style="display:none" id="imgId1">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA6EL4A20326400000CAAD01_1.js">
+</script>
+</div>
+</div>
+<a name="iT02">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Fuel Filter Water Level Switch
+</b>
+</div>
+<br>
+<div>
+<div>
+Fuel filter water level switch is installed fuel filter. This switch detects water level in the fuel filter.
+</div>
+<span style="display:none" id="imgId2">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA6EL4A20326400000CAAD02_1.js">
+</script>
+</div>
+</div>
+<a name="iT03">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Fuel Heater
+</b>
+</div>
+<br>
+<div>
+<div>
+Fuel heater is installed fuel filter.
+</div>
+<div>
+This system is designed to prevent deposition of the wax elements in the fuel when the ambient temperature is extremely low.
+</div>
+<span style="display:none" id="imgId3">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA6EL4A20326400000CAAD03_1.js">
+</script>
+</div>
+</div>
+<a name="iT04">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Fuel Injector
+</b>
+</div>
+<br>
+<div>
+<div>
+Compact and energy-saving electromagnetic valve control type of the injectors are adopted on this model. Separate IQA code is given for each fuel injector, which allows much accurate fuel injection by controlling the fuel injection of each injector based on the respective injection performances.
+</div>
+<span style="display:none" id="imgId4">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA6EL4A20326400000CAAD04_1.js">
+</script>
+</div>
+</div>
+<a name="iT05">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Fuel Rail Pressure (FRP) Sensor
+</b>
+</div>
+<br>
+<div>
+<div>
+The FRP sensor detects the fuel pressure in the common rail.
+</div>
+<span style="display:none" id="imgId5">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA6EL4A20326400000CAAD05_1.js">
+</script>
+</div>
+</div>
+<a name="iT06">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Fuel Temperature Sensor
+</b>
+</div>
+<br>
+<div>
+<div>
+The fuel temperature sensor is installed fuel filter. The fuel temperature sensor is a temperature dependent resistor (thermistor). The resistance of the thermistor decreases as the fuel temperature increases.
+</div>
+<span style="display:none" id="imgId6">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA6EL4A20326400000CAAD06_1.js">
+</script>
+</div>
+</div>
+<a name="iT07">
+</a>
+<br>
+<div class="topic_title">
+<b>
+PGM-FI Main Relay 1 and 2
+</b>
+</div>
+<br>
+<div>
+PGM-FI main relay 1 is energized whenever the ignition switch is ON (II) which supplies battery voltage to the ECM, and power for PGM-FI main relay 2.
+</div>
+<a name="iT08">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Fuel Pump
+</b>
+</div>
+<br>
+<div>
+<div>
+Fuel pump draws adequate amount of the fuel and sends the high pressured fuel to the common rail.
+</div>
+<span style="display:none" id="imgId7">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA6EL4A20326400000CAAD07_1.js">
+</script>
+</div>
+</div>
+</div></div>
+</body>
+</html>

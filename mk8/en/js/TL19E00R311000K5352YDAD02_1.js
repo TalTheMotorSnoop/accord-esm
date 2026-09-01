@@ -1,0 +1,31 @@
+with(document) {
+write("<div id=\"group2\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:783px;\">");
+write("<div id=\"rect2\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:783px;\">");
+write("<img id=\"img2\" name=\"PrtImgId\" src=\"../img/TL19E00R311000K5352YDAD02.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:783px;border-color:#ffffff\">");
+write("<p id=\"p2_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:175px;top:17px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>BULKHEAD UPPER<br>CENTER FRAME<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:114px;top:464px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>BULKHEAD SIDE STAY<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:654px;top:602px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>FRONT SIDE FRAME<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:456px;top:17px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>BULKHEAD UPPER<br>SIDE FRAME<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:510px;top:703px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>SUBFRAME SUPPORT<br>BRACKET<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:111px;top:739px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>BULKHEAD LOWER<br>CROSS-MEMBER<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:762px;top:57px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>WHEELHOUSE<br>UPPER MEMBER<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:206px;top:222px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>SIDE STAY PLATE<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

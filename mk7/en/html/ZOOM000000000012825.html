@@ -1,0 +1,117 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+<title>SEA6EL9K72200000000BBAT00</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+var   totalImg = 0;
+var   dispNum=1;
+function prOnLoadProc() {
+	_prInitImageInfo(100);
+	_prResizeImage(100/100);
+	divBody.style.display = "block"
+	return;
+}
+function PrintFunc()
+{
+	divBody.style.display = "none";
+	var  img_hei = _prResizeImage(67/100);
+	divBody.style.display = "block";
+	var  graphTd = document.getElementById("graphTd");
+	if(graphTd.width == "100%")
+	{
+      var   current_pos;
+      var   img_pos = 0;
+         current_pos = graphTd.offsetTop;
+		var pageCnt = Math.floor(current_pos/950);
+		var img_pos = current_pos - (pageCnt*950);
+		if(img_pos+img_hei > 950)
+		{
+			var  pageElement = document.getElementById("page_onoff");
+			if(pageElement != null)
+			{
+				pageElement.style.display = "block";
+			}
+		}
+	}
+	window.print();
+	divBody.style.display = "none";
+	_prResizeImage(100/100);
+	divBody.style.display = "block";
+	window.scrollTo(0,0);
+}
+function BackFunc()
+{
+	window.location.replace("ZOOM000000000012824.html");
+}
+function NextFunc()
+{
+	window.location.replace("ZOOM000000000012826.html");
+}
+function CloseFunc()
+{
+	window.close();
+}
+function JumpFunc(strJump)
+{
+	window.location.replace(strJump);
+}
+//-->
+</script>
+<body onLoad="prOnLoadProc();" style="font-family:sans-serif;">
+<div id="divBody" style="display:none">
+<div>
+<div style="position:absolute;right=10;">
+<input type="image" src="../img/PRINT_PREVIEW.PNG" onClick="PrintFunc()">
+<input type="image" src="../img/GL_PREV.PNG" onClick="BackFunc()">
+<input type="image" src="../img/GL_NEXT.PNG" onClick="NextFunc()">
+<input type="image" src="../img/GL_CANCEL.PNG" onClick="CloseFunc()">
+</div><br><br>
+<hr width="100%" size="2" color="black">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iS03">
+</a>
+<div class="servinfosub_title">
+<b>
+Self-diagnosis
+</b>
+</div>
+<div>
+The auto cruise control system (ACC) is added the lane keep assist system (LKAS) on the EPS system. If the EPS control is failed, while the LKAS control is activated. LKAS control, it makes EPS indicator or ACC indicator come on and it detectivated the LKAS control. When detecting LKAS relation's malfunction is occured in LKAS control, the EPS indicator does not come on, it makes an ACC indicator come on and it detectivated the LKAS control. In this case, after the LKAS detectivated, it assists by usual EPS control but depending on the detected malfunction, it stops is assist. If the EPS indicator come on, troubleshoot the EPS DTCs. If ACC indicator come on, troubleshoot the ACC DTCs.
+</div>
+<div>
+It is sending and receiving a signal data with the line, between the EPS control unit and the LKAS control unit (EPSTXD/LKASRXD and EPSRXD/LKASTXD) of the multiplex-communication system which used CAN. The EPSTXD/LKASRXD become sending to the EPS, and become receiving the LKAS. The EPSRXD/LKASTXD become sending to the LKAS, and become receiving the EPS.
+</div>
+<div>
+When you output the DTC for ACC, first output the LKAS DTCs. If the EPS malfunction is detected from the LKAS DTCs, output EPS DTCs, and troubleshoot the EPS.
+</div>
+<ul type="disc">
+<li>
+<div>
+When DTC 23 (a problem with the circuit for engine speed signal) is detected, the power assist will return to normal when the vehicle speed is 10 km/h (6 mph) or above.
+</div>
+</li>
+<li>
+<div>
+For DTCs 21, 22 and 23 the EPS indicator will go off automatically, and the system returns to normal.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div style="display:none;" id="page_onoff">
+<div style="page-break-after:always;">
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

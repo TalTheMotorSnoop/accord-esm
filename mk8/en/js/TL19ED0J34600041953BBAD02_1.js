@@ -1,0 +1,37 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:415px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:415px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19ED0J34600041953BBAD02.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:415px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:406px;top:254px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>OFF<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:406px;top:128px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>ON<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:701px;top:320px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>T<sub>2</sub><br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:580px;top:64px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>T<sub>1</sub><br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:745px;top:64px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>T<sub>2</sub><br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:831px;top:64px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>T<sub>2</sub><br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:788px;top:321px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>T<sub>2</sub><br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:626px;top:367px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>T1: About 2 sec.<br>T2: About 0.2 sec.<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:248px;top:265px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>A<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_10\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:356px;top:385px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>07WAZ-0010100<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

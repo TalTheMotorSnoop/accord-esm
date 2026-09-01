@@ -1,0 +1,37 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:475px; height:561px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:475px;height:561px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E00H46200053401KBAD01.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:475px;height:561px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:211px;top:42px;font-weight:normal;font-size:9.21pt;\">");
+write("<nobr><b>40 (1.57)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:207px;top:224px;font-weight:normal;font-size:9.21pt;\">");
+write("<nobr><b>31.5 (1.24)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:214px;top:245px;font-weight:normal;font-size:9.21pt;\">");
+write("<nobr><b>34 (1.33)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:40px;top:76px;font-weight:normal;font-size:9.21pt;\">");
+write("<nobr><b>5 <br>(0.20)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:48px;top:145px;font-weight:normal;font-size:9.21pt;\">");
+write("<nobr><b>20<br>(0.79)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:67px;top:224px;font-weight:normal;font-size:9.21pt;\">");
+write("<nobr><b>8 <br>(0.31)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:39px;top:17px;font-weight:normal;font-size:9.21pt;\">");
+write("<nobr><b>Unit: mm (in.)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:271px;top:298px;font-weight:normal;font-size:9.21pt;\">");
+write("<nobr><b>2−2.5 (0.08−0.1) <br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:405px;top:358px;font-weight:normal;font-size:9.21pt;\">");
+write("<nobr><b>B<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_10\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:82px;top:403px;font-weight:normal;font-size:9.21pt;\">");
+write("<nobr><b>A<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

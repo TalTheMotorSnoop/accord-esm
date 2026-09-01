@@ -1,0 +1,31 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:475px; height:353px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:475px;height:353px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E9AK772000Y1390FAAD02.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:475px;height:353px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:126px;top:323px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b></b>Wire side of female terminals<br></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:32px;top:305px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>POWER TAILGATE CLOSER UNIT CONNECTOR A (2P)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:280px;top:227px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>CLM+ (RED)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:267px;top:165px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>CLM− (YEL)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:236px;top:67px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>CLM+ (PUR)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:155px;top:201px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>CLM−<br>(YEL)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:26px;top:17px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>POWER TAILGATE CONTROL UNIT CONNECTOR B (20P)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:127px;top:35px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b></b>Wire side of female terminals<br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

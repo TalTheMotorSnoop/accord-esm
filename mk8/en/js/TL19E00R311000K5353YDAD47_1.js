@@ -1,0 +1,31 @@
+with(document) {
+write("<div id=\"group7\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:475px; height:465px;\">");
+write("<div id=\"rect7\" name=\"PrtRectId\"class=\"drag\"  style=\"width:475px;height:465px;\">");
+write("<img id=\"img7\" name=\"PrtImgId\" src=\"../img/TL19E00R311000K5353YDAD47.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:475px;height:465px;border-color:#ffffff\">");
+write("<p id=\"p7_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:118px;top:394px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>(10)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p7_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:228px;top:411px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>(9)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p7_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:316px;top:439px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>A<br></b></nobr>");
+write("</p>");
+write("<p id=\"p7_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:409px;top:311px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>(10)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p7_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:400px;top:275px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>B<br></b></nobr>");
+write("</p>");
+write("<p id=\"p7_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:404px;top:63px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>(3)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p7_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:407px;top:152px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>(7)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p7_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:177px;top:18px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>(9)<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

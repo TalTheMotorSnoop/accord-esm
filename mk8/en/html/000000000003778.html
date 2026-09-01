@@ -1,0 +1,427 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19EAPK72100090300FAAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+DTC Troubleshooting: P0300 (75) and any combination of P0301 (71), P0302 (72), P0303 (73), P0304 (74)
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<b>
+DTC P0300:
+</b>
+<div>
+ Random Misfire and Any Combination of the Following:
+</div>
+<b>
+DTC P0301:
+</b>
+<div>
+ No. 1 Cylinder Misfire Detected
+</div>
+<b>
+DTC P0302:
+</b>
+<div>
+ No. 2 Cylinder Misfire Detected
+</div>
+<b>
+DTC P0303:
+</b>
+<div>
+ No. 3 Cylinder Misfire Detected
+</div>
+<b>
+DTC P0304:
+</b>
+<div>
+ No. 4 Cylinder Misfire Detected
+</div>
+<div>
+NOTE: Before you troubleshoot, record all freeze data and 
+<a href="javascript:CtsProc('0','000000000003767','i000')">
+review the general troubleshooting information.
+</a>
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Turn the ignition switch to ON (II).
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Clear the DTC with the HDS.
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Turn the ignition switch to LOCK (0), and wait 1 minute.
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Test-drive the vehicle for several minutes in the range of these recorded freeze data parameters:
+</div>
+<ul type="disc">
+<li>
+<div>
+ENGINE SPEED
+</div>
+</li>
+<li>
+<div>
+VSS
+</div>
+</li>
+<li>
+<div>
+CLV (calculated load value)
+</div>
+</li>
+<li>
+<div>
+APP SENSOR
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+Monitor the OBD STATUS for DTC P0301, P0302, P0303, or P0304, in the DTCs MENU with the HDS.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Does the screen indicate FAILED?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Check for air in the fuel line, then go to 
+<a href="javascript:try{parent.Jmp('i060');}catch(e){location.hash='i060';}">Step 6
+</a>
+.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+If the screen indicate PASSED, intermittent failure, the system is OK at this time. If the screen indicates EXECUTING, keep driving until a result comes on. If the screen indicates OUT OF CONDITION, go to 
+<a href="javascript:try{parent.Jmp('i040');}catch(e){location.hash='i040';}">Step 4
+</a>
+ and recheck.
+</div>
+</td>
+</tr>
+</table>
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+Turn the ignition switch to ON (II).
+</div>
+</li>
+</ol>
+<a name="i070">
+</a>
+<ol>
+<li value="7">
+<div>
+Reset the ECM with the HDS.
+</div>
+</li>
+</ol>
+<a name="i080">
+</a>
+<ol>
+<li value="8">
+<div>
+Turn the ignition switch to LOCK (0), and wait 1 minute.
+</div>
+</li>
+</ol>
+<a name="i090">
+</a>
+<ol>
+<li value="9">
+<div>
+Test-drive the vehicle for several minutes in the range of these recorded freeze data parameters:
+</div>
+<ul type="disc">
+<li>
+<div>
+ENGINE SPEED
+</div>
+</li>
+<li>
+<div>
+VSS
+</div>
+</li>
+<li>
+<div>
+CLV (calculated load value)
+</div>
+</li>
+<li>
+<div>
+APP SENSOR
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i100">
+</a>
+<ol>
+<li value="10">
+<div>
+Check for Temporary DTCs or DTCs with the HDS.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Is DTC P0300, P0301, P0302, P0303, or P0304 indicated?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+<a href="javascript:CtsProc('0','000000000003779','i000')">
+Go to troubleshooting for DTC P0301, P0302, P0303, or P0304.
+</a>
+■
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to 
+<a href="javascript:try{parent.Jmp('i110');}catch(e){location.hash='i110';}">Step 11
+</a>
+.
+</div>
+</td>
+</tr>
+</table>
+<a name="i110">
+</a>
+<ol>
+<li value="11">
+<div>
+Monitor the OBD STATUS for DTC P0301, P0302, P0303, or P0304, in the DTCs MENU with the HDS.
+</div>
+</li>
+</ol>
+<table class="Viewer" frame="void" style="margin-left:40px;">
+<tr>
+<td class="ViewerTD">
+<i>
+<div>
+<i>
+Does the screen indicate PASSED?
+</i>
+</div>
+</i>
+</td>
+</tr>
+</table>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Troubleshooting is complete. If any other Temporary DTCs or DTCs are indicated in 
+<a href="javascript:try{parent.Jmp('i100');}catch(e){location.hash='i100';}">Step 10
+</a>
+, go to the indicated DTC's troubleshooting.■
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+If the screen indicate FAILED, go to 
+<a href="javascript:try{parent.Jmp('i010');}catch(e){location.hash='i010';}">Step 1
+</a>
+ and recheck. If the screen indicates EXECUTING, keep driving until a result comes on. If the screen indicates OUT OF CONDITION, go to 
+<a href="javascript:try{parent.Jmp('i090');}catch(e){location.hash='i090';}">Step 9
+</a>
+ and recheck.
+</div>
+</td>
+</tr>
+</table>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

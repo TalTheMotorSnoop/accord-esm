@@ -1,0 +1,34 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:475px; height:545px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:475px;height:545px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E5AE10410424251KCAD09.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:475px;height:545px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:375px;top:17px;font-weight:normal;font-size:9.21pt;\">");
+write("<nobr><b>F<br>6 x 1.0 mm<br>12 N·m<br>(1.2 kgf·m,<br>8.7 lbf·ft)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:432px;top:417px;font-weight:normal;font-size:9.21pt;\">");
+write("<nobr><b>A<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:430px;top:209px;font-weight:normal;font-size:9.21pt;\">");
+write("<nobr><b>D<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:142px;top:294px;font-weight:normal;font-size:9.21pt;\">");
+write("<nobr><b>E<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:38px;top:404px;font-weight:normal;font-size:9.21pt;\">");
+write("<nobr><b>B<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:426px;top:298px;font-weight:normal;font-size:9.21pt;\">");
+write("<nobr><b>C<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:94px;top:335px;font-weight:normal;font-size:9.21pt;\">");
+write("<nobr><b>G<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:94px;top:17px;font-weight:normal;font-size:9.21pt;\">");
+write("<nobr><b>E<br>28 N·m<br>(2.9 kgf·m, 21 lbf·ft)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:6px;top:91px;font-weight:normal;font-size:9.21pt;\">");
+write("<nobr><b>H<br>6 x 1.0 mm<br>12 N·m<br>(1.2 kgf·m,<br>8.7 lbf·ft)<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

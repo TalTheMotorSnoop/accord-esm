@@ -1,0 +1,34 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:1103px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:1103px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19EAAJ54283224801DBAD01.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:1103px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:163px;top:57px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>G2<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:817px;top:984px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>G1<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:301px;top:1009px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>G3<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:20px;top:583px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>ENGINE GROUND<br>CABLE<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:739px;top:281px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>BATTERY GROUND<br>CABLE<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:150px;top:800px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>TRANSMISSION<br>GROUND CABLE<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:383px;top:248px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>EPS GROUND CABLE<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:2px;top:1073px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b></b>LHD model is shown, RHD model is similar.<br></nobr>");
+write("</p>");
+write("<p id=\"p1_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:736px;top:97px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>G4<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

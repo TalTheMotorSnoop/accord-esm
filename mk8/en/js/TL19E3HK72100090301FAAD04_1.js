@@ -1,0 +1,34 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:475px; height:417px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:475px;height:417px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E3HK72100090301FAAD04.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:475px;height:417px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:128px;top:146px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b></b>Wire side of female terminals<br></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:299px;top:239px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>INJ4 (YEL)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:276px;top:217px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>INJ3 (BLU)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:273px;top:98px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>INJ<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:140px;top:17px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>INJECTOR 2P CONNECTOR<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:113px;top:386px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b></b>Terminal side of female terminals<br></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:137px;top:239px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>INJ1 (BRN)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:159px;top:217px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>INJ2 (RED)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:128px;top:191px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>ECM/PCM CONNECTOR C (49P)<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

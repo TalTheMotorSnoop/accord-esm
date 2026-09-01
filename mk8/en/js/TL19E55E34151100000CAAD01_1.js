@@ -1,0 +1,37 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:527px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:527px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E55E34151100000CAAD01.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:527px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:475px;top:17px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>With 5th-6th selected<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:638px;top:41px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>With reverse selected<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:370px;top:136px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>Select lever <br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:177px;top:375px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>Change lever <br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:372px;top:394px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>Select lock<br>cam A<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:436px;top:466px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>Select lock cam B <br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:641px;top:455px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>Select lock return spring<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:436px;top:499px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>Direction of reverse selection<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:610px;top:234px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>Locked position<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_10\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:586px;top:288px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>Inhibitor OFF<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

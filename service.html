@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Service Interval Dashboard</title>
+<link href="./fonts/fonts.css" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Outfit',sans-serif;background:#fff;color:#2a2a2a;line-height:1.6}
+.wrap{max-width:900px;margin:0 auto;padding:30px 40px 60px}
+h1{font-family:'Rajdhani',sans-serif;font-size:24px;font-weight:700;color:#111;letter-spacing:-0.5px;margin-bottom:4px}
+.subtitle{font-size:13px;color:#999;margin-bottom:24px}
+.setup{background:#f9f9f9;border:1px solid #eee;border-radius:8px;padding:18px 20px;margin-bottom:12px}
+.stitle{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#666;margin-bottom:12px}
+.row{display:flex;gap:12px;align-items:end;flex-wrap:wrap;margin-bottom:10px}
+.fg{display:flex;flex-direction:column;gap:4px}
+.fg label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:#888}
+.fg input,.fg select{font-family:'Outfit',sans-serif;font-size:14px;padding:8px 12px;border:1px solid #ddd;border-radius:6px;outline:none;transition:border .2s;width:180px}
+.fg input:focus,.fg select:focus{border-color:#cc0000}
+.go{font-family:'Rajdhani',sans-serif;font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:10px 28px;background:linear-gradient(135deg,#cc0000,#aa0000);color:#fff;border:none;border-radius:6px;cursor:pointer;transition:all .2s;align-self:end}
+.go:hover{background:linear-gradient(135deg,#dd1111,#bb0000);box-shadow:0 4px 16px rgba(204,0,0,0.2)}
+.chk-row{display:flex;align-items:center;gap:8px;margin-top:8px;margin-bottom:4px}
+.chk-row input[type=checkbox]{accent-color:#cc0000;width:16px;height:16px}
+.chk-row label{font-size:13px;color:#555;cursor:pointer}
+.note{font-size:12px;color:#aaa;margin-bottom:6px}
+.legend{display:flex;gap:16px;margin:16px 0;font-size:12px;flex-wrap:wrap}
+.legend-item{display:flex;align-items:center;gap:6px}
+.ldot{width:12px;height:12px;border-radius:3px}
+.ld-over{background:#dc2626}.ld-soon{background:#f59e0b}.ld-ok{background:#16a34a}
+#out{display:none}
+.summary{display:flex;gap:16px;margin-bottom:20px;flex-wrap:wrap}
+.sc{flex:1;min-width:120px;padding:14px 18px;border-radius:8px;text-align:center}
+.sc .n{font-family:'Rajdhani',sans-serif;font-size:28px;font-weight:700;line-height:1}
+.sc .l{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.5px;margin-top:2px}
+.sc-over{background:#fef2f2;color:#dc2626}.sc-soon{background:#fffbeb;color:#d97706}.sc-ok{background:#f0fdf4;color:#16a34a}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;padding:8px 10px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#888;border-bottom:2px solid #eee}
+td{padding:10px 10px;border-bottom:1px solid #f0f0f0;vertical-align:top}
+tr:hover td{background:#fafafa}
+.iname{font-weight:600;color:#222}
+.inote{font-size:11px;color:#999;margin-top:2px}
+.interval{color:#666;white-space:nowrap;font-size:12px}
+.st{display:inline-block;padding:2px 10px;border-radius:10px;font-size:11px;font-weight:600;white-space:nowrap}
+.st-over{background:#fef2f2;color:#dc2626}
+.st-soon{background:#fffbeb;color:#d97706}
+.st-ok{background:#f0fdf4;color:#16a34a}
+.lnk{color:#cc0000;text-decoration:none;font-size:12px;font-weight:500;display:inline-block;margin-top:3px}
+.lnk:hover{text-decoration:underline}
+.cat td{background:#f8f8f8;font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:0.5px;color:#666;padding:10px;border-bottom:2px solid #eee}
+.ind-svc{display:flex;gap:6px;align-items:center;margin-top:6px;flex-wrap:wrap}
+.ind-svc input{font-family:'Outfit',sans-serif;font-size:12px;padding:4px 8px;border:1px solid #ddd;border-radius:4px;outline:none}
+.ind-svc input:focus{border-color:#cc0000}
+.ind-svc span{font-size:11px;color:#999}
+.save-note{font-size:11px;color:#16a34a;margin-top:8px;display:none}
+@media(max-width:700px){.wrap{padding:20px 16px 40px}.fg input,.fg select{width:100%}.row{flex-direction:column;align-items:stretch}}
+/* ── dark mode (driven by the launcher theme over the bridge) ── */
+html.darkmode body{background:#14171c;color:#c8cdd6}
+html.darkmode h1{color:#e8ebf0}
+html.darkmode .subtitle{color:#7a828e}
+html.darkmode .setup{background:#1b1f26;border-color:#262b33}
+html.darkmode .stitle{color:#9aa2ae}
+html.darkmode .fg label{color:#8a93a0}
+html.darkmode .fg input,html.darkmode .fg select{background:#232830;border-color:#3a4150;color:#d5dae2}
+html.darkmode .chk-row label{color:#aab1bc}
+html.darkmode .note{color:#6a7280}
+html.darkmode .sc-over{background:#3a1c1c;color:#ff8080}
+html.darkmode .sc-soon{background:#3a2f10;color:#eec060}
+html.darkmode .sc-ok{background:#14301e;color:#4ade80}
+html.darkmode th{color:#8a93a0;border-color:#2c323c}
+html.darkmode td{border-color:#242932}
+html.darkmode tr:hover td{background:#1a1e25}
+html.darkmode .iname{color:#dde2ea}
+html.darkmode .inote{color:#7a828e}
+html.darkmode .interval{color:#9aa2ae}
+html.darkmode .st-over{background:#3a1c1c;color:#ff8080}
+html.darkmode .st-soon{background:#3a2f10;color:#eec060}
+html.darkmode .st-ok{background:#14301e;color:#4ade80}
+html.darkmode .lnk{color:#ff8080}
+html.darkmode .cat td{background:#1a1e25;color:#9aa2ae;border-color:#2c323c}
+html.darkmode .ind-svc input{background:#232830;border-color:#3a4150;color:#d5dae2}
+html.darkmode .ind-svc span{color:#7a828e}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Service Interval Dashboard</h1>
+<p class="subtitle">Based on Honda's official maintenance schedule for normal driving conditions</p>
+
+<div class="setup">
+  <div class="stitle">Your Vehicle</div>
+  <div class="row">
+    <div class="fg"><label>Model Year</label><select id="inYear" onchange="onYearChange()">
+      <option value="2003">2003</option><option value="2004">2004</option><option value="2005">2005</option>
+      <option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option>
+      <option value="2009">2009</option><option value="2010">2010</option>
+    </select></div>
+    <div class="fg"><label>Model Code</label><select id="inCode"></select></div>
+  </div>
+</div>
+
+<div class="setup">
+  <div class="stitle">Current Status</div>
+  <div class="row">
+    <div class="fg"><label>Current Mileage</label><input type="number" id="inKm" placeholder="e.g. 85000" min="0" step="500"></div>
+    <div class="fg"><label>Unit</label><select id="inUnit"><option value="km">Kilometres</option><option value="mi">Miles</option></select></div>
+    <div class="fg"><label>Today's Date</label><input type="date" id="inDate"></div>
+  </div>
+</div>
+
+<div class="setup">
+  <div class="stitle">Last Full Service</div>
+  <div class="row">
+    <div class="fg"><label>Mileage at Last Service</label><input type="number" id="inLastKm" placeholder="e.g. 75000" min="0" step="500"></div>
+    <div class="fg"><label>Date of Last Service</label><input type="date" id="inLastDate"></div>
+  </div>
+  <div class="chk-row">
+    <input type="checkbox" id="chkAll" checked onchange="togIndividual()">
+    <label for="chkAll">All items due at last service were completed</label>
+  </div>
+  <p class="note" id="indNote" style="display:none;margin-top:6px">Uncheck this if some items were skipped — you can enter individual service history per item in the table below.</p>
+</div>
+
+<div style="text-align:center;margin:18px 0">
+  <button class="go" onclick="calc()">Check Service</button>
+</div>
+
+<p class="note">Intervals are from Honda's Normal Conditions schedule. Severe conditions (short trips, dusty/cold climates, towing) require more frequent service.</p>
+
+<div id="out">
+  <div class="summary" id="sum"></div>
+  <div class="legend">
+    <div class="legend-item"><div class="ldot ld-over"></div> Overdue</div>
+    <div class="legend-item"><div class="ldot ld-soon"></div> Due within 20% mileage / 2 months</div>
+    <div class="legend-item"><div class="ldot ld-ok"></div> OK</div>
+  </div>
+  <div id="saveNote" class="save-note">&#10003; Saved</div>
+  <table><thead><tr><th>Service Item</th><th>Interval</th><th>Status</th></tr></thead><tbody id="tb"></tbody></table>
+</div>
+</div>
+
+<script>
+var MODELS={
+  "2003":{gen:"mk7",codes:["CL7","CL9","CM1","CM2"]},
+  "2004":{gen:"mk7",codes:["CL7","CL9","CM1","CM2","CN1","CN2"]},
+  "2005":{gen:"mk7",codes:["CL7","CL9","CM1","CM2","CN1","CN2"]},
+  "2006":{gen:"mk7",codes:["CL7","CL9","CM1","CM2","CN1","CN2"]},
+  "2007":{gen:"mk7",codes:["CL7","CL9","CM1","CM2","CN1","CN2"]},
+  "2008":{gen:"mk7",codes:["CL7","CL9","CM1","CM2","CN1","CN2"]},
+  "2009":{gen:"mk8",codes:["CU1","CU2","CU3","CW1","CW2","CW3"]},
+  "2010":{gen:"mk8",codes:["CU1","CU2","CU3","CW1","CW2","CW3"]}
+};
+var DIESEL={CM2:1,CN2:1,CU3:1,CW3:1};
+// [mk7_petrol, mk7_diesel, mk8_petrol, mk8_diesel]
+var PG={
+  oil:["000000000000615","000000000000615","000000000001243","000000000001998"],
+  oilf:["000000000000612","000000000000612","000000000001238","000000000001991"],
+  air:["000000000000598","000000000000598","000000000001213","000000000001976"],
+  spark:["000000000002681","000000000000481","000000000001228",null],
+  belt:["000000000000499","000000000000499","000000000001023","000000000001848"],
+  valve:["000000000002695","000000000002695","000000000001095",null],
+  cool:["000000000002686","000000000002686","000000000001030","000000000002217"],
+  bfl:["000000000000021","000000000000021","000000000000030","000000000000030"],
+  mtf:["000000000000759","000000000000759","000000000002701","000000000002280"],
+  atf:["000000000002759","000000000002759","000000000002783","000000000002422"],
+  bf:["000000000000027","000000000000027","000000000000044","000000000000044"],
+  br:["000000000001015","000000000001015","000000000000045","000000000000045"],
+  park:["000000000001010","000000000001010","000000000000025","000000000000025"],
+  fuel:["000000000001145","000000000001680","000000000001171","000000000002247"],
+  poll:["000000000000112","000000000000112","000000000000124","000000000000124"],
+  idle:["000000000003623","000000000003623","000000000001206","000000000003590"]
+};
+function pgIdx(){var c=document.getElementById('inCode').value;var yr=+document.getElementById('inYear').value;return (yr<=2008)?(DIESEL[c]?1:0):(DIESEL[c]?3:2)}
+function mkLnk(key,txt){var idx=pgIdx();var p=PG[key];if(!p||!p[idx])return'';var yr=document.getElementById('inYear').value;var c=document.getElementById('inCode').value;var g=MODELS[yr].gen;return'<a class="lnk" href="javascript:void(0)" onclick="oProc(\''+g+"','"+p[idx]+"','"+c+"','"+yr+"')\">&rarr; "+txt+'</a>'}
+function oProc(g,p,c,y){var u='./'+g+'/en/html/'+p+'.html?000?'+c+','+y;try{parent.openC(p,'000?'+c+','+y,'',g)}catch(e){try{if(parent&&parent!==window){parent.postMessage({esm:'openc',g:g,p:p,c:c,y:y},'*');return}}catch(e2){}window.open(u,'_blank')}}
+
+// [id,name,type,kmI,moI,note,pgKey,cat,dieselOnly,petrolOnly,firstKm,firstMo]
+var ITEMS=[
+["oil","Engine Oil","R",12500,12,"0W-20 (MK8) or as specified on oil cap.","oil","Engine",0,0,0,0],
+["oilf","Engine Oil Filter","R",25000,24,null,"oilf","Engine",0,0,0,0],
+["air","Air Cleaner Element","R",40000,48,null,"air","Engine",0,0,0,0],
+["spark","Spark Plugs","R",100000,0,"MK7: 40,000 km. Long-life: 100,000 km.","spark","Engine",0,1,0,0],
+["belt","Drive Belt","I",120000,0,"Check cracks and auto-tensioner position.","belt","Engine",0,0,0,0],
+["valve","Valve Clearance","I",60000,0,"Petrol engines only.","valve","Engine",0,1,0,0],
+["idle","Idle Speed","I",120000,0,null,"idle","Engine",0,0,0,0],
+["cool","Engine Coolant","R",100000,60,"Honda Type 2. First: 200k km / 10 yr.","cool","Fluids",0,0,200000,120],
+["bfl","Brake Fluid","R",0,36,"DOT 3 or DOT 4.","bfl","Fluids",0,0,0,0],
+["mtf","Manual Trans. Fluid","R",120000,96,"Honda MTF. M/T models only.","mtf","Fluids",0,0,0,0],
+["atf","Auto Trans. Fluid","R",80000,48,"Honda ATF-Z1. A/T only. First: 120k/8yr.","atf","Fluids",0,0,120000,96],
+["bf","Front Brakes","I",25000,24,"Pad/disc thickness, calipers, leaks.","bf","Brakes",0,0,0,0],
+["br","Rear Brakes","I",25000,24,"Pad/disc thickness, calipers, leaks.","br","Brakes",0,0,0,0],
+["park","Parking Brake","I",25000,24,"Adjustment and operation.","park","Brakes",0,0,0,0],
+["fuel","Fuel Filter","R",100000,0,null,"fuel","Fuel",0,0,0,0],
+["poll","Dust & Pollen Filter","R",30000,12,"Replace sooner in dusty areas.","poll","Cabin",0,0,0,0]
+];
+
+function sKey(){return'esm_svc_'+document.getElementById('inYear').value+'_'+document.getElementById('inCode').value}
+function ldSvc(){try{return JSON.parse(localStorage.getItem(sKey())||'{}')}catch(e){return{}}}
+function svSvc(d){try{localStorage.setItem(sKey(),JSON.stringify(d));var n=document.getElementById('saveNote');n.style.display='block';setTimeout(function(){n.style.display='none'},2000)}catch(e){}}
+
+function onYearChange(){var yr=document.getElementById('inYear').value;var s=document.getElementById('inCode');s.innerHTML='';var c=MODELS[yr].codes;for(var i=0;i<c.length;i++){var o=document.createElement('option');o.value=c[i];o.text=c[i];s.appendChild(o)}restoreGlobal()}
+function togIndividual(){var show=!document.getElementById('chkAll').checked;document.getElementById('indNote').style.display=show?'block':'none';if(document.getElementById('out').style.display==='block')calc()}
+
+function calc(){
+  var rawKm=parseFloat(document.getElementById('inKm').value);
+  var unit=document.getElementById('inUnit').value;
+  var dateStr=document.getElementById('inDate').value;
+  if(!rawKm&&rawKm!==0){alert('Enter your current mileage.');return}
+  var km=(unit==='mi')?rawKm*1.60934:rawKm;
+  var today=dateStr?new Date(dateStr):new Date();
+  var code=document.getElementById('inCode').value;
+  var isD=!!DIESEL[code];
+  var allDone=document.getElementById('chkAll').checked;
+  var globalKm=parseFloat(document.getElementById('inLastKm').value)||0;
+  var globalDate=document.getElementById('inLastDate').value||'';
+  // Persist global last-service values
+  var svc=ldSvc();
+  if(document.getElementById('inLastKm').value||globalDate){svc._global={km:document.getElementById('inLastKm').value,date:globalDate,unit:unit};svSvc(svc)}
+  if(unit==='mi'&&globalKm)globalKm=globalKm*1.60934;
+  var showInd=!allDone;
+
+  var due=0,soon=0,ok=0;
+  var html='';var lastCat='';
+
+  for(var i=0;i<ITEMS.length;i++){
+    var it=ITEMS[i];
+    var id=it[0],name=it[1],type=it[2],kmI=it[3],moI=it[4],note=it[5],pgKey=it[6],cat=it[7],dOnly=it[8],pOnly=it[9],fKm=it[10],fMo=it[11];
+    if(id==='spark'&&+document.getElementById('inYear').value<=2008)kmI=40000;
+    if(pOnly&&isD)continue;
+    if(dOnly&&!isD)continue;
+
+    if(cat!==lastCat){html+='<tr class="cat"><td colspan="3">'+cat+'</td></tr>';lastCat=cat}
+
+    // Determine last service for this item
+    var rec=svc[id]||{};
+    var lastKm,lastDt;
+    if(allDone){lastKm=globalKm;lastDt=globalDate}
+    else{lastKm=(rec.km!==undefined&&rec.km!==''&&!isNaN(+rec.km))?+rec.km:globalKm;lastDt=rec.date||globalDate}
+    if(unit==='mi'&&!allDone&&rec.km)lastKm=rec.km*1.60934;
+
+    var intTxt='';
+    if(kmI>0&&moI>0)intTxt=fK(kmI,unit)+' / '+moI+' mo';
+    else if(kmI>0)intTxt=fK(kmI,unit);
+    else if(moI>0)intTxt='Every '+moI+' months';
+
+    var cls='',stxt='',detail='';
+    var hasKmData=(lastKm>0||lastKm===0);
+    var hasDateData=(lastDt&&lastDt.length>0);
+
+    // Effective intervals (handle first-then-subsequent)
+    var eKm=(fKm>0&&lastKm<fKm)?fKm:kmI;
+    var eMo=(fMo>0&&(!hasDateData||mSince(lastDt,today)<fMo))?fMo:moI;
+
+    // Mileage calculation
+    if(kmI>0&&hasKmData){
+      var nextKm=lastKm+eKm;
+      var rem=nextKm-km;
+      var thresh=eKm*0.20;
+      detail='Next at '+fK(nextKm,unit);
+      if(rem<=0){cls='st-over';stxt='OVERDUE';detail+=' ('+fK(Math.abs(rem),unit)+' over)';due++}
+      else if(rem<=thresh){cls='st-soon';stxt='Due soon';detail+=' ('+fK(rem,unit)+' remaining)';soon++}
+      else{cls='st-ok';stxt='OK';detail+=' ('+fK(rem,unit)+' remaining)';ok++}
+    }else if(kmI>0){
+      stxt='\u2014';detail='Enter last service mileage';ok++
+    }
+
+    // Time calculation
+    if(moI>0&&hasDateData){
+      var ms=mSince(lastDt,today);
+      var remMo=eMo-ms;
+      var nextDtStr=mFromDate(lastDt,eMo);
+      if(remMo<=0){
+        if(cls!=='st-over'){if(cls==='st-ok')ok--;if(cls==='st-soon')soon--;cls='st-over';stxt='OVERDUE';due++}
+        detail='Was due '+nextDtStr+' ('+Math.abs(Math.round(remMo))+' mo ago)';
+      }else if(remMo<=2){
+        if(cls==='st-ok'){ok--;cls='st-soon';stxt='Due soon';soon++}
+        if(kmI===0)detail='Due '+nextDtStr+' ('+Math.round(remMo)+' mo)';
+      }else{
+        if(kmI===0){cls='st-ok';stxt='OK';detail='Due '+nextDtStr+' ('+Math.round(remMo)+' mo)';ok++}
+      }
+    }else if(moI>0&&kmI===0){
+      stxt='\u2014';detail='Enter last service date';ok++
+    }
+
+    var link=mkLnk(pgKey,type==='R'?'View procedure':'View inspection');
+
+    html+='<tr><td>';
+    html+='<span class="iname">'+name+'</span> <span style="color:#bbb;font-size:11px">'+(type==='R'?'Replace':'Inspect')+'</span>';
+    if(note)html+='<div class="inote">'+note+'</div>';
+    if(link)html+='<div>'+link+'</div>';
+    if(showInd){
+      html+='<div class="ind-svc">';
+      html+='<span>Last:</span>';
+      html+='<input type="number" placeholder="'+(unit==='mi'?'miles':'km')+'" value="'+String(rec.km===undefined?'':rec.km).replace(/[^0-9.]/g,'')+'" onchange="uSvc(\''+id+'\',\'km\',this.value)" style="width:90px">';
+      html+='<input type="date" value="'+(/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(rec.date||'')?rec.date:'')+'" onchange="uSvc(\''+id+'\',\'date\',this.value)" style="width:130px">';
+      html+='</div>';
+    }
+    html+='</td>';
+    html+='<td class="interval">'+intTxt+'</td>';
+    html+='<td>'+(cls?'<span class="st '+cls+'">'+stxt+'</span>':'<span style="color:#aaa">'+stxt+'</span>')+'<div class="inote">'+detail+'</div></td>';
+    html+='</tr>';
+  }
+
+  document.getElementById('tb').innerHTML=html;
+  document.getElementById('sum').innerHTML=
+    '<div class="sc sc-over"><div class="n">'+due+'</div><div class="l">Overdue</div></div>'+
+    '<div class="sc sc-soon"><div class="n">'+soon+'</div><div class="l">Due Soon</div></div>'+
+    '<div class="sc sc-ok"><div class="n">'+ok+'</div><div class="l">OK</div></div>';
+  document.getElementById('out').style.display='block';
+}
+
+function uSvc(id,field,val){var d=ldSvc();if(!d[id])d[id]={};
+  if(field==='km'){var f=parseFloat(val);if(isNaN(f)){delete d[id].km}else{d[id].km=f}}
+  else d[id].date=val;svSvc(d);calc()}
+function fK(km,u){if(u==='mi')return Math.round(km/1.60934).toLocaleString()+' mi';return Math.round(km).toLocaleString()+' km'}
+function mSince(ds,now){var d=new Date(ds);return(now.getFullYear()-d.getFullYear())*12+(now.getMonth()-d.getMonth())}
+function mFromDate(ds,mo){var d=new Date(ds);d.setMonth(d.getMonth()+mo);return d.toLocaleDateString('en-GB',{month:'short',year:'numeric'})}
+
+function restoreGlobal(){var d=ldSvc();var g=d._global||{};
+  document.getElementById('inLastKm').value=(g.km!==undefined&&g.km!==null)?g.km:'';
+  document.getElementById('inLastDate').value=g.date||'';
+  if(g.unit==='mi'||g.unit==='km')document.getElementById('inUnit').value=g.unit}
+
+document.getElementById('inDate').value=new Date().toISOString().split('T')[0];
+onYearChange();
+restoreGlobal();
+document.addEventListener('keyup',function(e){if(e.key==='Enter')calc()});
+// Restore when model changes too
+document.getElementById('inCode').addEventListener('change',restoreGlobal);
+</script>
+<script>
+(function(){try{
+  function T(d){document.documentElement.classList.toggle('darkmode',!!d)}
+  window.addEventListener('message',function(ev){var d=ev.data;if(d&&d.esm==='theme')T(d.dark)});
+  try{parent.postMessage({esm:'themehello'},'*')}catch(e){}
+}catch(e){}})();
+</script>
+</body>
+</html>

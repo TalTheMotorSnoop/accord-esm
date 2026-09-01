@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Honda Accord ESM — Welcome</title>
+<link href="./fonts/fonts.css" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Outfit',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;background:#fff;color:#2a2a2a;line-height:1.7;padding:40px 50px 60px;max-width:820px;margin:0 auto}
+h1{font-size:26px;font-weight:700;color:#111;margin-bottom:4px;letter-spacing:-0.5px}
+.subtitle{font-size:14px;color:#888;margin-bottom:32px}
+.credit{font-size:13px;color:#666;margin-bottom:36px;padding:14px 18px;background:#f8f8f8;border-left:3px solid #cc0000;border-radius:0 6px 6px 0}
+.credit strong{color:#333}
+h2{font-size:17px;font-weight:600;color:#cc0000;margin:32px 0 14px;letter-spacing:-0.2px}
+h2:first-of-type{margin-top:0}
+p{font-size:14px;margin-bottom:12px;color:#444}
+.steps{list-style:none;counter-reset:step;margin:0 0 12px 0;padding:0}
+.steps li{counter-increment:step;font-size:14px;color:#444;padding:8px 0 8px 40px;position:relative;border-bottom:1px solid #f0f0f0}
+.steps li:last-child{border-bottom:none}
+.steps li::before{content:counter(step);position:absolute;left:0;top:8px;width:26px;height:26px;background:#fef2f2;color:#cc0000;border-radius:50%;font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center}
+.tag{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:3px;vertical-align:middle}
+.tag-fix{background:#fef2f2;color:#cc0000}
+.tag-new{background:#f0fdf4;color:#16a34a}
+.tag-improve{background:#eff6ff;color:#2563eb}
+.changelog{list-style:none;margin:0;padding:0}
+.changelog li{font-size:13.5px;color:#444;padding:7px 0;border-bottom:1px solid #f5f5f5}
+.changelog li:last-child{border-bottom:none}
+.tip{background:#fffbeb;border:1px solid #fde68a;border-radius:6px;padding:12px 16px;font-size:13px;color:#92400e;margin:20px 0}
+.tip strong{color:#78350f}
+.kbd{display:inline-block;background:#f3f4f6;border:1px solid #d1d5db;border-radius:3px;padding:1px 6px;font-family:monospace;font-size:12px;color:#374151;vertical-align:middle}
+.footer{margin-top:40px;padding-top:20px;border-top:1px solid #eee;font-size:12px;color:#bbb;text-align:center}
+#resume{background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:14px 18px;margin:0 0 20px}
+.resume-t{font-weight:700;font-size:13px;color:#1e40af;margin-bottom:8px}
+.rchip{display:inline-block;font-size:12.5px;font-weight:500;color:#1d4ed8;border:1px solid #bfdbfe;border-radius:14px;padding:3px 12px;text-decoration:none;background:#fff}
+/* ── dark mode (driven by the launcher's theme over the bridge) ── */
+html.darkmode body{background:#14171c;color:#c8cdd6}
+html.darkmode h1{color:#e8ebf0}
+html.darkmode .subtitle{color:#7a828e}
+html.darkmode .credit{background:#1b1f26;color:#9aa2ae}
+html.darkmode .credit strong{color:#d8dce2}
+html.darkmode h2{color:#e05555}
+html.darkmode p{color:#aab1bc}
+html.darkmode .steps li{color:#aab1bc;border-color:#242932}
+html.darkmode .steps li::before{background:#3a1c1c}
+html.darkmode .tag-fix{background:#3a1c1c;color:#ff8080}
+html.darkmode .tag-new{background:#14301e;color:#4ade80}
+html.darkmode .tag-improve{background:#16233a;color:#7ab0ff}
+html.darkmode .changelog li{color:#aab1bc;border-color:#20252d}
+html.darkmode .tip{background:#33290f;border-color:#5a4a1a;color:#d8b860}
+html.darkmode .tip strong{color:#ecd080}
+html.darkmode .kbd{background:#232830;border-color:#3a4150;color:#c8d0da}
+html.darkmode .footer{border-color:#242932;color:#5a626e}
+html.darkmode #resume{background:#151f2c;border-color:#28405e}
+html.darkmode .resume-t{color:#7ab0ff}
+html.darkmode .rchip{background:#1a2430;border-color:#2a3f5a;color:#8ab8ff}
+html.darkmode a{color:#7ab0ff}
+.clog-h{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:#999;margin:18px 0 2px}
+html.darkmode .clog-h{color:#6a7280}
+</style>
+</head>
+<body>
+
+<h1>Honda Accord Electronic Service Manual</h1>
+<p class="subtitle">7th Generation (CL/CM/CN, 2003–2008) &amp; 8th Generation (CU/CW, 2009–2010)</p>
+
+<div class="credit">
+Modernised and combined into one program for the community by <strong>Tal</strong>.
+<br>These are the official Honda factory workshop manuals — the same documentation dealership technicians used — now working in any modern browser.
+</div>
+
+<div style="margin:-18px 0 32px;text-align:center"><a class="rchip" href="javascript:void(0)" onclick="try{parent.postMessage({esm:'tour'},'*')}catch(e){}">🎓 Tutorial &mdash; a guided walk through every control</a></div>
+
+
+<div id="resume" style="display:none">
+<div class="resume-t">Jump back in</div>
+<div id="resumeRow" style="display:flex;gap:8px;flex-wrap:wrap"></div>
+</div>
+<script>
+(function(){
+try{
+  var row=document.getElementById('resumeRow'),box=document.getElementById('resume');
+  function chip(label,fn){var a=document.createElement('a');a.textContent=label;a.href='javascript:void(0)';
+    a.className='rchip';
+    a.onclick=function(){try{fn()}catch(e){}};row.appendChild(a)}
+  function send(m){try{parent.postMessage(m,'*')}catch(e){}}
+  window.addEventListener('message',function(ev){var d=ev.data;if(!d||!d.esm)return;
+    if(d.esm==='theme'){document.documentElement.classList.toggle('darkmode',!!d.dark);return}
+    if(d.esm!=='sessdata')return;
+    document.documentElement.classList.toggle('darkmode',!!d.dark);
+    if(box.getAttribute('data-done'))return;box.setAttribute('data-done','1');
+    var n=0;
+    if(d.sess&&d.sess.url&&d.sess.title){chip('\u23EF Continue: '+d.sess.title,function(){send({esm:'sessopen'})});n++}
+    if(d.job&&d.job.id){chip('\uD83D\uDD27 Job: '+d.job.name,function(){send({esm:'jobgo',id:d.job.id})});n++}
+    if(d.sess&&d.sess.kw){chip('\uD83D\uDD0D Search again: \u201C'+d.sess.kw+'\u201D',function(){send({esm:'guidego',kw:d.sess.kw})});n++}
+    if(n>0)box.style.display='block'});
+  send({esm:'welcomehello'});
+}catch(e){}
+})();
+</script>
+<h2>How to Use This Manual</h2>
+<ol class="steps">
+  <li><strong>Pick your car</strong> — use the <em>Year</em> and <em>Code</em> dropdowns on the left. The code is your specific model (e.g. CL7 = 2.0 i-VTEC Saloon, CM2 = 2.2 i-CDTi Tourer). If you're not sure, it's on your V5/logbook next to "Type".</li>
+  <li><strong>Choose Shop Manual or Body Repair</strong> — Shop Manual covers everything mechanical and electrical (engine, gearbox, brakes, suspension, wiring, etc). Body Repair covers panel removal, structural dimensions, and bodywork procedures.</li>
+  <li><strong>Browse or search</strong> — expand the system/component tree to find what you need, or type a keyword like "timing chain", "brake pad", or "alternator" into the search box and press Enter. Trouble codes work too — type a code like P0301 straight into the search box.</li>
+  <li><strong>Click a result</strong> — the full procedure loads in this area, with step-by-step instructions, diagrams, torque specs, and wiring schematics.</li>
+  <li><strong>Zoom into diagrams</strong> — click the magnifying glass icon on any wiring diagram or exploded view to open a full-size zoomable version in a new window.</li>
+</ol>
+
+<h2>What's Changed vs. the Originals</h2>
+<div style="font-size:13px;font-weight:700;color:#16a34a;margin:0 0 4px">New in the V2 update</div>
+<div class="clog-h">Finding things</div>
+<ul class="changelog">
+  <li><span class="tag tag-new">New</span>&ensp;<strong>Search looks inside every page</strong> — not just titles. Pages whose text mentions your keywords appear in a "more in page contents" section.</li>
+  <li><span class="tag tag-new">New</span>&ensp;<strong>Smarter search box</strong> — autocompletes from the manual's own vocabulary as you type, catches typos with "did you mean", and translates British English automatically (windscreen&rarr;windshield, tyre, bonnet, boot, handbrake, gearbox&hellip;).</li>
+  <li><span class="tag tag-new">New</span>&ensp;<strong>Both manuals searched at once</strong> — Shop Manual searches also check the Body Repair manual (and vice versa), with matches in their own section.</li>
+  <li><span class="tag tag-new">New</span>&ensp;<strong>Better results box</strong> — pin results to keep them visible, keyboard &uarr;/&darr;/Enter, sticky result count, your last-opened result stays marked, and the box is resizable.</li>
+  <li><span class="tag tag-improve">Improved</span>&ensp;<strong>Tree browsing</strong> — a filter box instantly narrows the System/Component tree; selecting a folder splits results into "in that system" and "found elsewhere" with a removable filter chip.</li>
+  <li><span class="tag tag-new">New</span>&ensp;<strong>Trouble codes in search</strong> — type a code like P0301 into the search box: it decodes what the code means and finds every page covering it on your model.</li>
+</ul>
+<div class="clog-h">Working on the car</div>
+<ul class="changelog">
+  <li><span class="tag tag-new">New</span>&ensp;<strong>Job Cards</strong> — a workspace per vehicle: name, reg, mileage, a tick-off list of attached procedures, and job notes. Activating a card switches to its model; duplicate a card for the next car.</li>
+  <li><span class="tag tag-new">New</span>&ensp;<strong>Split View</strong> — two pages side by side: steps on the left, wiring diagram on the right. Open anything into the right pane with &#8677;, swap sides with &#8646;.</li>
+  <li><span class="tag tag-new">New</span>&ensp;<strong>Page Notes</strong> — stick your own margin notes on any page; they reappear whenever you return, are listed under "My Notes", and show up in search results.</li>
+  <li><span class="tag tag-new">New</span>&ensp;<strong>Common Jobs page</strong> — a curated index of Honda's own procedures for the jobs owners do most (oil, brakes, filters, plugs, bulbs, safe jacking&hellip;).</li>
+  <li><span class="tag tag-new">New</span>&ensp;<strong>Unit Converter</strong> — mm&harr;inches, Nm&harr;lb&middot;ft, bar&harr;psi, litres&harr;quarts, &deg;C&harr;&deg;F in a floating panel.</li>
+</ul>
+<div class="clog-h">Reading procedures</div>
+<ul class="changelog">
+  <li><span class="tag tag-new">New</span>&ensp;<strong>Your keywords highlighted inside pages</strong> opened from search, with a counter to step between matches.</li>
+  <li><span class="tag tag-new">New</span>&ensp;<strong>In-page glossary</strong> — Honda acronyms (ABS, A/T, VSA&hellip;) get a dotted underline; click for a plain-English definition. Add your own terms too.</li>
+  <li><span class="tag tag-new">New</span>&ensp;<strong>Text size controls</strong> — A&minus;/A+ scales procedure pages (diagrams included), remembered between sessions.</li>
+  <li><span class="tag tag-improve">Improved</span>&ensp;<strong>Diagram zoom window</strong> — scroll-wheel zoom, drag to pan, double-click to reset.</li>
+</ul>
+<div class="clog-h">Everyday</div>
+<ul class="changelog">
+  <li><span class="tag tag-new">New</span>&ensp;<strong>A seventh theme: Fable</strong> — a lamplit-library look in amber, copper and parchment.</li>
+  <li><span class="tag tag-improve">Improved</span>&ensp;<strong>Cleaner Welcome page</strong> — the safety disclaimer now appears as a confirmation on every launch (tick to continue) instead of filling the home page.</li>
+  <li><span class="tag tag-new">New</span>&ensp;<strong>Guided tour</strong> — a spotlight walkthrough of every control, offered on first launch and rerunnable from the Tutorial button on the Home page.</li>
+  <li><span class="tag tag-new">New</span>&ensp;<strong>Continue where you left off</strong> — your model, last page and last search are remembered; the Welcome page offers one-click returns.</li>
+  <li><span class="tag tag-new">New</span>&ensp;<strong>Backup &amp; Restore</strong> — export all your pins, notes, jobs and settings to one file; import it on any machine. Perfect for USB-stick users.</li>
+  <li><span class="tag tag-improve">Improved</span>&ensp;<strong>Interface polish</strong> — Service/Trims/Guides live at the top of the sidebar; the sidebar is resizable; browser tabs show the open procedure; multiple tabs stay in sync; Esc closes panels; the Welcome, Service, Trims and Guides pages all follow your theme.</li>
+  <li><span class="tag tag-fix">Fix</span>&ensp;<strong>Full features from a plain folder or USB stick</strong> — modern browsers silently blocked several features when the ESM was opened directly; everything now works either way.</li>
+  <li><span class="tag tag-fix">Fix</span>&ensp;<strong>Dozens of stability and correctness fixes</strong> throughout — search edge cases, theme glitches, data safety on import, and more.</li>
+</ul>
+<details style="margin-top:16px"><summary style="cursor:pointer;font-size:13px;color:#888;font-weight:600">V1 — the original modernisation (17 changes, click to expand)</summary>
+<ul class="changelog" style="margin-top:8px">
+  <li><span class="tag tag-fix">Fix</span>&ensp;The originals only worked in Internet Explorer, which Microsoft shut down in 2023. Now works in <strong>Chrome, Firefox, Edge, Safari</strong> — any browser, any operating system, including phones and tablets.</li>
+  <li><span class="tag tag-fix">Fix</span>&ensp;The browser-check that would force-close the window if you weren't running IE has been removed.</li>
+  <li><span class="tag tag-fix">Fix</span>&ensp;Wiring diagram zoom (the magnifying glass) now works properly — the originals used Internet Explorer–only technologies that broke years ago.</li>
+  <li><span class="tag tag-fix">Fix</span>&ensp;Cross-references between pages (e.g. "see Section 12-B") now work correctly instead of throwing errors.</li>
+  <li><span class="tag tag-new">New</span>&ensp;Both generations (Mk7 and Mk8) are combined into <strong>one program</strong>. Just change the year and the correct manual loads.</li>
+  <li><span class="tag tag-new">New</span>&ensp;Six interface themes: Modern, Classic, Sakura, Mint, Wildfire, and Aurora. Dark themes include dark content pages for garage use.</li>
+  <li><span class="tag tag-new">New</span>&ensp;Bookmarks, browsing history, back/forward navigation, and recently viewed pages.</li>
+  <li><span class="tag tag-new">New</span>&ensp;Quick DTC lookup — filter search results to diagnostic trouble codes only. (Folded into the main search box in V2.)</li>
+  <li><span class="tag tag-new">New</span>&ensp;Shareable URL links to specific procedures.</li>
+  <li><span class="tag tag-new">New</span>&ensp;Honda acronym glossary built into the sidebar.</li>
+  <li><span class="tag tag-new">New</span>&ensp;Keyboard shortcuts for power users.</li>
+  <li><span class="tag tag-new">New</span>&ensp;Service Interval Dashboard — enter your mileage and car age to see what maintenance is due.</li>
+  <li><span class="tag tag-new">New</span>&ensp;Trim Level Guide — see standard equipment, missing features, and optional extras for every trim level.</li>
+  <li><span class="tag tag-new">New</span>&ensp;Wire Colour Decoder — floating panel with all 19 Honda wire colour abbreviations and swatches.</li>
+  <li><span class="tag tag-improve">Improved</span>&ensp;Model code dropdown shows what each code actually means (e.g. "CW3 — 2.2 i-DTEC Tourer").</li>
+  <li><span class="tag tag-improve">Improved</span>&ensp;Mobile-friendly layout with touch-sized controls.</li>
+  <li><span class="tag tag-improve">Improved</span>&ensp;No installation required. No internet connection needed. Just extract the zip and open HONDAESM.HTML.</li>
+</ul>
+</details>
+
+<h2>Models Covered</h2>
+<p><strong>7th Generation (Mk7), 2003–2008:</strong> CL7 (2.0 i-VTEC Saloon), CL9 (2.4 i-VTEC Saloon), CM1 (2.0 i-VTEC Tourer), CM2 (2.2 i-CDTi Tourer), CN1 (2.0 i-VTEC Tourer, facelift), CN2 (2.2 i-CDTi Tourer, facelift).</p>
+<p><strong>8th Generation (Mk8), 2009–2010:</strong> CU1 (2.0 i-VTEC Saloon), CU2 (2.4 i-VTEC Saloon), CU3 (2.2 i-DTEC Saloon), CW1 (2.0 i-VTEC Tourer), CW2 (2.4 i-VTEC Tourer), CW3 (2.2 i-DTEC Tourer).</p>
+
+<p style="font-size:12px;color:#999;line-height:1.7;margin-top:30px"><strong>Copyright:</strong> All technical content, diagrams, schematics, specifications, and procedures are the intellectual property of Honda Motor Co., Ltd. This project only modernises the interface for use in current browsers — no Honda content has been altered, added, or removed. Honda, Accord, i-VTEC, i-DTEC, VTEC, and all associated trademarks are the property of Honda Motor Co., Ltd.</p>
+
+<div class="footer">
+  Honda Electronic Service Manual &middot; Content &copy; Honda Motor Co., Ltd. &middot; Interface modernisation by Tal
+</div>
+
+</body>
+</html>

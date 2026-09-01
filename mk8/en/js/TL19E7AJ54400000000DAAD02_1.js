@@ -1,0 +1,31 @@
+with(document) {
+write("<div id=\"group2\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:543px;\">");
+write("<div id=\"rect2\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:543px;\">");
+write("<img id=\"img2\" name=\"PrtImgId\" src=\"../img/TL19E7AJ54400000000DAAD02.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:543px;border-color:#ffffff\">");
+write("<p id=\"p2_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:777px;top:69px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>UPPER RUBBER DAM<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:752px;top:461px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>SIDE RUBBER DAM, 2<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:31px;top:413px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>LOWER RUBBER DAM<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:146px;top:456px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>REAR WINDOW<br><a href=\"javascript:CtsProc('0','000000000003016','i000')\"></b>Replacement,</a><br> in the Shop Manual,<br> P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p2_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:666px;top:17px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>UPPER CLIP, 2<br>(Self-adhesive-type, glass side)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:37px;top:35px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>FASTENER, 2<br>(Self-adhesive-type, glass side)<br>(Required for replacement or reinstallation)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:6px;top:246px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>FASTENER, 2<br>(Self-adhesive-type, body side)<br>(Required for replacement or<br>reinstallation)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:361px;top:498px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>i-DTEC STICKER<br><a href=\"javascript:CtsProc('0','000000000003036','i000')\"></b>Replacement,</a><br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

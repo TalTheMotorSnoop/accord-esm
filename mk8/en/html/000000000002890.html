@@ -1,0 +1,488 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E5ZK70900000000BBAT30
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+How to Troubleshoot the LKAS
+</div>
+<div>
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG01">
+</a>
+<div class="servinfosub_title">
+<b>
+LKAS Indicator (Orange)
+</b>
+</div>
+<div>
+When the LKAS system is OK, the LKAS indicators come on for about 2 seconds after turning the ignition switch to ON (II), then goes off.
+</div>
+<div>
+When the LKAS system detects a problem while in operating, the LKAS system stops control, and the LKAS indicator comes on and stays on.
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+The EPS control unit does only the malfunction which related to LKAS system with the LKAS indicator, and the malfunction which related to EPS does a caution with the EPS indicator and LKAS indicator.
+</div>
+</li>
+<li>
+<div>
+The LKAS system is communicating with the ECM/PCM, the VSA modulator control unit and the gauge control module by F-CAN. If a connected unit has malfunction, the LKAS system does not operate. In this case, both LKAS indicator and connected unit indicator come on and stay on (expect the gauge control module).
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008003','1');">
+<img src="../tn/TL19E5ZK70900000000BBAD07.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E5ZK70900000000BBAD07_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG02">
+</a>
+<div class="servinfosub_title">
+<b>
+LKAS Activation Indicator (Green)
+</b>
+</div>
+<div>
+If the LKAS system is normal, the indicators come on with the main switch is ON, and goes off with the main switch is OFF.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG03">
+</a>
+<div class="servinfosub_title">
+<b>
+Self-diagnostic Function
+</b>
+</div>
+<div>
+The LKAS system has a self-diagnostic function. If the self-diagnostic function detects a malfunction, the LKAS system stop control, turn on the LKAS indicator, and stores DTCs.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG04">
+</a>
+<div class="servinfosub_title">
+<b>
+Multi-information Display (MID) Indication
+</b>
+</div>
+<div>
+If the LKAS system is normal, the LKAS indicate this operation on the multi-information display (MID) with the main switch is ON. When the system stops with the malfunction during LKAS control, it makes the LKAS OFF indicator come on.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG08">
+</a>
+<div class="servinfosub_title">
+<b>
+LKAS Camera Aiming
+</b>
+</div>
+<div>
+If the LKAS camera is removed or replacement, do the LKAS camera aiming. If incomplete or failure of aiming stores DTC, the LKAS activation indicator come on.
+</div>
+<div>
+There are Static Aiming and Dynamic Aming, and they need to be done in that order.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG09">
+</a>
+<div class="servinfosub_title">
+<b>
+LKAS Camera
+</b>
+</div>
+<div>
+LKAS camera sends the lane image which was gotten by the LKAS camera to the LKAS control unit.
+</div>
+<div>
+Also, it is equipped with an error detection feature and it sends error data to the LKAS control unit when detecting a malfunction.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG10">
+</a>
+<div class="servinfosub_title">
+<b>
+EPS Control Unit
+</b>
+</div>
+<div>
+When the malfunction of the EPS control occurs during the LKAS system operation, it makes EPS, LKAS indicators come on. When the malfunction of the LKAS control relations, it doesn't indicate the EPS indicator, and indicate of LKAS indicator and the LKAS control of EPS is canceled. After LKAS cancellation, depending on the malfunction which detected usual EPS control by the doing, it continues and it stops assist. When the EPS indicator come on during LKAS system operation, check the DTC of EPS, and when the LKAS indicator come on, check the LKAS system DTC and it does a trouble diagnosis.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG11">
+</a>
+<div class="servinfosub_title">
+<b>
+CAN Communication
+</b>
+</div>
+<div>
+LKAS system is composed of LKAS control unit, ACC unit, LKAS camera and LKAS control unit and ACC unit are sending and receiving a dater by the other control system inter-unit and the multiplex-communication system which used F-CAN (Between LKAS control unit and LKAS camera, special CAN communicates).
+</div>
+<div>
+If there is a communication malfunction between the system which is related with ACC sysytem, LKAS system does not do LKAS contol and ACC system even if it is normal. Other system indicator and the LKAS indicator comes on.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG12">
+</a>
+<div class="servinfosub_title">
+<b>
+How to Retrieve DTCs
+</b>
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+With the ignition switch to LOCK (0), connect the HDS to the data link connector (DLC) (A) under the left side of the dashboard.
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Turn the ignition switch to ON (II), and follow the prompts on the HDS to display the DTC(s) on the screen. After determining the DTC, refer to the DTC Troubleshooting.
+</div>
+<div>
+NOTE: See the HDS Help menu for specific instructions.
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Make sure the HDS communicates with the vehicle and the LKAS unit. 
+<a href="javascript:CtsProc('0','000000000001600','i000')">
+If it does not communicate, troubleshoot the DLC circuit.
+</a>
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Follow the prompts on the HDS to display the DTC(s) on the screen. After determining the DTC, refer to the DTC troubleshooting.
+</div>
+<div>
+NOTE: See the HDS Help menu for specific instructions.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008011','1');">
+<img src="../tn/TL19E5ZK70900000000BBAD14.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E5ZK70900000000BBAD14_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG13">
+</a>
+<div class="servinfosub_title">
+<b>
+How to Clear DTCs
+</b>
+</div>
+<div>
+NOTE: You cannot clear the DTCs manually.
+</div>
+<a name="i210">
+</a>
+<ol>
+<li value="1">
+<div>
+With the ignition switch to LOCK (0), connect the HDS to the data link connector (DLC) (A) under the left side of the dashboard.
+</div>
+</li>
+</ol>
+<a name="i220">
+</a>
+<ol>
+<li value="2">
+<div>
+Turn the ignition switch to ON (II), and clear the DTC(s) by following the screen prompts on the HDS.
+</div>
+<div>
+NOTE: See the HDS Help menu for specific instructions.
+</div>
+</li>
+</ol>
+<a name="i230">
+</a>
+<ol>
+<li value="3">
+<div>
+Make sure the HDS communicates with the vehicle and the LKAS unit. 
+<a href="javascript:CtsProc('0','000000000001600','i000')">
+If it does not communicate, troubleshoot the DLC circuit.
+</a>
+</div>
+</li>
+</ol>
+<a name="i240">
+</a>
+<ol>
+<li value="4">
+<div>
+Clear the DTC(s) by following the screen prompts on the HDS.
+</div>
+<div>
+NOTE: See the HDS Help menu for specific instructions.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008012','1');">
+<img src="../tn/TL19E5ZK70900000000BBAD15.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E5ZK70900000000BBAD15_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

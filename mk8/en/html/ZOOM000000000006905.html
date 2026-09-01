@@ -1,0 +1,1458 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E4PE10411619605MAAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+function jsResetImage() {
+	_prResetPosition();
+	_prResetImage();
+	return;
+}
+function jsResizeImage(rate) {
+	_prResizeImage(rate);
+	return;
+}
+var z,x,y;
+var gImageGroupList_	= new Array;
+var gIdx_				= 0;
+function _prImageGroupStruct(group_size,rect_size,img_size,p_tag,tp_obj,bl_obj,ul_obj) {
+	this.group		= group_size;
+	this.rect		= rect_size;
+	this.img		= img_size;
+	this.p			= p_tag;
+	this.tp			= tp_obj;
+	this.bl			= bl_obj;
+	this.ul			= ul_obj;
+}
+function _prSizeStruct(newObj,newWidth,newHeight) {
+	this.obj		= newObj;
+	this.width		= newWidth;
+	this.height		= newHeight;
+}
+function _prPTagStruct(newObj,newLeft,newTop,newFontSize) {
+	this.obj		= newObj;
+	this.left		= newLeft;
+	this.top		= newTop;
+	this.fontsize	= newFontSize;
+}
+function _prLineTagStruct(newObj,newFromx,newFromy, newTox, newToy) {
+	this.obj			= newObj;
+	this.fromx		= newFromx;
+	this.fromy		= newFromy;
+	this.tox		= newTox;
+	this.toy		= newToy;
+}
+function _prTPTagStruct(newObj,newFontSize) {
+	this.obj		= newObj;
+	this.fontsize	= newFontSize;
+}
+function _prInitImageInfo(rate) {
+	var endFlag = false;
+	gDefaultRate_ = rate;
+	gIdx_ = 0;
+	var save_i;
+	var iii = 100;
+	for(var i = 1; !endFlag; i++){
+		save_i = i;
+		var groupObject = document.getElementById("group" + i);
+		if(groupObject == null){
+			groupObject = document.getElementById("group" + iii);
+			if(groupObject == null){
+				groupObject = document.getElementById("group" + i + "_noresize");
+				if(groupObject == null){
+					endFlag = true;	
+					break;
+				}
+				continue;
+			}
+			else {
+				i = iii
+				iii++;
+			}
+		}
+		var groupWidth	= _prRemoveUnit(groupObject.style.width);
+		var groupHeight	= _prRemoveUnit(groupObject.style.height);
+		var rectObject	= document.getElementById("rect" + i);
+		var rectWidth	= null;
+		var rectHeight	= null;
+		if(rectObject != null){
+			rectWidth	= _prRemoveUnit(rectObject.style.width);
+			rectHeight	= _prRemoveUnit(rectObject.style.height);
+		}
+		var imgObject	= document.getElementById("img" + i);
+		var imgWidth	= null;
+		var imgHeight	= null;
+		if(imgObject != null){
+			imgWidth	= _prRemoveUnit(imgObject.style.width);
+			imgHeight	= _prRemoveUnit(imgObject.style.height);
+		}
+		var pObject		= null;
+		for(var j = 1; !endFlag; j++){
+			var pTag = document.getElementById("p" + i + "_" + j);
+			if(pTag == null){
+				if(j == 1){
+					endFlag = true;
+				}
+				break;
+			}
+			if(j == 1){
+				pObject		= new Array();
+			}
+			pObject[j-1] = new _prPTagStruct(
+									pTag,
+									_prRemoveUnit(pTag.style.left),
+									_prRemoveUnit(pTag.style.top),
+									_prRemoveUnit(pTag.style.fontSize)
+								);
+		}
+		endFlag = false;
+		var tpObject		= null;
+		for(var j = 1; !endFlag; j++){
+			var tpTag = document.getElementById("tp" + i + "_" + j);
+			if(tpTag == null){
+				if(j == 1){
+					endFlag = true;  
+				}
+				break;
+			}
+			if(j == 1){
+				tpObject		= new Array();
+			}
+			tpObject[j-1] = new _prTPTagStruct(
+									tpTag,
+									_prRemoveUnit(tpTag.style.fontSize)
+								);
+		}
+		endFlag = false;
+		var blObject		= null;
+		for(var j = 1; !endFlag; j++){
+			var baseline = document.getElementById("bl" + i + "_" + j);
+			if(baseline == null){
+				if(j == 1){
+					endFlag = true;  
+				}
+				break;
+			}
+			if(j == 1){
+				blObject		= new Array();
+			}
+			blObject[j-1] = new _prLineTagStruct(
+									baseline,
+									(baseline.getAttribute('from')+'').substring(0,(baseline.getAttribute('from')+'').indexOf(",")),
+									(baseline.getAttribute('from')+'').substring((baseline.getAttribute('from')+'').indexOf(",")+1,(baseline.getAttribute('from')+'').length),
+									(baseline.getAttribute('to')+'').substring(0,(baseline.getAttribute('to')+'').indexOf(",")),
+									(baseline.getAttribute('to')+'').substring((baseline.getAttribute('to')+'').indexOf(",")+1, (baseline.getAttribute('to')+'').length)
+								);
+		}
+		endFlag = false;
+		var ulObject		= null;
+		for(var j = 1; !endFlag; j++){
+			var underline = document.getElementById("ul" + i + "_" + j);
+			if(underline == null){
+				if(j == 1){
+					endFlag = true;  
+				}
+				break;
+			}
+			if(j == 1){
+				ulObject		= new Array();
+			}
+			ulObject[j-1] = new _prLineTagStruct(
+									underline,
+									(underline.getAttribute('from')+'').substring(0,(underline.getAttribute('from')+'').indexOf(",",0)),
+									(underline.getAttribute('from')+'').substring((underline.getAttribute('from')+'').indexOf(",")+1,(underline.getAttribute('from')+'').length),
+									(underline.getAttribute('to')+'').substring(0,(underline.getAttribute('to')+'').indexOf(",")),
+									(underline.getAttribute('to')+'').substring((underline.getAttribute('to')+'').indexOf(",")+1, (underline.getAttribute('to')+'').length)
+								);
+		}
+		endFlag = false;
+		gImageGroupList_[gIdx_] = new _prImageGroupStruct (
+			new _prSizeStruct(groupObject,groupWidth,groupHeight),
+			new _prSizeStruct(rectObject,rectWidth,rectHeight),
+			new _prSizeStruct(imgObject,imgWidth,imgHeight),
+			pObject,
+			tpObject,
+			blObject,
+			ulObject
+		);
+		gIdx_++;
+		i = save_i;
+	}
+	return ;
+}
+function _prResizeImage(rate) {
+	var  hei = 0;
+	for(var i=0; i<gImageGroupList_.length; i++){
+		if(gImageGroupList_[i].group != null){
+			var obj = gImageGroupList_[i].group;
+			obj.obj.style.width = (obj.width * rate) + 'px';
+			obj.obj.style.height = (obj.height * rate) + 'px';
+			obj.obj.coordsize = (obj.width * rate) + ',' + (obj.height * rate);
+			hei = obj.height * rate
+		}
+		if(gImageGroupList_[i].rect != null){
+			var obj = gImageGroupList_[i].rect;
+			obj.obj.style.width = (obj.width * rate) + 'px';
+			obj.obj.style.height = (obj.height * rate) + 'px';
+		}
+		if(gImageGroupList_[i].img != null){
+			var obj = gImageGroupList_[i].img;
+			obj.obj.style.width = (obj.width * rate) + 'px';
+			obj.obj.style.height = (obj.height * rate) + 'px';
+		}
+		if(gImageGroupList_[i].p != null){
+			var obj = gImageGroupList_[i].p;
+			for(var j=0; j<obj.length; j++){
+				var p = obj[j];
+				if(p.left != ""){
+					p.obj.style.left		= (p.left * rate) + 'px';
+				}
+				if(p.top != ""){
+					p.obj.style.top			= (p.top * rate) + 'px';
+				}
+				if(p.fontsize != ""){
+					p.obj.style.fontSize	= (p.fontsize * rate) + 'pt';
+				}
+			}
+		}
+		if(gImageGroupList_[i].tp != null){
+			var obj = gImageGroupList_[i].tp;
+			for(var j=0; j<obj.length; j++){
+				var tp = obj[j];
+				if(tp.fontsize != ""){
+					if(tp.fontsize*rate < 5.5){
+						tp.obj.style.fontSize	= '5.5pt';
+					}
+					else{
+						tp.obj.style.fontSize	= (tp.fontsize * rate) + 'pt';
+					}
+				}
+			}
+		}
+		if(gImageGroupList_[i].bl != null){
+			var obj = gImageGroupList_[i].bl;
+			for(var j=0; j<obj.length; j++){
+				var bl = obj[j];
+				var fromx,tox;
+				if(bl.fromx != ""){
+					fromx = bl.fromx * rate;
+					bl.obj.setAttribute("from", fromx + "," + (bl.fromy * rate));
+				}
+				if(bl.tox != ""){
+					tox = bl.tox * rate;
+					if((0 >=tox-fromx) && (fromx-tox) < 1) {
+						tox = tox-1;
+					}
+					if((0 <= tox-fromx) && (tox-fromx) < 1) {
+						tox = tox+1;
+					}
+					bl.obj.setAttribute("to", tox + "," + (bl.toy * rate));
+				}
+			}
+		}
+		if(gImageGroupList_[i].ul != null){
+			var obj = gImageGroupList_[i].ul;
+			for(var j=0; j<obj.length; j++){
+				var ul = obj[j];
+				if(ul.fromx != ""){
+					ul.obj.setAttribute("from", (ul.fromx * rate) + "," + (ul.fromy * rate));
+				}
+				if(ul.tox != ""){
+					ul.obj.setAttribute("to", (ul.tox * rate) + "," + (ul.toy * rate));
+				}
+			}
+		}
+	}
+	return hei;
+}
+function _prResizeImageAt(idx,rate) {
+	var  hei = 0;
+		if(gImageGroupList_[idx].group != null){
+			var obj = gImageGroupList_[idx].group;
+			obj.obj.style.width = (obj.width * rate) + 'px';
+			obj.obj.style.height = (obj.height * rate) + 'px';
+			obj.obj.coordsize = (obj.width * rate) + ',' + (obj.height * rate);
+			hei = obj.height * rate
+		}
+		if(gImageGroupList_[idx].rect != null){
+			var obj = gImageGroupList_[idx].rect;
+			obj.obj.style.width = (obj.width * rate) + 'px';
+			obj.obj.style.height = (obj.height * rate) + 'px';
+		}
+		if(gImageGroupList_[idx].img != null){
+			var obj = gImageGroupList_[idx].img;
+			obj.obj.style.width = (obj.width * rate) + 'px';
+			obj.obj.style.height = (obj.height * rate) + 'px';
+		}
+		if(gImageGroupList_[idx].p != null){
+			var obj = gImageGroupList_[idx].p;
+			for(var j=0; j<obj.length; j++){
+				var p = obj[j];
+				if(p.left != ""){
+					p.obj.style.left		= (p.left * rate) + 'px';
+				}
+				if(p.top != ""){
+					p.obj.style.top			= (p.top * rate) + 'px';
+				}
+				if(p.fontsize != ""){
+					p.obj.style.fontSize	= (p.fontsize * rate) + 'pt';
+				}
+			}
+		}
+		if(gImageGroupList_[idx].tp != null){
+			var obj = gImageGroupList_[idx].tp;
+			for(var j=0; j<obj.length; j++){
+				var tp = obj[j];
+				if(tp.fontsize != ""){
+					if(tp.fontsize*rate < 5.5){
+						tp.obj.style.fontSize	= '5.5pt';
+					}
+					else{
+						tp.obj.style.fontSize	= (tp.fontsize * rate) + 'pt';
+					}
+				}
+			}
+		}
+		if(gImageGroupList_[idx].bl != null){
+			var obj = gImageGroupList_[idx].bl;
+			for(var j=0; j<obj.length; j++){
+				var bl = obj[j];
+				var fromx,tox;
+				if(bl.fromx != ""){
+					fromx = bl.fromx * rate;
+					bl.obj.setAttribute("from", fromx + "," + (bl.fromy * rate));
+				}
+				if(bl.tox != ""){
+					tox = bl.tox * rate;
+					if((0 >=tox-fromx) && (fromx-tox) < 1) {
+						tox = tox-1;
+					}
+					if((0 <= tox-fromx) && (tox-fromx) < 1) {
+						tox = tox+1;
+					}
+					bl.obj.setAttribute("to", tox + "," + (bl.toy * rate));
+				}
+			}
+		}
+		if(gImageGroupList_[idx].ul != null){
+			var obj = gImageGroupList_[idx].ul;
+			for(var j=0; j<obj.length; j++){
+				var ul = obj[j];
+				if(ul.fromx != ""){
+					ul.obj.setAttribute("from", (ul.fromx * rate) + "," + (ul.fromy * rate));
+				}
+				if(ul.tox != ""){
+					ul.obj.setAttribute("to", (ul.tox * rate) + "," + (ul.toy * rate));
+				}
+			}
+		}
+	return hei;
+}
+function _prRemoveUnit(src){
+	var dst = src.substring(0,src.length-2);
+	return dst;
+}
+-->
+</script>
+<script>
+<!--
+var   totalImg = 1;
+var   dispNum=1;
+function prOnLoadProc() {
+	_prInitImageInfo(100);
+	_prResizeImage(100/100);
+	document.getElementById("divBody").style.display = "block"
+	return;
+}
+function PrintFunc()
+{
+	document.getElementById("divBody").style.display = "none";
+	var  img_hei = _prResizeImage(67/100);
+	document.getElementById("divBody").style.display = "block";
+	var  graphTd = document.getElementById("graphTd");
+	if(graphTd.width == "100%")
+	{
+      var   current_pos;
+      var   img_pos = 0;
+         current_pos = graphTd.offsetTop;
+		var pageCnt = Math.floor(current_pos/950);
+		var img_pos = current_pos - (pageCnt*950);
+		if(img_pos+img_hei > 950)
+		{
+			var  pageElement = document.getElementById("page_onoff");
+			if(pageElement != null)
+			{
+				pageElement.style.display = "block";
+			}
+		}
+	}
+	window.print();
+	document.getElementById("divBody").style.display = "none";
+	_prResizeImage(100/100);
+	document.getElementById("divBody").style.display = "block";
+	window.scrollTo(0,0);
+}
+function BackFunc()
+{
+	window.location.replace("ZOOM000000000006904.html#000?"+strPara);
+}
+function CloseFunc()
+{
+	window.close();
+}
+function JumpFunc(strJump)
+{
+	window.location.replace(strJump+"?"+strPara);
+}
+//-->
+</script>
+<body onLoad="prOnLoadProc();" style="font-family:sans-serif;">
+<div id="divBody" style="display:none">
+<div>
+<div style="position:absolute;right=10;">
+<input type="image" src="../img/PRINT_PREVIEW.PNG" onClick="PrintFunc()">
+<input type="image" src="../img/GL_PREV.PNG" onClick="BackFunc()">
+<input type="image" src="../img/GL_NEXT_DISABLE.PNG" onClick="NextFunc()" disabled>
+<input type="image" src="../img/GL_CANCEL.PNG" onClick="CloseFunc()">
+</div><br>
+<div class="top_title">
+A/T Differential Carrier Bearing Preload Inspection
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i080">
+</a>
+<ol>
+<li value="8">
+<div>
+Measure the starting torque of the differential assembly using a preload inspection tool, a torque wrench (A), and a socket (B). Measure the starting torque at normal room temperature in both directions.
+</div>
+<div>
+<table width="87%" class="Viewer" frame="void" style="table-layout:fixed;">
+<col width="100%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Standard
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+New Bearing:
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+3.9−5.1 N·m (40−52 kgf·cm, 35−45 lbf·in.)
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Reused Bearing:
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+3.6−4.8 N·m (37−49 kgf·cm, 32−43 lbf·in.)
+</b>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</li>
+</ol>
+<a name="i090">
+</a>
+<ol>
+<li value="9">
+<div>
+If the starting torque is out of the standard, remove the 85 mm thrust shim and select a new 85 mm thrust shim from the following table. Install a new 85 mm thrust shim and recheck. To increase the starting torque, increase thickness of the 85 mm thrust shim. To decrease the starting torque, decrease the thickness of the 85 mm thrust shim.
+</div>
+<div>
+Changing the 85 mm thrust shim to the next size will increase or decrease the starting torque about 0.5−0.6 N·m (5−6 kgf·cm, 5−5 lbf·in.)
+</div>
+<div>
+<br>
+<div class="table_title">
+<b>
+THRUST SHIM, 85 mm
+</b>
+</div>
+<br>
+<table width="87%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="10%">
+<col width="40%">
+<col width="50%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+No.
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Part Number
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Thickness
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+A
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41440-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1.350 mm (0.0531 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+B
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41441-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1.375 mm (0.0541 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+C
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41442-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1.400 mm (0.0551 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+D
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41443-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1.425 mm (0.0561 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+E
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41444-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1.450 mm (0.0571 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+F
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41445-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1.475 mm (0.0581 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+G
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41446-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1.500 mm (0.0591 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+H
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41447-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1.525 mm (0.0600 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+I
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41448-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1.550 mm (0.0610 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+J
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41449-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1.575 mm (0.0620 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+K
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41450-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1.600 mm (0.0630 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+L
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41451-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1.625 mm (0.0640 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+M
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41452-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1.650 mm (0.0650 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+N
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41453-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1.675 mm (0.0659 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+O
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41454-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1.700 mm (0.0669 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+P
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41455-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1.725 mm (0.0679 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+Q
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41456-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1.750 mm (0.0689 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+R
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41457-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1.775 mm (0.0699 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+S
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41458-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1.800 mm (0.0709 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+T
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41459-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1.825 mm (0.0719 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+U
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41460-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1.850 mm (0.0728 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+V
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41461-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1.875 mm (0.0738 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+W
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41462-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1.900 mm (0.0748 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+X
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41463-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1.925 mm (0.0758 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+Y
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41464-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1.950 mm (0.0768 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+Z
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41465-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1.975 mm (0.0778 in.)
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<div>
+<table width="87%" class="Viewer" frame="void" style="table-layout:fixed;">
+<col width="100%">
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="right">
+<div>
+(cont'd)
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<div>
+<br>
+<div class="table_title">
+<b>
+THRUST SHIM, 85 mm (cont'd)
+</b>
+</div>
+<br>
+<table width="87%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="10%">
+<col width="40%">
+<col width="50%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+No.
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Part Number
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Thickness
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+AA
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41466-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+2.000 mm (0.0787 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+AB
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41467-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+2.025 mm (0.0797 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+AC
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41468-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+2.050 mm (0.0807 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+AD
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41469-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+2.075 mm (0.0817 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+AE
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41470-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+2.100 mm (0.0827 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+AF
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41471-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+2.125 mm (0.0837 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+AG
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41472-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+2.150 mm (0.0846 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+AH
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41473-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+2.175 mm (0.0856 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+AI
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41474-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+2.200 mm (0.0866 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+AJ
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41475-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+2.225 mm (0.0876 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+AK
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41476-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+2.250 mm (0.0886 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+AL
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41477-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+2.275 mm (0.0896 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+AM
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41478-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+2.300 mm (0.0906 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+AN
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41479-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+2.325 mm (0.0915 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+AO
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41480-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+2.350 mm (0.0925 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+AP
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41481-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1.250 mm (0.0492 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+AQ
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41482-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1.275 mm (0.0502 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+AR
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41483-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1.300 mm (0.0512 in.)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+AS
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+41484-RGR-000
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+1.325 mm (0.0522 in.)
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</li>
+</ol>
+<a name="i100">
+</a>
+<ol>
+<li value="10">
+<div>
+Install a new thrust shim, then recheck the starting torque.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div style="display:none;" id="page_onoff">
+<div style="page-break-after:always;">
+</div>
+</div>
+<span style="display:block" id="imgId1">
+<div>
+<script src="../js/TL19E4PE10411619605MAAD05_1.js">
+</script>
+</div>
+</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

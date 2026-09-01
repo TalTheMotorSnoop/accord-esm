@@ -1,0 +1,31 @@
+with(document) {
+write("<div id=\"group2\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:735px;\">");
+write("<div id=\"rect2\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:735px;\">");
+write("<img id=\"img2\" name=\"PrtImgId\" src=\"../img/TL19E9AJ32300000000DAAD02.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:735px;border-color:#ffffff\">");
+write("<p id=\"p2_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:675px;top:354px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>FRONT PASSENGER'S<br>DOOR COURTESY LIGHT<br><a href=\"javascript:CtsProc('0','000000000000430','i000')\"></b>Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p2_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:387px;top:586px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>RIGHT REAR DOOR SWITCH<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:509px;top:500px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>RIGHT REAR<br>DOOR COURTESY LIGHT<br><a href=\"javascript:CtsProc('0','000000000000430','i000')\"></b>Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p2_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:18px;top:588px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>TAILGATE LATCH SWITCH<br>(Without power tailgate)<br><a href=\"javascript:CtsProc('0','000000000003176','i000')\"></b>Latch Switch Test,<br></a><br><a href=\"javascript:CtsProc('0','000000000003155','i000')\">Replacement,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:19px;top:493px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>POWER TAILGATE CLOSER UNIT<br>(Including FULL LATCH SWITCH)<br><a href=\"javascript:CtsProc('0','000000000003146','i000')\"></b>Latch/Ratchet Switch Test,<br></a><br><a href=\"javascript:CtsProc('0','000000000003155','i000')\">Replacement,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:593px;top:441px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>FRONT PASSENGER'S<br>DOOR SWITCH<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:1px;top:706px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b></b>LHD model is shown, RHD model is similar.<br></nobr>");
+write("</p>");
+write("<p id=\"p2_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:242px;top:620px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>RIGHT CARGO AREA LIGHT<br><a href=\"javascript:CtsProc('0','000000000003175','i000')\"></b>Test/Replacement,</a><br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

@@ -1,0 +1,402 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E4PE10411212231MAAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+A/T Clutch Wave-plate Phase Difference Inspection
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Place the clutch wave-plate (A) on a surface plate, and set a dial indicator (B) on the clutch wave-plate.
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Find the bottom (C) of a phase difference of the clutch wave-plate, zero the dial indicator and make a reference mark on the bottom of the clutch wave-plate.
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Measure the phase differences of the 1st, 1st-hold, 2nd, 4th and the 5th clutch wave-plates.
+</div>
+<table class="Viewer">
+<tr>
+<td width="30" class="ViewerTD" align="right">
+<a name="i031">
+</a>
+<div>-1.
+</div>
+</td>
+<td class="ViewerTD" align="left">
+<div>
+Rotate the clutch wave-plate about 60-degrees while holding the clutch wave-plate by its circumference. The dial indicator should be at the top of a phase difference. Do not rotate the clutch wave-plate while holding its surface, always rotate it while holding its circumference.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD" align="right">
+<a name="i032">
+</a>
+<div>-2.
+</div>
+</td>
+<td class="ViewerTD" align="left">
+<div>
+Read the dial indicator. The dial indicator reads the phase difference of the clutch wave-plate between the bottom and top.
+</div>
+<div>
+<table width="87%" class="Viewer" frame="void" style="table-layout:fixed;">
+<col width="27%">
+<col width="72%">
+<tbody>
+<tr>
+<td class="ViewerTD" colspan="2" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Standard Phase Difference:
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+1st Clutch:
+</b>
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+0.17−0.30 mm (0.007−0.012 in.)
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+1st-hold Clutch:
+</b>
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+0.1−0.2 mm (0.004−0.008 in.)
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+2nd Clutch:
+</b>
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+0.11−0.21 mm (0.004−0.008 in.)
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+4th Clutch:
+</b>
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+0.1−0.2 mm (0.004−0.008 in.)
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+5th Clutch:
+</b>
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+0.12−0.22 mm (0.005−0.009 in.)
+</b>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD" align="right">
+<a name="i033">
+</a>
+<div>-3.
+</div>
+</td>
+<td class="ViewerTD" align="left">
+<div>
+Rotate the clutch wave-plate about 60-degrees. The dial indicator should be at the bottom of a phase difference, and zero the dial indicator.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD" align="right">
+<a name="i034">
+</a>
+<div>-4.
+</div>
+</td>
+<td class="ViewerTD" align="left">
+<div>
+Measure the phase difference at the other two tops of the clutch wave-plate by following steps -1 thru -3.
+</div>
+</td>
+</tr>
+</table>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Measure the phase difference of the 3rd clutch wave-plate.
+</div>
+<table class="Viewer">
+<tr>
+<td width="30" class="ViewerTD" align="right">
+<a name="i041">
+</a>
+<div>-1.
+</div>
+</td>
+<td class="ViewerTD" align="left">
+<div>
+Rotate the clutch wave-plate about 54-degrees or 72-degrees while holding the clutch wave-plate by its circumference. The dial indicator should be at the top of a phase difference. Do not rotate the clutch wave-plate while holding its surface, always rotate it while holding its circumference.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD" align="right">
+<a name="i042">
+</a>
+<div>-2.
+</div>
+</td>
+<td class="ViewerTD" align="left">
+<div>
+Read the dial indicator. The dial indicator reads the phase difference of the clutch wave-plate between the bottom and top.
+</div>
+<div>
+<table width="87%" class="Viewer" frame="void" style="table-layout:fixed;">
+<col width="27%">
+<col width="72%">
+<tbody>
+<tr>
+<td class="ViewerTD" colspan="2" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Standard Phase Difference:
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+3rd Clutch:
+</b>
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+0.1−0.2 mm (0.004−0.008 in.)
+</b>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD" align="right">
+<a name="i043">
+</a>
+<div>-3.
+</div>
+</td>
+<td class="ViewerTD" align="left">
+<div>
+Rotate the clutch wave-plate about 54-degrees or 72-degrees. The dial indicator should be at the bottom of a phase difference, and zero the dial indicator.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD" align="right">
+<a name="i044">
+</a>
+<div>-4.
+</div>
+</td>
+<td class="ViewerTD" align="left">
+<div>
+Measure the phase difference at the other two tops of the clutch wave-plate by following steps -1 thru -3.
+</div>
+</td>
+</tr>
+</table>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+If two of the three measurements are within the standard, the clutch wave-plate is OK. If two of the measurements are out of the standard, replace the clutch wave-plate.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000006807','1');">
+<img src="../tn/TL19E4PE10411212231MAAD01.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E4PE10411212231MAAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

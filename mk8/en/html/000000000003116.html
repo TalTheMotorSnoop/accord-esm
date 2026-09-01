@@ -1,0 +1,832 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E9AH46400012802BAAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+Airbag and Tensioner Disposal
+</div>
+<div>
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG01">
+</a>
+<div class="servinfosub_title">
+<b>
+Deploying Airbags in the Vehicle
+</b>
+</div>
+<div class="tool_list_title">
+<b>
+Special Tools Required
+</b>
+</div>
+<div>
+<a href="javascript:PrtProc('0','ZOOM000000000014418')">
+<br>
+Deployment tool
+<br>
+ 07HAZ-SG00500
+</a>
+</div>
+<div>
+Before scrapping any airbags, side airbags, side curtain airbags, seat belt tensioners, or seat belt outer lap tensioner (including those in a whole vehicle to be scrapped), the part(s) must be deployed. If the vehicle is still within the warranty period, the Honda District Parts and Service Manager must give approval and/or special instruction before deploying the part(s). Only after the part(s) have been deployed (as the result of vehicle collision, for example), can they be scrapped. If the parts appear intact (not deployed), treat them with extreme caution. Follow this procedure.
+</div>
+<div>
+If an SRS equipped vehicle is to be entirely scrapped, its airbags, side airbags, side curtain airbags, and seat belt tensioners, and seat belt outer lap tensioner should be deployed while still in the vehicle. These parts should not be considered as salvageable parts and should never be installed in another vehicle.
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Turn the ignition switch to LOCK (0). 
+<a href="javascript:CtsProc('0','000000000002065','i000')">
+Do the battery terminal disconnection procedure,
+</a>
+ then wait for 3 minutes before starting work.
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Confirm that each airbag, side airbag, side curtain airbag, seat belt tensioner, or seat belt outer lap tensioner is securely mounted.
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Confirm that the deployment tool is functioning properly by following the check procedure on the tool label.
+</div>
+</li>
+</ol>
+<a name="iT01">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Driver's Airbag
+</b>
+</div>
+<br>
+<a name="i040">
+</a>
+<ol>
+<li value="1">
+<div>
+Remove the access panel (A) from the steering wheel then disconnect the driver's airbag 4P connector (B) from the cable reel.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008627','1');">
+<img src="../tn/TL19E9AH46400012802BAAD01.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AH46400012802BAAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG01">
+</a>
+<a name="iT02">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Front Passenger's Airbag
+</b>
+</div>
+<br>
+<a name="i050">
+</a>
+<ol>
+<li value="1">
+<div>
+<a href="javascript:CtsProc('0','000000000000382','i000')">
+Detach the hook of the globe box damper and release the globe box stop on each side from the dashboard by pushing them inside.
+</a>
+ Then disconnect the dashboard wire harness 4P connector from the front passenger's airbag connector (A).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008628','1');">
+<img src="../tn/TL19E9AH46400012802BAAD02.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AH46400012802BAAD02_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG01">
+</a>
+<a name="iT03">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Side Airbag
+</b>
+</div>
+<br>
+<a name="i060">
+</a>
+<ol>
+<li value="1">
+<div>
+Disconnect the side airbag 2P connector (A) from the SRS floor wire harness.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008629','1');">
+<img src="../tn/TL19E9AH46400012802BAAD03.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AH46400012802BAAD03_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG01">
+</a>
+<a name="iT04">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Side Curtain Airbag
+</b>
+</div>
+<br>
+<a name="i070">
+</a>
+<ol>
+<li value="1">
+<div>
+Disconnect the SRS floor wire harness 2P connector (left side curtain airbag) or SRS floor subharness 2P connector (right side curtain airbag) (A) from the side curtain airbag.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008630','1');">
+<img src="../tn/TL19E9AH46400012802BAAD04.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AH46400012802BAAD04_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG01">
+</a>
+<a name="iT05">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Seat Belt Tensioner
+</b>
+</div>
+<br>
+<a name="i080">
+</a>
+<ol>
+<li value="1">
+<div>
+Disconnect the SRS floor wire harness 4P connector (A) from the seat belt tensioner. Pull the seat belt out all the way and cut it.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008631','1');">
+<img src="../tn/TL19E9AH46400012802BAAD05.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AH46400012802BAAD05_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG01">
+</a>
+<a name="iT06">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Seat Belt Outer Lap Tensioner
+</b>
+</div>
+<br>
+<a name="i090">
+</a>
+<ol>
+<li value="1">
+<div>
+Disconnect the SRS floor wire harness 2P connector (A) from the seat belt outer lap tensioner.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008632','1');">
+<img src="../tn/TL19E9AH46400012802BAAD06.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AH46400012802BAAD06_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG01">
+</a>
+<a name="iT06">
+</a>
+<a name="i100">
+</a>
+<ol>
+<li value="2">
+<div>
+Cut off each connector, and strip the ends of the wires. Twist each pair of unlike colored wires together, and clip an alligator clip (A) from the deployment tool to each pair. Place the deployment tool at least 10 meters (30 feet) away from the vehicle.
+</div>
+</li>
+</ol>
+<a name="i110">
+</a>
+<ol>
+<li value="3">
+<div>
+Connect a 12 V battery to the tool.
+</div>
+<ul type="disc">
+<li>
+<div>
+If the green light on the tool comes on, the igniter circuit is defective and cannot deploy the component. Go to Disposal of Damaged Components.
+</div>
+</li>
+<li>
+<div>
+If the red light on the tool comes on, the component is ready to be deployed.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i120">
+</a>
+<ol>
+<li value="4">
+<div>
+Push the tool's deployment switch. The airbags and tensioners should deploy (deployment is both highly audible and visible: A loud noise and rapid inflation of the bag, followed by slow deflation).
+</div>
+<ul type="disc">
+<li>
+<div>
+If the components deploy and the green light on the tool comes on, continue with this procedure.
+</div>
+</li>
+<li>
+<div>
+If a component does not deploy, and the green light comes ON, its igniter is defective. Go to Disposal of Damaged Components.
+</div>
+</li>
+<li>
+<div>
+During deployment, the airbags can become hot enough to burn you. Wait for 30 minutes after deployment before touching the airbags.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008633','1');">
+<img src="../tn/TL19E9AH46400012802BAAD07.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AH46400012802BAAD07_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008633','2');">
+<img src="../tn/TL19E9AH46400012802BAAD08.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AH46400012802BAAD08_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG01">
+</a>
+<a name="iT06">
+</a>
+<a name="i130">
+</a>
+<ol>
+<li value="5">
+<div>
+Dispose of the complete airbag. No part of it can be reused. Place it in a sturdy plastic bag (A), and seal it securely. Dispose of the deployed airbag according to your local regulations.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008634','1');">
+<img src="../tn/TL19E9AH46400012802BAAD09.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AH46400012802BAAD09_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG02">
+</a>
+<div class="servinfosub_title">
+<b>
+Deploying Components Out of the Vehicle
+</b>
+</div>
+<div>
+If an intact airbag or tensioner has been removed from a scrapped vehicle, or has been found defective or damaged during transit, storage, or service, it should be deployed as follows:
+</div>
+<a name="i310">
+</a>
+<ol>
+<li value="1">
+<div>
+Confirm that the deployment tool is functioning properly by following the check procedure Deploying Airbags in the Vehicle on the tool label.
+</div>
+</li>
+</ol>
+<a name="i320">
+</a>
+<ol>
+<li value="2">
+<div>
+Position the airbag face up, outdoors, on flat ground, at least 10 meters (30 feet) from any obstacles or people.
+</div>
+</li>
+</ol>
+<a name="i330">
+</a>
+<ol>
+<li value="3">
+<div>
+Follow 
+<a href="javascript:try{parent.Jmp('i090');}catch(e){location.hash='i090';}">Step 1
+</a>
+ through 12 of the in-vehicle deployment procedure.
+</div>
+<div>
+NOTE: The driver's and front passenger's airbags have dual inflators. Twist each pair of unlike colored wires together, and clip an alligator clip to each pair.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008635','1');">
+<img src="../tn/TL19E9AH46400012802BAAD10.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AH46400012802BAAD10_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG03">
+</a>
+<div class="servinfosub_title">
+<b>
+Disposal of Damaged Components
+</b>
+</div>
+<a name="i510">
+</a>
+<ol>
+<li value="1">
+<div>
+If installed in a vehicle, follow the 
+<a href="javascript:CtsProc('0','000000000000215','i000')">
+removal procedure for the driver's airbag,
+</a>
+ 
+<a href="javascript:CtsProc('0','000000000000216','i000')">
+front passenger's airbag,
+</a>
+ 
+<a href="javascript:CtsProc('0','000000000000223','i000')">
+side airbag,
+</a>
+ 
+<a href="javascript:CtsProc('0','000000000002908','i000')">
+side curtain airbag,
+</a>
+ 
+<a href="javascript:CtsProc('0','000000000000205','i000')">
+seat belt tensioner,
+</a>
+ and seat belt outer lap tensioner.
+</div>
+</li>
+</ol>
+<a name="i520">
+</a>
+<ol>
+<li value="2">
+<div>
+In all cases, make a short circuit by cutting, stripping, and twisting together the two inflator wires.
+</div>
+<div>
+NOTE: The driver's and front passenger's airbags have dual inflators. The like color wires go to the individual inflators. Twist the like colored wires together.
+</div>
+</li>
+</ol>
+<a name="i530">
+</a>
+<ol>
+<li value="3">
+<div>
+Package the component in exactly the same packaging that the new replacement part came in.
+</div>
+</li>
+</ol>
+<a name="i540">
+</a>
+<ol>
+<li value="4">
+<div>
+Mark the outside of the box ‘‘DAMAGED AIRBAG NOT DEPLOYED,'' ‘‘DAMAGED SIDE AIRBAG NOT DEPLOYED,'' ‘‘DAMAGED SIDE CURTAIN AIRBAG NOT DEPLOYED,'' ‘‘DAMAGED SEAT BELT TENSIONER NOT DEPLOYED'' so it does not get confused with your parts stock.
+</div>
+</li>
+</ol>
+<a name="i550">
+</a>
+<ol>
+<li value="5">
+<div>
+Contact your Honda District Parts and Service Manager for instructions on how and where to return it for disposal.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG04">
+</a>
+<div class="servinfosub_title">
+<b>
+Deployment Tool Check
+</b>
+</div>
+<a name="i710">
+</a>
+<ol>
+<li value="1">
+<div>
+Connect the yellow clips to both switch protector handles on the tool.
+</div>
+</li>
+</ol>
+<a name="i720">
+</a>
+<ol>
+<li value="2">
+<div>
+Then connect the red lead to the positive battery post and the black lead to the negative battery post.
+</div>
+</li>
+</ol>
+<a name="i730">
+</a>
+<ol>
+<li value="3">
+<div>
+Push the operation switch: The green light should come on, indicating that the tool is operating properly and is ready for use. If the red light stays on, the tool is faulty, and another one must be used for the procedure.
+</div>
+</li>
+</ol>
+<a name="i740">
+</a>
+<ol>
+<li value="4">
+<div>
+Disconnect the tool clips and connectors from the protector handles and the battery.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

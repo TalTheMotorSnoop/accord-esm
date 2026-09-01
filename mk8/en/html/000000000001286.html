@@ -1,0 +1,1468 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E2AK72100000000BBAT10
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+How to Troubleshoot the Fuel and Emissions Systems
+</div>
+<div>
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG01">
+</a>
+<div class="servinfosub_title">
+<b>
+Intermittent Failures
+</b>
+</div>
+<div>
+The term ‘‘intermittent failure'' means a system may have had a failure, but it checks OK now. If the malfunction indicator lamp (MIL) on the dash does not come on, check for poor connections or loose terminals at all connectors related to the circuit that you are troubleshooting. If the MIL was on but then went out, the original problem may have been intermittent.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG02">
+</a>
+<div class="servinfosub_title">
+<b>
+Service Information
+</b>
+</div>
+<div>
+Periodically, new ECM/PCM software or new service procedures may become available. Always check online for the latest software or service information related to the DTCs or symptoms you are troubleshooting.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG03">
+</a>
+<div class="servinfosub_title">
+<b>
+Opens and Shorts
+</b>
+</div>
+<div>
+‘‘Open'' and ‘‘short'' are common electrical terms. An open is a break in a wire or at a connection. A short is an accidental connection of a wire to ground or to another wire. In simple electronics, this usually means something won't work at all. With complex electronics (such as ECMs or PCMs) this can sometimes mean something works, but not the way it's supposed to.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG04">
+</a>
+<div class="servinfosub_title">
+<b>
+MIL indication
+</b>
+</div>
+<div>
+If you turn the ignition switch to the ON (II) position, without starting the engine, the malfunction indicator lamp (MIL) (A) will come on for about 20 seconds. It then goes off or brinks 5 times under various conditions. This is normal: it shows the self-testing condition of the diagnostics for the emissions control systems.
+</div>
+<div>
+If the MIL in the gauge assembly will come on, go to how to use the HDS.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000003134','1');">
+<img src="../tn/TL19E2AK72100000000BBAD01.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E2AK72100000000BBAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG04">
+</a>
+<a name="iG05">
+</a>
+<div class="procedure_sub_title">
+<b>
+CHECK SYSTEM display (A) Indication (CHECK OIL LEVEL SENSOR)
+</b>
+</div>
+<div>
+If display is on, engine oil level sensor may have had a failure. Connect the HDS to the data link connector (DLC) located under the driver's side of the dashboard. Check the diagnostic trouble code (DTC) and note it. Then refer to the indicated DTC's troubleshooting, and begin the appropriate troubleshooting procedure.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000003135','1');">
+<img src="../tn/TL19E2AK72100000000BBAD02.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E2AK72100000000BBAD02_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG04">
+</a>
+<a name="iG06">
+</a>
+<div class="procedure_sub_title">
+<b>
+CHECK ENGINE OIL LEVEL display (A) Indication
+</b>
+</div>
+<div>
+If display is on, engine oil level may have had a failure. 
+<a href="javascript:CtsProc('0','000000000001203','i000')">
+Check the engine oil level sensor.
+</a>
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000003136','1');">
+<img src="../tn/TL19E2AK72100000000BBAD03.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E2AK72100000000BBAD03_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG07">
+</a>
+<div class="servinfosub_title">
+<b>
+How to Use the HDS (Honda Diagnostic System)
+</b>
+</div>
+<a name="iT01">
+</a>
+<br>
+<div class="topic_title">
+<b>
+If the MIL (malfunction indicator lamp) has come on
+</b>
+</div>
+<br>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Start the engine, and check the MIL (A).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000003137','1');">
+<img src="../tn/TL19E2AK72100000000BBAD04.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E2AK72100000000BBAD04_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG07">
+</a>
+<a name="iT01">
+</a>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+If the MIL stays on, connect the HDS to the data link connector (DLC) (A) located under the driver's side of the dashboard.
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Turn the ignition switch to ON (II).
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Make sure the HDS communicates with the ECM/PCM and other vehicle systems. If it doesn't, 
+<a href="javascript:CtsProc('0','000000000001190','i000')">
+go to the DLC circuit troubleshooting.
+</a>
+</div>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+Check the diagnostic trouble code (DTC) and note it. Also check the freeze data and/or on-board snapshot data, and download any data found. Then refer to the indicated DTC's troubleshooting, and begin the appropriate troubleshooting procedure.
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+Freeze data indicates the engine conditions when the first system malfunction, misfire, or fuel trim malfunction that activated the MIL was detected.
+</div>
+</li>
+<li>
+<div>
+The HDS can read the DTC, freeze data, on-board snapshot, current data, and other engine control module (ECM) or powertrain control module (PCM) data.
+</div>
+</li>
+<li>
+<div>
+For specific operations, refer to the user's manual that came with the HDS.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+<a href="javascript:CtsProc('0','000000000001199','i000')">
+If no DTCs are found, go to MIL troubleshooting.
+</a>
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000003138','1');">
+<img src="../tn/TL19E2AK72100000000BBAD05.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E2AK72100000000BBAD05_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG07">
+</a>
+<a name="iT02">
+</a>
+<br>
+<div class="topic_title">
+<b>
+If the MIL did not stay on
+</b>
+</div>
+<br>
+<div>
+If the MIL did not stay on but there is a driveability problem, do the symptom troubleshooting.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG07">
+</a>
+<a name="iT03">
+</a>
+<br>
+<div class="topic_title">
+<b>
+If you can't duplicate the DTC
+</b>
+</div>
+<br>
+<div>
+Some of the troubleshooting requires you to reset the ECM/PCM and try to duplicate the DTC. If the problem is intermittent and you can't duplicate the code, do not continue through the procedure. To do so will only result in confusion and possibly, a needlessly replaced ECM/PCM.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG08">
+</a>
+<div class="servinfosub_title">
+<b>
+HDS Clear Command
+</b>
+</div>
+<div>
+The ECM/PCM stores various specific data to correct the system even if there is no electrical power such as when the battery negative terminal is disconnected. Stored data based on failed parts should be cleared by using the ‘‘CLEAR COMMAND'' of the HDS, if parts are replaced.
+</div>
+<div>
+The HDS has three kinds of clear commands to meet this purpose. They are clear DTCs, ECM/PCM reset, and CKP pattern clear. DTC clear command erases all stored DTC codes, freeze data, and on-board snapshot. This must be done with the HDS after reproducing the DTC during troubleshooting.
+</div>
+<div>
+The ECM/PCM reset command erases all stored DTC codes, freeze data, on-board snapshot, and all specific data to correct the system except CKP pattern. If the CKP pattern data in the ECM/PCM was cleared, you must do the CKP pattern learn procedure. The CKP pattern clear command erases only CKP pattern data. This command is for repair of a misfire or the CKP sensor.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG09">
+</a>
+<div class="servinfosub_title">
+<b>
+Scan Tool Clear Command
+</b>
+</div>
+<div>
+If you are using a generic scan tool to clear commands, be aware that there is only one setting for clearing the ECM/PCM, and it clears all commands at the same time (CKP pattern learn, idle learn, freeze data, on-board snapshot, and DTCs). After you clear all commands, you then need to do these procedures, in this order: 
+<a href="javascript:CtsProc('0','000000000001280','i000')">
+ECM/PCM idle learn procedure;
+</a>
+ CKP pattern learn procedure.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG10">
+</a>
+<div class="servinfosub_title">
+<b>
+DTC Clear
+</b>
+</div>
+<a name="i210">
+</a>
+<ol>
+<li value="1">
+<div>
+Clear the DTC with the HDS while the engine is stopped.
+</div>
+</li>
+</ol>
+<a name="i220">
+</a>
+<ol>
+<li value="2">
+<div>
+Turn the ignition switch to LOCK (0).
+</div>
+</li>
+</ol>
+<a name="i230">
+</a>
+<ol>
+<li value="3">
+<div>
+Turn the ignition switch to ON (II), and wait 30 seconds.
+</div>
+</li>
+</ol>
+<a name="i240">
+</a>
+<ol>
+<li value="4">
+<div>
+Turn the ignition switch to LOCK (0), and disconnect the HDS from the DLC.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG11">
+</a>
+<div class="servinfosub_title">
+<b>
+ECM/PCM Reset
+</b>
+</div>
+<a name="i310">
+</a>
+<ol>
+<li value="1">
+<div>
+Reset the ECM/PCM with the HDS while the engine is stopped.
+</div>
+</li>
+</ol>
+<a name="i320">
+</a>
+<ol>
+<li value="2">
+<div>
+Turn the ignition switch to LOCK (0).
+</div>
+</li>
+</ol>
+<a name="i330">
+</a>
+<ol>
+<li value="3">
+<div>
+Turn the ignition switch to ON (II), and wait 30 seconds.
+</div>
+</li>
+</ol>
+<a name="i340">
+</a>
+<ol>
+<li value="4">
+<div>
+Turn the ignition switch to LOCK (0), and disconnect the HDS from the DLC.
+</div>
+</li>
+</ol>
+<a name="i350">
+</a>
+<ol>
+<li value="5">
+<div>
+<a href="javascript:CtsProc('0','000000000001280','i000')">
+Do the ECM/PCM idle learn procedure.
+</a>
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG12">
+</a>
+<div class="servinfosub_title">
+<b>
+CKP Pattern Clear/CKP Pattern Learn
+</b>
+</div>
+<a name="iG13">
+</a>
+<div class="procedure_sub_title">
+<b>
+Clear/Learn Procedure (with the HDS)
+</b>
+</div>
+<a name="i410">
+</a>
+<ol>
+<li value="1">
+<div>
+Connect the HDS to the data link connector (DLC) (A) located under the driver's side of the dashboard.
+</div>
+</li>
+</ol>
+<a name="i420">
+</a>
+<ol>
+<li value="2">
+<div>
+Turn the ignition switch to ON (II).
+</div>
+</li>
+</ol>
+<a name="i430">
+</a>
+<ol>
+<li value="3">
+<div>
+Make sure the HDS communicates with the ECM/PCM and other vehicle systems. If it doesn't, 
+<a href="javascript:CtsProc('0','000000000001190','i000')">
+go to the DLC circuit troubleshooting.
+</a>
+</div>
+</li>
+</ol>
+<a name="i440">
+</a>
+<ol>
+<li value="4">
+<div>
+Select CRANK PATTERN in the ADJUSTMENT MENU with the HDS.
+</div>
+</li>
+</ol>
+<a name="i450">
+</a>
+<ol>
+<li value="5">
+<div>
+Select CRANK PATTERN LEARNING with the HDS, and follow the screen prompts.
+</div>
+</li>
+</ol>
+<a name="i460">
+</a>
+<ol>
+<li value="6">
+<div>
+The CKP pattern learn procedure is complete.
+</div>
+</li>
+</ol>
+<a name="iG14">
+</a>
+<div class="procedure_sub_title">
+<b>
+Learn Procedure (without the HDS)
+</b>
+</div>
+<a name="i510">
+</a>
+<ol>
+<li value="1">
+<div>
+Start the engine. Hold the engine speed at 3,000 rpm (min
+<sup>
+−1
+</sup>
+) without load (A/T in P or N, M/T in neutral) until the radiator fan comes on.
+</div>
+</li>
+</ol>
+<a name="i520">
+</a>
+<ol>
+<li value="2">
+<div>
+Test-drive the vehicle on a level road: Decelerate (with the throttle fully closed) from an engine speed of 2,500 rpm (min
+<sup>
+−1
+</sup>
+) down to 1,000 rpm (min
+<sup>
+−1
+</sup>
+) with the A/T in 2 position, or the M/T in 1st gear.
+</div>
+</li>
+</ol>
+<a name="i530">
+</a>
+<ol>
+<li value="3">
+<div>
+Repeat 
+<a href="javascript:try{parent.Jmp('i220');}catch(e){location.hash='i220';}">Step 2
+</a>
+ several times.
+</div>
+</li>
+</ol>
+<a name="i540">
+</a>
+<ol>
+<li value="4">
+<div>
+Turn the ignition switch to LOCK (0).
+</div>
+</li>
+</ol>
+<a name="i550">
+</a>
+<ol>
+<li value="5">
+<div>
+Turn the ignition switch to ON (II), and wait 30 seconds. The CKP pattern learn procedure is complete.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000003145','1');">
+<img src="../tn/TL19E2AK72100000000BBAD06.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E2AK72100000000BBAD06_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG15">
+</a>
+<div class="servinfosub_title">
+<b>
+How to End a Troubleshooting Session (required after any troubleshooting)
+</b>
+</div>
+<a name="i610">
+</a>
+<ol>
+<li value="1">
+<div>
+Reset the ECM/PCM with the HDS.
+</div>
+</li>
+</ol>
+<a name="i620">
+</a>
+<ol>
+<li value="2">
+<div>
+<a href="javascript:CtsProc('0','000000000001280','i000')">
+Do the ECM/PCM idle learn procedure.
+</a>
+</div>
+</li>
+</ol>
+<a name="i630">
+</a>
+<ol>
+<li value="3">
+<div>
+Turn the ignition switch to LOCK (0).
+</div>
+</li>
+</ol>
+<a name="i640">
+</a>
+<ol>
+<li value="4">
+<div>
+Disconnect the HDS from the DLC.
+</div>
+<div>
+NOTE: The ECM/PCM is part of the immobilizer system. If you replace the ECM/PCM, it will have a different immobilizer code. In order for the engine to start, you must rewrite the immobilizer code with the HDS (immobilizer system section).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG16">
+</a>
+<div class="servinfosub_title">
+<b>
+How to Troubleshoot Circuits at the ECM/PCM Connectors
+</b>
+</div>
+<div>
+NOTE: The ECM/PCM stays on up to 15 minutes after the ignition switch is turned to LOCK (0). Jumping the SCS line after turning the ignition switch to LOCK (0) cancels this function. Disconnecting the ECM/PCM during this function, without jumping the SCS line first, can damage the ECM/PCM.
+</div>
+<a name="i710">
+</a>
+<ol>
+<li value="1">
+<div>
+Jump the SCS line with the HDS.
+</div>
+</li>
+</ol>
+<a name="i720">
+</a>
+<ol>
+<li value="2">
+<div>
+Disconnect the ECM/PCM connectors A, B, and C.
+</div>
+<div>
+NOTE: ECM/PCM connectors A, B, and C have symbols (A=□, B=△, C=○) embossed on them for identification.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000003147','1');">
+<img src="../tn/TL19E2AK72100000000BBAD07.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E2AK72100000000BBAD07_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG16">
+</a>
+<a name="i730">
+</a>
+<ol>
+<li value="3">
+<div>
+When diagnosis/troubleshooting is done at the ECM/PCM connector, use the terminal test port (A) above the terminal you need to check.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000003148','1');">
+<img src="../tn/TL19E2AK72100000000BBAD08.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E2AK72100000000BBAD08_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG16">
+</a>
+<a name="i740">
+</a>
+<ol>
+<li value="4">
+<div>
+Connect one side of the patch cord (A) terminals to a commercially available digital multimeter (B), and connect the other side of the patch cord terminals to a commercially available banana jack (Pomona Electronics Tool No. 3563 or equivalent) (C).
+</div>
+</li>
+</ol>
+<a name="i750">
+</a>
+<ol>
+<li value="5">
+<div>
+Gently contact the pin probe (male) at test port from the terminal side. Do not force the tips into the terminals.
+</div>
+<div>
+<img src="../img/NOTICE_EN.PNG">
+<ul type="disc">
+<li>
+<div>
+For accurate results, always use the pin probe (male).
+</div>
+</li>
+<li>
+<div>
+To prevent damage to the connector terminals, do not insert test equipment probes, paper clips, or other substitutes as they can damage the terminals. Damaged terminals cause a poor connection and an incorrect measurement.
+</div>
+</li>
+<li>
+<div>
+Do not puncture the insulation on a wire. Punctures can cause poor or intermittent electrical connections.
+</div>
+</li>
+</ul>
+</img>
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000003149','1');">
+<img src="../tn/TL19E2AK72100000000BBAD09.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E2AK72100000000BBAD09_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG17">
+</a>
+<div class="servinfosub_title">
+<b>
+Substituting the ECM/PCM
+</b>
+</div>
+<div>
+<b>
+Special Tools Required
+</b>
+</div>
+<ul type="disc">
+<li>
+<div>
+Honda diagnostic system (HDS)
+</div>
+</li>
+<li>
+<div>
+Honda interface module (HIM)
+</div>
+</li>
+<li>
+<div>
+HDS pocket tester
+</div>
+</li>
+</ul>
+<div>
+NOTE: Use this procedure when you have to substitute a known-good ECM/PCM during troubleshooting procedure.
+</div>
+<a name="i810">
+</a>
+<ol>
+<li value="1">
+<div>
+Connect the HDS to the data link connector (DLC) (A) located under the driver's side of the dashboard.
+</div>
+</li>
+</ol>
+<a name="i820">
+</a>
+<ol>
+<li value="2">
+<div>
+Turn the ignition switch to ON (II).
+</div>
+</li>
+</ol>
+<a name="i830">
+</a>
+<ol>
+<li value="3">
+<div>
+Make sure the HDS communicates with the ECM/PCM and other vehicle systems. If it doesn't, 
+<a href="javascript:CtsProc('0','000000000001190','i000')">
+go to the DLC circuit troubleshooting.
+</a>
+</div>
+</li>
+</ol>
+<a name="i840">
+</a>
+<ol>
+<li value="4">
+<div>
+Jump the SCS line with the HDS.
+</div>
+</li>
+</ol>
+<a name="i850">
+</a>
+<ol>
+<li value="5">
+<div>
+Turn the ignition switch to LOCK (0).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000003150','1');">
+<img src="../tn/TL19E2AK72100000000BBAD10.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E2AK72100000000BBAD10_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG17">
+</a>
+<a name="i860">
+</a>
+<ol>
+<li value="6">
+<div>
+Remove the ECM/PCM cover (A).
+</div>
+</li>
+</ol>
+<a name="i870">
+</a>
+<ol>
+<li value="7">
+<div>
+Remove the battery setting plate (B), and re-position the battery away from the ECM/PCM.
+</div>
+<div>
+NOTE: Do not disconnect the battery terminals.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000003151','1');">
+<img src="../tn/TL19E2AK72100000000BBAD11.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E2AK72100000000BBAD11_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG17">
+</a>
+<a name="i880">
+</a>
+<ol>
+<li value="8">
+<div>
+Remove the bolts (D).
+</div>
+</li>
+</ol>
+<a name="i890">
+</a>
+<ol>
+<li value="9">
+<div>
+Disconnect ECM/PCM connectors A, B, and C, then remove the ECM/PCM (E).
+</div>
+<div>
+NOTE: ECM/PCM connectors A, B, and C have symbols (A=□, B=△, C=○) embossed on them for identification.
+</div>
+</li>
+</ol>
+<a name="i900">
+</a>
+<ol>
+<li value="10">
+<div>
+Install a known-good ECM/PCM in the reverse order of removal.
+</div>
+</li>
+</ol>
+<a name="i910">
+</a>
+<ol>
+<li value="11">
+<div>
+Turn the ignition switch to ON (II).
+</div>
+<div>
+NOTE: DTC P0630 ‘‘VIN Not Programmed or Mismatch'' may be stored because the VIN has not been programmed into the ECM/PCM; ignore it, and continue this procedure.
+</div>
+</li>
+</ol>
+<a name="i920">
+</a>
+<ol>
+<li value="12">
+<div>
+Manually input the VIN to the ECM/PCM with the HDS.
+</div>
+</li>
+</ol>
+<a name="i930">
+</a>
+<ol>
+<li value="13">
+<div>
+Select the IMMOBI SYSTEM with the HDS.
+</div>
+</li>
+</ol>
+<a name="i940">
+</a>
+<ol>
+<li value="14">
+<div>
+Enter the immobilizer code using the ECM/PCM replacement procedure in the HDS; it allows you to start the engine.
+</div>
+</li>
+</ol>
+<a name="i950">
+</a>
+<ol>
+<li value="15">
+<div>
+Select the PGM-FI system and reset the ECM/PCM with the HDS.
+</div>
+</li>
+</ol>
+<a name="i960">
+</a>
+<ol>
+<li value="16">
+<div>
+Update the ECM/PCM if it does not have the latest software.
+</div>
+</li>
+</ol>
+<a name="i970">
+</a>
+<ol>
+<li value="17">
+<div>
+<a href="javascript:CtsProc('0','000000000001280','i000')">
+Do the ECM/PCM idle learn procedure.
+</a>
+</div>
+</li>
+</ol>
+<a name="i980">
+</a>
+<ol>
+<li value="18">
+<div>
+Do the CKP pattern learn procedure.
+</div>
+</li>
+</ol>
+<a name="i990">
+</a>
+<ol>
+<li value="19">
+<div>
+AT: 
+<a href="javascript:CtsProc('0','000000000002800','i000')">
+Do the accelerator pedal kick down click system learn procedure.
+</a>
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000003152','1');">
+<img src="../tn/TL19E2AK72100000000BBAD12.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E2AK72100000000BBAD12_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG18">
+</a>
+<div class="servinfosub_title">
+<b>
+OBD Status
+</b>
+</div>
+<div>
+The OBD status shows the current system status of each DTC and all of the parameters. This function is used to see if the repair was successfully completed. The results of diagnostic tests for the DTC are displayed as:
+</div>
+<ul type="disc">
+<li>
+<div>
+PASSED: The on board diagnosis is successfully finished.
+</div>
+</li>
+<li>
+<div>
+FAILED: The on board diagnosis has finished but failed.
+</div>
+</li>
+<li>
+<div>
+EXECUTING: The vehicle is in enable criteria conditions for the DTC and the on board diagnosis is running.
+</div>
+</li>
+<li>
+<div>
+NOT COMPLETED: The on board diagnosis was running but is out of the enable conditions for the DTC.
+</div>
+</li>
+<li>
+<div>
+OUT OF CONDITION: The vehicle has stayed out of the enable conditions for the DTC.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+with(document) {
+write("<div id=\"group3\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:943px;\">");
+write("<div id=\"rect3\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:943px;\">");
+write("<img id=\"img3\" name=\"PrtImgId\" src=\"../img/TL19E60J32300000000DAAD03.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:943px;border-color:#ffffff\">");
+write("<p id=\"p3_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:320px;top:22px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>DRIVER'S VANITY<br>MIRROR LIGHT<br><a href=\"javascript:CtsProc('0','000000000000429','i000')\"></b>Replacement,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p3_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:749px;top:21px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>PASSENGER'S VANITY<br>MIRROR LIGHT<br><a href=\"javascript:CtsProc('0','000000000000429','i000')\"></b>Replacement,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p3_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:800px;top:241px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>GLOVE BOX LIGHT<br><a href=\"javascript:CtsProc('0','000000000000426','i000')\"></b>Replacement,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p3_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:717px;top:758px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>PASSENGER'S MICU<br>(Built into the passenger's<br>under-dash fuse/relay box)<br><a href=\"javascript:CtsProc('0','000000000000434','i000')\"></b>Input Test,</a><br><a href=\"javascript:CtsProc('0','000000000000550','i000')\">Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p3_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:4px;top:758px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>DRIVER'S MICU<br>(Built into the driver's<br>under-dash fuse/relay box)<br><a href=\"javascript:CtsProc('0','000000000000434','i000')\"></b>Input Test,</a><br><a href=\"javascript:CtsProc('0','000000000000549','i000')\">Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p3_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:1px;top:914px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b></b>LHD model is shown, RHD model is similar.<br></nobr>");
+write("</p>");
+write("<p id=\"p3_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:480px;top:759px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>PASSENGER'S FOOTWELL<br>LIGHT<br><a href=\"javascript:CtsProc('0','000000000000425','i000')\"></b>Replacement,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p3_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:247px;top:759px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>DRIVER'S FOOTWELL<br>LIGHT<br><a href=\"javascript:CtsProc('0','000000000000425','i000')\"></b>Replacement,<br></a><br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

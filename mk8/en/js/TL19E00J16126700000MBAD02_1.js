@@ -1,0 +1,31 @@
+with(document) {
+write("<div id=\"group2\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:475px; height:577px;\">");
+write("<div id=\"rect2\" name=\"PrtRectId\"class=\"drag\"  style=\"width:475px;height:577px;\">");
+write("<img id=\"img2\" name=\"PrtImgId\" src=\"../img/TL19E00J16126700000MBAD02.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:475px;height:577px;border-color:#ffffff\">");
+write("<p id=\"p2_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:5px;top:182px;font-weight:normal;font-size:9.21pt;\">");
+write("<nobr><b>E<br>8 x 1.25 mm<br>29 N·m <br>(3.0 kgf·m, 22 lbf·ft)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:232px;top:18px;font-weight:normal;font-size:9.21pt;\">");
+write("<nobr><b>F<br>8 x 1.25 mm<br>29 N·m <br>(3.0 kgf·m, 22 lbf·ft)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:236px;top:450px;font-weight:normal;font-size:9.21pt;\">");
+write("<nobr><b>F<br>8 x 1.25 mm<br>29 N·m (3.0 kgf·m, 22 lbf·ft)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:92px;top:342px;font-weight:normal;font-size:9.21pt;\">");
+write("<nobr><b>A<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:386px;top:449px;font-weight:normal;font-size:9.21pt;\">");
+write("<nobr><b>B<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:223px;top:389px;font-weight:normal;font-size:9.21pt;\">");
+write("<nobr><b>C<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:27px;top:31px;font-weight:normal;font-size:9.21pt;\">");
+write("<nobr><b>A<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:189px;top:513px;font-weight:normal;font-size:9.21pt;\">");
+write("<nobr><b>E<br>8 x 1.25 mm<br>29 N·m (3.0 kgf·m, 22 lbf·ft)<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

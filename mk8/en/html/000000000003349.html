@@ -1,0 +1,768 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E9PJ10300027201FHAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+Speaker Test/Replacement
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR01">
+</a>
+<div class="procedure_sub_title">
+<b>
+Front Door Speaker
+</b>
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+<a href="javascript:CtsProc('0','000000000000304','i000')">
+Remove the door panel.
+</a>
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Remove the bolt. Then lift the speaker straight up to release the lower clips (A).
+</div>
+<div>
+<img src="../img/NOTICE_EN.PNG">
+<div>
+If you pull the speaker out too far from the door, you will damage the lower clips.
+</div>
+</img>
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Disconnect the 2P connector (B), and remove the speaker.
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Measure the resistance between the terminals No. 1 and No. 2. There should be about 2 Ω [4Ω].
+</div>
+<div>
+[  ]: Without premium audio system
+</div>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+If the resistance is not as specified, replace the door speaker.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000009299','1');">
+<img src="../tn/TL19E9PJ10300027201FHAD01.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9PJ10300027201FHAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR02">
+</a>
+<div class="procedure_sub_title">
+<b>
+Front Center Speaker (With Premium Audio System)
+</b>
+</div>
+<a name="i110">
+</a>
+<ol>
+<li value="1">
+<div>
+<a href="javascript:CtsProc('0','000000000000376','i000')">
+Remove the speaker lid (A).
+</a>
+</div>
+</li>
+</ol>
+<a name="i120">
+</a>
+<ol>
+<li value="2">
+<div>
+Remove the bolts, then pull out the front center speaker (B).
+</div>
+</li>
+</ol>
+<a name="i130">
+</a>
+<ol>
+<li value="3">
+<div>
+Disconnect the 2P connector (C), and remove the front center speaker.
+</div>
+</li>
+</ol>
+<a name="i140">
+</a>
+<ol>
+<li value="4">
+<div>
+Measure the resistance between the No. 1 and No. 2 terminals. There should be about 4 Ω.
+</div>
+</li>
+</ol>
+<a name="i150">
+</a>
+<ol>
+<li value="5">
+<div>
+If the resistance is not as specified, replace the front center speaker.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000009300','1');">
+<img src="../tn/TL19E9PJ10300027201FHAD02.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9PJ10300027201FHAD02_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR03">
+</a>
+<div class="procedure_sub_title">
+<b>
+Front Door Tweeter
+</b>
+</div>
+<a name="i210">
+</a>
+<ol>
+<li value="1">
+<div>
+Detach the clip (A) and remove the front door tweeter cover (B). Then disconnect the connector (C).
+</div>
+</li>
+</ol>
+<a name="i220">
+</a>
+<ol>
+<li value="2">
+<div>
+Check the capacitor condition. If any malfunction is found, replace the front door tweeter.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000009301','1');">
+<img src="../tn/TL19E9PJ10300027201FHAD03.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9PJ10300027201FHAD03_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR03">
+</a>
+<a name="i230">
+</a>
+<ol>
+<li value="3">
+<div>
+Measure the resistance between the front door tweeter (A) terminal No. 2 and the outside terminal of the capacitor. There should be about 6 Ω [4 Ω].
+</div>
+<div>
+[ ]: Without premium audio system
+</div>
+</li>
+</ol>
+<a name="i240">
+</a>
+<ol>
+<li value="4">
+<div>
+If the resistance is not as specified, replace the front door tweeter.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<div class="figure_title">
+<b>
+With premium audio system
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000009302','1');">
+<img src="../tn/TL19E9PJ10300027201FHAD04.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9PJ10300027201FHAD04_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+<div>
+<div class="figure_title">
+<b>
+Without premium audio system
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000009302','2');">
+<img src="../tn/TL19E9PJ10300027201FHAD05.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9PJ10300027201FHAD05_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR03">
+</a>
+<a name="i250">
+</a>
+<ol>
+<li value="5">
+<div>
+Remove the front door tweeter (A) from the front tweeter cover (B).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000009303','1');">
+<img src="../tn/TL19E9PJ10300027201FHAD06.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9PJ10300027201FHAD06_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<div class="procedure_sub_title">
+<b>
+Rear Satellite Speaker
+</b>
+</div>
+<a name="i310">
+</a>
+<ol>
+<li value="1">
+<div>
+Remove these items:
+</div>
+<ul type="disc">
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003400','i000')">
+Tonneau cover and cargo net
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003468','i000')">
+Rear seat cushion
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003400','i000')">
+Cargo area side trim panel
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003398','i000')">
+Quarter pillar trim
+</a>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i320">
+</a>
+<ol>
+<li value="2">
+<div>
+Remove the two mounting bolts from the rear satellite speaker (A).
+</div>
+</li>
+</ol>
+<a name="i330">
+</a>
+<ol>
+<li value="3">
+<div>
+Disconnect the 2P connector (B), and remove the rear satellite speaker.
+</div>
+</li>
+</ol>
+<a name="i340">
+</a>
+<ol>
+<li value="4">
+<div>
+Measure the resistance between the terminals No. 1 and No. 2. There should be about 4 Ω.
+</div>
+</li>
+</ol>
+<a name="i350">
+</a>
+<ol>
+<li value="5">
+<div>
+If the resistance is not as specified, replace the rear satellite speaker.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000009304','1');">
+<img src="../tn/TL19E9PJ10300027201FHAD07.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9PJ10300027201FHAD07_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR05">
+</a>
+<div class="procedure_sub_title">
+<b>
+Rear Door Speaker
+</b>
+</div>
+<a name="i410">
+</a>
+<ol>
+<li value="1">
+<div>
+<a href="javascript:CtsProc('0','000000000000311','i000')">
+Remove the door panel.
+</a>
+</div>
+</li>
+</ol>
+<a name="i420">
+</a>
+<ol>
+<li value="2">
+<div>
+Remove the bolt. Then lift the speaker straight up to release the lower clips (A).
+</div>
+<div>
+<img src="../img/NOTICE_EN.PNG">
+<div>
+If you pull the speaker out too far from the door, you will damage the lower clips.
+</div>
+</img>
+</div>
+</li>
+</ol>
+<a name="i430">
+</a>
+<ol>
+<li value="3">
+<div>
+Disconnect the 2P connector (B), and remove the speaker.
+</div>
+</li>
+</ol>
+<a name="i440">
+</a>
+<ol>
+<li value="4">
+<div>
+Measure the resistance between the terminals No. 1 and No. 2. There should be about 2 Ω [4Ω].
+</div>
+<div>
+[  ]: Without premium audio system
+</div>
+</li>
+</ol>
+<a name="i450">
+</a>
+<ol>
+<li value="5">
+<div>
+If the resistance is not as specified, replace the door speaker.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000009305','1');">
+<img src="../tn/TL19E9PJ10300027201FHAD08.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9PJ10300027201FHAD08_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR06">
+</a>
+<div class="procedure_sub_title">
+<b>
+Subwoofer (With Premium Audio System)
+</b>
+</div>
+<a name="i510">
+</a>
+<ol>
+<li value="1">
+<div>
+Remove these items:
+</div>
+<ul type="disc">
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003400','i000')">
+Tonneau cover and cargo net
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003468','i000')">
+Rear seat cushion
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003400','i000')">
+Right cargo area side trim panel
+</a>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i520">
+</a>
+<ol>
+<li value="2">
+<div>
+Remove the four mounting bolts from the subwoofer (A).
+</div>
+</li>
+</ol>
+<a name="i530">
+</a>
+<ol>
+<li value="3">
+<div>
+Disconnect the 8P connector (B), and remove the subwoofer.
+</div>
+</li>
+</ol>
+<a name="i540">
+</a>
+<ol>
+<li value="4">
+<div>
+Measure the resistance between the terminals No. 3 and No. 8. There should be about 2 Ω.
+</div>
+</li>
+</ol>
+<a name="i550">
+</a>
+<ol>
+<li value="5">
+<div>
+If the resistance is not as specified, replace the subwoofer.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000009306','1');">
+<img src="../tn/TL19E9PJ10300027201FHAD09.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9PJ10300027201FHAD09_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

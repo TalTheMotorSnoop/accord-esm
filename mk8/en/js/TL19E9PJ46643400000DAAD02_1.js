@@ -1,0 +1,37 @@
+with(document) {
+write("<div id=\"group2\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:543px;\">");
+write("<div id=\"rect2\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:543px;\">");
+write("<img id=\"img2\" name=\"PrtImgId\" src=\"../img/TL19E9PJ46643400000DAAD02.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:543px;border-color:#ffffff\">");
+write("<p id=\"p2_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:483px;top:17px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>DOOR MULTIPLEX CONTROL UNIT<br>(Built into the power window master switch)<br><a href=\"javascript:CtsProc('0','000000000003473','i000')\"></b>Input Test,</a><br><a href=\"javascript:CtsProc('0','000000000000577','i000')\">Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p2_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:746px;top:182px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>DRIVER'S DOOR LOCK<br>ACTUATOR/KNOB SWITCH/<br>KEY CYLINDER SWITCH<br><a href=\"javascript:CtsProc('0','000000000000533','i000')\"></b>Acutuator Test,<br></a><br> in the Shop Manual,<br> P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000000534','i000')\">Knob Switch Test,<br></a><br> in the Shop Manual,<br> P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000000532','i000')\">Key Cylinder Switch Test,<br></a><br> in the Shop Manual,<br> P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p2_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:728px;top:106px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>IGNITION KEY SWITCH<br><a href=\"javascript:CtsProc('0','000000000000433','i000')\"></b>Test,</a><br> in the Shop Manual,<br> P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p2_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:59px;top:387px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>DRIVER'S DOOR SWITCH<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:375px;top:514px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>LEFT REAR DOOR SWITCH<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:60px;top:439px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>LEFT REAR DOOR LOCK ACTUATOR/<br>KNOB SWITCH*<br><a href=\"javascript:CtsProc('0','000000000000533','i000')\"></b>Acutuator Test,</a><br> in the Shop Manual, P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000000534','i000')\">Knob Switch Test,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p2_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:607px;top:500px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>FUEL FILL DOOR LOCK ACTUATOR<br><a href=\"javascript:CtsProc('0','000000000003472','i000')\"></b>Test/Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:252px;top:17px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>SECURITY HORN RELAY<br></b>Wire colors: BRN,<br>RED, GRY and RED<br><a href=\"javascript:CtsProc('0','000000000003479','i000')\">Test,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:60px;top:338px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>DRIVER'S DOOR <br>KEY CYLINDER<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_10\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:695px;top:441px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>REAR TURN SIGNAL LIGHT<br><a href=\"javascript:CtsProc('0','000000000003410','i000')\"></b>Replacement,</a><br><a href=\"javascript:CtsProc('0','000000000003412','i000')\">Bulb Replacement,</a><br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

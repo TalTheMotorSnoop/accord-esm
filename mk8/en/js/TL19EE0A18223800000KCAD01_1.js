@@ -1,0 +1,37 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:991px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:991px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19EE0A18223800000KCAD01.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:991px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:209px;top:18px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>REAR ENGINE MOUNT<br>BRACKET<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:605px;top:57px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>TRANSMISSION MOUNT<br>BRACKET (M/T model)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:786px;top:276px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>12 x 1.25 mm<br>54 N·m <br>(5.5 kgf·m, 40 lbf·ft)<br></b>Replace.<br></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:621px;top:410px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>FRONT ENGINE MOUNT<br>BRACKET<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:791px;top:695px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>12 x 1.25 mm<br>64 N·m <br>(6.5 kgf·m, 47 lbf·ft)<br></b>Replace.<br></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:670px;top:935px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>8 x 1.25 mm<br>24 N·m <br>(2.4 kgf·m, 17 lbf·ft)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:163px;top:908px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>8 x 1.25 mm<br>24 N·m <br>(2.4 kgf·m, 17 lbf·ft)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:460px;top:936px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>ALTERNATOR BRACKET<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:175px;top:641px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>A/C COMPRESSOR<br>BRACKET<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_10\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:99px;top:289px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>12 x 1.25 mm<br>88 N·m <br>(9.0 kgf·m, 65 lbf·ft)<br></b>Replace.<br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

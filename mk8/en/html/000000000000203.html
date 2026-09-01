@@ -1,0 +1,2302 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E00H32500036861MBAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+LKAS Camera Aiming
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<div class="tool_list_title">
+<b>
+Special Tools Required
+</b>
+</div>
+<div>
+<a href="javascript:PrtProc('0','ZOOM000000000013623')">
+<br>
+Rader aimer set
+<br>
+ 070AJ-SDA0100
+</a>
+</div>
+<div>
+<a href="javascript:PrtProc('0','ZOOM000000000013623')">
+<br>
+ or Camera/rader aimer set 070AJ-SDA0300*
+</a>
+</div>
+<div>
+*Available by rental from Honda Motor Europe Ltd. for Europe market
+</div>
+<div>
+<b>
+Prepare the items shown
+</b>
+</div>
+<ul type="disc">
+<li>
+<div>
+HDS
+</div>
+</li>
+<li>
+<div>
+Ballpoint pen
+</div>
+</li>
+<li>
+<div>
+Tape
+</div>
+</li>
+<li>
+<div>
+Camera/rader aimer set 070AJ-SDA0300
+</div>
+</li>
+</ul>
+<div>
+NOTE: The LKAS camera must be re-aimed if the LKAS camera unit is removed, replaced or if aiming error occurs. When aiming is not finished, an LKAS indicator and a DTC is stored.
+</div>
+<div>
+<b>
+Cautions for the operation environment
+</b>
+</div>
+<ul type="disc">
+<li>
+<div>
+LKAS camera aiming should be done on a flat place.
+</div>
+</li>
+<li>
+<div>
+Do the aiming in a proper place where you can obtain the about 3 m (9.8 ft.) distance, between a target pattern and the vehicle (from the centre of the front wheel hub).
+</div>
+</li>
+<li>
+<div>
+There should be no bright objects at the back of the target (sunlight, windows, illumination, or reflectors) or design similar to the target pattern.
+</div>
+</li>
+<li>
+<div>
+Aiming should be done in a well-lighted area.
+</div>
+</li>
+</ul>
+<div>
+<b>
+Set Up the vehicle
+</b>
+</div>
+<ul type="disc">
+<li>
+<div>
+Aiming the LKAS camera requires the HDS.
+</div>
+</li>
+<li>
+<div>
+All wheels of the vehicle should touch the ground.
+</div>
+</li>
+<li>
+<div>
+Make sure the suspension has not been modified.
+</div>
+</li>
+<li>
+<div>
+Make sure all the tyre sizes are correct and that their pressures are correct.
+</div>
+</li>
+<table class="Viewer">
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Front/rear tyre: 225/50R17 98V or 235/45R18 98W
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Front/rear tyre pressure: 230 kPa (2.3 kgf/cm
+<sup>
+2
+</sup>
+, 33 psi)
+</div>
+</td>
+</tr>
+</table>
+<li>
+<div>
+Do not place the wheels of the vehicle on a steel plate or a roller.
+</div>
+</li>
+<li>
+<div>
+Make sure the fuel tank is full.
+</div>
+</li>
+<li>
+<div>
+Remove the all baggage from the vehicle except the tool kit.
+</div>
+</li>
+<li>
+<div>
+Make sure the steering wheel is straight ahead, and do not turn it after setting up the vehicle.
+</div>
+</li>
+<li>
+<div>
+Make sure that all doors are closed.
+</div>
+</li>
+<li>
+<div>
+Do not put any objects on the instrument panel.
+</div>
+</li>
+<li>
+<div>
+Make sure that there are no stains on the lens of the LKAS camera, and the interior and exterior surface of the windshield of the lens parts.
+</div>
+</li>
+<li>
+<div>
+Shift the transmission lever to the park or neutral, and apply the parking brake.
+</div>
+</li>
+<li>
+<div>
+On same models, if you are towing a trailer, unhitch the trailer.
+</div>
+</li>
+</ul>
+<a name="iR03">
+</a>
+<div class="procedure_sub_title">
+<b>
+LKAS camera adjustment procedure
+</b>
+</div>
+<div>
+There are Static Aiming and Dynamic Aiming procedures, and they need to be done in that order.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000531','1');">
+<img src="../tn/TL19E00H32500036861MBAD01.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H32500036861MBAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<div class="procedure_sub_title">
+<b>
+Precaution for the static camera aiming
+</b>
+</div>
+<div>
+To complete the aiming, it is necessary to succeed all of three targets (center, passenger's side, driver's side) detections. If the detection for any one of targets failed or aborted on the way, the condition will be the aiming uncompleted.
+</div>
+<div>
+When the static camera aiming was failure for some reason, aiming failure code is displayed on the HDS. In this case, 
+<a href="javascript:CtsProc('0','000000000000201','i000')">
+troubleshoot the indicated failure code with the HDS.
+</a>
+</div>
+<a name="iT01">
+</a>
+<div class="procedure_topic_title">
+<b>
+Vehicle Preparation
+</b>
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Turn the ignition switch to ON (II) and make sure only the DTC 10 is indicated with the HDS.
+</div>
+<div>
+NOTE: When the LKAS camera is replaced, removed and reattached or fails the aiming process, the DTC 10 is stored and LKAS indicator will be lit. The LKAS camera aiming procedure can be done when this DTC is shown but if any other DTC is indicated do the DTC failure diagnosis. If the cause of the failure cannot be solved then the LKAS camera aiming procedure cannot be done.
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Remove the front wheels, and push out the wheel cap (A) on the aluminum wheel from the inside. Reinstall the front wheels.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000532','1');">
+<img src="../tn/TL19E00H32500036861MBAD02.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H32500036861MBAD02_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="iT02">
+</a>
+<div class="procedure_topic_title">
+<b>
+Special Tools Set-up
+</b>
+</div>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Assemble the camera aimer set components (A).
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Dangle the three plumb bobs (B) from the target (C). Put the level (D) on the knob of the target. Turn the adjustable hooks (E), and adjust the vertical angle of target pattern surface so that the air bubble in the level is centered.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000533','1');">
+<img src="../tn/TL19E00H32500036861MBAD03.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H32500036861MBAD03_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="iT03">
+</a>
+<div class="procedure_topic_title">
+<b>
+Settings
+</b>
+</div>
+<div>
+<b>
+Setting the distance between the target and vehicle
+</b>
+</div>
+<div>
+NOTE: When marking on the floor, use suitable tape to mark the exact locations.
+</div>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+Hang the plumb bob (A) from the centre line (C) on the jacking pad under the front of the vehicle (line up the plumb bob with the line on the jacking pad), and mark B the spot on the floor where the tip of the plumb bob touches the floor.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000534','1');">
+<img src="../tn/TL19E00H32500036861MBAD04.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H32500036861MBAD04_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="iT03">
+</a>
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+Hang the plumb bob (A) from the centre of the rear tow hook (B) on the vehicle centre line and mark C the spot on the floor where the tip of plumb bob touches the floor.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000535','1');">
+<img src="../tn/TL19E00H32500036861MBAD05.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H32500036861MBAD05_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="iT03">
+</a>
+<a name="i070">
+</a>
+<ol>
+<li value="7">
+<div>
+Carefully align the string (A) along point B and point C on the floor. This is the centre line of the vehicle. Tape the string to the floor behind the vehicle aligned with point C. Pull the string forward to a point about 3 m (9.8 ft) in front of the vehicle and tape (D) the string.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000536','1');">
+<img src="../tn/TL19E00H32500036861MBAD06.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H32500036861MBAD06_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="iT03">
+</a>
+<a name="i080">
+</a>
+<ol>
+<li value="8">
+<div>
+Stretch a string (A) perpendicular to the centre line (C) at the point B. Tape both ends of the string on the floor.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000537','1');">
+<img src="../tn/TL19E00H32500036861MBAD07.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H32500036861MBAD07_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="iT03">
+</a>
+<a name="i090">
+</a>
+<ol>
+<li value="9">
+<div>
+Insert the special tool (A) in both driveshaft centre holes.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000538','1');">
+<img src="../tn/TL19E00H32500036861MBAD08.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H32500036861MBAD08_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="iT03">
+</a>
+<a name="i100">
+</a>
+<ol>
+<li value="10">
+<div>
+Hang the plumb bob (A) from the point of the special tool, and mark D1 a spot on the floor where the tip of the plumb bob touches the floor. Repeat this step for the opposite front wheel, and mark D2 a spot on the floor.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000539','1');">
+<img src="../tn/TL19E00H32500036861MBAD09.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H32500036861MBAD09_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="iT03">
+</a>
+<a name="i110">
+</a>
+<ol>
+<li value="11">
+<div>
+Align the string (A) on point D1 and stretch a string perpendicular to the string (B) (this is parallel line of the centre line). Tape the string to the floor behind the aligned with point D1. Repeat this step for the opposite front wheel.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000540','1');">
+<img src="../tn/TL19E00H32500036861MBAD10.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H32500036861MBAD10_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="iT03">
+</a>
+<a name="i120">
+</a>
+<ol>
+<li value="12">
+<div>
+Pull the string (A) forward to a point 3 m (9.8 ft) from point D1. Tape the string mark Y on the floor. Repeat this step for the opposite front wheel, and mark X on the floor.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000541','1');">
+<img src="../tn/TL19E00H32500036861MBAD11.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H32500036861MBAD11_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="iT03">
+</a>
+<a name="i130">
+</a>
+<ol>
+<li value="13">
+<div>
+Stretch a string (A) between point Y and point X, and tape both ends of the string on the floor. Mark the point Z where the string crosses with the centre line (B).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000542','1');">
+<img src="../tn/TL19E00H32500036861MBAD12.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H32500036861MBAD12_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="iT04">
+</a>
+<div class="procedure_topic_title">
+<b>
+Marking of the central target position
+</b>
+</div>
+<div>
+NOTE: When marking on the floor, use suitable tape to mark the exact locations.
+</div>
+<a name="i140">
+</a>
+<ol>
+<li value="14">
+<div>
+On string (A) mark a new point Z1 (central target) which is 52 mm (2.05 in.) from the point Z to the right side.
+</div>
+<div>
+NOTE: The LKAS camera is offset to the right side of the vehicle by 52 mm (2.05 in.).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000543','1');">
+<img src="../tn/TL19E00H32500036861MBAD13.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H32500036861MBAD13_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="iT05">
+</a>
+<div class="procedure_topic_title">
+<b>
+Marking the target position of the right side
+</b>
+</div>
+<div>
+NOTE: When marking on the floor, use suitable tape to mark the exact locations.
+</div>
+<a name="i150">
+</a>
+<ol>
+<li value="15">
+<div>
+On string (A) mark a new point Y1 (target of the right side) which is 700 mm (27.56 in.) from the point Z1 to the right side.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000544','1');">
+<img src="../tn/TL19E00H32500036861MBAD14.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H32500036861MBAD14_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="iT06">
+</a>
+<div class="procedure_topic_title">
+<b>
+Marking the target position of the left side
+</b>
+</div>
+<div>
+NOTE: When marking on the floor, use suitable tape to mark the exact locations.
+</div>
+<a name="i160">
+</a>
+<ol>
+<li value="16">
+<div>
+On string (A) mark a new point X1 (target of the left side) which is 700 mm (27.56 in.) from the point Z1 to the left side.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000545','1');">
+<img src="../tn/TL19E00H32500036861MBAD15.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H32500036861MBAD15_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="iT07">
+</a>
+<div class="procedure_topic_title">
+<b>
+Choose the setting value of the LKAS camera height
+</b>
+</div>
+<a name="i170">
+</a>
+<ol>
+<li value="17">
+<div>
+Measure the right and left wheel arch height ‘‘H1'' by using the front wheel in either side.
+</div>
+</li>
+</ol>
+<a name="i180">
+</a>
+<ol>
+<li value="18">
+<div>
+Obtain the front wheel arch height average ‘‘H2'' of the front wheel arch height from the right and left measurement value ‘‘H1'' in either side.
+</div>
+</li>
+</ol>
+<a name="i190">
+</a>
+<ol>
+<li value="19">
+<div>
+Calculate the difference between the front wheel arch height average value ‘‘H2'' and the front wheel arch height standard value: 691 mm (27.2 in.), and obtain the positive or negative numerical value ‘‘H3'' from the standard value.
+</div>
+</li>
+</ol>
+<a name="i200">
+</a>
+<ol>
+<li value="20">
+<div>
+Choose the setting value number (the camera height setting value of the HDS) which corresponds to computed numerical value ‘‘H3'' below and it records the number.
+</div>
+<div>
+<br>
+<div class="table_title">
+<b>
+The LKAS camera height setting value of HDS
+</b>
+</div>
+<br>
+<table width="87%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="23%">
+<col width="76%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Setting value number
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<b>
+‘‘H3'' with+ or − numerical value from the standard value (mm)
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+(1)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+More than +5 to +15 or less
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+(2)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+More than −5 to less than +5
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+(3)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+More than −15 to less than −5
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+(4)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+More than −25 to less than −15
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+(5)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+More than −35 to less than −25
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<div>
+NOTE: It uses this number when choosing the camera height setting value of HDS in case of the aiming implementation.
+</div>
+<div>
+<table width="87%" class="Viewer" frame="void" style="table-layout:fixed;">
+<col width="4%">
+<col width="58%">
+<col width="37%">
+<tbody>
+<tr>
+<td class="ViewerTD" colspan="3" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Example
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" colspan="3" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+The front wheel arch height measurement value ‘‘H1'':
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Right front wheel arch height
+</b>
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+687 mm (27.0 in.)
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Left front wheel arch height
+</b>
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+692 mm (27.2 in.)
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" colspan="3" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+The front wheel arch height average value ‘‘H2'':
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="center">
+</td>
+<td class="ViewerTD" colspan="2" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+689.5 mm (27.1 in.)
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" colspan="3" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+The different from the standard value ‘‘H3'':
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+</td>
+<td class="ViewerTD" colspan="2" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+689.5 mm (27.14 in.)−691 mm (27.2 in.) (standard value)= −1.5 mm (−0.06 in.)
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" colspan="3" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+The setting value number which corresponds the numerical value. (2)
+</b>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<div>
+</div>
+<br>
+<div>
+</div>
+<br>
+<div>
+</div>
+<br>
+<div>
+NOTE: When numerical value from the standard value exceeds +15 mm (0.06 in.) or −35 mm, (−1.38 in.) it is not possible do the LKAS camera aiming work. It checks because there is possibility that the frame or suspension has become warped, or the spring has been contracted.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000546','1');">
+<img src="../tn/TL19E00H32500036861MBAD16.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H32500036861MBAD16_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="iT08">
+</a>
+<div class="procedure_topic_title">
+<b>
+Target pattern surface height adjustment and positioning
+</b>
+</div>
+<a name="i210">
+</a>
+<ol>
+<li value="21">
+<div>
+Measure the target pattern central point (A) to become the 1,100 mm (43.3 in.) from the floor surface, and adjust the height of the target. Adjust the length of the plumb bobs, should be able to move parallel on the string described in 
+<a href="javascript:try{parent.Jmp('i300');}catch(e){location.hash='i300';}">Step 30
+</a>
+.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000547','1');">
+<img src="../tn/TL19E00H32500036861MBAD17.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H32500036861MBAD17_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="iT08">
+</a>
+<a name="i220">
+</a>
+<ol>
+<li value="22">
+<div>
+Position the camera aimer set to the string (A) you made on the floor in the 
+<a href="javascript:try{parent.Jmp('i130');}catch(e){location.hash='i130';}">Step 13
+</a>
+, and move the camera aimer set to align the tip of the central plumb bob (B) with a mark Z1. 
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000548','1');">
+<img src="../tn/TL19E00H32500036861MBAD18.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H32500036861MBAD18_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="iT08">
+</a>
+<a name="i230">
+</a>
+<ol>
+<li value="23">
+<div>
+Turn the target (A) carefully, and adjust the horizontal angle of the target pattern surface by aligning the right and left side plumb bobs (B) on a string (C).
+</div>
+<div>
+NOTE: To make the adjustment correctly, align the plumbs so that each of them attached with tip of the plumb bob on a string.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000549','1');">
+<img src="../tn/TL19E00H32500036861MBAD19.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H32500036861MBAD19_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="iT09">
+</a>
+<div class="procedure_topic_title">
+<b>
+Implementation of the Static Camera Aiming
+</b>
+</div>
+<a name="i240">
+</a>
+<ol>
+<li value="24">
+<div>
+Connect the HDS to the data link connector (DLC).
+</div>
+</li>
+</ol>
+<a name="i250">
+</a>
+<ol>
+<li value="25">
+<div>
+Start the engine.
+</div>
+</li>
+</ol>
+<a name="i260">
+</a>
+<ol>
+<li value="26">
+<div>
+Select LKAS camera aiming from the HDS. At this time, the LKAS indicator (orange) come on and ‘‘CAM'' is displayed at multi-information display (MID).
+</div>
+<div>
+NOTE: The static camera aiming status can be confirmed in the MID and LKAS indicator as follows.
+</div>
+</li>
+</ol>
+<div>
+<br>
+<div class="table_title">
+<b>
+The static camera aiming status
+</b>
+</div>
+<br>
+<table width="100%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="54%">
+<col width="18%">
+<col width="27%">
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+STATE
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+(1)MID
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+(2)LKAS INDICATOR (ORANGE)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Start the engine
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+OFF
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+ON
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Starting the static camera aiming
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" rowspan="2" align="center">
+<div>
+‘‘CAM'' ON
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" rowspan="2" align="center">
+<div>
+ON
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Set the camera height
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Starting the target detection
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+‘‘CAM'' Blink
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+ON
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<a name="i270">
+</a>
+<ol>
+<li value="27">
+<div>
+Set the LKAS camera height to the HDS.
+</div>
+<div>
+NOTE: Chooses ‘‘The LKAS camera height setting value number'' which was recorded with the 
+<a href="javascript:try{parent.Jmp('i200');}catch(e){location.hash='i200';}">Step 20
+</a>
+.
+</div>
+</li>
+</ol>
+<a name="i280">
+</a>
+<ol>
+<li value="28">
+<div>
+Check ‘‘central target detection'' from the HDS. ‘‘CAM'' of MID begins a blink when issuing instructions.
+</div>
+<div>
+NOTE: It continues to blink until the aiming completes the display of ‘‘CAM'' and it turns off it when the aiming completes. When failing in the aiming, it turned on.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000550','1');">
+<img src="../tn/TL19E00H32500036861MBAD20.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H32500036861MBAD20_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="iT09">
+</a>
+<a name="i290">
+</a>
+<ol>
+<li value="29">
+<div>
+Check ‘‘the central target detection'' was successful on the HDS.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000551','1');">
+<img src="../tn/TL19E00H32500036861MBAD21.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H32500036861MBAD21_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="iT09">
+</a>
+<a name="i300">
+</a>
+<ol>
+<li value="30">
+<div>
+Move the camera aimer set, and make a target pattern central point agree with floor surface position X1 of the left side.
+</div>
+<div>
+NOTE: To make the adjustment correctly, align the plumbs so that each of them attached with tip of the plumb bob on a string.
+</div>
+</li>
+</ol>
+<a name="i310">
+</a>
+<ol>
+<li value="31">
+<div>
+Check ‘‘the left side target detection'' from the HDS.
+</div>
+</li>
+</ol>
+<a name="i320">
+</a>
+<ol>
+<li value="32">
+<div>
+Check ‘‘the left target detection'' was successful on the HDS. 
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000552','1');">
+<img src="../tn/TL19E00H32500036861MBAD22.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H32500036861MBAD22_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="iT09">
+</a>
+<a name="i330">
+</a>
+<ol>
+<li value="33">
+<div>
+Move the camera aimer set, and make a target pattern central point agree with floor surface position Y1 of the right side.
+</div>
+<div>
+NOTE: To make the adjustment correctly, align the plumbs so that each of them attached with tip of the plumb bob on a string.
+</div>
+</li>
+</ol>
+<a name="i340">
+</a>
+<ol>
+<li value="34">
+<div>
+Check ‘‘the right side target detection'' from the HDS.
+</div>
+</li>
+</ol>
+<a name="i350">
+</a>
+<ol>
+<li value="35">
+<div>
+Check ‘‘the right side target detection'' was successful on the HDS.
+</div>
+<div>
+NOTE: If the aiming has failed or is aborted, you must start the static camera aiming procedure again.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000553','1');">
+<img src="../tn/TL19E00H32500036861MBAD23.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H32500036861MBAD23_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="iT09">
+</a>
+<a name="i360">
+</a>
+<ol>
+<li value="36">
+<div>
+Make sure ‘‘CAM'' of MID goes out.
+</div>
+<div>
+NOTE: The static camera aiming status can be confirmed in the MID and LKAS indicator as follows. If ‘‘CAM'' is displayed on MID the aiming is not finished, then retry the static camera aiming procedure first.
+</div>
+</li>
+</ol>
+<div>
+<br>
+<div class="table_title">
+<b>
+The static camera aiming status
+</b>
+</div>
+<br>
+<table width="100%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="54%">
+<col width="18%">
+<col width="27%">
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+STATE
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+(1)MID
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+(2)LKAS INDICATOR (ORANGE)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Aiming is completed
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+OFF
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+OFF
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Aiming is failure
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+‘‘CAM'' ON
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+ON
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<a name="i370">
+</a>
+<ol>
+<li value="37">
+<div>
+The static camera aiming was completed. Go to the next step for the dynamic camera aiming procedure.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000554','1');">
+<img src="../tn/TL19E00H32500036861MBAD24.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H32500036861MBAD24_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="iT10">
+</a>
+<div class="procedure_topic_title">
+<b>
+Precaution for the Dynamic Camera Aiming
+</b>
+</div>
+<div>
+Carry out the dynamic camera aiming on a road that has parallel and horizontal lanes that will allow the vehicle to be driven at speeds between 72−112 km/h (45−70 mph) for 10 minutes or more. The aiming will fail unless this is completed within 30 minutes. The dynamic camera aiming may not be successful if it is attempted in bad weather such as rain, fog or snow. The white or yellow lines on the road are not clearly visible due to the reflections caused by a wet road surface. When you do the dynamic camera aiming in the dark, turn the headlights on and ensure that the windscreen and headlights are clean. If the dynamic camera aiming fails for some reason, an aiming failure code is displayed on the HDS. In this case, carry out the troubleshooting for the code indicated using the HDS.
+</div>
+<div>
+<b>
+Implementation of the dynamic camera aiming
+</b>
+</div>
+<a name="i380">
+</a>
+<ol>
+<li value="38">
+<div>
+Turn the ignition switch to LOCK (0).
+</div>
+</li>
+</ol>
+<a name="i390">
+</a>
+<ol>
+<li value="39">
+<div>
+<a href="javascript:CtsProc('0','000000000002888','i000')">
+Check the LKAS camera DTCs with the HDS.
+</a>
+ Make sure that only DTC 11 indicated.
+</div>
+<div>
+NOTE: The LKAS camera aiming procedure can be done when this DTC is shown but if any other DTC is indicated, do the DTC failure diagnosis.
+</div>
+</li>
+</ol>
+<a name="i400">
+</a>
+<ol>
+<li value="40">
+<div>
+Start the engine. At this time, the LKAS indicator (orange) comes on.
+</div>
+</li>
+</ol>
+<a name="i410">
+</a>
+<ol>
+<li value="41">
+<div>
+Select dynamic camera aiming from the HDS. ‘‘CAM'' of MID begins a blink when issuing instructions.
+</div>
+</li>
+</ol>
+<a name="i420">
+</a>
+<ol>
+<li value="42">
+<div>
+Carry out the aiming according to the instruction indicated on the HDS screen. If the dynamic camera aiming fails for any reason an aiming failure cord will be displayed on the HDS. In this case, carry out the troubleshooting for the cords, then retry the aiming procedure first.
+</div>
+<div>
+NOTE: The dynamic camera aiming status can be confirmed in the MID and LKAS indicator as follows.
+</div>
+</li>
+</ol>
+<div>
+<br>
+<div class="table_title">
+<b>
+The dynamic camera aiming status
+</b>
+</div>
+<br>
+<table width="100%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="54%">
+<col width="18%">
+<col width="27%">
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+STATE
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+(1)MID
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+(2)LKAS INDICATOR (ORANGE)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Start the engine
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+OFF
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+ON
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Starting the dynamic camera aiming
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+‘‘CAM'' Blink
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+ON
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000555','1');">
+<img src="../tn/TL19E00H32500036861MBAD25.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H32500036861MBAD25_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="iT10">
+</a>
+<a name="i730">
+</a>
+<ol>
+<li value="43">
+<div>
+Stop the vehicle, after confirming that the aiming has completed. Turn the ignition switch to LOCK (0), then turn it to ON(II) and make sure the LKAS indicator and ‘‘CAM'' of MID does not comes on. If any DTCs are indicated, then carry out the troubleshooting for the codes that are indicated.
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+Whilst carrying out the aiming procedure, ensure you drive in the centre of the lane and do not use the wiper and turn signal if possible.
+</div>
+</li>
+<li>
+<div>
+The dynamic camera aiming status can be confirmed in the MID and LKAS indicator as follows. If ‘‘CAM'' is displayed on MID the aiming is not finished, then retry the dynamic camera aiming procedure first.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<div>
+<br>
+<div class="table_title">
+<b>
+The dynamic camera aiming status
+</b>
+</div>
+<br>
+<table width="100%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="54%">
+<col width="18%">
+<col width="27%">
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+STATE
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+(1)MID
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+(2)LKAS INDICATOR (ORANGE)
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Camera is not detecting the lines of the road with drive the vehicle
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+‘‘CAM'' Blink
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+ON
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Camera is detected the lines of the road with drive the vehicle
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+‘‘LKAS'' Blink
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+ON
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Aiming is completed
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+OFF
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+OFF
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Aiming is failure
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+‘‘CAM'' ON
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+ON
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<a name="i440">
+</a>
+<ol>
+<li value="44">
+<div>
+Turn the ignition switch to LOCK (0), and disconnect the HDS from the data link connector (DLC).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000556','1');">
+<img src="../tn/TL19E00H32500036861MBAD26.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H32500036861MBAD26_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

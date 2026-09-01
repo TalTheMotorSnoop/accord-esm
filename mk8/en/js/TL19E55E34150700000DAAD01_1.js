@@ -1,0 +1,37 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:927px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:927px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E55E34150700000DAAD01.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:927px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:279px;top:64px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>CARRIER BEARING<br><a href=\"javascript:CtsProc('0','000000000002730','i000')\"></b>Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:327px;top:477px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>FINAL DRIVEN GEAR<br><a href=\"javascript:CtsProc('0','000000000001284','i000')\"></b>Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:269px;top:870px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>CARRIER BEARING<br><a href=\"javascript:CtsProc('0','000000000002730','i000')\"></b>Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:729px;top:64px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>CARRIER BEARING<br><a href=\"javascript:CtsProc('0','000000000002730','i000')\"></b>Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:725px;top:870px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>CARRIER BEARING<br><a href=\"javascript:CtsProc('0','000000000002730','i000')\"></b>Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:18px;top:17px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>R20A3 Engine Model<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:474px;top:17px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>K24Z3 Engine Model<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:260px;top:723px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>DIFFERENTIAL CARRIER<br><a href=\"javascript:CtsProc('0','000000000001283','i000')\"></b>Backlash Inspection,</a><br><a href=\"javascript:CtsProc('0','000000000001284','i000')\">Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:691px;top:677px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>DIFFERENTIAL CARRIER<br><a href=\"javascript:CtsProc('0','000000000001695','i000')\"></b>Backlash Inspection,</a><br><a href=\"javascript:CtsProc('0','000000000001696','i000')\">Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_10\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:761px;top:477px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>FINAL DRIVEN GEAR<br><a href=\"javascript:CtsProc('0','000000000001696','i000')\"></b>Replacement,</a><br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

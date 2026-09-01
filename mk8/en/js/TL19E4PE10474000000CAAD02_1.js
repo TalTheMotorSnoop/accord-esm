@@ -1,0 +1,37 @@
+with(document) {
+write("<div id=\"group2\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:319px;\">");
+write("<div id=\"rect2\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:319px;\">");
+write("<img id=\"img2\" name=\"PrtImgId\" src=\"../img/TL19E4PE10474000000CAAD02.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:319px;border-color:#ffffff\">");
+write("<p id=\"p2_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:23px;top:20px;font-weight:normal;font-size:8.67pt;\">");
+write("<nobr><b>Power flow<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:17px;top:59px;font-weight:normal;font-size:8.67pt;\">");
+write("<nobr><b>The power flows by way of:<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:17px;top:89px;font-weight:normal;font-size:8.67pt;\">");
+write("<nobr><b>Engine<br>  ↓<br>Drive plate<br>  ↓<br>Torque converter cover<br>  ↓<br>Pump<br>  ↓<br>Turbine<br>  ↓<br>Mainshaft<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:383px;top:118px;font-weight:normal;font-size:8.67pt;\">");
+write("<nobr><b>TORQUE<br>CONVERTER<br>COVER<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:660px;top:35px;font-weight:normal;font-size:8.67pt;\">");
+write("<nobr><b>PUMP<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:498px;top:17px;font-weight:normal;font-size:8.67pt;\">");
+write("<nobr><b>TURBINE<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:633px;top:124px;font-weight:normal;font-size:8.67pt;\">");
+write("<nobr><b>To ATF cooler<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:691px;top:147px;font-weight:normal;font-size:8.67pt;\">");
+write("<nobr><b>INLET<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:438px;top:290px;font-weight:normal;font-size:8.67pt;\">");
+write("<nobr><b>MAINSHAFT<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_10\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:659px;top:79px;font-weight:normal;font-size:8.67pt;\">");
+write("<nobr><b>STATOR<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

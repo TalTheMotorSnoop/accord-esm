@@ -1,0 +1,263 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+<title>SEA6EL8H10900036861MBAT00</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+var   totalImg = 1;
+var   dispNum=1;
+function prOnLoadProc() {
+	_prInitImageInfo(100);
+	_prResizeImage(100/100);
+	divBody.style.display = "block"
+	return;
+}
+function PrintFunc()
+{
+	divBody.style.display = "none";
+	var  img_hei = _prResizeImage(67/100);
+	divBody.style.display = "block";
+	var  graphTd = document.getElementById("graphTd");
+	if(graphTd.width == "100%")
+	{
+      var   current_pos;
+      var   img_pos = 0;
+         current_pos = graphTd.offsetTop;
+		var pageCnt = Math.floor(current_pos/950);
+		var img_pos = current_pos - (pageCnt*950);
+		if(img_pos+img_hei > 950)
+		{
+			var  pageElement = document.getElementById("page_onoff");
+			if(pageElement != null)
+			{
+				pageElement.style.display = "block";
+			}
+		}
+	}
+	window.print();
+	divBody.style.display = "none";
+	_prResizeImage(100/100);
+	divBody.style.display = "block";
+	window.scrollTo(0,0);
+}
+function BackFunc()
+{
+	window.location.replace("ZOOM000000000012441.html");
+}
+function NextFunc()
+{
+	window.location.replace("ZOOM000000000012443.html");
+}
+function CloseFunc()
+{
+	window.close();
+}
+function JumpFunc(strJump)
+{
+	window.location.replace(strJump);
+}
+//-->
+</script>
+<body onLoad="prOnLoadProc();" style="font-family:sans-serif;">
+<div id="divBody" style="display:none">
+<div>
+<div style="position:absolute;right=10;">
+<input type="image" src="../img/PRINT_PREVIEW.PNG" onClick="PrintFunc()">
+<input type="image" src="../img/GL_PREV.PNG" onClick="BackFunc()">
+<input type="image" src="../img/GL_NEXT.PNG" onClick="NextFunc()">
+<input type="image" src="../img/GL_CANCEL.PNG" onClick="CloseFunc()">
+</div><br><br>
+<hr width="100%" size="2" color="black">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="iT09">
+</a>
+<div class="procedure_topic_title">
+<b>
+Implementation of the Static Camera Aiming
+</b>
+</div>
+<a name="i250">
+</a>
+<ol>
+<li value="25">
+<div>
+Connect the HDS to the data link connector (DLC).
+</div>
+</li>
+</ol>
+<a name="i260">
+</a>
+<ol>
+<li value="26">
+<div>
+Start the engine.
+</div>
+</li>
+</ol>
+<a name="i270">
+</a>
+<ol>
+<li value="27">
+<div>
+Select the LKAS camera aiming from the HDS. At this time, the adaptive cruise control (ACC)/LKAS indicator comes on and ‘‘CAMERA'' is displayed at the multi-information display (MID).
+</div>
+</li>
+</ol>
+<a name="i280">
+</a>
+<ol>
+<li value="28">
+<div>
+Set the LKAS camera height to the HDS.
+</div>
+<div>
+NOTE: Choose the ‘‘ LKAS camera height setting value number'' which was recorded in
+<a href="javascript:JumpFunc('ZOOM000000000012440.html#i220')">Step 22
+</a>
+ of the preparation for the aiming.
+</div>
+</li>
+</ol>
+<a name="i290">
+</a>
+<ol>
+<li value="29">
+<div>
+Position the central point of the target pattern aligning with the central target position (F) on the floor.
+</div>
+<div>
+NOTE: For precise positioning, dangle the thread with the weight through the central point of the target pattern, and move the radar aimer set so that the front edge of the weight aligns with the mark. After positioning, remove the thread and the weight from the target pattern surface.
+</div>
+</li>
+</ol>
+<a name="i300">
+</a>
+<ol>
+<li value="30">
+<div>
+Command ‘‘the central target detection'' from the HDS and the ‘‘CAMERA'' on the multi-information display begins to blink.
+</div>
+<div>
+NOTE: ‘‘CAMERA'' on the multi-information display continues to blink until the aiming is completed and goes off when the aiming is completed.
+</div>
+</li>
+</ol>
+<a name="i310">
+</a>
+<ol>
+<li value="31">
+<div>
+Check that ‘‘the central target detection'' is succeeded on the HDS.
+</div>
+</li>
+</ol>
+<a name="i320">
+</a>
+<ol>
+<li value="32">
+<div>
+Position the central point of the target pattern aligning with the target position (H) of the passenger's side on the floor.
+</div>
+</li>
+</ol>
+<a name="i330">
+</a>
+<ol>
+<li value="33">
+<div>
+Command ‘‘the passenger's side target detection'' from the HDS.
+</div>
+</li>
+</ol>
+<a name="i340">
+</a>
+<ol>
+<li value="34">
+<div>
+Check that ‘‘the passenger's side target detection'' is succeeded on the HDS.
+</div>
+</li>
+</ol>
+<a name="i350">
+</a>
+<ol>
+<li value="35">
+<div>
+Position the central point of the target pattern aligning with the target position (G) of the driver's side on the floor.
+</div>
+</li>
+</ol>
+<a name="i360">
+</a>
+<ol>
+<li value="36">
+<div>
+Command ‘‘the driver's side target detection'' from the HDS.
+</div>
+</li>
+</ol>
+<a name="i370">
+</a>
+<ol>
+<li value="37">
+<div>
+Check that ‘‘the driver's side target detection'' is succeeded on the HDS.
+</div>
+</li>
+</ol>
+<a name="i380">
+</a>
+<ol>
+<li value="38">
+<div>
+Stop the engine.
+</div>
+</li>
+</ol>
+<a name="i390">
+</a>
+<ol>
+<li value="39">
+<div>
+Turn the ignition switch ON (II), and make sure that the adaptive cruise control (ACC)/LKAS indicator goes off. If there is any aiming defect, the adaptive cruise control (ACC)/LKAS indicator comes on and stores the DTC.
+</div>
+<div>
+NOTE: If the aiming fails or is aborted during of operation for any reason, reattempt the aiming procedure from the beginning.
+</div>
+</li>
+</ol>
+<a name="i400">
+</a>
+<ol>
+<li value="40">
+<div>
+Clear the DTC with the HDS, then turn the ignition switch OFF. The static camera aiming process is now completed. Go to the next step for the dynamic camera aiming procedure.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div style="display:none;" id="page_onoff">
+<div style="page-break-after:always;">
+</div>
+</div>
+<span style="display:block" id="imgId1">
+<div>
+<script src="../js/SEA6EL8H10900036861MBAD29_1.js">
+</script>
+</div>
+</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

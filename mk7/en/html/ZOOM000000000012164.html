@@ -1,0 +1,310 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+<title>SEA6EL6J36200000000BBAT20</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+var   totalImg = 1;
+var   dispNum=1;
+function prOnLoadProc() {
+	_prInitImageInfo(100);
+	_prResizeImage(100/100);
+	divBody.style.display = "block"
+	return;
+}
+function PrintFunc()
+{
+	divBody.style.display = "none";
+	var  img_hei = _prResizeImage(67/100);
+	divBody.style.display = "block";
+	var  graphTd = document.getElementById("graphTd");
+	if(graphTd.width == "100%")
+	{
+      var   current_pos;
+      var   img_pos = 0;
+         current_pos = graphTd.offsetTop;
+		var pageCnt = Math.floor(current_pos/950);
+		var img_pos = current_pos - (pageCnt*950);
+		if(img_pos+img_hei > 950)
+		{
+			var  pageElement = document.getElementById("page_onoff");
+			if(pageElement != null)
+			{
+				pageElement.style.display = "block";
+			}
+		}
+	}
+	window.print();
+	divBody.style.display = "none";
+	_prResizeImage(100/100);
+	divBody.style.display = "block";
+	window.scrollTo(0,0);
+}
+function BackFunc()
+{
+	window.location.replace("ZOOM000000000012163.html");
+}
+function NextFunc()
+{
+	window.location.replace("ZOOM000000000012165.html");
+}
+function CloseFunc()
+{
+	window.close();
+}
+function JumpFunc(strJump)
+{
+	window.location.replace(strJump);
+}
+//-->
+</script>
+<body onLoad="prOnLoadProc();" style="font-family:sans-serif;">
+<div id="divBody" style="display:none">
+<div>
+<div style="position:absolute;right=10;">
+<input type="image" src="../img/PRINT_PREVIEW.PNG" onClick="PrintFunc()">
+<input type="image" src="../img/GL_PREV.PNG" onClick="BackFunc()">
+<input type="image" src="../img/GL_NEXT.PNG" onClick="NextFunc()">
+<input type="image" src="../img/GL_CANCEL.PNG" onClick="CloseFunc()">
+</div><br><br>
+<hr width="100%" size="2" color="black">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG10">
+</a>
+<div class="servinfosub_title">
+<b>
+Yaw Rate
+</b>
+</div>
+<div>
+This diagnostic checks the yaw rate sensor in the control unit. This device detects when the vehicle turns, and repositions the vehicle position icon on the map screen. For more detailed information, see the yaw rate sensor theory of operation under ‘‘System Description''
+</div>
+<ul type="disc">
+<li>
+<div>
+‘‘Sensor'' indicates the voltage output from the yaw rate sensor. It should indicate about 2.500 volts when stopped.
+</div>
+</li>
+<li>
+<div>
+‘‘Offset'' is the reference voltage or standard within the yaw rate sensor. It also should indicate about 2.500 volts when stopped.
+</div>
+</li>
+<li>
+<div>
+A ‘‘sensor'' output voltage HIGHER than the ‘‘Offset'' voltage indicates that the vehicle is turning to the right.
+</div>
+<div>
+A ‘‘sensor'' output voltage LOWER than the ‘‘Offset'' voltage indicates that the vehicle is turning to the left.
+</div>
+</li>
+<li>
+<div>
+The yaw rate offset, and sensor should both indicate about 2.500 volts when stopped. If either reads zero, or 5.000 volts, replace the navigation unit.
+</div>
+</li>
+<li>
+<div>
+The yaw rate offset and sensor should be within +/−0.01 V of each other when stopped. The sensor value should change relative to the offset as the car is turned while driving. If not, replace the navigation unit.
+</div>
+</li>
+</ul>
+<div>
+<br>
+<div class="table_title">
+<b>
+Example: Car stopped
+</b>
+</div>
+<br>
+<table width="100%" class="Viewer" frame="void" style="table-layout:fixed;">
+<col width="19%">
+<col width="30%">
+<col width="19%">
+<col width="30%">
+<thead>
+<tr>
+<th class="ViewerTH" colspan="2" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Normal
+</b>
+</div>
+</th>
+<th class="ViewerTH" colspan="2" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Abnormal
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+Offset
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+2.526 V
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+Offset
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+2.526 V
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+Sensor
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+2.516−2.536 V
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+Sensor
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+2.623 V
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<div>
+<br>
+<div class="table_title">
+<b>
+Example: Car turning
+</b>
+</div>
+<br>
+<table width="100%" class="Viewer" frame="void" style="table-layout:fixed;">
+<col width="19%">
+<col width="30%">
+<col width="19%">
+<col width="30%">
+<thead>
+<tr>
+<th class="ViewerTH" colspan="2" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Normal
+</b>
+</div>
+</th>
+<th class="ViewerTH" colspan="2" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Abnormal
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+Offset
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+2.526 V
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+Offset
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+2.526 V
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+Sensor
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+2.678 V (right turn)
+</div>
+<div>
+2.478 V (left turn)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+Sensor
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+2.623 V(no change on turns)
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<ul type="disc">
+<li>
+<div>
+The settings ‘‘CCW Cal Factor'', ‘‘CW Cal Factor'', and ‘‘Set'' are for factory use only. THIS SHOULD NEVER BE USED.
+</div>
+</li>
+<li>
+<div>
+Touch ‘‘Tuning'' to view small but gradual yaw rate problems.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div style="display:none;" id="page_onoff">
+<div style="page-break-after:always;">
+</div>
+</div>
+<span style="display:block" id="imgId1">
+<div>
+<script src="../js/SEA6EL6J36200000000BBAD25_1.js">
+</script>
+</div>
+</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

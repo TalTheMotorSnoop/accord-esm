@@ -1,0 +1,141 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+<title>SEA5E44K71100000000BBAT00</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+var   totalImg = 2;
+var   dispNum=1;
+function prOnLoadProc() {
+	_prInitImageInfo(100);
+	var para_val = window.location.hash;
+	if(para_val.charAt(0) == '#') {
+		para_val = para_val.substring(1,para_val.length);
+	}
+	var   imgName;
+	imgName = "imgId" + dispNum;
+	document.getElementById(imgName).style.display = "none";
+	if(para_val.length == 0) {
+		dispNum = 1;
+	}
+	else{
+		dispNum = parseInt(para_val);
+	}
+	imgName = "imgId" + dispNum;
+	document.getElementById(imgName).style.display = "block";
+	_prResizeImage(100/100);
+	divBody.style.display = "block"
+	return;
+}
+function PrintFunc()
+{
+	divBody.style.display = "none";
+	var  img_hei = _prResizeImage(67/100);
+	divBody.style.display = "block";
+	var  graphTd = document.getElementById("graphTd");
+	if(graphTd.width == "100%")
+	{
+      var   current_pos;
+      var   img_pos = 0;
+         current_pos = graphTd.offsetTop;
+		var pageCnt = Math.floor(current_pos/950);
+		var img_pos = current_pos - (pageCnt*950);
+		if(img_pos+img_hei > 950)
+		{
+			var  pageElement = document.getElementById("page_onoff");
+			if(pageElement != null)
+			{
+				pageElement.style.display = "block";
+			}
+		}
+	}
+	window.print();
+	divBody.style.display = "none";
+	_prResizeImage(100/100);
+	divBody.style.display = "block";
+	window.scrollTo(0,0);
+}
+function BackFunc()
+{
+	window.location.replace("ZOOM000000000006209.html");
+}
+function NextFunc()
+{
+	window.location.replace("ZOOM000000000006211.html");
+}
+function CloseFunc()
+{
+	window.close();
+}
+function JumpFunc(strJump)
+{
+	window.location.replace(strJump);
+}
+function imgChange()
+{
+var   imgName;
+      imgName = "imgId" + dispNum;
+      document.getElementById(imgName).style.display = "none";
+      dispNum++;
+     if(dispNum > totalImg) {
+         dispNum = 1;
+      }
+      imgName = "imgId" + dispNum;
+      document.getElementById(imgName).style.display = "block";
+}
+//-->
+</script>
+<body onLoad="prOnLoadProc();" style="font-family:sans-serif;">
+<div id="divBody" style="display:none">
+<div>
+<div style="position:absolute;right=10;">
+<input type="image" src="../img/PRINT_PREVIEW.PNG" onClick="PrintFunc()">
+<input type="image" src="../img/GL_PREV.PNG" onClick="BackFunc()">
+<input type="image" src="../img/GL_NEXT.PNG" onClick="NextFunc()">
+<input type="image" src="../img/GL_CANCEL.PNG" onClick="CloseFunc()">
+</div><br><br>
+<hr width="100%" size="2" color="black">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iS02">
+</a>
+<div>
+If there is any problems in the system, the temperature indicator will light up the segment (A through S) corresponding to the error. The temperature indicator will then alternate every second between displaying ‘‘88'' (all segments lit) and the error code segment (A through S).
+</div>
+<div>
+NOTE: The system will only display the DTC when the AUTO and OFF buttons are pressed. If you release the buttons, the display will go blank. To return the display, simply press the AUTO then the OFF buttons again.
+</div>
+<div>
+To determine the meaning of the DTC, refer to the DTC Troubleshooting Index. If no segments light up, but the system is still not operating properly, check the sensor inputs to the climate control unit, or refer to symptom troubleshooting.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div style="display:none;" id="page_onoff">
+<div style="page-break-after:always;">
+</div>
+</div>
+<input onClick="imgChange()" type="image" src="../img/GL_NEXT.PNG" align="right">
+<br clear="right">
+<span style="display:block" id="imgId1">
+<div>
+<script src="../js/SEA4E0AK71100000000BBAD04_1.js">
+</script>
+</div>
+</span>
+<span style="display:none" id="imgId2">
+<div>
+<script src="../js/SEA4E0AK71100000000BBAD05_1.js">
+</script>
+</div>
+</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

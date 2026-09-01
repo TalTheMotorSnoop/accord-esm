@@ -1,0 +1,311 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+<title>SEA5E00H46400000000MDAT00</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+var   totalImg = 3;
+var   dispNum=1;
+function prOnLoadProc() {
+	_prInitImageInfo(100);
+	var para_val = window.location.hash;
+	if(para_val.charAt(0) == '#') {
+		para_val = para_val.substring(1,para_val.length);
+	}
+	var   imgName;
+	imgName = "imgId" + dispNum;
+	document.getElementById(imgName).style.display = "none";
+	if(para_val.length == 0) {
+		dispNum = 1;
+	}
+	else{
+		dispNum = parseInt(para_val);
+	}
+	imgName = "imgId" + dispNum;
+	document.getElementById(imgName).style.display = "block";
+	_prResizeImage(100/100);
+	divBody.style.display = "block"
+	return;
+}
+function PrintFunc()
+{
+	divBody.style.display = "none";
+	var  img_hei = _prResizeImage(67/100);
+	divBody.style.display = "block";
+	var  graphTd = document.getElementById("graphTd");
+	if(graphTd.width == "100%")
+	{
+      var   current_pos;
+      var   img_pos = 0;
+         current_pos = graphTd.offsetTop;
+		var pageCnt = Math.floor(current_pos/950);
+		var img_pos = current_pos - (pageCnt*950);
+		if(img_pos+img_hei > 950)
+		{
+			var  pageElement = document.getElementById("page_onoff");
+			if(pageElement != null)
+			{
+				pageElement.style.display = "block";
+			}
+		}
+	}
+	window.print();
+	divBody.style.display = "none";
+	_prResizeImage(100/100);
+	divBody.style.display = "block";
+	window.scrollTo(0,0);
+}
+function NextFunc()
+{
+	window.location.replace("ZOOM000000000000382.html");
+}
+function CloseFunc()
+{
+	window.close();
+}
+function JumpFunc(strJump)
+{
+	window.location.replace(strJump);
+}
+function imgChange()
+{
+var   imgName;
+      imgName = "imgId" + dispNum;
+      document.getElementById(imgName).style.display = "none";
+      dispNum++;
+     if(dispNum > totalImg) {
+         dispNum = 1;
+      }
+      imgName = "imgId" + dispNum;
+      document.getElementById(imgName).style.display = "block";
+}
+//-->
+</script>
+<body onLoad="prOnLoadProc();" style="font-family:sans-serif;">
+<div id="divBody" style="display:none">
+<div>
+<div style="position:absolute;right=10;">
+<input type="image" src="../img/PRINT_PREVIEW.PNG" onClick="PrintFunc()">
+<input type="image" src="../img/GL_PREV_DISABLE.PNG" onClick="BackFunc()" disabled>
+<input type="image" src="../img/GL_NEXT.PNG" onClick="NextFunc()">
+<input type="image" src="../img/GL_CANCEL.PNG" onClick="CloseFunc()">
+</div><br><br>
+<hr width="100%" size="2" color="black">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<div>
+NOTE: Before doing any SRS repairs, use the or HDS SRS menu method to check for DTCs; refer to the DTC Troubleshooting Index for the less obvious deployed parts (seat belt tensioners, front impact sensors, side airbag sensors, etc.)
+</div>
+<div>
+After a collision where the seat belt tensioners deployed, replace these items:
+</div>
+<ul type="disc">
+<li>
+<div>
+SRS unit
+</div>
+</li>
+<li>
+<div>
+Seat belt tensioners
+</div>
+</li>
+<li>
+<div>
+Front impact sensors
+</div>
+</li>
+</ul>
+<div>
+After a collision where the front airbag(s) deployed, replace these items:
+</div>
+<ul type="disc">
+<li>
+<div>
+SRS unit
+</div>
+</li>
+<li>
+<div>
+Deployed airbag(s)
+</div>
+</li>
+<li>
+<div>
+Seat belt tensioners
+</div>
+</li>
+<li>
+<div>
+Front impact sensors
+</div>
+</li>
+</ul>
+<div>
+After a collision where the side airbag(s) deployed, replace these items:
+</div>
+<ul type="disc">
+<li>
+<div>
+SRS unit
+</div>
+</li>
+<li>
+<div>
+Deployed side airbag(s)
+</div>
+</li>
+<li>
+<div>
+Side impact sensor(s) (first) for the side(s) that deployed
+</div>
+</li>
+</ul>
+<div>
+After a collision where the side curtain airbag(s) deployed, replace these items:
+</div>
+<ul type="disc">
+<li>
+<div>
+SRS unit
+</div>
+</li>
+<li>
+<div>
+Deployed side curtain airbag(s)
+</div>
+</li>
+<li>
+<div>
+Side impact sensor(s) (first) for the side(s) that deployed
+</div>
+</li>
+<li>
+<div>
+Side impact sensor(s) (second) for the side(s) that deployed
+</div>
+</li>
+<li>
+<div>
+Roof trim
+</div>
+</li>
+<li>
+<div>
+ Center pillar upper trim
+</div>
+</li>
+<li>
+<div>
+Front grab handle
+</div>
+</li>
+<li>
+<div>
+Any related trim clips
+</div>
+</li>
+</ul>
+<div>
+After a moderate to severe side or rear collision, inspect for any damage on the side curtain airbag or other related components. According to the degree of damage, replace components as needed.
+</div>
+<div>
+After a collision, where a side curtain airbag has deployed, replace all trim clips on that side, even if they appear to be undamaged. Replace the clips on these parts:
+</div>
+<ul type="disc">
+<li>
+<div>
+Front pillar trim
+</div>
+</li>
+<li>
+<div>
+Center pillar trim
+</div>
+</li>
+<li>
+<div>
+Rear pillar trim
+</div>
+</li>
+<li>
+<div>
+Front grab handle
+</div>
+</li>
+<li>
+<div>
+Sunvisor
+</div>
+</li>
+</ul>
+<div>
+During the repair process, inspect these areas:
+</div>
+<ul type="disc">
+<li>
+<div>
+Inspect all the SRS wire harnesses. Replace, do not repair, any damaged harnesses.
+</div>
+</li>
+<li>
+<div>
+Inspect the cable reel for heat damage. If there is any damage, replace the cable reel.
+</div>
+</li>
+</ul>
+<div>
+After the vehicle is completely repaired, turn the ignition switch ON (II). If the SRS indicator comes on for about 6 seconds and then goes off, the SRS is OK. If the indicator does not function properly, use the PGM Tester or HDS SRS Menu Method to read the DTC. If you cannot retrieve a code, go to SRS Symptom Troubleshooting.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div style="display:none;" id="page_onoff">
+<div style="page-break-after:always;">
+</div>
+</div>
+<input onClick="imgChange()" type="image" src="../img/GL_NEXT.PNG" align="right">
+<br clear="right">
+<span style="display:block" id="imgId1">
+<div>
+<div class="figure_title">
+<b>
+Front pillar
+</b>
+</div>
+<script src="../js/SEA3E00H46400000000MDAD01_1.js">
+</script>
+</div>
+</span>
+<span style="display:none" id="imgId2">
+<div>
+<div class="figure_title">
+<b>
+Center pillar
+</b>
+</div>
+<script src="../js/SEA3E00H46400000000MDAD02_1.js">
+</script>
+</div>
+</span>
+<span style="display:none" id="imgId3">
+<div>
+<div class="figure_title">
+<b>
+Rear pillar
+</b>
+</div>
+<script src="../js/SEA3E00H46400000000MDAD60_1.js">
+</script>
+</div>
+</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

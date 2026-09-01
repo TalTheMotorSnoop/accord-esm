@@ -1,0 +1,704 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E00K73500000000BBAT10
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+How to Troubleshoot the HFT System
+</div>
+<div>
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<span style="display:block" id="imgDispId">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG01">
+</a>
+<div class="servinfosub_title">
+<b>
+How to Check for DTCs with the HDS
+</b>
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Make sure the ignition switch is turned to LOCK (0).
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Connect the HDS to the data link connector (DLC) (A) located under the driver's side of the dashboard.
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Turn the ignition switch to ON (II).
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Make sure the HDS communicates with the vehicle and the Hands Free Telephone control unit. If it doesn't, troubleshoot the DLC circuit 
+<a href="javascript:CtsProc('0','000000000001190','i000')">
+with R20A3 engine,
+</a>
+ 
+<a href="javascript:CtsProc('0','000000000001600','i000')">
+with K24Z3 engine.
+</a>
+</div>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+Select HandsFreeLink in the BODY ELECTRICAL menu.
+</div>
+</li>
+</ol>
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+Select DTCs in the HandsFreeLink menu.
+</div>
+</li>
+</ol>
+<a name="i070">
+</a>
+<ol>
+<li value="7">
+<div>
+Check for DTCs. If any DTCs are indicated, write down the DTCs, then go to the indicated DTC troubleshooting. If no DTCs are indicated, refer to symptom troubleshooting.
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+After troubleshooting, clear the DTCs with the HDS.
+</div>
+</li>
+<li>
+<div>
+For specific operations, refer to the HDS user's manual.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<div>
+The HFT gives the user the convenience of hands free operation. It can't control the phone's performance (call quality and signal strength). To avoid performance problems, don't put the phone in a metal briefcase or in a purse under the seat.
+</div>
+<div>
+This guide shows you just a few of the HFT's many features. You will see how to pair your phone to the HFT and then make and receive calls, all using simple voice commands. If you want a complete description of this system, please refer to the owner's manual and quick start guide.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001678','1');">
+<img src="../tn/TL19E00K73500000000BBAD01.png">
+</a>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</span>
+<span style="display:none" id="imgPrtId">
+<table width="100%" class="Viewer">
+<tr>
+<td width="100%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG01">
+</a>
+<div class="servinfosub_title">
+<b>
+How to Check for DTCs with the HDS
+</b>
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Make sure the ignition switch is turned to LOCK (0).
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Connect the HDS to the data link connector (DLC) (A) located under the driver's side of the dashboard.
+</div>
+</li>
+</ol>
+</td>
+</tr>
+<tr>
+<td width="100%" class="ViewerTD" id="graphTd" valign="top">
+<span style="display:block" id="imgId1">
+<div>
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00K73500000000BBAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</div>
+</span>
+</td>
+</tr>
+<tr>
+<td width="100%" class="ViewerTD" valign="top">
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Turn the ignition switch to ON (II).
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Make sure the HDS communicates with the vehicle and the Hands Free Telephone control unit. If it doesn't, troubleshoot the DLC circuit 
+<a href="javascript:CtsProc('2','000000000001190','i000')">
+with R20A3 engine,
+</a>
+ 
+<a href="javascript:CtsProc('2','000000000001600','i000')">
+with K24Z3 engine.
+</a>
+</div>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+Select HandsFreeLink in the BODY ELECTRICAL menu.
+</div>
+</li>
+</ol>
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+Select DTCs in the HandsFreeLink menu.
+</div>
+</li>
+</ol>
+<a name="i070">
+</a>
+<ol>
+<li value="7">
+<div>
+Check for DTCs. If any DTCs are indicated, write down the DTCs, then go to the indicated DTC troubleshooting. If no DTCs are indicated, refer to symptom troubleshooting.
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+After troubleshooting, clear the DTCs with the HDS.
+</div>
+</li>
+<li>
+<div>
+For specific operations, refer to the HDS user's manual.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<div>
+The HFT gives the user the convenience of hands free operation. It can't control the phone's performance (call quality and signal strength). To avoid performance problems, don't put the phone in a metal briefcase or in a purse under the seat.
+</div>
+<div>
+This guide shows you just a few of the HFT's many features. You will see how to pair your phone to the HFT and then make and receive calls, all using simple voice commands. If you want a complete description of this system, please refer to the owner's manual and quick start guide.
+</div>
+</td>
+</tr>
+</table>
+</span>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG02">
+</a>
+<div class="servinfosub_title">
+<b>
+Voice Control Tips
+</b>
+</div>
+<div>
+To give any voice command, press and release the Talk button. Always wait for the beep, then give your command in a clear, natural voice. The HFT microphone is on the ceiling, by the front spotlights.
+</div>
+<div>
+If the HFT doesn't recognize your voice command, you'll hear ‘‘Pardon.'' If after repeating your command, it still doesn't recognize it, you'll hear ‘‘Please repeat.'' If after repeating your command again, it still doesn't recognize it, the HFT sends you to the Help menu.
+</div>
+<div>
+To hear a list of available options at any time, say ‘‘Hands free help.''
+</div>
+<div>
+You can give many voice commands together. For example, you can say ‘‘Dial 123-456-7890.''
+</div>
+<div>
+To give a string of numbers in a call or dial voice command, you can say them all at once, or separate them into blocks of 3, 4, 7, 10, or 11.
+</div>
+<div>
+To skip a voice prompt, press and release the Talk button while the HFT is speaking. The HFT begins listening for your next voice command.
+</div>
+<div>
+To go back a step in a voice command sequence, press and release the Back button, or say ‘‘Go back.''
+</div>
+<div>
+If you don't say anything while the HFT is listening for your voice command, it will time out and stop its voice recognition. The next time you press and release the Talk button, the HFT begins listening from the point where it timed out.
+</div>
+<div>
+To stop a voice command sequence at any time, press and hold the Back button, or press and release the Talk button, wait for the beep, and say ‘‘Cancel.'' The next time you press and release the Talk button, the HFT begins from its main menu.
+</div>
+<div>
+When you're done with a voice command sequence, the HFT goes back to its main menu. The next time you press and release the Talk button, you'll be at the main menu.
+</div>
+<div>
+Remember to press and hold the Back button until you exit the main menu, otherwise, the audio system stays muted.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG03">
+</a>
+<div class="servinfosub_title">
+<b>
+Pairing Your Cell Phone (A One Time Procedure)
+</b>
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+You cannot pair a phone if the vehicle is moving.
+</div>
+</li>
+<li>
+<div>
+Your phone must be in its Discovery mode.
+</div>
+</li>
+<li>
+<div>
+Up to six Bluetooth compatible phones can be paired by the HFT.
+</div>
+</li>
+</ul>
+<a name="i210">
+</a>
+<ol>
+<li value="1">
+<div>
+Turn on your phone, and follow the prompts to activate Bluetooth.
+</div>
+</li>
+</ol>
+<a name="i220">
+</a>
+<ol>
+<li value="2">
+<div>
+Give these voice commands to the HFT by pressing the talk button.
+</div>
+<div>
+<table width="87%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="40%">
+<col width="60%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+You say
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+You'll hear
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+‘‘Phone setup''
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+‘‘Phone setup options are status, pair, edit, delete, and list.''
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+‘‘Pair''
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+‘‘The pairing process requires operation of your mobile phone. For safety, only perform this function while the vehicle is stopped. State a four-digit code for pairing. Note this code, it will be requested by the phone.''
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+‘‘1. 2. 3. 4.'' (This can be any four-digit code you want.)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+‘‘1. 2. 3. 4. is this correct?''
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+‘‘Yes''
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+‘‘Searching for a Bluetooth phone. Make sure the phone you are trying to pair is in Discovery mode!''
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</li>
+</ol>
+<a name="i230">
+</a>
+<ol>
+<li value="3">
+<div>
+Follow the cell phone manufacturer's instructions to put the phone in its Discovery mode. The phone will search for the HFT. When you see Hands Free Telephone in the device list on the phone, select it.
+</div>
+</li>
+</ol>
+<a name="i240">
+</a>
+<ol>
+<li value="4">
+<div>
+When prompted, enter the four-digit PIN from step 2 into the phone. You will hear the HFT say ‘‘A new phone has been found. Would you like to name this phone?''
+</div>
+</li>
+</ol>
+<a name="i250">
+</a>
+<ol>
+<li value="5">
+<div>
+Press and release the Talk button, and say what the phone name will be. For example, say ‘‘John's phone''. You'll hear ‘‘John's phone has been successfully paired'', returning to the main menu.
+</div>
+</li>
+</ol>
+<a name="i260">
+</a>
+<ol>
+<li value="6">
+<div>
+To pair another phone, repeat 
+<a href="javascript:try{parent.Jmp('i010');}catch(e){location.hash='i010';}">Step 1
+</a>
+ thru 5.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG04">
+</a>
+<div class="servinfosub_title">
+<b>
+Clearing the Pass Code
+</b>
+</div>
+<div>
+If the system is locked and the pass code is lost or forgotten, do the following.
+</div>
+<a name="i310">
+</a>
+<ol>
+<li value="1">
+<div>
+Connect the HDS to the DLC.
+</div>
+</li>
+</ol>
+<a name="i320">
+</a>
+<ol>
+<li value="2">
+<div>
+Turn the ignition switch to ON (II).
+</div>
+</li>
+</ol>
+<a name="i330">
+</a>
+<ol>
+<li value="3">
+<div>
+From the ‘‘Body Electrical menu'', then select ‘‘HandsFreeLink''.
+</div>
+</li>
+</ol>
+<a name="i340">
+</a>
+<ol>
+<li value="4">
+<div>
+Select ‘‘Miscellaneous Tests'', then select ‘‘Pass code reset''.
+</div>
+</li>
+</ol>
+<a name="i350">
+</a>
+<ol>
+<li value="5">
+<div>
+Follow the HDS system prompts to reset the pass code.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG05">
+</a>
+<div class="servinfosub_title">
+<b>
+Self-diagnostic Function
+</b>
+</div>
+<div>
+NOTE: This procedure should be used only if HDS is unavailable.
+</div>
+<div>
+To run the self-diagnostic function, do the following:
+</div>
+<a name="i610">
+</a>
+<ol>
+<li value="1">
+<div>
+Turn the ignition switch to ON (II).
+</div>
+</li>
+</ol>
+<a name="i620">
+</a>
+<ol>
+<li value="2">
+<div>
+Press and hold the HFT Back button for more than 5 seconds.
+</div>
+</li>
+</ol>
+<a name="i630">
+</a>
+<ol>
+<li value="3">
+<div>
+When the Hands Free Telephone system enters the self-diagnostic function, the following will occur.
+</div>
+<ul type="disc">
+<li>
+<div>
+If there is no DTC, the Hands Free Telephone control unit audibly outputs ‘‘The hands free system is OK''.
+</div>
+</li>
+<li>
+<div>
+If there is any DTC, the Hands Free Telephone control unit audibly outputs ‘‘The hands free system needs to be serviced''.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+The self-diagnostic function can only be initiated while the HFT is in its idle state.
+</div>
+</li>
+<li>
+<div>
+The self-diagnostic function is considered to start once the 5 seconds press and hold is detected, and ends when the units returns to idle state.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

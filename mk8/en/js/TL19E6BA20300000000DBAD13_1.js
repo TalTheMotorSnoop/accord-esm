@@ -1,0 +1,34 @@
+with(document) {
+write("<div id=\"group13\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:767px;\">");
+write("<div id=\"rect13\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:767px;\">");
+write("<img id=\"img13\" name=\"PrtImgId\" src=\"../img/TL19E6BA20300000000DBAD13.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:767px;border-color:#ffffff\">");
+write("<p id=\"p13_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:489px;top:15px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>2<br></b></nobr>");
+write("</p>");
+write("<p id=\"p13_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:340px;top:449px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>3<br></b></nobr>");
+write("</p>");
+write("<p id=\"p13_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:335px;top:56px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>1<br></b></nobr>");
+write("</p>");
+write("<p id=\"p13_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:743px;top:412px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>LEFT SIDE WIRE HARNESS<br></b></nobr>");
+write("</p>");
+write("<p id=\"p13_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:31px;top:288px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>RIGHT SIDE WIRE HARNESS<br></b></nobr>");
+write("</p>");
+write("<p id=\"p13_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:394px;top:555px;font-weight:normal;font-size:7.41pt;\">");
+write("<nobr><b>NAVIGATION UNIT (2)<br>(with navigation sysyem)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p13_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:749px;top:555px;font-weight:normal;font-size:7.41pt;\">");
+write("<nobr><b>FUEL PUMP (3)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p13_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:114px;top:543px;font-weight:normal;font-size:7.41pt;\">");
+write("<nobr><b>12P JUNCTION<br>CONNECTOR (1)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p13_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:17px;top:681px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b></b>NOTE:<br>· Connector with male terminals (double outline): view from terminal side<br>· Connector with female terminals (single outline): view from wire side<br>*: Connector with female terminals (single outline): view from terminal side<br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

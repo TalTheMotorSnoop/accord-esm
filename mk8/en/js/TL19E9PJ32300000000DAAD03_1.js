@@ -1,0 +1,31 @@
+with(document) {
+write("<div id=\"group3\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:991px;\">");
+write("<div id=\"rect3\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:991px;\">");
+write("<img id=\"img3\" name=\"PrtImgId\" src=\"../img/TL19E9PJ32300000000DAAD03.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:991px;border-color:#ffffff\">");
+write("<p id=\"p3_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:319px;top:18px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>DRIVER'S VANITY<br>MIRROR LIGHT<br><a href=\"javascript:CtsProc('0','000000000000429','i000')\"></b>Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p3_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:749px;top:20px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>PASSENGER'S VANITY<br>MIRROR LIGHT<br><a href=\"javascript:CtsProc('0','000000000000429','i000')\"></b>Replacement,<br></a><br> in the Shop Manual,<br> P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p3_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:793px;top:213px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>GLOVE BOX LIGHT<br><a href=\"javascript:CtsProc('0','000000000000426','i000')\"></b>Replacement,<br></a><br> in the Shop Manual,<br> P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p3_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:647px;top:748px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>PASSENGER'S MICU<br>(Built into the passenger's<br>under-dash fuse/relay box)<br><a href=\"javascript:CtsProc('0','000000000000434','i000')\"></b>Input Test,</a><br> in the Shop Manual, P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000000550','i000')\">Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p3_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:3px;top:964px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b></b>LHD model is shown, RHD model is similar.<br></nobr>");
+write("</p>");
+write("<p id=\"p3_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:435px;top:872px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>PASSENGER'S FOOTWELL LIGHT<br><a href=\"javascript:CtsProc('0','000000000000425','i000')\"></b>Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p3_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:176px;top:746px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>DRIVER'S FOOTWELL LIGHT<br><a href=\"javascript:CtsProc('0','000000000000425','i000')\"></b>Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p3_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:29px;top:817px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>DRIVER'S MICU<br>(Built into the driver's<br>under-dash fuse/relay box)<br><a href=\"javascript:CtsProc('0','000000000000434','i000')\"></b>Input Test,</a><br> in the Shop Manual, P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000000549','i000')\">Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

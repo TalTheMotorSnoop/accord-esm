@@ -1,0 +1,37 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:831px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:831px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E60J32300000000DAAD01.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:831px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:640px;top:97px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>INTERIOR LIGHT SWITCH (With sunroof) <br>(Built into the sunroof switch)<br><a href=\"javascript:CtsProc('0','000000000000428','i000')\"></b>Test/Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:675px;top:714px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>LEFT REAR DOOR SWITCH<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:186px;top:664px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>DRIVER'S DOOR<br>SWITCH<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:18px;top:564px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>DRIVER'S DOOR<br>COURTESY LIGHT<br><a href=\"javascript:CtsProc('0','000000000000430','i000')\"></b>Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:640px;top:18px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>INTDIVIDUAL MAP LIGHTS<br><a href=\"javascript:CtsProc('0','000000000000427','i000')\"></b>Test/Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:681px;top:222px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>CEILING LIGHT (With sunroof)<br><a href=\"javascript:CtsProc('0','000000000000424','i000')\"></b>Test/Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:640px;top:158px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>CEILING LIGHT (Without sunroof)<br><a href=\"javascript:CtsProc('0','000000000000424','i000')\"></b>Test/Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:639px;top:50px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>AMBIENT LIGHT (With sunroof)<br>(Built into the sunroof switch)<br><a href=\"javascript:CtsProc('0','000000000000423','i000')\"></b>Test/Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:1px;top:798px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b></b>LHD model is shown, RHD model is similar.<br></nobr>");
+write("</p>");
+write("<p id=\"p1_10\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:348px;top:722px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>LEFT REAR DOOR<br>COURTESY LIGHT<br><a href=\"javascript:CtsProc('0','000000000000430','i000')\"></b>Replacement,</a><br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

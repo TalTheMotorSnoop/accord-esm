@@ -1,0 +1,34 @@
+with(document) {
+write("<div id=\"group2\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:671px;\">");
+write("<div id=\"rect2\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:671px;\">");
+write("<img id=\"img2\" name=\"PrtImgId\" src=\"../img/TL19EAUA20326400000DAAD02.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:671px;border-color:#ffffff\">");
+write("<p id=\"p2_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:574px;top:524px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>ENGINE CONTROL MODULE (ECM)<br></b>General Troubleshooting<br><a href=\"javascript:CtsProc('0','000000000003767','i000')\"> Information,</a><br><a href=\"javascript:CtsProc('0','000000000003767','iG16')\">Substituting,</a><br><a href=\"javascript:CtsProc('0','000000000001925','i000')\">Update,</a><br> in the Shop Manual Supplement, P/N 62TL120<br><a href=\"javascript:CtsProc('0','000000000003666','i000')\">Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:769px;top:378px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>FUEL HEATER RELAY<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:764px;top:446px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>PGM-FI MAIN RELAY 1<br>(ECU)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:4px;top:474px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>HIGH PRESSURE FUEL PUMP<br><a href=\"javascript:CtsProc('0','000000000001965','i000')\"></b>Replacement,</a><br> in the Shop Manual<br> Supplement, P/N 62TL120<br></nobr>");
+write("</p>");
+write("<p id=\"p2_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:17px;top:642px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b></b>*: This illustration shows LHD model.<br></nobr>");
+write("</p>");
+write("<p id=\"p2_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:755px;top:17px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>FUEL FILTER<br><a href=\"javascript:CtsProc('0','000000000002244','i000')\"></b>Water Bleeding,<br></a><br> in the Shop Manual<br> Supplement, P/N 62TL120<br><a href=\"javascript:CtsProc('0','000000000002350','i000')\">Removal/Installation,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:755px;top:123px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>FUEL FILTER ELEMENT<br><a href=\"javascript:CtsProc('0','000000000002247','i000')\"></b>Removal and Installation,<br></a><br> in the Shop Manual<br> Supplement, P/N 62TL120<br></nobr>");
+write("</p>");
+write("<p id=\"p2_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:755px;top:201px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>FUEL HEATER (built into<br>the FUEL FILTER)<br>FUEL FILTER WATER<br>LEVEL SWITCH<br><a href=\"javascript:CtsProc('0','000000000002246','i000')\"></b>Replacement,<br></a><br> in the Shop Manual<br> Supplement, P/N 62TL120<br></nobr>");
+write("</p>");
+write("<p id=\"p2_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:4px;top:534px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>FUEL RAIL PRESSURE (FRP)<br>CONTROL VALVE (built into the<br>HIGH PRESSURE FUEL PUMP)<br>FUEL TEMPERATURE SENSOR<br>(built into the HIGH <br>PRESSURE FUEL PUMP)<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

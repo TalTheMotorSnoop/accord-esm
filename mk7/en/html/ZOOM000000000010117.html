@@ -1,0 +1,313 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+<title>SEA6EJ4K72100091401FAAT00</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+var   totalImg = 1;
+var   dispNum=1;
+function prOnLoadProc() {
+	_prInitImageInfo(100);
+	_prResizeImage(100/100);
+	divBody.style.display = "block"
+	return;
+}
+function PrintFunc()
+{
+	divBody.style.display = "none";
+	var  img_hei = _prResizeImage(67/100);
+	divBody.style.display = "block";
+	var  graphTd = document.getElementById("graphTd");
+	if(graphTd.width == "100%")
+	{
+      var   current_pos;
+      var   img_pos = 0;
+         current_pos = graphTd.offsetTop;
+		var pageCnt = Math.floor(current_pos/950);
+		var img_pos = current_pos - (pageCnt*950);
+		if(img_pos+img_hei > 950)
+		{
+			var  pageElement = document.getElementById("page_onoff");
+			if(pageElement != null)
+			{
+				pageElement.style.display = "block";
+			}
+		}
+	}
+	window.print();
+	divBody.style.display = "none";
+	_prResizeImage(100/100);
+	divBody.style.display = "block";
+	window.scrollTo(0,0);
+}
+function BackFunc()
+{
+	window.location.replace("ZOOM000000000010116.html");
+}
+function CloseFunc()
+{
+	window.close();
+}
+function JumpFunc(strJump)
+{
+	window.location.replace(strJump);
+}
+//-->
+</script>
+<body onLoad="prOnLoadProc();" style="font-family:sans-serif;">
+<div id="divBody" style="display:none">
+<div>
+<div style="position:absolute;right=10;">
+<input type="image" src="../img/PRINT_PREVIEW.PNG" onClick="PrintFunc()">
+<input type="image" src="../img/GL_PREV.PNG" onClick="BackFunc()">
+<input type="image" src="../img/GL_NEXT_DISABLE.PNG" onClick="NextFunc()" disabled>
+<input type="image" src="../img/GL_CANCEL.PNG" onClick="CloseFunc()">
+</div><br><br>
+<hr width="100%" size="2" color="black">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i150">
+</a>
+<ol>
+<li value="15">
+<div>
+Disconnect the vacuum hose (A) from the turbocharger boost control solenoid (B), and connect a vacuum pump/gauge (C) to the solenoid.
+</div>
+</li>
+</ol>
+<a name="i160">
+</a>
+<ol>
+<li value="16">
+<div>
+Turn the ignition switch ON (II).
+</div>
+</li>
+</ol>
+<a name="i170">
+</a>
+<ol>
+<li value="17">
+<div>
+Apply vacuum to the hose.
+</div>
+</li>
+</ol>
+<div style="text-indent:40px;">
+<i>
+Does the turbocharger boost control diaphragm operate?
+</i>
+</div>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+<a href="javascript:opener.top.Cts('000000000001344','i000')">
+Replace the turbocharger boost control solenoid,
+</a>
+ then go to
+<a href="javascript:JumpFunc('ZOOM000000000010117.html#i180')">Step 18
+</a>
+.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+<a href="javascript:opener.top.Cts('000000000001293','i000')">
+Replace the turbocharger assembly,
+</a>
+ then go to
+<a href="javascript:JumpFunc('ZOOM000000000010117.html#i180')">Step 18
+</a>
+.
+</div>
+</td>
+</tr>
+</table>
+<a name="i180">
+</a>
+<ol>
+<li value="18">
+<div>
+Reconnect all hoses.
+</div>
+</li>
+</ol>
+<a name="i190">
+</a>
+<ol>
+<li value="19">
+<div>
+Turn the ignition switch ON (II).
+</div>
+</li>
+</ol>
+<a name="i200">
+</a>
+<ol>
+<li value="20">
+<div>
+Reset the ECM with the HDS.
+</div>
+</li>
+</ol>
+<a name="i210">
+</a>
+<ol>
+<li value="21">
+<div>
+Test-drive the vehicle for several minutes in the range of these recorded freeze data parameters:
+</div>
+<ul type="disc">
+<li>
+<div>
+ENGINE SPEED
+</div>
+</li>
+<li>
+<div>
+VSS
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i220">
+</a>
+<ol>
+<li value="22">
+<div>
+Check for Temporary DTCs or DTCs with the HDS.
+</div>
+</li>
+</ol>
+<div style="text-indent:40px;">
+<i>
+Are any Temporary DTCs or DTCs indicated?
+</i>
+</div>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+If DTC P1401 is indicated, check for poor connections or loose terminals at the EGR control solenoid valve, the turbocharger boost control solenoid and the ECM, then go to
+<a href="javascript:JumpFunc('ZOOM000000000010116.html#i010')">Step 1
+</a>
+. If any other Temporary DTCs or DTCs are indicated, go to the indicated DTC's troubleshooting.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Go to
+<a href="javascript:JumpFunc('ZOOM000000000010117.html#i230')">Step 23
+</a>
+.
+</div>
+</td>
+</tr>
+</table>
+<a name="i230">
+</a>
+<ol>
+<li value="23">
+<div>
+Monitor the OBD STATUS for DTC P1401 in the DTCs MENU with the HDS.
+</div>
+</li>
+</ol>
+<div style="text-indent:40px;">
+<i>
+Does the screen indicate PASSED?
+</i>
+</div>
+<table class="Viewer" frame="void" style="margin-left:50px;">
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+YES
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+Troubleshooting is complete.■
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD">
+<b>
+NO
+</b>
+</td>
+<td width="10" class="ViewerTD" align="center">-
+</td>
+<td class="ViewerTD">
+<div>
+If the screen indicates FAILED, check for poor connections or loose terminals at the EGR control solenoid valve, the turbocharger boost control solenoid and the ECM, then go to
+<a href="javascript:JumpFunc('ZOOM000000000010116.html#i010')">Step 1
+</a>
+. If the screen indicates NOT COMPLETED, go to
+<a href="javascript:JumpFunc('ZOOM000000000010117.html#i210')">Step 21
+</a>
+ and recheck.
+</div>
+</td>
+</tr>
+</table>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div style="display:none;" id="page_onoff">
+<div style="page-break-after:always;">
+</div>
+</div>
+<span style="display:block" id="imgId1">
+<div>
+<script src="../js/SEA6EJ4K72100091401FAAD02_1.js">
+</script>
+</div>
+</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:475px; height:294px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:475px;height:294px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E7AJ54200046123FEAD02.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:475px;height:294px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:328px;top:259px;font-weight:normal;font-size:6.82pt;\">");
+write("<nobr><b>B1<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:206px;top:260px;font-weight:normal;font-size:6.82pt;\">");
+write("<nobr><b>C7<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:128px;top:38px;font-weight:normal;font-size:6.82pt;\">");
+write("<nobr><b>B8<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:206px;top:38px;font-weight:normal;font-size:6.82pt;\">");
+write("<nobr><b>C1<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:253px;top:38px;font-weight:normal;font-size:6.82pt;\">");
+write("<nobr><b>C10<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:271px;top:260px;font-weight:normal;font-size:6.82pt;\">");
+write("<nobr><b>B7<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:128px;top:26px;font-weight:normal;font-size:6.82pt;\">");
+write("<nobr><b>B2<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:149px;top:121px;font-weight:normal;font-size:6.76pt;\">");
+write("<nobr><b>RADIATOR <br>FAN RELAY<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:281px;top:111px;font-weight:normal;font-size:6.76pt;\">");
+write("<nobr><b>FAN <br>CONTROL  <br>RELAY<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

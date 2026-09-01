@@ -1,0 +1,487 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E38A20326943364KDAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+Engine Oil Level Sensor Removal/Installation
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+<a href="javascript:CtsProc('0','000000000000327','i000')">
+Remove the splash shield.
+</a>
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+<a href="javascript:CtsProc('0','000000000001243','i000')">
+Drain the engine oil.
+</a>
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Remove the bolts (A), the engine oil level sensor cover (B), and the engine oil level sensor connector (C).
+</div>
+<div>
+NOTE: If the cover is damaged, replace it.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000004276','1');">
+<img src="../tn/TL19E38A20326943364KDAD01.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E38A20326943364KDAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Remove the bolts (A), then remove the engine oil level sensor (B) from the oil pan (C).
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+To avoid damaging the oil pan and the sensor mounting surface, do not use sharp tools when removing the sensor.
+</div>
+</li>
+<li>
+<div>
+If you find any damage at the oil level sensor, replace it.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+Clean the surface around the engine oil level sensor mounting hole at the oil pan if there is oil, dirt or grease.
+</div>
+<div>
+NOTE: Do not make and scratch or damage at the engine oil level sensor mounting surface.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000004277','1');">
+<img src="../tn/TL19E38A20326943364KDAD02.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E38A20326943364KDAD02_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+Install the parts in the reverse order of removal, noting these items:
+</div>
+<ul type="disc">
+<li>
+<div>
+Use a new O-ring (A), and make sure it is not twisted when you install it.
+</div>
+</li>
+<li>
+<div>
+Remove any oil, dirt or grease from the O-ring groove on the sensor (B), the bolts (C), and the bolt holes (D).
+</div>
+</li>
+<li>
+<div>
+Be careful not to scratch the sensor mounting surfaces.
+</div>
+</li>
+<li>
+<div>
+Do not cover the sensor connector (E) with oil.
+</div>
+</li>
+<li>
+<div>
+Make sure the oil level sensor O-ring surface (F) is 1.0 mm±0.15 mm from the sensor (all around) (G).
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i070">
+</a>
+<ol>
+<li value="7">
+<div>
+<a href="javascript:CtsProc('0','000000000001653','i000')">
+Install the engine oil drain bolt and refill the engine oil to maximum level.
+</a>
+</div>
+</li>
+</ol>
+<a name="i080">
+</a>
+<ol>
+<li value="8">
+<div>
+Start the engine. Hold the engine speed at 3,000 rpm (min
+<sup>
+−1
+</sup>
+) without load (in neutral) until the radiator fan comes on, then let it idle for more than 10 minutes.
+</div>
+</li>
+</ol>
+<a name="i090">
+</a>
+<ol>
+<li value="9">
+<div>
+Check the ENGINE OIL LEVEL MONITOR CONDITION in the DATA LIST with the HDS.
+</div>
+<ul type="disc">
+<li>
+<div>
+If it is ACTIVE, go to 
+<a href="javascript:try{parent.Jmp('i100');}catch(e){location.hash='i100';}">Step 10
+</a>
+.
+</div>
+</li>
+<li>
+<div>
+If it is INACTIVE, install a new sensor, then go to 
+<a href="javascript:try{parent.Jmp('i070');}catch(e){location.hash='i070';}">Step 7
+</a>
+.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i100">
+</a>
+<ol>
+<li value="10">
+<div>
+Turn the ignition switch to LOCK (0), wait 3 minutes, then 
+<a href="javascript:CtsProc('0','000000000001654','i000')">
+measure the engine oil level.
+</a>
+ If needed, 
+<a href="javascript:CtsProc('0','000000000001654','i000')">
+adjust the engine oil to maximum level.
+</a>
+</div>
+</li>
+</ol>
+<a name="i110">
+</a>
+<ol>
+<li value="11">
+<div>
+Start the engine, and let it idle for 5 minutes.
+</div>
+</li>
+</ol>
+<a name="i120">
+</a>
+<ol>
+<li value="12">
+<div>
+Check the ENGINE OIL LEVEL in the DATA LIST with the HDS and note it.
+</div>
+</li>
+</ol>
+<a name="i130">
+</a>
+<ol>
+<li value="13">
+<div>
+Stop the engine, leave the ignition switch to ON (II), and wait 3 minutes.
+</div>
+</li>
+</ol>
+<a name="i140">
+</a>
+<ol>
+<li value="14">
+<div>
+Check the ENGINE OIL LEVEL in the DATA LIST with the HDS, and compare it with the level you noted in 
+<a href="javascript:try{parent.Jmp('i120');}catch(e){location.hash='i120';}">Step 12
+</a>
+.
+</div>
+<ul type="disc">
+<li>
+<div>
+If the level changed more than 2 mm, the engine oil level sensor is OK.
+</div>
+</li>
+<li>
+<div>
+If the level did not change more than 2 mm, install a new sensor, then go to 
+<a href="javascript:try{parent.Jmp('i060');}catch(e){location.hash='i060';}">Step 6
+</a>
+.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i150">
+</a>
+<ol>
+<li value="15">
+<div>
+Check for oil leaks around the sensor.
+</div>
+<ul type="disc">
+<li>
+<div>
+If there are no leaks, go to 
+<a href="javascript:try{parent.Jmp('i160');}catch(e){location.hash='i160';}">Step 16
+</a>
+.
+</div>
+</li>
+<li>
+<div>
+If you find a leak, repair it, then go to 
+<a href="javascript:try{parent.Jmp('i160');}catch(e){location.hash='i160';}">Step 16
+</a>
+.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000004278','1');">
+<img src="../tn/TL19E38A20326943364KDAD03.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E38A20326943364KDAD03_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i160">
+</a>
+<ol>
+<li value="16">
+<div>
+Install the engine oil level sensor cover (A), and torque the bolts.
+</div>
+</li>
+</ol>
+<a name="i170">
+</a>
+<ol>
+<li value="17">
+<div>
+<a href="javascript:CtsProc('0','000000000000327','i000')">
+Install the splash shield.
+</a>
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000004279','1');">
+<img src="../tn/TL19E38A20326943364KDAD04.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E38A20326943364KDAD04_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:475px; height:401px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:475px;height:401px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E00K80100081270FAAD06.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:475px;height:401px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:50px;top:18px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>VSA MODULATOR-CONTROL UNIT 47P CONNECTOR<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:129px;top:37px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b></b>Wire side of female terminals<br></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:129px;top:370px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b></b>Wire side of female terminals<br></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:82px;top:354px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>STEERING ANGLE SENSOR 5P CONNECTOR<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:271px;top:147px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>STR-A (GRN)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:339px;top:65px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>STR-Z (BLU)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:89px;top:147px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>STR-B (LT GRN)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:135px;top:243px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>STR-Z (BLU)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:223px;top:309px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>STR-A (GRN)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_10\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:270px;top:259px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>STR-B (LT GRN)<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

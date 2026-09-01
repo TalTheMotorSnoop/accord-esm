@@ -1,0 +1,1003 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL1AEJAB20200000000MBAT02
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+Wheel Alignment - With 18 inch wheel
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<div class="tool_list_title">
+<b>
+Special Tools Required
+</b>
+</div>
+<div>
+<a href="javascript:PrtProc('0','ZOOM000000000014570')">
+<br>
+Wheel alignment gauge attachment, 64 x 40 mm
+<br>
+07MGK-0010100
+</a>
+</div>
+<div>
+The suspension can be adjusted for front and rear toe.
+</div>
+<a name="iR01">
+</a>
+<div class="procedure_sub_title">
+<b>
+Pre-Alignment Checks
+</b>
+</div>
+<div>
+For proper inspection and adjustment of the wheel alignment, do these checks:
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Release the parking brake to avoid an incorrect measurement.
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Make sure the suspension is not modified.
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Make sure the fuel tank is full, and that the spare tyre or the temporary repair kit, the jack, and the tools are in place on the vehicle.
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Check the tyre size and tyre pressure according to tyre information.
+</div>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+<a href="javascript:CtsProc('0','000000000000023','i000')">
+Check the runout of the wheels and tyres.
+</a>
+</div>
+</li>
+</ol>
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+Check the suspension ball joints.
+</div>
+<ul type="disc">
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000005','i000')">
+Ball joint boot inspection.
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000004','i000')">
+Knuckle ball joint inspection.
+</a>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i070">
+</a>
+<ol>
+<li value="7">
+<div>
+Before doing alignment inspections, be sure to remove all extra weight from the vehicle, and no one should be inside the vehicle (driver or passengers).
+</div>
+</li>
+</ol>
+<a name="i080">
+</a>
+<ol>
+<li value="8">
+<div>
+Bounce the vehicle up and down several times to stabilize the suspension.
+</div>
+</li>
+</ol>
+<a name="i090">
+</a>
+<ol>
+<li value="9">
+<div>
+Check that the steering column is set at the center tilt and telescopic position.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR02">
+</a>
+<div class="procedure_sub_title">
+<b>
+Front Caster Inspection
+</b>
+</div>
+<a name="i110">
+</a>
+<ol>
+<li value="1">
+<div>
+<a href="javascript:CtsProc('0','000000000002895','i000')">
+Raise the front of the vehicle
+</a>
+, and remove the wheel caps.
+</div>
+<div>
+NOTE: Push out the cap on the aluminum wheel from the inside after removing the wheel.
+</div>
+</li>
+</ol>
+<a name="i120">
+</a>
+<ol>
+<li value="2">
+<div>
+Set the turning radius gauges beneath the front wheels, and place the boards under the rear wheels the same thickness as the turning radius gauges, then lower the vehicle.
+</div>
+<div>
+NOTE: Be sure that the vehicle is level with the wheels on the turning radius gauges and the boards.
+</div>
+</li>
+</ol>
+<a name="i130">
+</a>
+<ol>
+<li value="3">
+<div>
+Install the wheel alignment gauge attachment (A) and camber/caster gauge on the wheel hub, and apply the front brake.
+</div>
+</li>
+</ol>
+<a name="i140">
+</a>
+<ol>
+<li value="4">
+<div>
+Turn the front wheel 20 ° outward, then turn the adjusting screw of the camber/caster gauge to set the bubble at 0 °.
+</div>
+</li>
+</ol>
+<a name="i150">
+</a>
+<ol>
+<li value="5">
+<div>
+Turn the wheel 20 ° inward and read the caster angle on the gauge with the bubble at the center of the gauge.
+</div>
+<div>
+<table width="87%" class="Viewer" frame="void" style="table-layout:fixed;">
+<col width="37%">
+<col width="62%">
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Front caster angle:
+</b>
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+3 ° 52 '
+<sup>
++10 '
+</sup>
+<sub>
+−50 '
+</sub>
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" colspan="2" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+(Maximum difference between the right and left side: 0 ° 30 ')
+</b>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<ul type="disc">
+<li>
+<div>
+If the measurement is within specifications, measure the front camber angle.
+</div>
+</li>
+<li>
+<div>
+If the measurement is not within specifications, check for bent or damaged suspension components.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000012988','1');">
+<img src="../tn/TL1AEJAB20200000000MBAD01.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL1AEJAB20200000000MBAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR03">
+</a>
+<div class="procedure_sub_title">
+<b>
+Front Camber Inspection
+</b>
+</div>
+<a name="i210">
+</a>
+<ol>
+<li value="1">
+<div>
+Turn the front wheels to the straight ahead position.
+</div>
+</li>
+</ol>
+<a name="i220">
+</a>
+<ol>
+<li value="2">
+<div>
+<a href="javascript:CtsProc('0','000000000002895','i000')">
+Raise the front of the vehicle,
+</a>
+ and remove the wheel caps.
+</div>
+<div>
+NOTE: Push out the cap on the aluminum wheel from the inside after removing the wheel.
+</div>
+</li>
+</ol>
+<a name="i230">
+</a>
+<ol>
+<li value="3">
+<div>
+Install the wheel alignment gauge attachment (A) and camber/caster gauge on the wheel hub.
+</div>
+</li>
+</ol>
+<a name="i240">
+</a>
+<ol>
+<li value="4">
+<div>
+Read the camber angle on the gauge with the bubble at the center of the gauge.
+</div>
+<div>
+<table width="87%" class="Viewer" frame="void" style="table-layout:fixed;">
+<col width="41%">
+<col width="58%">
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Front camber angle:
+</b>
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+0 ° 03 ' ± 30'
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" colspan="2" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+(Maximum difference between the right and left side: 0 ° 30 ')
+</b>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<ul type="disc">
+<li>
+<div>
+If the measurement is within specifications, measure the rear camber.
+</div>
+</li>
+<li>
+<div>
+If the measurement is not within specifications, check for bent or damaged suspension components.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000012989','1');">
+<img src="../tn/TL1AEJAB20200000000MBAD02.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL1AEJAB20200000000MBAD02_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<div class="procedure_sub_title">
+<b>
+Rear Camber Inspection
+</b>
+</div>
+<a name="i410">
+</a>
+<ol>
+<li value="1">
+<div>
+<a href="javascript:CtsProc('0','000000000002895','i000')">
+Raise the rear of the vehicle,
+</a>
+ and remove the wheel caps.
+</div>
+<div>
+NOTE: Push out the cap on the aluminum wheel from the inside after removing the wheel.
+</div>
+</li>
+</ol>
+<a name="i420">
+</a>
+<ol>
+<li value="2">
+<div>
+Install the wheel alignment gauge attachment (A) and camber/caster gauge on the wheel hub.
+</div>
+</li>
+</ol>
+<a name="i430">
+</a>
+<ol>
+<li value="3">
+<div>
+Read the camber angle on the gauge with the bubble at the center of the gauge.
+</div>
+<div>
+<table width="87%" class="Viewer" frame="void" style="table-layout:fixed;">
+<col width="41%">
+<col width="58%">
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Rear camber angle:
+</b>
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+−1 ° 12 ' ± 30'
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" colspan="2" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+(Maximum difference between the right and left side: 0 ° 30 ')
+</b>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<ul type="disc">
+<li>
+<div>
+If the measurement is within specifications, measure the toe-in.
+</div>
+</li>
+<li>
+<div>
+If the measurement is not within specifications, check for bent or damaged suspension components.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000012990','1');">
+<img src="../tn/TL1AEJAB20200000000MBAD03.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL1AEJAB20200000000MBAD03_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR05">
+</a>
+<div class="procedure_sub_title">
+<b>
+Front Toe Inspection/Adjustment
+</b>
+</div>
+<a name="i610">
+</a>
+<ol>
+<li value="1">
+<div>
+Set the steering column to the middle tilt and telescopic positions. Center the steering wheel spokes, and hold it.
+</div>
+</li>
+</ol>
+<a name="i620">
+</a>
+<ol>
+<li value="2">
+<div>
+Check the toe with the wheels pointed straight ahead.
+</div>
+<div>
+<table width="87%" class="Viewer" frame="void" style="table-layout:fixed;">
+<col width="29%">
+<col width="70%">
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Front toe-in:
+</b>
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+0±2 mm (0±0.08 in.)
+</b>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<ul type="disc">
+<li>
+<div>
+If adjustment is required, go to 
+<a href="javascript:try{parent.Jmp('i630');}catch(e){location.hash='i630';}">Step 3
+</a>
+.
+</div>
+</li>
+<li>
+<div>
+If no adjustment is required, go to rear toe inspection/adjustment.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i630">
+</a>
+<ol>
+<li value="3">
+<div>
+Loosen the tie-rod locknuts (A) while holding the flat surface sections (B) of the tie-rod end with a wrench, and turn both tie-rods (C) until the front toe is within specifications.
+</div>
+</li>
+</ol>
+<a name="i640">
+</a>
+<ol>
+<li value="4">
+<div>
+After adjusting, tighten the tie-rod locknuts to the specified torque value. Reposition the rack end boot if it is twisted or displaced.
+</div>
+</li>
+</ol>
+<a name="i650">
+</a>
+<ol>
+<li value="5">
+<div>
+Go to rear toe inspection/adjustment.
+</div>
+<div>
+NOTE: Adjust both the right and left wheels at the same time by the same amount in opposite directions to obtain the correct toe and to keep the steering wheel straight.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000012991','1');">
+<img src="../tn/TL1AEJAB20200000000MBAD04.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL1AEJAB20200000000MBAD04_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR06">
+</a>
+<div class="procedure_sub_title">
+<b>
+Rear Toe Inspection/Adjustment
+</b>
+</div>
+<a name="i710">
+</a>
+<ol>
+<li value="1">
+<div>
+Release the parking brake to avoid an incorrect measurement.
+</div>
+</li>
+</ol>
+<a name="i720">
+</a>
+<ol>
+<li value="2">
+<div>
+Check the toe.
+</div>
+<div>
+<table width="87%" class="Viewer" frame="void" style="table-layout:fixed;">
+<col width="25%">
+<col width="75%">
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Rear toe-in:
+</b>
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+2±2 mm (0.08±0.08 in.)
+</b>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<ul type="disc">
+<li>
+<div>
+If adjustment is required, go to 
+<a href="javascript:try{parent.Jmp('i730');}catch(e){location.hash='i730';}">Step 3
+</a>
+.
+</div>
+</li>
+<li>
+<div>
+If no adjustment is required, measure the turning angle.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i730">
+</a>
+<ol>
+<li value="3">
+<div>
+Hold the adjusting bolt (A) on the rear control arm (B), and loosen the self-locking nut (C).
+</div>
+</li>
+</ol>
+<a name="i740">
+</a>
+<ol>
+<li value="4">
+<div>
+Replace the self-locking nut with a new one, and lightly tighten it.
+</div>
+<div>
+NOTE: Always use a new self-locking nut whenever it has been tightened to the specified torque.
+</div>
+</li>
+</ol>
+<a name="i750">
+</a>
+<ol>
+<li value="5">
+<div>
+Adjust the rear toe by turning the adjusting bolt until the toe is correct.
+</div>
+</li>
+</ol>
+<a name="i760">
+</a>
+<ol>
+<li value="6">
+<div>
+Tighten the self-locking nut while holding the adjusting bolt to the specified torque value.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000012992','1');">
+<img src="../tn/TL1AEJAB20200000000MBAD05.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL1AEJAB20200000000MBAD05_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR07">
+</a>
+<div class="procedure_sub_title">
+<b>
+Turning Angle Inspection
+</b>
+</div>
+<a name="i910">
+</a>
+<ol>
+<li value="1">
+<div>
+<a href="javascript:CtsProc('0','000000000002895','i000')">
+Raise the vehicle,
+</a>
+ and set the turning radius gauges beneath the front wheels, and place the boards under the rear wheels the same thickness as the turning radius gauges, then lower the vehicle.
+</div>
+<div>
+NOTE: Be sure that the vehicle is level with the wheels on the turning radius gauges and the boards.
+</div>
+</li>
+</ol>
+<a name="i920">
+</a>
+<ol>
+<li value="2">
+<div>
+Turn the wheel right and left while applying the brake, and measure the turning angle of both wheels.
+</div>
+<div>
+<table width="87%" class="Viewer" frame="void" style="table-layout:fixed;">
+<col width="4%">
+<col width="45%">
+<col width="50%">
+<tbody>
+<tr>
+<td class="ViewerTD" colspan="3" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Turning angle:
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Inward:
+</b>
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+36 ° 59 '±2 °
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Outward (reference):
+</b>
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+30 ° 23 '
+</b>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</li>
+</ol>
+<a name="i930">
+</a>
+<ol>
+<li value="3">
+<div>
+If the measurement is not within the specifications, even up both sides of the tie-rod threaded section length while adjusting the front toe. If it is correct, but the turning angle is not within the specifications, check for bent or damaged suspension components.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000012993','1');">
+<img src="../tn/TL1AEJAB20200000000MBAD06.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL1AEJAB20200000000MBAD06_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:911px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:911px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E50D14300000000DAAD01.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:911px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:428px;top:18px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>MASTER CYLINDER<br><a href=\"javascript:CtsProc('0','000000000000030','i000')\"></b>Brake System Bleeding,</a><br><a href=\"javascript:CtsProc('0','000000000000041','i000')\">Replacement,</a><br><a href=\"javascript:CtsProc('0','000000000000042','i000')\">Disassembly,</a><br><a href=\"javascript:CtsProc('0','000000000000043','i000')\">Reassembly,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:662px;top:245px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>BRAKE HOSE and LINE<br><a href=\"javascript:CtsProc('0','000000000000040','i000')\"></b>Inspection,</a><br><a href=\"javascript:CtsProc('0','000000000000039','i000')\">Brake Hose Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:49px;top:712px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>FRONT BRAKE<br><a href=\"javascript:CtsProc('0','000000000000044','i000')\"></b>Pad Inspection and Replacement,</a><br><a href=\"javascript:CtsProc('0','000000000000037','i000')\">Disc Inspection,</a><br><a href=\"javascript:CtsProc('0','000000000000035','i000')\">Disc Replacement,</a><br><a href=\"javascript:CtsProc('0','000000000000033','i000')\">Caliper Overhaul,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:459px;top:785px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>BRAKE PEDAL<br></b>Brake Pedal and Brake Pedal<br><a href=\"javascript:CtsProc('0','000000000000047','i000')\"> Position Switch Adjustment,</a><br><a href=\"javascript:CtsProc('0','000000000000046','i000')\">Replacement,</a><br><a href=\"javascript:CtsProc('0','000000000000048','i000')\">Cover Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:544px;top:725px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>PARKING BRAKE<br><a href=\"javascript:CtsProc('0','000000000000025','i000')\"></b>Inspection and Adjustment,</a><br><a href=\"javascript:CtsProc('0','000000000000029','i000')\">Cable Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:516px;top:169px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>BRAKE SYSTEM INDICATOR<br><a href=\"javascript:CtsProc('0','000000000000050','i000')\"></b>Circuit Diagram,</a><br><a href=\"javascript:CtsProc('0','000000000000051','i000')\">Parking Brake Switch Test,</a><br><a href=\"javascript:CtsProc('0','000000000000049','i000')\">Brake Fluid Level Switch Test,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:474px;top:109px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>BRAKE BOOSTER<br><a href=\"javascript:CtsProc('0','000000000002593','i000')\"></b>Inspection,</a><br><a href=\"javascript:CtsProc('0','000000000002684','i000')\">Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:635px;top:620px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>REAR BRAKE<br><a href=\"javascript:CtsProc('0','000000000000045','i000')\"></b>Pad Inspection and Replacement,</a><br><a href=\"javascript:CtsProc('0','000000000000038','i000')\">Disc Inspection,</a><br><a href=\"javascript:CtsProc('0','000000000000036','i000')\">Disc Replacement,</a><br><a href=\"javascript:CtsProc('0','000000000000034','i000')\">Caliper Overhaul,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:769px;top:322px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>PARKING DRUM BRAKE<br>(Drum in disc brake type)<br><a href=\"javascript:CtsProc('0','000000000000026','i000')\"></b>Inspection,</a><br><a href=\"javascript:CtsProc('0','000000000000027','i000')\">Shoe Replacement,<br></a><br><a href=\"javascript:CtsProc('0','000000000000028','i000')\">Shoe Lining Break-in,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_10\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:2px;top:880px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b></b>*: The illustration shows LHD model, RHD model is similar.<br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

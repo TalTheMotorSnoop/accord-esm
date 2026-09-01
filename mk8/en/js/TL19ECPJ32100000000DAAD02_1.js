@@ -1,0 +1,31 @@
+with(document) {
+write("<div id=\"group2\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:751px;\">");
+write("<div id=\"rect2\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:751px;\">");
+write("<img id=\"img2\" name=\"PrtImgId\" src=\"../img/TL19ECPJ32100000000DAAD02.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:751px;border-color:#ffffff\">");
+write("<p id=\"p2_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:633px;top:66px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>HIGH MOUNT BRAKE LIGHT<br><a href=\"javascript:CtsProc('0','000000000002942','i000')\"></b>Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:558px;top:570px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>LICENSE PLATE LIGHT<br><a href=\"javascript:CtsProc('0','000000000000398','i000')\"></b>Replacement,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:139px;top:644px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>TAILLIGHT and BRAKE LIGHT<br><a href=\"javascript:CtsProc('0','000000000002945','i000')\"></b>Replacement,</a><br><a href=\"javascript:CtsProc('0','000000000000410','iR06')\">Bulb Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:139px;top:692px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>REAR TURN SIGNAL LIGHT<br><a href=\"javascript:CtsProc('0','000000000002945','i000')\"></b>Replacement,</a><br><a href=\"javascript:CtsProc('0','000000000000410','iR06')\">Bulb Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:685px;top:445px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>BACK-UP LIGHT (LHD model)<br><a href=\"javascript:CtsProc('0','000000000002946','i000')\"></b>Replacement,</a><br><a href=\"javascript:CtsProc('0','000000000000410','iR07')\">Bulb Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:685px;top:492px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>REAR FOG LIGHT (RHD model)<br><a href=\"javascript:CtsProc('0','000000000002946','i000')\"></b>Replacement,</a><br><a href=\"javascript:CtsProc('0','000000000000410','iR07')\">Bulb Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:445px;top:643px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>REAR FOG LIGHT (LHD model)<br><a href=\"javascript:CtsProc('0','000000000002946','i000')\"></b>Replacement,</a><br><a href=\"javascript:CtsProc('0','000000000000410','iR07')\">Bulb Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:445px;top:690px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>BACK-UP LIGHT (RHD model)<br><a href=\"javascript:CtsProc('0','000000000002946','i000')\"></b>Replacement,</a><br><a href=\"javascript:CtsProc('0','000000000000410','iR07')\">Bulb Replacement,</a><br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

@@ -1,0 +1,37 @@
+with(document) {
+write("<div id=\"group2\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:687px;\">");
+write("<div id=\"rect2\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:687px;\">");
+write("<img id=\"img2\" name=\"PrtImgId\" src=\"../img/TL19E20A14680300000CAAD02.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:687px;border-color:#ffffff\">");
+write("<p id=\"p2_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:266px;top:194px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>PRIMARY ROCKER ARM<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:371px;top:479px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>EX<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:466px;top:479px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>IN<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:177px;top:118px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>SECONDARY<br>ROCKER ARM B<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:26px;top:589px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>SECONDARY<br>ROCKER ARM A<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:301px;top:658px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>VALVE TIMING<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:434px;top:322px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>OIL<br>PRESSURE<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:754px;top:293px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>VALVE<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:818px;top:145px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>ROCKER ARM<br>OIL CONTROL<br>VALVE<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_10\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:703px;top:56px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>ECM/PCM<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

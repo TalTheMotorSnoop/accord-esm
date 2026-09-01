@@ -1,0 +1,1934 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E00K71100000000BBAT10
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+How to Troubleshoot the Climate Control
+</div>
+<div>
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<span style="display:block" id="imgDispId">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG01">
+</a>
+<div class="servinfosub_title">
+<b>
+How to Check for DTCs with the HDS
+</b>
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Make sure the ignition switch to LOCK (0).
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Connect the HDS to the data link connector (DLC) (A) located under the driver's side of the dashboard.
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Turn the ignition switch to ON (II).
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Make sure the HDS communicates with the vehicle and the climate control unit. If it doesn't, troubleshoot the DLC circuit, 
+<a href="javascript:CtsProc('0','000000000001190','i000')">
+R20A3 engine model,
+</a>
+ or 
+<a href="javascript:CtsProc('0','000000000001600','i000')">
+K24Z3 engine model.
+</a>
+</div>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+Select HVAC/CLIMATE CONTROL in the BODY ELECTRICAL menu.
+</div>
+</li>
+</ol>
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+Select DTCs in the HVAC/CLIMATE CONTROL menu.
+</div>
+</li>
+</ol>
+<a name="i070">
+</a>
+<ol>
+<li value="7">
+<div>
+Check for DTCs. If any DTCs are indicated, write down the DTCs, then go to the indicated DTC troubleshooting. If no DTCs are indicated, refer to symptom troubleshooting.
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+After troubleshooting, clear the DTCs with the HDS.
+</div>
+</li>
+<li>
+<div>
+For specific operations, refer to the user's manual that came with the HDS.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001592','1');">
+<img src="../tn/TL19E00K71100000000BBAD01.png">
+</a>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</span>
+<span style="display:none" id="imgPrtId">
+<table width="100%" class="Viewer">
+<tr>
+<td width="100%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG01">
+</a>
+<div class="servinfosub_title">
+<b>
+How to Check for DTCs with the HDS
+</b>
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Make sure the ignition switch to LOCK (0).
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Connect the HDS to the data link connector (DLC) (A) located under the driver's side of the dashboard.
+</div>
+</li>
+</ol>
+</td>
+</tr>
+<tr>
+<td width="100%" class="ViewerTD" id="graphTd" valign="top">
+<span style="display:block" id="imgId1">
+<div>
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00K71100000000BBAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</div>
+</span>
+</td>
+</tr>
+<tr>
+<td width="100%" class="ViewerTD" valign="top">
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Turn the ignition switch to ON (II).
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Make sure the HDS communicates with the vehicle and the climate control unit. If it doesn't, troubleshoot the DLC circuit, 
+<a href="javascript:CtsProc('2','000000000001190','i000')">
+R20A3 engine model,
+</a>
+ or 
+<a href="javascript:CtsProc('2','000000000001600','i000')">
+K24Z3 engine model.
+</a>
+</div>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+Select HVAC/CLIMATE CONTROL in the BODY ELECTRICAL menu.
+</div>
+</li>
+</ol>
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+Select DTCs in the HVAC/CLIMATE CONTROL menu.
+</div>
+</li>
+</ol>
+<a name="i070">
+</a>
+<ol>
+<li value="7">
+<div>
+Check for DTCs. If any DTCs are indicated, write down the DTCs, then go to the indicated DTC troubleshooting. If no DTCs are indicated, refer to symptom troubleshooting.
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+After troubleshooting, clear the DTCs with the HDS.
+</div>
+</li>
+<li>
+<div>
+For specific operations, refer to the user's manual that came with the HDS.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</td>
+</tr>
+</table>
+</span>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG02">
+</a>
+<div class="servinfosub_title">
+<b>
+How to Use the Self-diagnostic Function with the HDS
+</b>
+</div>
+<a name="i110">
+</a>
+<ol>
+<li value="1">
+<div>
+Make sure the ignition switch to LOCK (0).
+</div>
+</li>
+</ol>
+<a name="i120">
+</a>
+<ol>
+<li value="2">
+<div>
+Connect the HDS to the data link connector (DLC).
+</div>
+</li>
+</ol>
+<a name="i130">
+</a>
+<ol>
+<li value="3">
+<div>
+Turn the ignition switch to ON (II).
+</div>
+</li>
+</ol>
+<a name="i140">
+</a>
+<ol>
+<li value="4">
+<div>
+Make sure the HDS communicates with the vehicle and the climate control unit. If it doesn't, troubleshoot the DLC circuit, 
+<a href="javascript:CtsProc('0','000000000001190','i000')">
+R20A3 engine model,
+</a>
+ or 
+<a href="javascript:CtsProc('0','000000000001600','i000')">
+K24Z3 engine model.
+</a>
+</div>
+</li>
+</ol>
+<a name="i150">
+</a>
+<ol>
+<li value="5">
+<div>
+Select HVAC/CLIMATE CONTROL in the BODY ELECTRICAL menu.
+</div>
+</li>
+</ol>
+<a name="i160">
+</a>
+<ol>
+<li value="6">
+<div>
+Select INSPECTION in the HVAC/CLIMATE CONTROL menu.
+</div>
+</li>
+</ol>
+<a name="i170">
+</a>
+<ol>
+<li value="7">
+<div>
+Select CLIMATE CONTROL SELF TEST in the INSPECTION menu.
+</div>
+</li>
+</ol>
+<a name="i180">
+</a>
+<ol>
+<li value="8">
+<div>
+Check for DTCs. If any DTCs are indicated, write down the DTCs, then go to the indicated DTC troubleshooting.
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+After troubleshooting, clear the DTCs with the HDS.
+</div>
+</li>
+<li>
+<div>
+For specific operations, refer to the user's manual that came with the HDS.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<span style="display:block" id="imgDispId">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG03">
+</a>
+<div class="servinfosub_title">
+<b>
+How to Use the Self-diagnostic Function without the HDS
+</b>
+</div>
+<div>
+The climate control unit has a self-diagnostic function. To run the self-diagnostic function, do the following:
+</div>
+<a name="i210">
+</a>
+<ol>
+<li value="1">
+<div>
+Turn the ignition switch to LOCK (0) and then to ON (II).
+</div>
+</li>
+</ol>
+<a name="i220">
+</a>
+<ol>
+<li value="2">
+<div>
+Press and hold the OFF button, then within 10 seconds press and release the REAR WINDOW DEFOGGER/MIRROR DEFOGGER button five times. Release the OFF button; then the self-diagnostic begins.
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+The blower motor will run at various speeds regardless of what the panel is displaying.
+</div>
+</li>
+<li>
+<div>
+If there is a problem with the system, it will flash 88 and AUTO, 88 and A/C ON, or 88 AUTO and 88 A/C ON, and one or more of the 14 indicator segments (A through P). Refer to checking for DTCs.
+</div>
+</li>
+<li>
+<div>
+If there is more than one DTC, they are displayed one at a time in sequence followed by a pause (all the display indicator segments illuminate) between the DTCs.
+</div>
+</li>
+<li>
+<div>
+If there are no problems detected, the segments will not illuminate, and the system will appear to be turned off.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="iT01">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Canceling the Self-diagnostic Function
+</b>
+</div>
+<br>
+<a name="i230">
+</a>
+<ol>
+<li value="1">
+<div>
+Turn the ignition switch to LOCK (0) to cancel the self-diagnostic function. After completing repair work, run the self-diagnostic function again to make sure that there are no other DTCs.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001594','1');">
+<img src="../tn/TL19E00K71100000000BBAD02.png">
+</a>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</span>
+<span style="display:none" id="imgPrtId">
+<table width="100%" class="Viewer">
+<tr>
+<td width="100%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG03">
+</a>
+<div class="servinfosub_title">
+<b>
+How to Use the Self-diagnostic Function without the HDS
+</b>
+</div>
+<div>
+The climate control unit has a self-diagnostic function. To run the self-diagnostic function, do the following:
+</div>
+<a name="i210">
+</a>
+<ol>
+<li value="1">
+<div>
+Turn the ignition switch to LOCK (0) and then to ON (II).
+</div>
+</li>
+</ol>
+<a name="i220">
+</a>
+<ol>
+<li value="2">
+<div>
+Press and hold the OFF button, then within 10 seconds press and release the REAR WINDOW DEFOGGER/MIRROR DEFOGGER button five times. Release the OFF button; then the self-diagnostic begins.
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+The blower motor will run at various speeds regardless of what the panel is displaying.
+</div>
+</li>
+<li>
+<div>
+If there is a problem with the system, it will flash 88 and AUTO, 88 and A/C ON, or 88 AUTO and 88 A/C ON, and one or more of the 14 indicator segments (A through P). Refer to checking for DTCs.
+</div>
+</li>
+<li>
+<div>
+If there is more than one DTC, they are displayed one at a time in sequence followed by a pause (all the display indicator segments illuminate) between the DTCs.
+</div>
+</li>
+<li>
+<div>
+If there are no problems detected, the segments will not illuminate, and the system will appear to be turned off.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</td>
+</tr>
+<tr>
+<td width="100%" class="ViewerTD" id="graphTd" valign="top">
+<span style="display:block" id="imgId1">
+<div>
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00K71100000000BBAD02_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</div>
+</span>
+</td>
+</tr>
+<tr>
+<td width="100%" class="ViewerTD" valign="top">
+<a name="iT01">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Canceling the Self-diagnostic Function
+</b>
+</div>
+<br>
+<a name="i230">
+</a>
+<ol>
+<li value="1">
+<div>
+Turn the ignition switch to LOCK (0) to cancel the self-diagnostic function. After completing repair work, run the self-diagnostic function again to make sure that there are no other DTCs.
+</div>
+</li>
+</ol>
+</td>
+</tr>
+</table>
+</span>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<span style="display:block" id="imgDispId">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG04">
+</a>
+<div class="servinfosub_title">
+<b>
+Checking for DTCs
+</b>
+</div>
+<div>
+The temperature display indicates single or multiple DTCs. If no DTCs are present, the indicator remains blank.
+</div>
+<div>
+NOTE: If indicator segments A, C, D, E, G, K, with the AUTO indicator, or the A/C ON indicator are on at the same time, there may be an open in the common ground wire.
+</div>
+<div>
+<table width="100%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="21%">
+<col width="78%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+DTC (Driver's Temperature Indicator Segment, AUTO, and A/C Indicator)
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Detection Item
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+A and AUTO
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('0','000000000000659','i000')">
+An open in the in-car temperature sensor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+B and AUTO
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('0','000000000000660','i000')">
+A short in the in-car temperature sensor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+C and AUTO
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('0','000000000000661','i000')">
+An open in the outside air temperature sensor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+D and AUTO
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('0','000000000000662','i000')">
+A short in the outside air temperature sensor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+E and AUTO
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('0','000000000000663','i000')">
+An open in the sunlight sensor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+F and AUTO
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('0','000000000000664','i000')">
+A short in the sunlight sensor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+G and AUTO
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('0','000000000000606','i000')">
+An open in the evaporator temperature sensor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+H and AUTO
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('0','000000000000607','i000')">
+A short in the evaporator temperature sensor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+A and A/C ON
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('0','000000000000665','i000')">
+An open in the driver's air mix control motor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+B and A/C ON
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('0','000000000000666','i000')">
+A short in the driver's air mix control motor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+C and A/C ON
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('0','000000000000667','i000')">
+A problem in the driver's air mix control linkage, door, or motor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+D and A/C ON
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('0','000000000000668','i000')">
+An open in the passenger's air mix control motor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+E and A/C ON
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('0','000000000000669','i000')">
+A short in the passenger's air mix control motor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+F and A/C ON
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('0','000000000000670','i000')">
+A problem in the passenger's air mix control linkage, door, or motor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+G and A/C ON
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('0','000000000000656','i000')">
+An open in the mode control motor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+H and A/C ON
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('0','000000000000657','i000')">
+A short in the mode control motor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+J and A/C ON
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('0','000000000000671','i000')">
+A problem in the mode control linkage, doors, or motor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+K and A/C ON
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('0','000000000000674','i000')">
+An open in the recirculation control motor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+L and A/C ON
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('0','000000000000658','i000')">
+A short in the recirculation control motor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+M and A/C ON
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('0','000000000000673','i000')">
+A problem in the recirculation control linkage, door, or motor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+N and A/C ON
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('0','000000000000672','i000')">
+A problem in the blower motor circuit
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<div>
+<table width="100%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="21%">
+<col width="78%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+DTC (Driver's Temperature Indicator Segment)
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Detection Item
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+A
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('0','000000000000654','i000')">
+Climate control unit internal error
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+B
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Output shaft (countershaft) speed sensor signal error. Check for DTCs in the A/T system and go to the indicated DTC's troubleshooting. If no DTCs are found, 
+<a href="javascript:CtsProc('0','000000000000109','i000')">
+replace the climate control unit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+C
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Engine coolant temperature (ECT) sensor signal error. Check for DTCs in the PGM-FI system and go to the indicated DTC's troubleshooting. If no DTCs are found, 
+<a href="javascript:CtsProc('0','000000000000109','i000')">
+replace the climate control unit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+D
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Communication bus line error (bus-off)
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001595','1');">
+<img src="../tn/TL19E00K71100000000BBAD03.png">
+</a>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</span>
+<span style="display:none" id="imgPrtId">
+<table width="100%" class="Viewer">
+<tr>
+<td width="100%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG04">
+</a>
+<div class="servinfosub_title">
+<b>
+Checking for DTCs
+</b>
+</div>
+<div>
+The temperature display indicates single or multiple DTCs. If no DTCs are present, the indicator remains blank.
+</div>
+<div>
+NOTE: If indicator segments A, C, D, E, G, K, with the AUTO indicator, or the A/C ON indicator are on at the same time, there may be an open in the common ground wire.
+</div>
+</td>
+</tr>
+<tr>
+<td width="100%" class="ViewerTD" id="graphTd" valign="top">
+<span style="display:block" id="imgId1">
+<div>
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00K71100000000BBAD03_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</div>
+</span>
+</td>
+</tr>
+<tr>
+<td width="100%" class="ViewerTD" valign="top">
+<div>
+<table width="100%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="21%">
+<col width="78%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+DTC (Driver's Temperature Indicator Segment, AUTO, and A/C Indicator)
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Detection Item
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+A and AUTO
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('2','000000000000659','i000')">
+An open in the in-car temperature sensor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+B and AUTO
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('2','000000000000660','i000')">
+A short in the in-car temperature sensor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+C and AUTO
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('2','000000000000661','i000')">
+An open in the outside air temperature sensor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+D and AUTO
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('2','000000000000662','i000')">
+A short in the outside air temperature sensor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+E and AUTO
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('2','000000000000663','i000')">
+An open in the sunlight sensor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+F and AUTO
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('2','000000000000664','i000')">
+A short in the sunlight sensor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+G and AUTO
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('2','000000000000606','i000')">
+An open in the evaporator temperature sensor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+H and AUTO
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('2','000000000000607','i000')">
+A short in the evaporator temperature sensor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+A and A/C ON
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('2','000000000000665','i000')">
+An open in the driver's air mix control motor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+B and A/C ON
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('2','000000000000666','i000')">
+A short in the driver's air mix control motor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+C and A/C ON
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('2','000000000000667','i000')">
+A problem in the driver's air mix control linkage, door, or motor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+D and A/C ON
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('2','000000000000668','i000')">
+An open in the passenger's air mix control motor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+E and A/C ON
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('2','000000000000669','i000')">
+A short in the passenger's air mix control motor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+F and A/C ON
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('2','000000000000670','i000')">
+A problem in the passenger's air mix control linkage, door, or motor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+G and A/C ON
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('2','000000000000656','i000')">
+An open in the mode control motor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+H and A/C ON
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('2','000000000000657','i000')">
+A short in the mode control motor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+J and A/C ON
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('2','000000000000671','i000')">
+A problem in the mode control linkage, doors, or motor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+K and A/C ON
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('2','000000000000674','i000')">
+An open in the recirculation control motor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+L and A/C ON
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('2','000000000000658','i000')">
+A short in the recirculation control motor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+M and A/C ON
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('2','000000000000673','i000')">
+A problem in the recirculation control linkage, door, or motor circuit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+N and A/C ON
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('2','000000000000672','i000')">
+A problem in the blower motor circuit
+</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<div>
+<table width="100%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="21%">
+<col width="78%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+DTC (Driver's Temperature Indicator Segment)
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Detection Item
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+A
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+<a href="javascript:CtsProc('2','000000000000654','i000')">
+Climate control unit internal error
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+B
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Output shaft (countershaft) speed sensor signal error. Check for DTCs in the A/T system and go to the indicated DTC's troubleshooting. If no DTCs are found, 
+<a href="javascript:CtsProc('2','000000000000109','i000')">
+replace the climate control unit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+C
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Engine coolant temperature (ECT) sensor signal error. Check for DTCs in the PGM-FI system and go to the indicated DTC's troubleshooting. If no DTCs are found, 
+<a href="javascript:CtsProc('2','000000000000109','i000')">
+replace the climate control unit
+</a>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+D
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Communication bus line error (bus-off)
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</td>
+</tr>
+</table>
+</span>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG05">
+</a>
+<div class="servinfosub_title">
+<b>
+Displaying Sensor Inputs at the Climate Control Unit
+</b>
+</div>
+<div>
+The climate control unit has a mode that displays sensor inputs it receives. This mode shows you what the climate control unit is receiving from each of the sensors, one at a time, and it can help you determine if a sensor is faulty.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG06">
+</a>
+<div class="servinfosub_title">
+<b>
+Check these items before using the sensor input display mode
+</b>
+</div>
+<a name="i310">
+</a>
+<ol>
+<li value="1">
+<div>
+Turn the ignition switch to ON (II), and check the recirculation door function; press the recirculation button to switch from FRESH to RECIRC. The air volume and sound should change slightly.
+</div>
+</li>
+</ol>
+<a name="i320">
+</a>
+<ol>
+<li value="2">
+<div>
+Set the temperature using the driver's control switch to the desired test temperature:
+</div>
+<ul type="disc">
+<li>
+<div>
+Press AUTO button on, the LED turns on.
+</div>
+</li>
+<li>
+<div>
+Press DUAL button off, the LED turns off.
+</div>
+</li>
+</ul>
+<div>
+When selecting the test temperature, note these items:
+</div>
+<ul type="disc">
+<li>
+<div>
+‘‘Lo'' temperature setting will default to MAX COOL, VENT, and RECIRC.
+</div>
+</li>
+<li>
+<div>
+‘‘Hi'' temperature setting will default to MAX HOT, HEAT, and FRESH.
+</div>
+</li>
+<li>
+<div>
+16 through 28 °C settings will use the automatic climate control logic. (Except KQ model)
+</div>
+</li>
+<li>
+<div>
+19 through 31 °C settings will use the automatic climate control logic. (KQ model)
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i330">
+</a>
+<ol>
+<li value="3">
+<div>
+Turn the ignition switch to LOCK (0).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG07">
+</a>
+<div class="servinfosub_title">
+<b>
+To run the sensor input display mode, follow these steps
+</b>
+</div>
+<a name="i410">
+</a>
+<ol>
+<li value="1">
+<div>
+Turn the ignition switch to LOCK (0).
+</div>
+</li>
+</ol>
+<a name="i420">
+</a>
+<ol>
+<li value="2">
+<div>
+Press and hold both the AUTO and RECIRCULATION CONTROL buttons, then start the engine.
+</div>
+</li>
+</ol>
+<a name="i430">
+</a>
+<ol>
+<li value="3">
+<div>
+After the engine starts, release both buttons. The display panel control unit will flash the sensor number and then the value for that sensor. Record the value displayed.
+</div>
+</li>
+</ol>
+<a name="i440">
+</a>
+<ol>
+<li value="4">
+<div>
+To advance to the next sensor, press the REAR WINDOW DEFOGGER button.
+</div>
+<div>
+<table width="87%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="8%">
+<col width="75%">
+<col width="16%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+Sensor
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+Item
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+Displayed Value
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Mode Positioning
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+%
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+2
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+In-car Temperature
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+°C
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+3
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Outside Air Temperature
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+°C
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+4
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Solar Radiation Sensor Value: Dark = 00, Flashlight = 04, Cloudy = 10, Sunny = 65
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+10 kcal/m
+<sup>
+2
+</sup>
+·h
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+5
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Evaporator Outlet Air Temperature
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+°C
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+6
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Driver's Air Mix Opening (Low value indicates cooler air distribution, higher value indicates warmer air distribution)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+% of opening
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+7
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Passenger's Air Mix Opening (Low value indicates cooler air distribution, higher value indicates warmer air distribution)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+% of opening
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+8
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Recirculation Control Opening
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+% of opening
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+9
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Vehicle Speed (Vehicle must be driven to display speed)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+10 km/h
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+A
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Engine Coolant Temperature
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+°C
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+b
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Vent Temperature Air Out (TAO)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+°C
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+The sensor values will be displayed in degrees Celsius (°C) or an alphanumeric code. Use the chart to convert the value to degrees Fahrenheit (°F).
+</div>
+</li>
+<li>
+<div>
+If the sensor value displays ‘‘Er'' this indicates there is an open or short in the circuit or sensor. Check for DTCs using the HDS, or refer to checking DTCs by DTC indication.
+</div>
+</li>
+<li>
+<div>
+If necessary, compare the sensor input display to a known-good vehicle under the same test conditions.
+</div>
+</li>
+<li>
+<div>
+If the sensor is out of the normal range, refer to the sensor test or substitute a known-good sensor, and recheck.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i450">
+</a>
+<ol>
+<li value="5">
+<div>
+To cancel the sensor input display mode, press the AUTO button or turn the ignition switch to LOCK (0).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

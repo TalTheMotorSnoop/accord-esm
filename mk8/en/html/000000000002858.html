@@ -1,0 +1,1033 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E5AE10480150701MEAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+A/T Regulator Valve Body Disassembly, Inspection, and Reassembly
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<span style="display:block" id="imgDispId">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Clean all parts thoroughly in solvent, and dry them with compressed air. Blow out all passages.
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Inspect the valve body for scoring and damage.
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Check all valves for free movement. If any fail to slide freely, 
+<a href="javascript:CtsProc('0','000000000002853','i000')">
+refer to the valve body repair procedure.
+</a>
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Hold the regulator spring cap in place while removing the stop bolt. The regulator spring cap is spring loaded.
+</div>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+Coat all parts with ATF during assembly.
+</div>
+</li>
+</ol>
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+Replace the O-rings with new ones.
+</div>
+</li>
+</ol>
+<a name="i070">
+</a>
+<ol>
+<li value="7">
+<div>
+When reassembling the valve body, align the hole in the regulator spring cap with the hole in the valve body, then press the spring cap into the valve body, and tighten the stop bolt.
+</div>
+</li>
+</ol>
+<div>
+<br>
+<div class="table_title">
+<b>
+SPRING SPECIFICATIONS
+</b>
+</div>
+<br>
+<table width="100%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="4%">
+<col width="37%">
+<col width="14%">
+<col width="14%">
+<col width="14%">
+<col width="14%">
+<thead>
+<tr>
+<th class="ViewerTH" colspan="2" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" rowspan="2" align="center">
+<div>
+<b>
+Springs
+</b>
+</div>
+</th>
+<th class="ViewerTH" colspan="4" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Standard (New)-Unit: mm (in.)
+</b>
+</div>
+</th>
+</tr>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Wire Diameter
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+O.D.
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Free Length
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+No. of Coils
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+A
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+Stator reaction spring 
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+4.5 (0.177)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+35.4 (1.394)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+30.3 (1.193)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+1.92
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+B
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+Regulator valve spring A (For R20A3 engine model)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+1.9 (0.075)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+14.7 (0.579)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+80.6 (3.173)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+1.61
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+Regulator valve spring A (For K24Z3 engine model)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+1.85 (0.073)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+14.7 (0.579)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+83.0 (3.268)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+14.9
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+C
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+Regulator valve spring B
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+1.6 (0.063)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+9.2 (0.362)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+44.0 (1.732)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+12.5
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+D
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+Torque converter check valve spring
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+1.2 (0.047)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+8.6 (0.339)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+33.8 (1.331)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+12.2
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+E
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+Lock-up shift valve spring
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+1.0 (0.039)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+6.6 (0.260)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+35.5 (1.398)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+18.2
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+F
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+3rd accumulator spring (For R20A3) engine model
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+2.5 (0.098)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+14.6 (0.575)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+29.9 (1.177)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+4.9
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+3rd accumulator spring (For K24Z3 engine model)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+2.5 (0.098)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+14.6 (0.575)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+29.4 (1.157)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+ 4.9
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+G
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+1st accumulator spring A
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+2.4 (0.094)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+18.6 (0.732)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+49.0 (1.929)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+ 7.1
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+H
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+1st accumulator spring B
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+2.3 (0.091)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+12.2 (0.480)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+31.5 (1.240)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+ 6.6
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000007943','1');">
+<img src="../tn/TL19E5AE10480150701MEAD01.png">
+</a>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</span>
+<span style="display:none" id="imgPrtId">
+<table width="100%" class="Viewer">
+<tr>
+<td width="100%" class="ViewerTD" id="textTd" valign="top">
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Clean all parts thoroughly in solvent, and dry them with compressed air. Blow out all passages.
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Inspect the valve body for scoring and damage.
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Check all valves for free movement. If any fail to slide freely, 
+<a href="javascript:CtsProc('2','000000000002853','i000')">
+refer to the valve body repair procedure.
+</a>
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Hold the regulator spring cap in place while removing the stop bolt. The regulator spring cap is spring loaded.
+</div>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+Coat all parts with ATF during assembly.
+</div>
+</li>
+</ol>
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+Replace the O-rings with new ones.
+</div>
+</li>
+</ol>
+<a name="i070">
+</a>
+<ol>
+<li value="7">
+<div>
+When reassembling the valve body, align the hole in the regulator spring cap with the hole in the valve body, then press the spring cap into the valve body, and tighten the stop bolt.
+</div>
+</li>
+</ol>
+</td>
+</tr>
+<tr>
+<td width="100%" class="ViewerTD" id="graphTd" valign="top">
+<span style="display:block" id="imgId1">
+<div>
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E5AE10480150701MEAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</div>
+</span>
+</td>
+</tr>
+<tr>
+<td width="100%" class="ViewerTD" valign="top">
+<div>
+<br>
+<div class="table_title">
+<b>
+SPRING SPECIFICATIONS
+</b>
+</div>
+<br>
+<table width="100%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="4%">
+<col width="37%">
+<col width="14%">
+<col width="14%">
+<col width="14%">
+<col width="14%">
+<thead>
+<tr>
+<th class="ViewerTH" colspan="2" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" rowspan="2" align="center">
+<div>
+<b>
+Springs
+</b>
+</div>
+</th>
+<th class="ViewerTH" colspan="4" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Standard (New)-Unit: mm (in.)
+</b>
+</div>
+</th>
+</tr>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Wire Diameter
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+O.D.
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Free Length
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+No. of Coils
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+A
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+Stator reaction spring 
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+4.5 (0.177)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+35.4 (1.394)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+30.3 (1.193)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+1.92
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+B
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+Regulator valve spring A (For R20A3 engine model)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+1.9 (0.075)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+14.7 (0.579)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+80.6 (3.173)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+1.61
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+Regulator valve spring A (For K24Z3 engine model)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+1.85 (0.073)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+14.7 (0.579)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+83.0 (3.268)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+14.9
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+C
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+Regulator valve spring B
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+1.6 (0.063)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+9.2 (0.362)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+44.0 (1.732)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+12.5
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+D
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+Torque converter check valve spring
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+1.2 (0.047)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+8.6 (0.339)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+33.8 (1.331)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+12.2
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+E
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+Lock-up shift valve spring
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+1.0 (0.039)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+6.6 (0.260)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+35.5 (1.398)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+18.2
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+F
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+3rd accumulator spring (For R20A3) engine model
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+2.5 (0.098)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+14.6 (0.575)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+29.9 (1.177)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+4.9
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+3rd accumulator spring (For K24Z3 engine model)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+2.5 (0.098)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+14.6 (0.575)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+29.4 (1.157)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+ 4.9
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+G
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+1st accumulator spring A
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+2.4 (0.094)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+18.6 (0.732)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+49.0 (1.929)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+ 7.1
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+H
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+1st accumulator spring B
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+2.3 (0.091)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+12.2 (0.480)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+31.5 (1.240)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:none;border-top-style:none;" align="center">
+<div>
+ 6.6
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</td>
+</tr>
+</table>
+</span>
+</div>
+</body>
+</html>

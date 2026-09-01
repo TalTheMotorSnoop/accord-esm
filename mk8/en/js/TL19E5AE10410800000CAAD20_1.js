@@ -1,0 +1,31 @@
+with(document) {
+write("<div id=\"group3\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:319px;\">");
+write("<div id=\"rect3\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:319px;\">");
+write("<img id=\"img3\" name=\"PrtImgId\" src=\"../img/TL19E5AE10410800000CAAD20.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:319px;border-color:#ffffff\">");
+write("<p id=\"p3_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:243px;top:65px;font-weight:normal;font-size:8.67pt;\">");
+write("<nobr><b>SHIFT SOLENOID<br>VALVE B<br></b></nobr>");
+write("</p>");
+write("<p id=\"p3_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:330px;top:17px;font-weight:normal;font-size:8.67pt;\">");
+write("<nobr><b>SHIFT SOLENOID<br>VALVE A<br></b></nobr>");
+write("</p>");
+write("<p id=\"p3_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:624px;top:17px;font-weight:normal;font-size:8.67pt;\">");
+write("<nobr><b>SHIFT SOLENOID<br>VALVE D<br></b></nobr>");
+write("</p>");
+write("<p id=\"p3_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:687px;top:62px;font-weight:normal;font-size:8.67pt;\">");
+write("<nobr><b>SHIFT SOLENOID<br>VALVE E<br></b></nobr>");
+write("</p>");
+write("<p id=\"p3_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:713px;top:108px;font-weight:normal;font-size:8.67pt;\">");
+write("<nobr><b>SHIFT SOLENOID<br>VALVE C<br></b></nobr>");
+write("</p>");
+write("<p id=\"p3_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:481px;top:289px;font-weight:normal;font-size:8.67pt;\">");
+write("<nobr><b>SHIFT VALVE D<br></b></nobr>");
+write("</p>");
+write("<p id=\"p3_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:170px;top:290px;font-weight:normal;font-size:8.67pt;\">");
+write("<nobr><b>SERVO VALVE<br></b></nobr>");
+write("</p>");
+write("<p id=\"p3_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:653px;top:251px;font-weight:normal;font-size:8.67pt;\">");
+write("<nobr><b>SERVO BODY<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

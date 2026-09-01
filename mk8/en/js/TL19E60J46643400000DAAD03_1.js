@@ -1,0 +1,37 @@
+with(document) {
+write("<div id=\"group3\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:543px;\">");
+write("<div id=\"rect3\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:543px;\">");
+write("<img id=\"img3\" name=\"PrtImgId\" src=\"../img/TL19E60J46643400000DAAD03.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:543px;border-color:#ffffff\">");
+write("<p id=\"p3_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:660px;top:323px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>FRONT PASSENGER'S DOOR LOCK<br>ACTUATOR/KNOB SWITCH<br><a href=\"javascript:CtsProc('0','000000000000533','i000')\"></b>Actuator Test,</a><br><a href=\"javascript:CtsProc('0','000000000000534','i000')\">Knob Switch Test,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p3_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:725px;top:208px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>FRONT PASSENGER'S POWER <br>WINDOW SWITCH<br>(With built-in control unit and <br>front passenger's door lock <br>switch)<br><a href=\"javascript:CtsProc('0','000000000003003','i000')\"></b>Input Test,</a><br><a href=\"javascript:CtsProc('0','000000000000576','i000')\">Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p3_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:7px;top:360px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>TRUNK LID RELEASE<br>ACTUATOR/LATCH SWITCH<br><a href=\"javascript:CtsProc('0','000000000003004','i000')\"></b>Actuator Test,</a><br><a href=\"javascript:CtsProc('0','000000000002949','i000')\">Latch Switch Test,</a><br><a href=\"javascript:CtsProc('0','000000000002930','i000')\">Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p3_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:1px;top:513px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b></b>LHD model is shown, RHD model is similar.<br></nobr>");
+write("</p>");
+write("<p id=\"p3_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:493px;top:481px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>SECURITY HORN</b><br><a href=\"javascript:CtsProc('0','000000000000538','i000')\">Test/Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p3_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:611px;top:396px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>FRONT PASSENGER'S DOOR SWITCH<br></b></nobr>");
+write("</p>");
+write("<p id=\"p3_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:543px;top:423px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>RIGHT REAR DOOR LOCK ACTUATOR/KNOB SWITCH*<br><a href=\"javascript:CtsProc('0','000000000000533','i000')\"></b>Actuator Test,</a><br><a href=\"javascript:CtsProc('0','000000000000534','i000')\">Knob Switch Test,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p3_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:119px;top:20px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>RIGHT REAR DOOR SWITCH<br></b></nobr>");
+write("</p>");
+write("<p id=\"p3_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:207px;top:437px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>REAR TURN SIGNAL LIGHT<br><a href=\"javascript:CtsProc('0','000000000002945','i000')\"></b>Taillight Replacement,</a><br><a href=\"javascript:CtsProc('0','000000000000410','iR06')\">Bulb Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p3_10\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:1px;top:482px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>*: With security<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

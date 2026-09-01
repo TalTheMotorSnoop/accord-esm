@@ -1,0 +1,156 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+<title>SEA6EL4J36200000000BBAT10</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+var   totalImg = 0;
+var   dispNum=1;
+function prOnLoadProc() {
+	_prInitImageInfo(100);
+	_prResizeImage(100/100);
+	divBody.style.display = "block"
+	return;
+}
+function PrintFunc()
+{
+	divBody.style.display = "none";
+	var  img_hei = _prResizeImage(67/100);
+	divBody.style.display = "block";
+	var  graphTd = document.getElementById("graphTd");
+	if(graphTd.width == "100%")
+	{
+      var   current_pos;
+      var   img_pos = 0;
+         current_pos = graphTd.offsetTop;
+		var pageCnt = Math.floor(current_pos/950);
+		var img_pos = current_pos - (pageCnt*950);
+		if(img_pos+img_hei > 950)
+		{
+			var  pageElement = document.getElementById("page_onoff");
+			if(pageElement != null)
+			{
+				pageElement.style.display = "block";
+			}
+		}
+	}
+	window.print();
+	divBody.style.display = "none";
+	_prResizeImage(100/100);
+	divBody.style.display = "block";
+	window.scrollTo(0,0);
+}
+function BackFunc()
+{
+	window.location.replace("ZOOM000000000011923.html");
+}
+function NextFunc()
+{
+	window.location.replace("ZOOM000000000011925.html");
+}
+function CloseFunc()
+{
+	window.close();
+}
+function JumpFunc(strJump)
+{
+	window.location.replace(strJump);
+}
+//-->
+</script>
+<body onLoad="prOnLoadProc();" style="font-family:sans-serif;">
+<div id="divBody" style="display:none">
+<div>
+<div style="position:absolute;right=10;">
+<input type="image" src="../img/PRINT_PREVIEW.PNG" onClick="PrintFunc()">
+<input type="image" src="../img/GL_PREV.PNG" onClick="BackFunc()">
+<input type="image" src="../img/GL_NEXT.PNG" onClick="NextFunc()">
+<input type="image" src="../img/GL_CANCEL.PNG" onClick="CloseFunc()">
+</div><br><br>
+<hr width="100%" size="2" color="black">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG05">
+</a>
+<div class="servinfosub_title">
+<b>
+Global Positioning System (GPS) Limitations
+</b>
+</div>
+<div>
+The GPS cannot detect the vehicle's position during the following instances:
+</div>
+<ul type="disc">
+<li>
+<div>
+For the first 5 to 10 minutes after reconnecting the battery (This can take as long as 45 minutes).
+</div>
+</li>
+<li>
+<div>
+When the satellite signals are blocked by tall buildings, mountains, tunnels, large trees, inside parking structures or large trucks.
+</div>
+</li>
+<li>
+<div>
+When the GPS antenna is blocked by metallic window tinting or by an object placed above it in the vehicle. The GPS antenna requires a clear unobstructed view of the sky.
+</div>
+</li>
+<li>
+<div>
+When there is no satellite signal output (Signal output is sometimes stopped for satellite servicing).
+</div>
+</li>
+<li>
+<div>
+When the satellite signals are blocked by the operation of some electronic aftermarket accessories including, but not limited to non-OEM in-dash entertainment units (radio, CD players/changers, radar detectors and theft recovery systems), and cellphones placed near the navigation system.
+</div>
+</li>
+</ul>
+<div>
+The accuracy of GPS is reduced during these instances:
+</div>
+<ul type="disc">
+<li>
+<div>
+Metallic window tinting above the GPS antenna.
+</div>
+</li>
+<li>
+<div>
+When only two satellite signals can be received (Three satellite signals are required for accurate positioning).
+</div>
+</li>
+<li>
+<div>
+When the satellite control centers are experiencing problems.
+</div>
+</li>
+<li>
+<div>
+When driving near high tension power lines.
+</div>
+</li>
+<li>
+<div>
+When the satellite signals are blocked by the operation of some electronic aftermarket accessories including, but not limited to non-OEM in-dash entertainment units (radio, CD players/changers, radar detectors and theft recovery systems), and cellphones placed near the navigation system.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div style="display:none;" id="page_onoff">
+<div style="page-break-after:always;">
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

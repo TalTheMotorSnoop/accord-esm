@@ -1,0 +1,534 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E00J54460641902MBAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+Power Window Control Unit Reset
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<div>
+Resetting the power windows are required when any of the following have occurred:
+</div>
+<ul type="disc">
+<li>
+<div>
+Power window regulator replacement or repair
+</div>
+</li>
+<li>
+<div>
+Power window motor replacement or repair
+</div>
+</li>
+<li>
+<div>
+Window run channel replacement
+</div>
+</li>
+<li>
+<div>
+Power window master switch or front passenger's power window switch replacement
+<sup>
+*
+</sup>
+</div>
+</li>
+<li>
+<div>
+Left or right rear power window switches replacement
+<sup>
+*
+</sup>
+</div>
+</li>
+<li>
+<div>
+Door glass replacement or repair
+</div>
+</li>
+<li>
+<div>
+Power is removed from the power window master switch or any of the power window switch while the power window timer is ON.
+</div>
+</li>
+</ul>
+<div>
+<table width="100%" class="Viewer" frame="void" style="table-layout:fixed;">
+<col width="7%">
+<col width="92%">
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+*:
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+With all power windows AUTO UP/AUTO DOWN function
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<div>
+NOTE: If the passenger's power windows have lost power when the key off timer is ON, it cannot be operated from the driver's switch and must be reset from each passenger's power window switch.
+</div>
+<a name="iR01">
+</a>
+<div class="procedure_sub_title">
+<b>
+Using the HDS (for driver's window)
+</b>
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Connect the HDS to the data link connector.
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Select BODY ELECTRICAL from the SYSTEM SELECT menu.
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+From the BODY ELECTRICAL SYSTEM SELECT menu, select POWER WINDOWS.
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+From the MODE menu, select ADJUSTMENTS.
+</div>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+From the ADJUSTMENT menu, select WINDOW RESET for driver's window.
+</div>
+</li>
+</ol>
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+Follow the prompts on the screen.
+</div>
+</li>
+</ol>
+<a name="i070">
+</a>
+<ol>
+<li value="7">
+<div>
+Confirm that the power window control unit is reset by using the power window AUTO UP and AUTO DOWN function.
+</div>
+</li>
+</ol>
+<a name="iR02">
+</a>
+<div class="procedure_sub_title">
+<b>
+Without the HDS (for driver's window)
+</b>
+</div>
+<div>
+NOTE: Do each bullet in 
+<a href="javascript:try{parent.Jmp('i240');}catch(e){location.hash='i240';}">Step 4
+</a>
+ within 5 seconds of each other.
+</div>
+<a name="i210">
+</a>
+<ol>
+<li value="1">
+<div>
+Turn the ignition switch to ON (II).
+</div>
+</li>
+</ol>
+<a name="i220">
+</a>
+<ol>
+<li value="2">
+<div>
+Move the power window all the way down by using the driver's power window DOWN switch.
+</div>
+</li>
+</ol>
+<a name="i230">
+</a>
+<ol>
+<li value="3">
+<div>
+Open the driver's door.
+</div>
+</li>
+</ol>
+<a name="i240">
+</a>
+<ol>
+<li value="4">
+<div>
+Do the following three times before going to 
+<a href="javascript:try{parent.Jmp('i250');}catch(e){location.hash='i250';}">Step 5
+</a>
+:
+</div>
+<ul type="disc">
+<li>
+<div>
+Turn the ignition switch to LOCK (0).
+</div>
+</li>
+<li>
+<div>
+Push and hold the driver's power window DOWN switch.
+</div>
+</li>
+<li>
+<div>
+Turn the ignition switch to ON (II).
+</div>
+</li>
+<li>
+<div>
+Release the driver's power window DOWN switch.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i250">
+</a>
+<ol>
+<li value="5">
+<div>
+Confirm that AUTO UP no longer works. If AUTO UP still works, go back to 
+<a href="javascript:try{parent.Jmp('i210');}catch(e){location.hash='i210';}">Step 1
+</a>
+.
+</div>
+</li>
+</ol>
+<a name="i260">
+</a>
+<ol>
+<li value="6">
+<div>
+Move the power window all the way down using the driver's power window DOWN switch.
+</div>
+</li>
+</ol>
+<a name="i270">
+</a>
+<ol>
+<li value="7">
+<div>
+Pull up and hold the driver's power window UP switch until the power window is all the way up, then continue to hold the switch for 1 second.
+</div>
+</li>
+</ol>
+<a name="i280">
+</a>
+<ol>
+<li value="8">
+<div>
+Confirm that the power window control unit is reset by using the power window AUTO UP and AUTO DOWN function. If the power window still does not work in AUTO, repeat the procedure several times, paying close attention to the 5 second time limit between steps.
+</div>
+</li>
+</ol>
+<a name="iR03">
+</a>
+<div class="procedure_sub_title">
+<b>
+Using the HDS (for passenger's window)
+</b>
+</div>
+<a name="i410">
+</a>
+<ol>
+<li value="1">
+<div>
+Connect the HDS to the data link connector.
+</div>
+</li>
+</ol>
+<a name="i420">
+</a>
+<ol>
+<li value="2">
+<div>
+Select BODY ELECTRICAL from the SYSTEM SELECT menu.
+</div>
+</li>
+</ol>
+<a name="i430">
+</a>
+<ol>
+<li value="3">
+<div>
+From the BODY ELECTRICAL SYSTEM SELECT menu, select POWER WINDOWS.
+</div>
+</li>
+</ol>
+<a name="i440">
+</a>
+<ol>
+<li value="4">
+<div>
+From the MODE menu, select ADJUSTMENTS.
+</div>
+</li>
+</ol>
+<a name="i450">
+</a>
+<ol>
+<li value="5">
+<div>
+From the ADJUSTMENT menu, select WINDOW RESET for the appropriate power window.
+</div>
+</li>
+</ol>
+<a name="i460">
+</a>
+<ol>
+<li value="6">
+<div>
+Follow the prompts on the screen.
+</div>
+</li>
+</ol>
+<a name="i470">
+</a>
+<ol>
+<li value="7">
+<div>
+Confirm that the power window control unit is reset by using the power window AUTO UP and AUTO DOWN function.
+</div>
+</li>
+</ol>
+<a name="iR04">
+</a>
+<div class="procedure_sub_title">
+<b>
+Without the HDS (for passenger's window)
+</b>
+</div>
+<div>
+NOTE: Do each bullet in 
+<a href="javascript:try{parent.Jmp('i640');}catch(e){location.hash='i640';}">Step 4
+</a>
+ within 5 seconds of each other.
+</div>
+<a name="i610">
+</a>
+<ol>
+<li value="1">
+<div>
+Turn the ignition switch to ON (II).
+</div>
+</li>
+</ol>
+<a name="i620">
+</a>
+<ol>
+<li value="2">
+<div>
+Move the appropriate power window all the way down by using the DOWN switch of the power window master switch.
+</div>
+</li>
+</ol>
+<a name="i630">
+</a>
+<ol>
+<li value="3">
+<div>
+Open the driver's door.
+</div>
+</li>
+</ol>
+<a name="i640">
+</a>
+<ol>
+<li value="4">
+<div>
+Do the following three times before going to 
+<a href="javascript:try{parent.Jmp('i650');}catch(e){location.hash='i650';}">Step 5
+</a>
+:
+</div>
+<ul type="disc">
+<li>
+<div>
+Turn the ignition switch to LOCK (0).
+</div>
+</li>
+<li>
+<div>
+Push and hold the DOWN switch of the power window master switch.
+</div>
+</li>
+<li>
+<div>
+Turn the ignition switch to ON (II).
+</div>
+</li>
+<li>
+<div>
+Release the DOWN switch of the power window master switch.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i650">
+</a>
+<ol>
+<li value="5">
+<div>
+Confirm that AUTO UP no longer works. If AUTO UP still works, go back to 
+<a href="javascript:try{parent.Jmp('i610');}catch(e){location.hash='i610';}">Step 1
+</a>
+.
+</div>
+</li>
+</ol>
+<a name="i660">
+</a>
+<ol>
+<li value="6">
+<div>
+Move the appropriate power window all the way down using the appropriate power window DOWN switch.
+</div>
+</li>
+</ol>
+<a name="i670">
+</a>
+<ol>
+<li value="7">
+<div>
+Pull up and hold the appropriate power window UP switch until the power window is all the way up, then continue to hold the switch for 1 second.
+</div>
+</li>
+</ol>
+<a name="i680">
+</a>
+<ol>
+<li value="8">
+<div>
+Confirm that the power window control unit is reset by using the power window AUTO UP and AUTO DOWN function. If the power window still does not work in AUTO, repeat the procedure several times, paying close attention to the 5 second time limit between steps.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

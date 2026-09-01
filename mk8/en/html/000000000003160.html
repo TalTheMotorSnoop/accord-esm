@@ -1,0 +1,1759 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E9AJ26200031201KDAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+Headliner Removal/Installation
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<div>
+SRS components are located in this area. 
+<a href="javascript:CtsProc('0','000000000003114','i000')">
+Review the SRS component locations
+</a>
+ and 
+<a href="javascript:CtsProc('0','000000000003112','i000')">
+the precautions and procedures
+</a>
+ before doing repairs or service.
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+Put on gloves to protect your hands.
+</div>
+</li>
+<li>
+<div>
+Take care not to bend and scratch the headliner.
+</div>
+</li>
+<li>
+<div>
+Be careful not to damage the dashboard and other interior trim.
+</div>
+</li>
+<li>
+<div>
+When removing components, use the trim tools or equivalent.
+</div>
+</li>
+</ul>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Slide both front seats all the way back, and recline the seat-back fully.
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+<a href="javascript:CtsProc('0','000000000002660','i000')">
+Do the battery terminal disconnection procedure,
+</a>
+ then wait at least 3 minutes before beginning work.
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Remove these items
+</div>
+<ul type="disc">
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000389','i040')">
+Front door opening seals, both sides as needed
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000388','iR01')">
+Front pillar trim, both sides
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000424','i000')">
+Ceiling light
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000389','iR01')">
+Front door sill trim, both sides
+</a>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Remove these items:
+</div>
+<ul type="disc">
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003227','iR02')">
+Rear seat cushion
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003397','iR01')">
+Rear door sill trim, both sides
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003397','i040')">
+Rear door opening seals, both sides as needed
+</a>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+Remove these items
+</div>
+<ul type="disc">
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000388','iR02')">
+Center pillar lower trim, both sides
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000388','iR02')">
+Center pillar upper trim, both sides
+</a>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+Remove these items:
+</div>
+<ul type="disc">
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003110','i020')">
+Rear seat belt lower anchors, both sides
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003227','iR03')">
+Rear seat side bolsters, both sides
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003157','i000')">
+Tailgate weatherstrip
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003166','i010')">
+Tonneau cover and cargo net, for some models
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003161','iR01')">
+Rear under floor cover
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003166','i040')">
+Damper maintenance lids, both sides
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003166','i050')">
+Cargo net strikers, both sides, for some models
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003110','i060')">
+Rear seat belt anchor wires, both sides
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003166','iR01')">
+Cargo area side trim panels, both sides
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003164','i000')">
+Roof end trim
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003164','i000')">
+Quarter pillar trim, both sides
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003110','i210')">
+Rear center seat belt cover
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003122','iR04')">
+Rear satellite speakers, both sides
+</a>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i070">
+</a>
+<ol>
+<li value="7">
+<div>
+Remove these items:
+</div>
+<ul type="disc">
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000358','i000')">
+Sunvisors and holders, both sides
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000357','i000')">
+Grab handles, four places
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000374','i000')">
+Driver's dashboard lower cover
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000379','i000')">
+Driver's dashboard undercover
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000380','i010')">
+Driver's dashboard side lid
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000389','i000')">
+Driver's kick panel
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000401','i000')">
+Rain sensor, with automatic wiper
+</a>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i080">
+</a>
+<ol>
+<li value="8">
+<div>
+Remove the roof console (A).
+</div>
+<table class="Viewer">
+<tr>
+<td width="30" class="ViewerTD" align="right">
+<a name="i081">
+</a>
+<div>-1.
+</div>
+</td>
+<td class="ViewerTD" align="left">
+<div>
+Remove the lenses (B).
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD" align="right">
+<a name="i082">
+</a>
+<div>-2.
+</div>
+</td>
+<td class="ViewerTD" align="left">
+<div>
+Remove the screws (C), then pull out the front individual map light (D).
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD" align="right">
+<a name="i083">
+</a>
+<div>-3.
+</div>
+</td>
+<td class="ViewerTD" align="left">
+<div>
+Disconnect the front individual map light connector (E). If equipped, disconnect the sunroof switch connector (F) or the ambient light connector.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD" align="right">
+<a name="i084">
+</a>
+<div>-4.
+</div>
+</td>
+<td class="ViewerTD" align="left">
+<div>
+Remove the screws (G). Pull out the front side of the console, and release the rear hooks (H).
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD" align="right">
+<a name="i085">
+</a>
+<div>-5.
+</div>
+</td>
+<td class="ViewerTD" align="left">
+<div>
+If equipped, disconnect the navigation microphone connector (I) or the HFT microphone connector, and/or the ultrasonic sensor connector.
+</div>
+</td>
+</tr>
+</table>
+</li>
+</ol>
+<a name="i090">
+</a>
+<ol>
+<li value="9">
+<div>
+With automatic dimming rearview mirror: Remove the rearview mirror harness cover or the rain sensor cover. Disconnect the connector from the rearview mirror, and release the wire harness from the rearview mirror harness cover base or the 
+<a href="javascript:CtsProc('0','000000000000458','iR02')">
+rain sensor cover base.
+</a>
+</div>
+</li>
+</ol>
+<a name="i100">
+</a>
+<ol>
+<li value="10">
+<div>
+With lane keep assist system: 
+<a href="javascript:CtsProc('0','000000000000202','i000')">
+Remove the LKAS camera cover, then disconnect the LKAS camera connector.
+</a>
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008739','1');">
+<img src="../tn/TL19E9AJ26200031201KDAD01.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AJ26200031201KDAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i110">
+</a>
+<ol>
+<li value="11">
+<div>
+If necessary, pinch the hooks (A) and remove the roof console screw grommet (B).
+</div>
+</li>
+</ol>
+<a name="i120">
+</a>
+<ol>
+<li value="12">
+<div>
+If necessary, detach the hooks (C) by prying out the map light clip (D), then remove the clip.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008740','1');">
+<img src="../tn/TL19E9AJ26200031201KDAD02.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AJ26200031201KDAD02_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i130">
+</a>
+<ol>
+<li value="13">
+<div>
+With cargo net: Open the lids (A) and remove the screws, then remove the front cargo net hook covers (B) from both sides. 
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008741','1');">
+<img src="../tn/TL19E9AJ26200031201KDAD03.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AJ26200031201KDAD03_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i140">
+</a>
+<ol>
+<li value="14">
+<div>
+For some models: Pry up on the lids (A) and remove the screws, then remove the rear cargo hook covers (B) from both sides.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008742','1');">
+<img src="../tn/TL19E9AJ26200031201KDAD04.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AJ26200031201KDAD04_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i150">
+</a>
+<ol>
+<li value="15">
+<div>
+Remove the roof wire harness (A) by detaching the harness clips (B, C) from the driver's side front pillar (D). If the vehicle is equipped with sunroof, release the lowest clip with a tube holder from the front sunroof drain tube (E). LHD model is shown; RHD model is symmetrical.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008743','1');">
+<img src="../tn/TL19E9AJ26200031201KDAD05.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AJ26200031201KDAD05_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i160">
+</a>
+<ol>
+<li value="16">
+<div>
+Remove the antenna lead (A) by detaching the harness clips (B) from the passenger's side front pillar (C), and disconnect the antenna lead connector (D). LHD model is shown; RHD model is symmetrical.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008744','1');">
+<img src="../tn/TL19E9AJ26200031201KDAD06.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AJ26200031201KDAD06_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i170">
+</a>
+<ol>
+<li value="17">
+<div>
+From under the driver's dash, remove the bolt, and detach the hook (A), then move the driver's under-dash fuse/relay box (B). LHD model is shown; RHD model is symmetrical.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008745','1');">
+<img src="../tn/TL19E9AJ26200031201KDAD07.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AJ26200031201KDAD07_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i180">
+</a>
+<ol>
+<li value="18">
+<div>
+From under the driver's dash, disconnect the roof wire harness connector(s) (A), and detach the harness clip (B). LHD model is shown; RHD model is symmetrical.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008746','1');">
+<img src="../tn/TL19E9AJ26200031201KDAD08.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AJ26200031201KDAD08_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i190">
+</a>
+<ol>
+<li value="19">
+<div>
+From outside of the driver's dash, using a long-handled clip remover, carefully pry up the roof wire harness holder (A) from the stud-bolt, then pull out the roof wire harness (B) from inside the dashboard. LHD model is shown; RHD model is symmetrical.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008747','1');">
+<img src="../tn/TL19E9AJ26200031201KDAD09.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AJ26200031201KDAD09_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i200">
+</a>
+<ol>
+<li value="20">
+<div>
+From the right rear corner area, disconnect and detach the antenna lead connector (A).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008748','1');">
+<img src="../tn/TL19E9AJ26200031201KDAD10.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AJ26200031201KDAD10_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i210">
+</a>
+<ol>
+<li value="21">
+<div>
+From the left rear corner area, disconnect and detach the antenna lead connector (A).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008749','1');">
+<img src="../tn/TL19E9AJ26200031201KDAD11.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AJ26200031201KDAD11_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i220">
+</a>
+<ol>
+<li value="22">
+<div>
+For some models: From the roof console opening, disconnect the sunroof subharness connector (A), and detach the harness clip (B). LHD model is shown; RHD model is symmetrical.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008750','1');">
+<img src="../tn/TL19E9AJ26200031201KDAD12.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AJ26200031201KDAD12_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i230">
+</a>
+<ol>
+<li value="23">
+<div>
+Lower the headliner (A).
+</div>
+<table class="Viewer">
+<tr>
+<td width="30" class="ViewerTD" align="right">
+<a name="i231">
+</a>
+<div>-1.
+</div>
+</td>
+<td class="ViewerTD" align="left">
+<div>
+Remove the front door opening seals (B) and the rear door opening seals (C) from each roof portion.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD" align="right">
+<a name="i232">
+</a>
+<div>-2.
+</div>
+</td>
+<td class="ViewerTD" align="left">
+<div>
+With the help of an assistant, detach the rear clips (D), and also the Velcro fasteners (E) on the model without sunroof, by pulling the rear portion of the headliner down.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD" align="right">
+<a name="i233">
+</a>
+<div>-3.
+</div>
+</td>
+<td class="ViewerTD" align="left">
+<div>
+With sunroof: Detach the front clips (F) and the Velcro fasteners (G) by lowering the sunroof opening edge of the headliner.
+</div>
+</td>
+</tr>
+</table>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<div class="figure_title">
+<b>
+Without sunroof
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008751','1');">
+<img src="../tn/TL19E9AJ26200031201KDAD13.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AJ26200031201KDAD13_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+<div>
+<div class="figure_title">
+<b>
+With sunroof
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008751','2');">
+<img src="../tn/TL19E9AJ26200031201KDAD14.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AJ26200031201KDAD14_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i240">
+</a>
+<ol>
+<li value="24">
+<div>
+Remove the headliner (A) along with the roof wire harness (B) and the antenna lead (C) out through the tailgate opening.
+</div>
+<div>
+NOTE: Do not bend the headliner. Bending the headliner will crease and damage it.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008752','1');">
+<img src="../tn/TL19E9AJ26200031201KDAD15.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AJ26200031201KDAD15_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i250">
+</a>
+<ol>
+<li value="25">
+<div>
+If necessary, remove the cushion tape fastening the roof wire harness (A) and the antenna lead (B) to the headliner (C), then remove them from the headliner.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<div class="figure_title">
+<b>
+Without sunroof - LHD model
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008753','1');">
+<img src="../tn/TL19E9AJ26200031201KDAD16.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AJ26200031201KDAD16_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+<div>
+<div class="figure_title">
+<b>
+Without sunroof - RHD model
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008753','2');">
+<img src="../tn/TL19E9AJ26200031201KDAD17.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AJ26200031201KDAD17_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+<div>
+<div class="figure_title">
+<b>
+With sunroof - LHD model
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008753','3');">
+<img src="../tn/TL19E9AJ26200031201KDAD18.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AJ26200031201KDAD18_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+<div>
+<div class="figure_title">
+<b>
+With sunroof - RHD model
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008753','4');">
+<img src="../tn/TL19E9AJ26200031201KDAD19.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AJ26200031201KDAD19_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i260">
+</a>
+<ol>
+<li value="26">
+<div>
+If necessary, remove the front grab handle bracket (A) and the rear grab handle bracket (B).
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+The grab handle bracket is attached to the tab plates of the side curtain airbag. Prying up the tab plates makes it possible to remove the bracket.
+</div>
+</li>
+<li>
+<div>
+Take care not to damage the side curtain airbag.
+</div>
+</li>
+</ul>
+<table class="Viewer">
+<tr>
+<td width="30" class="ViewerTD" align="right">
+<a name="i261">
+</a>
+<div>-1.
+</div>
+</td>
+<td class="ViewerTD" align="left">
+<div>
+Remove the bolts (C, D, E).
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD" align="right">
+<a name="i262">
+</a>
+<div>-2.
+</div>
+</td>
+<td class="ViewerTD" align="left">
+<div>
+With a flat-tip screwdriver, carefully pry up a gap between the front tab plate (F) and the grab handle bracket to detach the joint (G).
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD" align="right">
+<a name="i263">
+</a>
+<div>-3.
+</div>
+</td>
+<td class="ViewerTD" align="left">
+<div>
+Front grab handle bracket: Repeat preceding step at the rear tab plate (H) portion to detach the plate from the bracket.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD" align="right">
+<a name="i264">
+</a>
+<div>-4.
+</div>
+</td>
+<td class="ViewerTD" align="left">
+<div>
+Detach the clips (I).
+</div>
+</td>
+</tr>
+</table>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<div class="figure_title">
+<b>
+Front
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008754','1');">
+<img src="../tn/TL19E9AJ26200031201KDAD20.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AJ26200031201KDAD20_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+<div>
+<div class="figure_title">
+<b>
+Rear
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008754','2');">
+<img src="../tn/TL19E9AJ26200031201KDAD21.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AJ26200031201KDAD21_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i270">
+</a>
+<ol>
+<li value="27">
+<div>
+If necessary, remove the bolts securing the cargo net hook (A), then remove it.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008755','1');">
+<img src="../tn/TL19E9AJ26200031201KDAD22.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AJ26200031201KDAD22_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i280">
+</a>
+<ol>
+<li value="28">
+<div>
+Install the headliner in the reverse order of removal, and note these items:
+</div>
+<ul type="disc">
+<li>
+<div>
+If the side curtain airbag has deployed, 
+<a href="javascript:CtsProc('0','000000000003115','i000')">
+replace the headliner and the removed trim pieces with new ones.
+</a>
+</div>
+</li>
+<li>
+<div>
+To prevent the side curtain airbags from deploying improperly and possibly causing injury, inspect the removed pieces and replace them if they have any of these types of damage:
+</div>
+</li>
+<table class="Viewer">
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Any crease or tears in the headliner (A)
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Any cracks or breakage in the grab handle (B)
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Any damages around the grab handle holes (C) or sunvisor holes in the headliner
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Any cracks in the sunvisor stay base (D)
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Any cracks in the sunvisor bracket cover (E)
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Any bends or cracks in the sunvisor stay shaft (F)
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Any cracks in the sunvisor base (G)
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Any cracks or breakage in the vanity mirror base (H)
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Any fastener bases(I), stiffeners (J), and clip bases (K) which have come off the headliner
+</div>
+</td>
+</tr>
+</table>
+<li>
+<div>
+Replace the grab handle bracket mounting 6 mm bolt with a new one if it was removed.
+</div>
+</li>
+<li>
+<div>
+When installing a new grab handle bracket, tighten it and tab plates together with their mounting bolts securely.
+</div>
+</li>
+<li>
+<div>
+When installing the grab handle, push on the handle against the bracket (L) until the clips (M) snap into place securely.
+</div>
+</li>
+<li>
+<div>
+If the clips are damaged or stress-whitened, replace them with new ones.
+</div>
+</li>
+<li>
+<div>
+Replace the removed cushion tape with new ones.
+</div>
+</li>
+<li>
+<div>
+Check that both sides of the headliner are securely attached to the trim.
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000003115','iR01')">
+Make sure the headliner overlaps the trim pieces correctly.
+</a>
+</div>
+</li>
+<li>
+<div>
+When reinstalling the headliner through the tailgate opening, be careful not to fold or bend it. Also, be careful not to scratch the body.
+</div>
+</li>
+<li>
+<div>
+If the map light clips are removed, replace them with new ones.
+</div>
+</li>
+<li>
+<div>
+If the roof console screw grommets are removed or if they are damaged or stress-whitened, replace them with new ones.
+</div>
+</li>
+<li>
+<div>
+Reinstall the roof console (N) using the following procedures:
+</div>
+</li>
+<table class="Viewer">
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Install the roof console screw grommets (O) to the console with the screws (P).
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+If equipped, connect the navigation microphone connector (Q) or the HFT microphone connector, and/or the ultrasonic sensor connector.
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Set the rear hooks (R), and fit the grommets into the holes in the body, then push on the console until the grommets snap into place securely.
+</div>
+</td>
+</tr>
+</table>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000002660','i000')">
+Do the battery terminal reconnection procedure.
+</a>
+</div>
+</li>
+<li>
+<div>
+Check for any DTCs that may have been set during repairs, and clear them.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<div class="figure_title">
+<b>
+Headliner
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008756','1');">
+<img src="../tn/TL19E9AJ26200031201KDAD23.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AJ26200031201KDAD23_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+<div>
+<div class="figure_title">
+<b>
+Grab handle
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008756','2');">
+<img src="../tn/TL19E9AJ26200031201KDAD24.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AJ26200031201KDAD24_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+<div>
+<div class="figure_title">
+<b>
+Sunvisor
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008756','3');">
+<img src="../tn/TL19E9AJ26200031201KDAD25.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AJ26200031201KDAD25_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+<div>
+<div class="figure_title">
+<b>
+Roof console
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000008756','4');">
+<img src="../tn/TL19E9AJ26200031201KDAD26.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E9AJ26200031201KDAD26_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

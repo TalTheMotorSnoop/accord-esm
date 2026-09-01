@@ -1,0 +1,204 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+<title>SEA5EA3A20336359401FEAT00</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+var   totalImg = 0;
+var   dispNum=1;
+function prOnLoadProc() {
+	_prInitImageInfo(100);
+	_prResizeImage(100/100);
+	divBody.style.display = "block"
+	return;
+}
+function PrintFunc()
+{
+	divBody.style.display = "none";
+	var  img_hei = _prResizeImage(67/100);
+	divBody.style.display = "block";
+	var  graphTd = document.getElementById("graphTd");
+	if(graphTd.width == "100%")
+	{
+      var   current_pos;
+      var   img_pos = 0;
+         current_pos = graphTd.offsetTop;
+		var pageCnt = Math.floor(current_pos/950);
+		var img_pos = current_pos - (pageCnt*950);
+		if(img_pos+img_hei > 950)
+		{
+			var  pageElement = document.getElementById("page_onoff");
+			if(pageElement != null)
+			{
+				pageElement.style.display = "block";
+			}
+		}
+	}
+	window.print();
+	divBody.style.display = "none";
+	_prResizeImage(100/100);
+	divBody.style.display = "block";
+	window.scrollTo(0,0);
+}
+function NextFunc()
+{
+	window.location.replace("ZOOM000000000007262.html");
+}
+function CloseFunc()
+{
+	window.close();
+}
+function JumpFunc(strJump)
+{
+	window.location.replace(strJump);
+}
+//-->
+</script>
+<body onLoad="prOnLoadProc();" style="font-family:sans-serif;">
+<div id="divBody" style="display:none">
+<div>
+<div style="position:absolute;right=10;">
+<input type="image" src="../img/PRINT_PREVIEW.PNG" onClick="PrintFunc()">
+<input type="image" src="../img/GL_PREV_DISABLE.PNG" onClick="BackFunc()" disabled>
+<input type="image" src="../img/GL_NEXT.PNG" onClick="NextFunc()">
+<input type="image" src="../img/GL_CANCEL.PNG" onClick="CloseFunc()">
+</div><br><br>
+<hr width="100%" size="2" color="black">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR01">
+</a>
+<div class="procedure_sub_title">
+<b>
+K20A6 engine
+</b>
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+Do not adjust the throttle stop screw. It is preset at the factory.
+</div>
+</li>
+<li>
+<div>
+If the malfunction indicator lamp (MIL) has been reported on, check for
+<a href="javascript:opener.top.Cts('000000000001619','i000')">
+diagnostic trouble codes (DTCs).
+</a>
+</div>
+</li>
+</ul>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+With the engine off, check the throttle cable operation. The cable should operate without binding or sticking.
+</div>
+<ul type="disc">
+<li>
+<div>
+If the cable operates OK, go to
+<a href="javascript:JumpFunc('ZOOM000000000007261.html#i020')">Step 2
+</a>
+.
+</div>
+</li>
+<li>
+<div>
+If the cable binds or sticks, check it and its routing. If the cable is faulty, reroute it or replace it, then
+<a href="javascript:opener.top.Cts('000000000002718','i000')">
+adjust it.
+</a>
+ Go to
+<a href="javascript:JumpFunc('ZOOM000000000007261.html#i020')">Step 2
+</a>
+.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Operate the throttle lever by hand to see if the throttle valve and/or shaft are too loose or too tight.
+</div>
+<ul type="disc">
+<li>
+<div>
+If there is excessive play in the throttle valve shaft, or any binding in the throttle valve at the fully closed or fully opened position, replace the throttle body.
+</div>
+</li>
+<li>
+<div>
+If the throttle valve and shaft are OK, go to
+<a href="javascript:JumpFunc('ZOOM000000000007261.html#i030')">Step 3
+</a>
+.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Connect the HDS to the data link connector (DLC).
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Turn the ignition switch ON (II).
+</div>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+Check the throttle position with the HDS. The reading should be about 0 ° (REL), 0 % (REL) or 0.5 V when the throttle is fully closed and about 80 ° (REL), 89 % (REL) or 4.5 V when the throttle is fully opened.
+</div>
+<ul type="disc">
+<li>
+<div>
+If the throttle position is correct, the throttle body is OK.
+</div>
+</li>
+<li>
+<div>
+If the throttle position is not correct, replace the throttle body.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div style="display:none;" id="page_onoff">
+<div style="page-break-after:always;">
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

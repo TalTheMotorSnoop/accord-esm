@@ -1,0 +1,1323 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E00J10300000000CAAT13
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+function jsResetImage() {
+	_prResetPosition();
+	_prResetImage();
+	return;
+}
+function jsResizeImage(rate) {
+	_prResizeImage(rate);
+	return;
+}
+var z,x,y;
+var gImageGroupList_	= new Array;
+var gIdx_				= 0;
+function _prImageGroupStruct(group_size,rect_size,img_size,p_tag,tp_obj,bl_obj,ul_obj) {
+	this.group		= group_size;
+	this.rect		= rect_size;
+	this.img		= img_size;
+	this.p			= p_tag;
+	this.tp			= tp_obj;
+	this.bl			= bl_obj;
+	this.ul			= ul_obj;
+}
+function _prSizeStruct(newObj,newWidth,newHeight) {
+	this.obj		= newObj;
+	this.width		= newWidth;
+	this.height		= newHeight;
+}
+function _prPTagStruct(newObj,newLeft,newTop,newFontSize) {
+	this.obj		= newObj;
+	this.left		= newLeft;
+	this.top		= newTop;
+	this.fontsize	= newFontSize;
+}
+function _prLineTagStruct(newObj,newFromx,newFromy, newTox, newToy) {
+	this.obj			= newObj;
+	this.fromx		= newFromx;
+	this.fromy		= newFromy;
+	this.tox		= newTox;
+	this.toy		= newToy;
+}
+function _prTPTagStruct(newObj,newFontSize) {
+	this.obj		= newObj;
+	this.fontsize	= newFontSize;
+}
+function _prInitImageInfo(rate) {
+	var endFlag = false;
+	gDefaultRate_ = rate;
+	gIdx_ = 0;
+	var save_i;
+	var iii = 100;
+	for(var i = 1; !endFlag; i++){
+		save_i = i;
+		var groupObject = document.getElementById("group" + i);
+		if(groupObject == null){
+			groupObject = document.getElementById("group" + iii);
+			if(groupObject == null){
+				groupObject = document.getElementById("group" + i + "_noresize");
+				if(groupObject == null){
+					endFlag = true;	
+					break;
+				}
+				continue;
+			}
+			else {
+				i = iii
+				iii++;
+			}
+		}
+		var groupWidth	= _prRemoveUnit(groupObject.style.width);
+		var groupHeight	= _prRemoveUnit(groupObject.style.height);
+		var rectObject	= document.getElementById("rect" + i);
+		var rectWidth	= null;
+		var rectHeight	= null;
+		if(rectObject != null){
+			rectWidth	= _prRemoveUnit(rectObject.style.width);
+			rectHeight	= _prRemoveUnit(rectObject.style.height);
+		}
+		var imgObject	= document.getElementById("img" + i);
+		var imgWidth	= null;
+		var imgHeight	= null;
+		if(imgObject != null){
+			imgWidth	= _prRemoveUnit(imgObject.style.width);
+			imgHeight	= _prRemoveUnit(imgObject.style.height);
+		}
+		var pObject		= null;
+		for(var j = 1; !endFlag; j++){
+			var pTag = document.getElementById("p" + i + "_" + j);
+			if(pTag == null){
+				if(j == 1){
+					endFlag = true;
+				}
+				break;
+			}
+			if(j == 1){
+				pObject		= new Array();
+			}
+			pObject[j-1] = new _prPTagStruct(
+									pTag,
+									_prRemoveUnit(pTag.style.left),
+									_prRemoveUnit(pTag.style.top),
+									_prRemoveUnit(pTag.style.fontSize)
+								);
+		}
+		endFlag = false;
+		var tpObject		= null;
+		for(var j = 1; !endFlag; j++){
+			var tpTag = document.getElementById("tp" + i + "_" + j);
+			if(tpTag == null){
+				if(j == 1){
+					endFlag = true;  
+				}
+				break;
+			}
+			if(j == 1){
+				tpObject		= new Array();
+			}
+			tpObject[j-1] = new _prTPTagStruct(
+									tpTag,
+									_prRemoveUnit(tpTag.style.fontSize)
+								);
+		}
+		endFlag = false;
+		var blObject		= null;
+		for(var j = 1; !endFlag; j++){
+			var baseline = document.getElementById("bl" + i + "_" + j);
+			if(baseline == null){
+				if(j == 1){
+					endFlag = true;  
+				}
+				break;
+			}
+			if(j == 1){
+				blObject		= new Array();
+			}
+			blObject[j-1] = new _prLineTagStruct(
+									baseline,
+									(baseline.getAttribute('from')+'').substring(0,(baseline.getAttribute('from')+'').indexOf(",")),
+									(baseline.getAttribute('from')+'').substring((baseline.getAttribute('from')+'').indexOf(",")+1,(baseline.getAttribute('from')+'').length),
+									(baseline.getAttribute('to')+'').substring(0,(baseline.getAttribute('to')+'').indexOf(",")),
+									(baseline.getAttribute('to')+'').substring((baseline.getAttribute('to')+'').indexOf(",")+1, (baseline.getAttribute('to')+'').length)
+								);
+		}
+		endFlag = false;
+		var ulObject		= null;
+		for(var j = 1; !endFlag; j++){
+			var underline = document.getElementById("ul" + i + "_" + j);
+			if(underline == null){
+				if(j == 1){
+					endFlag = true;  
+				}
+				break;
+			}
+			if(j == 1){
+				ulObject		= new Array();
+			}
+			ulObject[j-1] = new _prLineTagStruct(
+									underline,
+									(underline.getAttribute('from')+'').substring(0,(underline.getAttribute('from')+'').indexOf(",",0)),
+									(underline.getAttribute('from')+'').substring((underline.getAttribute('from')+'').indexOf(",")+1,(underline.getAttribute('from')+'').length),
+									(underline.getAttribute('to')+'').substring(0,(underline.getAttribute('to')+'').indexOf(",")),
+									(underline.getAttribute('to')+'').substring((underline.getAttribute('to')+'').indexOf(",")+1, (underline.getAttribute('to')+'').length)
+								);
+		}
+		endFlag = false;
+		gImageGroupList_[gIdx_] = new _prImageGroupStruct (
+			new _prSizeStruct(groupObject,groupWidth,groupHeight),
+			new _prSizeStruct(rectObject,rectWidth,rectHeight),
+			new _prSizeStruct(imgObject,imgWidth,imgHeight),
+			pObject,
+			tpObject,
+			blObject,
+			ulObject
+		);
+		gIdx_++;
+		i = save_i;
+	}
+	return ;
+}
+function _prResizeImage(rate) {
+	var  hei = 0;
+	for(var i=0; i<gImageGroupList_.length; i++){
+		if(gImageGroupList_[i].group != null){
+			var obj = gImageGroupList_[i].group;
+			obj.obj.style.width = (obj.width * rate) + 'px';
+			obj.obj.style.height = (obj.height * rate) + 'px';
+			obj.obj.coordsize = (obj.width * rate) + ',' + (obj.height * rate);
+			hei = obj.height * rate
+		}
+		if(gImageGroupList_[i].rect != null){
+			var obj = gImageGroupList_[i].rect;
+			obj.obj.style.width = (obj.width * rate) + 'px';
+			obj.obj.style.height = (obj.height * rate) + 'px';
+		}
+		if(gImageGroupList_[i].img != null){
+			var obj = gImageGroupList_[i].img;
+			obj.obj.style.width = (obj.width * rate) + 'px';
+			obj.obj.style.height = (obj.height * rate) + 'px';
+		}
+		if(gImageGroupList_[i].p != null){
+			var obj = gImageGroupList_[i].p;
+			for(var j=0; j<obj.length; j++){
+				var p = obj[j];
+				if(p.left != ""){
+					p.obj.style.left		= (p.left * rate) + 'px';
+				}
+				if(p.top != ""){
+					p.obj.style.top			= (p.top * rate) + 'px';
+				}
+				if(p.fontsize != ""){
+					p.obj.style.fontSize	= (p.fontsize * rate) + 'pt';
+				}
+			}
+		}
+		if(gImageGroupList_[i].tp != null){
+			var obj = gImageGroupList_[i].tp;
+			for(var j=0; j<obj.length; j++){
+				var tp = obj[j];
+				if(tp.fontsize != ""){
+					if(tp.fontsize*rate < 5.5){
+						tp.obj.style.fontSize	= '5.5pt';
+					}
+					else{
+						tp.obj.style.fontSize	= (tp.fontsize * rate) + 'pt';
+					}
+				}
+			}
+		}
+		if(gImageGroupList_[i].bl != null){
+			var obj = gImageGroupList_[i].bl;
+			for(var j=0; j<obj.length; j++){
+				var bl = obj[j];
+				var fromx,tox;
+				if(bl.fromx != ""){
+					fromx = bl.fromx * rate;
+					bl.obj.setAttribute("from", fromx + "," + (bl.fromy * rate));
+				}
+				if(bl.tox != ""){
+					tox = bl.tox * rate;
+					if((0 >=tox-fromx) && (fromx-tox) < 1) {
+						tox = tox-1;
+					}
+					if((0 <= tox-fromx) && (tox-fromx) < 1) {
+						tox = tox+1;
+					}
+					bl.obj.setAttribute("to", tox + "," + (bl.toy * rate));
+				}
+			}
+		}
+		if(gImageGroupList_[i].ul != null){
+			var obj = gImageGroupList_[i].ul;
+			for(var j=0; j<obj.length; j++){
+				var ul = obj[j];
+				if(ul.fromx != ""){
+					ul.obj.setAttribute("from", (ul.fromx * rate) + "," + (ul.fromy * rate));
+				}
+				if(ul.tox != ""){
+					ul.obj.setAttribute("to", (ul.tox * rate) + "," + (ul.toy * rate));
+				}
+			}
+		}
+	}
+	return hei;
+}
+function _prResizeImageAt(idx,rate) {
+	var  hei = 0;
+		if(gImageGroupList_[idx].group != null){
+			var obj = gImageGroupList_[idx].group;
+			obj.obj.style.width = (obj.width * rate) + 'px';
+			obj.obj.style.height = (obj.height * rate) + 'px';
+			obj.obj.coordsize = (obj.width * rate) + ',' + (obj.height * rate);
+			hei = obj.height * rate
+		}
+		if(gImageGroupList_[idx].rect != null){
+			var obj = gImageGroupList_[idx].rect;
+			obj.obj.style.width = (obj.width * rate) + 'px';
+			obj.obj.style.height = (obj.height * rate) + 'px';
+		}
+		if(gImageGroupList_[idx].img != null){
+			var obj = gImageGroupList_[idx].img;
+			obj.obj.style.width = (obj.width * rate) + 'px';
+			obj.obj.style.height = (obj.height * rate) + 'px';
+		}
+		if(gImageGroupList_[idx].p != null){
+			var obj = gImageGroupList_[idx].p;
+			for(var j=0; j<obj.length; j++){
+				var p = obj[j];
+				if(p.left != ""){
+					p.obj.style.left		= (p.left * rate) + 'px';
+				}
+				if(p.top != ""){
+					p.obj.style.top			= (p.top * rate) + 'px';
+				}
+				if(p.fontsize != ""){
+					p.obj.style.fontSize	= (p.fontsize * rate) + 'pt';
+				}
+			}
+		}
+		if(gImageGroupList_[idx].tp != null){
+			var obj = gImageGroupList_[idx].tp;
+			for(var j=0; j<obj.length; j++){
+				var tp = obj[j];
+				if(tp.fontsize != ""){
+					if(tp.fontsize*rate < 5.5){
+						tp.obj.style.fontSize	= '5.5pt';
+					}
+					else{
+						tp.obj.style.fontSize	= (tp.fontsize * rate) + 'pt';
+					}
+				}
+			}
+		}
+		if(gImageGroupList_[idx].bl != null){
+			var obj = gImageGroupList_[idx].bl;
+			for(var j=0; j<obj.length; j++){
+				var bl = obj[j];
+				var fromx,tox;
+				if(bl.fromx != ""){
+					fromx = bl.fromx * rate;
+					bl.obj.setAttribute("from", fromx + "," + (bl.fromy * rate));
+				}
+				if(bl.tox != ""){
+					tox = bl.tox * rate;
+					if((0 >=tox-fromx) && (fromx-tox) < 1) {
+						tox = tox-1;
+					}
+					if((0 <= tox-fromx) && (tox-fromx) < 1) {
+						tox = tox+1;
+					}
+					bl.obj.setAttribute("to", tox + "," + (bl.toy * rate));
+				}
+			}
+		}
+		if(gImageGroupList_[idx].ul != null){
+			var obj = gImageGroupList_[idx].ul;
+			for(var j=0; j<obj.length; j++){
+				var ul = obj[j];
+				if(ul.fromx != ""){
+					ul.obj.setAttribute("from", (ul.fromx * rate) + "," + (ul.fromy * rate));
+				}
+				if(ul.tox != ""){
+					ul.obj.setAttribute("to", (ul.tox * rate) + "," + (ul.toy * rate));
+				}
+			}
+		}
+	return hei;
+}
+function _prRemoveUnit(src){
+	var dst = src.substring(0,src.length-2);
+	return dst;
+}
+-->
+</script>
+<script>
+<!--
+function Apf() {
+   _prInitImageInfo(100);
+   window.focus();
+   if(gImageGroupList_.length == 0) {
+      window.print();
+   }
+   else {
+      document.getElementById("divBody").style.display = "none";
+      var  img_pos,img_hei;
+      var  img_rate = 1.0;
+      var  i;
+      var  obj;
+      var  paper_wid,paper_hei,paper_len;
+      paper_wid = 640.0;
+      paper_hei = 950.0;
+      paper_len = 980.0;
+      for(i=0; i<gImageGroupList_.length; i++){
+         if(gImageGroupList_[i].group != null){
+           obj = gImageGroupList_[i].group;
+         }
+      }
+      if(paper_wid > paper_hei) {
+         alert("For best printing result, select 'landscape' layout from the print menu.");
+      }
+      for(i=0; i<gImageGroupList_.length; i++){
+         if(gImageGroupList_[i].group != null){
+            obj = gImageGroupList_[i].group;
+            if(img_rate > paper_wid/obj.width) {
+               img_rate =  paper_wid/obj.width;
+            }
+            if(img_rate > paper_hei/obj.height) {
+               img_rate =  paper_hei/obj.height;
+            }
+         }
+      }
+      _prResizeImage(img_rate);
+      window.scrollTo(0,10000);
+      var totalHei = document.body.scrollTop+(document.documentElement.clientHeight||document.body.clientHeight)-img_hei;
+      document.getElementById("divBody").style.display = "block";
+      var  idObj;
+      var groupObject = document.getElementById("group" + i);
+      var   beforeOffset = 0;
+      var   current_pos;
+      var   img_pos = img_dis = 0;
+      for(i=0; i<gImageGroupList_.length; i++){
+         idObj =document.getElementById("imgId" + (i+1));
+         if(idObj != null) {
+            idObj.style.display = "block";
+            current_pos = idObj.offsetTop;
+            if(gImageGroupList_[i].group != null){
+               obj = gImageGroupList_[i].group;
+               img_dis = current_pos - beforeOffset;
+               if(i == 0) {
+                  var pageCnt = Math.floor(current_pos/paper_hei);
+                  img_dis = img_dis - paper_hei*pageCnt;
+               }
+               img_hei = obj.height*img_rate;
+               img_pos += parseInt(img_dis);
+               if(parseInt(img_pos) > paper_len) {
+                  img_pos = img_pos - paper_len;
+               }
+               img_pos += parseInt(img_hei);
+               idObj.style.display = "none";
+               if(parseInt(img_pos) > paper_len) {
+                  idObj.style.display = "block";
+                  img_pos = parseInt(img_hei) + 50;
+               }
+               beforeOffset = current_pos + parseInt(img_hei);
+            }
+         }
+      }
+      window.print();
+      document.getElementById("divBody").style.display = "none";
+      _prResizeImage(100/100);
+      document.getElementById("divBody").style.display = "block";
+      window.scrollTo(0,0);
+   }
+}
+-->
+</script>
+<body onload="javascript:try{parent.Old(this);}catch(e){}" style="font-family:sans-serif;">
+<div id="divBody" style="display:block">
+<div>
+<div class="top_title">
+Audio System Description - Audio Glossary
+</div>
+<div>
+NOTE: All items may not apply to this vehicle. See the owner's manual for more information.
+</div>
+<div>
+<br>
+<div class="table_title">
+<b>
+Audio Glossary
+</b>
+</div>
+<br>
+<table width="100%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="28%">
+<col width="71%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Item
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Definition
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Active noise cancellation
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+The active noise cancellation system cancels some of the vehicle noise. This occurs in the 1,500−2,400 rpm range. Microphones detect the low frequency sound, and the system outputs a canceling sound from the audio speaker.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+AM (Amplitude Modulation)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+The type of transmission used in the standard radio broadcast band from 531 to 1602 kHz.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Amplifier
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A device that increases the level of a signal by increasing the current or voltage.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Antenna
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A device used to send or receive electromagnetic waves through the air.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+ATA (PC Card)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A type of card that has been tested for use in playing WMA, and MP3 music files in the PC Card slot. Sizes of up to 1 GB have been tested.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Audio remote switch
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+The switches on the steering wheel that control the audio system.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Auxiliary jack
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Allows the customer to use a portable audio device to input audio recordings.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Balance
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A control that changes the relative volume of the left and right channels.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Band
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A range of frequencies between two definite limits. Bands are assigned by the Federal Communications Commission for specific uses.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Bass
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+An adjustment for the low frequency sounds of around 160 Hz and below.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Byte
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A unit of storage for computer files and memory. A CD holds approximately 700 million bytes.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Cassette
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Audio or video magnetic tape container having two reels. Customers can insert it for play back
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Compact flash
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A standard for small-size (3 x 4 cm), memory cards used in mobile computers, PDAs, digital cameras. Compact flash memory cards are available in size of 32 MB up to 4 GB or more and can be played in the audio PC slot. Sizes above 1 GB have not been tested.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+CD (Compact Disc)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A 4.5-inch plastic disc containing digital audio recording that is played optically on a laser equipped player. Never use discs with a paper label. In a hot vehicle, labels can curl up and jam the unit.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+CD (audio disc) changer
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+CD player that can store and play more than one CD. Two types are available. Some units accept CDs fed into the changer one at a time, and others accept a magazine (with CDs stacked in a container).
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+CD player
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A component designed to play compact disc recordings using a laser optical pickup. The signal from a CD player usually requires amplification.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Decibels (db)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A method of measuring sound or radio signal strength received by the audio unit antenna.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Distortion
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Inexact reproduction of an audio signal caused by playing music at levels the audio system cannot handle.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Dolby (noise reduction)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A processing system developed by Dolby Laboratories that reduces the background noise on recording media. The result is a cleaner playback from the audio system.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+DUET
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A serial data communication line used for sub display.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+DVD (Digital Versatile Disc)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A 4.5-inch CD-like format used for storing movies with digital audio and video features. The DVD-A format is a DVD format designed for DVD audio systems. Some vehicles can play DVD and DVD-A formats.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Equalizer
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A device that changes the relative volume of individual frequency bands to suit personal tastes of the listener.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Fader
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+The control that adjusts the relative volume levels of front and rear speakers in a four-speaker system.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Format
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+To prepare a PC Card to receive files this function is done on a PC. Always choose either FAT or FAT32, as the NTFS format is not accepted by the system. Pick the default sectors for the format method selected.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+FM (Frequency Modulation)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+The form of modulation used for radio and television sound transmission in most of the world. Less prone to interference than AM. The FM broadcast band in North America covers roughly 87.5 to 108 MHz.
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<div>
+<br>
+<div class="table_title">
+<b>
+Audio Glossary
+</b>
+</div>
+<br>
+<table width="100%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="28%">
+<col width="71%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Item
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Definition
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+GA-Net
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+The GA-Net allows the audio unit to communicate with all the audio and navigation components in a vehicle. If there is an open in the GA-Net, components or the entire audio and navigation system may appear inoperative.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+GB (Gigabyte)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A unit of memory or disk storage equal to billion bytes (1000 million bytes).
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+HDD
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Abbreviation for hard disc drive. They are sensitive to heat and it is not recommended that they be used in the PC card slot for playing audio files.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Hertz (HZ)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+The unit of frequency equal to one cycle per second (cps). One kilohertz (kHz) equals 1,000 cps; one megahertz (MHz) equals 1 million cps.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Integrated amplifier
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A component that combines a pre amp and a power amp into a single unit. A receiver combines an integrated amp and a tuner into a single unit.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Jewel case
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+The hard plastic case that contains a compact disc or DVD. Always use a jewel case to prevent scratches on the underside of a CD or DVD.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+LCD (Liquid Crystal Display)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A type of digital display that changes reflectance or transmittance when an electrical field is applied to it.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Memory
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Circuitry or devices that hold information in electrical or magnetic form, such as the AM/FM radio presets.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+MB (Megabyte)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+One million bytes. Written as 1 MB. Megabytes are used as a measure of digital storage space. For example, a CD can hold 650 MB.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Mic
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+An abbreviation for microphone. For vehicles with navigation, the microphone accepts navigation voice commands to control audio and navigation functions.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+MP3 music files
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+MP3 is an audio coding format. MP3 is a popular audio compression format on the Internet and computers. CDs and PC Cards with these files can be played on some vehicle's audio system.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Mute
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+When the navigation gives guidance, the front speakers are muted (no music). When you use the voice control system, all of the speakers are muted.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Noise
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Unwanted random sounds like buzzing, hiss, pops, static, whine, etc.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+PC card
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+The slot used for playing MP3 and WMA music files. The PC Card is usually a combination of a small flash card in a PCMCIA adaptor that slides into the slot. The ATA, SD, and compact flash types of cards have been tested up to 1 GB.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+PCMCIA
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A computer standard for the slot that the PC card slides into. Another term for the PC card slot.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Processor
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+The part of an audio device that performs task/calculations. In the audio unit the processor handles muting to allow the navi to speak voice commands, and the decoding/playback of the sound files etc.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Radio
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A head unit that combines a tuner, a preamplifier, and often a power-amplifier.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Route guidance (RG)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Spoken voice used for turn-by-turn navigation from the audio speakers.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+SCF (Cold Start Fix) screens
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+These screens are displayed if the system requires a GPS initialization. The vehicle should be moved outside into an open area away from buildings/power lines.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Stereo
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A recording of at least two channels where you can hear sound or music from the left or right side.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+SD (Secure Digital) card
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+This compact type of memory card allows for fast data transfer and has built-in security functions. SD cards have a small write-protection switch on the side.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Shield
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A metallic foil or braided wire layer surrounding conductors which are designed to prevent electrostatic or electromagnetic interference (noise) from external sources such as buzzing, or popping sounds heard on the speakers.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Speaker (Loudspeaker)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A device that converts electrical energy into acoustical energy (sound).
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Speed-sensitive volume compensation (SVC)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+The SVC increases the audio volume to compensate for increased interior noise when the vehicle drivers at freeway speeds.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Subwoofer
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A loudspeaker made to reproduce the lowest audio frequencies, approx 25 Hz to 125 Hz.
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<div>
+<br>
+<div class="table_title">
+<b>
+Audio Glossary
+</b>
+</div>
+<br>
+<table width="100%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="28%">
+<col width="71%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Item
+</b>
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+<b>
+Definition
+</b>
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Track
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A sound recording on a CD, tape, or PC Card.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Treble
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+An adjustment to control the volume of the high frequency sounds.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Tuner
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A component (or part of a component) that receives radio signals and selects one broadcast from many.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Tweeter
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A speaker designed to reproduce the higher frequencies (treble) only.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+USB jack
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Allows the customer to play data such as input audio recording from portable audio device (suchas i-pod) or data from USB flash memory.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Voice coil
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A coil of wire wrapped around a tube and then attached to the speaker cone or diaphragm. When an audio signal is applied, the coil becomes an electromagnet and interacts with the permanent magnet causing the come or diaphragm to vibrate. We interpret this vibrations as sound.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Volume control
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Allows you to control the loudness of the music.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+WMA music file
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Windows Media Audio File. This is an accepted format for music files to be played on either a CD-R, a CD-RW or a PC Card.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Woofer
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+A speaker that is designed to reproduce low (bass) frequencies only.
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</div></div>
+</body>
+</html>

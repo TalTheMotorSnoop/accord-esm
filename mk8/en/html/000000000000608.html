@@ -1,0 +1,720 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E00K72200000000BBAT10
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+How to Troubleshoot the EPS
+</div>
+<div>
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG01">
+</a>
+<div class="servinfosub_title">
+<b>
+System Indicator
+</b>
+</div>
+<div>
+This system has one (without LKAS (Lane Keep Assist System)) or two (with LKAS) indicators.
+</div>
+<ul type="disc">
+<li>
+<div>
+EPS indicator (A)
+</div>
+</li>
+<li>
+<div>
+LKAS indicator (with LKAS) (B)
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001603','1');">
+<img src="../tn/TL19E00K72200000000BBAD01.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00K72200000000BBAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG02">
+</a>
+<div class="servinfosub_title">
+<b>
+EPS Indicator
+</b>
+</div>
+<div>
+Under normal conditions, the EPS indicator comes on when the ignition switch is turned to ON (II) position, then goes off after the engine is started. This indicates that the LED and its circuit are operating correctly.
+</div>
+<div>
+If there is a failure in the system after the engine is started, the EPS indicator will stay on, and the power assist is turned off or restricted.
+</div>
+<div>
+When the EPS indicator comes on, the control unit memorizes the DTC. In this case, the control unit will not activate the EPS system after the engine starts again, but it keeps the EPS indicator on.
+</div>
+<div>
+When DTC 51-01, 51-02 or 51-06 is stored in the control unit, the EPS indicator will stay on until the DTC is erased. When a problem is detected and the EPS indicator comes on, there are cases when the indicator stays on until the ignition switch is turned to LOCK (0), and cases when the indicator goes off automatically when the system returns to normal. Even though the system is operating normally, the EPS indicator will come on under the following conditions:
+</div>
+<ul type="disc">
+<li>
+<div>
+The vehicle speed decreases abruptly from 20 km/h (12 mph) or more (by applying the brakes), and it is less than 1 km/h (1 mph) and engine speed is 1,650 rpm (min
+<sup>
+−1
+</sup>
+) (after the engine starts within 5 minutes: 2,150 rpm (min
+<sup>
+−1
+</sup>
+)) or above for 5 seconds (continuously) after the abrupt deceleration.
+</div>
+</li>
+<li>
+<div>
+While turning the steering wheel with the vehicle speed of 0 km/h (0 mph) or less for 20 seconds (continuously), and the engine speed is 1,650 rpm (min
+<sup>
+−1
+</sup>
+) or above for at least 10 seconds.
+</div>
+</li>
+<li>
+<div>
+When the engine speed is 500 rpm (min
+<sup>
+−1
+</sup>
+) or less, and the vehicle is traveling at a speed of 10 km/h (6 mph) or more for about 3 seconds (continuously).
+</div>
+</li>
+</ul>
+<div>
+To determine the actual cause of the problem, question the customer about the conditions during which the problem occured, taking the above conditions into consideration.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG03">
+</a>
+<div class="servinfosub_title">
+<b>
+LKAS (Lane Keep Assist System) Indicator
+</b>
+</div>
+<div>
+This EPS system is added to the LKAS. When the LKAS related problem is detected, LKAS indicator (orange) will come on. However, when the EPS control is failed while the LKAS control is activated, LKAS indicator (orange) will also come on. In this case, EPS indicator will not come on, but the EPS control unit memorizes the DTC. If LKAS indicator (orange) comes on, it deactivates the LKAS control. The power assist works as an usual after deactivating LKAS, but it may stop the power assist depending on the detected malfunction.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG04">
+</a>
+<div class="servinfosub_title">
+<b>
+Diagnostic Trouble Code (DTC)
+</b>
+</div>
+<ul type="disc">
+<li>
+<div>
+If the CPU cannot be activated, or it fails, the EPS indicator comes on, but the DTC is not memorized.
+</div>
+</li>
+<li>
+<div>
+The memory can hold any number of DTCs. However, when the same DTC is detected more than once, the most recent DTC is written over the prior DTC, therefore only one occurence is memorized.
+</div>
+</li>
+<li>
+<div>
+The lowest DTC is indicated first. The DTCs are indicated in ascending order, not in the order that they occurred.
+</div>
+</li>
+<li>
+<div>
+The DTCs are memorized in the EEPROM (non-volatile memory) therefore the memorized DTCs cannot be erased by disconnecting the battery. Perform the specified procedures to clear DTCs.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG05">
+</a>
+<div class="servinfosub_title">
+<b>
+Self-diagnosis
+</b>
+</div>
+<div>
+Self-diagnosis can be classified into three categories:
+</div>
+<ul type="disc">
+<li>
+<div>
+Initial diagnosis: Done right after the engine starts and until the EPS indicator goes off.
+</div>
+</li>
+<li>
+<div>
+Regular diagnosis: Done right after the initial diagnosis until the ignition switch is turned to LOCK (0).
+</div>
+</li>
+<li>
+<div>
+Steering diagnosis: Done during regular diagnosis while turning the steering wheel.
+</div>
+</li>
+</ul>
+<div>
+The EPS control unit performs the following functions when a problem is detected by self-diagnosis:
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Turns on the EPS indicator.
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Memorizes the DTC.
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Stops or restricts the power assist and manual steering operation resumes.
+</div>
+<div>
+NOTE: For DTCs 11-01, 11-02, 12-01, 21-01, 21-02, 22-01, 35-04, 36-02, 37-01, 83-01, and 83-02 the EPS indicator will go off automatically, and the system returns to normal.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG06">
+</a>
+<div class="servinfosub_title">
+<b>
+Restriction on Power Assist Operation
+</b>
+</div>
+<div>
+Repeated extreme steering force, such as turning the steering wheel continuously back-and-forth with the vehicle stopped, causes an increase of power consumption in the EPS motor. The increase of electric current causes the EPS motor to heat up. Because this heat adversely affects the system, the control unit monitors the electric current of the EPS motor.
+</div>
+<div>
+When the control unit detects heat build-up in the EPS motor, it reduces the electric current to the EPS motor gradually to protect the system, and it restricts the power assist operation. The EPS indicator does not come on during this function.
+</div>
+<div>
+When steering torque is not applied to the steering wheel, or when the ignition is turned off and the EPS motor cools, the control unit will restore the power assist gradually until it's fully restored (after about 8 minutes).
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG07">
+</a>
+<div class="servinfosub_title">
+<b>
+Torque Sensor Neutral Position
+</b>
+</div>
+<div>
+The EPS control unit stores the torque sensor neutral position in the EEPROM. The torque sensor neutral position must be memorized whenever the steering gearbox, or the EPS control unit is replaced.
+</div>
+<div>
+NOTE: The torque sensor neutral position is not effected when erasing the DTCs.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG08">
+</a>
+<div class="servinfosub_title">
+<b>
+How to Troubleshoot DTCs
+</b>
+</div>
+<div>
+The troubleshooting procedures assume that the cause of the problem is still present and the EPS indicator is still on. Following the procedure when the EPS indicator does not come on can result in an incorrect diagnosis.
+</div>
+<a name="i210">
+</a>
+<ol>
+<li value="1">
+<div>
+Question the customer about the conditions when the problem occurred, and try to reproduce the same conditions for troubleshooting. Find out when the EPS indicator came on, such as during EPS control, after EPS control, when the vehicle was at a certain speed, etc.
+</div>
+</li>
+</ol>
+<a name="i220">
+</a>
+<ol>
+<li value="2">
+<div>
+When the EPS indicator does not come on during the test-drive, but troubleshooting is done based on the DTC, check for loose connectors, poor terminal contact, etc., in the affected circuit before you start troubleshooting.
+</div>
+</li>
+</ol>
+<a name="i230">
+</a>
+<ol>
+<li value="3">
+<div>
+After troubleshooting, clear the DTC and test-drive the vehicle. Be sure the EPS indicator does not come on.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG09">
+</a>
+<div class="servinfosub_title">
+<b>
+How to Use the HDS (Honda Diagnostic System)
+</b>
+</div>
+<a name="i410">
+</a>
+<ol>
+<li value="1">
+<div>
+If the system indicators stay on, connect the HDS to the data link connector (DLC) (A) located under the driver's side of the dashboard.
+</div>
+</li>
+</ol>
+<a name="i420">
+</a>
+<ol>
+<li value="2">
+<div>
+Turn the ignition switch to ON (II).
+</div>
+</li>
+</ol>
+<a name="i430">
+</a>
+<ol>
+<li value="3">
+<div>
+Make sure the HDS communicates with the vehicle and the EPS control unit. If it doesn't, troubleshoot the DLC circuit.
+</div>
+<ul type="disc">
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000001190','i000')">
+R20A3 engine model
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000001600','i000')">
+K24Z3 engine model
+</a>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i440">
+</a>
+<ol>
+<li value="4">
+<div>
+Check the diagnostic trouble code (DTC) and note it. Then refer to the indicated DTC's troubleshooting, and do the appropriate troubleshooting procedure.
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+The HDS can read the DTC, the current data, and other system data.
+</div>
+</li>
+<li>
+<div>
+For specific operations, refer to the Help menu that came with the HDS.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001611','1');">
+<img src="../tn/TL19E00K72200000000BBAD02.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00K72200000000BBAD02_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG10">
+</a>
+<div class="servinfosub_title">
+<b>
+How to Retrieve DTCs
+</b>
+</div>
+<a name="i610">
+</a>
+<ol>
+<li value="1">
+<div>
+With the ignition switch in LOCK (0), connect the HDS to the data link connector (DLC) under the driver's side of the dashboard.
+</div>
+</li>
+</ol>
+<a name="i620">
+</a>
+<ol>
+<li value="2">
+<div>
+Turn the ignition switch to ON (II).
+</div>
+</li>
+</ol>
+<a name="i630">
+</a>
+<ol>
+<li value="3">
+<div>
+Make sure the HDS communicates with the vehicle and the EPS control unit. If it doesn't, troubleshoot the DLC circuit.
+</div>
+<ul type="disc">
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000001190','i000')">
+R20A3 engine model
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000001600','i000')">
+K24Z3 engine model
+</a>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i640">
+</a>
+<ol>
+<li value="4">
+<div>
+Follow the prompts on the HDS to display the DTC(s) on the screen. After determining the DTC, refer to the DTC troubleshooting.
+</div>
+</li>
+</ol>
+<a name="i650">
+</a>
+<ol>
+<li value="5">
+<div>
+Turn the ignition switch to LOCK (0).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG11">
+</a>
+<div class="servinfosub_title">
+<b>
+How to Clear DTCs
+</b>
+</div>
+<a name="i810">
+</a>
+<ol>
+<li value="1">
+<div>
+With the ignition switch in LOCK (0), connect the HDS to the data link connector (DLC) under the driver's side of the dashboard.
+</div>
+</li>
+</ol>
+<a name="i820">
+</a>
+<ol>
+<li value="2">
+<div>
+Turn the ignition switch to ON (II).
+</div>
+</li>
+</ol>
+<a name="i830">
+</a>
+<ol>
+<li value="3">
+<div>
+Make sure the HDS communicates with the vehicle and the EPS control unit. If it doesn't, troubleshoot the DLC circuit.
+</div>
+<ul type="disc">
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000001190','i000')">
+R20A3 engine model
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000001600','i000')">
+K24Z3 engine model
+</a>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i840">
+</a>
+<ol>
+<li value="4">
+<div>
+Clear the DTC(s) by following the screen prompts on the HDS.
+</div>
+</li>
+</ol>
+<a name="i850">
+</a>
+<ol>
+<li value="5">
+<div>
+Turn the ignition switch to LOCK (0).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

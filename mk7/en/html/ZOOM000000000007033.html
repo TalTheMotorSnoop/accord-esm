@@ -1,0 +1,136 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+<title>SEA5EA0K72200000000BBAT00</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+var   totalImg = 0;
+var   dispNum=1;
+function prOnLoadProc() {
+	_prInitImageInfo(100);
+	_prResizeImage(100/100);
+	divBody.style.display = "block"
+	return;
+}
+function PrintFunc()
+{
+	divBody.style.display = "none";
+	var  img_hei = _prResizeImage(67/100);
+	divBody.style.display = "block";
+	var  graphTd = document.getElementById("graphTd");
+	if(graphTd.width == "100%")
+	{
+      var   current_pos;
+      var   img_pos = 0;
+         current_pos = graphTd.offsetTop;
+		var pageCnt = Math.floor(current_pos/950);
+		var img_pos = current_pos - (pageCnt*950);
+		if(img_pos+img_hei > 950)
+		{
+			var  pageElement = document.getElementById("page_onoff");
+			if(pageElement != null)
+			{
+				pageElement.style.display = "block";
+			}
+		}
+	}
+	window.print();
+	divBody.style.display = "none";
+	_prResizeImage(100/100);
+	divBody.style.display = "block";
+	window.scrollTo(0,0);
+}
+function NextFunc()
+{
+	window.location.replace("ZOOM000000000007034.html");
+}
+function CloseFunc()
+{
+	window.close();
+}
+function JumpFunc(strJump)
+{
+	window.location.replace(strJump);
+}
+//-->
+</script>
+<body onLoad="prOnLoadProc();" style="font-family:sans-serif;">
+<div id="divBody" style="display:none">
+<div>
+<div style="position:absolute;right=10;">
+<input type="image" src="../img/PRINT_PREVIEW.PNG" onClick="PrintFunc()">
+<input type="image" src="../img/GL_PREV_DISABLE.PNG" onClick="BackFunc()" disabled>
+<input type="image" src="../img/GL_NEXT.PNG" onClick="NextFunc()">
+<input type="image" src="../img/GL_CANCEL.PNG" onClick="CloseFunc()">
+</div><br><br>
+<hr width="100%" size="2" color="black">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iS01">
+</a>
+<div class="servinfosub_title">
+<b>
+EPS Indicator
+</b>
+</div>
+<div>
+Under normal conditions, the EPS indicator comes on when the ignition switch is turned to the ON (II) position, then goes off after the engine is started. This indicates that the LED and its circuit are operating correctly.
+</div>
+<div>
+If there is any trouble in the system after the engine is started, the EPS indicator will stay on, and the power assist is turned off.
+</div>
+<div>
+When EPS indicator comes on, the control unit memorizes the DTC. In this case, the control unit will not activate the EPS system after the engine starts again, but it keeps the EPS indicator on.
+</div>
+<div>
+When DTC 11, 12 or 13 is stored in the control unit, the EPS indicator will stay on until the DTC is erased when a problem is detected and the EPS indicator comes on, there are cases when the indicator stays on until the ignition switch is turned OFF, and cases when the indicator goes off automatically when the system returns to normal. Even though the system is operating normally, the EPS indicator will come on under the following conditions:
+</div>
+<ul type="disc">
+<li>
+<div>
+The vehicle speed decreases abruptly from 20 km/h (12 mph) or more (by applying brake), and it is less than 1 km/h (1 mph) and engine speed is 2,000 rpm (min
+<sup>
+−1
+</sup>
+) or above for 5 seconds (continuously) after the abrupt deceleration.
+</div>
+</li>
+<li>
+<div>
+With the wheel of the vehicle being steered, the vehicle speed is 1 km/h (1 mph) or stopped for 20 seconds when the engine speed is 2,000 rpm (min
+<sup>
+−1
+</sup>
+) or above. And, the accumulated time period in which this status is detected is for at least 10 seconds.
+</div>
+</li>
+<li>
+<div>
+When the engine speed is 500 rpm (min
+<sup>
+−1
+</sup>
+) or less, and the vehicle is travelling at a speed of 10 km/h (6 mph) or more for about 3 seconds.
+</div>
+</li>
+</ul>
+<div>
+To determine the actual cause of the problem, question the customer about the conditions during which the problem occured, taking the above conditions into consideration.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div style="display:none;" id="page_onoff">
+<div style="page-break-after:always;">
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

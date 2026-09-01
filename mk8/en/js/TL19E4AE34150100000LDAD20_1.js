@@ -1,0 +1,34 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:475px; height:369px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:475px;height:369px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E4AE34150100000LDAD20.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:475px;height:369px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:19px;top:302px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>A<br>22 N·m<br>(2.2 kgf·m, 16 lbf·ft)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:214px;top:302px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>6 x 1.0 mm<br>12 N·m<br>(1.2 kgf·m, 8.7 lbf·ft)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:243px;top:258px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>D<br>(Gold)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:283px;top:245px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>B<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:299px;top:222px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>F<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:38px;top:20px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>C<br>(Black)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:89px;top:61px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>B<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:124px;top:66px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>G<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:135px;top:19px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>E<br></b>Replace.<br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

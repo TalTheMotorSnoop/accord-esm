@@ -1,0 +1,1193 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E00J26220257121KDAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+Dashboard/Steering Hanger Beam Removal/Installation
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<div>
+SRS components are located in this area. 
+<a href="javascript:CtsProc('0','000000000002905','i000')">
+Review the SRS component locations
+</a>
+ and 
+<a href="javascript:CtsProc('0','000000000002904','i000')">
+the precautions and procedures
+</a>
+ before doing repairs or service.
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+Put on gloves to protect your hands.
+</div>
+</li>
+<li>
+<div>
+Take care not to scratch the dashboard, the body and the other related parts.
+</div>
+</li>
+<li>
+<div>
+Take care not to bend the brackets.
+</div>
+</li>
+<li>
+<div>
+Have an assistant help you when removing and installing the dashboard/steering hanger beam.
+</div>
+</li>
+<li>
+<div>
+When removing components, use the trim tools or equivalent.
+</div>
+</li>
+</ul>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+<a href="javascript:CtsProc('0','000000000002660','i000')">
+Do the battery terminal disconnection procedure,
+</a>
+ then wait at least 3 minutes before beginning work.
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Remove these items:
+</div>
+<ul type="disc">
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000374','i000')">
+Driver's dashboard lower cover
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000379','i000')">
+Driver's dashboard undercover
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000380','i000')">
+Passenger's dashboard undercover
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000361','i000')">
+Center console panel
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000363','i000')">
+Center console rear trim
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000373','i000')">
+Driver's center trim
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000378','i000')">
+Passenger's dashboard trim
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000373','i000')">
+Passenger's center trim
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000359','i000')">
+Center console
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000370','i000')">
+Dashboard center lower cover, both sides
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000382','i000')">
+Glove box
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000359','i050')">
+Driver's rear ventilation duct and passenger's rear ventilation duct, with rear ventilation
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000377','i000')">
+Side pockets, both sides
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000369','i000')">
+Center holder
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000109','i000')">
+Climate control unit
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000371','i000')">
+Center pocket, without navigation system
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000272','i000')">
+Audio unit, with navigation system
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000365','i040')">
+Center pocket frame
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000389','i000')">
+Kick panels, both sides
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000388','i000')">
+Front pillar trim, both sides
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000075','i000')">
+Steering column
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000984','i000')">
+Shift lever housing, M/T model
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000991','i000')">
+Shift lever, A/T model
+</a>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="iT01">
+</a>
+<div class="procedure_topic_title">
+<b>
+Driver's side
+</b>
+</div>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+From under the dash, disconnect the left engine compartment wire harness connectors (LHD model)/the right engine compartment wire harness connectors (RHD model) (A), the driver's door wire harness connector(s) (B), the roof wire harness connector(s) (C), and the left side wire harness connector (LHD model)/the right side wire harness connector (RHD model) (D), and disconnect the left engine compartment wire harness connectors (E) and the left side wire harness connectors (LHD model)/the right side wire harness connector (RHD model) (F) from the driver's under-dash fuse/relay box (G). Disconnect the inertia switch connector (H) on Europe models.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<div class="figure_title">
+<b>
+LHD model
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001032','1');">
+<img src="../tn/TL19E00J26220257121KDAD01.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J26220257121KDAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+<div>
+<div class="figure_title">
+<b>
+RHD model
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001032','2');">
+<img src="../tn/TL19E00J26220257121KDAD02.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J26220257121KDAD02_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iT01">
+</a>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+From under the dash, disconnect the air hose (A), then remove it. LHD model is shown; RHD model is symmetrical.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001033','1');">
+<img src="../tn/TL19E00J26220257121KDAD03.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J26220257121KDAD03_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iT02">
+</a>
+<div class="procedure_topic_title">
+<b>
+Middle portion (shift lever portion)
+</b>
+</div>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+Disconnect the floor wire harness connector (A) on some RHD models, the SRS unit connector (B), the parking brake switch connector (C), the yaw rate-lateral acceleration sensor connector (D), and if equipped, the USB adapter unit connector (E), and detach the wire harness clips (F). Using a TORX T30 bit, remove the ground bolt (G).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<div class="figure_title">
+<b>
+LHD model
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001034','1');">
+<img src="../tn/TL19E00J26220257121KDAD04.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J26220257121KDAD04_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+<div>
+<div class="figure_title">
+<b>
+RHD model
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001034','2');">
+<img src="../tn/TL19E00J26220257121KDAD05.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J26220257121KDAD05_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iT02">
+</a>
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+A/T model: Remove the bolt, then remove the shift lever mount bracket (A).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001035','1');">
+<img src="../tn/TL19E00J26220257121KDAD06.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J26220257121KDAD06_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iT03">
+</a>
+<div class="procedure_topic_title">
+<b>
+Middle portion (passenger's side)
+</b>
+</div>
+<a name="i070">
+</a>
+<ol>
+<li value="7">
+<div>
+From under the dash, disconnect the A/C wire harness connector (A), and the floor wire harness connector (B) on the LHD model. Detach the wire harness clip (C).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<div class="figure_title">
+<b>
+LHD model
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001036','1');">
+<img src="../tn/TL19E00J26220257121KDAD07.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J26220257121KDAD07_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+<div>
+<div class="figure_title">
+<b>
+RHD model
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001036','2');">
+<img src="../tn/TL19E00J26220257121KDAD08.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J26220257121KDAD08_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iT04">
+</a>
+<div class="procedure_topic_title">
+<b>
+Passenger's side
+</b>
+</div>
+<a name="i080">
+</a>
+<ol>
+<li value="8">
+<div>
+Disconnect the antenna sublead connector (A). LHD model is shown; RHD model is symmetrical.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001037','1');">
+<img src="../tn/TL19E00J26220257121KDAD09.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J26220257121KDAD09_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iT04">
+</a>
+<a name="i090">
+</a>
+<ol>
+<li value="9">
+<div>
+From under the dash, disconnect the passenger's door wire harness connector (A), the right side wire harness connector(s) (LHD model)/the left side wire harness connectors (B) (RHD model), and the right engine compartment wire harness connectors (LHD model)/the left engine compartment wire harness connectors (RHD model) (C). Disconnect the dashboard wire harness connectors (D) and the audio wire harness connector (E) from the passenger's under-dash fuse/relay box (F). On RHD model, detach the harness clip (G). 
+</div>
+</li>
+</ol>
+<a name="i100">
+</a>
+<ol>
+<li value="10">
+<div>
+Detach all of the harness and the connector clips.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<div class="figure_title">
+<b>
+LHD model
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001038','1');">
+<img src="../tn/TL19E00J26220257121KDAD10.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J26220257121KDAD10_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+<div>
+<div class="figure_title">
+<b>
+RHD model
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001038','2');">
+<img src="../tn/TL19E00J26220257121KDAD11.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J26220257121KDAD11_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iT04">
+</a>
+<a name="i110">
+</a>
+<ol>
+<li value="11">
+<div>
+Detach the harness clip (A) and the clip fastening the relay (B) from the brake pedal support member (C). Remove the bolts (D, E), then remove the member, and if equipped, disconnect the parking and back-up sensor control unit connector (F) and/or the headlight leveling control unit connector (G). LHD model is shown; RHD model is similar.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001039','1');">
+<img src="../tn/TL19E00J26220257121KDAD12.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J26220257121KDAD12_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iT04">
+</a>
+<a name="i120">
+</a>
+<ol>
+<li value="12">
+<div>
+Remove bolts (A, B), then remove the center joint bracket (C).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001040','1');">
+<img src="../tn/TL19E00J26220257121KDAD13.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J26220257121KDAD13_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iT04">
+</a>
+<a name="i130">
+</a>
+<ol>
+<li value="13">
+<div>
+Remove the special bolts (A) from outside the passenger's door. LHD model is shown; RHD model is symmetrical.
+</div>
+<table class="Viewer">
+<tr>
+<td width="30" class="ViewerTD" align="right">
+<a name="i131">
+</a>
+<div>-1.
+</div>
+</td>
+<td class="ViewerTD" align="left">
+<div>
+Remove the caps (B).
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD" align="right">
+<a name="i132">
+</a>
+<div>-2.
+</div>
+</td>
+<td class="ViewerTD" align="left">
+<div>
+Loosen the special bolt until its threads have come off the side bracket (C) of the steering hanger beam. The bolt will be screwed into the inside threads of the collar bolt (D) by loosening the bolt. Because of the thread lock on the threads of the bolt, the bolt and the collar bolt will be fixed.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD" align="right">
+<a name="i133">
+</a>
+<div>-3.
+</div>
+</td>
+<td class="ViewerTD" align="left">
+<div>
+Loosen the bolt again to screw the collar bolt into the fixed space adjuster (E) until it is stopped by the stopper (F). This will provide a gap (G) between the collar bolt and the body.
+</div>
+</td>
+</tr>
+<tr>
+<td width="30" class="ViewerTD" align="right">
+<a name="i134">
+</a>
+<div>-4.
+</div>
+</td>
+<td class="ViewerTD" align="left">
+<div>
+Remove the bolts.
+</div>
+</td>
+</tr>
+</table>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001041','1');">
+<img src="../tn/TL19E00J26220257121KDAD14.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J26220257121KDAD14_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iT04">
+</a>
+<a name="i140">
+</a>
+<ol>
+<li value="14">
+<div>
+Slightly screw the collar bolt (A) into the space adjuster (B) with 8 mm hexagonal wench. LHD model is shown; RHD model is symmetrical except the direction of screwing.
+</div>
+</li>
+</ol>
+<a name="i150">
+</a>
+<ol>
+<li value="15">
+<div>
+If the collar bolts are not screwed fully into the fixed space adjuster when removing the special bolts, screw collar bolt into the fixed space adjuster in the same way as 
+<a href="javascript:try{parent.Jmp('i140');}catch(e){location.hash='i140';}">Step 14
+</a>
+.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001042','1');">
+<img src="../tn/TL19E00J26220257121KDAD15.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J26220257121KDAD15_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iT04">
+</a>
+<a name="i160">
+</a>
+<ol>
+<li value="16">
+<div>
+From outside the driver's door, remove the caps (A), then remove the bolts (B, C) from outside the driver's door. LHD model is shown; RHD model is symmetrical.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001043','1');">
+<img src="../tn/TL19E00J26220257121KDAD16.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J26220257121KDAD16_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iT04">
+</a>
+<a name="i170">
+</a>
+<ol>
+<li value="17">
+<div>
+Lift up on the dashboard (A) to release it from the guide pins (B) and the center pin (C) on the dashboard from the grommet (D) on the body. Carefully remove the dashboard through the front door opening. Take care not to scratch the body with the collar nuts on the passenger's side. LHD model is shown; RHD model is symmetrical.
+</div>
+<div>
+NOTE: Do not rest the dashboard on its lower center cover opening, or it may be damaged. Lay it on its front or back.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001044','1');">
+<img src="../tn/TL19E00J26220257121KDAD17.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J26220257121KDAD17_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iT04">
+</a>
+<a name="i180">
+</a>
+<ol>
+<li value="18">
+<div>
+Install the dashboard in the reverse order of removal, and note these items:
+</div>
+<ul type="disc">
+<li>
+<div>
+Make sure the dashboard fits onto the guide pins correctly.
+</div>
+</li>
+<li>
+<div>
+Before tightening the bolts, make sure the wire harnesses are not pinched.
+</div>
+</li>
+<li>
+<div>
+Make sure the connectors are plugged in properly.
+</div>
+</li>
+<li>
+<div>
+Before reinstalling the dashboard, be sure the collar bolt (A) on passenger's side can be screwed/unscrewed lightly by hand, and then screw all of them into the fixed space adjuster (B) until they contact the stoppers (C) by hand. Do not tighten them fully with any tools.
+</div>
+</li>
+<li>
+<div>
+Before reinstalling the dashboard, try to screw the special bolt (D) into the loosened collar bolt. If the collar bolt is not unscrewed by screwing the special bolt, replace this special bolt with a new one.
+</div>
+</li>
+<li>
+<div>
+After setting the dashboard on the body, reinstall all of the mounting bolts to the dashboard, tighten the driver's side bracket to the specified torque, then torque the special bolt on the passenger's side. First screw the special bolt into the collar bolt, they will be fixed because of the thread lock on the bolt. Continue tightening the bolt with the collar bolt, they are loosened from the fixed space adjuster until the collar bolt contacts the inside face of the body. Then tighten the bolts again to the specified torque.
+</div>
+</li>
+<li>
+<div>
+Apply medium strength liquid thread lock to the bolts securing the center joint bracket and the dashboard before reinstallation.
+</div>
+</li>
+<li>
+<div>
+After tightening the dashboard mounting bolts, tighten the center joint bracket mounting bolts, and then tighten the center frame mounting bolts.
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000002660','i000')">
+Do the battery terminal reconnection procedure.
+</a>
+</div>
+</li>
+<li>
+<div>
+Check for any DTCs that may have been set during repairs, and clear them.
+</div>
+</li>
+<li>
+<div>
+If necessary. 
+<a href="javascript:CtsProc('0','000000000000990','i000')">
+Adjust the shift cable.
+</a>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<div class="figure_title">
+<b>
+Special bolt tightening on passenger's side
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001045','1');">
+<img src="../tn/TL19E00J26220257121KDAD18.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J26220257121KDAD18_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

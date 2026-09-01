@@ -1,0 +1,34 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:475px; height:417px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:475px;height:417px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E40K791000R763XFAAD04.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:475px;height:417px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:131px;top:387px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b></b>Wire side of female terminals<br></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:35px;top:369px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>VSA MODULATOR-CONTROL UNIT 47P CONNECTOR<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:276px;top:252px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>WHT<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:346px;top:252px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>RED<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:93px;top:135px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>WHT<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:191px;top:135px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>RED<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:128px;top:85px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b></b>Wire side of female terminals<br></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:66px;top:50px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>E-PRETENSIONER SUBHARNESS <br>14P CONNECTOR (RHD models)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:64px;top:16px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>LEFT ENGINE COMPARTMENT SUBHARNESS<br>14P CONNECTOR (LHD models)<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

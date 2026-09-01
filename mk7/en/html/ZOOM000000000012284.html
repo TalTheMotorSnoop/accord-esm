@@ -1,0 +1,138 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+<title>SEA6EL7J36200000000BBAT20</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+var   totalImg = 1;
+var   dispNum=1;
+function prOnLoadProc() {
+	_prInitImageInfo(100);
+	_prResizeImage(100/100);
+	divBody.style.display = "block"
+	return;
+}
+function PrintFunc()
+{
+	divBody.style.display = "none";
+	var  img_hei = _prResizeImage(67/100);
+	divBody.style.display = "block";
+	var  graphTd = document.getElementById("graphTd");
+	if(graphTd.width == "100%")
+	{
+      var   current_pos;
+      var   img_pos = 0;
+         current_pos = graphTd.offsetTop;
+		var pageCnt = Math.floor(current_pos/950);
+		var img_pos = current_pos - (pageCnt*950);
+		if(img_pos+img_hei > 950)
+		{
+			var  pageElement = document.getElementById("page_onoff");
+			if(pageElement != null)
+			{
+				pageElement.style.display = "block";
+			}
+		}
+	}
+	window.print();
+	divBody.style.display = "none";
+	_prResizeImage(100/100);
+	divBody.style.display = "block";
+	window.scrollTo(0,0);
+}
+function BackFunc()
+{
+	window.location.replace("ZOOM000000000012283.html");
+}
+function NextFunc()
+{
+	window.location.replace("ZOOM000000000012285.html");
+}
+function CloseFunc()
+{
+	window.close();
+}
+function JumpFunc(strJump)
+{
+	window.location.replace(strJump);
+}
+//-->
+</script>
+<body onLoad="prOnLoadProc();" style="font-family:sans-serif;">
+<div id="divBody" style="display:none">
+<div>
+<div style="position:absolute;right=10;">
+<input type="image" src="../img/PRINT_PREVIEW.PNG" onClick="PrintFunc()">
+<input type="image" src="../img/GL_PREV.PNG" onClick="BackFunc()">
+<input type="image" src="../img/GL_NEXT.PNG" onClick="NextFunc()">
+<input type="image" src="../img/GL_CANCEL.PNG" onClick="CloseFunc()">
+</div><br><br>
+<hr width="100%" size="2" color="black">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG09">
+</a>
+<div class="servinfosub_title">
+<b>
+GPS Information
+</b>
+</div>
+<div>
+This screen shows the current status of GPS reception. The circular diagram shows the current location of the GPS satellites (yellow numbers) as they would appear in the sky. The outer circle represents the horizon (0 degrees elevation). The middle and inner circles represents 30 and 60 degrees respectively. The very center of the diagram (90 degrees elevation) is directly overhead. Naturally, nearby obstructions, like tall buildings will block satellites in that direction. That is why it is necessary to be in an open area to effectively troubleshoot GPS reception issues. The satellite numbers shown on the diagram correspond to the ‘‘PRN'' number in the ‘‘GPS Details'' screen. There are always 24 ‘‘active'' GPS satellites in orbit. Because satellites fail, and have to be removed from service, spares always parked in orbit, ready to be activated. This is why the PRN (satellite ID number) can be greater than 24.
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+To use this screen for troubleshooting, the vehicle should be out side away from buildings, tall trees, and high-tension wires for at least 10 minutes with the engine running.
+</div>
+</li>
+<li>
+<div>
+Metallic window tinting on the rear window or after-market electronic accessories mounted near the navigation or display units can interfere with GPS acquisition.
+</div>
+</li>
+<li>
+<div>
+The ‘‘Number of Satellites'' box shows the number of acquired satellites (maximum of 12). It should contain 3 or more icons.
+<a href="javascript:opener.top.Cts('000000000004805','i000')">
+If not troubleshoot for ‘‘GPS icon is white or not shown''.
+</a>
+</div>
+</li>
+<li>
+<div>
+The ‘‘Current Position'' shows latitude, longitude, and elevation(in meters). If there are less than 3 satellites, the elevation can be grossly inaccurate.
+</div>
+</li>
+<li>
+<div>
+The Date/Time field shows the current date, and also a time that includes daylight savings and other offsets entered by the customer in Setup screen 2 ‘‘Adjust Time Zone/Clock''.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div style="display:none;" id="page_onoff">
+<div style="page-break-after:always;">
+</div>
+</div>
+<span style="display:block" id="imgId1">
+<div>
+<script src="../js/SEA6EL7J36200000000BBAD24_1.js">
+</script>
+</div>
+</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

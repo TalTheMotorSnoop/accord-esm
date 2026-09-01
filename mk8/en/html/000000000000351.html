@@ -1,0 +1,271 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E00J22100030053MBAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+Rewriting the ODO Data and Transferring the Service Reminder System Data to a New Gauge Control Module
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+Obtain a new gauge control module before starting the rewriting process.
+</div>
+</li>
+<li>
+<div>
+Rewriting is not possible on a gauge control module that will not communicate with the HDS.
+</div>
+</li>
+<li>
+<div>
+Make sure that the HDS shows the correct VIN for the vehicle you are working on.
+</div>
+</li>
+<li>
+<div>
+Once you have started this procedure, you must complete it before removing the HDS from the DLC.
+</div>
+</li>
+<li>
+<div>
+Connect a battery jumper box (not a battery charger) to insure that correct battery voltage will be maintained.
+</div>
+</li>
+</ul>
+<a name="iR01">
+</a>
+<div class="procedure_sub_title">
+<b>
+Rewriting and Transferring
+</b>
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Before replacing the gauge control module, connect the HDS.
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Select GAUGES from the BODY ELECTRICAL system select menu with the HDS.
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Select Gauge Control Module Replacement (ODO Rewrite) from the ADJUSTMENT menu, and follow the instructions on the display to retrieve the ODO value and the Service Reminder System Information.
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Replace the gauge control module.
+</div>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+Follow the instructions on the display to write the new ODO value and Service Reminder System Data to the new gauge control module. If the data transfer fails, refer to the instructions below to release the locked ODO value.
+</div>
+</li>
+</ol>
+<a name="iR02">
+</a>
+<div class="procedure_sub_title">
+<b>
+Release Locked odometer mileage to the original gauge control module.
+</b>
+</div>
+<div>
+If, after you attempt to transfer mileage, the odometer display has dashes (−−−), is garbled, or shows an incorrect value, the original gauge control module needs to be unlocked and restored to its original state:
+</div>
+<a name="i210">
+</a>
+<ol>
+<li value="1">
+<div>
+Confirm that you have the latest HDS version of software.
+</div>
+</li>
+</ol>
+<a name="i220">
+</a>
+<ol>
+<li value="2">
+<div>
+Make sure that the HDS shows the correct VIN for the vehicle you are working on.
+</div>
+</li>
+</ol>
+<a name="i230">
+</a>
+<ol>
+<li value="3">
+<div>
+With the ignition switch in LOCK (0), reconnect the original gauge control module.
+</div>
+</li>
+</ol>
+<a name="i240">
+</a>
+<ol>
+<li value="4">
+<div>
+Completely re-boot the HDS.
+</div>
+</li>
+</ol>
+<a name="i250">
+</a>
+<ol>
+<li value="5">
+<div>
+Clear any stored DTCs.
+</div>
+</li>
+</ol>
+<a name="i260">
+</a>
+<ol>
+<li value="6">
+<div>
+Navigate to Body Electric/Gauges/Adjustment/Instrument Panel Replacement.
+</div>
+</li>
+</ol>
+<a name="i270">
+</a>
+<ol>
+<li value="7">
+<div>
+Select 3. Releasing Locked ODO Value.
+</div>
+</li>
+</ol>
+<a name="i280">
+</a>
+<ol>
+<li value="8">
+<div>
+Follow the prompts and the odometer mileage will be restored.
+</div>
+</li>
+</ol>
+<a name="i290">
+</a>
+<ol>
+<li value="9">
+<div>
+Start over and make sure the screen prompts are followed.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

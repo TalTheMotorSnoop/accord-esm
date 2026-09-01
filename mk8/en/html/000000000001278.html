@@ -1,0 +1,306 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E2AA20300024601LBAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+ECM/PCM Update
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<div>
+<b>
+Special Tools Required
+</b>
+</div>
+<ul type="disc">
+<li>
+<div>
+Honda diagnostic system (HDS)
+</div>
+</li>
+<li>
+<div>
+Honda interface module (HIM)
+</div>
+</li>
+<li>
+<div>
+HDS pocket tester
+</div>
+</li>
+</ul>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+Use this procedure when you need to update the ECM/PCM at anytime.
+</div>
+</li>
+<li>
+<div>
+Make sure the HDS/HIM has the latest software version.
+</div>
+</li>
+<li>
+<div>
+Before you update the ECM/PCM, make sure the battery in the vehicle is fully charged, and connect a jumper battery (not a battery charger) to maintain system voltage.
+</div>
+</li>
+<li>
+<div>
+Never turn the ignition switch to LOCK (0) or ACC (I) during the update. If there is a problem with the update, leave the ignition switch to ON (II).
+</div>
+</li>
+<li>
+<div>
+To prevent ECM/PCM damage, do not operate anything electrical (headlights, audio system, brakes, A/C, power windows, moonroof (if equipped), door locks, etc.) during the update.
+</div>
+</li>
+<li>
+<div>
+To ensure the latest program is installed, do an ECM/PCM update whenever the ECM/PCM is substituted or replaced.
+</div>
+</li>
+<li>
+<div>
+You cannot update an ECM/PCM with a program it already has. It will only accept a new program.
+</div>
+</li>
+<li>
+<div>
+High temperature in the engine compartment might cause the ECM/PCM to become too hot to run the update. If the engine has been running before this procedure, open the hood and cool the engine compartment.
+</div>
+</li>
+<li>
+<div>
+If you need to diagnose the Honda interface module (HIM) because the HIM's red (#3) light came on or was flashing during the update, leave the ignition switch in the ON (II) when you disconnect the HIM from the data link connector (DLC). This will prevent ECM/PCM damage.
+</div>
+</li>
+</ul>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Turn the ignition switch to ON (II), but do not start the engine.
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Connect the HDS to the data link connector (DLC) (A) located under the driver's side of the dashboard.
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Make sure the HDS communicates with the ECM/PCM and other vehicle systems. If it doesn't, 
+<a href="javascript:CtsProc('0','000000000001190','i000')">
+go to the DLC circuit troubleshooting.
+</a>
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Exit the HDS diagnostic system, then select the update mode, and follow the screen prompts to update the ECM/PCM.
+</div>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+If the software in the ECM/PCM is the latest, disconnect the HDS/HIM from the DLC, and go back to the procedure that you were doing. If the software in the ECM/PCM is not the latest, follow the instructions on the screen. If prompted to choose the PGM-FI system or the A/T system (A/T), make sure you update both.
+</div>
+<div>
+NOTE: If the ECM/PCM update system requires you to cool the ECM/PCM, follow the instructions on screen. If you run into a problem during the update procedure, (programming takes about 15 minutes, status bar goes over 100 %, D (A/T) or immobilizer light flashes, HDS tablet freezes, etc.), follow these steps to minimize the chance of damaging the ECM/PCM:
+</div>
+<ul type="disc">
+<li>
+<div>
+Leave the ignition switch in the ON (II) position.
+</div>
+</li>
+<li>
+<div>
+Connect a jumper battery (do not connect a battery charger).
+</div>
+</li>
+<li>
+<div>
+Shut down the HDS.
+</div>
+</li>
+<li>
+<div>
+Disconnect the HDS from the DLC.
+</div>
+</li>
+<li>
+<div>
+Reboot the HDS.
+</div>
+</li>
+<li>
+<div>
+Reconnect the HDS to the DLC, and try the update procedure again.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+<a href="javascript:CtsProc('0','000000000001280','i000')">
+Do the ECM/PCM idle learn procedure.
+</a>
+</div>
+</li>
+</ol>
+<a name="i070">
+</a>
+<ol>
+<li value="7">
+<div>
+<a href="javascript:CtsProc('0','000000000001286','iG13')">
+Do the CKP learn procedure.
+</a>
+</div>
+</li>
+</ol>
+<a name="i080">
+</a>
+<ol>
+<li value="8">
+<div>
+A/T: 
+<a href="javascript:CtsProc('0','000000000002800','i000')">
+Do the accelerator pedal kickdown click system learn procedure.
+</a>
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000003113','1');">
+<img src="../tn/TL19E2AA20300024601LBAD01.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E2AA20300024601LBAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

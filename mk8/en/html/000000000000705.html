@@ -1,0 +1,1368 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E00K76100000000BBAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+How to Troubleshoot the Navigation System
+</div>
+<div>
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG01">
+</a>
+<div class="servinfosub_title">
+<b>
+General Operation
+</b>
+</div>
+<div>
+Refer to the navigation system manual for the navigation system operating procedures.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG02">
+</a>
+<div class="servinfosub_title">
+<b>
+Anti-theft Feature
+</b>
+</div>
+<div>
+The navigation system and audio unit have a coded theft protection circuit. Make sure you have the anti-theft security code before:
+</div>
+<ul type="disc">
+<li>
+<div>
+Disconnecting the battery.
+</div>
+</li>
+<li>
+<div>
+Disconnecting the navigation unit 8P connector.
+</div>
+</li>
+<li>
+<div>
+Removing the No. 15 (10 A) fuse from the under-hood fuse/relay box.
+</div>
+</li>
+</ul>
+<div>
+After service, reconnect power to the navigation unit, and turn the ignition switch to ON (II). Enter the 4-digit anti-theft security code, then select Done.
+</div>
+<div>
+When replacing the navigation unit, be sure to give the customer the new anti-theft security code.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG03">
+</a>
+<div class="servinfosub_title">
+<b>
+Symptom Diagnosis
+</b>
+</div>
+<div>
+Certain circumstances and system limitations will result in occasional vehicle positioning errors. Some customer's may think this indicates a problem with the navigation system when, in fact, the system is normal. Keep the following items in mind when interviewing customer's about symptoms of the navigation system.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG04">
+</a>
+<div class="servinfosub_title">
+<b>
+Self-Inertial Navigation Limitations
+</b>
+</div>
+<div>
+The limitations of the self-inertial portion of the navigation system (the yaw rate sensor and the vehicle speed signal) can cause discrepancies between the vehicle's actual position and the indicated vehicle's position (GPS vehicle position).
+</div>
+<div>
+The following circumstances may cause vehicle positioning errors:
+</div>
+<ul type="disc">
+<li>
+<div>
+Moving the vehicle with the engine stopped and the vehicle stopped, such as by ferry or tow truck, or if the vehicle is spun on a turn table.
+</div>
+</li>
+<li>
+<div>
+Tire slippage, changes in tire rolling diameters, and some driving situations may cause discrepancies in travel distances. Examples of this include:
+</div>
+</li>
+<table class="Viewer">
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Continuous tire slippage on a slippery surface
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Driving with snow chains mounted
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Abnormal tire pressure
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Incorrect tire size
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Frequent lane changes across a wide highway
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Continuous driving on a straight or gently curving highway
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Very bumpy roads
+</div>
+</td>
+</tr>
+</table>
+<li>
+<div>
+Tolerances in the system and map inaccuracies sometimes limit how precisely the vehicle's position is indicated. Examples of this include:
+</div>
+</li>
+<table class="Viewer">
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Driving on roads not shown on the map (map matching is not possible)
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Driving on a road that winds in one direction, such as a loop bridge, an interchange, or a spiral parking garage
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Driving on a road with a series of sharp hair-pin turns
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Driving near a gradual highway exit or transition
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Driving on one of two close parallel roads
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Making many 90 degree turns
+</div>
+</td>
+</tr>
+</table>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG05">
+</a>
+<div class="servinfosub_title">
+<b>
+Global Positioning System (GPS) Limitations
+</b>
+</div>
+<div>
+The GPS cannot detect the vehicle's position or elevation during the following instances:
+</div>
+<ul type="disc">
+<li>
+<div>
+For the first 5 to 10 minutes after reconnecting the battery (this process can take as long as 45 minutes).
+</div>
+</li>
+<li>
+<div>
+When the satellite signals are blocked by tall buildings, mountains, tunnels, large trees, inside parking structures or large trucks.
+</div>
+</li>
+<li>
+<div>
+When the GPS antenna is blocked by metallic window tinting or by an object placed above it in the vehicle. The GPS antenna requires a clear unobstructed view of the sky.
+</div>
+</li>
+<li>
+<div>
+When there is no satellite signal output (signal output is sometimes stopped for satellite servicing).
+</div>
+</li>
+<li>
+<div>
+When the satellite signals are blocked by the operation of some electronic aftermarket accessories including, but not limited to non-OEM in-dash entertainment units (radio, CD players/changers, radar detectors and theft recovery systems) and cell phones placed near the navigation system.
+</div>
+</li>
+</ul>
+<div>
+The accuracy of GPS is reduced during these instances:
+</div>
+<ul type="disc">
+<li>
+<div>
+Metallic window tinting above the GPS antenna.
+</div>
+</li>
+<li>
+<div>
+When only three or less satellite signals can be received (Four satellite signals are required for accurate positioning).
+</div>
+</li>
+<li>
+<div>
+When driving near high tension power lines.
+</div>
+</li>
+<li>
+<div>
+When the satellite control centers are experiencing problems.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG06">
+</a>
+<div class="servinfosub_title">
+<b>
+Muting Logic
+</b>
+</div>
+<div>
+Whenever the navigation system is giving guidance, the front speakers are muted. When the voice control system is being used, all of the speakers are muted. If the Hands Free Telephone is in use, the voice control system is unavailable and a message appears onscreen.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG07">
+</a>
+<div class="servinfosub_title">
+<b>
+LCD Display Unit Limitations
+</b>
+</div>
+<div>
+NOTE: The screen is not touch sensitive. Use the interface dial and buttons to select items on the screen.
+</div>
+<ul type="disc">
+<li>
+<div>
+In cold temperatures, the display may stay dark for the first 2 or 3 minutes until it warms up.
+</div>
+</li>
+<li>
+<div>
+When the display is too hot because of direct summer sunlight, it will remain dark until the temperature drops (you may see an error message displayed stating this fact).
+</div>
+</li>
+<li>
+<div>
+When the humidity is high and the interior temperature is low, the display may appear cloudy. The display will clear up after some use.
+</div>
+</li>
+<li>
+<div>
+Fingerprints on the screen may be noticeable. Clean the screen with a soft, damp cloth. You may use a mild cleaner intended for eye glasses or computer screens. To avoid scratching the panel, do not rub too hard or use abrasive cleaners or shop towels.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG08">
+</a>
+<div class="servinfosub_title">
+<b>
+Symptom Duplication
+</b>
+</div>
+<ul type="disc">
+<li>
+<div>
+When the symptom can be duplicated, verify that it is not a characteristic of the system. Review the navigation system manual and compare it to a known-good vehicle (with the same software and database), under the same conditions. If the symptom is not the same as the known-good, follow the self-diagnostic procedures and the appropriate troubleshooting procedures.
+</div>
+</li>
+<li>
+<div>
+When the symptom does not reappear or only reappears intermittently, ask the customer about the conditions when the symptom occurred.
+</div>
+</li>
+<table class="Viewer">
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Always ask the customer to demonstrate the problem.
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Try to establish possible user error or misunderstanding of the system.
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Try to establish if outside interference may have been the cause.
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Try to duplication the symptom under the same conditions the customer experienced.
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Vibration, temperature extremes, and moisture (dew, humidity) are factors that are difficult to duplicate.
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Inspect the vehicle for after-market electronic devices (vehicle locators, amps, radar detectors, etc.) that may be hidden.
+</div>
+</td>
+</tr>
+</table>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG09">
+</a>
+<div class="servinfosub_title">
+<b>
+Service Precautions
+</b>
+</div>
+<ul type="disc">
+<li>
+<div>
+If the navigation unit needs to be replaced, you can back-up the navigation data and transfer it to a new navigation unit. 
+<a href="javascript:CtsProc('0','000000000000488','iR08')">
+See Save users memory (KQ model).
+</a>
+</div>
+</li>
+<li>
+<div>
+When the battery is disconnected, the internal GPS clock is reset to 0:00. The clock will reset to the correct time after the system finishes GPS initialization.
+</div>
+</li>
+<li>
+<div>
+Before disconnecting the battery, make sure you have the anti-theft codes for the audio system and the navigation system, and write down the audio presets. Also obtain any PGM-FI or transmission DTCs and freeze frame date (which will be lost when the ECM/PCM loses power).
+</div>
+</li>
+<li>
+<div>
+After reconnecting the battery, you have to wait to get the initial signal from the satellite. It will take from 10 to 45 minutes.
+</div>
+</li>
+<li>
+<div>
+Adjust the setup clock settings (time zone and daylight savings) in the navigation system.
+</div>
+</li>
+<li>
+<div>
+Before returning the vehicle to the customer, enter the anti-theft codes for the audio system and the navigation system.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG10">
+</a>
+<div class="servinfosub_title">
+<b>
+System Initialization
+</b>
+</div>
+<div>
+If for any reason, you lose power to the navigation system (like the battery was disconnected). The navigation system will require initialization. Once completed, your system will be ready to use.
+</div>
+<div>
+This initialization requires the following:
+</div>
+<ul type="disc">
+<li>
+<div>
+Entering the 4-digit anti-theft security code to unlock the system
+</div>
+</li>
+<li>
+<div>
+GPS initialization (may not be needed depending of the length of time the system was without power)
+</div>
+</li>
+<li>
+<div>
+Map matching to align the GPS to a location on the map
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG12">
+</a>
+<div class="servinfosub_title">
+<b>
+GPS Initialization
+</b>
+</div>
+<div>
+NOTE: You must park the vehicle outside with a clear view of the southern sky.
+</div>
+<div>
+Depending on the length of time the battery was disconnected, your system may require GPS initialization. If it does, the following screen appears:
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001841','1');">
+<img src="../tn/TL19E00K76100000000BBAD01.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00K76100000000BBAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG12">
+</a>
+<div>
+If this procedure is not necessary, the system proceeds directly to the Disclaimer screen. During initialization, the system searches for all available GPS satellites, and obtains their orbital information. During this procedure the vehicle should be out in the open with a clear view of the sky.
+</div>
+<div>
+If the navigation system finds the satellites properly, this box clears, and changes to the Disclaimer screen. If within 10 minutes the system fails to locate a sufficient number of satellites to locate your position, the following screen appears.
+</div>
+<div>
+It this appears, turn off the engine, then restart the vehicle and move it to a different location. If you now see the Disclaimer screen, the GPS initialization is complete.
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+The average acquiring time is less than 10 minutes, but it can take as long as 45 minutes.
+</div>
+</li>
+<li>
+<div>
+If the system is still unable to acquire a signal, follow the instructions on the screen. If this screen appears again, 
+<a href="javascript:CtsProc('0','000000000000472','i000')">
+go to troubleshooting for the GPS icon is white or not shown.
+</a>
+</div>
+</li>
+<li>
+<div>
+Skip to a CSF screen by pushing the MENU + INFO buttons at the same time and can move to an System Links screen.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001842','1');">
+<img src="../tn/TL19E00K76100000000BBAD02.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00K76100000000BBAD02_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG13">
+</a>
+<div class="servinfosub_title">
+<b>
+Map Matching
+</b>
+</div>
+<div>
+This part of the initialization matches the GPS coordinates with a road on the map screen. To perform this part of the procedure, ensure that the navigation system is displaying a map, and drive the vehicle on a mapped road shown on the map screen. Do not enter a destination at this time. When the name of the current road you are driving on, appears at the bottom of the screen, the entire procedure is complete. Your system is now ready to use.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG15">
+</a>
+<div class="servinfosub_title">
+<b>
+DVD Handing and Cleaning
+</b>
+</div>
+<div>
+To avoid damaging or leaving fingerprints on the DVD, always handle it by the edges and place it in a jewel case whenever it is outside the navigation unit. Deep scratches or fingerprints on the back of the DVD can cause intermittent rebooting or other system errors.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001844','1');">
+<img src="../tn/TL19E00K76100000000BBAD03.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00K76100000000BBAD03_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG15">
+</a>
+<div>
+Smudges and fingerprints can be carefully removed using a mild cleaner and tissues designed to clean eyeglasses. To clean a DVD, use a clean soft cloth. Very gently wipe across the DVD from the center to the outside edge, never in a circular motion.
+</div>
+<div>
+Do not place stabilizer rings or labels on the DVD.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001845','1');">
+<img src="../tn/TL19E00K76100000000BBAD04.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00K76100000000BBAD04_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG19">
+</a>
+<div class="servinfosub_title">
+<b>
+Precaution on Customer ‘‘Sneak Previews''
+</b>
+</div>
+<div>
+Your customer might request a look (or sneak preview) at features in the latest navigation software. You should never preview a navigation DVD in a customer's vehicle. Inserting a new DVD installs the latest software from the DVD into the memory of the customer's navigation system. When the original DVD is reinstalled, the newer software remains in memory and is often incompatible with the customer's original DVD Map and POI database.
+</div>
+<div>
+If your customer wishes to see the latest navigation coverage or software features, demonstrate it on an in-stock vehicle that already has the latest DVD version.
+</div>
+<div>
+If, by chance, a newer version is loaded accidentally, either by the dealer or the customer, the only remedy is to enter the navigation diagnostic mode's Version screen and do a forced download.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG20">
+</a>
+<div class="servinfosub_title">
+<b>
+How to Check Error History
+</b>
+</div>
+<div>
+The Error History feature is to record intermittent navigation issues that occur while the customer is driving. Sometimes the customer complaint cannot be duplicated. The error history may record the information needed to diagnose the problem. To check the error history:
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Start the engine.
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Press MAP/GUIDE+MENU+CANCEL buttons for 3 seconds, or 
+<a href="javascript:CtsProc('0','000000000002994','i000')">
+connect the SCS service connector to the navigation service connector located in the trunk.
+</a>
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+When Select Diagnosis Items menu is displayed, select Detail Information &amp; Setting.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001847','1');">
+<img src="../tn/TL19E00K76100000000BBAD05.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00K76100000000BBAD05_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG20">
+</a>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+When the navigation unit has hard codes, the Error History icon appears yellow when the Self Diagnosis mode (System links) screen is displayed. When no hard errors are stored, the icon appears gray. To view the errors with their DTC codes, select the error history icon.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001848','1');">
+<img src="../tn/TL19E00K76100000000BBAD06.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00K76100000000BBAD06_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG20">
+</a>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+Select Hard Error (Soft Error is for factory use only).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001849','1');">
+<img src="../tn/TL19E00K76100000000BBAD07.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00K76100000000BBAD07_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG20">
+</a>
+<a name="iT01">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Hardware Error History
+</b>
+</div>
+<br>
+<a name="i060">
+</a>
+<ol>
+<li value="1">
+<div>
+The Hard Error screen displays the following for each error:
+</div>
+<ul type="disc">
+<li>
+<div>
+The DTC trouble code for the error
+</div>
+</li>
+<li>
+<div>
+A brief description of the DCT code
+</div>
+</li>
+<li>
+<div>
+The date and time when the error occurred.
+</div>
+</li>
+</ul>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+To see additional errors, use the interface dial to select UP or DOWN.
+</div>
+</li>
+<li>
+<div>
+Select Clear to delete the error history. The Save feature is for factory use only.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i070">
+</a>
+<ol>
+<li value="2">
+<div>
+Use the DTC Symptom troubleshooting table to troubleshoot the error.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001850','1');">
+<img src="../tn/TL19E00K76100000000BBAD08.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00K76100000000BBAD08_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG20">
+</a>
+<a name="iT02">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Software Error History
+</b>
+</div>
+<br>
+<div>
+Software errors are not available. They are for factory use only.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG21">
+</a>
+<div class="servinfosub_title">
+<b>
+How to Clear Error History
+</b>
+</div>
+<a name="i210">
+</a>
+<ol>
+<li value="1">
+<div>
+Do the steps in How to check Error History.
+</div>
+</li>
+</ol>
+<a name="i220">
+</a>
+<ol>
+<li value="2">
+<div>
+Select Clear in the error menu.
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+By selecting Clear, all software and hardware errors stored in history will be erased at the same time.
+</div>
+</li>
+<li>
+<div>
+Save is for factory use only.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<div class="figure_title">
+<b>
+Hard error history is displayed
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001852','1');">
+<img src="../tn/TL19E00K76100000000BBAD09.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00K76100000000BBAD09_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+<div>
+<div class="figure_title">
+<b>
+Soft error history is displayed (Soft errors are for factory use only)
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001852','2');">
+<img src="../tn/TL19E00K76100000000BBAD10.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00K76100000000BBAD10_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG21">
+</a>
+<a name="i230">
+</a>
+<ol>
+<li value="3">
+<div>
+After selecting Clear and selecting Yes, both Hard Error history and Soft Error history will be cleared at the same time.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<div class="figure_title">
+<b>
+Hard error history clear
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001853','1');">
+<img src="../tn/TL19E00K76100000000BBAD11.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00K76100000000BBAD11_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+<div>
+<div class="figure_title">
+<b>
+Soft error history clear (Soft errors are for factory use only)
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001853','2');">
+<img src="../tn/TL19E00K76100000000BBAD12.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00K76100000000BBAD12_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

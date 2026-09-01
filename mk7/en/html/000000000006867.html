@@ -1,0 +1,177 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+
+<title>Millimeter Wave Radar Unit</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+function Apf() {
+   _prInitImageInfo(100);
+   window.focus();
+   if(gImageGroupList_.length == 0) {
+      window.print();
+   }
+   else {
+      divBody.style.display = "none";
+      var  img_pos,img_hei;
+      var  img_rate = 1.0;
+      var  i;
+      var  obj;
+      var  paper_wid,paper_hei,paper_len;
+      paper_wid = 640.0;
+      paper_hei = 950.0;
+      paper_len = 980.0;
+      for(i=0; i<gImageGroupList_.length; i++){
+         if(gImageGroupList_[i].group != null){
+           obj = gImageGroupList_[i].group;
+         }
+      }
+      if(paper_wid > paper_hei) {
+         alert("For best printing result, select 'landscape' layout from the print menu.");
+      }
+      for(i=0; i<gImageGroupList_.length; i++){
+         if(gImageGroupList_[i].group != null){
+            obj = gImageGroupList_[i].group;
+            if(img_rate > paper_wid/obj.width) {
+               img_rate =  paper_wid/obj.width;
+            }
+            if(img_rate > paper_hei/obj.height) {
+               img_rate =  paper_hei/obj.height;
+            }
+         }
+      }
+      _prResizeImage(img_rate);
+      window.scrollTo(0,10000);
+      var totalHei = document.body.scrollTop+document.body.clientHeight-img_hei;
+      divBody.style.display = "block";
+      var  idObj;
+      var groupObject = document.getElementById("group" + i);
+      var   beforeOffset = 0;
+      var   current_pos;
+      var   img_pos = img_dis = 0;
+      for(i=0; i<gImageGroupList_.length; i++){
+         idObj =document.getElementById("imgId" + (i+1));
+         if(idObj != null) {
+            idObj.style.display = "block";
+            current_pos = idObj.offsetTop;
+            if(gImageGroupList_[i].group != null){
+               obj = gImageGroupList_[i].group;
+               img_dis = current_pos - beforeOffset;
+               if(i == 0) {
+                  var pageCnt = Math.floor(current_pos/paper_hei);
+                  img_dis = img_dis - paper_hei*pageCnt;
+               }
+               img_hei = obj.height*img_rate;
+               img_pos += parseInt(img_dis);
+               if(parseInt(img_pos) > paper_len) {
+                  img_pos = img_pos - paper_len;
+               }
+               img_pos += parseInt(img_hei);
+               idObj.style.display = "none";
+               if(parseInt(img_pos) > paper_len) {
+                  idObj.style.display = "block";
+                  img_pos = parseInt(img_hei) + 50;
+               }
+               beforeOffset = current_pos + parseInt(img_hei);
+            }
+         }
+      }
+      window.print();
+      divBody.style.display = "none";
+      _prResizeImage(100/100);
+      divBody.style.display = "block";
+      window.scrollTo(0,0);
+   }
+}
+-->
+</script>
+<body onload="try{if(parent&&parent.Old)parent.Old(this);}catch(e){}" style="font-family:sans-serif;">
+<div id="divBody" style="display:block">
+<div>
+<div class="top_title">
+<b>
+Millimeter Wave Radar Unit
+</b>
+</div>
+<a name="iS07">
+</a>
+<div>
+<div>
+The millimeter wave radar unit is installed on the front bulkhead on the main bracket. The main bracket allows the radar unit angle to be adjusted ±3 degrees vertically and horizontally (the horizontal adjustment includes the ±2 degrees of auto-aiming margin) by moving the main bracket adjusters. The millimeter wave radar unit has these functions:
+</div>
+<span style="display:none" id="imgId1">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA6EJ8H10900000000CAAD08_1.js">
+</script>
+</div>
+</div>
+<a name="iT01">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Basic distance function
+</b>
+</div>
+<br>
+<div>
+The millimeter wave radar unit radiates 76−77 GHz radar waves within a range of 100 m (328 ft) ahead and 16 degrees horizontally and 3.9 degrees vertically, and it receives the reflected waves. In doing so, it can calculate the distance from the vehicle ahead, the relative speed (the difference of speed between two vehicles), and position and output the data to the adaptive cruise control (ACC) unit.
+</div>
+<a name="iT02">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Aiming function
+</b>
+</div>
+<br>
+<div>
+The millimeter wave radar unit has a horizontal auto-aiming function and runs auto aiming in the range of ±2 degrees in accordance with the directions from the adaptive cruise control (ACC) unit. It also has a mechanical adjustment mechanism that covers the range that the auto-aiming cannot.
+</div>
+<a name="iT03">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Self-diagnosis function
+</b>
+</div>
+<br>
+<div>
+The millimeter wave radar unit has a self-diagnostic function, and it outputs the self-diagnostic information to the adaptive cruise control (ACC) unit.
+</div>
+<a name="iT04">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Sensitivity-lowering detection function
+</b>
+</div>
+<br>
+<div>
+When the detecting performance of the radar is deteriorated by dirt, dust, or other contaminants, it signals the condition malfunction to the adaptive cruise control (ACC) unit until the performance is restored.
+</div>
+<a name="iT05">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Adjuster-misalignment detection function
+</b>
+</div>
+<br>
+<div>
+When more than ±5 degrees of adjuster misalignment is detected while driving, it signals the condition to the adaptive cruise control (ACC) unit.
+</div>
+</div></div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+with(document) {
+write("<div id=\"group3\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:959px;\">");
+write("<div id=\"rect3\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:959px;\">");
+write("<img id=\"img3\" name=\"PrtImgId\" src=\"../img/TL19E9AJ34600000000DAAD03.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:959px;border-color:#ffffff\">");
+write("<p id=\"p3_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:272px;top:18px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>GAUGE CONTROL MODULE<br><a href=\"javascript:CtsProc('0','000000000003159','i000')\"></b>Input Test,</a><br><a href=\"javascript:CtsProc('0','000000000000350','i000')\">Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p3_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:324px;top:833px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>HEADLIGHT LEVELING<br>CONTROL UNIT (With HID)<br><a href=\"javascript:CtsProc('0','000000000000414','i000')\"></b>Input Test,</a><br> in the Shop Manual, P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000000414','i000')\">Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p3_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:386px;top:93px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>IMMOBILIZER-KEYLESS CONTROL UNIT (Built-in receiver)<br><a href=\"javascript:CtsProc('0','000000000000516','i000')\"></b>Symptom Troubleshooting,</a><br> in the Shop Manual, P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000000523','i000')\">Registration,</a><br> in the Shop Manual, P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000002657','i000')\">Input Test,</a><br> in the Shop Manual, P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000000522','i000')\">Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p3_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:831px;top:582px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>HANDS FREE<br>TELEPHONE<br>CONTROL UNIT<br></b></nobr>");
+write("</p>");
+write("<p id=\"p3_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:26px;top:758px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>PARKING/BACK-UP SENSOR<br>CONTROL UNIT<br><a href=\"javascript:CtsProc('0','000000000000233','i000')\"></b>Input Test,</a><br> in the Shop Manual, P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000000234','i000')\">Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p3_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:559px;top:816px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>CLIMATE CONTROL UNIT<br></b></nobr>");
+write("</p>");
+write("<p id=\"p3_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:472px;top:766px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>AUDIO UNIT<br>(With navigation)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p3_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:638px;top:250px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>AUDIO UNIT<br>(Without navigation)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p3_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:2px;top:929px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b></b>LHD model is shown, RHD model is similar.<br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

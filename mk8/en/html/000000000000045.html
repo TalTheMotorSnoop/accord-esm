@@ -1,0 +1,1319 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E00D14300014791MDAT20
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+Rear Brake Pad Inspection and Replacement
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<div class="tool_list_title">
+<b>
+Special Tools Required
+</b>
+</div>
+<div>
+<a href="javascript:PrtProc('0','ZOOM000000000013607')">
+<br>
+Locknut wrench, 5.5 x 30 mm
+<br>
+ 07916-6390001
+</a>
+</div>
+<table width="100%" rules="all" class="Viewer" frame="border">
+<tr>
+<th class="caution_head">
+<img src="../img/SYM833.PNG">
+</img>
+</th>
+</tr>
+<tr>
+<td class="ViewerTD">
+<div>
+Frequent inhalation of brake pad dust, regardless of material composition, could be hazardous to your health.
+</div>
+<ul type="disc">
+<li>
+<div>
+Avoid breathing dust particles.
+</div>
+</li>
+<li>
+<div>
+Never use an air hose or brush to clean brake assemblies. Use an appropriate vacuum cleaner.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+<br>
+<a name="iR01">
+</a>
+<div class="procedure_sub_title">
+<b>
+Inspection - Rear disc brake type
+</b>
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+<a href="javascript:CtsProc('0','000000000002895','i000')">
+Raise the rear of the vehicle, and support it with safety stands in the proper locations.
+</a>
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Remove the rear wheels.
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Check the thickness (A) of the inner pad (B) and the outer pad (C). Do not include the thickness of the backing plate.
+</div>
+<div>
+<table width="87%" class="Viewer" frame="void" style="table-layout:fixed;">
+<col width="4%">
+<col width="29%">
+<col width="66%">
+<tbody>
+<tr>
+<td class="ViewerTD" colspan="3" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Brake pad thickness:
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Standard:
+</b>
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+8.3−9.0 mm (0.33−0.35 in.)
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Service limit:
+</b>
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+1.0 mm (0.04 in.)
+</b>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+If the brake pad thickness of any of the pads is less than the service limit, replace the rear brake pads as a set.
+</div>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+Clean the mating surfaces of the brake disc and the inside of the wheel, then install the rear wheels.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000224','1');">
+<img src="../tn/TL19E00D14300014791MDAD20.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00D14300014791MDAD20_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR02">
+</a>
+<div class="procedure_sub_title">
+<b>
+Replacement - Rear disc brake type
+</b>
+</div>
+<a name="i210">
+</a>
+<ol>
+<li value="1">
+<div>
+Remove some brake fluid from the master cylinder.
+</div>
+</li>
+</ol>
+<a name="i220">
+</a>
+<ol>
+<li value="2">
+<div>
+<a href="javascript:CtsProc('0','000000000002895','i000')">
+Raise the rear of the vehicle, and support it with safety stands in the proper locations.
+</a>
+</div>
+</li>
+</ol>
+<a name="i230">
+</a>
+<ol>
+<li value="3">
+<div>
+Remove the rear wheels.
+</div>
+</li>
+</ol>
+<a name="i240">
+</a>
+<ol>
+<li value="4">
+<div>
+Remove the brake hose mounting bolt (A).
+</div>
+</li>
+</ol>
+<a name="i250">
+</a>
+<ol>
+<li value="5">
+<div>
+Remove the flange bolts (B) while holding respective caliper pin (C) with a wrench. Be careful not to damage the pin boot, and remove the caliper (D). Check the hose, the pin boots, and the parking brake cable boots for damage and deterioration.
+</div>
+<div>
+NOTE: Do not twist the brake hose and the parking brake cable to prevent damage.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000225','1');">
+<img src="../tn/TL19E00D14300014791MDAD21.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00D14300014791MDAD21_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR02">
+</a>
+<a name="i260">
+</a>
+<ol>
+<li value="6">
+<div>
+Remove the pad shim (A) and the brake pads (B).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000226','1');">
+<img src="../tn/TL19E00D14300014791MDAD22.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00D14300014791MDAD22_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR02">
+</a>
+<a name="i270">
+</a>
+<ol>
+<li value="7">
+<div>
+Remove the pad retainers (A).
+</div>
+</li>
+</ol>
+<a name="i280">
+</a>
+<ol>
+<li value="8">
+<div>
+Clean the caliper bracket (B) thoroughly; remove any rust, and check for grooves and cracks. Verify that the caliper pins (C) move in and out smoothly. Clean and lube if needed.
+</div>
+</li>
+</ol>
+<a name="i290">
+</a>
+<ol>
+<li value="9">
+<div>
+<a href="javascript:CtsProc('0','000000000000038','i000')">
+Inspect the brake disc, and check for damage and cracks.
+</a>
+</div>
+</li>
+</ol>
+<a name="i300">
+</a>
+<ol>
+<li value="10">
+<div>
+Apply Molykote M77 grease to the retainers on their mating surfaces (indicated by the arrows) against the caliper bracket.
+</div>
+</li>
+</ol>
+<a name="i310">
+</a>
+<ol>
+<li value="11">
+<div>
+Install the pad retainers. Wipe excess grease off the retainers. Keep the grease off the brake disc and brake pads.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000227','1');">
+<img src="../tn/TL19E00D14300014791MDAD23.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00D14300014791MDAD23_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR02">
+</a>
+<a name="i320">
+</a>
+<ol>
+<li value="12">
+<div>
+Rotate the caliper piston (A) clockwise into the cylinder by using the locknut wrench.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000228','1');">
+<img src="../tn/TL19E00D14300014791MDAD24.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00D14300014791MDAD24_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR02">
+</a>
+<a name="i330">
+</a>
+<ol>
+<li value="13">
+<div>
+Apply Molykote M77 grease to the pad side of the shim (A), the back of the brake pads (B), and the other areas indicated by the arrows. Wipe excess grease off the pad shim and brake pads. Keep grease off the brake discs and the pads. Contaminated brake discs or brake pads reduce stopping ability.
+</div>
+</li>
+</ol>
+<a name="i340">
+</a>
+<ol>
+<li value="14">
+<div>
+Install the brake pads and pad shim correctly. Install the brake pad with the wear indicator (C) on the bottom inside. If you are reusing the brake pads, always reinstall the brake pads in their original positions to prevent a momentary loss of braking efficiency.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000229','1');">
+<img src="../tn/TL19E00D14300014791MDAD25.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00D14300014791MDAD25_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR02">
+</a>
+<a name="i350">
+</a>
+<ol>
+<li value="15">
+<div>
+Align the cutout (A) in the piston (B) with the tab (C) on the inner pad. Lubricate the boot with rubber grease to avoid twisting the piston boot. If the piston boot is twisted, back it out so it is positioned properly.
+</div>
+<div>
+NOTE: Be careful when moving the piston back in the caliper; brake fluid might overflow from the master cylinder's reservoir.
+</div>
+</li>
+</ol>
+<a name="i360">
+</a>
+<ol>
+<li value="16">
+<div>
+Install the caliper. Install the flange bolts (D), and tighten it to the specified torque while holding the respective caliper pin with a wrench, being careful not to damage the pin boots and parking brake cable boots.
+</div>
+</li>
+</ol>
+<a name="i370">
+</a>
+<ol>
+<li value="17">
+<div>
+Install the brake hose mounting bolt (E).
+</div>
+</li>
+</ol>
+<a name="i380">
+</a>
+<ol>
+<li value="18">
+<div>
+Clean the mating surfaces of the brake disc and the inside of the wheel, then install the rear wheels.
+</div>
+</li>
+</ol>
+<a name="i390">
+</a>
+<ol>
+<li value="19">
+<div>
+Press the brake pedal several times to make sure the brakes work.
+</div>
+<div>
+NOTE: Engagement may require a greater pedal stroke immediately after the brake pads have been replaced as a set. Several applications of the brake pedal will restore the normal pedal stroke.
+</div>
+</li>
+</ol>
+<a name="i400">
+</a>
+<ol>
+<li value="20">
+<div>
+Add brake fluid as needed.
+</div>
+</li>
+</ol>
+<a name="i410">
+</a>
+<ol>
+<li value="21">
+<div>
+After installation, check for leaks at hose and line joints or connections, and retighten if necessary. 
+<a href="javascript:CtsProc('0','000000000000040','i000')">
+Test-drive the vehicle, then recheck for leaks.
+</a>
+</div>
+</li>
+</ol>
+<a name="i420">
+</a>
+<ol>
+<li value="22">
+<div>
+<a href="javascript:CtsProc('0','000000000000025','iR02')">
+Adjust the parking brake.
+</a>
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000230','1');">
+<img src="../tn/TL19E00D14300014791MDAD26.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00D14300014791MDAD26_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR03">
+</a>
+<div class="procedure_sub_title">
+<b>
+Inspection - Rear drum in disc brake type
+</b>
+</div>
+<a name="i610">
+</a>
+<ol>
+<li value="1">
+<div>
+Raise the rear of the vehicle, and 
+<a href="javascript:CtsProc('0','000000000002895','i000')">
+support it with safety stands in the proper locations.
+</a>
+</div>
+</li>
+</ol>
+<a name="i620">
+</a>
+<ol>
+<li value="2">
+<div>
+Remove the rear wheels.
+</div>
+</li>
+</ol>
+<a name="i630">
+</a>
+<ol>
+<li value="3">
+<div>
+Check the thickness (A) of the inner pad (B) and outer pad (C). Do not include the thickness of the backing plate.
+</div>
+<div>
+<table width="87%" class="Viewer" frame="void" style="table-layout:fixed;">
+<col width="4%">
+<col width="29%">
+<col width="66%">
+<tbody>
+<tr>
+<td class="ViewerTD" colspan="3" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Brake pad thickness:
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="center">
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Standard:
+</b>
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+8.3−9.0 mm (0.33−0.35 in.)
+</b>
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="center">
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Service limit:
+</b>
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+1.6 mm (0.06 in.)
+</b>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</li>
+</ol>
+<a name="i640">
+</a>
+<ol>
+<li value="4">
+<div>
+If the brake pad thickness of any of the pads is less than the service limit, replace all of the rear brake pads as a set.
+</div>
+</li>
+</ol>
+<a name="i650">
+</a>
+<ol>
+<li value="5">
+<div>
+Clean the mating surfaces of the brake disc/drum and the inside of the wheel, then install the rear wheels.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000231','1');">
+<img src="../tn/TL19E00D14300014791MDAD27.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00D14300014791MDAD27_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<div class="procedure_sub_title">
+<b>
+Replacement - Rear drum in disc brake type
+</b>
+</div>
+<a name="i710">
+</a>
+<ol>
+<li value="1">
+<div>
+Remove some brake fluid from the master cylinder.
+</div>
+</li>
+</ol>
+<a name="i720">
+</a>
+<ol>
+<li value="2">
+<div>
+Raise the rear of the vehicle, and 
+<a href="javascript:CtsProc('0','000000000002895','i000')">
+support it with safety stands in the proper locations.
+</a>
+</div>
+</li>
+</ol>
+<a name="i730">
+</a>
+<ol>
+<li value="3">
+<div>
+Remove the rear wheels.
+</div>
+</li>
+</ol>
+<a name="i740">
+</a>
+<ol>
+<li value="4">
+<div>
+Remove the flange bolts (A) while holding respective caliper pin (B) with a wrench. Be careful not to damage the pin boot, and remove the caliper (C). Check the hose and the pin boots for damage and deterioration.
+</div>
+<div>
+NOTE: Do not twist the brake hose to prevent damage.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000232','1');">
+<img src="../tn/TL19E00D14300014791MDAD28.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00D14300014791MDAD28_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="i750">
+</a>
+<ol>
+<li value="5">
+<div>
+Remove the outer pad (A) and the pad shim (B).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000233','1');">
+<img src="../tn/TL19E00D14300014791MDAD29.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00D14300014791MDAD29_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="i760">
+</a>
+<ol>
+<li value="6">
+<div>
+Remove the inner pad (A) from the caliper.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000234','1');">
+<img src="../tn/TL19E00D14300014791MDAD30.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00D14300014791MDAD30_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="i770">
+</a>
+<ol>
+<li value="7">
+<div>
+Remove the pad retainers (A).
+</div>
+<div>
+NOTE: The upper and lower pad retainers are different. During installation, make sure the pad retainers are in proper positions.
+</div>
+</li>
+</ol>
+<a name="i780">
+</a>
+<ol>
+<li value="8">
+<div>
+Clean the caliper bracket (B) thoroughly; remove any rust, and check for grooves and cracks.
+</div>
+<div>
+Verify that the caliper pins (C) move in and out smoothly. Clean and lube if needed.
+</div>
+</li>
+</ol>
+<a name="i790">
+</a>
+<ol>
+<li value="9">
+<div>
+Check the brake disc/drum for damage and cracks.
+</div>
+</li>
+</ol>
+<a name="i800">
+</a>
+<ol>
+<li value="10">
+<div>
+Apply Molykote M77 grease to the retainers on their mating surfaces (indicated by the arrows) against the caliper bracket.
+</div>
+</li>
+</ol>
+<a name="i810">
+</a>
+<ol>
+<li value="11">
+<div>
+Install the pad retainers. Wipe excess grease off the retainers. Keep any grease off the brake discs and the brake pads.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000235','1');">
+<img src="../tn/TL19E00D14300014791MDAD31.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00D14300014791MDAD31_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="i820">
+</a>
+<ol>
+<li value="12">
+<div>
+Mount the commercially available brake caliper piston compressor tool (A) on the caliper body (B).
+</div>
+</li>
+</ol>
+<a name="i830">
+</a>
+<ol>
+<li value="13">
+<div>
+Press in the piston with the brake caliper piston compressor tool so the caliper will fit over the brake pads. Make sure the piston boot is in position to prevent damaging it when pivoting the caliper down.
+</div>
+<div>
+NOTE: Be careful when pressing in the piston; brake fluid might overflow from the master cylinder's reservoir. If brake fluid gets on any painted surface, wash it off immediately with water.
+</div>
+</li>
+</ol>
+<a name="i840">
+</a>
+<ol>
+<li value="14">
+<div>
+Remove the brake caliper piston compressor tool.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000236','1');">
+<img src="../tn/TL19E00D14300014791MDAD32.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00D14300014791MDAD32_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="i850">
+</a>
+<ol>
+<li value="15">
+<div>
+Apply Molykote M77 grease to the pad side of the shim (A), the back of the brake pad (B), and the other areas indicated by the arrows. Wipe excess grease off the pad shim and the brake pads. Keep grease off the brake discs and the brake pads. Contaminated brake discs or brake pads reduce stopping ability.
+</div>
+</li>
+</ol>
+<a name="i860">
+</a>
+<ol>
+<li value="16">
+<div>
+Install the brake pads and the pad shim correctly. Install the brake pad with the wear indicator (C) on the bottom inside. If you are reusing the brake pads, always reinstall the brake pads in their original positions to prevent a momentary loss of braking efficiency.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<div class="figure_title">
+<b>
+Outer pad
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000237','1');">
+<img src="../tn/TL19E00D14300014791MDAD33.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00D14300014791MDAD33_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+<div>
+<div class="figure_title">
+<b>
+Inner pad
+</b>
+</div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000237','2');">
+<img src="../tn/TL19E00D14300014791MDAD34.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00D14300014791MDAD34_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<a name="i870">
+</a>
+<ol>
+<li value="17">
+<div>
+Install the caliper into position. Install the flange bolts (A), and tighten it to the specified torque. While holding the caliper pin (B) with a wrench. Be careful not to damage the pin boots.
+</div>
+</li>
+</ol>
+<a name="i880">
+</a>
+<ol>
+<li value="18">
+<div>
+Clean the mating surfaces of the brake disc/drum and the inside of the wheel, then install the rear wheels.
+</div>
+</li>
+</ol>
+<a name="i890">
+</a>
+<ol>
+<li value="19">
+<div>
+Press the brake pedal several times to make sure the brakes work.
+</div>
+<div>
+NOTE: Engagement may require a greater pedal stroke immediately after the brake pads have been replaced as a set. Several applications of the brake pedal will restore the normal pedal stroke.
+</div>
+</li>
+</ol>
+<a name="i900">
+</a>
+<ol>
+<li value="20">
+<div>
+Add brake fluid as needed.
+</div>
+</li>
+</ol>
+<a name="i910">
+</a>
+<ol>
+<li value="21">
+<div>
+After installation, check for leaks at hose and line joints or connections, and retighten if necessary.
+</div>
+<div>
+Test-drive the vehicle, then 
+<a href="javascript:CtsProc('0','000000000000040','i000')">
+recheck for leaks.
+</a>
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000238','1');">
+<img src="../tn/TL19E00D14300014791MDAD35.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00D14300014791MDAD35_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

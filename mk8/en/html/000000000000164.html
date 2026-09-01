@@ -1,0 +1,523 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E00H10800012441BAAT10
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+DTC Troubleshooting: 80, 83, 84, 85, 86, 87, 88, 89, 91, 93, 94, 95, 96, 99, 101
+</div>
+<div>
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG01">
+</a>
+<div class="servinfosub_title">
+<b>
+How to Troubleshoot DTCs
+</b>
+</div>
+<div>
+Check and clear the DTCs with the HDS.
+</div>
+<div>
+Before troubleshooting, check and note these items:
+</div>
+<ul type="disc">
+<li>
+<div>
+Ask the customer about the conditions when the problem occurred, and try to reproduce the same conditions for troubleshooting.
+</div>
+</li>
+<li>
+<div>
+If a DTC was present, but the ACC indicator did not come and there were no symptoms during the test-drive, check for poor connections or loose terminals at all connectors related to the circuit that you are troubleshooting.
+</div>
+</li>
+<li>
+<div>
+After the troubleshooting or repairs are done, clear the DTCs, and test-drive the vehicle under same conditions as when the DTC was originally set. Make sure the ACC indicator does not come on.
+</div>
+</li>
+</ul>
+<div>
+The ACC system sometimes stops control because of the environment (weather, road conditions, driving conditions, etc.). A DTC may be stored in these cases.
+</div>
+<div>
+<b>
+DTCs that may be stored even when the system is normal:
+</b>
+</div>
+<div>
+<b>
+ACC indicator does not go on
+</b>
+</div>
+<a name="iT01">
+</a>
+<br>
+<div class="topic_title">
+<b>
+DTC 80: Request Shift Up or Shift Down
+</b>
+</div>
+<br>
+<div>
+Either shift up or shift down indication comes on to show you the appropriate time to shift to a higher or lower gear. Follow the indication.
+</div>
+<a name="iT02">
+</a>
+<br>
+<div class="topic_title">
+<b>
+DTC 83: Millimeter Wave Radar Detection Unstable
+</b>
+</div>
+<br>
+<div>
+Driving behind a target vehicle that caused unstable reception.
+</div>
+<a name="iT03">
+</a>
+<br>
+<div class="topic_title">
+<b>
+DTC 84: Target vehicle comes closer than the millimeter wave radar detecting limits
+</b>
+</div>
+<br>
+<div>
+The target vehicle brakes suddenly, etc.
+</div>
+<a name="iT04">
+</a>
+<br>
+<div class="topic_title">
+<b>
+DTC 85: Extensive driving on a rough or winding road, or VSA system malfunction
+</b>
+</div>
+<br>
+<a name="iT05">
+</a>
+<br>
+<div class="topic_title">
+<b>
+DTC 86: Abnormal tyre pressure
+</b>
+</div>
+<br>
+<div>
+Abnormal tyre pressure, flat tyre.
+</div>
+<a name="iT06">
+</a>
+<br>
+<div class="topic_title">
+<b>
+DTC 87: Adaptive cruise control (ACC) brake control temporarily prohibited
+</b>
+</div>
+<br>
+<div>
+ACC brake works continuously, or ACC brake control is temporarily prohibited by a communication line error detected between the ACC unit and VSA modulator-control unit.
+</div>
+<a name="iT07">
+</a>
+<br>
+<div class="topic_title">
+<b>
+DTC 88: Millimeter wave radar out of detection area
+</b>
+</div>
+<br>
+<div>
+Millimeter wave radar unit temperature is too high, millimeter wave radar unit supply voltage is too low, or out of detection condition.
+</div>
+<a name="iT08">
+</a>
+<br>
+<div class="topic_title">
+<b>
+DTC 89: Front wheel spin
+</b>
+</div>
+<br>
+<a name="iT09">
+</a>
+<br>
+<div class="topic_title">
+<b>
+DTC 91: Vehicle skidded, spun out, or abrupt steering wheel movements
+</b>
+</div>
+<br>
+<a name="iT10">
+</a>
+<br>
+<div class="topic_title">
+<b>
+DTC 93: Front tyre problem
+</b>
+</div>
+<br>
+<div>
+Different diameter of tyres, flat tyre, or large air pressure differential.
+</div>
+<a name="iT11">
+</a>
+<br>
+<div class="topic_title">
+<b>
+DTC 94: Rear tyre problem
+</b>
+</div>
+<br>
+<div>
+Different diameter of tyres, flat tyre, or large air pressure differential.
+</div>
+<a name="iT12">
+</a>
+<br>
+<div class="topic_title">
+<b>
+DTC 95: Power supply voltage too high
+</b>
+</div>
+<br>
+<a name="iT13">
+</a>
+<br>
+<div class="topic_title">
+<b>
+DTC 96: Power supply voltage too low
+</b>
+</div>
+<br>
+<a name="iT14">
+</a>
+<br>
+<div class="topic_title">
+<b>
+DTC 99: Acceleration/deceleration abnormality
+</b>
+</div>
+<br>
+<div>
+Detects acceleration or deceleration that is out of the normal system operating range.
+</div>
+<a name="iT15">
+</a>
+<br>
+<div class="topic_title">
+<b>
+DTC 101: Rear wheel locked
+</b>
+</div>
+<br>
+<div>
+Driving with the parking brake applied, or the parking brake stuck.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG02">
+</a>
+<div class="servinfosub_title">
+<b>
+Adaptive Cruise Control (ACC) Unit Updating
+</b>
+</div>
+<div>
+<b>
+Special Tools Required
+</b>
+</div>
+<ul type="disc">
+<li>
+<div>
+Honda diagnostic system (HDS) tablet tester
+</div>
+</li>
+<li>
+<div>
+Honda interface module (HIM) and an iN workstation with HDS and the latest software
+</div>
+</li>
+<li>
+<div>
+HDS pocket tester
+</div>
+</li>
+<li>
+<div>
+GNA600 and an iN workstation with HDS and the latest software
+</div>
+<div>
+Use any one of these update tools.
+</div>
+</li>
+</ul>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+Use this procedure when you need to update the ACC unit during a troubleshooting procedures.
+</div>
+</li>
+<li>
+<div>
+Make sure the HDS/HIM has the latest software version.
+</div>
+</li>
+<li>
+<div>
+Before you update the ACC unit, make sure the battery in the vehicle is fully charged.
+</div>
+</li>
+<li>
+<div>
+Never turn the ignition switch to LOCK (0) or ACC (I) during the update. If there is a problem with the update, leave the ignition switch to ON (II).
+</div>
+</li>
+<li>
+<div>
+To prevent ACC unit damage, do not operate anything electrical (headlights, audio system, brakes, A/C, power windows, moonroof (if equipped), door locks, etc.) during the update.
+</div>
+</li>
+<li>
+<div>
+To ensure the latest program is installed, do an ACC unit update whenever the ACC unit is replaced.
+</div>
+</li>
+<li>
+<div>
+You cannot update an ACC unit with a program it already has. It will only accept a new program.
+</div>
+</li>
+<li>
+<div>
+If you need to diagnose the HIM because the HIM's red (#3) lamp came on or was flashed during the update, leave the ignition switch in the ON (II) position when you disconnect the HIM from the data link connector (DLC). This will prevent ACC unit damage.
+</div>
+</li>
+</ul>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Connect the HDS to the DLC (A).
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Turn the ignition switch to ON (II), but do not start the engine.
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Make sure the HDS communicates with the vehicle and the ACC unit. If it does not communicate, 
+<a href="javascript:CtsProc('0','000000000001600','i000')">
+troubleshoot the DLC circuit.
+</a>
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Select the update program, and follow the screen prompts to update the ACC unit.
+</div>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+If the software in the ACC unit is the latest, disconnect the HDS/HIM from the DLC, and go back to the procedure that you were doing. If the software in the ACC unit is not the latest, follow the instructions on the screen.
+</div>
+<div>
+NOTE: If you run into a problem during the update procedure (programming takes over 15 minutes, status bar goes over 100 %, D or immobilizer light flashes, HDS tablet freezes, etc.), follow these steps to minimize the chance of damaging the ACC unit :
+</div>
+<ul type="disc">
+<li>
+<div>
+Leave the ignition switch in the ON (II) position.
+</div>
+</li>
+<li>
+<div>
+Connect a jumper battery (do not connect a battery charger).
+</div>
+</li>
+<li>
+<div>
+Shut down the HDS.
+</div>
+</li>
+<li>
+<div>
+Disconnect the HDS from the DLC.
+</div>
+</li>
+<li>
+<div>
+Reboot the HDS.
+</div>
+</li>
+<li>
+<div>
+Reconnect the HDS to the DLC, and try the update procedure again.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+Turn the ignition switch to LOCK (0).
+</div>
+</li>
+</ol>
+<a name="i070">
+</a>
+<ol>
+<li value="7">
+<div>
+Disconnect the HDS from the DLC.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000000475','1');">
+<img src="../tn/TL19E00H10800012441CAAD04.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00H10800012441CAAD04_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

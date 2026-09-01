@@ -1,0 +1,34 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:831px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:831px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E5AE10411200000CAAD06.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:831px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:565px;top:31px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>MAINSHAFT<br>5TH GEAR<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:453px;top:632px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>COUNTERSHAFT <br>5TH GEAR<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:455px;top:17px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>5TH CLUTCH<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:764px;top:530px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>SECONDARY<br>SHAFT<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:833px;top:238px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>FINAL DRIVE<br>GEAR<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:760px;top:486px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>COUNTERSHAFT<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:311px;top:62px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>MAINSHAFT<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:842px;top:46px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>TORQUE <br>CONVERTER<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:711px;top:801px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>FINAL DRIVEN GEAR<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

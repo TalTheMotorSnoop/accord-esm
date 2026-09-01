@@ -1,0 +1,31 @@
+with(document) {
+write("<div id=\"group3\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:591px;\">");
+write("<div id=\"rect3\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:591px;\">");
+write("<img id=\"img3\" name=\"PrtImgId\" src=\"../img/TL19E00J34300000000DAAD03.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:591px;border-color:#ffffff\">");
+write("<p id=\"p3_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:36px;top:80px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>HARNESS COVER BASE<br>(For some models)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p3_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:331px;top:333px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>MOUNT<br></b></nobr>");
+write("</p>");
+write("<p id=\"p3_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:699px;top:16px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>RAIN SENSOR COVER BASE<br>(Without lane keep assist system<br>and with automatic wiper)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p3_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:695px;top:307px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>RAIN SENSOR COVER<br>(Without lane keep assist system<br>and with automatic wiper)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p3_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:150px;top:366px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>MIRROR HARNESS COVER<br>(With lane keep assist system)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p3_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:642px;top:546px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>REARVIEW MIRROR<br><a href=\"javascript:CtsProc('0','000000000000458','iR02')\"></b>Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p3_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:326px;top:17px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>MIRROR HARNESS<br>LOWER COVER<br>(Without lane keep<br>assist system<br>and without<br>automatic wiper)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p3_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:527px;top:17px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>MIRROR HARNESS<br>UPPER COVER<br>(Without lane keep<br>assist system<br>and without<br>automatic wiper)<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

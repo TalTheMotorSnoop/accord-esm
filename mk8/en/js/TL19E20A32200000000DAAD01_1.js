@@ -1,0 +1,34 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:1103px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:1103px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E20A32200000000DAAD01.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:1103px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:450px;top:17px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>OIL FILTER<br><a href=\"javascript:CtsProc('0','000000000001238','i000')\"></b>Replacemant,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:457px;top:105px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>OIL FILTER FEED PIPE<br><a href=\"javascript:CtsProc('0','000000000001239','i000')\"></b>Replacemant,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:784px;top:249px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>OIL LEVEL SENSOR<br><a href=\"javascript:CtsProc('0','000000000001202','i000')\"></b>Replace,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:642px;top:439px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>OIL PAN<br><a href=\"javascript:CtsProc('0','000000000001111','i000')\"></b>Removal,</a><br><a href=\"javascript:CtsProc('0','000000000001112','i000')\">Installation,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:702px;top:532px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>BALANCER SHAFT/BALANCER<br>SHAFT HOLDER ASSEMBLY<br><a href=\"javascript:CtsProc('0','000000000001113','iR01')\"></b>Removal,</a><br><a href=\"javascript:CtsProc('0','000000000001113','iR02')\">Inspection,</a><br><a href=\"javascript:CtsProc('0','000000000001113','iR03')\">Installation,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:813px;top:648px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>OIL PUMP<br><a href=\"javascript:CtsProc('0','000000000001242','i000')\"></b>Overhaul,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:808px;top:973px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>CRANKSHAFT OIL<br>SEAL, PULLEY END<br><a href=\"javascript:CtsProc('0','000000000001237','i000')\"></b>Installation,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:4px;top:1016px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>OIL PRESSURE SWITCH<br><a href=\"javascript:CtsProc('0','000000000001246','i000')\"></b>Circuit Diagram,</a><br><a href=\"javascript:CtsProc('0','000000000001249','i000')\">Test,</a><br><a href=\"javascript:CtsProc('0','000000000001250','i000')\">Replacement,</a><br><a href=\"javascript:CtsProc('0','000000000001230','i000')\">Oil Pressure Test,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:57px;top:643px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>OIL CONTROL ORIFICE<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

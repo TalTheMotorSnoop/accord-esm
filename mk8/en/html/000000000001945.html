@@ -1,0 +1,594 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E40A20321222181BAAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+DPF Regeneration
+</div>
+<div>
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<div>
+Do the diesel particulate filter (DPF) regeneration procedure whenever you find any of these symptoms or whenever you do any of these actions.
+</div>
+<ul type="disc">
+<li>
+<div>
+When the DPF REGENERATION REQUIRED display (A), or the CHECK SYSTEM (DPF OVER ACCUMULATION) display (B) is on.
+</div>
+</li>
+</ul>
+<ul type="disc">
+<li>
+<div>
+When the ECM is replaced.
+</div>
+</li>
+<li>
+<div>
+When the DPF converter is replaced or it was loose before.
+</div>
+</li>
+<li>
+<div>
+When the DPF differential pressure sensor is replaced or it was loose before.
+</div>
+</li>
+<li>
+<div>
+When the DPF differential pressure sensor tube is replaced or it was loose before.
+</div>
+</li>
+<li>
+<div>
+When the fuel injector is replaced or it was loose before.
+</div>
+</li>
+<li>
+<div>
+When EGT sensor 1 is replaced or it was loose before.
+</div>
+</li>
+<li>
+<div>
+When the MAF sensor/IAT sensor 1 is replaced or it was loose before.
+</div>
+</li>
+<li>
+<div>
+When the MAP sensor/IAT sensor 2 is replaced or it was loose before.
+</div>
+</li>
+<li>
+<div>
+When ECT sensor 1 is replaced or it was loose before.
+</div>
+</li>
+<li>
+<div>
+When the ISV is replaced.
+</div>
+</li>
+<li>
+<div>
+When the EGR valve is replaced or it was loose before.
+</div>
+</li>
+<li>
+<div>
+When the turbocharger is replaced or it was loose before.
+</div>
+</li>
+<li>
+<div>
+When the exhaust manifold is replaced or it was loose before.
+</div>
+</li>
+<li>
+<div>
+When the glow plug is replaced or it was loose before.
+</div>
+</li>
+<li>
+<div>
+When the intake air duct was loose before.
+</div>
+</li>
+<li>
+<div>
+When the IMRC valve is replaced.
+</div>
+</li>
+</ul>
+<table width="100%" rules="all" class="Viewer" frame="border">
+<tr>
+<th class="caution_head">
+<img src="../img/SYM833.PNG">
+</img>
+</th>
+</tr>
+<tr>
+<td class="ViewerTD">
+<ul type="disc">
+<li>
+<div>
+Perform this procedure at outdoors.
+</div>
+</li>
+<li>
+<div>
+Exhaust system will become very hot during this procedure. Do not place any flammable materials around the exhaust system.
+</div>
+</li>
+<li>
+<div>
+Do not breath in the exhaust gas.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+<br>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+During this procedure, the idle speed may rise, but it is not a problem. Continue the procedure.
+</div>
+</li>
+<li>
+<div>
+During this procedure, white smoke and smell may come out from the exhaust system, but it is not a mechanical problem. Do not breath in the exhaust gas, and continue the procedure.
+</div>
+</li>
+<li>
+<div>
+Do not turn the ignition switch to LOCK (0) during this procedure. You have to complete this procedure if you have once started.
+</div>
+</li>
+<li>
+<div>
+This procedure will take about 5 to 30 minutes.
+</div>
+</li>
+<li>
+<div>
+If any Temporary DTCs or DTCs are stored during this procedure, go to the indicated DTC's troubleshooting first, then do this procedure.
+</div>
+</li>
+</ul>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Turn the ignition switch to ON (II).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000005094','1');">
+<img src="../tn/TL19E40A20321222181BAAD01.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E40A20321222181BAAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Connect the HDS to the data link connector (DLC) (A) located under the driver's side of dashboard.
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Check for Temporary DTCs or DTCs with the HDS. If there are any Temporary DTCs or DTCs indicated, go to the indicated DTC's troubleshooting. If there are no DTCs indicated, go to 
+<a href="javascript:try{parent.Jmp('i040');}catch(e){location.hash='i040';}">Step 4
+</a>
+.
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Select DPF REGENERATION in the ADJUSTMENT MENU with the HDS.
+</div>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+Check DISTANCE FROM LAST DPF REGENERATION in the DPF RERATED PARAMETER STATE with the HDS. If it is over 300 km (186 mile), go to 
+<a href="javascript:try{parent.Jmp('i060');}catch(e){location.hash='i060';}">Step 6
+</a>
+. If it is below 300 km (186 mile), 
+<a href="javascript:CtsProc('0','000000000001944','i000')">
+check for damage or clogging at the DPF differential pressure sensor and the DPF differential pressure sensor piping.
+</a>
+ If there is no damage or clogging there, go to 
+<a href="javascript:try{parent.Jmp('i060');}catch(e){location.hash='i060';}">Step 6
+</a>
+. If the DPF differential pressure sensor piping is damaged or clogged, replace the piping. Then go to 
+<a href="javascript:try{parent.Jmp('i010');}catch(e){location.hash='i010';}">Step 1
+</a>
+ and this procedure again.
+</div>
+</li>
+</ol>
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+If the result is COMPLETED, this procedure is completed. If the HDS shows other than ‘‘COMPLETED'', go to the appropriate step listed below:
+</div>
+<ul type="disc">
+<li>
+<div>
+‘‘Wrong condition'', go to 
+<a href="javascript:try{parent.Jmp('i070');}catch(e){location.hash='i070';}">Step 7
+</a>
+.
+</div>
+</li>
+<li>
+<div>
+‘‘DPF system check required'' (PM amount too much or Ash amount too much), go to 
+<a href="javascript:try{parent.Jmp('i080');}catch(e){location.hash='i080';}">Step 8
+</a>
+.
+</div>
+</li>
+<li>
+<div>
+‘‘The DPF regeneration mode interrupted'' (Exhaust system temperature did not rise after the specified time), go to 
+<a href="javascript:try{parent.Jmp('i090');}catch(e){location.hash='i090';}">Step 9
+</a>
+.
+</div>
+</li>
+<li>
+<div>
+‘‘The DPF regeneration mode interrupted'' (Exhaust gas temperature into the DPF converter (EGT sensor 1)), go to 
+<a href="javascript:try{parent.Jmp('i100');}catch(e){location.hash='i100';}">Step 10
+</a>
+.
+</div>
+</li>
+<li>
+<div>
+‘‘The DPF regeneration mode interrupted'' (Time-out), go to 
+<a href="javascript:try{parent.Jmp('i110');}catch(e){location.hash='i110';}">Step 11
+</a>
+.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i070">
+</a>
+<ol>
+<li value="7">
+<div>
+If the HDS shows that the regeneration was interrupted because it was in the ‘‘Wrong condition'', follow what is shown in the screen.
+</div>
+</li>
+</ol>
+<a name="i080">
+</a>
+<ol>
+<li value="8">
+<div>
+If the HDS shows ‘‘DPF system check required'' (PM amount too much or Ash amount too much), check these items:
+</div>
+<ul type="disc">
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000001944','i000')">
+Check for damage or clogging at the DPF differential pressure sensor piping.
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000001947','i000')">
+Check for damage or clogging at the DPF differential pressure sensor.
+</a>
+</div>
+</li>
+</ul>
+<div>
+If there are no problems at the items, 
+<a href="javascript:CtsProc('0','000000000001946','i000')">
+replace the DPF converter.
+</a>
+</div>
+</li>
+</ol>
+<a name="i090">
+</a>
+<ol>
+<li value="9">
+<div>
+If the HDS shows that the regeneration was interrupted because the exhaust system temperature did not rise after the specified time, check these items:
+</div>
+<ul type="disc">
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000001946','i000')">
+Replace the DPF converter.
+</a>
+</div>
+</li>
+<li>
+<div>
+Check for leak at the exhaust system.
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000001936','i000')">
+Check the injector.
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000001923','i000')">
+Check for damage at the turbocharger.
+</a>
+</div>
+</li>
+</ul>
+<div>
+If there are no problems at the items, 
+<a href="javascript:CtsProc('0','000000000001949','i000')">
+replace EGT sensor 1.
+</a>
+ Then go to 
+<a href="javascript:try{parent.Jmp('i010');}catch(e){location.hash='i010';}">Step 1
+</a>
+ and do this procedure again.
+</div>
+</li>
+</ol>
+<a name="i100">
+</a>
+<ol>
+<li value="10">
+<div>
+If the HDS shows that the regeneration was interrupted because the exhaust gas temperature between the warm up catalytic converter and the DPF is too high (EGT sensor 1), check these items:
+</div>
+<ul type="disc">
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000001946','i000')">
+Replace the DPF converter.
+</a>
+</div>
+</li>
+<li>
+<div>
+Check for leak at the exhaust system.
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000001936','i000')">
+Check the injector.
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000001955','i000')">
+Check the EGR valve.
+</a>
+</div>
+</li>
+</ul>
+<div>
+If there are no problems at the items, 
+<a href="javascript:CtsProc('0','000000000001949','i000')">
+replace EGT sensor 1.
+</a>
+ Then go to 
+<a href="javascript:try{parent.Jmp('i010');}catch(e){location.hash='i010';}">Step 1
+</a>
+ and do this procedure again.
+</div>
+</li>
+</ol>
+<a name="i110">
+</a>
+<ol>
+<li value="11">
+<div>
+If the HDS shows that the regeneration was interrupted because it was time out, check these items:
+</div>
+<ul type="disc">
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000001946','i000')">
+Replace the DPF converter.
+</a>
+</div>
+</li>
+<li>
+<div>
+Check for vacuum leak at the intake system.
+</div>
+</li>
+<li>
+<div>
+Check for leak at the exhaust system.
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000001936','i000')">
+Check the injector.
+</a>
+</div>
+</li>
+</ul>
+<div>
+If there are no problems at the items, 
+<a href="javascript:CtsProc('0','000000000001949','i000')">
+replace EGT sensor 1.
+</a>
+ Then go to 
+<a href="javascript:try{parent.Jmp('i010');}catch(e){location.hash='i010';}">Step 1
+</a>
+ and do this procedure again.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000005095','1');">
+<img src="../tn/TL19E40A20321222181BAAD02.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E40A20321222181BAAD02_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

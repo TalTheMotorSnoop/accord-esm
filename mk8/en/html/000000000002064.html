@@ -1,0 +1,382 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E40J54200014401FEAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+Battery Test
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<table width="100%" rules="all" class="Viewer" frame="border">
+<tr>
+<th class="warning_head">
+<img src="../img/SYM832.PNG">
+</img>
+</th>
+</tr>
+<tr>
+<td class="ViewerTD">
+<div>
+A battery can explode if you do not follow the proper procedure, causing serious injury to anyone nearby.
+</div>
+<div>
+Follow all procedures carefully and keep sparks and open flames away from the battery.
+</div>
+<div>
+The battery contains sulfuric acid (electrolyte) which is highly corrosive and poisonous.
+</div>
+<div>
+Getting electrolyte in your eyes or on your skin can cause serious burns.
+</div>
+<div>
+Wear protective clothing and eye protection when working on or near the battery.
+</div>
+<div>
+Swallowing electrolyte can cause fatal poisoning if immediate action is not taken.
+</div>
+</td>
+</tr>
+</table>
+<br>
+<div>
+NOTE: To get accurate results, the temperature of the electrolyte must be between 21 and 38 °C (70 and 100 °F) before testing.
+</div>
+<a name="iR01">
+</a>
+<div class="procedure_sub_title">
+<b>
+Test Equipment Required
+</b>
+</div>
+<ul type="disc">
+<li>
+<div>
+Battery Tester with:
+</div>
+<div>
+Voltmeter with 0−18 V scale, ammeter with 0−100 A and 0−500 A scales, and a carbon pile with 0−300 W
+</div>
+</li>
+<li>
+<div>
+12 V Battery Charger:
+</div>
+<div>
+Fast charge capability of 50 A and slow charge capability of 5 A
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000005420','1');">
+<img src="../tn/TL19E40J54200014401FEAD01.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E40J54200014401FEAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR02">
+</a>
+<div class="procedure_sub_title">
+<b>
+Test Procedure
+</b>
+</div>
+<table width="100%" rules="all" class="Viewer" frame="border">
+<tr>
+<th class="caution_head">
+<img src="../img/SYM833.PNG">
+</img>
+</th>
+</tr>
+<tr>
+<td class="ViewerTD">
+<div>
+Regarding the battery check and battery charge method.
+</div>
+<ul type="disc">
+<li>
+<div>
+If battery has description, follow it.
+</div>
+</li>
+<li>
+<div>
+When you charge the battery, you must remove the battery from the vehicle.
+</div>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+<br>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Check for damage: If the case is cracked or the terminals are loose, replace the battery.
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Check the test indicator window.
+</div>
+<ul type="disc">
+<li>
+<div>
+If the test indicator window indicates the shortage of battery liquid, go to 
+<a href="javascript:try{parent.Jmp('i030');}catch(e){location.hash='i030';}">Step 3
+</a>
+.
+</div>
+</li>
+<li>
+<div>
+If the test indicator window indicates a low charge, go to 
+<a href="javascript:try{parent.Jmp('i040');}catch(e){location.hash='i040';}">Step 4
+</a>
+.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Remove the tape and caps, and add distilled water. After refill the distilled water apply the tape and caps.
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Test battery load capacity by connecting a battery tester, and applying a load of three times the battery ampere hour rating.
+</div>
+<div>
+When the load has been applied for exactly 15 seconds, the battery voltage reading should stay above 9.8 V.
+</div>
+<ul type="disc">
+<li>
+<div>
+If the reading stays above 9.8 V, the battery is OK; clean its terminals and case, and reinstall it.
+</div>
+</li>
+<li>
+<div>
+If the reading is between 7.2 and 9.8 V, connect a battery charger and charge the battery for 3 minutes at an initial rate of 40 amps.
+</div>
+</li>
+</ul>
+<table width="87%" rules="all" class="Viewer" frame="border">
+<tr>
+<th class="caution_head">
+<img src="../img/SYM833.PNG">
+</img>
+</th>
+</tr>
+<tr>
+<td class="ViewerTD">
+<div>
+Amperage will drop as voltage increases; do not increase the amperage to compensate or you may damage the battery.
+</div>
+</td>
+</tr>
+</table>
+<br>
+<table width="87%" rules="all" class="Viewer" frame="border">
+<tr>
+<th class="warning_head">
+<img src="../img/SYM832.PNG">
+</img>
+</th>
+</tr>
+<tr>
+<td class="ViewerTD">
+<div>
+Since the main body of the battery is transformed or might be exploded by gas generated when charging it, loosen the cap of each cell of the battery completely when you charge the battery.
+</div>
+</td>
+</tr>
+</table>
+<br>
+<ul type="disc">
+<li>
+<div>
+Watch the battery voltage during the entire 3 minutes; the highest reading should stay below 15.5 V.
+</div>
+</li>
+<table class="Viewer">
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+If the reading stays below 15.5 V, the battery is OK; clean its terminals and case, and reinstall it.
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+If the reading exceeds 15.5 V any time during the 3 minutes of fast charge, the battery is not good; replace it.
+</div>
+</td>
+</tr>
+</table>
+</ul>
+<ul type="disc">
+<li>
+<div>
+If the reading drops below 7.2 V, slow-charge the battery by connecting a battery, and charge at 5 amps for no more than 24 hours (or until the indicator shows full charge, or the specific gravity of the electrolyte is at least 1.280).
+</div>
+<div>
+Then test load capacity again.
+</div>
+</li>
+<table class="Viewer">
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+If the voltage stays above 9.8 V, the battery is OK; clean its terminals and case, and reinstall it.
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+If the voltage still drops below 7.2 V, the battery is not good; replace it.
+</div>
+</td>
+</tr>
+</table>
+</ul>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

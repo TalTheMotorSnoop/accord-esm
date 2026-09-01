@@ -1,0 +1,31 @@
+with(document) {
+write("<div id=\"group2\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:475px; height:369px;\">");
+write("<div id=\"rect2\" name=\"PrtRectId\"class=\"drag\"  style=\"width:475px;height:369px;\">");
+write("<img id=\"img2\" name=\"PrtImgId\" src=\"../img/TL19E00K773000Y1825FAAD08.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:475px;height:369px;border-color:#ffffff\">");
+write("<p id=\"p2_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:43px;top:320px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>POWER SEAT CONTROL UNIT CONNECTOR B (18P)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:134px;top:339px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b></b>Wire side of female terminals<br></nobr>");
+write("</p>");
+write("<p id=\"p2_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:43px;top:15px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>SLIDE MOTOR/POSITION SENSOR 5P CONNECTOR<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:271px;top:276px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>SLFR+<br>(YEL)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:269px;top:160px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>SLRR−<br>(WHT)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:134px;top:32px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b></b>Wire side of female terminals<br></nobr>");
+write("</p>");
+write("<p id=\"p2_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:114px;top:115px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>SLRR−<br>(WHT)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:312px;top:115px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>SLFR+<br>(YEL)<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

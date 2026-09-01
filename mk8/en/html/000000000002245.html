@@ -1,0 +1,376 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E4AA20326427963FEAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+Fuel Filter Water Level Switch Test
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+<a href="javascript:CtsProc('0','000000000003608','i000')">
+Do the gauge self-diagnostic function.
+</a>
+</div>
+<ul type="disc">
+<li>
+<div>
+If no problem is found, go to 
+<a href="javascript:try{parent.Jmp('i020');}catch(e){location.hash='i020';}">Step 2
+</a>
+.
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000000350','i000')">
+If a problem is found, replace the gauge control module.
+</a>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+<a href="javascript:CtsProc('0','000000000002244','i000')">
+Bleed the fuel filter water.
+</a>
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Start the engine, then check the engine condition.
+</div>
+<ul type="disc">
+<li>
+<div>
+If the engine condition is OK, go to 
+<a href="javascript:try{parent.Jmp('i040');}catch(e){location.hash='i040';}">Step 4
+</a>
+.
+</div>
+</li>
+<li>
+<div>
+If the engine condition is not OK, do the symptom troubleshooting.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Turn the ignition switch to LOCK (0).
+</div>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+Remove the engine cover.
+</div>
+</li>
+</ol>
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+Disconnect the fuel filter water level switch 2P connector (A).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000005912','1');">
+<img src="../tn/TL19E4AA20326427963FEAD01.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E4AA20326427963FEAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i070">
+</a>
+<ol>
+<li value="7">
+<div>
+Connect fuel filter water level switch 2P connector terminal No. 2 to body ground with a jumper wire.
+</div>
+</li>
+</ol>
+<a name="i080">
+</a>
+<ol>
+<li value="8">
+<div>
+Start the engine, and then check the WATER IN FUEL FILTER display.
+</div>
+<ul type="disc">
+<li>
+<div>
+If the WATER IN FUEL FILTER display is on, 
+<a href="javascript:CtsProc('0','000000000000960','i000')">
+repair open in the BLK wire between the fuel filter water level switch and G302; LHD model,
+</a>
+ 
+<a href="javascript:CtsProc('0','000000000000970','i000')">
+RHD model.
+</a>
+ If wire is OK, go to 
+<a href="javascript:try{parent.Jmp('i090');}catch(e){location.hash='i090';}">Step 9
+</a>
+.
+</div>
+</li>
+<li>
+<div>
+If the WATER IN FUEL FILTER display is not on, repair open in the LT BLU wire between the fuel filter water level switch and ECM connector No. 2 terminal No. 40. If wire is OK, 
+<a href="javascript:CtsProc('0','000000000003612','iG16')">
+substitute a known-good ECM,
+</a>
+ then recheck. If the symptom/indication goes away with a known-good ECM, 
+<a href="javascript:CtsProc('0','000000000003578','i000')">
+replace the original ECM.
+</a>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i090">
+</a>
+<ol>
+<li value="9">
+<div>
+Turn the ignition switch to LOCK (0).
+</div>
+</li>
+</ol>
+<a name="i100">
+</a>
+<ol>
+<li value="10">
+<div>
+<a href="javascript:CtsProc('0','000000000002246','i000')">
+Remove the fuel filter water level switch from the fuel filter.
+</a>
+</div>
+</li>
+</ol>
+<a name="i110">
+</a>
+<ol>
+<li value="11">
+<div>
+Check the float movement of the fuel filter water level switch.
+</div>
+<ul type="disc">
+<li>
+<div>
+If the float movement is OK, go to 
+<a href="javascript:try{parent.Jmp('i120');}catch(e){location.hash='i120';}">Step 12
+</a>
+.
+</div>
+</li>
+<li>
+<div>
+If there is a problem on the float movement, 
+<a href="javascript:CtsProc('0','000000000002246','i000')">
+replace the fuel filter water level switch.
+</a>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i120">
+</a>
+<ol>
+<li value="12">
+<div>
+Connect the fuel filter water level switch 2P connector to the fuel filter water level switch.
+</div>
+</li>
+</ol>
+<a name="i130">
+</a>
+<ol>
+<li value="13">
+<div>
+Turn the ignition switch to ON (II).
+</div>
+</li>
+</ol>
+<a name="i140">
+</a>
+<ol>
+<li value="14">
+<div>
+Move the float of the fuel filter water level switch, and check the WATER IN FUEL FILTER display.
+</div>
+<ul type="disc">
+<li>
+<div>
+If the WATER IN FUEL FILTER display turns on when the float is at the top position, the fuel filter water level switch is OK.
+</div>
+</li>
+<li>
+<div>
+If the WATER IN FUEL FILTER display stays on or off when the float is at any position, 
+<a href="javascript:CtsProc('0','000000000002246','i000')">
+replace the fuel filter water level switch.
+</a>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000005913','1');">
+<img src="../tn/TL19E4AA20326427963FEAD02.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E4AA20326427963FEAD02_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

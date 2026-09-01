@@ -1,0 +1,37 @@
+with(document) {
+write("<div id=\"group4\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:943px;\">");
+write("<div id=\"rect4\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:943px;\">");
+write("<img id=\"img4\" name=\"PrtImgId\" src=\"../img/TL19EAPJ54200000000DEAD06.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:943px;border-color:#ffffff\">");
+write("<p id=\"p4_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:537px;top:18px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>ACTIVE NOISE CANCELLATION UNIT<br>(With navigation system)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p4_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:189px;top:18px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>GAUGE CONTROL MODULE<br></b></nobr>");
+write("</p>");
+write("<p id=\"p4_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:539px;top:771px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>PASSENGER'S UNDER-DASH FUSE/RELAY BOX<br>PASSENGER'S MICU<br>(Built into the passenger's under-dash fuse/relay box)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p4_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:529px;top:771px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>·<br>·<br></b></nobr>");
+write("</p>");
+write("<p id=\"p4_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:352px;top:549px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>STARTER CUT RELAY<br></b></nobr>");
+write("</p>");
+write("<p id=\"p4_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:306px;top:517px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>CIGARETTE LIGHTER RELAY<br></b></nobr>");
+write("</p>");
+write("<p id=\"p4_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:65px;top:547px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>PGM-FI MAIN RELAY 2<br>(FUEL PUMP)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p4_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:380px;top:837px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>DRIVER'S MICU<br>(Built into the driver's<br>under-dash fuse/relay box)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p4_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:179px;top:837px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>DRIVER'S UNDER-DASH<br>FUSE/RELAY BOX<br></b></nobr>");
+write("</p>");
+write("<p id=\"p4_10\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:3px;top:912px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b></b>LHD model is shown, RHD model is symmetrical.<br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

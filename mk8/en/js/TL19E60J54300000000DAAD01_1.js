@@ -1,0 +1,31 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:959px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:959px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E60J54300000000DAAD01.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:959px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:702px;top:94px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>WINDSHIELD WIPER BLADES<br><a href=\"javascript:CtsProc('0','000000000000561','i000')\"></b>Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:751px;top:155px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>WIPER/WASHER SWITCH<br><a href=\"javascript:CtsProc('0','000000000003014','i000')\"></b>Test/Replacement,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:476px;top:19px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>PASSENGER'S MICU<br>(Built into the passenger's under-dash fuse/relay box)<br><a href=\"javascript:CtsProc('0','000000000004008','i000')\"></b>Input Test,</a><br><a href=\"javascript:CtsProc('0','000000000000550','i000')\">Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:29px;top:726px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>WINDSHIELD WIPER ARMS<br>and LINKAGE<br><a href=\"javascript:CtsProc('0','000000000000562','i000')\"></b>Replacement,<br></a><br><a href=\"javascript:CtsProc('0','000000000003013','i000')\">Adjustment,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:281px;top:773px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>RELAY CIRCUIT BOARD<br>(Built into the under-hood fuse/relay box)<br><a href=\"javascript:CtsProc('0','000000000004008','i000')\"></b>Test,</a><br><a href=\"javascript:CtsProc('0','000000000000551','i000')\">Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:611px;top:771px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>WINDSHIELD WIPER MOTOR<br><a href=\"javascript:CtsProc('0','000000000000961','i000')\"></b>Test,</a><br><a href=\"javascript:CtsProc('0','000000000000562','i000')\">Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:714px;top:637px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>DRIVER'S MICU<br>(Built into the driver's <br>under-dash fuse/relay box)<br><a href=\"javascript:CtsProc('0','000000000004008','i000')\"></b>Input Test,</a><br><a href=\"javascript:CtsProc('0','000000000000549','i000')\">Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:1px;top:930px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b></b>LHD model is shown, RHD model is similar.<br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

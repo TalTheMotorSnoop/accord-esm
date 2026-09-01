@@ -1,0 +1,34 @@
+with(document) {
+write("<div id=\"group2\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:959px;\">");
+write("<div id=\"rect2\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:959px;\">");
+write("<img id=\"img2\" name=\"PrtImgId\" src=\"../img/TL19E60J54300000000DAAD02.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:959px;border-color:#ffffff\">");
+write("<p id=\"p2_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:607px;top:212px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>WINDSHIELD WASHER NOZZLES<br><a href=\"javascript:CtsProc('0','000000000003013','i000')\"></b>Adjustment,</a><br><a href=\"javascript:CtsProc('0','000000000003012','i000')\">Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:48px;top:656px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>WASHER TUBES<br><a href=\"javascript:CtsProc('0','000000000003012','i000')\"></b>Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:450px;top:879px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>HEADLIGHT WASHER MOTOR<br><a href=\"javascript:CtsProc('0','000000000000559','i000')\"></b>Test,</a><br><a href=\"javascript:CtsProc('0','000000000000558','i000')\">Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:608px;top:793px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>WASHER MOTOR<br><a href=\"javascript:CtsProc('0','000000000000559','i000')\"></b>Test,</a><br><a href=\"javascript:CtsProc('0','000000000000558','i000')\">Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:171px;top:787px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>WASHER RESERVOIR<br><a href=\"javascript:CtsProc('0','000000000000558','i000')\"></b>Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:486px;top:16px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>AUTOMATIC LIGHTING/<br>RAIN SENSOR<br><a href=\"javascript:CtsProc('0','000000000000400','i000')\"></b>Input Test,</a><br><a href=\"javascript:CtsProc('0','000000000000401','i000')\">Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:755px;top:680px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>HEADLIGHT WASHER<br>NOZZLES<br><a href=\"javascript:CtsProc('0','000000000000560','i000')\"></b>Replacement,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:619px;top:104px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>HEADLIGHT WASHER<br>SWITCH<br><a href=\"javascript:CtsProc('0','000000000000557','i000')\"></b>Test/Replacement,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:2px;top:931px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b></b>LHD model is shown, RHD model is similar.<br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

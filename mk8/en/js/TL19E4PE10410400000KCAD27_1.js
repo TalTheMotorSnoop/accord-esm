@@ -1,0 +1,37 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:475px; height:417px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:475px;height:417px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E4PE10410400000KCAD27.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:475px;height:417px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:390px;top:175px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>(1)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:181px;top:364px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>(2)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:251px;top:159px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>(3)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:199px;top:179px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>(5)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:149px;top:202px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>(4)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:224px;top:329px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>B<br>14 x 1.5 mm<br>74 N·m (7.5 kgf·m, 54 lbf·ft)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:321px;top:233px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>A<br>14 x 1.5 mm<br>74 N·m<br>(7.5 kgf·m, 54 lbf·ft)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:219px;top:15px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>C<br>14 x 1.5 mm<br>74 N·m (7.5 kgf·m, 54 lbf·ft)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:76px;top:42px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>E<br>14 x 1.5 mm<br>74 N·m<br>(7.5 kgf·m, 54 lbf·ft)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_10\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:14px;top:117px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>D<br>14 x 1.5 mm<br>74 N·m<br>(7.5 kgf·m, 54 lbf·ft)<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

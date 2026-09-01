@@ -1,0 +1,34 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:475px; height:157px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:475px;height:157px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E4AA14500017045FEAD02.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:475px;height:157px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:194px;top:21px;font-weight:normal;font-size:9.40pt;\">");
+write("<nobr><b>Terminal<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:60px;top:44px;font-weight:normal;font-size:9.40pt;\">");
+write("<nobr><b>Position<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:113px;top:68px;font-weight:normal;font-size:9.40pt;\">");
+write("<nobr><b>Clutch Pedal<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:431px;top:33px;font-weight:normal;font-size:9.40pt;\">");
+write("<nobr><b>3<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:307px;top:33px;font-weight:normal;font-size:9.40pt;\">");
+write("<nobr><b>1<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:113px;top:84px;font-weight:normal;font-size:9.40pt;\">");
+write("<nobr><b>(PRESSED)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:113px;top:108px;font-weight:normal;font-size:9.40pt;\">");
+write("<nobr><b>Clutch Pedal<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:113px;top:123px;font-weight:normal;font-size:9.40pt;\">");
+write("<nobr><b>(RELEASED)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:369px;top:33px;font-weight:normal;font-size:9.40pt;\">");
+write("<nobr><b>2<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

@@ -1,0 +1,37 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:475px; height:722px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:475px;height:722px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E80R00000000000YCAD01.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:475px;height:722px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:19px;top:148px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>(5)<br>L = 10 (0.4)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:39px;top:232px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>(15)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:26px;top:372px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>4-Plate spot<br>welding<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:346px;top:121px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>(19)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:43px;top:522px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>Fillet welding<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:43px;top:682px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>MIG plug welding<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:314px;top:421px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>2-Plate spot<br>welding<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:280px;top:536px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>Butt welding<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:303px;top:196px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>3-Plate spot<br>welding<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_10\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:324px;top:692px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>L = 330 (13.0)<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

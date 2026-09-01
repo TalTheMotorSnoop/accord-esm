@@ -1,0 +1,34 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:1071px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:1071px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E4PD14300000000DAAD01.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:1071px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:420px;top:17px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>MASTER CYLINDER<br><a href=\"javascript:CtsProc('0','000000000000030','i000')\"></b>Brake System Bleeding,</a><br> in the Shop Manual, P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000000041','i000')\">Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000000042','i000')\">Disassembly,</a><br> in the Shop Manual, P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000000043','i000')\">Reassembly,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:695px;top:358px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>BRAKE HOSE and LINE<br><a href=\"javascript:CtsProc('0','000000000000040','i000')\"></b>Inspection,</a><br> in the Shop Manual, P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000000039','i000')\">Brake Hose Replacement,<br></a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:62px;top:811px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>FRONT BRAKE<br><a href=\"javascript:CtsProc('0','000000000000044','i000')\"></b>Pad Inspection and Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000000037','i000')\">Disc Inspection,</a><br> in the Shop Manual, P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000000035','i000')\">Disc Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000000033','i000')\">Caliper Overhaul,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:527px;top:936px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>BRAKE PEDAL<br></b>Brake Pedal and Brake Pedal<br><a href=\"javascript:CtsProc('0','000000000000047','i000')\"> Position Switch Adjustment,</a><br> in the Shop Manual, P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000000046','i000')\">Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000000048','i000')\">Cover Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:609px;top:849px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>PARKING BRAKE<br><a href=\"javascript:CtsProc('0','000000000000025','i000')\"></b>Inspection and Adjustment,</a><br> in the Shop Manual, P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000000029','i000')\">Cable Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:747px;top:154px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>BRAKE SYSTEM INDICATOR<br><a href=\"javascript:CtsProc('0','000000000000050','i000')\"></b>Circuit Diagram,<br></a><br> in the Shop Manual,<br> P/N 62TL100B<br>Parking Brake Switch<br><a href=\"javascript:CtsProc('0','000000000000051','i000')\"> Test,</a><br> in the Shop Manual,<br> P/N 62TL100B<br>Brake Fluid Level Switch<br><a href=\"javascript:CtsProc('0','000000000000049','i000')\"> Test,</a><br> in the Shop Manual,<br> P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:685px;top:684px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>REAR BRAKE<br><a href=\"javascript:CtsProc('0','000000000000045','i000')\"></b>Pad Inspection and Replacement,<br></a><br> in the Shop Manual, P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000000038','i000')\">Disc Inspection,</a><br> in the Shop Manual, P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000000036','i000')\">Disc Replacement,</a><br> in the Shop Manual, P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000000034','i000')\">Caliper Overhaul,</a><br> in the Shop Manual, P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:766px;top:459px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>PARKING DRUM BRAKE<br>(Drum in disc brake type)<br><a href=\"javascript:CtsProc('0','000000000000026','i000')\"></b>Inspection,<br></a><br> in the Shop Manual,<br> P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000000027','i000')\">Shoe Replacement,<br></a><br> in the Shop Manual,<br> P/N 62TL100B<br><a href=\"javascript:CtsProc('0','000000000000028','i000')\">Shoe Lining Break-in,<br></a><br> in the Shop Manual,<br> P/N 62TL100B<br></nobr>");
+write("</p>");
+write("<p id=\"p1_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:432px;top:166px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>BRAKE BOOSTER<br><a href=\"javascript:CtsProc('0','000000000002008','i000')\"></b>Inspection,<br></a><br> in the Shop Manual Supplement,<br> P/N 62TL120<br>Replacement<br><a href=\"javascript:CtsProc('0','000000000002321','i000')\"> (Except A/T of LHD model),<br></a><br> in the Shop Manual<br> Supplement,<br> P/N 62TL120<br>Replacement<br><a href=\"javascript:CtsProc('0','000000000002372','i000')\"> (A/T of LHD model),<br></a><br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

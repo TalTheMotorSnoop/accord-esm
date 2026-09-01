@@ -1,0 +1,1024 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E4PE10410654801FHAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+A/T Shift Solenoid Valve Test, Replacement, and Shift Solenoid Wire Harness Replacement
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Connect the HDS to the DLC (A) located under the driver's side of the dashboard.
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Turn the ignition switch to ON (II).
+</div>
+<div>
+Make sure the HDS communicates with the TCM. If it does not, go to the 
+<a href="javascript:CtsProc('0','000000000003669','i000')">
+DLC circuit troubleshooting.
+</a>
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Select Shift Solenoid Valves A, B, C, and D in the Miscellaneous Test Menu with the HDS.
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Check that shift solenoid valves A, B, C, and D operate with the HDS. A clicking sound should be heard.
+</div>
+<ul type="disc">
+<li>
+<div>
+If a clicking sound is heard, the valves are OK. The test is complete, disconnect the HDS.
+</div>
+</li>
+<li>
+<div>
+If no clicking sound is heard, go to 
+<a href="javascript:try{parent.Jmp('i050');}catch(e){location.hash='i050';}">Step 5
+</a>
+, and test the solenoid valves.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+<a href="javascript:CtsProc('0','000000000000545','i000')">
+Do the battery removal procedure.
+</a>
+</div>
+</li>
+</ol>
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+Remove the air cleaner housing and the intake air duct.
+</div>
+</li>
+</ol>
+<a name="i070">
+</a>
+<ol>
+<li value="7">
+<div>
+<a href="javascript:CtsProc('0','000000000002433','i070')">
+Remove the battery base.
+</a>
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000006707','1');">
+<img src="../tn/TL19E4PE10410654801FHAD01.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E4PE10410654801FHAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i080">
+</a>
+<ol>
+<li value="8">
+<div>
+Remove the nuts securing the shift cable bracket (A).
+</div>
+</li>
+</ol>
+<a name="i090">
+</a>
+<ol>
+<li value="9">
+<div>
+Remove the spring clip (B) and the control pin (C), then separate the shift cable end (D) from the selector control lever (E).
+</div>
+</li>
+</ol>
+<a name="i100">
+</a>
+<ol>
+<li value="10">
+<div>
+Check the bushing (F) in the shift cable end for proper fit and wear. If the bushing is loose or worn, 
+<a href="javascript:CtsProc('0','000000000002493','i000')">
+replace the shift cable.
+</a>
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000006708','1');">
+<img src="../tn/TL19E4PE10410654801FHAD02.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E4PE10410654801FHAD02_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i110">
+</a>
+<ol>
+<li value="11">
+<div>
+Disconnect the A/T clutch pressure control solenoid valve C connector (A), then remove the harness clamp (B) from the clamp bracket (C).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000006709','1');">
+<img src="../tn/TL19E4PE10410654801FHAD04.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E4PE10410654801FHAD04_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i120">
+</a>
+<ol>
+<li value="12">
+<div>
+Disconnect these connectors:
+</div>
+<ul type="disc">
+<li>
+<div>
+A/T clutch pressure control solenoid valve A connector (A)
+</div>
+</li>
+<li>
+<div>
+A/T clutch pressure control splenoid valve B connector (B)
+</div>
+</li>
+<li>
+<div>
+Shift solenoid wire harness connector (C)
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i130">
+</a>
+<ol>
+<li value="13">
+<div>
+Remove the transmission ground cable (D).
+</div>
+</li>
+</ol>
+<a name="i140">
+</a>
+<ol>
+<li value="14">
+<div>
+Remove the bolt securing the harness cover (E).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000006710','1');">
+<img src="../tn/TL19E4PE10410654801FHAD03.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E4PE10410654801FHAD03_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i150">
+</a>
+<ol>
+<li value="15">
+<div>
+Disconnect these connectors:
+</div>
+<ul type="disc">
+<li>
+<div>
+Input shaft (mainshaft) speed sensor connector (A)
+</div>
+</li>
+<li>
+<div>
+Transmission range switch connector (B)
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000006711','1');">
+<img src="../tn/TL19E4PE10410654801FHAD05.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E4PE10410654801FHAD05_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i160">
+</a>
+<ol>
+<li value="16">
+<div>
+Disconnect these connectors:
+</div>
+<ul type="disc">
+<li>
+<div>
+3rd clutch transmission fluid pressure switch connector (A)
+</div>
+</li>
+<li>
+<div>
+Output shaft (countershaft) speed sensor connector (B)
+</div>
+</li>
+<li>
+<div>
+ATF temperature sensor connector (C)
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i170">
+</a>
+<ol>
+<li value="17">
+<div>
+Remove the harness clamp (D) from the clamp bracket (E).
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000006712','1');">
+<img src="../tn/TL19E4PE10410654801FHAD06.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E4PE10410654801FHAD06_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i180">
+</a>
+<ol>
+<li value="18">
+<div>
+Remove A/T clutch pressure control solenoid valves A and B, the ATF pipes (C), and the gasket (D).
+</div>
+</li>
+</ol>
+<a name="i190">
+</a>
+<ol>
+<li value="19">
+<div>
+Replace the gasket and the O-rings (E) with new ones when installing A/T clutch pressure control solenoid valves A and B.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000006713','1');">
+<img src="../tn/TL19E4PE10410654801FHAD07.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E4PE10410654801FHAD07_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i200">
+</a>
+<ol>
+<li value="20">
+<div>
+Remove the solenoid valve cover (A), the dowel pins (B), and the gasket (C).
+</div>
+</li>
+</ol>
+<a name="i210">
+</a>
+<ol>
+<li value="21">
+<div>
+Replace the gasket with a new one when installing the solenoid valve cover.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000006714','1');">
+<img src="../tn/TL19E4PE10410654801FHAD08.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E4PE10410654801FHAD08_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i220">
+</a>
+<ol>
+<li value="22">
+<div>
+Disconnect the connectors from shift solenoid valve A, shift solenoid valve B, shift solenoid valve C, and shift solenoid valve D.
+</div>
+</li>
+</ol>
+<a name="i230">
+</a>
+<ol>
+<li value="23">
+<div>
+Measure the resistance of each shift solenoid valve between the connector terminal and the body ground.
+</div>
+<div>
+<table width="87%" class="Viewer" frame="void" style="table-layout:fixed;">
+<col width="20%">
+<col width="79%">
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+Standard:
+</b>
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:none;border-bottom-style:none;border-top-style:none;" align="left">
+<div>
+<b>
+12−25 Ω
+</b>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<ul type="disc">
+<li>
+<div>
+If the resistance is out of standard, go to 
+<a href="javascript:try{parent.Jmp('i260');}catch(e){location.hash='i260';}">Step 26
+</a>
+ and replace shift solenoid valve.
+</div>
+</li>
+<li>
+<div>
+If the resistance is within the standard, go to 
+<a href="javascript:try{parent.Jmp('i240');}catch(e){location.hash='i240';}">Step 24
+</a>
+ and check solenoid valve for a clicking sound.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i240">
+</a>
+<ol>
+<li value="24">
+<div>
+Connect a jumper wire from the negative battery terminal to the body ground, and connect another jumper wire from the positive battery terminal to each solenoid valve terminal individually.
+</div>
+<ul type="disc">
+<li>
+<div>
+If a clicking sound is heard, go to 
+<a href="javascript:try{parent.Jmp('i250');}catch(e){location.hash='i250';}">Step 25
+</a>
+ and replace the shift solenoid wire harness.
+</div>
+</li>
+<li>
+<div>
+If no clicking sound is heard, go to 
+<a href="javascript:try{parent.Jmp('i260');}catch(e){location.hash='i260';}">Step 26
+</a>
+ and replace the shift solenoid valve.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000006715','1');">
+<img src="../tn/TL19E4PE10410654801FHAD09.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E4PE10410654801FHAD09_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i250">
+</a>
+<ol>
+<li value="25">
+<div>
+Remove the shift solenoid wire harness connector (A), and replace it. Install a new O-ring (B) on the shift solenoid wire harness connector, and install the connector in the transmission housing, then go to 
+<a href="javascript:try{parent.Jmp('i350');}catch(e){location.hash='i350';}">Step 35
+</a>
+.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000006716','1');">
+<img src="../tn/TL19E4PE10410654801FHAD10.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E4PE10410654801FHAD10_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="i260">
+</a>
+<ol>
+<li value="26">
+<div>
+Remove the mounting bolts, then remove the shift solenoid valves.
+</div>
+</li>
+</ol>
+<a name="i270">
+</a>
+<ol>
+<li value="27">
+<div>
+Install new O-rings (two O-rings per solenoid valve) (E) on the reused solenoid valves.
+</div>
+<div>
+NOTE: A new solenoid valve comes with new O-rings. If you install a new solenoid valve, use the O-rings provided with it.
+</div>
+</li>
+</ol>
+<a name="i280">
+</a>
+<ol>
+<li value="28">
+<div>
+Install shift solenoid valve A (black connector) by holding the shift solenoid valve body; make sure the mounting bracket contacts the accumulator body.
+</div>
+<div>
+NOTE: Do not hold the solenoid valve by the connector when installing the solenoid valve. Be sure to hold the solenoid valve body.
+</div>
+</li>
+</ol>
+<a name="i290">
+</a>
+<ol>
+<li value="29">
+<div>
+Install shift solenoid valve C (brown connector) by holding the shift solenoid valve body; make sure the mounting bracket contacts the bracket of shift solenoid valve A.
+</div>
+<div>
+NOTE: Do not install shift solenoid valve C before installing shift solenoid valve A. If shift solenoid valve C is installed before installing shift solenoid valve A, it may damage the hydraulic control system.
+</div>
+</li>
+</ol>
+<a name="i300">
+</a>
+<ol>
+<li value="30">
+<div>
+Install shift solenoid valve D (black connector) by holding the shift solenoid valve body; make sure the mounting bracket contacts the accumulator body.
+</div>
+</li>
+</ol>
+<a name="i310">
+</a>
+<ol>
+<li value="31">
+<div>
+Install shift solenoid valve B (brown connector) by holding the shift solenoid valve body; make sure the mounting bracket contacts the accumulator body.
+</div>
+</li>
+</ol>
+<a name="i320">
+</a>
+<ol>
+<li value="32">
+<div>
+Connect the harness terminals to the solenoids:
+</div>
+<ul type="disc">
+<li>
+<div>
+YEL wire connector to shift solenoid valve A.
+</div>
+</li>
+<li>
+<div>
+RED wire connector to shift solenoid valve B.
+</div>
+</li>
+<li>
+<div>
+GRN wire connector to shift solenoid valve C.
+</div>
+</li>
+<li>
+<div>
+ORN wire connector to shift solenoid valve D.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i330">
+</a>
+<ol>
+<li value="33">
+<div>
+Install the shift solenoid valve cover, the dowel pins, and a new gasket.
+</div>
+</li>
+</ol>
+<a name="i340">
+</a>
+<ol>
+<li value="34">
+<div>
+Install a new solenoid valve body gasket on the solenoid valve cover, and install the ATF pipes with their filter side into the transmission housing. Install new O-rings over the ATF pipes.
+</div>
+</li>
+</ol>
+<a name="i350">
+</a>
+<ol>
+<li value="35">
+<div>
+Install A/T clutch pressure control solenoid valves A and B.
+</div>
+</li>
+</ol>
+<a name="i360">
+</a>
+<ol>
+<li value="36">
+<div>
+Install the harness cover on its bracket, and secure it with the bolt.
+</div>
+</li>
+</ol>
+<a name="i370">
+</a>
+<ol>
+<li value="37">
+<div>
+Check the connectors for rust, dirt, or oil, clean or repair if necessary, then connect the connectors securely.
+</div>
+</li>
+</ol>
+<a name="i380">
+</a>
+<ol>
+<li value="38">
+<div>
+Apply molybdenum grease to the hole in the bushing in the shift cable end. Attach the shift cable end to the selector control lever, then insert the control pin into the selector control lever hole through the shift cable end, and secure the control pin with the spring clip.
+</div>
+</li>
+</ol>
+<a name="i390">
+</a>
+<ol>
+<li value="39">
+<div>
+Secure the shift cable bracket with the nuts.
+</div>
+</li>
+</ol>
+<a name="i400">
+</a>
+<ol>
+<li value="40">
+<div>
+<a href="javascript:CtsProc('0','000000000002434','i770')">
+Install the battery base.
+</a>
+</div>
+</li>
+</ol>
+<a name="i410">
+</a>
+<ol>
+<li value="41">
+<div>
+Install the air cleaner housing and the intake air duct.
+</div>
+</li>
+</ol>
+<a name="i420">
+</a>
+<ol>
+<li value="42">
+<div>
+<a href="javascript:CtsProc('0','000000000000545','i000')">
+Do the battery installation procedure.
+</a>
+</div>
+<div>
+NOTE: Do not the test-driving until 
+<a href="javascript:try{parent.Jmp('i430');}catch(e){location.hash='i430';}">Step 43
+</a>
+.
+</div>
+</li>
+</ol>
+<a name="i430">
+</a>
+<ol>
+<li value="43">
+<div>
+<a href="javascript:CtsProc('0','000000000002422','i060')">
+Refill the transmission with ATF.
+</a>
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000006717','1');">
+<img src="../tn/TL19E4PE10410654801FHAD11.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E4PE10410654801FHAD11_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000006717','2');">
+<img src="../tn/TL19E4PE10410654801FHAD12.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E4PE10410654801FHAD12_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

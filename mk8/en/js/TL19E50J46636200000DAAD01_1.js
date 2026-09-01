@@ -1,0 +1,31 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:1087px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:1087px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E50J46636200000DAAD01.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:1087px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:517px;top:18px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>IMMOBILIZER-KEYLESS CONTROL UNIT (Built-in receiver)<br><a href=\"javascript:CtsProc('0','000000000002654','i000')\"></b>Symptom Troubleshooting,</a><br><a href=\"javascript:CtsProc('0','000000000000523','i000')\">Registration,</a><br><a href=\"javascript:CtsProc('0','000000000002657','i000')\">Input Test,</a><br><a href=\"javascript:CtsProc('0','000000000000522','i000')\">Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:230px;top:23px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>IMMOBILIZER INDICATOR<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:21px;top:23px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>DRIVER'S UNDER-DASH<br>FUSE/RELAY BOX<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:218px;top:465px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>IMOES UNIT (Built into the driver's MICU)<br><a href=\"javascript:CtsProc('0','000000000000549','i000')\"></b>Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:265px;top:534px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>TRANSMITTER<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:95px;top:741px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>TRANSPONDER<br>(Built into the ignition key)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:368px;top:920px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>ECM/PCM<br></b>Replacement,<br><a href=\"javascript:CtsProc('0','000000000001277','i000')\"> R20A3 engine</a><br><a href=\"javascript:CtsProc('0','000000000001689','i000')\"> K24Z3 engine</a><br>Substitute known-good for testing, <br><a href=\"javascript:CtsProc('0','000000000001286','iG17')\"> R20A3 engine</a><br><a href=\"javascript:CtsProc('0','000000000001698','iG17')\"> K24Z3 engine</a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:2px;top:1055px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b></b>LHD model is shown, RHD model is similar.<br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

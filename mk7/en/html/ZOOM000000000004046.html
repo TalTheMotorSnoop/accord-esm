@@ -1,0 +1,243 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+<title>SEA5E24K72100000000BBAT10</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+var   totalImg = 1;
+var   dispNum=1;
+function prOnLoadProc() {
+	_prInitImageInfo(100);
+	_prResizeImage(100/100);
+	divBody.style.display = "block"
+	return;
+}
+function PrintFunc()
+{
+	divBody.style.display = "none";
+	var  img_hei = _prResizeImage(67/100);
+	divBody.style.display = "block";
+	var  graphTd = document.getElementById("graphTd");
+	if(graphTd.width == "100%")
+	{
+      var   current_pos;
+      var   img_pos = 0;
+         current_pos = graphTd.offsetTop;
+		var pageCnt = Math.floor(current_pos/950);
+		var img_pos = current_pos - (pageCnt*950);
+		if(img_pos+img_hei > 950)
+		{
+			var  pageElement = document.getElementById("page_onoff");
+			if(pageElement != null)
+			{
+				pageElement.style.display = "block";
+			}
+		}
+	}
+	window.print();
+	divBody.style.display = "none";
+	_prResizeImage(100/100);
+	divBody.style.display = "block";
+	window.scrollTo(0,0);
+}
+function BackFunc()
+{
+	window.location.replace("ZOOM000000000004045.html");
+}
+function CloseFunc()
+{
+	window.close();
+}
+function JumpFunc(strJump)
+{
+	window.location.replace(strJump);
+}
+//-->
+</script>
+<body onLoad="prOnLoadProc();" style="font-family:sans-serif;">
+<div id="divBody" style="display:none">
+<div>
+<div style="position:absolute;right=10;">
+<input type="image" src="../img/PRINT_PREVIEW.PNG" onClick="PrintFunc()">
+<input type="image" src="../img/GL_PREV.PNG" onClick="BackFunc()">
+<input type="image" src="../img/GL_NEXT_DISABLE.PNG" onClick="NextFunc()" disabled>
+<input type="image" src="../img/GL_CANCEL.PNG" onClick="CloseFunc()">
+</div><br><br>
+<hr width="100%" size="2" color="black">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG10">
+</a>
+<div class="servinfosub_title">
+<b>
+ECM Updating and Substitution for Testing
+</b>
+</div>
+<div class="tool_list_title">
+<b>
+Special Tools Required
+</b>
+</div>
+<br>
+Honda interface module
+<div>
+ (HIM) EQS05A35570
+</div>
+<div>
+Use this procedure when you have to substitute a known-good ECM in a troubleshooting procedure. Update the ECM only if the ECM does not have the latest software loaded.
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+Do not turn the ignition switch OFF while updating the ECM. If you turn the ignition switch OFF before completion, the ECM can be damaged.
+</div>
+</li>
+<li>
+<div>
+To ensure the latest program is installed, do an ECM update whenever the ECM is substituted or replaced.
+</div>
+</li>
+<li>
+<div>
+You cannot update an ECM with the program it already has. It will only accept a new program.
+</div>
+</li>
+<li>
+<div>
+Before you update the ECM, make sure the vehicle's battery is fully charged.
+</div>
+</li>
+<li>
+<div>
+To prevent ECM damage, do not operate anything electrical (audio system, brakes, A/C, power windows, moonroof, door locks, etc.) during the update.
+</div>
+</li>
+<li>
+<div>
+If you need to diagnose the Honda interface module (HIM) because the HIM's red (#3) light came on or was flashing during the update, leave the ignition switch in the ON (II) position when you disconnect the HIM from the data link connector (DLC). This will prevent ECM damage.
+</div>
+</li>
+</ul>
+<a name="i610">
+</a>
+<ol>
+<li value="1">
+<div>
+Turn the ignition switch ON (II). Do not start the engine.
+</div>
+</li>
+</ol>
+<a name="i620">
+</a>
+<ol>
+<li value="2">
+<div>
+Connect the HDS or the Honda interface module (HIM) to the data link connector (DLC) (A) located under the driver's side of the dashboard.
+</div>
+</li>
+</ol>
+<a name="i630">
+</a>
+<ol>
+<li value="3">
+<div>
+Do the ECM update procedure as described on the HIM label and in the ECM update system.
+</div>
+</li>
+</ol>
+<a name="iG11">
+</a>
+<div class="procedure_sub_title">
+<b>
+How to Substitute the ECM (with immobilizer model)
+</b>
+</div>
+<a name="i710">
+</a>
+<ol>
+<li value="1">
+<div>
+Remove the ECM from the vehicle.
+</div>
+</li>
+</ol>
+<a name="i720">
+</a>
+<ol>
+<li value="2">
+<div>
+Install a known-good ECM.
+</div>
+</li>
+</ol>
+<a name="i730">
+</a>
+<ol>
+<li value="3">
+<div>
+Rewrite the immobilizer code with the ECM replacement procedure in the HDS; it allows you to start the engine.
+</div>
+</li>
+</ol>
+<a name="i740">
+</a>
+<ol>
+<li value="4">
+<div>
+After completing your tests, install the original ECM and rewrite the immobilizer code with the ECM replacement procedure in the HDS.
+</div>
+</li>
+</ol>
+<a name="iG12">
+</a>
+<div class="procedure_sub_title">
+<b>
+OBD Status
+</b>
+</div>
+<div>
+The OBD Status shows the current system status of each DTC and all of the parameters. This function is used to see if the technician's repair was successfully finished. The results of diagnostic tests for the DTC are displayed as:
+</div>
+<ul type="disc">
+<li>
+<div>
+PASSED: On board diagnosis is successfully finished.
+</div>
+</li>
+<li>
+<div>
+FAILED: On board diagnosis has finished but failed.
+</div>
+</li>
+<li>
+<div>
+NOT COMPLETED: The on board diagnosis was running but is out of the enable conditions of the DTC.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div style="display:none;" id="page_onoff">
+<div style="page-break-after:always;">
+</div>
+</div>
+<span style="display:block" id="imgId1">
+<div>
+<script src="../js/SEA5E24K72100000000BBAD01_1.js">
+</script>
+</div>
+</span>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

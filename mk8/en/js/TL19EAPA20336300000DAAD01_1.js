@@ -1,0 +1,37 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:959px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:959px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19EAPA20336300000DAAD01.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:959px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:616px;top:21px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>TURBOCHARGER BOOST CONTROL<br>SOLENOID VALVE<br><a href=\"javascript:CtsProc('0','000000000001977','i000')\"></b>Replacement,</a><br> in the Shop Manual Supplement, P/N 62TL120<br></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:630px;top:738px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>INTAKE SHUTTER VALVE (ISV)<br><a href=\"javascript:CtsProc('0','000000000001980','i000')\"></b>Cleaning,</a><br> in the Shop Manual Supplement, P/N 62TL120<br><a href=\"javascript:CtsProc('0','000000000001979','i000')\">Removal/Installation,</a><br> in the Shop Manual Supplement, P/N 62TL120<br></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:648px;top:98px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>ISV CONTROL RELAY CIRCUIT<br>(Built into the under-hood fuse/relay box)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:758px;top:144px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>AIR CLEANER<br><a href=\"javascript:CtsProc('0','000000000001975','i000')\"></b>Removal/Installation,<br></a><br> in the Shop Manual<br> Supplement, P/N 62TL120<br></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:758px;top:221px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>AIR CLEANER ELEMENT<br><a href=\"javascript:CtsProc('0','000000000001976','i000')\"></b>Inspection/Replacement,<br></a><br> in the Shop Manual<br> Supplement, P/N 62TL120<br></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:756px;top:673px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>INTAKE AIR TUBE<br><a href=\"javascript:CtsProc('0','000000000003678','i000')\"></b>Removal/Installation,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:528px;top:836px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>TURBOCHARGER BOOST CONTROL<br>VALVE POSITION SENSOR<br>(Built into the turbocharger)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:43px;top:751px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>INTAKE MANIFOLD<br>RUNNER CONTROL (IMRC) VALVE<br><a href=\"javascript:CtsProc('0','000000000001977','i000')\"></b>Replacement,</a><br> in the Shop Manual Supplement, P/N 62TL120<br></nobr>");
+write("</p>");
+write("<p id=\"p1_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:43px;top:812px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>INTAKE MANIFOLD<br>RUNNER CONTROL (IMRC) POSITION SENSOR<br>(Built into the IMRC valve)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_10\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:3px;top:929px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b></b>*: This illustration shows LHD model.<br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

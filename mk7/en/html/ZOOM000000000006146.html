@@ -1,0 +1,210 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+<title>SEA5E44J54200014401FEAT00</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+var   totalImg = 0;
+var   dispNum=1;
+function prOnLoadProc() {
+	_prInitImageInfo(100);
+	_prResizeImage(100/100);
+	divBody.style.display = "block"
+	return;
+}
+function PrintFunc()
+{
+	divBody.style.display = "none";
+	var  img_hei = _prResizeImage(67/100);
+	divBody.style.display = "block";
+	var  graphTd = document.getElementById("graphTd");
+	if(graphTd.width == "100%")
+	{
+      var   current_pos;
+      var   img_pos = 0;
+         current_pos = graphTd.offsetTop;
+		var pageCnt = Math.floor(current_pos/950);
+		var img_pos = current_pos - (pageCnt*950);
+		if(img_pos+img_hei > 950)
+		{
+			var  pageElement = document.getElementById("page_onoff");
+			if(pageElement != null)
+			{
+				pageElement.style.display = "block";
+			}
+		}
+	}
+	window.print();
+	divBody.style.display = "none";
+	_prResizeImage(100/100);
+	divBody.style.display = "block";
+	window.scrollTo(0,0);
+}
+function BackFunc()
+{
+	window.location.replace("ZOOM000000000006145.html");
+}
+function CloseFunc()
+{
+	window.close();
+}
+function JumpFunc(strJump)
+{
+	window.location.replace(strJump);
+}
+//-->
+</script>
+<body onLoad="prOnLoadProc();" style="font-family:sans-serif;">
+<div id="divBody" style="display:none">
+<div>
+<div style="position:absolute;right=10;">
+<input type="image" src="../img/PRINT_PREVIEW.PNG" onClick="PrintFunc()">
+<input type="image" src="../img/GL_PREV.PNG" onClick="BackFunc()">
+<input type="image" src="../img/GL_NEXT_DISABLE.PNG" onClick="NextFunc()" disabled>
+<input type="image" src="../img/GL_CANCEL.PNG" onClick="CloseFunc()">
+</div><br><br>
+<hr width="100%" size="2" color="black">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR02">
+</a>
+<div class="procedure_sub_title">
+<b>
+Test Procedure
+</b>
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Check for damage: If the case is cracked or the terminals are loose, replace the battery.
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Check indicator (for basic charge condition): Blue or Green is OK. If the indicator is red, peel the tape off, remove the caps, and add distilled water; then reinstall the caps and tape. If the indicator is clear, go to
+<a href="javascript:JumpFunc('ZOOM000000000006146.html#i030')">Step 3
+</a>
+.
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Test battery load capacity by connecting a battery tester, and applying a load of three times the battery ampere hour rating.
+</div>
+<div>
+When the load has been applied for exactly 15 seconds, the battery voltage reading should stay above 9.6 V.
+</div>
+<ul type="disc">
+<li>
+<div>
+If the reading stays above 9.6 V, the battery is OK; clean its terminals and case, and reinstall it.
+</div>
+</li>
+<li>
+<div>
+If the reading is between 6.5 and 9.6 V, connect a battery charger and charge the battery for 3 minutes at an initial rate of 40 A.
+</div>
+</li>
+</ul>
+<table width="90%" rules="all" class="Viewer" frame="border">
+<tr>
+<th class="caution_head">
+<img src="../img/SYM833.PNG">
+</img>
+</th>
+</tr>
+<tr>
+<td class="ViewerTD">
+<div>
+Amperage will drop as voltage increases; do not increase the amperage to compensate or you may damage the battery.
+</div>
+</td>
+</tr>
+</table>
+<br>
+<ul type="disc">
+<li>
+<div>
+Watch the battery voltage during the entire 3 minutes; the highest reading should stay below 15.5 V.
+</div>
+</li>
+<table class="Viewer">
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+If the reading stays below 15.5 V, the battery is OK; clean its terminals and case, and reinstall it.
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+If the reading exceeds 15.5 V any time during the 3 minutes of fast charge, the battery is not good; replace it.
+</div>
+</td>
+</tr>
+</table>
+</ul>
+<ul type="disc">
+<li>
+<div>
+If the reading drops below 6.5 V, slow-charge the battery by connecting a battery, and charge at 5 A for no more than 24 hours (or until the indicator shows full charge, or the specific gravity of the electrolyte is at least 1.270).
+</div>
+<div>
+Then test load capacity again.
+</div>
+</li>
+<table class="Viewer">
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+If the voltage stays above 9.6 V, the battery is OK; clean its terminals and case, and reinstall it.
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+If the voltage still drops below 6.5 V, the battery is not good; replace it.
+</div>
+</td>
+</tr>
+</table>
+</ul>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div style="display:none;" id="page_onoff">
+<div style="page-break-after:always;">
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

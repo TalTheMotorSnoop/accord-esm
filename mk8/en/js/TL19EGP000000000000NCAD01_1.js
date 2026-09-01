@@ -1,0 +1,35 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:719px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:719px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19EGP000000000000NCAD01.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:719px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:2px;top:676px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>*1: With roof rail<br>*2: Without roof rail<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:213px;top:550px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>2,705 mm (106.4 in.)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:213px;top:584px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>4,726 mm (186.1 in.)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:710px;top:550px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>1,530 mm (60.2 in.)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:709px;top:242px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>1,590 mm (62.6 in.)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:709px;top:272px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>1,840 mm (72.4 in.)<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("<div id=\"bl1_1\" name=\"prt_bl\" class=\"drag\" from=\"943,219\" to=\"942,72\" style=\"position:absolute;left:0;top:0;width:0;height:0;overflow:visible;\">");
+write("<v:fill class=\"drag\" on=\"true\" color=\"black\"/>");
+write("<v:path class=\"drag\" textpathok=\"true\"/>");
+write("<span id=\"tp1_1\" name=\"PrtTpId\" class=\"drag\" style=\"position:relative;font-family:Arial;text-align:left;font-weight:small;font-size:8.68pt;\">1,470 mm (57.9 in.)*2</span>");
+write("</div>");
+write("<div id=\"bl1_2\" name=\"prt_bl\" class=\"drag\" from=\"924,219\" to=\"923,72\" style=\"position:absolute;left:0;top:0;width:0;height:0;overflow:visible;\">");
+write("<v:fill class=\"drag\" on=\"true\" color=\"black\"/>");
+write("<v:path class=\"drag\" textpathok=\"true\"/>");
+write("<span id=\"tp1_2\" name=\"PrtTpId\" class=\"drag\" style=\"position:relative;font-family:Arial;text-align:left;font-weight:small;font-size:8.68pt;\">1,515 mm (56.6 in.)*1</span>");
+write("</div>");
+write("</div>");
+}

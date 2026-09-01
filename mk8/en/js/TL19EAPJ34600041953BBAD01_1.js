@@ -1,0 +1,34 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:415px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:415px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19EAPJ34600041953BBAD01.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:415px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:465px;top:232px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>OFF<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:465px;top:106px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>ON<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:802px;top:301px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>T<sub>2</sub><br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:638px;top:299px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>T<sub>1</sub><br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:758px;top:42px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>T<sub>2</sub><br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:552px;top:338px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>T1: About 2 sec.<br>T2: About 0.2 sec.<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:333px;top:139px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>B<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:283px;top:273px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>C<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:417px;top:372px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>A<br>07WAZ-0010100<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

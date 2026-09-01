@@ -1,0 +1,215 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+<title>SEA5E44K80100000000BBAT00</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+var   totalImg = 0;
+var   dispNum=1;
+function prOnLoadProc() {
+	_prInitImageInfo(100);
+	_prResizeImage(100/100);
+	divBody.style.display = "block"
+	return;
+}
+function PrintFunc()
+{
+	divBody.style.display = "none";
+	var  img_hei = _prResizeImage(67/100);
+	divBody.style.display = "block";
+	var  graphTd = document.getElementById("graphTd");
+	if(graphTd.width == "100%")
+	{
+      var   current_pos;
+      var   img_pos = 0;
+         current_pos = graphTd.offsetTop;
+		var pageCnt = Math.floor(current_pos/950);
+		var img_pos = current_pos - (pageCnt*950);
+		if(img_pos+img_hei > 950)
+		{
+			var  pageElement = document.getElementById("page_onoff");
+			if(pageElement != null)
+			{
+				pageElement.style.display = "block";
+			}
+		}
+	}
+	window.print();
+	divBody.style.display = "none";
+	_prResizeImage(100/100);
+	divBody.style.display = "block";
+	window.scrollTo(0,0);
+}
+function BackFunc()
+{
+	window.location.replace("ZOOM000000000006582.html");
+}
+function NextFunc()
+{
+	window.location.replace("ZOOM000000000006584.html");
+}
+function CloseFunc()
+{
+	window.close();
+}
+function JumpFunc(strJump)
+{
+	window.location.replace(strJump);
+}
+//-->
+</script>
+<body onLoad="prOnLoadProc();" style="font-family:sans-serif;">
+<div id="divBody" style="display:none">
+<div>
+<div style="position:absolute;right=10;">
+<input type="image" src="../img/PRINT_PREVIEW.PNG" onClick="PrintFunc()">
+<input type="image" src="../img/GL_PREV.PNG" onClick="BackFunc()">
+<input type="image" src="../img/GL_NEXT.PNG" onClick="NextFunc()">
+<input type="image" src="../img/GL_CANCEL.PNG" onClick="CloseFunc()">
+</div><br><br>
+<hr width="100%" size="2" color="black">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG10">
+</a>
+<div class="servinfosub_title">
+<b>
+ABS/VSA Indicator
+</b>
+</div>
+<ul type="disc">
+<li>
+<div>
+If the system is OK, the ABS and VSA indicators go off 2 seconds after turning the ignition switch ON (II).
+</div>
+</li>
+<li>
+<div>
+The ABS and VSA indicators come on when the control unit detects a problem in the system. However, even though the system is operating properly, the indicator may come on under these conditions:
+</div>
+</li>
+<table class="Viewer">
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Only the drive wheel rotates.
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+One drive wheel is stuck.
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+The vehicle goes into a spin.
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+The ABS or VSA continues to operate for a long time.
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+The vehicle is subjected to an electrical signal disturbance.
+</div>
+</td>
+</tr>
+</table>
+</ul>
+<div>
+To determine the actual cause of the problem, question the customer about the problem, taking these conditions into consideration.
+</div>
+<ul type="disc">
+<li>
+<div>
+When a problem is detected and the ABS indicator comes on, but not the VSA indicator, there are cases when the indicator stays on until the ignition switch is turned OFF, and cases when the indicator goes off automatically when the system returns to normal.
+</div>
+</li>
+<table class="Viewer">
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+DTC 61 or 62:
+</div>
+<div>
+The ABS and VSA indicators go off automatically when the system returns to normal.
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+DTC 31, 32, 33, 34, 35, 36, 37, 38, 54, 81, 104, 121, 122, 123 or 124:
+</div>
+<div>
+The ABS and VSA indicators stay on until the ignition switch is turned OFF whether or not the system returns to normal.
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+DTC 11, 12, 13, 14, 15, 16, 17, 18, 21, 22, 23, 24, 51 or 52:
+</div>
+<div>
+The ABS and VSA indicators stay on until the system returns to normal after the vehicle is driven.
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+DTC 25, 26, 27, 64, 65, 66, 68, 84, 86, 91 or 105:
+</div>
+<div>
+The VSA indicator stays on until the ignition switch is turned OFF whether or not the system returns to normal.
+</div>
+</td>
+</tr>
+</table>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div style="display:none;" id="page_onoff">
+<div style="page-break-after:always;">
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+
+<title>Self-Adjusting Clutch (SAC)</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+function Apf() {
+   _prInitImageInfo(100);
+   window.focus();
+   if(gImageGroupList_.length == 0) {
+      window.print();
+   }
+   else {
+      divBody.style.display = "none";
+      var  img_pos,img_hei;
+      var  img_rate = 1.0;
+      var  i;
+      var  obj;
+      var  paper_wid,paper_hei,paper_len;
+      paper_wid = 640.0;
+      paper_hei = 950.0;
+      paper_len = 980.0;
+      for(i=0; i<gImageGroupList_.length; i++){
+         if(gImageGroupList_[i].group != null){
+           obj = gImageGroupList_[i].group;
+         }
+      }
+      if(paper_wid > paper_hei) {
+         alert("For best printing result, select 'landscape' layout from the print menu.");
+      }
+      for(i=0; i<gImageGroupList_.length; i++){
+         if(gImageGroupList_[i].group != null){
+            obj = gImageGroupList_[i].group;
+            if(img_rate > paper_wid/obj.width) {
+               img_rate =  paper_wid/obj.width;
+            }
+            if(img_rate > paper_hei/obj.height) {
+               img_rate =  paper_hei/obj.height;
+            }
+         }
+      }
+      _prResizeImage(img_rate);
+      window.scrollTo(0,10000);
+      var totalHei = document.body.scrollTop+document.body.clientHeight-img_hei;
+      divBody.style.display = "block";
+      var  idObj;
+      var groupObject = document.getElementById("group" + i);
+      var   beforeOffset = 0;
+      var   current_pos;
+      var   img_pos = img_dis = 0;
+      for(i=0; i<gImageGroupList_.length; i++){
+         idObj =document.getElementById("imgId" + (i+1));
+         if(idObj != null) {
+            idObj.style.display = "block";
+            current_pos = idObj.offsetTop;
+            if(gImageGroupList_[i].group != null){
+               obj = gImageGroupList_[i].group;
+               img_dis = current_pos - beforeOffset;
+               if(i == 0) {
+                  var pageCnt = Math.floor(current_pos/paper_hei);
+                  img_dis = img_dis - paper_hei*pageCnt;
+               }
+               img_hei = obj.height*img_rate;
+               img_pos += parseInt(img_dis);
+               if(parseInt(img_pos) > paper_len) {
+                  img_pos = img_pos - paper_len;
+               }
+               img_pos += parseInt(img_hei);
+               idObj.style.display = "none";
+               if(parseInt(img_pos) > paper_len) {
+                  idObj.style.display = "block";
+                  img_pos = parseInt(img_hei) + 50;
+               }
+               beforeOffset = current_pos + parseInt(img_hei);
+            }
+         }
+      }
+      window.print();
+      divBody.style.display = "none";
+      _prResizeImage(100/100);
+      divBody.style.display = "block";
+      window.scrollTo(0,0);
+   }
+}
+-->
+</script>
+<body onload="try{if(parent&&parent.Old)parent.Old(this);}catch(e){}" style="font-family:sans-serif;">
+<div id="divBody" style="display:block">
+<div>
+<div class="top_title">
+<b>
+Self-Adjusting Clutch (SAC)
+</b>
+</div>
+<a name="iS01">
+</a>
+<a name="iT01">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Function
+</b>
+</div>
+<br>
+<div>
+On ordinary clutches, the clutch pedal load increases as the clutch disc wears. The self-adjusting clutch is designed so that the clutch pedal load will not increase even when the clutch disc wears. This is done by automatically adjusting the fulcrum of the diaphragm spring in accordance with the wear of the clutch disc. The clutch pedal load stays consistent even when the clutch disc is worn.
+</div>
+<a name="iT02">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Construction
+</b>
+</div>
+<br>
+<div>
+<div>
+The self-adjusting clutch consists of a pressure plate, a sensor spring, a diaphragm spring, an adjusting ring, three coil springs, a pressure plate cover, and a compensation spring. They are riveted together and must not be disassembled. If there is problem with any part of the pressure plate or clutch disc, they must be replaced as a set.
+</div>
+<span style="display:none" id="imgId1">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA4E0AE34116300000CAAD01_1.js">
+</script>
+</div>
+</div>
+<a name="iT03">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Operation
+</b>
+</div>
+<br>
+<div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+When the clutch disc wears slightly.
+</div>
+<div>
+As the clutch begins to wear, the release load increases slightly. However, this does not affect the operation of the clutch because the release load does not exceed that of the sensor.
+</div>
+</li>
+</ol>
+<span style="display:none" id="imgId2">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA4E0AE34116300000CAAD02_1.js">
+</script>
+</div>
+</div>
+<div>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+When the clutch disc wears considerably.
+</div>
+<div>
+The sensor spring starts to deflect as the clutch disc is worn further and the release load exceeds that of the sensor.
+</div>
+</li>
+</ol>
+<span style="display:none" id="imgId3">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA4E0AE34116300000CAAD03_1.js">
+</script>
+</div>
+</div>
+<div>
+<div>
+The fulcrum then moves following the amount of sensor spring deflection. As this takes place, the fulcrum of diaphragm spring is adjusted, keeping the release load consistent.
+</div>
+<span style="display:none" id="imgId4">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA4E0AE34116300000CAAD04_1.js">
+</script>
+</div>
+</div>
+</div></div>
+</body>
+</html>

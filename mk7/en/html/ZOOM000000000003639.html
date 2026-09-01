@@ -1,0 +1,160 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+<title>SEA5E24D10600012345KDAT00</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+var   totalImg = 0;
+var   dispNum=1;
+function prOnLoadProc() {
+	_prInitImageInfo(100);
+	_prResizeImage(100/100);
+	divBody.style.display = "block"
+	return;
+}
+function PrintFunc()
+{
+	divBody.style.display = "none";
+	var  img_hei = _prResizeImage(67/100);
+	divBody.style.display = "block";
+	var  graphTd = document.getElementById("graphTd");
+	if(graphTd.width == "100%")
+	{
+      var   current_pos;
+      var   img_pos = 0;
+         current_pos = graphTd.offsetTop;
+		var pageCnt = Math.floor(current_pos/950);
+		var img_pos = current_pos - (pageCnt*950);
+		if(img_pos+img_hei > 950)
+		{
+			var  pageElement = document.getElementById("page_onoff");
+			if(pageElement != null)
+			{
+				pageElement.style.display = "block";
+			}
+		}
+	}
+	window.print();
+	divBody.style.display = "none";
+	_prResizeImage(100/100);
+	divBody.style.display = "block";
+	window.scrollTo(0,0);
+}
+function BackFunc()
+{
+	window.location.replace("ZOOM000000000003638.html");
+}
+function CloseFunc()
+{
+	window.close();
+}
+function JumpFunc(strJump)
+{
+	window.location.replace(strJump);
+}
+//-->
+</script>
+<body onLoad="prOnLoadProc();" style="font-family:sans-serif;">
+<div id="divBody" style="display:none">
+<div>
+<div style="position:absolute;right=10;">
+<input type="image" src="../img/PRINT_PREVIEW.PNG" onClick="PrintFunc()">
+<input type="image" src="../img/GL_PREV.PNG" onClick="BackFunc()">
+<input type="image" src="../img/GL_NEXT_DISABLE.PNG" onClick="NextFunc()" disabled>
+<input type="image" src="../img/GL_CANCEL.PNG" onClick="CloseFunc()">
+</div><br><br>
+<hr width="100%" size="2" color="black">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR02">
+</a>
+<div class="procedure_sub_title">
+<b>
+Installation
+</b>
+</div>
+<a name="i310">
+</a>
+<ol>
+<li value="1">
+<div>
+Install the ABS modulator-control unit in the reverse order of removal, and note these items:
+</div>
+<ul type="disc">
+<li>
+<div>
+Tighten all mounting hardware to the specified torque values.
+</div>
+</li>
+<li>
+<div>
+Align the connecting surface of the ABS control unit 25P connector.
+</div>
+</li>
+<li>
+<div>
+Carefully push in the lock on the ABS control unit 25P connector until you hear it click into place, then confirm the connector is fully seated.
+</div>
+</li>
+<li>
+<div>
+Reconnect the six brake lines, then tighten the flare nuts to specified torque values.
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:opener.top.Cts('000000000000021','i000')">
+Bleed the brake system, starting with the front wheels.
+</a>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i320">
+</a>
+<ol>
+<li value="2">
+<div>
+Start the engine, and check that the ABS indicator goes off.
+</div>
+</li>
+</ol>
+<a name="i330">
+</a>
+<ol>
+<li value="3">
+<div>
+Test-drive the vehicle, check the ABS operation and check that the ABS indicator does not come on.
+</div>
+</li>
+</ol>
+<a name="i340">
+</a>
+<ol>
+<li value="4">
+<div>
+If the brake pedal is now spongy, there may be air trapped in the modulator and then induced into the normal brake system during modulation.
+<a href="javascript:opener.top.Cts('000000000000021','i000')">
+Bleed the brake system again, starting with the front wheels.
+</a>
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div style="display:none;" id="page_onoff">
+<div style="page-break-after:always;">
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+
+<title>Clutches and Gears</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+function Apf() {
+   _prInitImageInfo(100);
+   window.focus();
+   if(gImageGroupList_.length == 0) {
+      window.print();
+   }
+   else {
+      divBody.style.display = "none";
+      var  img_pos,img_hei;
+      var  img_rate = 1.0;
+      var  i;
+      var  obj;
+      var  paper_wid,paper_hei,paper_len;
+      paper_wid = 640.0;
+      paper_hei = 950.0;
+      paper_len = 980.0;
+      for(i=0; i<gImageGroupList_.length; i++){
+         if(gImageGroupList_[i].group != null){
+           obj = gImageGroupList_[i].group;
+         }
+      }
+      if(paper_wid > paper_hei) {
+         alert("For best printing result, select 'landscape' layout from the print menu.");
+      }
+      for(i=0; i<gImageGroupList_.length; i++){
+         if(gImageGroupList_[i].group != null){
+            obj = gImageGroupList_[i].group;
+            if(img_rate > paper_wid/obj.width) {
+               img_rate =  paper_wid/obj.width;
+            }
+            if(img_rate > paper_hei/obj.height) {
+               img_rate =  paper_hei/obj.height;
+            }
+         }
+      }
+      _prResizeImage(img_rate);
+      window.scrollTo(0,10000);
+      var totalHei = document.body.scrollTop+document.body.clientHeight-img_hei;
+      divBody.style.display = "block";
+      var  idObj;
+      var groupObject = document.getElementById("group" + i);
+      var   beforeOffset = 0;
+      var   current_pos;
+      var   img_pos = img_dis = 0;
+      for(i=0; i<gImageGroupList_.length; i++){
+         idObj =document.getElementById("imgId" + (i+1));
+         if(idObj != null) {
+            idObj.style.display = "block";
+            current_pos = idObj.offsetTop;
+            if(gImageGroupList_[i].group != null){
+               obj = gImageGroupList_[i].group;
+               img_dis = current_pos - beforeOffset;
+               if(i == 0) {
+                  var pageCnt = Math.floor(current_pos/paper_hei);
+                  img_dis = img_dis - paper_hei*pageCnt;
+               }
+               img_hei = obj.height*img_rate;
+               img_pos += parseInt(img_dis);
+               if(parseInt(img_pos) > paper_len) {
+                  img_pos = img_pos - paper_len;
+               }
+               img_pos += parseInt(img_hei);
+               idObj.style.display = "none";
+               if(parseInt(img_pos) > paper_len) {
+                  idObj.style.display = "block";
+                  img_pos = parseInt(img_hei) + 50;
+               }
+               beforeOffset = current_pos + parseInt(img_hei);
+            }
+         }
+      }
+      window.print();
+      divBody.style.display = "none";
+      _prResizeImage(100/100);
+      divBody.style.display = "block";
+      window.scrollTo(0,0);
+   }
+}
+-->
+</script>
+<body onload="try{if(parent&&parent.Old)parent.Old(this);}catch(e){}" style="font-family:sans-serif;">
+<div id="divBody" style="display:block">
+<div>
+<div class="top_title">
+<b>
+Clutches and Gears
+</b>
+</div>
+<a name="iS01">
+</a>
+<div>
+The 5-speed automatic transmission uses hydraulically-actuated clutches to engage or disengage the transmission gears. When hydraulic pressure is introduced into the clutch drum, the clutch piston moves. This presses the friction discs and steel plates together, locking them so they don't slip. Power is then transmitted through the engaged clutch pack to its hub-mounted gear. Likewise, when the hydraulic pressure is bled from the clutch pack, the piston releases the friction discs and steel plates, and they are free to slide past each other. This allows the gear to spin independently on its shaft, transmitting no power.
+</div>
+<a name="iT01">
+</a>
+<br>
+<div class="topic_title">
+<b>
+1st Clutch
+</b>
+</div>
+<br>
+<div>
+The 1st clutch engages/disengages 1st gear, and is located at the middle of the secondary shaft. The 1st clutch is joined back-to-back to the 3rd clutch. The 1st clutch is supplied hydraulic pressure by its ATF feed pipe within the secondary shaft.
+</div>
+<a name="iT02">
+</a>
+<br>
+<div class="topic_title">
+<b>
+2nd Clutch
+</b>
+</div>
+<br>
+<div>
+The 2nd clutch engages/disengages 2nd gear, and is located at the end of the secondary shaft, opposite the end cover. The 2nd clutch is supplied hydraulic pressure by a circuit connected to the internal hydraulic circuit.
+</div>
+<a name="iT03">
+</a>
+<br>
+<div class="topic_title">
+<b>
+3rd Clutch
+</b>
+</div>
+<br>
+<div>
+The 3rd clutch engages/disengages 3rd gear, and is located at the middle of the secondary shaft. The 3rd clutch is joined back-to-back to the 1st clutch. The 3rd clutch is supplied hydraulic pressure by its ATF feed pipe within the secondary shaft.
+</div>
+<a name="iT04">
+</a>
+<br>
+<div class="topic_title">
+<b>
+4th Clutch
+</b>
+</div>
+<br>
+<div>
+The 4th clutch engages/disengages 4th gear, as well as reverse gear, and is located at the middle of the mainshaft. The 4th clutch is joined back-to-back to the 5th clutch. The 4th clutch is supplied hydraulic pressure by its ATF feed pipe within the mainshaft.
+</div>
+<a name="iT05">
+</a>
+<br>
+<div class="topic_title">
+<b>
+5th Clutch
+</b>
+</div>
+<br>
+<div>
+The 5th clutch engages/disengages 5th gear, and is located at the middle of the mainshaft. The 5th clutch is joined back-to-back to the 4th clutch. The 5th clutch is supplied hydraulic pressure by its ATF feed pipe within the mainshaft.
+</div>
+<a name="iT06">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Gear operation
+</b>
+</div>
+<br>
+<div>
+Gears on the mainshaft:
+</div>
+<ul type="disc">
+<li>
+<div>
+4th gear engages/disengages with the mainshaft by the 4th clutch.
+</div>
+</li>
+<li>
+<div>
+5th gear engages/disengages with the mainshaft by the 5th clutch.
+</div>
+</li>
+<li>
+<div>
+Reverse gear engages/disengages with the mainshaft by the 4th clutch.
+</div>
+</li>
+<li>
+<div>
+Idler gear is splined with the mainshaft, and rotates with the mainshaft.
+</div>
+</li>
+</ul>
+<div>
+Gears on the countershaft:
+</div>
+<ul type="disc">
+<li>
+<div>
+Final drive gear is integral with the countershaft.
+</div>
+</li>
+<li>
+<div>
+1st, 2nd, 3rd, 5th, and park gears are splined with the countershaft, and rotate with the countershaft.
+</div>
+</li>
+<li>
+<div>
+4th gear and reverse gear rotate freely from the countershaft. The reverse selector engages 4th gear and reverse gear with the reverse selector hub. The reverse selector hub is splined to the countershaft so that the 4th gear and reverse gear engage with the countershaft.
+</div>
+</li>
+</ul>
+<div>
+Gears on the secondary shaft:
+</div>
+<ul type="disc">
+<li>
+<div>
+1st gear engages/disengages with the secondary shaft by the 1st clutch.
+</div>
+</li>
+<li>
+<div>
+2nd gear engages/disengages with the secondary shaft by the 2nd clutch.
+</div>
+</li>
+<li>
+<div>
+3rd gear engages/disengages with the secondary shaft by the 3rd clutch.
+</div>
+</li>
+<li>
+<div>
+Idler gear is splined with the secondary shaft, and rotates with the secondary shaft.
+</div>
+</li>
+</ul>
+<div>
+The idler gear on the idler shaft transmits power between the mainshaft and the secondary shaft.
+</div>
+<div>
+The reverse idler gear transmits power from the mainshaft reverse gear to the countershaft reverse gear, and changes rotational direction of the countershaft to reverse.
+</div>
+<a name="iT07">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Transmission Cutaway View
+</b>
+</div>
+<br>
+<span style="display:none" id="imgId1">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA6ELPE10411310041CAAD01_1.js">
+</script>
+</div>
+</div></div>
+</body>
+</html>

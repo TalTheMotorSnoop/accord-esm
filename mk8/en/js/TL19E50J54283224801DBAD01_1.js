@@ -1,0 +1,37 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:847px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:847px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E50J54283224801DBAD01.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:847px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:17px;top:234px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>G2<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:225px;top:534px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>G1<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:386px;top:699px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>G3<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:39px;top:283px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>ENGINE GROUND CABLE<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:194px;top:20px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>BATTERY GROUND CABLE<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:603px;top:486px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>TRANSMISSION<br>GROUND CABLE<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:584px;top:51px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>EPS GROUND CABLE<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:912px;top:110px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>G4*<sup>1</sup><br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:702px;top:369px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>G4*<sup>2</sup><br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_10\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:2px;top:801px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b></b>*1: Without headlight leveling system<br>*2: With headlight leveling system<br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

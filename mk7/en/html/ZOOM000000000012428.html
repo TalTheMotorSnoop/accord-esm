@@ -1,0 +1,188 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+<title>SEA6EL8H10900036861MBAT00</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+var   totalImg = 0;
+var   dispNum=1;
+function prOnLoadProc() {
+	_prInitImageInfo(100);
+	_prResizeImage(100/100);
+	divBody.style.display = "block"
+	return;
+}
+function PrintFunc()
+{
+	divBody.style.display = "none";
+	var  img_hei = _prResizeImage(67/100);
+	divBody.style.display = "block";
+	var  graphTd = document.getElementById("graphTd");
+	if(graphTd.width == "100%")
+	{
+      var   current_pos;
+      var   img_pos = 0;
+         current_pos = graphTd.offsetTop;
+		var pageCnt = Math.floor(current_pos/950);
+		var img_pos = current_pos - (pageCnt*950);
+		if(img_pos+img_hei > 950)
+		{
+			var  pageElement = document.getElementById("page_onoff");
+			if(pageElement != null)
+			{
+				pageElement.style.display = "block";
+			}
+		}
+	}
+	window.print();
+	divBody.style.display = "none";
+	_prResizeImage(100/100);
+	divBody.style.display = "block";
+	window.scrollTo(0,0);
+}
+function BackFunc()
+{
+	window.location.replace("ZOOM000000000012427.html");
+}
+function NextFunc()
+{
+	window.location.replace("ZOOM000000000012429.html");
+}
+function CloseFunc()
+{
+	window.close();
+}
+function JumpFunc(strJump)
+{
+	window.location.replace(strJump);
+}
+//-->
+</script>
+<body onLoad="prOnLoadProc();" style="font-family:sans-serif;">
+<div id="divBody" style="display:none">
+<div>
+<div style="position:absolute;right=10;">
+<input type="image" src="../img/PRINT_PREVIEW.PNG" onClick="PrintFunc()">
+<input type="image" src="../img/GL_PREV.PNG" onClick="BackFunc()">
+<input type="image" src="../img/GL_NEXT.PNG" onClick="NextFunc()">
+<input type="image" src="../img/GL_CANCEL.PNG" onClick="CloseFunc()">
+</div><br><br>
+<hr width="100%" size="2" color="black">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR04">
+</a>
+<div class="procedure_sub_title">
+<b>
+Precaution for the Static Camera Aiming
+</b>
+</div>
+<div>
+To complete the aiming, it is necessary to succeed all of three targets' (center, passenger's side, driver's side) detections. If the detection for any one of targets failed or aborted on the way, the condition will be the aiming uncompleted.
+</div>
+<div>
+When the static camera aiming was failure for some reason, aiming failure code is displayed on the HDS. In this case,
+<a href="javascript:opener.top.Cts('000000000004877','i000')">
+troubleshoot the indicated failure code with the HDS.
+</a>
+</div>
+<a name="iT01">
+</a>
+<div class="procedure_topic_title">
+<b>
+Vehicle preparation
+</b>
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Turn the ignition switch ON (II).
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Make sure that the adaptive cruise control (ACC)/LKAS indicator goes out.
+</div>
+<div>
+NOTE: If the indicator remains on, check the DTC with HDS. When the LKAS camera is replaced, removed and attached or failing the aiming process,the DTC 10 of LKAS camera failure diagnosis (unfinished aiming of the LKAS) is stored and the adaptive cruise control (ACC)/LKAS indicator, but the LKAS camera aiming can be performed. If the other DTC is displayed, perform the DTC failure diagnosis.
+</div>
+<div>
+If the source of failure in not found, the LKAS camera aiming can not be performed.
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Choose the possible prescribed distance A from the following list.
+</div>
+<div>
+<br>
+<div class="table_title">
+<b>
+Prescribed distance X
+</b>
+</div>
+<br>
+<table width="90%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="25%">
+<col width="25%">
+<col width="25%">
+<col width="25%">
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+1,500 mm (59.1 in.)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+2,000 mm (78.7 in.)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+2,500 mm (98.4 in.)
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+3,000 mm (118 in.)
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<div>
+NOTE: A prescribed distance is the distance between the target pattern surface and vehicle (the center of the front wheel hub). Use only the numerical value which corresponds to the chosen prescribed distance in the following work operation.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div style="display:none;" id="page_onoff">
+<div style="page-break-after:always;">
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

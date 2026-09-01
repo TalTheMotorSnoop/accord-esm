@@ -1,0 +1,291 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+
+<title>VTEC/VTC</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+function Apf() {
+   _prInitImageInfo(100);
+   window.focus();
+   if(gImageGroupList_.length == 0) {
+      window.print();
+   }
+   else {
+      divBody.style.display = "none";
+      var  img_pos,img_hei;
+      var  img_rate = 1.0;
+      var  i;
+      var  obj;
+      var  paper_wid,paper_hei,paper_len;
+      paper_wid = 640.0;
+      paper_hei = 950.0;
+      paper_len = 980.0;
+      for(i=0; i<gImageGroupList_.length; i++){
+         if(gImageGroupList_[i].group != null){
+           obj = gImageGroupList_[i].group;
+         }
+      }
+      if(paper_wid > paper_hei) {
+         alert("For best printing result, select 'landscape' layout from the print menu.");
+      }
+      for(i=0; i<gImageGroupList_.length; i++){
+         if(gImageGroupList_[i].group != null){
+            obj = gImageGroupList_[i].group;
+            if(img_rate > paper_wid/obj.width) {
+               img_rate =  paper_wid/obj.width;
+            }
+            if(img_rate > paper_hei/obj.height) {
+               img_rate =  paper_hei/obj.height;
+            }
+         }
+      }
+      _prResizeImage(img_rate);
+      window.scrollTo(0,10000);
+      var totalHei = document.body.scrollTop+document.body.clientHeight-img_hei;
+      divBody.style.display = "block";
+      var  idObj;
+      var groupObject = document.getElementById("group" + i);
+      var   beforeOffset = 0;
+      var   current_pos;
+      var   img_pos = img_dis = 0;
+      for(i=0; i<gImageGroupList_.length; i++){
+         idObj =document.getElementById("imgId" + (i+1));
+         if(idObj != null) {
+            idObj.style.display = "block";
+            current_pos = idObj.offsetTop;
+            if(gImageGroupList_[i].group != null){
+               obj = gImageGroupList_[i].group;
+               img_dis = current_pos - beforeOffset;
+               if(i == 0) {
+                  var pageCnt = Math.floor(current_pos/paper_hei);
+                  img_dis = img_dis - paper_hei*pageCnt;
+               }
+               img_hei = obj.height*img_rate;
+               img_pos += parseInt(img_dis);
+               if(parseInt(img_pos) > paper_len) {
+                  img_pos = img_pos - paper_len;
+               }
+               img_pos += parseInt(img_hei);
+               idObj.style.display = "none";
+               if(parseInt(img_pos) > paper_len) {
+                  idObj.style.display = "block";
+                  img_pos = parseInt(img_hei) + 50;
+               }
+               beforeOffset = current_pos + parseInt(img_hei);
+            }
+         }
+      }
+      window.print();
+      divBody.style.display = "none";
+      _prResizeImage(100/100);
+      divBody.style.display = "block";
+      window.scrollTo(0,0);
+   }
+}
+-->
+</script>
+<body onload="try{if(parent&&parent.Old)parent.Old(this);}catch(e){}" style="font-family:sans-serif;">
+<div id="divBody" style="display:block">
+<div>
+<div class="top_title">
+<b>
+VTEC/VTC
+</b>
+</div>
+<a name="iS01">
+</a>
+<div>
+<ul type="disc">
+<li>
+<div>
+The i-VTEC has a VTC (variable valve timing control) mechanism on the intake camshaft in addition to the usual VTEC.
+</div>
+<div>
+This mechanism improves fuel efficiency and reduces exhaust emissions at all levels of engine speed, vehicle speed, and engine load.
+</div>
+</li>
+<li>
+<div>
+The VTEC mechanism changes the valve lift and timing by using more than one cam profile.
+</div>
+</li>
+<li>
+<div>
+The VTC changes the phase of the intake camshaft via oil pressure. It changes the intake valve timing continuously.
+</div>
+</li>
+</ul>
+<span style="display:none" id="imgId1">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA6EL3A14680800000CAAD01_1.js">
+</script>
+</div>
+</div>
+<div>
+<table width="100%" class="Viewer" frame="border" style="table-layout:fixed;">
+<col width="25%">
+<col width="25%">
+<col width="49%">
+<thead>
+<tr>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+Driving Condition
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+VTC Control
+</div>
+</th>
+<th class="ViewerTH" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="center">
+<div>
+Description
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+(1) Light-load
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Base Position
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+For stable combustion, the cam angle is retarded, to reduces the entry of exhaust gas into the cylinder.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+(2) Medium/high-load
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Advance Control
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Cam phase angle is controlled to optimize valve timing, improving fuel efficiency and reducing emission.
+</div>
+</td>
+</tr>
+<tr>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+(3) High speed
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+Advance-Base Position
+</div>
+</td>
+<td class="ViewerTD" style="border-left-style:none;border-right-style:solid;border-bottom-style:solid;border-top-style:none;" align="left">
+<div>
+To reduce the pumping loss, the intake valve is closed quickly. This helps the entry of air fuel mixture with a charging effect, maximizing engine power.
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<a name="iT01">
+</a>
+<br>
+<div class="topic_title">
+<b>
+VTC System
+</b>
+</div>
+<br>
+<div>
+<ul type="disc">
+<li>
+<div>
+The VTC system makes continuous intake valve timing changes based on operating conditions.
+</div>
+</li>
+<li>
+<div>
+Intake valve timing is optimized to allow the engine to produce maximum power.
+</div>
+</li>
+<li>
+<div>
+Cam angle is advanced to obtain the EGR effect and reduce pumping loss. The intake valve is closed quickly to reduce the entry of the air/fuel mixture into the intake port and improve the charging effect.
+</div>
+</li>
+<li>
+<div>
+The system reduces the cam advance at idle, stabilizes combustion, and reduces engine speed.
+</div>
+</li>
+<li>
+<div>
+If a malfunction occurs, the VTC system control is disabled and the valve timing is fixed at the fully retarded position.
+</div>
+</li>
+</ul>
+<span style="display:none" id="imgId2">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA6EL3A14680800000CAAD02_1.js">
+</script>
+</div>
+</div>
+<a name="iT02">
+</a>
+<br>
+<div class="topic_title">
+<b>
+VTEC System
+</b>
+</div>
+<br>
+<div>
+<ul type="disc">
+<li>
+<div>
+The VTEC system changes the cam profile to correspond to the engine speed. It maximizes torque at low engine speed and output at high engine speed.
+</div>
+</li>
+<li>
+<div>
+The low lift cam is used at low engine speeds, and the high lift cam is used at high engine speeds.
+</div>
+</li>
+</ul>
+<span style="display:none" id="imgId3">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA6EL3A14680800000CAAD03_1.js">
+</script>
+</div>
+</div>
+</div></div>
+</body>
+</html>

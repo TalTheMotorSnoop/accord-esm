@@ -1,0 +1,31 @@
+with(document) {
+write("<div id=\"group3\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:783px;\">");
+write("<div id=\"rect3\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:783px;\">");
+write("<img id=\"img3\" name=\"PrtImgId\" src=\"../img/TL19E60H46400000000DAAD03.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:783px;border-color:#ffffff\">");
+write("<p id=\"p3_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:340px;top:74px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>RIGHT FRONT IMPACT SENSOR<br><a href=\"javascript:CtsProc('0','000000000000221','i000')\"></b>Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p3_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:446px;top:689px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>LEFT SIDE CURTAIN AIRBAG<br><a href=\"javascript:CtsProc('0','000000000002908','i000')\"></b>Replacement,</a><br><a href=\"javascript:CtsProc('0','000000000002907','i000')\">Disposal,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p3_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:707px;top:122px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>RIGHT SIDE CURTAIN AIRBAG<br><a href=\"javascript:CtsProc('0','000000000002908','i000')\"></b>Replacement,</a><br><a href=\"javascript:CtsProc('0','000000000002907','i000')\">Disposal,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p3_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:718px;top:689px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>RIGHT SIDE IMPACT SENSOR<br>(SECOND)<br><a href=\"javascript:CtsProc('0','000000000000225','i000')\"></b>Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p3_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:172px;top:689px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>LEFT SIDE IMPACT SENSOR<br>(SECOND)<br><a href=\"javascript:CtsProc('0','000000000000225','i000')\"></b>Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p3_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:249px;top:20px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>LEFT FRONT IMPACT SENSOR<br><a href=\"javascript:CtsProc('0','000000000000221','i000')\"></b>Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p3_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:5px;top:563px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>E-PRETENSIONER UNIT<br><a href=\"javascript:CtsProc('0','000000000002651','i000')\"></b>Operation,</a><br><a href=\"javascript:CtsProc('0','000000000000220','i000')\">Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p3_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:40px;top:755px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b></b>LHD model is shown, RHD model is simillar.<br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

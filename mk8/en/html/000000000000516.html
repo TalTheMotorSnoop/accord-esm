@@ -1,0 +1,360 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E00J46636200000BBAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+Immobilizer System Symptom Troubleshooting Information
+</div>
+<div>
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG01">
+</a>
+<div class="servinfosub_title">
+<b>
+General Check Before Troubleshooting
+</b>
+</div>
+<div>
+Before troubleshooting the immobilizer system, check the following general items and solve any if applicable:
+</div>
+<ul type="disc">
+<li>
+<div>
+The battery is low; charge the battery fully, then troubleshoot the immobilizer system.
+</div>
+</li>
+<li>
+<div>
+The ignition key is not a genuine Honda part; use a Honda-approved key blank, register the key, then troubleshoot the immobilizer system.
+</div>
+</li>
+<li>
+<div>
+A key ring, keys, or a key case is used; remove the key from it, and troubleshoot the immobilizer system with a key only.
+</div>
+</li>
+<li>
+<div>
+An aftermarket electrical part is attached; remove it, then troubleshoot the immobilizer system.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG02">
+</a>
+<div class="servinfosub_title">
+<b>
+Symptom Troubleshooting Using the Immobilizer Indicator Lighting Pattern
+</b>
+</div>
+<div>
+The pattern of the immobilizer indicator can help troubleshoot the condition of the immobilizer system. Here are descriptions of the four possible patterns:
+</div>
+<a name="iT01">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Normal operation
+</b>
+</div>
+<br>
+<div>
+If the immobilizer code is identified, the immobilizer indicator quickly flashes once when the ignition switch is turned to ON (II).
+</div>
+<div>
+The immobilizer indicator does not come on when the ignition switch is turned to LOCK (0).
+</div>
+<a name="iT02">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Immobilizer code is not identified
+</b>
+</div>
+<br>
+<div>
+If the immobilizer code is not identified, the immobilizer indicator will quickly flash once, then will blink until the ignition switch is turned to LOCK (0). When the ignition switch is turned to LOCK (0), the indicator will blink ten times, then go off.
+</div>
+<div>
+<a href="javascript:CtsProc('0','000000000000520','i000')">
+The state of the immobilizer key registration and the IMOCD line can be checked by doing a SYSTEM CHECK
+</a>
+ with the HDS.
+</div>
+<a name="iT03">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Immobilizer indicator does not come on
+</b>
+</div>
+<br>
+<div>
+If the immobilizer indicator does not come on after turning the ignition switch to ON (II), there is an open or short in the F-CAN lines between the ECM/PCM and the gauge control module. Watch the malfunction indicator lamp (MIL). If the MIL stays on, 
+<a href="javascript:CtsProc('0','000000000001286','i000')">
+go to the PGM-FI system troubleshooting.
+</a>
+</div>
+<a name="iT04">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Immobilizer indicator does not go off
+</b>
+</div>
+<br>
+<div>
+If the immobilizer indicator does not go off after turning the ignition switch to ON (II), 
+<a href="javascript:CtsProc('0','000000000002653','i000')">
+do the gauge control module self-diagnostic function.
+</a>
+ If the indicator drive circuit is OK, do the SYSTEM CHECK with the HDS.
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<span style="display:block" id="imgDispId">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG03">
+</a>
+<div class="servinfosub_title">
+<b>
+Symptom Troubleshooting Using Malfunctioning Circuit Functions
+</b>
+</div>
+<div>
+If a malfunction occurs in the immobilizer circuit, use the table to cross-reference the malfunction criteria to the line(s) that should be checked table:
+</div>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001420','1');">
+<img src="../tn/TL19E00J46636200000BBAD01.png">
+</a>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</span>
+<span style="display:none" id="imgPrtId">
+<table width="100%" class="Viewer">
+<tr>
+<td width="100%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG03">
+</a>
+<div class="servinfosub_title">
+<b>
+Symptom Troubleshooting Using Malfunctioning Circuit Functions
+</b>
+</div>
+<div>
+If a malfunction occurs in the immobilizer circuit, use the table to cross-reference the malfunction criteria to the line(s) that should be checked table:
+</div>
+</td>
+</tr>
+<tr>
+<td width="100%" class="ViewerTD" id="graphTd" valign="top">
+<span style="display:block" id="imgId1">
+<div>
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J46636200000BBAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</div>
+</span>
+</td>
+</tr>
+<tr>
+<td width="100%" class="ViewerTD" valign="top">
+</td>
+</tr>
+</table>
+</span>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG04">
+</a>
+<div class="servinfosub_title">
+<b>
+System Check
+</b>
+</div>
+<div>
+NOTE: The HDS can be used to check the state of the immobilizer key registration and the IMOCD (S-Net) line by doing a SYSTEM CHECK.
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Connect the HDS to the data link connector, then turn the ignition switch to ON (II) and follow the prompts to the MAIN MENU.
+</div>
+<div>
+NOTE: If the HDS does not communicate with the vehicle, go to the DLC circuit troubleshooting:
+</div>
+<ul type="disc">
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000001190','i000')">
+R20A3 engine
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000001600','i000')">
+K24Z3 engine
+</a>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+At MAIN MENU, enter IMMOBILIZER, then select IMMOBILIZER SETUP.
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Do the SYSTEM CHECK. If there is a system check number, do the troubleshooting for the item indicated.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

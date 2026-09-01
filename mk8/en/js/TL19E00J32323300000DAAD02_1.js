@@ -1,0 +1,31 @@
+with(document) {
+write("<div id=\"group2\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:767px;\">");
+write("<div id=\"rect2\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:767px;\">");
+write("<img id=\"img2\" name=\"PrtImgId\" src=\"../img/TL19E00J32323300000DAAD02.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:767px;border-color:#ffffff\">");
+write("<p id=\"p2_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:660px;top:519px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>PASSENGER'S MICU<br>(Built into the passenger's<br>under-dash fuse/relay box)<br><a href=\"javascript:CtsProc('0','000000000000434','i000')\"></b>Input Test,</a><br><a href=\"javascript:CtsProc('0','000000000000550','i000')\">Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:612px;top:110px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>INTDIVIDUAL MAP LIGHTS<br><a href=\"javascript:CtsProc('0','000000000000427','i000')\"></b>Test/Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:611px;top:146px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>INTERIOR LIGHT SWITCH (With sunroof)<br>(Built into the sunroof switch)<br><a href=\"javascript:CtsProc('0','000000000000428','i000')\"></b>Test/Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:554px;top:63px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>CEILING LIGHT (Without sunroof)<br><a href=\"javascript:CtsProc('0','000000000000424','i000')\"></b>Test/Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:487px;top:18px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>CEILING LIGHT (With sunroof)<br><a href=\"javascript:CtsProc('0','000000000000424','i000')\"></b>Test/Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:535px;top:609px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>FRONT PASSENGER'S<br>DOOR SWITCH<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:373px;top:661px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b>RIGHT REAR DOOR SWITCH<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:19px;top:737px;font-weight:normal;font-size:8.68pt;\">");
+write("<nobr><b></b>LHD model is shown, RHD model is similar.<br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

@@ -1,0 +1,551 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E50K79100000000BBAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+How to Troubleshoot the SRS
+</div>
+<div>
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG01">
+</a>
+<div class="servinfosub_title">
+<b>
+DTC (Diagnostic Trouble Codes)
+</b>
+</div>
+<div>
+The self-diagnostic function of the SRS system allows it to locate the causes of system problems and then store this information in memory. For easier troubleshooting, this data can be retrieved via a data link circuit.
+</div>
+<ul type="disc">
+<li>
+<div>
+When you turn the ignition switch to ON (II), the SRS indicator should come on. If it goes off after 6 seconds, the system is normal, and is not currently detecting any abnormality.
+</div>
+</li>
+<li>
+<div>
+If there is an abnormality, the system locates and defines the problem, stores this information in memory, and turns the SRS indicator on. The data remains in the memory even when the ignition switch is turned to LOCK (0) or if the battery is disconnected.
+</div>
+</li>
+<li>
+<div>
+The data is stored in memory as a diagnostic trouble code (DTC).
+</div>
+</li>
+<li>
+<div>
+DTCs are either latching or resetting depending on the malfunction. With resetting DTCs, the SRS indicator goes off the next time the ignition switch is turned to ON (II) and the system is normal, but the DTC is still stored. With latching DTCs, the SRS indicator does not turn OFF until the malfunction is repaired and the DTC is cleared.
+</div>
+</li>
+<li>
+<div>
+When you connect the HDS to the 16P data link connector (DLC), you can retrieve a more detailed DTC in the Honda Systems ‘‘SRS'' menu.
+</div>
+</li>
+<li>
+<div>
+After reading and recording the DTC, proceed with the troubleshooting procedure for that code.
+</div>
+</li>
+</ul>
+<a name="iT01">
+</a>
+<br>
+<div class="topic_title">
+<b>
+Precautions
+</b>
+</div>
+<br>
+<ul type="disc">
+<li>
+<div>
+Use only a digital multimeter to check the system. Make sure its output is 10 mA (0.01 A) or less when switched to the smallest value in the ohmmeter range. A tester with a higher output could damage the airbag circuit or cause accidental airbag deployment and possible injury.
+</div>
+</li>
+<li>
+<div>
+Whenever the ignition switch is in ON (II), or has been turned to LOCK (0) for less than 3 minutes, be careful not to bump the SRS unit; the airbags could accidentally deploy and cause damage or injuries.
+</div>
+</li>
+<li>
+<div>
+Before you remove the dashboard wire harness or SRS floor wire harness, disconnect the driver's airbag connector, the front passenger's airbag connector, both side airbag connectors, both side curtain airbag connectors, and both seat belt tensioner connectors.
+</div>
+</li>
+<li>
+<div>
+Make sure the battery is fully charged. If the battery is dead or low, measuring values may not be correct.
+</div>
+</li>
+<li>
+<div>
+Do not touch a tester probe to the terminals in the SRS unit or harness connectors, and do not connect the SRS unit terminals or the sensor terminals or the sensor terminals with a jumper wire. Use only the backprobe set and the multimeter. Backprobe spring-loaded lock type connectors correctly.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG02">
+</a>
+<div class="servinfosub_title">
+<b>
+Reading the DTC
+</b>
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Make sure the ignition switch is to LOCK (0).
+</div>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Connect the HDS to the data link connector (DLC) (A).
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Turn the ignition switch to ON (II).
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Make sure the HDS communicates with the vehicle and the SRS unit. If it does not communicate, troubleshoot the DLC circuit:
+</div>
+<ul type="disc">
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000001190','i000')">
+R20A3 engine
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000001600','i000')">
+K24Z2 engine
+</a>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+Use the HDS to check for SRS DTCs.
+</div>
+</li>
+</ol>
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+Read and record the DTC.
+</div>
+</li>
+</ol>
+<a name="i070">
+</a>
+<ol>
+<li value="7">
+<div>
+Turn the ignition switch to LOCK (0).
+</div>
+</li>
+</ol>
+<a name="i080">
+</a>
+<ol>
+<li value="8">
+<div>
+Disconnect the HDS from the DLC.
+</div>
+</li>
+</ol>
+<a name="i090">
+</a>
+<ol>
+<li value="9">
+<div>
+Do the troubleshooting procedure for the DTC.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000007387','1');">
+<img src="../tn/TL19E50K79100000000BBAD01.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E50K79100000000BBAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG03">
+</a>
+<div class="servinfosub_title">
+<b>
+Clear the DTC Memory With the HDS
+</b>
+</div>
+<div>
+NOTE: Make sure the battery is fully charged before you begin.
+</div>
+<a name="i210">
+</a>
+<ol>
+<li value="1">
+<div>
+Make sure the ignition switch is in LOCK (0).
+</div>
+</li>
+</ol>
+<a name="i220">
+</a>
+<ol>
+<li value="2">
+<div>
+Connect the HDS to the data link connector (DLC) (A).
+</div>
+</li>
+</ol>
+<a name="i230">
+</a>
+<ol>
+<li value="3">
+<div>
+Turn the ignition switch to ON (II).
+</div>
+</li>
+</ol>
+<a name="i240">
+</a>
+<ol>
+<li value="4">
+<div>
+Make sure the HDS communicates with the vehicle and the SRS unit. If it does not communicate, troubleshoot the DLC circuit:
+</div>
+<ul type="disc">
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000001190','i000')">
+R20A3 engine
+</a>
+</div>
+</li>
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000001600','i000')">
+K24Z3 engine
+</a>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i250">
+</a>
+<ol>
+<li value="5">
+<div>
+In the SRS MENU of the HDS, select SRS, then DTC to clear DTC(s).
+</div>
+</li>
+</ol>
+<a name="i260">
+</a>
+<ol>
+<li value="6">
+<div>
+Turn the ignition switch to LOCK (0), then wait for 10 seconds.
+</div>
+</li>
+</ol>
+<a name="i270">
+</a>
+<ol>
+<li value="7">
+<div>
+Disconnect the HDS from the DLC.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000007388','1');">
+<img src="../tn/TL19E50K79100000000BBAD02.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E50K79100000000BBAD02_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG04">
+</a>
+<div class="servinfosub_title">
+<b>
+Troubleshooting Intermittent Failures
+</b>
+</div>
+<div>
+If there was a malfunction that sets a DTC, but it does not recur, it will be stored in the memory as an intermittent failure, and the SRS indicator may come on depending on the malfunction detected.
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+<a href="javascript:CtsProc('0','000000000002659','i000')">
+Check the condition of the battery,
+</a>
+ and the charging system. Low battery voltage may cause some intermittent failures.
+</div>
+</li>
+<li>
+<div>
+A faulty cable reel can cause intermittent connections related to the driver's airbag inflator DTCs.
+</div>
+</li>
+</ul>
+<div>
+After checking the DTC, troubleshoot as follows:
+</div>
+<a name="i410">
+</a>
+<ol>
+<li value="1">
+<div>
+Read the DTC (see Reading the DTC).
+</div>
+</li>
+</ol>
+<a name="i420">
+</a>
+<ol>
+<li value="2">
+<div>
+Clear the DTC memory (see Clear the DTC Memory).
+</div>
+</li>
+</ol>
+<a name="i430">
+</a>
+<ol>
+<li value="3">
+<div>
+Set the parking brake, then start the engine, and let it idle.
+</div>
+</li>
+</ol>
+<a name="i440">
+</a>
+<ol>
+<li value="4">
+<div>
+The SRS indicator comes on for about 6 seconds and then goes off.
+</div>
+</li>
+</ol>
+<a name="i450">
+</a>
+<ol>
+<li value="5">
+<div>
+Shake the related wire harnesses and the connectors, then look for loose connections, and poor grounds.
+</div>
+</li>
+</ol>
+<a name="i460">
+</a>
+<ol>
+<li value="6">
+<div>
+Take a test-drive (quick acceleration, quick braking, and cornering), turn the steering wheel fully left and right, and hold it there for 5 to 10 seconds. If the problem recurs, the SRS indicator will come on.
+</div>
+</li>
+</ol>
+<a name="i470">
+</a>
+<ol>
+<li value="7">
+<div>
+If you cannot duplicate the concern, ask the customer about the conditions when it occurred, or ask the customer to demonstrate the concern.
+</div>
+</li>
+</ol>
+<a name="i480">
+</a>
+<ol>
+<li value="8">
+<div>
+If you cannot duplicate the intermittent failure, the system is OK at this time.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

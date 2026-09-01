@@ -1,0 +1,224 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+
+<title>SEA3E20R11100000000YCAT02</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+function Apf() {
+   _prInitImageInfo(100);
+   window.focus();
+   if(gImageGroupList_.length == 0) {
+      window.print();
+   }
+   else {
+      divBody.style.display = "none";
+      var  img_pos,img_hei;
+      var  img_rate = 1.0;
+      var  i;
+      var  obj;
+      var  paper_wid,paper_hei,paper_len;
+      paper_wid = 640.0;
+      paper_hei = 950.0;
+      paper_len = 980.0;
+      for(i=0; i<gImageGroupList_.length; i++){
+         if(gImageGroupList_[i].group != null){
+           obj = gImageGroupList_[i].group;
+         }
+      }
+      if(paper_wid > paper_hei) {
+         alert("For best printing result, select 'landscape' layout from the print menu.");
+      }
+      for(i=0; i<gImageGroupList_.length; i++){
+         if(gImageGroupList_[i].group != null){
+            obj = gImageGroupList_[i].group;
+            if(img_rate > paper_wid/obj.width) {
+               img_rate =  paper_wid/obj.width;
+            }
+            if(img_rate > paper_hei/obj.height) {
+               img_rate =  paper_hei/obj.height;
+            }
+         }
+      }
+      _prResizeImage(img_rate);
+      window.scrollTo(0,10000);
+      var totalHei = document.body.scrollTop+document.body.clientHeight-img_hei;
+      divBody.style.display = "block";
+      var  idObj;
+      var groupObject = document.getElementById("group" + i);
+      var   beforeOffset = 0;
+      var   current_pos;
+      var   img_pos = img_dis = 0;
+      for(i=0; i<gImageGroupList_.length; i++){
+         idObj =document.getElementById("imgId" + (i+1));
+         if(idObj != null) {
+            idObj.style.display = "block";
+            current_pos = idObj.offsetTop;
+            if(gImageGroupList_[i].group != null){
+               obj = gImageGroupList_[i].group;
+               img_dis = current_pos - beforeOffset;
+               if(i == 0) {
+                  var pageCnt = Math.floor(current_pos/paper_hei);
+                  img_dis = img_dis - paper_hei*pageCnt;
+               }
+               img_hei = obj.height*img_rate;
+               img_pos += parseInt(img_dis);
+               if(parseInt(img_pos) > paper_len) {
+                  img_pos = img_pos - paper_len;
+               }
+               img_pos += parseInt(img_hei);
+               idObj.style.display = "none";
+               if(parseInt(img_pos) > paper_len) {
+                  idObj.style.display = "block";
+                  img_pos = parseInt(img_hei) + 50;
+               }
+               beforeOffset = current_pos + parseInt(img_hei);
+            }
+         }
+      }
+      window.print();
+      divBody.style.display = "none";
+      _prResizeImage(100/100);
+      divBody.style.display = "block";
+      window.scrollTo(0,0);
+   }
+}
+-->
+</script>
+<body onload="try{if(parent&&parent.Old)parent.Old(this);}catch(e){}" style="font-family:sans-serif;">
+<div id="divBody" style="display:block">
+<div>
+<div class="top_title">
+SRS Component Replacement/Inspection After Deployment
+</div>
+<div>
+</div>
+<hr width="100%" size="2" color="gray">
+<div>
+NOTE: Before doing any SRS repairs, use the PGM Tester SRS menu method to check for DTCs: refer to the DTC Troubleshooting Index for the less obvious deployed parts (seat belt tensioners, OPDS sensor, side airbag sensors, etc.)
+</div>
+<div>
+After a collision where the seat belt tensioners deployed, replace these items:
+</div>
+<ul type="disc">
+<li>
+<div>
+SRS unit
+</div>
+</li>
+<li>
+<div>
+Seat belt tensioners
+</div>
+</li>
+<li>
+<div>
+Front sensors
+</div>
+</li>
+</ul>
+<div>
+After a collision where the front airbag(s) deployed, replace these items:
+</div>
+<ul type="disc">
+<li>
+<div>
+SRS unit
+</div>
+</li>
+<li>
+<div>
+Deployed side airbag(s)
+</div>
+</li>
+<li>
+<div>
+Seat belt tensioners
+</div>
+</li>
+<li>
+<div>
+Front sensors
+</div>
+</li>
+</ul>
+<div>
+After a collision where the side airbag(s) deployed, replace these items:
+</div>
+<ul type="disc">
+<li>
+<div>
+SRS unit
+</div>
+</li>
+<li>
+<div>
+Deployed side airbag(s)
+</div>
+</li>
+<li>
+<div>
+Side impact sensor(s) (1st) for the side(s) that deployed
+</div>
+</li>
+</ul>
+<div>
+After a collision where the side curtain airbag(s) deployed, replace these items:
+</div>
+<ul type="disc">
+<li>
+<div>
+SRS unit
+</div>
+</li>
+<li>
+<div>
+Side impact sensor(s) (1st) for the side(s) that deployed
+</div>
+</li>
+<li>
+<div>
+Side impact sensor(s) (2nd) for the side(s) that deployed
+</div>
+</li>
+<li>
+<div>
+Roof trim
+</div>
+</li>
+<li>
+<div>
+Front grab handle
+</div>
+</li>
+<li>
+<div>
+Any related trim clip
+</div>
+</li>
+</ul>
+<div>
+During the repair process, inspect these areas:
+</div>
+<ul type="disc">
+<li>
+<div>
+Inspect all the SRS wire harnesses. Replace, don't repair, any damaged harnesses.
+</div>
+</li>
+<li>
+<div>
+Inspect the cable reel for heat damage. If there is any damage, replace the cable reel.
+</div>
+</li>
+</ul>
+<div>
+After the vehicle is completely repaired, turn the ignition switch ON. If the SRS indicator comes on for about 6 seconds and then goes off, the SRS airbag system is OK. If the indicator does not function properly, use the PGM Tester SRS Menu Method to read the DTC(s). If this doesn't retrieve any codes, use the Tester's SCS menu method. If the SCS method doesn't work, you may need to install a known-good SRS unit to read the DTC(s). If you still cannot retrieve a code, go to SRS indicator Circuit Troubleshooting.
+</div>
+</div></div>
+</body>
+</html>

@@ -1,0 +1,608 @@
+<html lang="en">
+<head>
+<meta name="author" content="HONDA MOTOR Co.,Ltd.">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<title>(
+TL19E00J46643436101FEAT00
+)</title>
+<script>
+<!--
+var bufCookie = new Array;
+var strKey,strVal;
+var nPos=0;
+var strPara = location.href.split("?")[1];
+if((typeof(strPara) == "undefined") || (strPara == null)){
+	bufCookie = document.cookie.split(";");
+	while (nPos < bufCookie.length) {
+		strKey = bufCookie[nPos].split("=")[0];
+		strVal = bufCookie[nPos].split("=")[1];
+		if(strKey == "CurrentYearType"){
+			strPara = strVal;
+			break;
+		}
+		nPos++;
+	}
+}
+if((typeof(strPara) != "undefined") && (strPara != null)){
+	document.title = strPara + document.title;
+	document.cookie = "CurrentYearType="+strPara+";";
+	var strUrl = location.href.split("?")[0];
+	if(strUrl != location.href) {
+		location.replace(strUrl);
+	}
+}
+function CtsProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	try{parent.Cts(Key,strData);}catch(e){window.location.href=url;}
+}
+
+function PrtProc(Type,Key,Anc) {
+	var strData;
+	strData = Anc;
+	if((typeof(strPara) != "undefined") && (strPara != null)){
+		strData += '?'+strPara
+	}
+	var url = Key + ".html";
+	if(strData) url += (strData.indexOf('?')===0 ? strData : (strData ? '#'+strData : ''));
+	var w=1024,h=700;
+	var t=(screen.availHeight-h)/2,l=(screen.availWidth-w)/2;
+	try{parent.Prt(Key,strData);}catch(e){window.open(url,"ESM_ZOOM","width="+w+",height="+h+",top="+t+",left="+l+",scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");}
+}
+-->
+</script>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+<style>
+.drag	{ position: relative; cursor: pointer; }
+</style>
+<script src="../js/esm-bridge.js"></script>
+</head>
+<script>
+<!--
+var load_flag = false;
+function onLoadProc() {
+	try{parent.Old(this);}catch(e){};
+	load_flag = true;
+}
+-->
+</script>
+<script src="../js/PrinterSize.js"></script>
+<script src="../js/StandardPrintFunc.js"></script>
+<body onload="javascript:onLoadProc()" style="font-family:sans-serif;">
+<div>
+<div class="top_title">
+Keyless Entry Transmitter Test
+</div>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<div class="tool_list_title">
+<b>
+Special Tools Required
+</b>
+</div>
+<div>
+<a href="javascript:PrtProc('0','ZOOM000000000013628')">
+<br>
+Keyless entry checker
+<br>
+ 07MAJ-SP00400
+</a>
+</div>
+<div>
+NOTE:
+</div>
+<ul type="disc">
+<li>
+<div>
+If the doors unlock or lock with the transmitter, but the LED on the transmitter does not come on, the LED is faulty; replace the transmitter.
+</div>
+</li>
+<li>
+<div>
+If any door is open, you cannot lock the doors with the transmitter.
+</div>
+</li>
+<li>
+<div>
+If you unlocked the doors with the transmitter, but do not open any of the doors within 30 seconds, the doors relock automatically.
+</div>
+</li>
+<li>
+<div>
+The doors do not lock or unlock with the transmitter if the ignition key is inserted in the ignition switch.
+</div>
+</li>
+</ul>
+<a name="iR01">
+</a>
+<div class="procedure_sub_title">
+<b>
+With HDS
+</b>
+</div>
+<a name="i010">
+</a>
+<ol>
+<li value="1">
+<div>
+Press the lock or unlock button five or six times to reset the transmitter.
+</div>
+<ul type="disc">
+<li>
+<div>
+If the locks work, the transmitter is OK.
+</div>
+</li>
+<li>
+<div>
+If any of the transmitter buttons do not work, replace the transmitter, then 
+<a href="javascript:CtsProc('0','000000000000521','i000')">
+register the transmitter programming.
+</a>
+</div>
+</li>
+<li>
+<div>
+If the locks don't work, go to 
+<a href="javascript:try{parent.Jmp('i020');}catch(e){location.hash='i020';}">Step 2
+</a>
+.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i020">
+</a>
+<ol>
+<li value="2">
+<div>
+Connect the HDS to the data link connector.
+</div>
+</li>
+</ol>
+<a name="i030">
+</a>
+<ol>
+<li value="3">
+<div>
+Select the KEYLESS from the BODY ELECTRICAL menu, then enter the KEYLESS CHECK.
+</div>
+</li>
+</ol>
+<a name="i040">
+</a>
+<ol>
+<li value="4">
+<div>
+Press lock, unlock, and trunk button check the response on the screen of the HDS.
+</div>
+<div>
+NOTE: The door lock actuators may or may not cycle when receiving input from the transmitter. 
+</div>
+<ul type="disc">
+<li>
+<div>
+If KEYLESS ENTRY TRANSMITTER CODE IS RECEIVED is indicated, the transmitter is OK.
+</div>
+</li>
+<li>
+<div>
+If DIFFERENT KEYLESS ENTRY TRANSMITTER CODE IS RECEIVED is indicated, the transmitter is not registered to the vehicle. If necessary, reprogram and 
+<a href="javascript:CtsProc('0','000000000000521','i000')">
+register the transmitter.
+</a>
+</div>
+</li>
+<li>
+<div>
+If KEYLESS ENTRY TRANSMITTER CODE IS NOT RECEIVED is indicated, go to 
+<a href="javascript:try{parent.Jmp('i050');}catch(e){location.hash='i050';}">Step 5
+</a>
+.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i050">
+</a>
+<ol>
+<li value="5">
+<div>
+Open the transmitter and check for water damage.
+</div>
+<ul type="disc">
+<li>
+<div>
+If you find any water damage, replace the transmitter, then 
+<a href="javascript:CtsProc('0','000000000000521','i000')">
+register it.
+</a>
+</div>
+</li>
+<li>
+<div>
+If there is no water damage, go to 
+<a href="javascript:try{parent.Jmp('i060');}catch(e){location.hash='i060';}">Step 6
+</a>
+.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001461','1');">
+<img src="../tn/TL19E00J46643436101FEAD01.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J46643436101FEAD01_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR01">
+</a>
+<a name="i060">
+</a>
+<ol>
+<li value="6">
+<div>
+Replace the transmitter battery (A) with a new one, and press lock or unlock button and check the receive condition on the screen of the HDS.
+</div>
+<ul type="disc">
+<li>
+<div>
+If KEYLESS ENTRY TRANSMITTER CODE IS RECEIVED is indicated, the transmitter is OK.
+</div>
+</li>
+<li>
+<div>
+If KEYLESS ENTRY TRANSMITTER CODE IS NOT RECEIVED is indicated, go to 
+<a href="javascript:try{parent.Jmp('i070');}catch(e){location.hash='i070';}">Step 7
+</a>
+.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i070">
+</a>
+<ol>
+<li value="7">
+<div>
+Use a different known-good keyless transmitter assembly and repeat 
+<a href="javascript:try{parent.Jmp('i030');}catch(e){location.hash='i030';}">Step 3
+</a>
+ and 4.
+</div>
+<div>
+NOTE: The keyless transmitter does not need to be programmed to the vehicle for this test.
+</div>
+<ul type="disc">
+<li>
+<div>
+If (DIFFERENT) KEYLESS ENTRY TRANSMITTER CODE IS RECEIVED is indicated, replace the keyless transmitter and 
+<a href="javascript:CtsProc('0','000000000000521','i000')">
+do the immobilizer system registration.
+</a>
+</div>
+</li>
+<li>
+<div>
+If KEYLESS ENTRY TRANSMITTER CODE IS NOT RECEIVED is indicated, the 
+<a href="javascript:CtsProc('0','000000000000522','i000')">
+immobilizer-keyless control unit is faulty, replace it
+</a>
+ and do the immobilizer system 
+<a href="javascript:CtsProc('0','000000000000521','i000')">
+registration.
+</a>
+</div>
+</li>
+</ul>
+<div>
+NOTE: As the keyless transmitter is combined with the immobilizer transponder, so when the transponder is registered by the HDS, the keyless transmitter is also registered automatically.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001462','1');">
+<img src="../tn/TL19E00J46643436101FEAD02.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J46643436101FEAD02_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR02">
+</a>
+<div class="procedure_sub_title">
+<b>
+Without HDS
+</b>
+</div>
+<a name="i210">
+</a>
+<ol>
+<li value="1">
+<div>
+Put on the transmitter (A) behind the keyless entry checker (B).
+</div>
+</li>
+</ol>
+<a name="i220">
+</a>
+<ol>
+<li value="2">
+<div>
+Press the door lock button.
+</div>
+<ul type="disc">
+<li>
+<div>
+If the indicator light (C) comes on, the transmitter is OK.
+</div>
+</li>
+<li>
+<div>
+If the indicator light does not come on, check for;
+</div>
+</li>
+<table class="Viewer">
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+A dead or low battery, go to 
+<a href="javascript:try{parent.Jmp('i030');}catch(e){location.hash='i030';}">Step 3
+</a>
+.
+</div>
+</td>
+</tr>
+<tr>
+<td width="10" class="ViewerTD" align="right">-
+</td>
+<td class="ViewerTD">
+<div>
+Faulty transmitter.
+</div>
+</td>
+</tr>
+</table>
+</ul>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001463','1');">
+<img src="../tn/TL19E00J46643436101FEAD03.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J46643436101FEAD03_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR02">
+</a>
+<a name="i230">
+</a>
+<ol>
+<li value="3">
+<div>
+Open the transmitter and check for water damage.
+</div>
+<ul type="disc">
+<li>
+<div>
+If you find any water damage, replace the transmitter.
+</div>
+</li>
+<li>
+<div>
+If there is no water damage, go to 
+<a href="javascript:try{parent.Jmp('i040');}catch(e){location.hash='i040';}">Step 4
+</a>
+.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001464','1');">
+<img src="../tn/TL19E00J46643436101FEAD04.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J46643436101FEAD04_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+<span style="display:none" id="hrDivId">
+<div style="page-break-after:always">
+</div>
+</span>
+<hr width="100%" size="2" id="hrId" color="gray">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iR02">
+</a>
+<a name="i240">
+</a>
+<ol>
+<li value="4">
+<div>
+Replace the transmitter battery (A) with a new one, and try to lock and unlock the doors with the transmitter by pressing the lock or unlock button five or six times.
+</div>
+<ul type="disc">
+<li>
+<div>
+If the doors lock and unlock, the transmitter is OK.
+</div>
+</li>
+<li>
+<div>
+If the doors don't lock and unlock, go to 
+<a href="javascript:try{parent.Jmp('i050');}catch(e){location.hash='i050';}">Step 5
+</a>
+.
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<a name="i250">
+</a>
+<ol>
+<li value="5">
+<div>
+Reprogram and 
+<a href="javascript:CtsProc('0','000000000000521','i000')">
+register the transmitter,
+</a>
+ then try to lock and unlock the doors.
+</div>
+<ul type="disc">
+<li>
+<div>
+If the doors lock and unlock, the transmitter is OK.
+</div>
+</li>
+<li>
+<div>
+If the doors don't lock and unlock, substitute a known-good transmitter and recheck. If still not operating, replace the immobilizer-keyless control unit.
+</div>
+</li>
+</ul>
+<div>
+NOTE: As the keyless transmitter is combined with the immobilizer transponder, so when the transponder is registered by the HDS, the keyless transmitter is also registered automatically.
+</div>
+</li>
+</ol>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div>
+<span style="display:block" id="imgDispId">
+<a href="javascript:PrtProc('0','ZOOM000000000001465','1');">
+<img src="../tn/TL19E00J46643436101FEAD05.png">
+</a>
+</span>
+<span style="display:none" id="imgPrtId">
+<span style="display:none" id="prePageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+<script src="../js/TL19E00J46643436101FEAD05_1.js">
+</script>
+<span style="display:none" id="postPageId">
+<div style="page-break-after:always;">
+</div>
+</span>
+</span>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

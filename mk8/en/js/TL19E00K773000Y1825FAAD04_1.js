@@ -1,0 +1,31 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:475px; height:369px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:475px;height:369px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E00K773000Y1825FAAD04.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:475px;height:369px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:43px;top:320px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>POWER SEAT CONTROL UNIT CONNECTOR A (40P)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:134px;top:339px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b></b>Wire side of female terminals<br></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:43px;top:15px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>SLIDE MOTOR/POSITION SENSOR 5P CONNECTOR<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:111px;top:117px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>SVCC<br>(WHT/BLK)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:252px;top:117px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>SEG<br>(GRN/BLK)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:223px;top:282px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>SEG (GRN/BLK)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:321px;top:203px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>SVCC<br>(WHT/BLK)<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:134px;top:32px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b></b>Wire side of female terminals<br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

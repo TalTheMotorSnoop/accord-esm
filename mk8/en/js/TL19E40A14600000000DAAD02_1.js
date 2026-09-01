@@ -1,0 +1,37 @@
+with(document) {
+write("<div id=\"group2\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:950px; height:1087px;\">");
+write("<div id=\"rect2\" name=\"PrtRectId\"class=\"drag\"  style=\"width:950px;height:1087px;\">");
+write("<img id=\"img2\" name=\"PrtImgId\" src=\"../img/TL19E40A14600000000DAAD02.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:950px;height:1087px;border-color:#ffffff\">");
+write("<p id=\"p2_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:663px;top:18px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>UPPER CAMSHAFT HOLDERS<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:51px;top:756px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>EXHAUST CAMSHAFT GEAR<br><a href=\"javascript:CtsProc('0','000000000001892','i000')\"></b>Replacement,</a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:789px;top:223px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>INTAKE CAMSHAFT<br><a href=\"javascript:CtsProc('0','000000000001889','i000')\"></b>Replacement,<br></a><br><a href=\"javascript:CtsProc('0','000000000001890','i000')\">Inspection,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:729px;top:809px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>CYLINDER HEAD GASKET<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:700px;top:877px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>DOWEL PINS<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:156px;top:968px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>OIL CONTROL ORIFICE<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:108px;top:275px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>INTAKE CAMSHAFT GEAR<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:2px;top:527px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>CAM CHAIN<br>SPROCKET<br><a href=\"javascript:CtsProc('0','000000000001898','i000')\"></b>Replacement,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p2_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:726px;top:82px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>EXHAUST CAMSHAFT<br></b></nobr>");
+write("</p>");
+write("<p id=\"p2_10\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:790px;top:315px;font-weight:normal;font-size:8.69pt;\">");
+write("<nobr><b>LOWER CAMSHAFT<br>HOLDER<br></b></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

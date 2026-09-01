@@ -1,0 +1,34 @@
+with(document) {
+write("<div id=\"group1\"  name=\"PrtGrpId\" class=\"drag\" style=\"position:relative; width:475px; height:786px;\">");
+write("<div id=\"rect1\" name=\"PrtRectId\"class=\"drag\"  style=\"width:475px;height:786px;\">");
+write("<img id=\"img1\" name=\"PrtImgId\" src=\"../img/TL19E4PE10411600000DAAD01.PNG\" border=\"1\" class=\"drag\" style=\"position:absolute;left:0px;top:0px;width:475px;height:786px;border-color:#ffffff\">");
+write("<p id=\"p1_1\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:246px;top:17px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>THRUST SHIM, 85 mm<br><a href=\"javascript:CtsProc('0','000000000002497','i000')\"></b>Preload Inspection,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_2\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:246px;top:76px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>SPACER<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_3\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:246px;top:151px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>BEARING OUTER RACE<br><a href=\"javascript:CtsProc('0','000000000002496','i000')\"></b>Replacement,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_4\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:246px;top:212px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>CARRIER BEARING<br><a href=\"javascript:CtsProc('0','000000000002498','i000')\"></b>Replacement,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_5\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:311px;top:452px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>FINAL DRIVEN GEAR<br><a href=\"javascript:CtsProc('0','000000000002499','i000')\"></b>Replacement,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_6\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:290px;top:511px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>DIFFERENTIAL CARRIER<br><a href=\"javascript:CtsProc('0','000000000002495','i000')\"></b>Backlash Inspection,<br></a><br><a href=\"javascript:CtsProc('0','000000000002499','i000')\">Replacement,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_7\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:263px;top:727px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>SPACER<br></b></nobr>");
+write("</p>");
+write("<p id=\"p1_8\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:263px;top:665px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>BEARING OUTER RACE<br><a href=\"javascript:CtsProc('0','000000000002496','i000')\"></b>Replacement,<br></a><br></nobr>");
+write("</p>");
+write("<p id=\"p1_9\" name=\"PrtPId\" class=\"drag\" style=\"position:absolute;left:263px;top:605px;font-weight:normal;font-size:9.22pt;\">");
+write("<nobr><b>CARRIER BEARING<br><a href=\"javascript:CtsProc('0','000000000002498','i000')\"></b>Replacement,<br></a><br></nobr>");
+write("</p>");
+write("</div>");
+write("</div>");
+}

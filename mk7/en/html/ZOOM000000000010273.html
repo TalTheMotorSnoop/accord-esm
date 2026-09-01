@@ -1,0 +1,128 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+<title>SEA6EJ7J36200000000BBAT10</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+var   totalImg = 0;
+var   dispNum=1;
+function prOnLoadProc() {
+	_prInitImageInfo(100);
+	_prResizeImage(100/100);
+	divBody.style.display = "block"
+	return;
+}
+function PrintFunc()
+{
+	divBody.style.display = "none";
+	var  img_hei = _prResizeImage(67/100);
+	divBody.style.display = "block";
+	var  graphTd = document.getElementById("graphTd");
+	if(graphTd.width == "100%")
+	{
+      var   current_pos;
+      var   img_pos = 0;
+         current_pos = graphTd.offsetTop;
+		var pageCnt = Math.floor(current_pos/950);
+		var img_pos = current_pos - (pageCnt*950);
+		if(img_pos+img_hei > 950)
+		{
+			var  pageElement = document.getElementById("page_onoff");
+			if(pageElement != null)
+			{
+				pageElement.style.display = "block";
+			}
+		}
+	}
+	window.print();
+	divBody.style.display = "none";
+	_prResizeImage(100/100);
+	divBody.style.display = "block";
+	window.scrollTo(0,0);
+}
+function BackFunc()
+{
+	window.location.replace("ZOOM000000000010272.html");
+}
+function NextFunc()
+{
+	window.location.replace("ZOOM000000000010274.html");
+}
+function CloseFunc()
+{
+	window.close();
+}
+function JumpFunc(strJump)
+{
+	window.location.replace(strJump);
+}
+//-->
+</script>
+<body onLoad="prOnLoadProc();" style="font-family:sans-serif;">
+<div id="divBody" style="display:none">
+<div>
+<div style="position:absolute;right=10;">
+<input type="image" src="../img/PRINT_PREVIEW.PNG" onClick="PrintFunc()">
+<input type="image" src="../img/GL_PREV.PNG" onClick="BackFunc()">
+<input type="image" src="../img/GL_NEXT.PNG" onClick="NextFunc()">
+<input type="image" src="../img/GL_CANCEL.PNG" onClick="CloseFunc()">
+</div><br><br>
+<hr width="100%" size="2" color="black">
+<table width="100%" class="Viewer">
+<tr>
+<td width="80%" class="ViewerTD" id="textTd" valign="top">
+<a name="iG08">
+</a>
+<div class="servinfosub_title">
+<b>
+Service Precautions
+</b>
+</div>
+<ul type="disc">
+<li>
+<div>
+If the navigation unit needs to be replaced, inform the customer that personal information in the navigation system will be lost. If possible, have the customer record their personal information before the unit is replaced.
+</div>
+</li>
+<li>
+<div>
+Before disconnecting the battery, make sure you have the anti-theft codes for the radio and the navigation system, and write down the radio channel presets. Also obtain any PGM-FI or transmission DTCs and freeze frame date (which will be lost when the PCM loses power).
+</div>
+</li>
+<li>
+<div>
+When the battery is disconnected, the internal GPS clock is reset to ‘‘0:00''. The clock will reset to the correct time after the system finishes GPS initialization.
+</div>
+</li>
+<li>
+<div>
+After reconnecting the battery, you have to wait to get the initial signal from the satellite. It will take from 10 to 45 minutes.
+</div>
+</li>
+<li>
+<div>
+Verify map matching
+</div>
+</li>
+<li>
+<div>
+Before returning the vehicle to the customer, enter the radio and navigation anti-theft security code, then enter the customer's radio channel presets, adjust the setup clock settings in the navigation system.
+</div>
+</li>
+</ul>
+</td>
+<td width="20%" class="ViewerTD" id="graphTd" valign="top">
+<div style="display:none;" id="page_onoff">
+<div style="page-break-after:always;">
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

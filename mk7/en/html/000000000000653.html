@@ -1,0 +1,148 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script src="../js/fallback.js"></script>
+
+<title>SEA5E13G10100000000CAAT00</title>
+<link href="../css/ViewerStyle.css" rel="stylesheet">
+</head>
+<script src="../js/image-common.js"></script>
+<script>
+<!--
+function Apf() {
+   _prInitImageInfo(100);
+   window.focus();
+   if(gImageGroupList_.length == 0) {
+      window.print();
+   }
+   else {
+      divBody.style.display = "none";
+      var  img_pos,img_hei;
+      var  img_rate = 1.0;
+      var  i;
+      var  obj;
+      var  paper_wid,paper_hei,paper_len;
+      paper_wid = 640.0;
+      paper_hei = 950.0;
+      paper_len = 980.0;
+      for(i=0; i<gImageGroupList_.length; i++){
+         if(gImageGroupList_[i].group != null){
+           obj = gImageGroupList_[i].group;
+         }
+      }
+      if(paper_wid > paper_hei) {
+         alert("For best printing result, select 'landscape' layout from the print menu.");
+      }
+      for(i=0; i<gImageGroupList_.length; i++){
+         if(gImageGroupList_[i].group != null){
+            obj = gImageGroupList_[i].group;
+            if(img_rate > paper_wid/obj.width) {
+               img_rate =  paper_wid/obj.width;
+            }
+            if(img_rate > paper_hei/obj.height) {
+               img_rate =  paper_hei/obj.height;
+            }
+         }
+      }
+      _prResizeImage(img_rate);
+      window.scrollTo(0,10000);
+      var totalHei = document.body.scrollTop+document.body.clientHeight-img_hei;
+      divBody.style.display = "block";
+      var  idObj;
+      var groupObject = document.getElementById("group" + i);
+      var   beforeOffset = 0;
+      var   current_pos;
+      var   img_pos = img_dis = 0;
+      for(i=0; i<gImageGroupList_.length; i++){
+         idObj =document.getElementById("imgId" + (i+1));
+         if(idObj != null) {
+            idObj.style.display = "block";
+            current_pos = idObj.offsetTop;
+            if(gImageGroupList_[i].group != null){
+               obj = gImageGroupList_[i].group;
+               img_dis = current_pos - beforeOffset;
+               if(i == 0) {
+                  var pageCnt = Math.floor(current_pos/paper_hei);
+                  img_dis = img_dis - paper_hei*pageCnt;
+               }
+               img_hei = obj.height*img_rate;
+               img_pos += parseInt(img_dis);
+               if(parseInt(img_pos) > paper_len) {
+                  img_pos = img_pos - paper_len;
+               }
+               img_pos += parseInt(img_hei);
+               idObj.style.display = "none";
+               if(parseInt(img_pos) > paper_len) {
+                  idObj.style.display = "block";
+                  img_pos = parseInt(img_hei) + 50;
+               }
+               beforeOffset = current_pos + parseInt(img_hei);
+            }
+         }
+      }
+      window.print();
+      divBody.style.display = "none";
+      _prResizeImage(100/100);
+      divBody.style.display = "block";
+      window.scrollTo(0,0);
+   }
+}
+-->
+</script>
+<body onload="try{if(parent&&parent.Old)parent.Old(this);}catch(e){}" style="font-family:sans-serif;">
+<div id="divBody" style="display:block">
+<div>
+<div class="top_title">
+Climate Control System Description - A/C system
+</div>
+<div>
+<div>
+The air conditioning system removes heat from the passenger compartment by circulating refrigerant through the system.
+</div>
+<span style="display:none" id="imgId1">
+<div style="page-break-after:always;">
+</div>
+</span>
+<div>
+<script src="../js/SEA5E13G10100000000CAAD01_1.js">
+</script>
+</div>
+</div>
+<div>
+This vehicle uses HFC-134a (R-134a) refrigerant which does not contain chlorofluorocarbons. Pay attention to the following service items:
+</div>
+<ul type="disc">
+<li>
+<div>
+Do not mix refrigerants CFC-12 (R-12) and HFC-134a (R-134a). They are not compatible.
+</div>
+</li>
+<li>
+<div>
+Use only the recommended polyalkyleneglycol (PAG) refrigerant oil (KEIHIN SP-10) designed for the R-134a A/C compressor. Intermixing the recommended (PAG) refrigerant oil with any other refrigerant oil will result in A/C compressor failure.
+</div>
+</li>
+<li>
+<div>
+All A/C system parts (A/C compressor, discharge line, suction line, evaporator, A/C condenser, receiver/dryer, expansion valve, O-rings for joints) are designed for refrigerant R-134a. Do not exchange with R-12 parts.
+</div>
+</li>
+<li>
+<div>
+Use a halogen gas leak detector designed for refrigerant R-134a.
+</div>
+</li>
+<li>
+<div>
+R-12 and R-134a refrigerant servicing equipment are not interchangeable. Use only a recovery/recycling/charging station for refrigerant R-134a to service the R-134a air conditioning systems.
+</div>
+</li>
+<li>
+<div>
+Always recover the refrigerant R-134a with an approved recovery/recycling/charging station before disconnecting any A/C fitting.
+</div>
+</li>
+</ul>
+</div></div>
+</body>
+</html>
