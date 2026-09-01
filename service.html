@@ -207,6 +207,7 @@ function calc(){
   var dateStr=document.getElementById('inDate').value;
   if(!rawKm&&rawKm!==0){alert('Enter your current mileage.');return}
   var km=(unit==='mi')?rawKm*1.60934:rawKm;
+  svCur();
   var today=dateStr?new Date(dateStr):new Date();
   var code=document.getElementById('inCode').value;
   var isD=!!DIESEL[code];
@@ -316,6 +317,18 @@ function fK(km,u){if(u==='mi')return Math.round(km/1.60934).toLocaleString()+' m
 function mSince(ds,now){var d=new Date(ds);return(now.getFullYear()-d.getFullYear())*12+(now.getMonth()-d.getMonth())}
 function mFromDate(ds,mo){var d=new Date(ds);d.setMonth(d.getMonth()+mo);return d.toLocaleDateString('en-GB',{month:'short',year:'numeric'})}
 
+function ldCur(){try{var c=JSON.parse(localStorage.getItem('esm_svc_cur')||'{}');return (c&&typeof c==='object')?c:{}}catch(e){return{}}}
+function svCur(){try{var c=ldCur();
+  c.yr=document.getElementById('inYear').value;c.code=document.getElementById('inCode').value;
+  c.km=document.getElementById('inKm').value;c.unit=document.getElementById('inUnit').value;
+  c.all=document.getElementById('chkAll').checked?1:0;
+  localStorage.setItem('esm_svc_cur',JSON.stringify(c))}catch(e){}}
+function restoreCur(){var c=ldCur();
+  if(c.yr&&MODELS[c.yr]){document.getElementById('inYear').value=c.yr;onYearChange();
+    if(c.code&&MODELS[c.yr].codes.indexOf(c.code)>=0){document.getElementById('inCode').value=c.code;restoreGlobal()}}
+  if(c.unit==='mi'||c.unit==='km')document.getElementById('inUnit').value=c.unit;
+  if(c.km!==undefined&&c.km!==null&&String(c.km)!=='')document.getElementById('inKm').value=String(c.km).replace(/[^0-9.]/g,'');
+  if(c.all===0||c.all===1){document.getElementById('chkAll').checked=!!c.all;document.getElementById('indNote').style.display=c.all?'none':'block'}}
 function restoreGlobal(){var d=ldSvc();var g=d._global||{};
   document.getElementById('inLastKm').value=(g.km!==undefined&&g.km!==null)?g.km:'';
   document.getElementById('inLastDate').value=g.date||'';
@@ -324,6 +337,9 @@ function restoreGlobal(){var d=ldSvc();var g=d._global||{};
 document.getElementById('inDate').value=new Date().toISOString().split('T')[0];
 onYearChange();
 restoreGlobal();
+restoreCur();
+if(document.getElementById('inKm').value)calc();
+['inYear','inCode','inKm','inUnit','chkAll'].forEach(function(id){document.getElementById(id).addEventListener('change',svCur)});
 document.addEventListener('keyup',function(e){if(e.key==='Enter')calc()});
 // Restore when model changes too
 document.getElementById('inCode').addEventListener('change',restoreGlobal);
