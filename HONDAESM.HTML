@@ -4,7 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Honda Accord — Electronic Service Manual</title>
-<link href="./fonts/fonts.css" rel="stylesheet">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#191512">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./icons/icon-192.png">
+<link href="./fonts/fonts.css?v=2.0.0" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html,body{height:100%;overflow:hidden}
@@ -1045,6 +1049,7 @@ body.fable ::-webkit-scrollbar-thumb{background:#3e3020;border-radius:3px}
       <span class="clr-link" onclick="document.getElementById('impFile').click()" title="Restore data from a previously exported file">Import</span>
       <input type="file" id="impFile" accept=".json,application/json" style="display:none" onchange="importData(this)">
     </div>
+    <div class="sec" style="padding-top:0;font-size:10.5px;line-height:1.45;opacity:.7">Your notes, jobs, bookmarks and pins live only in this browser &mdash; nothing is uploaded. Export them to keep a copy or move them to another device.</div>
   </div></div>
   <div id="sbDrag" title="Drag to resize the sidebar &mdash; double-click to reset"></div>
   <div id="contentArea">
@@ -1097,6 +1102,7 @@ var GEN_LABELS={mk7:"MK7 \u00b7 7TH GEN",mk8:"MK8 \u00b7 8TH GEN"};
 var curGen="",cdInfo=[],tDT=[],curMT="SM",curTD=[],curSD=[];
 var curKey="",curSct="",curSc="",curSys="",curComp="",curSitq="",curKW="",curScopeName="";
 var selLbl=null,_sieScript=null,_treeScript=null,_listScript=null;
+var ESM_VER='2.0.0';
 var _searchGen=0;var _treeGen=0;
 var _navPending=false;
 function hlReset(){_hlTerms=[];_navPending=true;try{var _hb=document.getElementById('hlBar');if(_hb)_hb.style.display='none'}catch(e){}
@@ -1319,7 +1325,7 @@ function toggleSB(){var sb=document.getElementById("sidebar");sb.classList.toggl
 function escH(t){var d=document.createElement("div");d.appendChild(document.createTextNode(t));return d.innerHTML.replace(/"/g,'&quot;').replace(/'/g,'&#39;')}
 function _safe(f){try{f()}catch(e){}}
 function removeScript(s){if(s&&s.parentNode)s.parentNode.removeChild(s)}
-function injectScript(src,onload){var s=document.createElement("script");s.src=src;s.onload=onload||function(){};s.onerror=function(){};document.head.appendChild(s);return s}
+function injectScript(src,onload){var s=document.createElement("script");s.src=src+(src.indexOf('?')>=0?'&':'?')+'v='+ESM_VER;s.onload=onload||function(){};s.onerror=function(){};document.head.appendChild(s);return s}
 window.SearchTreeItem=function(level,a,b,c,d,e,f,g){return{Level:level,Sitq:a,Sct:b,Sc:c,Sys:d,Comp:e,Supp:f,Name:g}};
 
 /* ════════════════════════════════════════════
@@ -2533,7 +2539,8 @@ window.onload=function(){
   document.getElementById('contentFrame').addEventListener('load',onFrameLoad);
   document.getElementById('contentFrame2').addEventListener('load',onFrame2Load);
   // Restore sidebar state
-  try{if(localStorage.getItem('esm_sb')==='1')document.getElementById('sidebar').classList.add('collapsed')}catch(e){}
+  try{var _sbp=localStorage.getItem('esm_sb');if(_sbp==='1'||(_sbp===null&&window.innerWidth<=800))document.getElementById('sidebar').classList.add('collapsed')}catch(e){}
+  try{if('serviceWorker' in navigator&&location.protocol==='https:')navigator.serviceWorker.register('./sw.js')}catch(eSW){}
   // Load from URL hash if present
   loadFromHash();
 };

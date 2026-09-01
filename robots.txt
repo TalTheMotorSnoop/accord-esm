@@ -1,0 +1,3 @@
+# Accord ESM — usable by link, not intended to be indexed.
+User-agent: *
+Disallow: /
