@@ -840,6 +840,7 @@ mark.hl{background:transparent;color:inherit;font-weight:700;text-decoration:und
 .aurora #pinPanel{background:#060818;border:1px solid #151830;border-radius:3px}
 
 /* ══════════ ENHANCED MOBILE ══════════ */
+@media(max-width:1000px){.h-sub{display:none!important}}
 @media(max-width:800px){
   #sidebar{width:100vw!important;min-width:100vw!important;position:absolute;z-index:10;left:0;top:0;height:100%;transition:transform .3s ease}
   #sidebar.collapsed{transform:translateX(-100%);width:100vw!important;min-width:100vw!important;opacity:1;pointer-events:auto}
@@ -863,6 +864,12 @@ mark.hl{background:transparent;color:inherit;font-weight:700;text-decoration:und
   .cb-btn{padding:6px 10px!important}
   #toggleSB{width:40px!important;height:40px!important;font-size:20px!important}
   .classic #header{height:78px}
+  .h-divider,.h-honda-logo{display:none!important}
+  #genBadge{font-size:9px!important;padding:3px 6px!important;white-space:nowrap}
+  .h-mode-center{left:auto!important;right:8px!important;transform:translateY(-50%)!important}
+  .cb-btns{max-width:100%;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .cb-btns::-webkit-scrollbar{display:none}
+  #notePanel,#jobPanel,#unitPanel,#wirePanel{max-width:calc(100vw - 16px)!important}
 }
 
 
@@ -1105,7 +1112,7 @@ var selLbl=null,_sieScript=null,_treeScript=null,_listScript=null;
 var ESM_VER='2.0.0';
 var _searchGen=0;var _treeGen=0;
 var _navPending=false;
-function hlReset(){_hlTerms=[];_navPending=true;try{var _hb=document.getElementById('hlBar');if(_hb)_hb.style.display='none'}catch(e){}
+function hlReset(){_hlTerms=[];_navPending=true;_sbAutoClose();try{var _hb=document.getElementById('hlBar');if(_hb)_hb.style.display='none'}catch(e){}
   try{var _pb=document.getElementById('btnPrint');if(_pb)_pb.disabled=false}catch(e2){}}
 function _ancU(anc){if(!anc)return'';var q=anc.indexOf('?');if(q<0)return'#'+anc;var head=anc.slice(0,q);
   if(!head||/^[0-9]{3}$/.test(head))return'?'+anc;return'#'+head}
@@ -1322,6 +1329,8 @@ function getMY(){return getModel().year}
 function getGen(){return getModel().gen}
 function bp(){return"./"+getGen()+"/en"}
 function toggleSB(){var sb=document.getElementById("sidebar");sb.classList.toggle("collapsed");try{localStorage.setItem('esm_sb',sb.classList.contains('collapsed')?'1':'0')}catch(e){}}
+function _unentTD(a){try{for(var i=0;i<a.length;i++){var n=a[i]&&a[i].Name;if(n&&n.indexOf('&')>=0){var t=document.createElement('textarea');t.innerHTML=n;a[i].Name=t.value}}}catch(e){}}
+function _sbAutoClose(){try{if(window.innerWidth<=800){var sb=document.getElementById('sidebar');if(sb&&!sb.classList.contains('collapsed'))sb.classList.add('collapsed')}}catch(e){}}
 function escH(t){var d=document.createElement("div");d.appendChild(document.createTextNode(t));return d.innerHTML.replace(/"/g,'&quot;').replace(/'/g,'&#39;')}
 function _safe(f){try{f()}catch(e){}}
 function removeScript(s){if(s&&s.parentNode)s.parentNode.removeChild(s)}
@@ -1378,7 +1387,7 @@ function loadTree(){var pf=(curMT==="SM")?"SMT_":"BRT_",fn=pf+getMC()+"_"+getMY(
   var _tf=document.getElementById('txtTree');if(_tf)_tf.value='';
   curKey="";curSct="";curSc="";curSys="";curComp="";curSitq="";curScopeName="";updScopeChip();selLbl=null;window.tDT=[];window.trOpen=null;window.trSel=null;
   var tg=++_treeGen;
-  removeScript(_treeScript);_treeScript=injectScript(bp()+"/treedata/"+fn,function(){if(tg!==_treeGen)return;if(typeof SearchTreeList==="function"){SearchTreeList();curTD=window.tDT.slice();renderTree(curTD)}});
+  removeScript(_treeScript);_treeScript=injectScript(bp()+"/treedata/"+fn,function(){if(tg!==_treeGen)return;if(typeof SearchTreeList==="function"){SearchTreeList();curTD=window.tDT.slice();_unentTD(curTD);renderTree(curTD)}});
   _treeScript.onerror=function(){if(tg!==_treeGen)return;document.getElementById("treeContent").innerHTML='<div class="no-res">No data for this model.</div>'}}
 function renderTree(td){if(!td||td.length===0){document.getElementById("treeContent").innerHTML='<div class="no-res">No data available.</div>';return}
   var h="",stk=[],b=bp();for(var i=0;i<td.length;i++){var it=td[i],lv=it.Level,hc=(i+1<td.length&&td[i+1].Level>lv);
@@ -1518,7 +1527,7 @@ function jobRmItem(k){var j=getJobs(),c=j.activeId?jobById(j,j.activeId):null;if
   c.items.splice(k,1);c.updated=jToday();saveJobs(j);renderJobs()}
 function jobOpenItem(k){var c=activeJob();if(!c||!c.items[k])return;var it=c.items[k];
   var pg={gen:it.gen,page:'',title:it.title,url:it.url};navPush(pg);loadPage(pg);addRecent(pg)}
-function jobOpenItem2(k){var c=activeJob();if(!c||!c.items[k])return;if(!_split)togSplit();
+function jobOpenItem2(k){var c=activeJob();if(!c||!c.items[k])return;if(!_split)togSplit();_sbAutoClose();
   var f2=document.getElementById('contentFrame2');f2.removeAttribute('srcdoc');f2.src=c.items[k].url}
 function jobAttachUrl(url,title,gen){var j=getJobs(),c=j.activeId?jobById(j,j.activeId):null;if(!c)return;
   for(var i=0;i<c.items.length;i++)if(c.items[i].url===url)return;
@@ -1556,8 +1565,8 @@ function togSplit(){_split=!_split;
   if(btn)btn.classList.toggle('bk-active',_split);
   if(_split&&!f2.src)f2.srcdoc='<body style="font-family:sans-serif;color:#889;background:#f2f2f4;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;text-align:center;padding:20px"><div><b>Right pane</b><br><br>Click the \u21E5 icon on any search result or pinned item to open it here.</div></body>';
   updateNoteUI()}
-function openRes2(i){var r=_res[i];if(!r)return;if(!_split)togSplit();var f2=document.getElementById('contentFrame2');f2.removeAttribute('srcdoc');f2.src=r.url}
-function openPin2(i){var p=getPins()[i];if(!p)return;if(!_split)togSplit();var f2=document.getElementById('contentFrame2');f2.removeAttribute('srcdoc');f2.src=p.url}
+function openRes2(i){var r=_res[i];if(!r)return;if(!_split)togSplit();_sbAutoClose();var f2=document.getElementById('contentFrame2');f2.removeAttribute('srcdoc');f2.src=r.url}
+function openPin2(i){var p=getPins()[i];if(!p)return;if(!_split)togSplit();_sbAutoClose();var f2=document.getElementById('contentFrame2');f2.removeAttribute('srcdoc');f2.src=p.url}
 function onFrame2Load(){try{
   var f2=document.getElementById('contentFrame2');
   var doc=f2.contentDocument||f2.contentWindow.document;
@@ -1957,6 +1966,8 @@ function tourStep(d){var i=_tourI+d;
   if(i>=TOUR.length){endTour();return}
   _tourI=i;tourShow()}
 function tourShow(){var st=TOUR[_tourI],el=tourTarget(st);
+  try{if(window.innerWidth<=800){var sbT=document.getElementById('sidebar');var inSB=!!(el&&el[0]&&sbT.contains(el[0]));
+    if(inSB)sbT.classList.remove('collapsed');else sbT.classList.add('collapsed')}}catch(eT){}
   if(el){try{el[0].scrollIntoView({block:'center'})}catch(e){}}
   var box=document.getElementById('tourBox');if(!box)return;
   box.innerHTML='<b></b><span></span><div class="tour-btns">'+(_tourI>0?'<button onclick="tourStep(-1)">Back</button>':'')+'<button class="tour-next" onclick="tourStep(1)">'+(_tourI>=TOUR.length-1?'Finish':'Next')+'</button><span class="tour-skip" onclick="endTour()">Skip tour</span></div><div class="tour-n">'+(_tourI+1)+' / '+TOUR.length+'</div>';
