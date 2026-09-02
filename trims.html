@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Trim Level Guide</title>
-<link href="./fonts/fonts.css?v=2.0.0" rel="stylesheet">
+<link href="./fonts/fonts.css?v=2.1.0" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Outfit',sans-serif;background:#fff;color:#2a2a2a;line-height:1.6}
@@ -91,7 +92,7 @@ html.darkmode .yr-note{color:#ff8080}
 <div class="setup">
   <div class="row">
     <div class="fg"><label>Generation</label><select id="inGen" onchange="render()">
-      <option value="mk7pre">MK7 Pre-Facelift — CL7/CL9/CM1/CM2 (2003–2005)</option>
+      <option value="mk7pre">MK7 Pre-Facelift — CL7/CL9/CM1/CM2/CN1/CN2 (2003–2005)</option>
       <option value="mk7fl">MK7 Facelift — CL7/CL9/CM1/CM2/CN1/CN2 (2006–2008)</option>
       <option value="mk8">MK8 — CU1/CU2/CU3/CW1/CW2/CW3 (2009–2010)</option>
     </select></div>
@@ -109,12 +110,14 @@ function X(n){return{s:0,n:n}}  // not included
 
 var DATA={
 mk7pre:{
-  note:"Pre-facelift MK7. The 2.2 i-CDTi diesel (CM2) was introduced in late 2003/early 2004 depending on market.",
+  note:"Pre-facelift MK7. The 2.2 i-CTDi diesel (CN1 Saloon / CN2 Tourer) was introduced in late 2003/early 2004 depending on market.",
   engines:[
     {code:"CL7",name:"2.0 i-VTEC (K20A6)",hp:"155 PS",torque:"192 Nm",fuel:"Petrol"},
     {code:"CL9",name:"2.4 i-VTEC (K24A3)",hp:"190 PS",torque:"229 Nm",fuel:"Petrol",notes:"Type-S only."},
     {code:"CM1",name:"2.0 i-VTEC Tourer (K20A6)",hp:"155 PS",torque:"192 Nm",fuel:"Petrol"},
-    {code:"CM2",name:"2.2 i-CDTi (N22A1)",hp:"140 PS",torque:"340 Nm",fuel:"Diesel",notes:"From late 2003/2004."}
+    {code:"CM2",name:"2.4 i-VTEC Tourer (K24A3)",hp:"190 PS",torque:"229 Nm",fuel:"Petrol"},
+    {code:"CN1",name:"2.2 i-CTDi Saloon (N22A1)",hp:"140 PS",torque:"340 Nm",fuel:"Diesel",notes:"From late 2003/2004."},
+    {code:"CN2",name:"2.2 i-CTDi Tourer (N22A1)",hp:"140 PS",torque:"340 Nm",fuel:"Diesel",notes:"From late 2003/2004."}
   ],
   trims:[
     {name:"SE",tag:"Base",tagClass:"tag-base",years:"2003–2005",
@@ -130,7 +133,7 @@ mk7pre:{
      opts:["Metallic paint","Rear parking sensors","Satellite navigation (DVD)"]
     },
     {name:"Type-S",tag:"Sport",tagClass:"tag-sport",years:"2003–2005",
-     desc:"Performance flagship. Only available with the 2.4 i-VTEC (CL9) or 2.2 i-CDTi diesel. More aggressive bodykit, larger wheels, and mechanical upgrades over Sport.",
+     desc:"Performance flagship. Only available with the 2.4 i-VTEC (CL9) or 2.2 i-CTDi diesel. More aggressive bodykit, larger wheels, and mechanical upgrades over Sport.",
      std:["ABS with EBD","Dual front airbags","Front side airbags","Curtain airbags (front & rear)","Dual-zone automatic climate control","Cruise control","Electric windows — all four","Heated electric door mirrors","Remote central locking with deadlocks","Immobiliser","6-disc CD changer with 6 speakers","Leather steering wheel & gear knob","Tilt & telescopic steering column","Height-adjustable driver's seat","60/40 split-fold rear seats","Front fog lights","Body-coloured door handles & bumpers","Sports suspension (firmer dampers, lower ride height)","Type-S bodykit (unique front & rear bumpers, deep side skirts)","Rear spoiler","18-inch alloy wheels","Red-stitched leather & Alcantara seats","Aluminium drilled pedals","Dark headlining","Rain-sensing wipers","Automatic headlights","Auto-dimming rear-view mirror","Rear parking sensors","Xenon headlights with auto-levelling","LSD (Limited Slip Differential) — 2.4 petrol only","Uprated brakes","Type-S badging","3 rear headrests","ISOFIX child seat mounts (x2)","Thatcham Category 1 alarm"],
      notStd:["Full leather seats","Heated seats","Satellite navigation","Sunroof","Electric driver's seat","Front parking sensors"],
      opts:["Metallic paint","Satellite navigation (DVD)"]
@@ -144,11 +147,11 @@ mk7pre:{
   ]
 },
 mk7fl:{
-  note:"Facelift MK7 (2006–2008). Revised front end, updated interior, new CN chassis codes for Tourer. SE Executive trim added.",
+  note:"Facelift MK7 (2006–2008). Revised front end, updated interior; the 2.0 gains the K20Z2 engine. SE Executive trim added.",
   engines:[
-    {code:"CL7/CN1",name:"2.0 i-VTEC (K20A6)",hp:"155 PS",torque:"192 Nm",fuel:"Petrol"},
-    {code:"CL9",name:"2.4 i-VTEC (K24A3)",hp:"190 PS",torque:"229 Nm",fuel:"Petrol",notes:"Type-S only."},
-    {code:"CM2/CN2",name:"2.2 i-CDTi (N22A1)",hp:"140 PS",torque:"340 Nm",fuel:"Diesel"}
+    {code:"CL7/CM1",name:"2.0 i-VTEC (K20Z2)",hp:"155 PS",torque:"190 Nm",fuel:"Petrol"},
+    {code:"CL9/CM2",name:"2.4 i-VTEC (K24A3)",hp:"190 PS",torque:"229 Nm",fuel:"Petrol",notes:"CL9 Saloon is Type-S only."},
+    {code:"CN1/CN2",name:"2.2 i-CTDi (N22A1)",hp:"140 PS",torque:"340 Nm",fuel:"Diesel"}
   ],
   trims:[
     {name:"SE",tag:"Base",tagClass:"tag-base",years:"2006–2008",
@@ -170,7 +173,7 @@ mk7fl:{
      opts:["Metallic paint","Rear parking sensors","Satellite navigation (DVD)"]
     },
     {name:"Type-S",tag:"Sport",tagClass:"tag-sport",years:"2006–2008",
-     desc:"Facelift performance flagship. 2.4 i-VTEC (CL9) or 2.2 i-CDTi diesel only. Updated bodykit.",
+     desc:"Facelift performance flagship. 2.4 i-VTEC (CL9) or 2.2 i-CTDi diesel only. Updated bodykit.",
      std:["ABS with EBD","Dual front airbags","Front side airbags","Curtain airbags (front & rear)","Dual-zone automatic climate control","Cruise control","Electric windows — all four","Heated electric door mirrors","Remote central locking with deadlocks","Immobiliser","6-disc CD changer with 6 speakers","Leather steering wheel & gear knob","Tilt & telescopic steering column","Height-adjustable driver's seat","60/40 split-fold rear seats","Front fog lights","Body-coloured door handles & bumpers","Sports suspension (firmer dampers, lower ride height)","Revised Type-S bodykit (unique bumpers, deep side skirts)","Rear spoiler","18-inch alloy wheels","Red-stitched leather & Alcantara seats","Aluminium drilled pedals","Dark headlining","Rain-sensing wipers","Automatic headlights","Auto-dimming rear-view mirror","Rear parking sensors","Xenon headlights with auto-levelling","LSD (Limited Slip Differential) — 2.4 petrol only","Uprated brakes","Type-S badging","Rear privacy glass","3 rear headrests","ISOFIX child seat mounts (x2)","Thatcham Category 1 alarm"],
      notStd:["Full leather seats","Heated seats","Satellite navigation","Sunroof","Electric driver's seat","Front parking sensors"],
      opts:["Metallic paint","Satellite navigation (DVD)"]
@@ -281,7 +284,7 @@ render();
 (function(){try{
   function T(d){document.documentElement.classList.toggle('darkmode',!!d)}
   window.addEventListener('message',function(ev){var d=ev.data;if(d&&d.esm==='theme')T(d.dark)});
-  try{parent.postMessage({esm:'themehello'},'*')}catch(e){}
+  try{parent.postMessage({esm:'themehello',href:location.href},'*')}catch(e){}
 }catch(e){}})();
 </script>
 </body>

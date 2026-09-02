@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#191512">
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="apple-touch-icon" href="./icons/icon-192.png">
-<link href="./fonts/fonts.css?v=2.0.0" rel="stylesheet">
+<link href="./fonts/fonts.css?v=2.1.0" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html,body{height:100%;overflow:hidden}
@@ -657,7 +657,11 @@ body.aurora ::-webkit-scrollbar{width:6px}body.aurora ::-webkit-scrollbar-track{
 .mt-row{display:flex}
 .srch-row{display:flex;gap:5px}
 .srch-opts{display:flex;align-items:center;margin-top:6px}
-.cb-btns{display:flex;gap:4px;flex-shrink:0;align-items:center}
+.cb-btns{display:flex;gap:4px;flex-shrink:1;min-width:0;max-width:100%;align-items:center;overflow-x:auto;overflow-y:hidden;scrollbar-width:none}
+.cb-btns::-webkit-scrollbar{display:none}
+.pnl-x{float:right;cursor:pointer;padding:0 6px;font-size:18px;line-height:1;opacity:.7}.pnl-x:hover{opacity:1}
+#esmToast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:10600;background:#1c2230;color:#fff;font:13px 'Outfit',sans-serif;padding:10px 16px;border-radius:10px;box-shadow:0 6px 24px rgba(0,0,0,.4);display:none;max-width:90vw;text-align:center}
+#app.split #hlBar{right:calc(50% + 24px)}
 .tn{padding:1px 0}.tt{cursor:pointer;vertical-align:middle;width:14px;height:14px}.tf{vertical-align:middle;width:14px;height:14px}
 .tl{cursor:pointer}.tc{margin-left:16px;display:none}
 .sec-body{overflow:hidden;transition:max-height .25s ease}
@@ -869,8 +873,14 @@ mark.hl{background:transparent;color:inherit;font-weight:700;text-decoration:und
   .h-mode-center{left:auto!important;right:8px!important;transform:translateY(-50%)!important}
   .cb-btns{max-width:100%;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none}
   .cb-btns::-webkit-scrollbar{display:none}
-  #notePanel,#jobPanel,#unitPanel,#wirePanel{max-width:calc(100vw - 16px)!important}
+  #notePanel,#jobPanel,#unitPanel,#wirePanel{max-width:calc(100vw - 16px)!important;top:84px!important}
+  #header .h-top{padding-right:108px!important}
+  #sidebar{z-index:30!important}
+  #app.split #hlBar{right:16px;bottom:calc(50% + 20px)}
+  #app{height:calc(var(--vh,100vh) - 54px)!important}
+  .classic #app{height:calc(var(--vh,100vh) - 78px)!important}
 }
+@media(max-width:400px){#genBadge{font-size:8px!important;letter-spacing:0.3px!important;padding:2px 5px!important}.h-mode-center{right:4px!important;transform:translateY(-50%) scale(.88)!important;transform-origin:right center}}
 
 
 /* ══════════ FABLE — A lamplit library for midnight repairs. ══════════ */
@@ -1098,8 +1108,8 @@ var ALL_MODELS=[
   {year:"2009",gen:"mk8",codes:["CU1","CU2","CU3","CW1","CW2","CW3"]},
   {year:"2010",gen:"mk8",codes:["CU1","CU2","CU3","CW1","CW2","CW3"]}
 ];
-var CODE_LABELS={CL7:"2.0 i-VTEC Saloon",CL9:"2.4 i-VTEC Saloon",CM1:"2.0 i-VTEC Tourer",CM2:"2.2 i-CDTi Tourer",
-  CN1:"2.0 i-VTEC Tourer FL",CN2:"2.2 i-CDTi Tourer FL",CU1:"2.0 i-VTEC Saloon",CU2:"2.4 i-VTEC Saloon",
+var CODE_LABELS={CL7:"2.0 i-VTEC Saloon",CL9:"2.4 i-VTEC Saloon",CM1:"2.0 i-VTEC Tourer",CM2:"2.4 i-VTEC Tourer",
+  CN1:"2.2 i-CTDi Saloon",CN2:"2.2 i-CTDi Tourer",CU1:"2.0 i-VTEC Saloon",CU2:"2.4 i-VTEC Saloon",
   CU3:"2.2 i-DTEC Saloon",CW1:"2.0 i-VTEC Tourer",CW2:"2.4 i-VTEC Tourer",CW3:"2.2 i-DTEC Tourer"};
 var GEN_LABELS={mk7:"MK7 \u00b7 7TH GEN",mk8:"MK8 \u00b7 8TH GEN"};
 
@@ -1109,9 +1119,28 @@ var GEN_LABELS={mk7:"MK7 \u00b7 7TH GEN",mk8:"MK8 \u00b7 8TH GEN"};
 var curGen="",cdInfo=[],tDT=[],curMT="SM",curTD=[],curSD=[];
 var curKey="",curSct="",curSc="",curSys="",curComp="",curSitq="",curKW="",curScopeName="";
 var selLbl=null,_sieScript=null,_treeScript=null,_listScript=null;
-var ESM_VER='2.0.0';
+var ESM_VER='2.1.0';
 var _searchGen=0;var _treeGen=0;
-var _navPending=false;
+var _navPending=false,_listDone=-1,_cidxFail=false,_tourSbWas=null,_swapBusy=false,_fsMem=null;
+var _storageOK=(function(){try{localStorage.setItem('esm_probe','1');localStorage.removeItem('esm_probe');return true}catch(e){return false}})();
+function _lsSet(k,v){try{localStorage.setItem(k,v);return true}catch(e){esmToast('Could not save \u2014 browser storage is full or blocked. Export your data to keep it safe.');return false}}
+function esmToast(m){try{var t=document.getElementById('esmToast');if(!t){t=document.createElement('div');t.id='esmToast';document.body.appendChild(t)}
+  t.textContent=m;t.style.display='block';clearTimeout(t._h);t._h=setTimeout(function(){t.style.display='none'},4000)}catch(e){}}
+function _relHref(h){h=h||'';try{var base=document.baseURI.replace(/[?#].*$/,'').replace(/[^\/]*$/,'');if(h.indexOf(base)===0)return './'+h.slice(base.length)}catch(e){}return h.replace(/^.*?(mk[78]\/en\/)/,'./$1')}
+function _genOfHref(h){return _relHref(h).indexOf('./mk8/')===0?'mk8':'mk7'}
+function _frameGen(fr){try{var r=_relHref(fr.contentWindow.location.href);if(r.indexOf('./mk')===0)return r.indexOf('./mk8/')===0?'mk8':'mk7'}catch(e){}return null}
+function _adoptFrame(rel,title){var pm=/\/html\/([0-9]{15})\.html/.exec(rel);
+  var pg={gen:(rel.indexOf('./mk8/')===0)?'mk8':'mk7',page:pm?pm[1]:'',title:title||(pm?pm[1]:rel),url:rel};
+  _hlTerms=[];try{var hb=document.getElementById('hlBar');if(hb)hb.style.display='none'}catch(e){}
+  _navPending=false;_syncModel(pg);navPush(pg);curPage=pg;
+  document.getElementById('cTitle').textContent=pg.title;updateBkBtn();addRecent(pg);setHash();
+  try{var pb=document.getElementById('btnPrint');if(pb)pb.disabled=false}catch(e2){}}
+function _customCommit(h){_navPending=false;if(!h)return;
+  var t=/welcome\.html/.test(h)?'Honda Accord ESM':/service\.html/.test(h)?'Service Interval Dashboard':/trims\.html/.test(h)?'Trim Level Guide':/guides\.html/.test(h)?'Common Jobs':'';
+  if(!t||!curPage)return;curPage=null;document.getElementById('cTitle').textContent=t;updateBkBtn();
+  try{history.replaceState(null,'',location.pathname)}catch(e){}
+  try{var pb=document.getElementById('btnPrint');if(pb)pb.disabled=true}catch(e2){}}
+function _okItem(x){return !!(x&&x.sieKey&&typeof x.sieKey.length==='number'&&x.contentsNum!==undefined)}
 function hlReset(){_hlTerms=[];_navPending=true;_sbAutoClose();try{var _hb=document.getElementById('hlBar');if(_hb)_hb.style.display='none'}catch(e){}
   try{var _pb=document.getElementById('btnPrint');if(_pb)_pb.disabled=false}catch(e2){}}
 function _ancU(anc){if(!anc)return'';var q=anc.indexOf('?');if(q<0)return'#'+anc;var head=anc.slice(0,q);
@@ -1232,12 +1261,12 @@ function loadPage(pg){
 /* ════════════════════════════════════════════
    BOOKMARKS
    ════════════════════════════════════════════ */
-function _okU(u){return typeof u==='string'&&u.charAt(0)==='.'&&u.indexOf(':')===-1}
+function _okU(u){return typeof u==='string'&&u.charAt(0)==='.'&&u.indexOf(':')===-1&&u.indexOf('\\')===-1&&u.indexOf('..')===-1}
 function getBookmarks(){try{var a=JSON.parse(localStorage.getItem('esm_bk')||'[]');if(!(a instanceof Array))return[];
   var o=[];for(var i=0;i<a.length&&o.length<50;i++){var b=a[i];
     if(b&&_okU(b.url)&&typeof b.title==='string')o.push({url:b.url,title:b.title,gen:(b.gen==='mk8')?'mk8':'mk7'})}
   return o}catch(e){return[]}}
-function saveBookmarks(bk){try{localStorage.setItem('esm_bk',JSON.stringify(bk))}catch(e){}}
+function saveBookmarks(bk){return _lsSet('esm_bk',JSON.stringify(bk))}
 function isBookmarked(url){return getBookmarks().some(function(b){return b.url===url})}
 function togBookmark(){
   if(!curPage||!curPage.url)return;
@@ -1269,14 +1298,13 @@ function getPins(){try{var a=JSON.parse(localStorage.getItem('esm_pins')||'[]');
     o.push({url:p.url,title:p.title,gen:(p.gen==='mk8')?'mk8':'mk7',
       sym:(typeof p.sym==='string'&&/^[A-Za-z0-9_-]{1,32}$/.test(p.sym))?p.sym:''})}
   return o}catch(e){return[]}}
-function savePins(p){try{localStorage.setItem('esm_pins',JSON.stringify(p))}catch(e){}}
+function savePins(p){return _lsSet('esm_pins',JSON.stringify(p))}
 function isPinned(url){return getPins().some(function(p){return p.url===url})}
 function togPinRes(i){var r=_res[i];if(!r)return;var p=getPins(),idx=-1;
   for(var j=0;j<p.length;j++){if(p[j].url===r.url){idx=j;break}}
-  if(idx>=0)p.splice(idx,1);else{p.unshift({url:r.url,title:r.t,gen:getGen(),sym:r.sym});if(p.length>15)p.length=15}
-  savePins(p);renderPins();
-  var el=document.getElementById('rr'+i);if(el){var pin=el.querySelector('.rr-pin');if(pin){if(idx<0)pin.classList.add('on');else pin.classList.remove('on')}}}
-function unpin(i){var p=getPins();p.splice(i,1);savePins(p);renderPins();
+  if(idx>=0)p.splice(idx,1);else{if(p.length>=15){esmToast('Pinned list is full (15) \u2014 unpin one first.');return}p.unshift({url:r.url,title:r.t,gen:getGen(),sym:r.sym})}
+  if(!savePins(p))return;renderPins();syncPinRows()}
+function unpin(i){var p=getPins();p.splice(i,1);savePins(p);renderPins();syncPinRows();
   var rows=document.querySelectorAll('#searchResults .rr');
   for(var j=0;j<rows.length;j++){var k=rows[j].querySelector('.rr-pin');if(!k)continue;
     var ri=parseInt(rows[j].id.slice(2),10);
@@ -1342,15 +1370,16 @@ window.SearchTreeItem=function(level,a,b,c,d,e,f,g){return{Level:level,Sitq:a,Sc
    ════════════════════════════════════════════ */
 function onFrameLoad(){
   applyDarkMode();applyFS();updateNoteUI();applyGLTo(document.getElementById('contentFrame'));
+  var ok=true,doc=null;
+  try{var fr0=document.getElementById('contentFrame');doc=fr0.contentDocument||fr0.contentWindow.document;
+    var loc=_relHref(fr0.contentWindow.location.href);
+    if(loc.indexOf('./mk')===0){
+      if(!curPage||!curPage.url||loc.split(/[?#]/)[0]!==curPage.url.split(/[?#]/)[0])ok=false;
+      else if(doc&&!doc.querySelector('.top_title'))ok=false}
+  }catch(e){}
+  if(!ok)return;
   try{if(curPage&&curPage.url&&curPage.url.indexOf('/html/')!==-1)saveSess({url:curPage.url,title:curPage.title||'',gen:curPage.gen||getGen(),mc:getMC(),my:getMY()})}catch(e){}
-  // Try to get page title from iframe
-  try{
-    var fr=document.getElementById('contentFrame');
-    var doc=fr.contentDocument||fr.contentWindow.document;
-    var title='';
-    var el=doc.querySelector('.top_title');
-    if(el)title=el.textContent.trim();
-    if(!title){el=doc.querySelector('title');if(el)title=el.textContent.trim()}
+  try{var el=doc&&doc.querySelector('.top_title');var title=el?el.textContent.trim():'';
     if(title&&title.length>3&&curPage){curPage.title=title;document.getElementById('cTitle').textContent=title;updateBkBtn();setHash()}
   }catch(e){}
 }
@@ -1375,19 +1404,24 @@ function onChangeMY(){popMC();loadSieAndTree()}
 function onChangeMC(){loadTree()}
 function selMT(t){curMT=t;document.getElementById("radSM").checked=(t==="SM");document.getElementById("radBM").checked=(t==="BM");
   document.getElementById("btnSM").className="mt-btn"+(t==="SM"?" active":"");document.getElementById("btnBM").className="mt-btn"+(t==="BM"?" active":"");loadTree()}
-function loadSieAndTree(){var gen=getGen();if(gen!==curGen){curGen=gen;removeScript(_sieScript);_sieScript=injectScript("./"+gen+"/en/js/SieListFunc.js",function(){loadTree()})}else{loadTree()}}
+function _resetModelUI(){try{document.getElementById("treeContent").innerHTML='<div class="no-res">Loading\u2026</div>';document.getElementById("searchResults").innerHTML="";_res=[];kbIdx=-1;curSD=[];altSD=[];curTD=[];_searchGen++;
+  if(_listScript){_listScript.onload=null;_listScript.onerror=null}if(_altScript){_altScript.onload=null;_altScript.onerror=null}}catch(e){}}
+function _injectSie(gen){_resetModelUI();removeScript(_sieScript);
+  _sieScript=injectScript("./"+gen+"/en/js/SieListFunc.js",function(){loadTree()});
+  _sieScript.onerror=function(){curGen=null;document.getElementById("treeContent").innerHTML='<div class="no-res">Search data failed to load \u2014 pick the model again or reload to retry.</div>'}}
+function loadSieAndTree(){var gen=getGen();if(gen!==curGen){curGen=gen;_injectSie(gen)}else{loadTree()}}
 
 /* ════════════════════════════════════════════
    TREE
    ════════════════════════════════════════════ */
 function loadTree(){var pf=(curMT==="SM")?"SMT_":"BRT_",fn=pf+getMC()+"_"+getMY()+".js";
-  document.getElementById("treeContent").innerHTML='<div class="no-res">Loading\u2026</div>';document.getElementById("searchResults").innerHTML="";_res=[];kbIdx=-1;altSD=[];_altLoading=false;curKW='';_dtcQ='';curSD=[];_searchGen++;
+  document.getElementById("treeContent").innerHTML='<div class="no-res">Loading\u2026</div>';document.getElementById("searchResults").innerHTML="";_res=[];kbIdx=-1;altSD=[];_altLoading=false;curKW='';_dtcQ='';curSD=[];curTD=[];_searchGen++;
   if(_listScript){_listScript.onload=null;_listScript.onerror=null}
   if(_altScript){_altScript.onload=null;_altScript.onerror=null}
   var _tf=document.getElementById('txtTree');if(_tf)_tf.value='';
   curKey="";curSct="";curSc="";curSys="";curComp="";curSitq="";curScopeName="";updScopeChip();selLbl=null;window.tDT=[];window.trOpen=null;window.trSel=null;
   var tg=++_treeGen;
-  removeScript(_treeScript);_treeScript=injectScript(bp()+"/treedata/"+fn,function(){if(tg!==_treeGen)return;if(typeof SearchTreeList==="function"){SearchTreeList();curTD=window.tDT.slice();_unentTD(curTD);renderTree(curTD)}});
+  removeScript(_treeScript);_treeScript=injectScript(bp()+"/treedata/"+fn,function(){if(tg!==_treeGen)return;if(typeof SearchTreeList==="function"){var _pv=window.tDT;window.tDT=[];SearchTreeList();curTD=window.tDT.slice();window.tDT=_pv;_unentTD(curTD);renderTree(curTD);try{var _tf2=document.getElementById('txtTree');if(_tf2&&_tf2.value)applyTreeFilter()}catch(eF){}}});
   _treeScript.onerror=function(){if(tg!==_treeGen)return;document.getElementById("treeContent").innerHTML='<div class="no-res">No data for this model.</div>'}}
 function renderTree(td){if(!td||td.length===0){document.getElementById("treeContent").innerHTML='<div class="no-res">No data available.</div>';return}
   var h="",stk=[],b=bp();for(var i=0;i<td.length;i++){var it=td[i],lv=it.Level,hc=(i+1<td.length&&td[i+1].Level>lv);
@@ -1413,7 +1447,7 @@ function clearScope(){curKey="";curSct="";curSc="";curSys="";curComp="";curSitq=
 /* ════════════════════════════════════════════
    SEARCH
    ════════════════════════════════════════════ */
-function doSearch(){var pf=(curMT==="SM")?"SML_":"BRL_",fn=pf+getMC()+"_"+getMY()+".js";curKW=document.getElementById("txtKW").value;
+function doSearch(){if(document.getElementById("cmbMY").selectedIndex<0)return;_cidxFail=false;var pf=(curMT==="SM")?"SML_":"BRL_",fn=pf+getMC()+"_"+getMY()+".js";curKW=document.getElementById("txtKW").value;
   var _q=curKW.trim().toUpperCase();
   if(/^[PBCU][0-9]{4}$/.test(_q)){
     document.getElementById('txtKW').value=_q;curKW=_q;_dtcQ=_q;_dtcKeep=true}
@@ -1422,7 +1456,9 @@ function doSearch(){var pf=(curMT==="SM")?"SML_":"BRL_",fn=pf+getMC()+"_"+getMY(
   var sg=++_searchGen;
   if(_altScript){_altScript.onload=null;_altScript.onerror=null}
   document.getElementById("searchResults").innerHTML='<div class="no-res">Searching\u2026</div>';window.tDT=[];removeScript(_listScript);
-  _listScript=injectScript(bp()+"/treedata/"+fn,function(){if(sg!==_searchGen)return;if(typeof SieTitleList==="function"){SieTitleList();curSD=window.tDT.slice();filterResults();loadAltList(sg)}});
+  _listScript=injectScript(bp()+"/treedata/"+fn,function(){if(sg!==_searchGen)return;if(typeof SieTitleList==="function"){
+    try{SieTitleList()}catch(eL){curGen=null;document.getElementById("searchResults").innerHTML='<div class="no-res">Search data not available \u2014 reload to retry.</div>';return}
+    curSD=window.tDT.slice().filter(_okItem);_listDone=sg;filterResults();loadAltList(sg)}});
   _listScript.onerror=function(){if(sg!==_searchGen)return;document.getElementById("searchResults").innerHTML='<div class="no-res">Search data not available.</div>'}}
 var _res=[],kbIdx=-1,curResUrl='';
 function hlT(esc,kw){if(!kw||kw.length<2)return esc;if(/^(amp|lt|gt|quot|#\d+)$/i.test(kw.trim()))return esc;try{var rx=new RegExp('('+escH(kw).replace(/[.*+?^{}$()|[\]\\]/g,'\\$&')+')','gi');return esc.replace(rx,'<mark class="hl">$1</mark>')}catch(e){return esc}}
@@ -1453,7 +1489,7 @@ function getJobs(){try{var j=JSON.parse(localStorage.getItem('esm_jobs')||'{}');
     c.items=its;
     ok.push(c)}
   j.cards=ok;return j}catch(e){return{cards:[]}}}
-function saveJobs(j){try{localStorage.setItem('esm_jobs',JSON.stringify(j))}catch(e){}}
+function saveJobs(j){return _lsSet('esm_jobs',JSON.stringify(j))}
 function jobById(j,id){for(var i=0;i<j.cards.length;i++)if(j.cards[i].id===id)return j.cards[i];return null}
 function activeJob(){var j=getJobs();return j.activeId?jobById(j,j.activeId):null}
 function jToday(){return new Date().toISOString().slice(0,10)}
@@ -1599,6 +1635,7 @@ function _darkNow(){var cls=document.body.className;
 window.addEventListener('message',function(ev){var d=ev.data;if(!d||!d.esm)return;
   if(_discOpen&&(d.esm==='tour'||d.esm==='sessopen'||d.esm==='jobgo'||d.esm==='guidego'||d.esm==='openc'||d.esm==='cts'||d.esm==='prt'))return;
   var who=_frameOf(ev.source);
+  if(who===0&&d.esm!=='hello')return;
   try{
   if(d.esm==='hello'){
     if(d.zoomPage){_postTo(ev.source,{esm:'wheelzoom'});if(who!==1&&who!==2)return}
@@ -1607,13 +1644,11 @@ window.addEventListener('message',function(ev){var d=ev.data;if(!d||!d.esm)retur
       _postTo(ev.source,{esm:'zoom',v:getFS()});
       if(glOn()){glInit();_postTo(ev.source,{esm:'gl',map:_glMap})}
       if(_hlTerms.length)_postTo(ev.source,{esm:'hl',terms:_hlTerms});
-      try{var relH1=(d.href||'').replace(/^.*?(mk[78]\/en\/)/,'./$1');
+      try{var relH1=_relHref(d.href);
         if(relH1.indexOf('./mk')===0){var _cu=(curPage&&curPage.url)?curPage.url.split(/[?#]/)[0]:'';
           if(_cu===relH1.split(/[?#]/)[0]){_navPending=false}
           else if(_navPending){return}
-          else{var _pm=/\/html\/([0-9]{15})\.html/.exec(relH1);
-            curPage={gen:(relH1.indexOf('./mk8/')===0)?'mk8':'mk7',page:_pm?_pm[1]:'',title:d.title||'',url:relH1};
-            updateBkBtn()}}}catch(eR){}
+          else{_adoptFrame(relH1,d.title||'')}}}catch(eR){}
       if(d.title&&d.title.length>3){document.getElementById('cTitle').textContent=d.title;
         if(curPage){curPage.title=d.title;
           try{if(curPage.url&&curPage.url.indexOf('/html/')!==-1)saveSess({title:d.title,url:curPage.url,gen:curPage.gen||getGen()})}catch(es){}
@@ -1621,7 +1656,7 @@ window.addEventListener('message',function(ev){var d=ev.data;if(!d||!d.esm)retur
             for(var q9=0;q9<rc9.length;q9++){if(rc9[q9].url===curPage.url&&rc9[q9].title!==d.title){rc9[q9].title=d.title;ch9=true;break}}
             if(ch9){saveRecent(rc9);renderRecent()}}catch(er9){}}}}
     else if(who===2){
-      var relH=(d.href||'').replace(/^.*?(mk[78]\/en\/)/,'./$1');
+      var relH=_relHref(d.href);
       if(!_isCustomHref(d.href)&&relH.indexOf('./mk')===0){_curPage2={url:relH,title:d.title||''}}
       var prt=document.getElementById('paneRTitle');if(prt)prt.textContent=(d.title||'Right pane');
       try{updateNoteUI()}catch(eu){}
@@ -1635,33 +1670,36 @@ window.addEventListener('message',function(ev){var d=ev.data;if(!d||!d.esm)retur
     else{var bar=document.getElementById('hlBar');if(bar)bar.style.display='none'}}
   else if(d.esm==='hlpos'&&who===1){var c2=document.getElementById('hlCount');if(c2)c2.textContent=d.i+'/'+d.n}
   else if(d.esm==='cts'){
-    var gen=(d.href&&d.href.indexOf('mk8/en/')>=0)?'mk8':'mk7';
+    if(!/^[A-Za-z0-9_]{1,40}$/.test(d.k||''))return;
+    var gen=_genOfHref(d.href);
     var u='./'+gen+'/en/html/'+d.k+'.html';
     u+=_ancU(d.a);
     if(who===2&&_split){var f2c=document.getElementById('contentFrame2');f2c.removeAttribute('srcdoc');f2c.src=u}
-    else{hlReset();var pg={gen:gen,page:d.k,title:d.k,url:u};navPush(pg);curPage=pg;
+    else{hlReset();var pg={gen:gen,page:d.k,title:d.k,url:u};_syncModel(pg);navPush(pg);curPage=pg;
       document.getElementById('contentFrame').src=u;document.getElementById('cTitle').textContent=d.k;
       updateBkBtn();addRecent(pg);setHash()}}
-  else if(d.esm==='prt'){Prt(d.k,d.a,(d.href&&d.href.indexOf('mk8/en/')>=0)?'mk8':(d.href?'mk7':''))}
+  else if(d.esm==='prt'){if(!/^[A-Za-z0-9_]{1,40}$/.test(d.k||''))return;Prt(d.k,d.a,d.href?_genOfHref(d.href):'')}
   else if(d.esm==='guidego'){GuideGo(d.kw)}
   else if(d.esm==='openc'){
+    if(!/^[0-9]{15}$/.test(d.p||''))return;
     if(d.g==='mk7'||d.g==='mk8'){hlReset();var _ou='./'+d.g+'/en/html/'+d.p+'.html?000?'+d.c+','+d.y;
       var _opg={gen:d.g,page:d.p,title:d.p,url:_ou};_syncModel(_opg);navPush(_opg);curPage=_opg;
       document.getElementById('contentFrame').src=_ou;document.getElementById('cTitle').textContent=d.p;
       updateBkBtn();addRecent(_opg);
       try{var _oh=encodeHash(d.g,d.c,d.y,d.p,d.p);if(location.hash!==_oh)history.replaceState(null,'',_oh)}catch(eH){}}
     else openC(d.p,'000?'+d.c+','+d.y,'')}
-  else if(d.esm==='themehello'){_postTo(ev.source,{esm:'theme',dark:!!_darkNow()})}
+  else if(d.esm==='themehello'){if(who!==1&&who!==2)return;if(who===1)_customCommit(d.href);_postTo(ev.source,{esm:'theme',dark:!!_darkNow()})}
   else if(d.esm==='tour'){startTour()}
   else if(d.esm==='welcomehello'){
+    if(who!==1&&who!==2)return;if(who===1)_customCommit(d.href||'welcome.html');
     var sess=getSess();var jobs=getJobs();var jc=jobs.activeId?jobById(jobs,jobs.activeId):null;
     _postTo(ev.source,{esm:'sessdata',sess:sess,job:jc?{id:jc.id,name:jc.name}:null,dark:!!_darkNow()})}
   else if(d.esm==='sessopen'){SessOpen()}
-  else if(d.esm==='jobgo'){setActiveJob(d.id);openJobPanel(d.id)}
+  else if(d.esm==='jobgo'){if(!jobById(getJobs(),d.id))return;setActiveJob(d.id);openJobPanel(d.id)}
   }catch(e){}});
 
 /* ═ SWAP PANES (V2) ═ */
-function swapPanes(){if(!_split)return;
+function swapPanes(){if(!_split||_swapBusy)return;_swapBusy=true;setTimeout(function(){_swapBusy=false},1200);
   var f2=document.getElementById('contentFrame2');
   var rUrl='';try{rUrl=f2.contentWindow.location.href||''}catch(e){}
   if(!rUrl&&_curPage2&&_curPage2.url)rUrl=_curPage2.url;
@@ -1673,7 +1711,9 @@ function swapPanes(){if(!_split)return;
   var pg={gen:(m?m[1]:getGen()),page:'',title:rTitle||rUrl.split('/').pop(),url:rUrl};
   navPush(pg);loadPage(pg);addRecent(pg);
   try{document.getElementById('paneRTitle').textContent='Right pane'}catch(e7){}
+  var _lsrc=document.getElementById('contentFrame').getAttribute('src')||'';
   if(old&&old.url){f2.removeAttribute('srcdoc');f2.src=old.url}
+  else if(_isCustomHref(_lsrc)){f2.removeAttribute('srcdoc');f2.src=_lsrc}
   else{f2.srcdoc='<body style="font-family:sans-serif;color:#889;background:#f2f2f4;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;text-align:center;padding:20px"><div><b>Right pane</b><br><br>Click the ⇥ icon on any search result or pinned item to open it here.</div></body>'}}
 
 /* ═ BACKUP & RESTORE (V2) ═ */
@@ -1685,6 +1725,16 @@ function exportData(){
   a.download='accord-esm-backup-'+new Date().toISOString().slice(0,10)+'.json';
   document.body.appendChild(a);a.click();
   setTimeout(function(){document.body.removeChild(a);URL.revokeObjectURL(a.href)},500)}
+function _mergeKey(k,cur,imp){try{if(cur===null||cur===undefined||cur==='')return imp;
+  var a=JSON.parse(cur),b=JSON.parse(imp);
+  if(k==='esm_notes'){var out={},x;for(x in a)out[x]=a[x];for(x in b){if(!out[x]||String(b[x]&&b[x].updated||'')>=String(out[x].updated||''))out[x]=b[x]}return JSON.stringify(out)}
+  if(k==='esm_glx'){var g={},y;for(y in a)g[y]=a[y];for(y in b)g[y]=b[y];return JSON.stringify(g)}
+  if(k==='esm_jobs'){var cards=(a.cards||[]).slice(),ids={},i;for(i=0;i<cards.length;i++)ids[cards[i].id]=i;
+    var bc=b.cards||[];for(i=0;i<bc.length;i++){var c=bc[i];if(!c||!c.id)continue;if(ids[c.id]===undefined){cards.push(c)}else if(String(c.updated||'')>String(cards[ids[c.id]].updated||''))cards[ids[c.id]]=c}
+    return JSON.stringify({cards:cards.slice(0,30),activeId:a.activeId||b.activeId||null})}
+  if(k==='esm_bk'||k==='esm_pins'||k==='esm_rc'){var cap=k==='esm_bk'?50:k==='esm_pins'?15:30;var seen={},o=[],src=[].concat(b,a);
+    for(var j=0;j<src.length&&o.length<cap;j++){var it=src[j];if(!it||!it.url||seen[it.url])continue;seen[it.url]=1;o.push(it)}return JSON.stringify(o)}
+  return imp}catch(e){return imp}}
 function importData(inp){var f=inp.files&&inp.files[0];if(!f)return;
   var rd=new FileReader();
   rd.onload=function(){
@@ -1697,8 +1747,11 @@ function importData(inp){var f=inp.files&&inp.files[0];if(!f)return;
       for(var k in o.data){if(k.indexOf('esm_')!==0||typeof o.data[k]!=='string')continue;
         if(JK[k]||k.indexOf('esm_svc_')===0){try{JSON.parse(o.data[k])}catch(ej){bad++;continue}}
         stage[k]=o.data[k]}
-      for(var k2 in stage){try{localStorage.setItem(k2,stage[k2]);n++}catch(e){}}
-      alert('Restored '+n+' item'+(n!==1?'s':'')+(bad?' \u2014 '+bad+' unreadable entr'+(bad!==1?'ies':'y')+' skipped':'')+' from the backup dated '+String(o.date||'unknown').slice(0,10)+'. The page will now reload.');
+      var failed=0;
+      for(var k2 in stage){var cur=null;try{cur=localStorage.getItem(k2)}catch(eC){}
+        var val=_mergeKey(k2,cur,stage[k2]);
+        try{localStorage.setItem(k2,val);n++}catch(e){failed++}}
+      alert('Restored '+n+' item'+(n!==1?'s':'')+(bad?' \u2014 '+bad+' unreadable entr'+(bad!==1?'ies':'y')+' skipped':'')+(failed?' \u2014 '+failed+' could NOT be saved (storage full?)':'')+' from the backup dated '+String(o.date||'unknown').slice(0,10)+'. Existing notes, jobs, pins and bookmarks were kept and merged. The page will now reload.');
       location.reload();
     }catch(e){alert('Could not read that file: '+e.message);inp.value=''}};
   rd.readAsText(f)}
@@ -1708,7 +1761,7 @@ function getNotes(){try{var n=JSON.parse(localStorage.getItem('esm_notes')||'{}'
   for(var k in n){if(!/^mk[78]:\d{15}$/.test(k))continue;var v=n[k];if(!v||typeof v!=='object')continue;
     out[k]={text:String(v.text||''),updated:String(v.updated||''),title:String(v.title||k)}}
   return out}catch(e){return{}}}
-function saveNotes(n){try{localStorage.setItem('esm_notes',JSON.stringify(n))}catch(e){}}
+function saveNotes(n){return _lsSet('esm_notes',JSON.stringify(n))}
 function noteKeyU(u){if(!u)return'';var m=u.match(/(mk[78])\/en\/html\/([0-9]{15})\.html/);return m?m[1]+':'+m[2]:''}
 function noteKey(){return noteKeyU(curPage&&curPage.url)}
 var _curPage2=null;
@@ -1737,13 +1790,14 @@ var _noteEd=null;
 function togNote(){var k1=noteKey(),k2=noteKey2();if(!k1&&!k2)return;if(k2&&k2===k1)k2='';
   var p=document.getElementById('notePanel');
   if(p.style.display==='block'){p.style.display='none';_noteEd=null;return}
-  _noteEd={k1:k1,t1:(curPage&&curPage.title)||'This page',k2:k2,t2:(_curPage2&&_curPage2.title)||'right page'};
+  var keep=!!(_noteEd&&_noteEd.k1===k1&&_noteEd.k2===k2);
+  if(!keep)_noteEd={k1:k1,t1:(curPage&&curPage.title)||'This page',k2:k2,t2:(_curPage2&&_curPage2.title)||'right page'};
   var sL=document.getElementById('noteSecL'),sR=document.getElementById('noteSecR');
   sL.style.display=k1?'':'none';
-  if(k1){document.getElementById('noteTA').value=noteAt(k1);
+  if(k1){if(!keep)document.getElementById('noteTA').value=noteAt(k1);
     document.getElementById('noteLblL').textContent=(k2?'Left \u2014 ':'')+_noteEd.t1}
   sR.style.display=k2?'':'none';
-  if(k2){document.getElementById('noteTA2').value=noteAt(k2);
+  if(k2){if(!keep)document.getElementById('noteTA2').value=noteAt(k2);
     document.getElementById('noteLblR').textContent='Right \u2014 '+_noteEd.t2}
   noteEditHint();
   var w=document.getElementById('wirePanel');if(w)w.style.display='none';
@@ -1759,7 +1813,7 @@ function saveNote(){var n=getNotes(),ed=_noteEd||{k1:noteKey(),t1:(curPage&&curP
     if(v){n[k]={text:v,updated:new Date().toISOString().slice(0,10),title:ttl||k}}else{delete n[k]}}
   if(ed.k1&&document.getElementById('noteSecL').style.display!=='none')put(ed.k1,document.getElementById('noteTA').value,ed.t1);
   if(ed.k2&&document.getElementById('noteSecR').style.display!=='none')put(ed.k2,document.getElementById('noteTA2').value,ed.t2);
-  saveNotes(n);document.getElementById('notePanel').style.display='none';_noteEd=null;renderNotes();updateNoteUI()}
+  if(!saveNotes(n))return;document.getElementById('notePanel').style.display='none';_noteEd=null;renderNotes();updateNoteUI()}
 function delNote(){document.getElementById('noteTA').value='';saveNote()}
 function renderNotes(){var n=getNotes(),ks=Object.keys(n),h='';
   if(!ks.length)h='<div class="no-res" style="padding:8px">No notes yet \u2014 open a page and press &#9998;</div>';
@@ -1816,12 +1870,12 @@ function hlOff(){var bar=document.getElementById('hlBar');if(bar)bar.style.displ
 var _glRx=null,_glMap=null;
 function glOn(){try{return localStorage.getItem('esm_gl')!=='0'}catch(e){return true}}
 function getGLX(){try{var g=JSON.parse(localStorage.getItem('esm_glx')||'{}'),out={};
-  for(var k in g){var kk=String(k).replace(/['"<>\\]/g,'').slice(0,24);
+  for(var k in g){var kk=String(k).replace(/['"<>\\&;()]/g,'').slice(0,24);
     if(kk&&/[A-Za-z0-9]/.test(kk)&&typeof g[k]==='string')out[kk]=g[k].slice(0,200)}
   return out}catch(e){return{}}}
-function saveGLX(g){try{localStorage.setItem('esm_glx',JSON.stringify(g))}catch(e){}}
+function saveGLX(g){return _lsSet('esm_glx',JSON.stringify(g))}
 function glxToggle(){var f=document.getElementById('glAddForm');if(f)f.style.display=(f.style.display==='none')?'':'none'}
-function glxSave(){var t=document.getElementById('glxTerm').value.replace(/['"<>\\]/g,'').trim();
+function glxSave(){var t=document.getElementById('glxTerm').value.replace(/['"<>\\&;()]/g,'').trim();
   var d=document.getElementById('glxDef').value.trim();
   if(!t||!d||!/[A-Za-z0-9]/.test(t))return;
   var g=getGLX();g[t]=d;saveGLX(g);_glRx=null;_glMap=null;
@@ -1834,7 +1888,7 @@ function glxSave(){var t=document.getElementById('glxTerm').value.replace(/['"<>
     if(_split){f2.contentWindow.postMessage({esm:'gloff'},'*');f2.contentWindow.postMessage(_gm,'*')}}catch(eG){}}}
 function glxRemove(t){var g=getGLX();delete g[t];saveGLX(g);_glRx=null;_glMap=null;renderGLX()}
 function renderGLX(){var g=getGLX(),ks=Object.keys(g).sort(),h='';
-  for(var i=0;i<ks.length;i++){h+='<div class="bk-item"><a title="'+escH(g[ks[i]]).replace(/"/g,'&quot;')+'">'+escH(ks[i])+'</a><span class="bk-rm" onclick="glxRemove(\''+ks[i]+'\')" title="Remove your term">&times;</span></div>'}
+  for(var i=0;i<ks.length;i++){h+='<div class="bk-item"><a title="'+escH(g[ks[i]]).replace(/"/g,'&quot;')+'">'+escH(ks[i])+'</a><span class="bk-rm" data-k="'+escH(ks[i])+'" onclick="glxRemove(this.getAttribute(\'data-k\'))" title="Remove your term">&times;</span></div>'}
   var el=document.getElementById('glxList');if(el)el.innerHTML=h}
 function glInit(){if(_glRx)return;_glMap={};var terms=[],i;
   for(i=0;i<GLOSSARY.length;i++){_glMap[GLOSSARY[i][0]]=GLOSSARY[i][1];terms.push(GLOSSARY[i][0])}
@@ -1938,12 +1992,12 @@ function tourTarget(st){if(!st.s)return null;
     if(st.u){var up=el.closest(st.u);if(up)el=up}
     if(el.offsetParent!==null&&out.indexOf(el)<0)out.push(el)}
   return out.length?out:null}
-function tourMaybe(){try{if(localStorage.getItem('esm_tour'))return}catch(e){}
+function tourMaybe(){if(!_storageOK)return;try{if(localStorage.getItem('esm_tour'))return}catch(e){}
   if(location.hash)return;
   setTimeout(function(){if(!_tourOn)startTour()},900)}
 function startTour(){if(_tourOn||_discOpen)return;_tourOn=true;_tourI=0;
   try{if(document.activeElement&&document.activeElement.blur)document.activeElement.blur()}catch(eB){}
-  try{var sb9=document.getElementById('sidebar');if(sb9&&sb9.classList.contains('collapsed'))toggleSB()}catch(eS){}
+  try{var sb9=document.getElementById('sidebar');_tourSbWas=sb9.classList.contains('collapsed');sb9.classList.remove('collapsed')}catch(eS){}
   try{localStorage.setItem('esm_tour','1')}catch(e){}
   var bl=document.createElement('div');bl.id='tourBlock';bl.onclick=function(){tourStep(1)};document.body.appendChild(bl);
   var dim=document.createElement('div');dim.id='tourDim';document.body.appendChild(dim);
@@ -1968,7 +2022,7 @@ function tourStep(d){var i=_tourI+d;
 function tourShow(){var st=TOUR[_tourI],el=tourTarget(st);
   try{if(window.innerWidth<=800){var sbT=document.getElementById('sidebar');var inSB=!!(el&&el[0]&&sbT.contains(el[0]));
     if(inSB)sbT.classList.remove('collapsed');else sbT.classList.add('collapsed')}}catch(eT){}
-  if(el){try{el[0].scrollIntoView({block:'center'})}catch(e){}}
+  if(el){try{el[0].scrollIntoView({block:'center',inline:'nearest'})}catch(e){}try{document.body.scrollLeft=0;document.documentElement.scrollLeft=0}catch(e2){}}
   var box=document.getElementById('tourBox');if(!box)return;
   box.innerHTML='<b></b><span></span><div class="tour-btns">'+(_tourI>0?'<button onclick="tourStep(-1)">Back</button>':'')+'<button class="tour-next" onclick="tourStep(1)">'+(_tourI>=TOUR.length-1?'Finish':'Next')+'</button><span class="tour-skip" onclick="endTour()">Skip tour</span></div><div class="tour-n">'+(_tourI+1)+' / '+TOUR.length+'</div>';
   box.firstChild.textContent=st.t;
@@ -1999,6 +2053,8 @@ function tourPlace(){if(!_tourOn)return;var st=TOUR[_tourI],el=tourTarget(st);
     box.style.left=((W-bw)/2)+'px';box.style.top=Math.max(10,(H-bh)/2-40)+'px';
   }}
 function endTour(){_tourOn=false;
+  try{if(_tourSbWas===true)document.getElementById('sidebar').classList.add('collapsed');_tourSbWas=null}catch(eS){}
+  try{document.body.scrollLeft=0;document.documentElement.scrollLeft=0}catch(eL){}
   var ids=['tourBlock','tourDim','tourBox'];
   for(var i=0;i<ids.length;i++){var e=document.getElementById(ids[i]);if(e&&e.parentNode)e.parentNode.removeChild(e)}
   document.removeEventListener('keydown',tourKeys,true);
@@ -2116,8 +2172,9 @@ function sugPick(i){var t=_sugItems[i];if(!t)return;
 var _dtcQ='',_dtcKeep=false;
 function dtcClass(c){var m=c.match(/^([PBCU])(\d)(\d)(\d\d)$/);if(!m)return'';
   var sys={P:'Powertrain',B:'Body',C:'Chassis',U:'Network'}[m[1]];
-  var gen=(m[2]==='0'||m[2]==='2')?'generic OBD-II':'manufacturer-specific';
-  var sub={'0':'fuel/air metering & auxiliary emissions','1':'fuel/air metering','2':'injector circuit','3':'ignition system / misfire','4':'auxiliary emissions controls','5':'vehicle speed / idle control','6':'computer output circuit','7':'transmission','8':'transmission','9':'transmission'}[m[3]]||'';
+  var gen;if(m[1]==='P')gen=(m[2]==='0'||m[2]==='2')?'generic OBD-II':(m[2]==='1'?'manufacturer-specific':'generic / manufacturer');
+  else gen=(m[2]==='0'||m[2]==='3')?'generic OBD-II':'manufacturer-specific';
+  var sub='';if(m[1]==='P'&&m[2]==='0')sub={'0':'fuel/air metering & auxiliary emissions','1':'fuel/air metering','2':'injector circuit','3':'ignition system / misfire','4':'auxiliary emissions controls','5':'vehicle speed / idle control','6':'computer output circuit','7':'transmission','8':'transmission','9':'transmission'}[m[3]]||'';
   return sys+' \u00B7 '+gen+(sub?' \u00B7 '+sub:'')}
 
 
@@ -2138,8 +2195,8 @@ function treeCollapseAll(){var tf=document.getElementById('txtTree');if(tf)tf.va
 
 
 /* ═ TEXT SIZE (V2) ═ */
-function getFS(){var v=1;try{v=parseFloat(localStorage.getItem('esm_fs'))||1}catch(e){}return Math.min(1.6,Math.max(0.8,v))}
-function fsAdj(d){var v=d===0?1:Math.min(1.6,Math.max(0.8,Math.round((getFS()+d*0.1)*10)/10));
+function getFS(){var v=1;if(_fsMem!==null)v=_fsMem;else{try{v=parseFloat(localStorage.getItem('esm_fs'))||1}catch(e){}}return Math.min(1.6,Math.max(0.8,v))}
+function fsAdj(d){var v=d===0?1:Math.min(1.6,Math.max(0.8,Math.round((getFS()+d*0.1)*10)/10));_fsMem=v;
   try{localStorage.setItem('esm_fs',''+v)}catch(e){}
   applyFS()}
 function applyFS(){var v=getFS();
@@ -2154,7 +2211,7 @@ function applyFS(){var v=getFS();
 /* ═ UNIT CONVERTER (V2) ═ */
 var UNITS=[["mm","in",0.0393701],["Nm","lb\u00B7ft",0.737562],["bar","psi",14.5038],["L","US qt",1.05669],["L","UK pint",1.75975],["\u00B0C","\u00B0F",0]];
 function buildUnits(){var p=document.createElement('div');p.id='unitPanel';
-  var h='<div class="wire-title">Unit Converter</div>';
+  var h='<div class="wire-title">Unit Converter<span class="pnl-x" onclick="togUnits()" title="Close">&times;</span></div>';
   for(var i=0;i<UNITS.length;i++){h+='<div class="unit-row"><input class="unit-in" id="uL'+i+'" oninput="uConv('+i+',0)" type="number" step="any"><span class="unit-lbl">'+UNITS[i][0]+'</span><span style="opacity:.5">\u21C4</span><input class="unit-in" id="uR'+i+'" oninput="uConv('+i+',1)" type="number" step="any"><span class="unit-lbl">'+UNITS[i][1]+'</span></div>'}
   h+='<div class="wire-note">Type in either box to convert. Values rounded to 3 decimal places.</div>';
   p.innerHTML=h;p.style.display='none';document.getElementById('contentArea').appendChild(p);return p}
@@ -2167,7 +2224,7 @@ function uConv(i,dir){var f=UNITS[i][2],L=document.getElementById('uL'+i),R=docu
   dst.value=''+Math.round(out*1000)/1000}
 function togUnits(){var p=document.getElementById('unitPanel')||buildUnits();
   var _j=document.getElementById('jobPanel');if(_j)_j.style.display='none';
-  var _n9=document.getElementById('notePanel');if(_n9){_n9.style.display='none';_noteEd=null}
+  var _n9=document.getElementById('notePanel');if(_n9){_n9.style.display='none'}
   var w=document.getElementById('wirePanel');if(w&&p.style.display!=='block')w.style.display='none';
   p.style.display=(p.style.display==='block')?'none':'block'}
 
@@ -2191,7 +2248,7 @@ function loadAltList(sg){altSD=[];_altLoading=false;if(!curKW)return;
   var pf=(curMT==="SM")?"BRL_":"SML_",fn=pf+getMC()+"_"+getMY()+".js";
   _altLoading=true;removeScript(_altScript);window.tDT=[];
   _altScript=injectScript(bp()+"/treedata/"+fn,function(){if(sg!==_searchGen)return;_altLoading=false;
-    if(typeof SieTitleList==="function"){SieTitleList();altSD=window.tDT.slice();window.tDT=[];filterResults()}});
+    if(typeof SieTitleList==="function"){try{SieTitleList()}catch(eA){}altSD=window.tDT.slice().filter(_okItem);window.tDT=[];filterResults()}});
   _altScript.onerror=function(){if(sg!==_searchGen)return;_altLoading=false;altSD=[];filterResults()}}
 function runAltPass(){var hit={},vars=kwVariants(curKW),v,i;
   cdInfo=[];if(typeof CreateConditionInfo==="function")CreateConditionInfo("","","","","","");
@@ -2208,10 +2265,10 @@ function loadCIDX(){if(cidxReady()||_cidxLoading)return;_cidxLoading=true;
   var cg=getGen();
   _cidxScript=injectScript('./'+cg+'/en/treedata/CIDX.js',function(){_cidxLoading=false;
     if(cg!==getGen()){if(curKW)loadCIDX();return}
-    if(cidxReady()){if(curKW)filterResults();sugUpdate()}});
-  _cidxScript.onerror=function(){_cidxLoading=false;
+    if(cidxReady()){if(curKW&&_listDone===_searchGen)filterResults();sugUpdate()}});
+  _cidxScript.onerror=function(){_cidxLoading=false;_cidxFail=true;
     if(cg!==getGen()){if(curKW)loadCIDX();return}
-    window.ESM_CIDX={gen:cg,p:[],t:{}};if(curKW)filterResults()}}
+    if(curKW&&_listDone===_searchGen)filterResults()}}
 function qTokens(kw){var out=[],seen={};kw=(kw||'').toLowerCase();var m=kw.match(/[a-z0-9][a-z0-9\-\/]{1,23}/g)||[];
   for(var i=0;i<m.length;i++){var t=m[i];if(!/[a-z]/.test(t)||CSTOP[t])continue;if(!seen[t]){seen[t]=1;out.push(t)}}
   return out}
@@ -2241,7 +2298,7 @@ function filterResults(){var scoped=hasScope()?runDisplayPass(curKey.toUpperCase
     else{hOut+=resRow(it,b,yc);nOut++}
     shown[it.contentsNum]=1}
   var cHits=null,cLoading=false;
-  if(curKW&&!dtcOnly){if(cidxReady()){cHits=contentMatches(curKW)}else{cLoading=true;loadCIDX()}}
+  if(curKW&&!dtcOnly){if(cidxReady()){cHits=contentMatches(curKW)}else if(!_cidxFail){cLoading=true;loadCIDX()}}
   var hC='',nC=0;
   if(cHits){var cseen={};
     for(var i=0;i<curSD.length;i++){var it=curSD[i];
@@ -2261,6 +2318,7 @@ function filterResults(){var scoped=hasScope()?runDisplayPass(curKey.toUpperCase
     if(nOut>0)h+='<div class="res-hdr">'+nOut+' found elsewhere'+dtcTxt+'</div>'+hOut}
   if(nC>0)h+='<div class="res-hdr">'+nC+' more in page contents</div>'+hC;
   else if(cLoading)h+='<div class="no-res">Searching page contents\u2026</div>';
+  else if(_cidxFail&&curKW)h+='<div class="no-res">Page-content search is unavailable right now \u2014 <a href="javascript:void(0)" onclick="_cidxFail=false;doSearch()">retry</a>.</div>';
   var hA='',nA=0;
   if(curKW&&!dtcOnly&&altSD.length){var altHits=runAltPass(),aseen={};
     for(var ai=0;ai<altSD.length;ai++){if(!altHits[ai])continue;var it2=altSD[ai];
@@ -2283,8 +2341,10 @@ function filterResults(){var scoped=hasScope()?runDisplayPass(curKey.toUpperCase
       hN+='<div class="rr" onclick="openNote(\''+nk+'\')"><a href="javascript:void(0)">'+escH(nt.title||nk)+'</a></div><div class="note-snip">'+hlT(escH(nt.text.slice(0,160)),curKW)+'</div>';nN++}}}
   if(nN>0)h+='<div class="res-hdr">'+nN+' in your notes</div>'+hN;
   if(_dtcQ){var di=dtcClass(_dtcQ);h='<div class="res-hdr">DTC '+escH(_dtcQ)+(di?' \u2014 '+di:'')+'</div>'+h}
-  document.getElementById("searchResults").innerHTML=h}
-function openRes(i){var r=_res[i];if(!r)return;curResUrl=r.url;openC(r.cf,r.yc,r.t);_hlTerms=qTokens(curKW);
+  document.getElementById("searchResults").innerHTML=h;
+  if(_scrollResults&&_res.length){_scrollResults=false;try{var _rp=document.getElementById('searchPanel');if(_rp)_rp.scrollIntoView({block:'start'})}catch(eS){}}}
+var _scrollResults=false;
+function openRes(i){var r=_res[i];if(!r)return;curResUrl=r.url;openC(r.cf,r.yc,r.t,(r.url&&r.url.indexOf('/mk8/')>=0)?'mk8':((r.url&&r.url.indexOf('/mk7/')>=0)?'mk7':undefined));_hlTerms=qTokens(curKW);
   var rows=document.querySelectorAll('#searchResults .rr');for(var j=0;j<rows.length;j++)rows[j].classList.remove('cur');
   var el=document.getElementById('rr'+i);if(el)el.classList.add('cur');renderPins()}
 function clearSearch(){
@@ -2324,41 +2384,44 @@ function GuideGo(kw){
   document.getElementById('txtKW').value=kw;
   if(hasScope())clearScope();
   _dtcQ='';_dtcKeep=false;
-  doSearch();
+  _scrollResults=true;doSearch();
   var sb=document.getElementById('sidebar');
-  if(sb&&sb.classList.contains('collapsed'))toggleSB();
-  var sp=document.getElementById('searchPanel');if(sp)sp.scrollIntoView({block:'nearest'})}
+  if(sb&&sb.classList.contains('collapsed'))sb.classList.remove('collapsed');
+}
 
 /* ════════════════════════════════════════════
    PARENT API
    ════════════════════════════════════════════ */
 function Cts(key,anc){if(!key)return;
-  var _cg=(curPage&&(curPage.gen==='mk7'||curPage.gen==='mk8'))?curPage.gen:getGen();
+  var _cg=_frameGen(document.getElementById('contentFrame'))||((curPage&&(curPage.gen==='mk7'||curPage.gen==='mk8'))?curPage.gen:getGen());
   var u='./'+_cg+'/en'+"/html/"+key+".html"+_ancU(anc);
   var ae=document.activeElement;
   if(_split&&ae&&ae.id==='contentFrame2'){
     var f2=document.getElementById('contentFrame2');
     try{var base=f2.contentWindow.location.href.replace(/\/html\/[^\/]*$/,'/html/');
-      u=base+key+'.html'+(anc?(anc.indexOf('?')>=0?'?'+anc:'#'+anc):'')}catch(e){}
+      u=base+key+'.html'+_ancU(anc)}catch(e){}
     f2.removeAttribute('srcdoc');f2.src=u;return}
-  hlReset();var pg={gen:_cg,page:key,title:key,url:u};navPush(pg);curPage=pg;
+  hlReset();var pg={gen:_cg,page:key,title:key,url:u};_syncModel(pg);navPush(pg);curPage=pg;
   document.getElementById("contentFrame").src=u;document.getElementById("cTitle").textContent=key;updateBkBtn();addRecent(pg);setHash()}
 function Tsl(k,sct,sc,sys,comp,sitq){curKey=k;curSct=sct;curSc=sc;curSys=sys;curComp=comp;curSitq=sitq;curScopeName="";updScopeChip()}
 function Old(obj){try{var f2=document.getElementById("contentFrame2");if(f2&&obj&&f2.contentWindow&&(obj===f2.contentWindow||obj.document===f2.contentDocument))return;var t="",d=null;if(obj&&obj.contentDocument)d=obj.contentDocument;else if(obj&&obj.document)d=obj.document;if(d){var el=d.querySelector&&d.querySelector(".top_title");t=el&&el.textContent.trim()?el.textContent.trim():(d.title||"")}if(t){document.getElementById("cTitle").textContent=t;if(curPage&&t.length>3)curPage.title=t}}catch(e){}}
-function Jmp(){}
+function Jmp(a){if(!a)return;try{var ae=document.activeElement;var fr=(_split&&ae&&ae.id==='contentFrame2')?document.getElementById('contentFrame2'):document.getElementById('contentFrame');fr.contentWindow.location.hash=a}catch(e){}}
 function absU(rel){try{return new URL(rel,document.baseURI).href}catch(e){return location.href.split(/[?#]/)[0].replace(/[^\/]*$/,'')+rel.replace(/^\.\//,'')}}
 function Prt(key,data,gen){if(!key){doPrint();return}
   if(gen!=='mk7'&&gen!=='mk8'){var _pa=document.activeElement;
-    if(_split&&_pa&&_pa.id==='contentFrame2'&&_curPage2&&_curPage2.url)gen=(_curPage2.url.indexOf('mk8/en/')>=0)?'mk8':'mk7';
-    else if(curPage&&(curPage.gen==='mk7'||curPage.gen==='mk8'))gen=curPage.gen}
-  var u=absU(((gen==='mk7'||gen==='mk8')?'./'+gen+'/en':bp())+"/html/"+key+".html");if(data)u+="#"+data;var w=window.open(u,"ESM_ZOOM","width=1024,height=700,scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");zoomEnhance(w);if(w){_zoomWins.push(w);if(_zoomWins.length>10)_zoomWins.shift()}}
+    if(_split&&_pa&&_pa.id==='contentFrame2'){gen=_frameGen(document.getElementById('contentFrame2'))||((_curPage2&&_curPage2.url&&_curPage2.url.indexOf('mk8/en/')>=0)?'mk8':'mk7')}
+    else gen=_frameGen(document.getElementById('contentFrame'))||((curPage&&(curPage.gen==='mk7'||curPage.gen==='mk8'))?curPage.gen:getGen())}
+  var u=absU(((gen==='mk7'||gen==='mk8')?'./'+gen+'/en':bp())+"/html/"+key+".html");if(data)u+="#"+data;var w=window.open(u,"ESM_ZOOM","width=1024,height=700,scrollbars=yes,resizable=yes,menubar=yes,toolbar=yes");
+  if(!w){try{if(!_split)togSplit();var _zf=document.getElementById('contentFrame2');_zf.removeAttribute('srcdoc');_zf.src=u;esmToast('Pop-ups are blocked here \u2014 the diagram opened in the second pane instead.')}catch(eZ){}return}
+  zoomEnhance(w);_zoomWins.push(w);if(_zoomWins.length>10)_zoomWins.shift()}
 function zoomEnhance(w){try{if(!w)return;var tries=0;
   var t=setInterval(function(){tries++;try{
     if(w.closed||tries>60){clearInterval(t);return}
     var d=w.document;
     if(!d||d.readyState!=='complete'||!d.body)return;
     if(typeof w.jsResizeImage!=='function'){clearInterval(t);return}
-    if(d.getElementById('esm-zoomx')){clearInterval(t);return}
+    if(d.getElementById('esm-zoomx')||w.__esmWheel){clearInterval(t);return}
+    try{w.__esmWheel=1}catch(eW){}
     clearInterval(t);
     var st=d.createElement('style');st.id='esm-zoomx';
     st.textContent='#esmZoomHint{position:fixed;right:10px;bottom:10px;z-index:999;background:rgba(20,24,32,.85);color:#fff;font:11px sans-serif;padding:5px 10px;border-radius:12px}';
@@ -2385,7 +2448,7 @@ document.addEventListener('keydown',function(e){
   if(e.key==='Escape'){if(sugOpen()){sugHide();return}
     var _pnl,_closed=false;
     _pnl=document.getElementById('jobPanel');if(_pnl&&_pnl.offsetParent!==null){closeJobPanel();_closed=true}
-    _pnl=document.getElementById('notePanel');if(!_closed&&_pnl&&_pnl.offsetParent!==null){_pnl.style.display='none';_noteEd=null;_closed=true}
+    _pnl=document.getElementById('notePanel');if(!_closed&&_pnl&&_pnl.offsetParent!==null){_pnl.style.display='none';_closed=true}
     _pnl=document.getElementById('unitPanel');if(!_closed&&_pnl&&_pnl.offsetParent!==null){_pnl.style.display='none';_closed=true}
     _pnl=document.getElementById('wirePanel');if(!_closed&&_pnl&&_pnl.offsetParent!==null){_pnl.style.display='none';_closed=true}
     if(_closed)return;
@@ -2396,7 +2459,7 @@ document.addEventListener('keydown',function(e){
     if(inKW||(e.target.tagName!=='INPUT'&&e.target.tagName!=='SELECT'&&e.target.tagName!=='TEXTAREA')){
       var rows=document.querySelectorAll('#searchResults .rr');
       if(rows.length){e.preventDefault();kbNav(e.key==='ArrowDown'?1:-1,rows)}}}
-  if(e.key==='Enter'&&kbIdx>=0&&e.target.tagName!=='TEXTAREA'&&document.activeElement!==document.getElementById('txtKW')){
+  if(e.key==='Enter'&&kbIdx>=0&&e.target.tagName!=='TEXTAREA'&&e.target.tagName!=='INPUT'&&e.target.tagName!=='SELECT'&&document.activeElement!==document.getElementById('txtKW')){
     var rowsE=document.querySelectorAll('#searchResults .rr');
     if(rowsE[kbIdx]){e.preventDefault();var riE=parseInt(rowsE[kbIdx].id.slice(2),10);if(isNaN(riE)){rowsE[kbIdx].click()}else{openRes(riE)}return}}
   if(e.target.tagName==='INPUT'||e.target.tagName==='SELECT'||e.target.tagName==='TEXTAREA')return;
@@ -2418,7 +2481,6 @@ var GLOSSARY=[
 ["A/F","Air/Fuel ratio sensor. Measures oxygen content in exhaust gases to help the ECM adjust the fuel mixture."],
 ["A/T","Automatic Transaxle (automatic gearbox). Honda's term for their automatic transmission units."],
 ["ABS","Anti-lock Braking System. Prevents wheels from locking up under heavy braking."],
-["ACC","Adaptive Cruise Control. Radar-based cruise control that adjusts speed to maintain distance from the car ahead. MK8 only."],
 ["B-CAN","Body Controller Area Network. The communication bus linking body electronics (windows, locks, lights)."],
 ["CMBS","Collision Mitigation Braking System. Pre-crash system that tightens seatbelts and applies brakes. MK8 only."],
 ["CMP","Camshaft Position sensor. Tells the ECM where the camshaft is in its rotation cycle."],
@@ -2437,14 +2499,13 @@ var GLOSSARY=[
 ["HVAC","Heating, Ventilation, and Air Conditioning."],
 ["IAT","Intake Air Temperature sensor. Measures the temperature of air entering the engine."],
 ["IMRC","Intake Manifold Runner Control. Valve system that changes the effective length of the intake runners for better performance across the rev range."],
-["LKAS","Lane Keeping Assist System. Camera-based system that applies steering torque to keep the car in its lane. MK8 only."],
+["LKAS","Lane Keeping Assist System. Camera-based system that applies steering torque to keep the car in its lane. Fitted to 2006-08 MK7 and MK8 models."],
 ["M/T","Manual Transaxle (manual gearbox)."],
 ["MAP","Manifold Absolute Pressure sensor. Measures intake vacuum/pressure to help calculate air entering the engine."],
 ["MAF","Mass Air Flow sensor. Directly measures the volume and density of air entering the engine."],
 ["MIL","Malfunction Indicator Lamp. The engine warning light on the dashboard (also called the check engine light)."],
 ["MICU","Multiplex Integrated Control Unit. The body electronics module that controls interior lights, wipers, door locks, power windows, and other convenience features."],
 ["OBD-II","On-Board Diagnostics, second generation. The standardised diagnostic system. The DLC port and P/B/U/C code format are part of this standard."],
-["PCS","Pressure Control Solenoid. Controls hydraulic pressure in the automatic gearbox."],
 ["PCM","Powertrain Control Module. Manages automatic transmission shift logic. Works alongside the ECM."],
 ["PCV","Positive Crankcase Ventilation. Routes blow-by gases from the crankcase back into the intake to be burned."],
 ["SRS","Supplemental Restraint System. The airbag system — includes airbags, seatbelt pretensioners, crash sensors, and the SRS control unit."],
@@ -2456,8 +2517,8 @@ var GLOSSARY=[
 ["VSA","Vehicle Stability Assist. Honda's electronic stability control system. Combines ABS with traction control and stability control."],
 ["VTEC","Variable Valve Timing and Lift Electronic Control. Honda's system for changing valve timing and lift to optimise power and efficiency across the rev range."],
 ["VTC","Variable Timing Control. The actuator that adjusts camshaft timing. Part of the i-VTEC system."],
-["i-CDTi","Intelligent Common-rail Direct Turbo Diesel injection. Honda's name for the 2.2L diesel engine in MK7 models (N22A)."],
-["i-DTEC","Intelligent Diesel Technology Engine Clean. Honda's name for the 2.2L diesel in MK8 models (N22B). Updated version of i-CDTi."],
+["i-CTDi","Intelligent Common-rail Turbo Diesel injection. Honda's name for the 2.2L diesel engine in MK7 models (N22A)."],
+["i-DTEC","Intelligent Diesel Technology Engine Clean. Honda's name for the 2.2L diesel in MK8 models (N22B). Updated version of i-CTDi."],
 ["i-VTEC","Intelligent VTEC. Combines VTEC (variable valve lift) with VTC (variable valve timing) for both performance and economy."]
 ];
 function renderGlossary(){
@@ -2472,11 +2533,9 @@ function renderGlossary(){
 var WIRES=[
 ["BLK","Black","#1a1a1a"],["WHT","White","#f5f5f5"],["RED","Red","#cc2222"],
 ["GRN","Green","#22aa44"],["BLU","Blue","#2266cc"],["YEL","Yellow","#ddcc00"],
-["BRN","Brown","#774422"],["ORG","Orange","#ee7722"],["PNK","Pink","#ee88aa"],
+["BRN","Brown","#774422"],["ORN","Orange","#ee7722"],["PNK","Pink","#ee88aa"],
 ["PUR","Purple","#8833aa"],["GRY","Grey","#888888"],["LT GRN","Light Green","#66dd88"],
-["LT BLU","Light Blue","#66aaee"],["SKY","Sky Blue","#88ccee"],
-["CRM","Cream","#f5e8c8"],["TAN","Tan","#ccaa77"],["MAR","Maroon","#662233"],
-["VIO","Violet","#7744bb"],["SIL","Silver","#bbbbcc"]
+["LT BLU","Light Blue","#66aaee"],["SIL","Silver","#bbbbcc"]
 ];
 var wireVisible=false;
 function togWires(){var _u=document.getElementById('unitPanel');if(_u)_u.style.display='none';var _n=document.getElementById('notePanel');if(_n)_n.style.display='none';var _j=document.getElementById('jobPanel');if(_j)_j.style.display='none';
@@ -2484,7 +2543,7 @@ function togWires(){var _u=document.getElementById('unitPanel');if(_u)_u.style.d
   wireVisible=!wireVisible;
   var p=document.getElementById('wirePanel');
   if(wireVisible){
-    var h='<div class="wire-title">Wire Colour Decoder</div>';
+    var h='<div class="wire-title">Wire Colour Decoder<span class="pnl-x" onclick="togWires()" title="Close">&times;</span></div>';
     for(var i=0;i<WIRES.length;i++){
       var w=WIRES[i];
       h+='<div class="wire-row"><div class="wire-swatch" style="background:'+w[2]+'"></div><span class="wire-abbr">'+w[0]+'</span><span class="wire-name">'+w[1]+'</span></div>';
@@ -2515,6 +2574,7 @@ function loadFromHash(){
   var h=location.hash;if(!h||h.length<4)return false;
   var parts=h.substring(1).split('/');if(parts.length<4)return false;
   var gen=parts[0],mc=parts[1],my=parts[2],page=parts[3],title=page;try{if(parts[4])title=decodeURIComponent(parts[4])}catch(eh){title=parts[4]||page}
+  if(!/^[0-9]{15}$/.test(page))return false;
   // Find and select the right year
   var myIdx=-1;for(var i=0;i<ALL_MODELS.length;i++){if(ALL_MODELS[i].year===my&&ALL_MODELS[i].gen===gen){myIdx=i;break}}
   if(myIdx<0)return false;
@@ -2525,7 +2585,7 @@ function loadFromHash(){
   document.getElementById('cmbMC').selectedIndex=mcIdx;
   // Load generation + tree
   var genChanged=(gen!==curGen);curGen=gen;
-  if(genChanged){removeScript(_sieScript);_sieScript=injectScript('./'+gen+'/en/js/SieListFunc.js',function(){loadTree()})}else{loadTree()}
+  if(genChanged){_injectSie(gen)}else{loadTree()}
   // Open the page
   hlReset();
   var u='./'+gen+'/en/html/'+page+'.html?000?'+mc+','+my;
@@ -2541,6 +2601,10 @@ window.addEventListener('hashchange',function(){loadFromHash()});
 /* ════════════════════════════════════════════
    INIT
    ════════════════════════════════════════════ */
+function _setVH(){try{document.documentElement.style.setProperty('--vh',window.innerHeight+'px')}catch(e){}}
+document.addEventListener('DOMContentLoaded',function(){_setVH();window.addEventListener('resize',_setVH);
+  try{var _sbp=localStorage.getItem('esm_sb');if(_sbp==='1'||(_sbp===null&&window.innerWidth<=800))document.getElementById('sidebar').classList.add('collapsed')}catch(e){}
+  try{showDisclaimer()}catch(e2){}});
 window.onload=function(){
   loadMode();initDropdowns();
   _safe(renderBookmarks);_safe(renderRecent);_safe(renderGlossary);_safe(renderPins);_safe(applyFS);

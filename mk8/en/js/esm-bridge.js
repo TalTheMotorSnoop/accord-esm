@@ -16,13 +16,13 @@ function setDark(css){try{var ex=document.getElementById('esm-dark');if(ex&&ex.p
   if(!css)return;var s=document.createElement('style');s.id='esm-dark';s.textContent=css;
   (document.head||document.documentElement).appendChild(s)}catch(e){}}
 /* ---- text zoom ---- */
-function setZoom(v){try{document.documentElement.style.zoom=(v&&v!==1)?(''+v):''}catch(e){}}
+function setZoom(v){try{v=Math.min(1.6,Math.max(0.8,parseFloat(v)||1));document.documentElement.style.zoom=(v!==1)?(''+v):''}catch(e){}}
 /* ---- helpers ---- */
-function textNodes(rx,cap){var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null),nodes=[],n;
+function textNodes(rx,cap,inGl){var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null),nodes=[],n;
   while(n=walker.nextNode()){var pn=n.parentNode,p=pn&&pn.nodeName;
     if(p==='SCRIPT'||p==='STYLE')continue;
     var pc=pn.className||'';
-    if(pc==='esmgl'||pc==='esmhl'||pc==='esmhl cur')continue;
+    if(pc==='esmhl'||pc==='esmhl cur')continue;if(!inGl&&pc==='esmgl')continue;
     rx.lastIndex=0;if(rx.test(n.nodeValue)){nodes.push(n);if(nodes.length>=cap)break}}
   return nodes}
 function unwrap(cls){var sp=document.querySelectorAll('.'+cls);
@@ -74,7 +74,7 @@ function hlApply(terms){try{
     (document.head||document.documentElement).appendChild(st)}
   var esc=[];for(var i2=0;i2<terms.length;i2++)esc.push(String(terms[i2]).replace(/[.*+?^{}$()|[\]\\]/g,'\\$&'));
   var rx=new RegExp('('+esc.join('|')+')','gi');
-  var nodes=textNodes(rx,400);
+  var nodes=textNodes(rx,400,true);
   for(var i=0;i<nodes.length;i++){var node=nodes[i],frag=document.createDocumentFragment(),txt=node.nodeValue,last=0,m;
     rx.lastIndex=0;
     while((m=rx.exec(txt))!==null){
@@ -96,7 +96,7 @@ function hlGo(i){if(!hlEls.length)return;
   send({esm:'hlpos',i:hlIdx+1,n:hlEls.length})}
 function hlOff(){try{for(var i=0;i<hlEls.length;i++){var sp=hlEls[i];if(sp.parentNode)sp.parentNode.replaceChild(document.createTextNode(sp.textContent),sp)}}catch(e){}hlEls=[];hlIdx=0;hlSig=''}
 /* ---- zoom-window wheel controls ---- */
-function enableWheelZoom(){if(window.__esmWheel)return;window.__esmWheel=1;
+function enableWheelZoom(){if(window.__esmWheel||document.getElementById('esm-zoomx'))return;window.__esmWheel=1;
   if(typeof window.jsResizeImage!=='function')return;
   var rate=1;
   try{var st=document.createElement('style');st.textContent='#esmZoomHint{position:fixed;right:10px;bottom:10px;z-index:999;background:rgba(20,24,32,.85);color:#fff;font:11px sans-serif;padding:5px 10px;border-radius:12px}';(document.head||document.documentElement).appendChild(st);
@@ -111,6 +111,7 @@ function enableWheelZoom(){if(window.__esmWheel)return;window.__esmWheel=1;
     try{if(window.z&&window.z.style){window.z.style.left='0px';window.z.style.top='0px'}}catch(e){}})}
 /* ---- inbound ---- */
 window.addEventListener('message',function(ev){var d=ev.data;if(!d||!d.esm)return;
+  try{if(PARENT){if(ev.source!==PARENT)return}else if(OPENER){if(ev.source!==OPENER)return}else return}catch(eS){return}
   try{
     if(d.esm==='dark')setDark(d.css||'');
     else if(d.esm==='zoom')setZoom(d.v);

@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Service Interval Dashboard</title>
-<link href="./fonts/fonts.css?v=2.0.0" rel="stylesheet">
+<link href="./fonts/fonts.css?v=2.1.0" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Outfit',sans-serif;background:#fff;color:#2a2a2a;line-height:1.6}
@@ -54,6 +55,7 @@ tr:hover td{background:#fafafa}
 .ind-svc span{font-size:11px;color:#999}
 .save-note{font-size:11px;color:#16a34a;margin-top:8px;display:none}
 @media(max-width:700px){.wrap{padding:20px 16px 40px}.fg input,.fg select{width:100%}.row{flex-direction:column;align-items:stretch}}
+@media(max-width:480px){table{font-size:12px}td,th{padding:8px 6px}.interval,.st{white-space:normal}.ind-svc{gap:4px}.ind-svc input[type=number]{width:44%!important}.ind-svc input[type=date]{width:100%!important}}
 /* ── dark mode (driven by the launcher theme over the bridge) ── */
 html.darkmode body{background:#14171c;color:#c8cdd6}
 html.darkmode h1{color:#e8ebf0}
@@ -85,7 +87,7 @@ html.darkmode .ind-svc span{color:#7a828e}
 <body>
 <div class="wrap">
 <h1>Service Interval Dashboard</h1>
-<p class="subtitle">Based on Honda's official maintenance schedule for normal driving conditions</p>
+<p class="subtitle">Based on Honda's EU "Normal Conditions" maintenance schedules (MK8 markets with the Service Reminder System may differ) &mdash; intervals in km / months, whichever comes first</p>
 
 <div class="setup">
   <div class="stitle">Your Vehicle</div>
@@ -150,49 +152,105 @@ var MODELS={
   "2009":{gen:"mk8",codes:["CU1","CU2","CU3","CW1","CW2","CW3"]},
   "2010":{gen:"mk8",codes:["CU1","CU2","CU3","CW1","CW2","CW3"]}
 };
-var DIESEL={CM2:1,CN2:1,CU3:1,CW3:1};
-// [mk7_petrol, mk7_diesel, mk8_petrol, mk8_diesel]
-var PG={
-  oil:["000000000000615","000000000000615","000000000001243","000000000001998"],
-  oilf:["000000000000612","000000000000612","000000000001238","000000000001991"],
-  air:["000000000000598","000000000000598","000000000001213","000000000001976"],
-  spark:["000000000002681","000000000000481","000000000001228",null],
-  belt:["000000000000499","000000000000499","000000000001023","000000000001848"],
-  valve:["000000000002695","000000000002695","000000000001095",null],
-  cool:["000000000002686","000000000002686","000000000001030","000000000002217"],
-  bfl:["000000000000021","000000000000021","000000000000030","000000000000030"],
-  mtf:["000000000000759","000000000000759","000000000002701","000000000002280"],
-  atf:["000000000002759","000000000002759","000000000002783","000000000002422"],
-  bf:["000000000000027","000000000000027","000000000000044","000000000000044"],
-  br:["000000000001015","000000000001015","000000000000045","000000000000045"],
-  park:["000000000001010","000000000001010","000000000000025","000000000000025"],
-  fuel:["000000000001145","000000000001680","000000000001171","000000000002247"],
-  poll:["000000000000112","000000000000112","000000000000124","000000000000124"],
-  idle:["000000000003623","000000000003623","000000000001206","000000000003590"]
+var DIESEL={CN1:1,CN2:1,CU3:1,CW3:1};
+// Page map, keyed by variant (body / era / engine differ per Honda's title lists). Verified against SML_<code>_<year>.js.
+function pgVariant(code,yr){yr=+yr;
+  if(yr<=2008){var era=yr<=2005?'a':'b';if(code==='CN1')return'm7d4';if(code==='CN2')return'm7d5';return(code==='CL7'||code==='CL9')?'m7p4'+era:'m7p5'+era}
+  if(code==='CU3'||code==='CW3')return'm8d';return(code==='CU1'||code==='CW1')?'m8pR':'m8pK'}
+var PGV={
+ m7p4a:{oil:"000000000000615",oilf:"000000000000612",air:"000000000000598",spark:{CL7:"000000000002681",CL9:"000000000000481"},belt:"000000000000499",valve:"000000000002695",idle:"000000000002709",cool:"000000000002686",bfl:"000000000000021",mtf:"000000000000759",atf:"000000000002759",bf:"000000000000027",br:"000000000001015",park:"000000000001010",fuel:"000000000001145",poll:"000000000000112"},
+ m7p4b:{oil:"000000000000615",oilf:"000000000000612",air:"000000000000598",spark:{CL7:"000000000003566",CL9:"000000000000481"},belt:"000000000000499",valve:"000000000003580",idle:"000000000003623",cool:"000000000003572",bfl:"000000000000021",mtf:"000000000000759",atf:"000000000004273",bf:"000000000000027",br:"000000000001015",park:"000000000001010",fuel:"000000000001145",poll:"000000000000112"},
+ m7p5a:{oil:"000000000000615",oilf:"000000000000612",air:"000000000000598",spark:{CM1:"000000000002681",CM2:"000000000000481"},belt:"000000000000499",valve:"000000000002695",idle:"000000000002709",cool:"000000000002686",bfl:"000000000000021",mtf:"000000000000759",atf:"000000000002759",bf:"000000000000027",br:"000000000001710",park:"000000000001700",fuel:"000000000001680",poll:"000000000000112"},
+ m7p5b:{oil:"000000000000615",oilf:"000000000000612",air:"000000000000598",spark:{CM1:"000000000004339",CM2:"000000000000481"},belt:"000000000000499",valve:"000000000004353",idle:"000000000004396",cool:"000000000004345",bfl:"000000000000021",mtf:"000000000000759",atf:"000000000005030",bf:"000000000000027",br:"000000000001710",park:"000000000001700",fuel:"000000000001680",poll:"000000000000112"},
+ m7d4:{oil:"000000000001360",oilf:"000000000001352",air:"000000000001342",glow:"000000000001339",belt:"000000000001190",idle:"000000000001340",cool:"000000000001197",bfl:"000000000000021",mtf:{"2004-2005":"000000000003008","2006-2008":"000000000003797"},bf:"000000000000027",br:"000000000001015",park:"000000000001010",fuel:{"2004-2005":"000000000002974","2006-2008":"000000000003775"},fueldrain:{"2004-2005":"000000000002975","2006-2008":"000000000003776"},poll:"000000000000112"},
+ m7d5:{oil:"000000000002057",oilf:"000000000002049",air:"000000000002039",glow:"000000000002036",belt:"000000000001886",idle:"000000000002037",cool:"000000000001893",bfl:"000000000000021",mtf:{"2004-2005":"000000000003371","2006-2008":"000000000004559"},bf:"000000000000027",br:"000000000002106",park:"000000000002082",fuel:{"2004-2005":"000000000003335","2006-2008":"000000000004537"},fueldrain:{"2004-2005":"000000000003336","2006-2008":"000000000004538"},poll:"000000000000112"},
+ m8pR:{oil:"000000000001243",oilf:"000000000001238",air:"000000000001213",spark:"000000000001228",belt:"000000000001023",valve:"000000000001095",idle:"000000000001206",cool:"000000000001030",bfl:"000000000000030",mtf:"000000000002701",atf:"000000000002783",bf:"000000000000044",br:"000000000000045",park:"000000000000025",fuel:"000000000001171",poll:"000000000000124"},
+ m8pK:{oil:"000000000001653",oilf:"000000000001644",air:"000000000001620",spark:"000000000001634",belt:"000000000001434",valve:"000000000001506",idle:"000000000001614",cool:"000000000001441",bfl:"000000000000030",mtf:"000000000002701",atf:"000000000002783",bf:"000000000000044",br:"000000000000045",park:"000000000000025",fuel:"000000000001581",poll:"000000000000124"},
+ m8d:{oil:"000000000001998",oilf:"000000000001991",air:"000000000001976",glow:"000000000001973",belt:"000000000001848",idle:{"2009-2010":"000000000003676"},cool:{"M/T":"000000000002217","A/T":"000000000002324"},bfl:"000000000000030",mtf:"000000000002280",atf:"000000000002422",bf:"000000000000044",br:"000000000000045",park:"000000000000025",fuel:{"M/T":"000000000002247","A/T":"000000000002353"},fueldrain:{"M/T":"000000000002244","A/T":"000000000002349"},poll:"000000000000124"}
 };
-function pgIdx(){var c=document.getElementById('inCode').value;var yr=+document.getElementById('inYear').value;return (yr<=2008)?(DIESEL[c]?1:0):(DIESEL[c]?3:2)}
-function mkLnk(key,txt){var idx=pgIdx();var p=PG[key];if(!p||!p[idx])return'';var yr=document.getElementById('inYear').value;var c=document.getElementById('inCode').value;var g=MODELS[yr].gen;return'<a class="lnk" href="javascript:void(0)" onclick="oProc(\''+g+"','"+p[idx]+"','"+c+"','"+yr+"')\">&rarr; "+txt+'</a>'}
+function pgFor(key){var c=document.getElementById('inCode').value,yr=+document.getElementById('inYear').value;
+  var v=PGV[pgVariant(c,yr)];if(!v)return'';var p=v[key];if(!p)return'';if(typeof p==='string')return p;
+  if(p[c])return p[c];for(var k in p){var m=/^(\d{4})-(\d{4})$/.exec(k);if(m&&yr>=+m[1]&&yr<=+m[2])return p[k];if(k===String(yr))return p[k]}
+  for(var k2 in p)return p[k2];return''}
+function mkLnk(key,txt){var p=pgFor(key);if(!p)return'';var yr=document.getElementById('inYear').value;var c=document.getElementById('inCode').value;var g=MODELS[yr].gen;return'<a class="lnk" href="javascript:void(0)" onclick="oProc(\''+g+"','"+p+"','"+c+"','"+yr+"')\">&rarr; "+txt+'</a>'}
 function oProc(g,p,c,y){var u='./'+g+'/en/html/'+p+'.html?000?'+c+','+y;try{parent.openC(p,'000?'+c+','+y,'',g)}catch(e){try{if(parent&&parent!==window){parent.postMessage({esm:'openc',g:g,p:p,c:c,y:y},'*');return}}catch(e2){}window.open(u,'_blank')}}
 
-// [id,name,type,kmI,moI,note,pgKey,cat,dieselOnly,petrolOnly,firstKm,firstMo]
-var ITEMS=[
-["oil","Engine Oil","R",12500,12,"0W-20 (MK8) or as specified on oil cap.","oil","Engine",0,0,0,0],
-["oilf","Engine Oil Filter","R",25000,24,null,"oilf","Engine",0,0,0,0],
-["air","Air Cleaner Element","R",40000,48,null,"air","Engine",0,0,0,0],
-["spark","Spark Plugs","R",100000,0,"MK7: 40,000 km. Long-life: 100,000 km.","spark","Engine",0,1,0,0],
-["belt","Drive Belt","I",120000,0,"Check cracks and auto-tensioner position.","belt","Engine",0,0,0,0],
-["valve","Valve Clearance","I",60000,0,"Petrol engines only.","valve","Engine",0,1,0,0],
-["idle","Idle Speed","I",120000,0,null,"idle","Engine",0,0,0,0],
-["cool","Engine Coolant","R",100000,60,"Honda Type 2. First: 200k km / 10 yr.","cool","Fluids",0,0,200000,120],
-["bfl","Brake Fluid","R",0,36,"DOT 3 or DOT 4.","bfl","Fluids",0,0,0,0],
-["mtf","Manual Trans. Fluid","R",120000,96,"Honda MTF. M/T models only.","mtf","Fluids",0,0,0,0],
-["atf","Auto Trans. Fluid","R",80000,48,"Honda ATF-Z1. A/T only. First: 120k/8yr.","atf","Fluids",0,0,120000,96],
-["bf","Front Brakes","I",25000,24,"Pad/disc thickness, calipers, leaks.","bf","Brakes",0,0,0,0],
-["br","Rear Brakes","I",25000,24,"Pad/disc thickness, calipers, leaks.","br","Brakes",0,0,0,0],
-["park","Parking Brake","I",25000,24,"Adjustment and operation.","park","Brakes",0,0,0,0],
-["fuel","Fuel Filter","R",100000,0,null,"fuel","Fuel",0,0,0,0],
-["poll","Dust & Pollen Filter","R",30000,12,"Replace sooner in dusty areas.","poll","Cabin",0,0,0,0]
-];
+// [id,name,type,kmI,moI,note,pgKey,cat,dieselOnly,petrolOnly,firstKm,firstMo, codes?, years?]
+// Intervals transcribed from Honda's Normal Conditions schedules: MK7 petrol p.2814/5893, MK7 diesel p.2920/5959, MK8 petrol p.4417, MK8 diesel p.4213.
+var ITEMS_BY={
+ mk7_petrol:[
+  ["oil","Engine Oil","R",20000,12,"ACEA A1/B1, A3/B3 or A5/B5; viscosity per the Lubricants and Fluids chart.","oil","Engine",0,0,0,0],
+  ["oilf","Engine Oil Filter","R",20000,12,null,"oilf","Engine",0,0,0,0],
+  ["air","Air Cleaner Element","R",40000,0,null,"air","Engine",0,0,0,0],
+  ["spark","Spark Plugs","R",40000,0,"K20A6 / K20Z2 (2.0): every 40,000 km.","spark","Engine",0,1,0,0,["CL7","CM1"]],
+  ["spark","Spark Plugs","R",120000,0,"K24A3 (2.4): iridium, every 120,000 km.","spark","Engine",0,1,0,0,["CL9","CM2"]],
+  ["belt","Drive Belt","I",40000,24,"Cracks/damage and auto-tensioner indicator position.","belt","Engine",0,0,0,0],
+  ["valve","Valve Clearance","I",40000,0,null,"valve","Engine",0,1,0,0],
+  ["idle","Idle Speed","I",120000,72,null,"idle","Engine",0,1,0,0],
+  ["cool","Engine Coolant","R",100000,60,"Honda Type 2. First change at 200,000 km / 10 years.","cool","Fluids",0,0,200000,120],
+  ["bfl","Brake Fluid","R",0,36,"DOT 3 or DOT 4. Procedure: Brake System Bleeding.","bfl","Fluids",0,0,0,0],
+  ["mtf","Manual Trans. Fluid","R",120000,96,"Honda MTF. M/T only.","mtf","Fluids",0,0,0,0],
+  ["atf","Auto Trans. Fluid","R",80000,48,"Honda ATF-Z1. A/T only. First change at 120,000 km / 8 years.","atf","Fluids",0,0,120000,96],
+  ["bf","Front Brakes","I",20000,12,"Pad/disc thickness, calipers, leaks.","bf","Brakes",0,0,0,0],
+  ["br","Rear Brakes","I",20000,12,"Pad/disc thickness, calipers, leaks.","br","Brakes",0,0,0,0],
+  ["park","Parking Brake","I",40000,24,"Honda: at 20,000 km, then every 40,000 km.","park","Brakes",0,0,20000,12],
+  ["fuel","Fuel Filter","R",120000,72,null,"fuel","Fuel",0,0,0,0],
+  ["poll","Dust & Pollen Filter","R",30000,12,null,"poll","Cabin",0,0,0,0,null,[2003,2005]],
+  ["poll","Dust & Pollen Filter","R",40000,24,"20,000 km / 1 year in urban or dusty use.","poll","Cabin",0,0,0,0,null,[2006,2008]]
+ ],
+ mk7_diesel:[
+  ["oil","Engine Oil","R",20000,12,null,"oil","Engine",1,0,0,0],
+  ["oilf","Engine Oil Filter","R",20000,12,null,"oilf","Engine",1,0,0,0],
+  ["air","Air Cleaner Element","R",40000,0,null,"air","Engine",1,0,0,0],
+  ["belt","Drive Belt","I",40000,24,null,"belt","Engine",1,0,0,0],
+  ["cool","Engine Coolant","R",60000,36,"Honda Type 2. First change at 100,000 km / 5 years, then every 60,000 km / 3 years.","cool","Fluids",1,0,100000,60],
+  ["bfl","Brake Fluid","R",0,36,"DOT 3 or DOT 4. Procedure: Brake System Bleeding.","bfl","Fluids",1,0,0,0],
+  ["mtf","Manual Trans. Fluid","R",120000,96,"Honda MTF.","mtf","Fluids",1,0,0,0],
+  ["bf","Front Brakes","I",20000,12,null,"bf","Brakes",1,0,0,0],
+  ["br","Rear Brakes","I",20000,12,null,"br","Brakes",1,0,0,0],
+  ["park","Parking Brake","I",40000,24,"Honda: at 20,000 km, then every 40,000 km.","park","Brakes",1,0,20000,12],
+  ["fueldrain","Fuel Filter \u2014 Drain Water","I",40000,24,"At 20,000 km, then every 40,000 km.","fueldrain","Fuel",1,0,20000,12],
+  ["fuel","Fuel Filter","R",40000,24,null,"fuel","Fuel",1,0,0,0],
+  ["poll","Dust & Pollen Filter","R",30000,12,null,"poll","Cabin",1,0,0,0,null,[2004,2005]],
+  ["poll","Dust & Pollen Filter","R",40000,24,null,"poll","Cabin",1,0,0,0,null,[2006,2008]]
+ ],
+ mk8_petrol:[
+  ["oil","Engine Oil","R",20000,12,"ACEA A1/B1, A3/B3 or A5/B5; viscosity per the Lubricants and Fluids chart.","oil","Engine",0,0,0,0],
+  ["oilf","Engine Oil Filter","R",20000,12,null,"oilf","Engine",0,0,0,0],
+  ["air","Air Cleaner Element","R",60000,0,"30,000 km in dusty conditions.","air","Engine",0,0,0,0],
+  ["spark","Spark Plugs","R",120000,0,"R20A3: NGK IZFR6K11NS / DENSO SKJ20DR-M11S. K24Z3: NGK ILZKR7B11GS.","spark","Engine",0,1,0,0],
+  ["belt","Drive Belt","I",40000,24,null,"belt","Engine",0,0,0,0],
+  ["valve","Valve Clearance","I",100000,0,null,"valve","Engine",0,1,0,0],
+  ["idle","Idle Speed","I",120000,72,null,"idle","Engine",0,1,0,0],
+  ["cool","Engine Coolant","R",100000,60,"Honda Type 2. First change at 200,000 km / 10 years.","cool","Fluids",0,0,200000,120],
+  ["bfl","Brake Fluid","R",0,36,"DOT 3 or DOT 4. Procedure: Brake System Bleeding.","bfl","Fluids",0,0,0,0],
+  ["mtf","Manual Trans. Fluid","R",120000,96,null,"mtf","Fluids",0,0,0,0],
+  ["atf","Auto Trans. Fluid","R",80000,48,"Honda ATF-Z1. First change at 120,000 km / 8 years.","atf","Fluids",0,0,120000,96],
+  ["bf","Front Brakes","I",20000,12,null,"bf","Brakes",0,0,0,0],
+  ["br","Rear Brakes","I",20000,12,null,"br","Brakes",0,0,0,0],
+  ["park","Parking Brake","I",40000,24,"Honda: at 20,000 km, then every 40,000 km.","park","Brakes",0,0,20000,12],
+  ["fuel","Fuel Filter","R",120000,72,null,"fuel","Fuel",0,0,0,0],
+  ["poll","Dust & Pollen Filter","R",40000,24,"20,000 km / 1 year in dusty or polluted areas.","poll","Cabin",0,0,0,0]
+ ],
+ mk8_diesel:[
+  ["oil","Engine Oil","R",20000,12,"ACEA C2 or C3.","oil","Engine",1,0,0,0],
+  ["oilf","Engine Oil Filter","R",20000,12,null,"oilf","Engine",1,0,0,0],
+  ["air","Air Cleaner Element","R",60000,0,null,"air","Engine",1,0,0,0],
+  ["belt","Drive Belt","I",40000,24,null,"belt","Engine",1,0,0,0],
+  ["cool","Engine Coolant","R",60000,36,"First change at 100,000 km / 5 years, then every 60,000 km / 3 years.","cool","Fluids",1,0,100000,60],
+  ["bfl","Brake Fluid","R",0,36,"Procedure: Brake System Bleeding.","bfl","Fluids",1,0,0,0],
+  ["mtf","Manual Trans. Fluid","R",120000,96,null,"mtf","Fluids",1,0,0,0],
+  ["atf","Auto Trans. Fluid","R",80000,48,"Euro 5 / 2010 schedules. First change at 120,000 km / 8 years.","atf","Fluids",1,0,120000,96],
+  ["bf","Front Brakes","I",20000,12,null,"bf","Brakes",1,0,0,0],
+  ["br","Rear Brakes","I",20000,12,null,"br","Brakes",1,0,0,0],
+  ["park","Parking Brake","I",40000,24,"Honda: at 20,000 km, then every 40,000 km.","park","Brakes",1,0,20000,12],
+  ["fuel","Fuel Filter","R",60000,36,"Honda marks 60,000 / 120,000 / 240,000 km.","fuel","Fuel",1,0,0,0],
+  ["poll","Dust & Pollen Filter","R",40000,24,"20,000 km / 1 year in dusty or polluted areas.","poll","Cabin",1,0,0,0]
+ ]
+};
+function itemsFor(code,yr){yr=+yr;var g=(yr<=2008)?'mk7':'mk8';var list=ITEMS_BY[g+'_'+(DIESEL[code]?'diesel':'petrol')]||[];var out=[];
+  for(var i=0;i<list.length;i++){var it=list[i];if(it[12]&&it[12].indexOf(code)<0)continue;if(it[13]&&(yr<it[13][0]||yr>it[13][1]))continue;out.push(it)}
+  return out}
 
 function sKey(){return'esm_svc_'+document.getElementById('inYear').value+'_'+document.getElementById('inCode').value}
 function ldSvc(){try{return JSON.parse(localStorage.getItem(sKey())||'{}')}catch(e){return{}}}
@@ -208,11 +266,11 @@ function calc(){
   if(!rawKm&&rawKm!==0){alert('Enter your current mileage.');return}
   var km=(unit==='mi')?rawKm*1.60934:rawKm;
   svCur();
-  var today=dateStr?new Date(dateStr):new Date();
+  var today=dateStr?pD(dateStr):new Date();
   var code=document.getElementById('inCode').value;
   var isD=!!DIESEL[code];
   var allDone=document.getElementById('chkAll').checked;
-  var globalKm=parseFloat(document.getElementById('inLastKm').value)||0;
+  var _gkRaw=document.getElementById('inLastKm').value;var globalKm=(_gkRaw===''||isNaN(parseFloat(_gkRaw)))?null:parseFloat(_gkRaw);
   var globalDate=document.getElementById('inLastDate').value||'';
   // Persist global last-service values
   var svc=ldSvc();
@@ -223,10 +281,10 @@ function calc(){
   var due=0,soon=0,ok=0;
   var html='';var lastCat='';
 
+  var ITEMS=itemsFor(code,document.getElementById('inYear').value);
   for(var i=0;i<ITEMS.length;i++){
     var it=ITEMS[i];
     var id=it[0],name=it[1],type=it[2],kmI=it[3],moI=it[4],note=it[5],pgKey=it[6],cat=it[7],dOnly=it[8],pOnly=it[9],fKm=it[10],fMo=it[11];
-    if(id==='spark'&&+document.getElementById('inYear').value<=2008)kmI=40000;
     if(pOnly&&isD)continue;
     if(dOnly&&!isD)continue;
 
@@ -245,12 +303,14 @@ function calc(){
     else if(moI>0)intTxt='Every '+moI+' months';
 
     var cls='',stxt='',detail='';
-    var hasKmData=(lastKm>0||lastKm===0);
+    var hasKmData=(lastKm!==null&&lastKm!==undefined&&lastKm!==''&&!isNaN(+lastKm));if(hasKmData)lastKm=+lastKm;
     var hasDateData=(lastDt&&lastDt.length>0);
 
     // Effective intervals (handle first-then-subsequent)
-    var eKm=(fKm>0&&lastKm<fKm)?fKm:kmI;
-    var eMo=(fMo>0&&(!hasDateData||mSince(lastDt,today)<fMo))?fMo:moI;
+    var hasRec=allDone?hasKmData:(rec.km!==undefined&&rec.km!==''&&!isNaN(+rec.km));
+    var eKm=kmI,eMo=moI;
+    if(fKm>0&&!hasRec){if(hasKmData||km<fKm){lastKm=0;hasKmData=true;eKm=fKm}else{hasKmData=false}}
+    if(fMo>0&&!hasDateData)eMo=fMo;
 
     // Mileage calculation
     if(kmI>0&&hasKmData){
@@ -274,7 +334,7 @@ function calc(){
         if(cls!=='st-over'){if(cls==='st-ok')ok--;if(cls==='st-soon')soon--;cls='st-over';stxt='OVERDUE';due++}
         detail='Was due '+nextDtStr+' ('+Math.abs(Math.round(remMo))+' mo ago)';
       }else if(remMo<=2){
-        if(cls==='st-ok'){ok--;cls='st-soon';stxt='Due soon';soon++}
+        if(cls==='st-ok'){ok--;cls='st-soon';stxt='Due soon';soon++}else if(cls===''){cls='st-soon';stxt='Due soon';soon++}
         if(kmI===0)detail='Due '+nextDtStr+' ('+Math.round(remMo)+' mo)';
       }else{
         if(kmI===0){cls='st-ok';stxt='OK';detail='Due '+nextDtStr+' ('+Math.round(remMo)+' mo)';ok++}
@@ -314,8 +374,10 @@ function uSvc(id,field,val){var d=ldSvc();if(!d[id])d[id]={};
   if(field==='km'){var f=parseFloat(val);if(isNaN(f)){delete d[id].km}else{d[id].km=f}}
   else d[id].date=val;svSvc(d);calc()}
 function fK(km,u){if(u==='mi')return Math.round(km/1.60934).toLocaleString()+' mi';return Math.round(km).toLocaleString()+' km'}
-function mSince(ds,now){var d=new Date(ds);return(now.getFullYear()-d.getFullYear())*12+(now.getMonth()-d.getMonth())}
-function mFromDate(ds,mo){var d=new Date(ds);d.setMonth(d.getMonth()+mo);return d.toLocaleDateString('en-GB',{month:'short',year:'numeric'})}
+function pD(s){var p=String(s||'').split('-');if(p.length===3&&p[0].length===4)return new Date(+p[0],+p[1]-1,+p[2]||1);return new Date(s)}
+function mSince(ds,now){var d=pD(ds);return(now.getFullYear()-d.getFullYear())*12+(now.getMonth()-d.getMonth())}
+function mFromDate(ds,mo){var d=pD(ds);d.setMonth(d.getMonth()+mo);return d.toLocaleDateString('en-GB',{month:'short',year:'numeric'})}
+function todayISO(){var d=new Date();return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2)}
 
 function ldCur(){try{var c=JSON.parse(localStorage.getItem('esm_svc_cur')||'{}');return (c&&typeof c==='object')?c:{}}catch(e){return{}}}
 function svCur(){try{var c=ldCur();
@@ -334,7 +396,7 @@ function restoreGlobal(){var d=ldSvc();var g=d._global||{};
   document.getElementById('inLastDate').value=g.date||'';
   if(g.unit==='mi'||g.unit==='km')document.getElementById('inUnit').value=g.unit}
 
-document.getElementById('inDate').value=new Date().toISOString().split('T')[0];
+document.getElementById('inDate').value=todayISO();
 onYearChange();
 restoreGlobal();
 restoreCur();
@@ -348,7 +410,7 @@ document.getElementById('inCode').addEventListener('change',restoreGlobal);
 (function(){try{
   function T(d){document.documentElement.classList.toggle('darkmode',!!d)}
   window.addEventListener('message',function(ev){var d=ev.data;if(d&&d.esm==='theme')T(d.dark)});
-  try{parent.postMessage({esm:'themehello'},'*')}catch(e){}
+  try{parent.postMessage({esm:'themehello',href:location.href},'*')}catch(e){}
 }catch(e){}})();
 </script>
 </body>

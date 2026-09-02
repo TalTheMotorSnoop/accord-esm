@@ -5,7 +5,7 @@
 <meta name="robots" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Honda Accord ESM — Welcome</title>
-<link href="./fonts/fonts.css?v=2.0.0" rel="stylesheet">
+<link href="./fonts/fonts.css?v=2.1.0" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Outfit',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;background:#fff;color:#2a2a2a;line-height:1.7;padding:40px 50px 60px;max-width:820px;margin:0 auto}
@@ -95,13 +95,13 @@ try{
     if(d.job&&d.job.id){chip('\uD83D\uDD27 Job: '+d.job.name,function(){send({esm:'jobgo',id:d.job.id})});n++}
     if(d.sess&&d.sess.kw){chip('\uD83D\uDD0D Search again: \u201C'+d.sess.kw+'\u201D',function(){send({esm:'guidego',kw:d.sess.kw})});n++}
     if(n>0)box.style.display='block'});
-  send({esm:'welcomehello'});
+  send({esm:'welcomehello',href:location.href});
 }catch(e){}
 })();
 </script>
 <h2>How to Use This Manual</h2>
 <ol class="steps">
-  <li><strong>Pick your car</strong> — use the <em>Year</em> and <em>Code</em> dropdowns on the left. The code is your specific model (e.g. CL7 = 2.0 i-VTEC Saloon, CM2 = 2.2 i-CDTi Tourer). If you're not sure, it's on your V5/logbook next to "Type".</li>
+  <li><strong>Pick your car</strong> — use the <em>Year</em> and <em>Code</em> dropdowns on the left. The code is your specific model (e.g. CL7 = 2.0 i-VTEC Saloon, CN2 = 2.2 i-CTDi Tourer). If you're not sure, it's on your V5/logbook next to "Type".</li>
   <li><strong>Choose Shop Manual or Body Repair</strong> — Shop Manual covers everything mechanical and electrical (engine, gearbox, brakes, suspension, wiring, etc). Body Repair covers panel removal, structural dimensions, and bodywork procedures.</li>
   <li><strong>Browse or search</strong> — expand the system/component tree to find what you need, or type a keyword like "timing chain", "brake pad", or "alternator" into the search box and press Enter. Trouble codes work too — type a code like P0301 straight into the search box.</li>
   <li><strong>Click a result</strong> — the full procedure loads in this area, with step-by-step instructions, diagrams, torque specs, and wiring schematics.</li>
@@ -169,7 +169,7 @@ try{
 </details>
 
 <h2>Models Covered</h2>
-<p><strong>7th Generation (Mk7), 2003–2008:</strong> CL7 (2.0 i-VTEC Saloon), CL9 (2.4 i-VTEC Saloon), CM1 (2.0 i-VTEC Tourer), CM2 (2.2 i-CDTi Tourer), CN1 (2.0 i-VTEC Tourer, facelift), CN2 (2.2 i-CDTi Tourer, facelift).</p>
+<p><strong>7th Generation (Mk7), 2003–2008:</strong> CL7 (2.0 i-VTEC Saloon), CL9 (2.4 i-VTEC Saloon), CM1 (2.0 i-VTEC Tourer), CM2 (2.4 i-VTEC Tourer), CN1 (2.2 i-CTDi Saloon), CN2 (2.2 i-CTDi Tourer).</p>
 <p><strong>8th Generation (Mk8), 2009–2010:</strong> CU1 (2.0 i-VTEC Saloon), CU2 (2.4 i-VTEC Saloon), CU3 (2.2 i-DTEC Saloon), CW1 (2.0 i-VTEC Tourer), CW2 (2.4 i-VTEC Tourer), CW3 (2.2 i-DTEC Tourer).</p>
 
 <p style="font-size:12px;color:#999;line-height:1.7;margin-top:30px"><strong>Copyright:</strong> All technical content, diagrams, schematics, specifications, and procedures are the intellectual property of Honda Motor Co., Ltd. This project only modernises the interface for use in current browsers — no Honda content has been altered, added, or removed. Honda, Accord, i-VTEC, i-DTEC, VTEC, and all associated trademarks are the property of Honda Motor Co., Ltd.</p>
