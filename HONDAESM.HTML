@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#191512">
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="apple-touch-icon" href="./icons/icon-192.png">
-<link href="./fonts/fonts.css?v=2.1.0" rel="stylesheet">
+<link href="./fonts/fonts.css?v=2.1.1" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html,body{height:100%;overflow:hidden}
@@ -1119,7 +1119,7 @@ var GEN_LABELS={mk7:"MK7 \u00b7 7TH GEN",mk8:"MK8 \u00b7 8TH GEN"};
 var curGen="",cdInfo=[],tDT=[],curMT="SM",curTD=[],curSD=[];
 var curKey="",curSct="",curSc="",curSys="",curComp="",curSitq="",curKW="",curScopeName="";
 var selLbl=null,_sieScript=null,_treeScript=null,_listScript=null;
-var ESM_VER='2.1.0';
+var ESM_VER='2.1.1';
 var _searchGen=0;var _treeGen=0;
 var _navPending=false,_listDone=-1,_cidxFail=false,_tourSbWas=null,_swapBusy=false,_fsMem=null;
 var _storageOK=(function(){try{localStorage.setItem('esm_probe','1');localStorage.removeItem('esm_probe');return true}catch(e){return false}})();
@@ -1947,8 +1947,8 @@ function glTog(){var v=document.getElementById('chkGL').checked;
     f1.contentWindow.postMessage(_gm,'*');f2.contentWindow.postMessage(_gm,'*')}catch(eG){}}
 
 /* ═ STARTUP DISCLAIMER (V2) ═ */
-var _discOpen=false;
-function showDisclaimer(){if(_discOpen)return;_discOpen=true;
+var _discOpen=false,_discShown=false;
+function showDisclaimer(){if(_discOpen||_discShown)return;_discShown=true;_discOpen=true;
   var ov=document.createElement('div');ov.id='discOver';
   ov.innerHTML='<div id="discCard"><div id="discTitle">Before you begin</div>'+
   '<p><b>Disclaimer:</b> This manual is provided as-is for informational purposes only. The author and contributors accept no responsibility or liability for any damage to vehicles, property, or persons arising from the use of the information contained within. Vehicle repair carries inherent risks \u2014 if you are not confident in a procedure, consult a qualified mechanic. Always use appropriate safety equipment, support vehicles on rated stands, and follow all safety precautions described in the procedures.</p>'+
@@ -1994,7 +1994,7 @@ function tourTarget(st){if(!st.s)return null;
   return out.length?out:null}
 function tourMaybe(){if(!_storageOK)return;try{if(localStorage.getItem('esm_tour'))return}catch(e){}
   if(location.hash)return;
-  setTimeout(function(){if(!_tourOn)startTour()},900)}
+  var tries=0;(function tick(){if(_tourOn)return;if(_discOpen&&tries++<40){setTimeout(tick,500);return}startTour()})();}
 function startTour(){if(_tourOn||_discOpen)return;_tourOn=true;_tourI=0;
   try{if(document.activeElement&&document.activeElement.blur)document.activeElement.blur()}catch(eB){}
   try{var sb9=document.getElementById('sidebar');_tourSbWas=sb9.classList.contains('collapsed');sb9.classList.remove('collapsed')}catch(eS){}
