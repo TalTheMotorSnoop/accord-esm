@@ -30,6 +30,12 @@ Hosting: GitHub Pages (repo `TalTheMotorSnoop/accord-esm`, branch `main`, root) 
 - Storage keys (`esm_*` in localStorage) are user data now. Renaming one requires a migration, not a fresh start.
 - Rollback = push the previous launcher; the service worker is network-first and does not pin a shell.
 
+## Usage stats (v2.2+)
+- The launcher posts anonymous events to `/api/t` **only** when served from `accord.talonbabb.com` (never on file:// or localhost). A Cloudflare Worker (`Desktop/Accord ESM Telemetry`, its own folder — NOT in this repo) answers that route and writes to the Workers Analytics Engine dataset `esm_events`. See its README for deploy + reports.
+- The Worker is independent of this site: deploying the launcher never requires redeploying the Worker and vice versa. If the Worker is missing, beacons 404 harmlessly.
+- Quick check after either deploy: `https://accord.talonbabb.com/api/health` → `ok`; open the site, then `node report.js --days 1` in the Worker folder.
+- Opt-out is the sidebar checkbox (localStorage `esm_tstats=off`). Never add note text, job cards, bookmarks or pins to an event — the disclaimer and Welcome page promise it.
+
 ## Rebuild scripts (only if Honda content or indexes change; they live in the build scratchpad, not the repo)
 - Content index: `build_cidx.js` → regenerates `mk7/en/treedata/CIDX.js` and `mk8/...`
 - mk8 bridge tags: `build_bridge_mk8.js`; mk7 figure popups: `bridge_mk7_popups.js`

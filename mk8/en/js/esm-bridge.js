@@ -6,6 +6,7 @@ if(window.__esmBridge)return;window.__esmBridge=1;
 var PARENT=null;try{if(window.parent&&window.parent!==window)PARENT=window.parent}catch(e){}
 var OPENER=null;try{if(window.opener)OPENER=window.opener}catch(e){}
 function send(m){try{if(PARENT)PARENT.postMessage(m,'*');else if(OPENER)OPENER.postMessage(m,'*')}catch(e){}}
+window.addEventListener('error',function(ev){try{send({esm:'err',m:String((ev&&ev.message)||'').slice(0,200),src:String((ev&&ev.filename)||'').replace(/^.*\//,'').slice(0,60),ln:(ev&&ev.lineno)|0})}catch(e){}});
 window.__esmSend=send;
 function pageTitle(){try{var el=document.querySelector('.top_title');
   if(el){var t=el.textContent.replace(/\s+/g,' ').trim();if(t)return t}}catch(e){}
