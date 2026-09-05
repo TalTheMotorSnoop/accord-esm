@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#191512">
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="apple-touch-icon" href="./icons/icon-192.png">
-<link href="./fonts/fonts.css?v=2.2.0" rel="stylesheet">
+<link href="./fonts/fonts.css?v=2.2.1" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html,body{height:100%;overflow:hidden}
@@ -1120,7 +1120,7 @@ var GEN_LABELS={mk7:"MK7 \u00b7 7TH GEN",mk8:"MK8 \u00b7 8TH GEN"};
 var curGen="",cdInfo=[],tDT=[],curMT="SM",curTD=[],curSD=[];
 var curKey="",curSct="",curSc="",curSys="",curComp="",curSitq="",curKW="",curScopeName="";
 var selLbl=null,_sieScript=null,_treeScript=null,_listScript=null;
-var ESM_VER='2.2.0';
+var ESM_VER='2.2.1';
 /* ═ ANONYMOUS USAGE STATS (v2.2, hosted site only) ═
    Small batches of events go to /api/t (a Cloudflare Worker on this domain): pages opened, searches (query +
    result counts), features used, errors, screen size. NEVER note text, job cards, bookmarks or pins.
@@ -1133,10 +1133,13 @@ function _tOn(){if(!_tHosted())return false;try{if(localStorage.getItem('esm_tst
 function _tURL(){try{if(window.ESM_T_URL)return String(window.ESM_T_URL);var d=localStorage.getItem('esm_tdbg');if(d&&/^https?:/.test(d))return d}catch(e){}return '/api/t'}
 function _t(e,p){if(!_tOn())return;var o=p||{};o.e=e;o.at=Math.round((Date.now()-_tT0)/1000);_tQ.push(o);
   if(_tQ.length>=12)_tFlush();else if(!_tTimer)_tTimer=setTimeout(_tFlush,15000)}
+var _tKA=(function(){try{return typeof fetch==='function'&&('keepalive' in new Request(location.href))}catch(e){return false}})();
+function _tBeacon(u,body){try{return !!(navigator.sendBeacon&&navigator.sendBeacon(u,new Blob([body],{type:'text/plain'})))}catch(e){return false}}
 function _tFlush(){clearTimeout(_tTimer);_tTimer=null;if(!_tQ.length)return;
-  var body=JSON.stringify({v:ESM_VER,s:_tSess,d:Math.round((Date.now()-_tT0)/1000),ev:_tQ.splice(0,50)}),ok=false,u=_tURL();
-  try{if(navigator.sendBeacon)ok=navigator.sendBeacon(u,new Blob([body],{type:'text/plain'}))}catch(e){}
-  if(!ok){try{fetch(u,{method:'POST',body:body,keepalive:true,headers:{'Content-Type':'text/plain'}}).catch(function(){})}catch(e2){}}
+  var body=JSON.stringify({v:ESM_VER,s:_tSess,d:Math.round((Date.now()-_tT0)/1000),ev:_tQ.splice(0,50)}),u=_tURL(),sent=false;
+  /* fetch first (v2.2.1): the beacon API is filed as "ping tracking" and blocked outright by ClearURLs, uBlock Origin and similar; a plain same-origin fetch is not. keepalive lets it finish during unload. */
+  if(_tKA){try{fetch(u,{method:'POST',body:body,keepalive:true,headers:{'Content-Type':'text/plain'}}).catch(function(){_tBeacon(u,body)});sent=true}catch(e){}}
+  if(!sent)_tBeacon(u,body);
   if(_tQ.length)_tTimer=setTimeout(_tFlush,1000)}
 function _tPageId(u){var m=/\/html\/([0-9]{15})\.html/.exec(u||'');return m?m[1]:''}
 function _tPage(who,rel,title){var key=rel.split(/[?#]/)[0];if(who===1){if(_tPg[1]===key)return;_tPg[1]=key}

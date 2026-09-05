@@ -35,6 +35,8 @@ Hosting: GitHub Pages (repo `TalTheMotorSnoop/accord-esm`, branch `main`, root) 
 - The Worker is independent of this site: deploying the launcher never requires redeploying the Worker and vice versa. If the Worker is missing, beacons 404 harmlessly.
 - Quick check after either deploy: `https://accord.talonbabb.com/api/health` → `ok`; open the site, then `node report.js --days 1` in the Worker folder.
 - Opt-out is the sidebar checkbox (localStorage `esm_tstats=off`). Never add note text, job cards, bookmarks or pins to an event — the disclaimer and Welcome page promise it.
+- Batches leave the browser with `fetch(..., {keepalive:true})` first and the beacon API only as a fallback (v2.2.1). Keep it that way: ClearURLs, uBlock Origin and similar block beacon-API requests outright as "ping tracking", which made every such visitor invisible in v2.2.0.
+- The data store lags a minute or two behind the beacon; do not judge a deploy by an immediate dashboard refresh.
 
 ## Rebuild scripts (only if Honda content or indexes change; they live in the build scratchpad, not the repo)
 - Content index: `build_cidx.js` → regenerates `mk7/en/treedata/CIDX.js` and `mk8/...`
