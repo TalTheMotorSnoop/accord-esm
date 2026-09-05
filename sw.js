@@ -1,6 +1,6 @@
 /* Accord ESM service worker — keeps the app shell installable and resilient, never caches the 112k Honda pages.
    Bump SW_VER together with ESM_VER in HONDAESM.HTML on every deploy (see DEPLOY.md). */
-var SW_VER='esm-2.2.1';
+var SW_VER='esm-2.2.2';
 var SHELL=/\/(HONDAESM\.HTML|welcome\.html|service\.html|trims\.html|guides\.html|index\.html|manifest\.webmanifest)$|\/$/;
 var STATIC=/\/(fonts|icons)\//;
 var OFFLINE='<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Offline</title><body style="font-family:sans-serif;background:#191512;color:#d8c9a8;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;text-align:center;padding:24px"><div><b style="color:#e8b04a;font-size:20px">Accord ESM is offline</b><br><br>The manual needs a connection the first time each page is opened.<br>Your notes, jobs and bookmarks are still saved in this browser.<br><br><a href="./HONDAESM.HTML" style="color:#e8b04a">Try again</a></div></body>';
