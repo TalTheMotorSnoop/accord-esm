@@ -15,9 +15,12 @@ var OPENER=null;try{if(window.opener)OPENER=window.opener}catch(e){}
 function send(m){try{if(PARENT)PARENT.postMessage(m,'*');else if(OPENER)OPENER.postMessage(m,'*')}catch(e){}}
 window.addEventListener('error',function(ev){try{send({esm:'err',m:String((ev&&ev.message)||'').slice(0,200),src:String((ev&&ev.filename)||'').replace(/^.*\//,'').slice(0,60),ln:(ev&&ev.lineno)|0})}catch(e){}});
 window.__esmSend=send;
-function pageTitle(){try{var el=document.querySelector('.top_title');
+function pageTitle(){try{var el=document.querySelector('.top_title')||document.querySelector('.table_title');
   if(el){var t=el.textContent.replace(/\s+/g,' ').trim();if(t)return t}}catch(e){}
-  return document.title||''}
+  /* mk8 pages carry Honda's internal ID as their <title> — "( TL1AEJAA14100022201NAAT00 )", or "000( … )" once the year-type prefix is added. Not a title: let the launcher keep the title-list name. */
+  var dt=(document.title||'').replace(/\s+/g,' ').trim();
+  if(/^\d*\s*\(\s*[A-Z0-9]{12,}\s*\)$/.test(dt))return '';
+  return dt}
 function hello(){send({esm:'hello',title:pageTitle(),href:location.href,zoomPage:(typeof window.jsResizeImage==='function')})}
 /* ---- dark mode ---- */
 function setDark(css){try{var ex=document.getElementById('esm-dark');if(ex&&ex.parentNode)ex.parentNode.removeChild(ex);
@@ -104,8 +107,12 @@ function hlGo(i){if(!hlEls.length)return;
   send({esm:'hlpos',i:hlIdx+1,n:hlEls.length})}
 function hlOff(){try{for(var i=0;i<hlEls.length;i++){var sp=hlEls[i];if(sp.parentNode)sp.parentNode.replaceChild(document.createTextNode(sp.textContent),sp)}}catch(e){}hlEls=[];hlIdx=0;hlSig=''}
 /* ---- zoom-window wheel controls ---- */
-function enableWheelZoom(){if(window.__esmWheel||document.getElementById('esm-zoomx'))return;window.__esmWheel=1;
+function enableWheelZoom(){if(window.__esmWheel||document.getElementById('esm-zoomx'))return;
   if(typeof window.jsResizeImage!=='function')return;
+  /* only figure pop-ups (ZOOM and SEA pages) may take over the wheel — in a framed procedure page it would kill scrolling */
+  if(PARENT&&!/\/(ZOOM|SEA)[^\/]*\.html/i.test(location.pathname))return;
+  if(!document.images.length)return;
+  window.__esmWheel=1;
   var rate=1;
   try{var st=document.createElement('style');st.textContent='#esmZoomHint{position:fixed;right:10px;bottom:10px;z-index:999;background:rgba(20,24,32,.85);color:#fff;font:11px sans-serif;padding:5px 10px;border-radius:12px}';(document.head||document.documentElement).appendChild(st);
     if(!document.getElementById('esmZoomHint')){var hint=document.createElement('div');hint.id='esmZoomHint';hint.textContent='Scroll to zoom · drag to pan · double-click to reset';document.body.appendChild(hint);

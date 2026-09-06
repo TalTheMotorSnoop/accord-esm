@@ -19,7 +19,7 @@ Hosting: GitHub Pages (repo `TalTheMotorSnoop/accord-esm`, branch `main`, root) 
 
 ## Cloudflare settings that must be ON / OFF
 - **ON**: *Always Use HTTPS* (SSL/TLS → Edge Certificates). Without it plain `http://` serves the full app as a *separate* localStorage silo and visitors can lose their notes when they arrive over https.
-- **ON**: a Response Header Transform rule adding `X-Frame-Options: DENY` (or `Content-Security-Policy: frame-ancestors 'none'`) and `X-Robots-Tag: noindex, nofollow` to every response. The first stops third-party pages embedding the launcher; the second is the only noindex mechanism that works while `robots.txt` blocks crawling.
+- **ON**: a Response Header Transform rule adding `X-Frame-Options: SAMEORIGIN` (or `Content-Security-Policy: frame-ancestors 'self'`) — never `DENY`, which also blocks the launcher's own iframes and blanks the whole site and `X-Robots-Tag: noindex, nofollow` to every response. The first stops third-party pages embedding the launcher; the second is the only noindex mechanism that works while `robots.txt` blocks crawling.
 - **Recommended**: a Cache Rule for `/mk7/*` and `/mk8/*` *.html* — Cache Everything, long edge TTL (Honda pages are immutable). GitHub's origin occasionally answers 503 "Unicorn!"; edge-cached pages never hit it.
 - **NEVER** tick GitHub Pages' "Enforce HTTPS" (Flexible SSL → infinite redirect loop).
 - **Do not enable** Rocket Loader, Auto Minify, Email Obfuscation, Mirage/Polish, or Bot Fight Mode. The app relies on script order and loads content in iframes; challenge pages cannot render inside an iframe.
