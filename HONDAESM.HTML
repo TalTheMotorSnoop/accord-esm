@@ -648,8 +648,9 @@ body.aurora ::-webkit-scrollbar{width:6px}body.aurora ::-webkit-scrollbar-track{
 #sidebar.collapsed{width:0!important;min-width:0!important;opacity:0;pointer-events:none}
 #sideScroll{flex:1;overflow-y:auto}
 #contentArea{flex:1;display:flex;flex-direction:column;min-width:0;position:relative}
-#contentBar{display:flex;align-items:center;justify-content:space-between}
-#cTitle{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1}
+/* v2.2.4: the toolbar wraps onto a second row when its two button groups plus 120px of title no longer fit (sidebar open on a tablet, phone landscape, or a laptop with an active job card) — before, the groups slid over each other */
+#contentBar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px}
+#cTitle{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1 1 120px;min-width:0}
 #frameWrap{flex:1;display:flex;min-width:0;min-height:0}
 #frameWrap iframe{flex:1;border:none;width:100%;height:100%;min-width:0}
 #splitDivider{width:5px;background:rgba(128,128,128,0.35);flex-shrink:0}
@@ -659,6 +660,7 @@ body.aurora ::-webkit-scrollbar{width:6px}body.aurora ::-webkit-scrollbar-track{
 .srch-row{display:flex;gap:5px}
 .srch-opts{display:flex;align-items:center;margin-top:6px}
 .cb-btns{display:flex;gap:4px;flex-shrink:1;min-width:0;max-width:100%;align-items:center;overflow-x:auto;overflow-y:hidden;scrollbar-width:none}
+.cb-btns .cb-btn,#btnJobAdd{white-space:nowrap;flex-shrink:0} /* v2.2.4: a squeezed group scrolls sideways instead of wrapping button labels onto two lines */
 .cb-btns::-webkit-scrollbar{display:none}
 .pnl-x{float:right;cursor:pointer;padding:0 6px;font-size:18px;line-height:1;opacity:.7}.pnl-x:hover{opacity:1}
 #esmToast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:10600;background:#1c2230;color:#fff;font:13px 'Outfit',sans-serif;padding:10px 16px;border-radius:10px;box-shadow:0 6px 24px rgba(0,0,0,.4);display:none;max-width:90vw;text-align:center}
@@ -845,7 +847,7 @@ mark.hl{background:transparent;color:inherit;font-weight:700;text-decoration:und
 .aurora #pinPanel{background:#060818;border:1px solid #151830;border-radius:3px}
 
 /* ══════════ ENHANCED MOBILE ══════════ */
-@media(max-width:1000px){.h-sub{display:none!important}}
+@media(max-width:1250px){.h-sub{display:none!important}} /* v2.2.4: was 1000px — at 1001-1240px the subtitle pushed the gen badge under the centred theme picker */
 @media(max-width:800px){
   #sidebar{width:100vw!important;min-width:100vw!important;position:absolute;z-index:10;left:0;top:0;height:100%;transition:transform .3s ease}
   #sidebar.collapsed{transform:translateX(-100%);width:100vw!important;min-width:100vw!important;opacity:1;pointer-events:auto}
@@ -864,7 +866,6 @@ mark.hl{background:transparent;color:inherit;font-weight:700;text-decoration:und
   .srch-in{font-size:14px!important;padding:10px 14px!important}
   .srch-btn{font-size:13px!important;padding:10px 18px!important}
   .mt-btn{padding:12px 8px!important}
-  #contentBar{flex-wrap:wrap;gap:4px}
   #cTitle{min-width:0;font-size:11px!important}
   .cb-btn{padding:6px 10px!important}
   #toggleSB{width:40px!important;height:40px!important;font-size:20px!important}
@@ -874,7 +875,7 @@ mark.hl{background:transparent;color:inherit;font-weight:700;text-decoration:und
   .h-mode-center{left:auto!important;right:8px!important;transform:translateY(-50%)!important}
   .cb-btns{max-width:100%;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none}
   .cb-btns::-webkit-scrollbar{display:none}
-  #notePanel,#jobPanel,#unitPanel,#wirePanel{max-width:calc(100vw - 16px)!important;top:84px!important}
+  #notePanel,#jobPanel,#unitPanel,#wirePanel{max-width:calc(100vw - 16px)!important}
   #header .h-top{padding-right:108px!important}
   #sidebar{z-index:30!important}
   #app.split #hlBar{right:16px;bottom:calc(50% + 20px)}
@@ -1033,7 +1034,7 @@ body.fable ::-webkit-scrollbar-thumb{background:#3e3020;border-radius:3px}
     <hr class="sep-line">
     <div class="sec"><div class="sec-label"><span class="sec-label-txt">System / Component</span></div><div class="srch-row" style="margin-bottom:4px;align-items:center"><input type="text" id="txtTree" class="srch-in" placeholder="Filter the tree..." autocomplete="off" onkeyup="treeFilterKey(event)"><span class="clr-link" onclick="treeCollapseAll()" title="Collapse all branches and clear the filter" style="margin-left:6px;flex-shrink:0">collapse</span></div><div id="treePanel"><div id="treeContent" class="no-res">Select a model to load</div></div></div>
     <hr class="sep-line">
-    <div class="sec"><div class="sec-label"><span class="sec-label-txt">Search</span></div><div class="srch-row" style="position:relative"><input type="text" id="txtKW" class="srch-in" placeholder="Keywords or a DTC code..." autocomplete="off" onfocus="loadCIDX()" onblur="sugBlur()" onkeyup="kwKey(event)"><button class="srch-btn" onclick="sugHide();doSearch()">Search</button><div id="sugBox" style="display:none"></div></div><div class="srch-opts"><span id="scopeChip" style="display:none" title="Search is limited to this system \u2014 click to remove the filter" onclick="clearScope()">&#128193; <span id="scopeName"></span><span class="scope-x">&#10005;</span></span><span class="clr-link" onclick="clearSearch()">Clear results</span></div></div>
+    <div class="sec"><div class="sec-label"><span class="sec-label-txt">Search</span></div><div class="srch-row" style="position:relative"><input type="text" id="txtKW" class="srch-in" placeholder="Keywords or a DTC code..." autocomplete="off" onfocus="loadCIDX()" onblur="sugBlur()" onkeyup="kwKey(event)"><button class="srch-btn" onclick="sugSubmit();doSearch()">Search</button><div id="sugBox" style="display:none"></div></div><div class="srch-opts"><span id="scopeChip" style="display:none" title="Search is limited to this system \u2014 click to remove the filter" onclick="clearScope()">&#128193; <span id="scopeName"></span><span class="scope-x">&#10005;</span></span><span class="clr-link" onclick="clearSearch()">Clear results</span></div></div>
     <div class="sec" style="display:flex;flex-direction:column;flex:1;min-height:100px"><div class="sec-label"><span class="sec-label-txt">Results</span></div><div id="pinPanel" style="display:none"><div class="res-hdr">&#128204; PINNED</div><div id="pinList"></div></div><div id="searchPanel"><div id="searchResults"></div></div></div>
     <hr class="sep-line">
     <!-- JOB CARDS -->
@@ -1524,6 +1525,11 @@ function resTitle(it){var t=it.Title||"";if(it.ScSys&&it.ScSys.length>0)t+=" ("+
 function resRow(it,b,yc){var t=resTitle(it);
   var cf=it.contentsNum,u=b+"/html/"+cf+".html?"+yc,ri=_res.length;_res.push({cf:cf,yc:yc,t:t,url:u,sym:it.Symbol});
   return '<div class="rr'+(u===curResUrl?' cur':'')+'" id="rr'+ri+'" onclick="openRes('+ri+')">'+'<img src="'+b+'/img/'+it.Symbol+'.PNG">'+'<a href="javascript:void(0)">'+hlT(escH(t),curKW)+'</a>'+'<span class="rr-job" onclick="jobAddRes('+ri+');event.stopPropagation()" title="Add to active job">&#65291;</span>'+'<span class="rr-alt" onclick="openRes2('+ri+');event.stopPropagation()" title="Open in right pane">&#8677;</span>'+'<span class="rr-pin'+(isPinned(u)?' on':'')+'" onclick="togPinRes('+ri+');event.stopPropagation()" title="Pin this result">&#128204;</span></div>'}
+/* v2.2.4: the note / units / wires / job panels sit at a fixed top, but the toolbar is one row or two depending on width and in split view the right pane's title bar sits under it — so place them just below whatever is there. */
+function _placePanels(){try{var ca=document.getElementById('contentArea'),cb=document.getElementById('contentBar');if(!ca||!cb)return;
+  var y0=ca.getBoundingClientRect().top,top=cb.getBoundingClientRect().bottom-y0+8;
+  var pr=document.getElementById('paneRBar');if(_split&&pr&&window.innerWidth>800&&pr.getClientRects().length)top=Math.max(top,pr.getBoundingClientRect().bottom-y0+8);
+  var ids=['jobPanel','notePanel','unitPanel','wirePanel'];for(var i=0;i<ids.length;i++){var p=document.getElementById(ids[i]);if(p)p.style.top=Math.round(top)+'px'}}catch(e){}}
 /* ═ JOB CARDS (V2) ═ */
 var _jobEd=null,_jpStat='active',_jpDel=false;
 function getJobs(){try{var j=JSON.parse(localStorage.getItem('esm_jobs')||'{}');if(!j||typeof j!=='object')j={};
@@ -1575,7 +1581,7 @@ function openJobPanel(id){_jobEd=id||null;_jpDel=false;
   var cl=document.getElementById('jpCloneBtn');if(cl)cl.style.display=c?'':'none';
   document.getElementById('jpDeact').style.display=(c&&j.activeId===c.id)?'':'none';
   /* phones: the sidebar is a full-screen overlay above the content area, so a panel opened from it would sit underneath (v2.2.4) */
-  _sbAutoClose();
+  _sbAutoClose();_placePanels();
   p.style.display='block';document.getElementById('jpName').focus()}
 function closeJobPanel(){document.getElementById('jobPanel').style.display='none';_jobEd=null;_jpDel=false}
 function jpSave(){var name=document.getElementById('jpName').value.trim();
@@ -1650,7 +1656,7 @@ var _split=false;
 function togSplit(){_split=!_split;if(_split)_t('feat',{k:'split'});
   var f2=document.getElementById('contentFrame2'),dv=document.getElementById('splitDivider'),btn=document.getElementById('btnSplit');
   document.getElementById('app').classList.toggle('split',_split);
-  var pr=document.getElementById('paneR');if(pr)pr.style.display=_split?'':'none';dv.style.display=_split?'':'none';
+  var pr=document.getElementById('paneR');if(pr)pr.style.display=_split?'':'none';dv.style.display=_split?'':'none';_placePanels();
   if(_split){var prt0=document.getElementById('paneRTitle');if(prt0&&!f2.src)prt0.textContent='Right pane'}
   if(btn)btn.classList.toggle('bk-active',_split);
   if(_split&&!f2.src)f2.srcdoc='<body style="font-family:sans-serif;color:#889;background:#f2f2f4;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;text-align:center;padding:20px"><div><b>Right pane</b><br><br>Click the \u21E5 icon on any search result or pinned item to open it here.</div></body>';
@@ -1846,7 +1852,7 @@ function initNotes(){
   p.innerHTML='<div class="wire-title">Page notes</div><div id="noteSecL"><div class="note-sub" id="noteLblL">This page</div><div class="note-hint" id="noteHintL" style="display:none"></div><textarea id="noteTA" placeholder="e.g. Torque verified at 22 Nm. Facelift models use a 12mm head here."></textarea></div><div id="noteSecR" style="display:none"><div class="note-sub" id="noteLblR">Right page</div><div class="note-hint" id="noteHintR" style="display:none"></div><textarea id="noteTA2"></textarea></div><div class="wire-note" style="margin-top:6px">Clear a box and Save to delete that note.</div><div style="display:flex;gap:6px;margin-top:8px;justify-content:flex-end"><button class="srch-btn" onclick="document.getElementById(\'notePanel\').style.display=\'none\';_noteEd=null">Close</button><button class="srch-btn" onclick="saveNote()">Save</button></div>';
   ca.appendChild(p)}
 var _noteEd=null;
-function togNote(){var k1=noteKey(),k2=noteKey2();if(!k1&&!k2)return;if(k2&&k2===k1)k2='';
+function togNote(){var k1=noteKey(),k2=noteKey2();if(!k1&&!k2)return;_placePanels();if(k2&&k2===k1)k2='';
   var p=document.getElementById('notePanel');
   if(p.style.display==='block'){p.style.display='none';_noteEd=null;return}
   var keep=!!(_noteEd&&_noteEd.k1===k1&&_noteEd.k2===k2);
@@ -2181,12 +2187,14 @@ function applyTreeFilter(){var el=document.getElementById('txtTree');if(!el)retu
   document.getElementById('treeContent').innerHTML=h}
 
 /* ═ SMART SEARCH SUGGESTIONS (V2) ═ */
-var _sugIdx=-1,_sugItems=[];
+var _sugIdx=-1,_sugItems=[],_sugSub=null;
+/* v2.2.4: remember the text that was searched — the 1.4 MB suggestion index arrives after the first search on a slow link and its load callback must not reopen the list over the results */
+function sugSubmit(){_sugSub=document.getElementById('txtKW').value;sugHide()}
 function sugOpen(){var b=document.getElementById('sugBox');return !!(b&&b.style.display==='block')}
 function sugHide(){var b=document.getElementById('sugBox');if(b)b.style.display='none';_sugIdx=-1;_sugItems=[]}
 function sugBlur(){setTimeout(sugHide,180)}
 function kwKey(e){var k=e.keyCode;
-  if(k===13){if(_sugIdx>=0&&sugOpen()){sugPick(_sugIdx)}else{sugHide();onKWEnter()}return}
+  if(k===13){if(_sugIdx>=0&&sugOpen()){sugPick(_sugIdx)}else{sugSubmit();onKWEnter()}return}
   if(k===38||k===40||k===27)return;
   if(k<37||k>40)kbReset();
   sugUpdate()}
@@ -2199,7 +2207,7 @@ function edist(a,b){var la=a.length,lb=b.length;if(la-lb>2||lb-la>2)return 3;
     if(best>2)return 3;var tmp=prev;prev=cur;cur=tmp}
   return prev[lb]}
 function sugUpdate(){if(!cidxReady()){sugHide();return}
-  var inp=document.getElementById('txtKW');if(document.activeElement!==inp){sugHide();return}
+  var inp=document.getElementById('txtKW');if(document.activeElement!==inp||inp.value===_sugSub){sugHide();return}
   var m=inp.value.match(/[a-z0-9][a-z0-9\-\/]*$/i),w=m?m[0].toLowerCase():'';
   if(w.length<2){sugHide();return}
   var d=window.ESM_CIDX;if(!d._toks)d._toks=Object.keys(d.t);
@@ -2228,7 +2236,7 @@ function sugMove(dir){if(!_sugItems.length)return;
 function sugPick(i){var t=_sugItems[i];if(!t)return;_t('feat',{k:'suggest'});
   var inp=document.getElementById('txtKW');
   inp.value=inp.value.replace(/[a-z0-9][a-z0-9\-\/]*$/i,'')+t;
-  sugHide();inp.focus();doSearch()}
+  sugSubmit();inp.focus();doSearch()}
 
 /* ═ DTC DECODER (V2) ═ */
 var _dtcQ='',_dtcKeep=false;
@@ -2284,7 +2292,7 @@ function uConv(i,dir){var f=UNITS[i][2],L=document.getElementById('uL'+i),R=docu
   if(f===0)out=dir===0?v*9/5+32:(v-32)*5/9;
   else out=dir===0?v*f:v/f;
   dst.value=''+Math.round(out*1000)/1000}
-function togUnits(){var p=document.getElementById('unitPanel')||buildUnits();
+function togUnits(){var p=document.getElementById('unitPanel')||buildUnits();_placePanels();
   var _j=document.getElementById('jobPanel');if(_j)_j.style.display='none';
   var _n9=document.getElementById('notePanel');if(_n9){_n9.style.display='none'}
   var w=document.getElementById('wirePanel');if(w&&p.style.display!=='block')w.style.display='none';
@@ -2602,7 +2610,7 @@ var WIRES=[
 ["LT BLU","Light Blue","#66aaee"],["SIL","Silver","#bbbbcc"]
 ];
 var wireVisible=false;
-function togWires(){var _u=document.getElementById('unitPanel');if(_u)_u.style.display='none';var _n=document.getElementById('notePanel');if(_n)_n.style.display='none';var _j=document.getElementById('jobPanel');if(_j)_j.style.display='none';
+function togWires(){_placePanels();var _u=document.getElementById('unitPanel');if(_u)_u.style.display='none';var _n=document.getElementById('notePanel');if(_n)_n.style.display='none';var _j=document.getElementById('jobPanel');if(_j)_j.style.display='none';
   var _wp=document.getElementById('wirePanel');if(_wp&&_wp.style.display==='none')wireVisible=false;
   wireVisible=!wireVisible;if(wireVisible)_t('feat',{k:'wires'});
   var p=document.getElementById('wirePanel');
@@ -2666,7 +2674,7 @@ window.addEventListener('hashchange',function(){loadFromHash()});
    INIT
    ════════════════════════════════════════════ */
 function _setVH(){try{document.documentElement.style.setProperty('--vh',window.innerHeight+'px')}catch(e){}}
-document.addEventListener('DOMContentLoaded',function(){try{if(location.search)history.replaceState(null,'',location.pathname+location.hash)}catch(eQ){}_setVH();window.addEventListener('resize',_setVH);
+document.addEventListener('DOMContentLoaded',function(){try{if(location.search)history.replaceState(null,'',location.pathname+location.hash)}catch(eQ){}_setVH();window.addEventListener('resize',_setVH);window.addEventListener('resize',_placePanels);
   try{var _sbp=localStorage.getItem('esm_sb');if(_sbp==='1'||(_sbp===null&&window.innerWidth<=800))document.getElementById('sidebar').classList.add('collapsed')}catch(e){}
   try{showDisclaimer()}catch(e2){}});
 window.onload=function(){
