@@ -1121,7 +1121,7 @@ var GEN_LABELS={mk7:"MK7 \u00b7 7TH GEN",mk8:"MK8 \u00b7 8TH GEN"};
 var curGen="",cdInfo=[],tDT=[],curMT="SM",curTD=[],curSD=[];
 var curKey="",curSct="",curSc="",curSys="",curComp="",curSitq="",curKW="",curScopeName="";
 var selLbl=null,_sieScript=null,_treeScript=null,_listScript=null;
-var ESM_VER='2.2.3';var _qs0=location.search||'';
+var ESM_VER='2.2.4';var _qs0=location.search||'';
 /* ═ ANONYMOUS USAGE STATS (v2.2, hosted site only) ═
    Small batches of events go to /api/t (a Cloudflare Worker on this domain): pages opened, searches (query +
    result counts), features used, errors, screen size. NEVER note text, job cards, bookmarks or pins.
@@ -1574,6 +1574,8 @@ function openJobPanel(id){_jobEd=id||null;_jpDel=false;
   var d=document.getElementById('jpDel');d.style.display=c?'':'none';d.textContent='Delete';
   var cl=document.getElementById('jpCloneBtn');if(cl)cl.style.display=c?'':'none';
   document.getElementById('jpDeact').style.display=(c&&j.activeId===c.id)?'':'none';
+  /* phones: the sidebar is a full-screen overlay above the content area, so a panel opened from it would sit underneath (v2.2.4) */
+  _sbAutoClose();
   p.style.display='block';document.getElementById('jpName').focus()}
 function closeJobPanel(){document.getElementById('jobPanel').style.display='none';_jobEd=null;_jpDel=false}
 function jpSave(){var name=document.getElementById('jpName').value.trim();
