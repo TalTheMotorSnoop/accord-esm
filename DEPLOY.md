@@ -50,3 +50,10 @@ Hosting: GitHub Pages (repo `TalTheMotorSnoop/accord-esm`, branch `main`, root) 
 - The search tokenizer (`foldText`/`qTokens` here, `cidx.mjs` in the pipeline) must stay identical, or translated search silently finds nothing.
 - Smoke test after a deploy: `node live_check.mjs <version>` and `node probe_lang.mjs chromium hu https://accord.talonbabb.com/` in `Desktop/Accord ESM Tests`.
 - Rollback: `npx wrangler delete` in the Worker folder removes `/mk7x/*`; push a launcher whose `_langsOK()` returns false to hide the picker.
+
+## Interface translations (v2.4+)
+- `i18n/<lang>.js` holds the launcher's own text for hu, cs, pl, nl, fr, ru: `{s:{English:translation}, r:[[regex, template]]}`. English is the source; the launcher translates what it renders through a MutationObserver (`_i18nTr`, `_i18nWalk`), exact matches only, so manual titles, notes and job names are never touched.
+- Sources and build live outside the repo in `Desktop/Accord ESM Tests/i18n`: `keys.json` (numbered English strings), `<lang>.txt` (`id|translation`), `build_i18n.cjs` (validates ids, placeholders and symbols, then writes `i18n/<lang>.js` here).
+- Adding or changing an English string in the launcher: add it to `make_keys.cjs` extras (or re-run `collect_ui_strings.mjs`), translate it in the six `.txt` files, rebuild. An untranslated string simply stays English — nothing breaks.
+- Not translated: Welcome, Service, Trims and Guides pages, the glossary definitions, the DTC family descriptions.
+- Tests: `probe_ui_i18n.mjs <engine> <lang> [baseURL]` and `probe_ui_fit.mjs [width]` (labels that no longer fit their control).
