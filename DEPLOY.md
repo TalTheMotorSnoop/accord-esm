@@ -41,3 +41,12 @@ Hosting: GitHub Pages (repo `TalTheMotorSnoop/accord-esm`, branch `main`, root) 
 ## Rebuild scripts (only if Honda content or indexes change; they live in the build scratchpad, not the repo)
 - Content index: `build_cidx.js` → regenerates `mk7/en/treedata/CIDX.js` and `mk8/...`
 - mk8 bridge tags: `build_bridge_mk8.js`; mk7 figure popups: `bridge_mk7_popups.js`
+
+## Translated manuals (v2.3+) — NOT in this repo
+- The site is at GitHub Pages' 1 GB limit (mk7 352 MB + mk8 625 MB). The six translated 7th-gen sets (hu, cs, pl, nl, fr, ru — about 490 MB and 60,000 files each) live in the Cloudflare R2 bucket `accord-esm-content` and are served on this origin at `/mk7x/<lang>/…` by the Worker in `Desktop/Accord ESM Content Worker`. Same origin is deliberate: the launcher talks to pages inside frames and notes/bookmarks live in this origin's storage.
+- Source: `Downloads/Accord 7gen.iso` (Honda Europe disc, 2008-03). Pipeline: `Desktop/Accord ESM Tests/pipeline` — `build_lang.mjs <lang>` (pages + bridge tag, title lists, trees, CIDX, XMAP), `r2_upload.mjs <lang|all>` (sends only changed files; credentials in `Accord ESM Tests/r2.env`), `build_xmap_en.mjs` (English page map, this repo: `mk7/en/treedata/XMAP.js`).
+- In the launcher a content set is `mk7` | `mk8` | `mk7-<lang>`; `gp(set)` is the only place that turns a set into a path. Never hard-code `/en/` again.
+- `esm-bridge.js` exists once in this repo (`mk8/en/js`) and as a copy in every translated set. After changing it: re-copy into `out/mk7x/*/js` and re-run the upload, or the translated sets keep the old bridge.
+- The search tokenizer (`foldText`/`qTokens` here, `cidx.mjs` in the pipeline) must stay identical, or translated search silently finds nothing.
+- Smoke test after a deploy: `node live_check.mjs <version>` and `node probe_lang.mjs chromium hu https://accord.talonbabb.com/` in `Desktop/Accord ESM Tests`.
+- Rollback: `npx wrangler delete` in the Worker folder removes `/mk7x/*`; push a launcher whose `_langsOK()` returns false to hide the picker.

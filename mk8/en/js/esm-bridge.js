@@ -68,6 +68,9 @@ function glApply(map){try{
 function glRemove(){try{var t=document.getElementById('esmglTip');if(t&&t.parentNode)t.parentNode.removeChild(t);unwrap('esmgl')}catch(e){}}
 /* ---- search-term highlighting ---- */
 var hlEls=[],hlIdx=0,hlSig='';
+/* accent-insensitive highlight: the launcher folds search words (fek), the page says fék */
+var _HLV={a:'a\u00E1\u00E0\u00E2\u00E4\u00E3\u00E5\u0105\u0103',c:'c\u010D\u0107\u00E7',d:'d\u010F\u0111',e:'e\u00E9\u00E8\u00EA\u00EB\u011B\u0119',i:'i\u00ED\u00EC\u00EE\u00EF',l:'l\u0142\u013E\u013A',n:'n\u0144\u0148\u00F1',o:'o\u00F3\u00F2\u00F4\u00F6\u00F5\u0151\u00F8',r:'r\u0159\u0155',s:'s\u0161\u015B\u015F',t:'t\u0165\u0163',u:'u\u00FA\u00F9\u00FB\u00FC\u016F\u0171',y:'y\u00FD\u00FF',z:'z\u017E\u017A\u017C'};
+function _hlFoldRx(t){var o='',esc=false;for(var i=0;i<t.length;i++){var ch=t.charAt(i);if(esc){o+=ch;esc=false;continue}if(ch==='\\'){o+=ch;esc=true;continue}var v=_HLV[ch.toLowerCase()];o+=v?'['+v+']':ch}return o}
 function hlApply(terms){try{
   var sig=(terms||[]).join('\u0001');
   if(sig===hlSig&&hlEls.length){send({esm:'hlpos',i:hlIdx+1,n:hlEls.length});return}
@@ -76,7 +79,7 @@ function hlApply(terms){try{
   if(!document.getElementById('esm-hl-style')){var st=document.createElement('style');st.id='esm-hl-style';
     st.textContent='.esmhl{background:#ffd54d!important;color:#000!important;border-radius:2px}.esmhl.cur{background:#ff9800!important;outline:2px solid #ff9800}';
     (document.head||document.documentElement).appendChild(st)}
-  var esc=[];for(var i2=0;i2<terms.length;i2++)esc.push(String(terms[i2]).replace(/[.*+?^{}$()|[\]\\]/g,'\\$&'));
+  var esc=[];for(var i2=0;i2<terms.length;i2++)esc.push(_hlFoldRx(String(terms[i2]).replace(/[.*+?^{}$()|[\]\\]/g,'\\$&')));
   var rx=new RegExp('('+esc.join('|')+')','gi');
   var nodes=textNodes(rx,400,true);
   for(var i=0;i<nodes.length;i++){var node=nodes[i],frag=document.createDocumentFragment(),txt=node.nodeValue,last=0,m;
