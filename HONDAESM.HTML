@@ -9,7 +9,7 @@
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="icon" type="image/png" href="./icons/icon-192.png">
 <link rel="apple-touch-icon" href="./icons/icon-192.png">
-<link href="./fonts/fonts.css?v=2.3.0" rel="stylesheet">
+<link href="./fonts/fonts.css?v=2.4.0" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html,body{height:100%;overflow:hidden}
@@ -767,6 +767,13 @@ body.aurora ::-webkit-scrollbar{width:6px}body.aurora ::-webkit-scrollbar-track{
 #discChk input{width:16px;height:16px;accent-color:#ffb84d;flex-shrink:0}
 #discGo{font-family:inherit;font-size:13px;font-weight:600;padding:8px 26px;border-radius:16px;border:none;background:#ffb84d;color:#1a1408;cursor:pointer}
 #discGo:disabled{opacity:.35;cursor:not-allowed}
+/* language chooser on the disclaimer and the first tour page (v2.4) */
+.lang-row{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 6px}
+.lang-row .lang-cap{width:100%;font-size:11px;opacity:.65;letter-spacing:.3px}
+.lang-row button{font-family:'Outfit',sans-serif;font-size:12px;padding:4px 11px;border-radius:14px;border:1px solid #3a4150;background:#232b38;color:#dfe5ee;cursor:pointer}
+.lang-row button:hover{border-color:#5a6478}
+.lang-row button.sel,#tourBox .lang-row button.sel{background:#ffb84d;border-color:#ffb84d;color:#1a1408;font-weight:600}
+#tourBox .lang-row{margin:10px 0 2px}#tourBox .lang-row button{padding:4px 11px}
 .bk-item.jc-act a{font-weight:700}
 .jc-items{margin:0 4px 6px 14px;border-left:2px solid rgba(128,128,128,.3);padding-left:2px}
 .jc-row{padding:3px 6px}
@@ -801,8 +808,11 @@ body.aurora ::-webkit-scrollbar{width:6px}body.aurora ::-webkit-scrollbar-track{
 .rr.kb{outline:2px solid rgba(136,136,136,.6);outline-offset:-2px}
 .rr.cur a{font-weight:700}
 mark.hl{background:transparent;color:inherit;font-weight:700;text-decoration:underline;text-underline-offset:2px}
-.pg-row{display:flex;gap:6px;padding:2px 0}
-.pg-btn{flex:1;text-align:center;padding-left:3px!important;padding-right:3px!important;min-width:0;overflow:hidden;white-space:nowrap;font-size:10px!important;letter-spacing:0.4px!important}
+/* v2.4 label fit */
+.pg-row{display:flex;flex-wrap:wrap;gap:6px;padding:2px 0}
+.pg-btn{flex:1 1 auto;text-align:center;padding-left:8px!important;padding-right:8px!important;min-width:0;white-space:nowrap;font-size:10px!important;letter-spacing:0.4px!important}
+.srch-row .srch-in{min-width:0;flex:1 1 60px}
+.srch-row .srch-btn,.srch-row .clr-link{white-space:nowrap;flex-shrink:0}
 #sbDrag{width:6px;flex-shrink:0;cursor:col-resize;background:rgba(128,128,128,0.15)}
 #sbDrag:hover{background:rgba(128,128,128,0.4)}
 #sidebar.collapsed+#sbDrag{display:none}
@@ -1130,6 +1140,44 @@ function _langOfGen(g){return(g&&g.length>3)?g.slice(4):'en'}
 function gp(g){return(g&&g.length>3)?'./mk7x/'+g.slice(4):'./'+g+'/en'}
 function _genOfRel(r){r=String(r||'');var m=/(?:^\.\/|\/)mk7x\/([a-z]{2})\//.exec(r);if(m&&_okGen('mk7-'+m[1]))return 'mk7-'+m[1];return r.indexOf('mk8/')>=0?'mk8':'mk7'}
 function _langsOK(){return location.protocol!=='file:'}
+/* ═ INTERFACE LANGUAGE (v2.4) ═ The launcher's own text is translated in place: a dictionary per language (./i18n/<lang>.js) maps the
+   English string to its translation, plus a few regex rules for composed strings ("43 results for …"). A MutationObserver applies it to
+   whatever the app renders, so no call site needs to know about languages. Exact matches only — titles from the manual, notes and job
+   names are never touched. English is the source text, so switching back simply restores the originals. */
+var _i18nO=(typeof WeakMap==='function')?new WeakMap():null,_i18nL=_i18nO?new WeakMap():null,_i18nA=_i18nO?new WeakMap():null,_i18nObs=null,_i18nRx={};
+function _i18nDict(){return(_lang!=='en'&&window.ESM_I18N&&window.ESM_I18N[_lang])||null}
+function _i18nTr(src){var d=_i18nDict();if(!d)return null;var k=String(src).replace(/\s+/g,' ').trim();if(k.length<2)return null;
+  var t=d.s[k];if(t!==undefined)return t;
+  if(k.length>200||!/[0-9:\u2026]/.test(k))return null;
+  var rx=_i18nRx[_lang];if(!rx){rx=_i18nRx[_lang]=[];for(var i=0;i<d.r.length;i++){try{rx.push([new RegExp(d.r[i][0]),d.r[i][1]])}catch(e){}}}
+  for(var j=0;j<rx.length;j++){if(rx[j][0].test(k))return k.replace(rx[j][0],rx[j][1])}
+  return null}
+function T(str){var t=_i18nTr(str);return t===null?str:t}
+function _i18nSkip(el){return !el||!el.closest||!!el.closest('script,style,textarea,#cmbLang,#cmbMY,#cmbMC,.lang-row button,.notr')}
+function _i18nText(nd){if(!_i18nO||!nd.parentNode||_i18nSkip(nd.parentNode))return;
+  var cur=nd.data,orig=_i18nO.get(nd);if(orig===undefined||cur!==_i18nL.get(nd)){orig=cur;_i18nO.set(nd,orig)}
+  var t=_i18nTr(orig),out=orig;if(t!==null){var m=/^(\s*)[\s\S]*?(\s*)$/.exec(orig);out=m[1]+t+m[2]}
+  _i18nL.set(nd,out);if(out!==cur)nd.data=out}
+function _i18nAttrs(el){if(!_i18nA||_i18nSkip(el))return;var names=['title','placeholder'];
+  for(var i=0;i<names.length;i++){var a=names[i];if(!el.hasAttribute(a))continue;var cur=el.getAttribute(a),st=_i18nA.get(el);if(!st){st={};_i18nA.set(el,st)}
+    var r=st[a];if(!r||cur!==r.l){r=st[a]={o:cur,l:cur}}var t=_i18nTr(r.o),out=(t===null)?r.o:t;r.l=out;if(out!==cur)el.setAttribute(a,out)}}
+function _i18nWalk(root){try{if(root.nodeType===3){_i18nText(root);return}if(root.nodeType!==1)return;
+  _i18nAttrs(root);var els=root.querySelectorAll('[title],[placeholder]');for(var i=0;i<els.length;i++)_i18nAttrs(els[i]);
+  var w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,null),x;while((x=w.nextNode()))_i18nText(x)}catch(e){}}
+function _i18nApplyAll(){try{document.documentElement.lang=_lang}catch(e){}_i18nWalk(document.body);try{if(_tourOn)tourPlace()}catch(e2){}}
+function _i18nStart(){if(_i18nObs||typeof MutationObserver!=='function'||!_i18nO)return;
+  _i18nObs=new MutationObserver(function(ms){if(_lang==='en'&&!_i18nDirty)return;
+    for(var i=0;i<ms.length;i++){var m=ms[i];if(m.type==='characterData')_i18nText(m.target);else if(m.type==='attributes')_i18nAttrs(m.target);
+      else for(var j=0;j<m.addedNodes.length;j++)_i18nWalk(m.addedNodes[j])}});
+  _i18nObs.observe(document.body,{subtree:true,childList:true,characterData:true,attributes:true,attributeFilter:['title','placeholder']})}
+var _i18nDirty=false;
+function _i18nLoad(l,cb){if(l==='en'||(window.ESM_I18N&&window.ESM_I18N[l])||!_langsOK()){cb();return}
+  var sc=injectScript('./i18n/'+l+'.js',function(){cb()});sc.onerror=function(){cb()}}
+function _i18nUse(){_i18nStart();_i18nLoad(_lang,function(){_i18nDirty=true;_i18nApplyAll();if(_lang==='en')_i18nDirty=false})}
+function _langRowHTML(){if(!_langsOK())return '';var h='<div class="lang-row"><span class="lang-cap">'+escH(T('Choose your language'))+'</span>';
+  for(var i=0;i<LANG_ORDER.length;i++){var l=LANG_ORDER[i];h+='<button type="button" class="'+(l===_lang?'sel':'')+'" onclick="pickLang(\''+l+'\')">'+escH(LANGS[l])+'</button>'}return h+'</div>'}
+function pickLang(l){if(!LANGS[l])return;setLang(l);
+  var rows=document.querySelectorAll('.lang-row');for(var i=0;i<rows.length;i++){var bs=rows[i].querySelectorAll('button');for(var j=0;j<bs.length;j++){if(bs[j].textContent===LANGS[l])bs[j].classList.add('sel');else bs[j].classList.remove('sel')}}}
 
 /* ════════════════════════════════════════════
    STATE
@@ -1137,7 +1185,7 @@ function _langsOK(){return location.protocol!=='file:'}
 var curGen="",cdInfo=[],tDT=[],curMT="SM",curTD=[],curSD=[];
 var curKey="",curSct="",curSc="",curSys="",curComp="",curSitq="",curKW="",curScopeName="";
 var selLbl=null,_sieScript=null,_treeScript=null,_listScript=null;
-var ESM_VER='2.3.0';var _qs0=location.search||'';
+var ESM_VER='2.4.0';var _qs0=location.search||'';
 /* ═ ANONYMOUS USAGE STATS (v2.2, hosted site only) ═
    Small batches of events go to /api/t (a Cloudflare Worker on this domain): pages opened, searches (query +
    result counts), features used, errors, screen size. NEVER note text, job cards, bookmarks or pins.
@@ -1475,10 +1523,11 @@ function onChangeMY(){popMC();loadSieAndTree()}
 function _langUI(){try{var m=getModel(),row=document.getElementById('langRow'),sel=document.getElementById('cmbLang');
   if(row&&sel){if(!_langsOK()){row.style.display='none'}else{row.style.display='';
     if(!sel.options.length){for(var i=0;i<LANG_ORDER.length;i++){var o=document.createElement('option');o.value=LANG_ORDER[i];o.text=LANGS[LANG_ORDER[i]];sel.appendChild(o)}}
-    var is7=(m.gen==='mk7');sel.disabled=!is7;sel.value=is7?_lang:'en'}}
+    sel.disabled=false;sel.value=_lang}}
   var g=getGen();document.getElementById('genBadge').textContent=(GEN_LABELS[m.gen]||m.gen)+(g.length>3?' \u00b7 '+g.slice(4).toUpperCase():'')}catch(e){}}
-function _setLangQuiet(l){if(!LANGS[l]||l===_lang)return;_lang=l;try{localStorage.setItem('esm_lang',l)}catch(e){}_langUI()}
-function setLang(l){if(!LANGS[l]||l===_lang)return;if(getModel().gen!=='mk7'){_langUI();return}
+function _setLangQuiet(l){if(!LANGS[l]||l===_lang)return;_lang=l;try{localStorage.setItem('esm_lang',l)}catch(e){}_langUI();_i18nUse()}
+function setLang(l){if(!LANGS[l]||l===_lang)return;
+  if(getModel().gen!=='mk7'){_setLangQuiet(l);_t('feat',{k:'lang',x:l});return}
   var from=getGen(),cp=curPage;_setLangQuiet(l);var to=getGen();_t('feat',{k:'lang',x:l});
   clearSearch();loadSieAndTree();
   if(cp&&cp.page&&_baseGen(cp.gen)==='mk7'&&cp.gen===from&&from!==to){var qm=/\?(000\?[A-Za-z0-9]+,[0-9]{4})/.exec(cp.url||'');
@@ -2063,15 +2112,15 @@ function _discSeen(h){try{var d=JSON.parse(localStorage.getItem('accord_disc_ok'
 var _discH='';
 function showDisclaimer(){if(_discOpen||_discShown)return;_discShown=true;
   var ov=document.createElement('div');ov.id='discOver';
-  var html='<div id="discCard"><div id="discTitle">Before you begin</div>'+
+  var html='<div id="discCard"><div id="discTitle">Before you begin</div>'+'<!--LANGROW-->'+
   '<p><b>Disclaimer:</b> This manual is provided as-is for informational purposes only. The author and contributors accept no responsibility or liability for any damage to vehicles, property, or persons arising from the use of the information contained within. Vehicle repair carries inherent risks \u2014 if you are not confident in a procedure, consult a qualified mechanic. Always use appropriate safety equipment, support vehicles on rated stands, and follow all safety precautions described in the procedures.</p>'+
   '<p><b>Note:</b> Torque specifications and fluid capacities are for standard factory-condition vehicles. Modified vehicles or worn components may require different values. When in doubt, consult Honda or a specialist.</p>'+
   (_tHosted()?'<p style="font-size:12px;opacity:.85"><b>Usage stats:</b> this site counts which pages, searches and features are used, plus errors and screen size, so the manual can be improved. Nothing you write \u2014 notes, job cards, bookmarks, pins \u2014 is ever sent. Switch it off any time at the bottom of the sidebar.</p>':'')+
   '<label id="discChk"><input type="checkbox" id="discBox" onchange="document.getElementById(\'discGo\').disabled=!this.checked"> I have read and understood the above</label>'+
   '<button id="discGo" disabled onclick="acceptDisc()">Continue</button></div>';
-  _discH=_discHash(html);
+  _discH=_discHash(html.replace('<!--LANGROW-->',''));   /* same hash as before the chooser existed: nobody is asked again */
   if(_discSeen(_discH)){_safe(tourMaybe);return}
-  _discOpen=true;ov.innerHTML=html;
+  _discOpen=true;ov.innerHTML=html.replace('<!--LANGROW-->',_langRowHTML());
   document.body.appendChild(ov);
   try{document.getElementById('discBox').focus()}catch(eF){}}
 function acceptDisc(){try{localStorage.setItem('accord_disc_ok',JSON.stringify({t:Date.now(),h:_discH}))}catch(eD){}
@@ -2146,9 +2195,10 @@ function tourShow(){var st=TOUR[_tourI],el=tourTarget(st);
     if(inSB)sbT.classList.remove('collapsed');else sbT.classList.add('collapsed')}}catch(eT){}
   if(el){try{el[0].scrollIntoView({block:'center',inline:'nearest'})}catch(e){}try{document.body.scrollLeft=0;document.documentElement.scrollLeft=0}catch(e2){}}
   var box=document.getElementById('tourBox');if(!box)return;
-  box.innerHTML='<b></b><span></span><div class="tour-btns">'+(_tourI>0?'<button onclick="tourStep(-1)">Back</button>':'')+'<button class="tour-next" onclick="tourStep(1)">'+(vlast?'Finish':'Next')+'</button><span class="tour-skip" onclick="endTour()">Skip tour</span></div><div class="tour-n">'+((vp<0?_tourI:vp)+1)+' / '+vn+'</div>';
+  box.innerHTML='<b></b><span></span>'+(_tourI===0?_langRowHTML():'')+'<div class="tour-btns">'+(_tourI>0?'<button onclick="tourStep(-1)">Back</button>':'')+'<button class="tour-next" onclick="tourStep(1)">'+(vlast?'Finish':'Next')+'</button><span class="tour-skip" onclick="endTour()">Skip tour</span></div><div class="tour-n">'+((vp<0?_tourI:vp)+1)+' / '+vn+'</div>';
   box.firstChild.textContent=st.t;
   box.children[1].textContent=st.d;
+  _i18nWalk(box);
   tourPlace();setTimeout(tourPlace,350)}
 function tourPlace(){if(!_tourOn)return;var st=TOUR[_tourI],el=tourTarget(st);
   var dim=document.getElementById('tourDim'),box=document.getElementById('tourBox');
@@ -2736,7 +2786,7 @@ document.addEventListener('DOMContentLoaded',function(){try{if(location.search)h
   try{var _sbp=localStorage.getItem('esm_sb');if(_sbp==='1'||(_sbp===null&&window.innerWidth<=800))document.getElementById('sidebar').classList.add('collapsed')}catch(e){}
   try{showDisclaimer()}catch(e2){}});
 window.onload=function(){
-  loadMode();initDropdowns();
+  loadMode();initDropdowns();_i18nUse();
   _safe(renderBookmarks);_safe(renderRecent);_safe(renderGlossary);_safe(renderPins);_safe(applyFS);
   _safe(initNotes);_safe(renderNotes);_safe(initJobs);_safe(jobUIRefresh);
   try{document.getElementById('chkGL').checked=glOn()}catch(e){}
