@@ -9,7 +9,7 @@
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="icon" type="image/png" href="./icons/icon-192.png">
 <link rel="apple-touch-icon" href="./icons/icon-192.png">
-<link href="./fonts/fonts.css?v=2.5.0" rel="stylesheet">
+<link href="./fonts/fonts.css?v=2.5.1" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html,body{height:100%;overflow:hidden}
@@ -1133,8 +1133,9 @@ var GEN_LABELS={mk7:"MK7 \u00b7 7TH GEN",mk8:"MK8 \u00b7 8TH GEN"};
    The 8th-gen manual is English only. */
 var LANGS={en:'English',hu:'Magyar',cs:'\u010Ce\u0161tina',pl:'Polski',nl:'Nederlands',fr:'Fran\u00E7ais',ru:'\u0420\u0443\u0441\u0441\u043A\u0438\u0439'};
 var LANG_ORDER=['en','hu','cs','pl','nl','fr','ru'];
-var _lang='en';try{var _l0=localStorage.getItem('esm_lang');if(_l0&&LANGS[_l0])_lang=_l0}catch(eL0){}
-function _okGen(g){return g==='mk7'||g==='mk8'||(typeof g==='string'&&/^mk7-[a-z]{2}$/.test(g)&&!!LANGS[g.slice(4)]&&g.slice(4)!=='en')}
+function _isLang(l){return typeof l==='string'&&LANG_ORDER.indexOf(l)>=0}
+var _lang='en';try{var _l0=localStorage.getItem('esm_lang');if(_isLang(_l0))_lang=_l0}catch(eL0){}
+function _okGen(g){return g==='mk7'||g==='mk8'||(typeof g==='string'&&/^mk7-[a-z]{2}$/.test(g)&&_isLang(g.slice(4))&&g.slice(4)!=='en')}
 function _baseGen(g){return String(g||'').slice(0,3)}
 function _langOfGen(g){return(g&&g.length>3)?g.slice(4):'en'}
 function gp(g){return(g&&g.length>3)?'./mk7x/'+g.slice(4):'./'+g+'/en'}
@@ -1176,7 +1177,7 @@ function _i18nLoad(l,cb){if(l==='en'||(window.ESM_I18N&&window.ESM_I18N[l])||!_l
 function _i18nUse(){_i18nStart();_i18nLoad(_lang,function(){_i18nDirty=true;_i18nApplyAll();if(_lang==='en')_i18nDirty=false})}
 function _langRowHTML(){if(!_langsOK())return '';var h='<div class="lang-row"><span class="lang-cap">'+escH(T('Choose your language'))+'</span>';
   for(var i=0;i<LANG_ORDER.length;i++){var l=LANG_ORDER[i];h+='<button type="button" class="'+(l===_lang?'sel':'')+'" onclick="pickLang(\''+l+'\')">'+escH(LANGS[l])+'</button>'}return h+'</div>'}
-function pickLang(l){if(!LANGS[l])return;setLang(l);
+function pickLang(l){if(!_isLang(l))return;setLang(l);
   var rows=document.querySelectorAll('.lang-row');for(var i=0;i<rows.length;i++){var bs=rows[i].querySelectorAll('button');for(var j=0;j<bs.length;j++){if(bs[j].textContent===LANGS[l])bs[j].classList.add('sel');else bs[j].classList.remove('sel')}}}
 
 /* ════════════════════════════════════════════
@@ -1185,17 +1186,19 @@ function pickLang(l){if(!LANGS[l])return;setLang(l);
 var curGen="",cdInfo=[],tDT=[],curMT="SM",curTD=[],curSD=[];
 var curKey="",curSct="",curSc="",curSys="",curComp="",curSitq="",curKW="",curScopeName="";
 var selLbl=null,_sieScript=null,_treeScript=null,_listScript=null;
-var ESM_VER='2.5.0';var _qs0=location.search||'';
+var ESM_VER='2.5.1';var _qs0=location.search||'';
 /* ═ ANONYMOUS USAGE STATS (v2.2, hosted site only) ═
    Small batches of events go to /api/t (a Cloudflare Worker on this domain): pages opened, searches (query +
    result counts), features used, errors, screen size. NEVER note text, job cards, bookmarks or pins.
    Inactive on file:// and on any host other than accord.talonbabb.com. Opt-out: sidebar checkbox -> esm_tstats='off'.
-   Testing: set window.ESM_T_URL (or localStorage esm_tdbg = endpoint URL) to enable on localhost. */
+   Testing: set window.ESM_T_URL from the console or a test harness to enable on localhost. (v2.5.1: the localStorage hook esm_tdbg is gone —
+   it was an ordinary esm_* key, so an imported backup could point the stats at another server and switch them back on after an opt-out.) */
+try{localStorage.removeItem('esm_tdbg')}catch(eTd){}
 var _tSess=Math.random().toString(36).slice(2,10),_tQ=[],_tT0=Date.now(),_tTimer=null,_tErrN=0,_tBooted=false,_tSrc='',_tSrc2='',_tPg={},_tSrch=null,_tSrchT=null;
-function _tHosted(){try{if(window.ESM_T_URL||localStorage.getItem('esm_tdbg'))return true}catch(e){}
+function _tHosted(){try{if(window.ESM_T_URL)return true}catch(e){}
   return (location.protocol==='https:'||location.protocol==='http:')&&/(^|\.)accord\.talonbabb\.com$/.test(location.hostname)}
 function _tOn(){if(!_tHosted())return false;try{if(localStorage.getItem('esm_tstats')==='off')return false}catch(e){}return true}
-function _tURL(){try{if(window.ESM_T_URL)return String(window.ESM_T_URL);var d=localStorage.getItem('esm_tdbg');if(d&&/^https?:/.test(d))return d}catch(e){}return '/api/t'}
+function _tURL(){try{if(window.ESM_T_URL)return String(window.ESM_T_URL)}catch(e){}return '/api/t'}
 function _t(e,p){if(!_tOn())return;var o=p||{};o.e=e;o.at=Math.round((Date.now()-_tT0)/1000);_tQ.push(o);
   if(_tQ.length>=12)_tFlush();else if(!_tTimer)_tTimer=setTimeout(_tFlush,15000)}
 var _tKA=(function(){try{return typeof fetch==='function'&&('keepalive' in new Request(location.href))}catch(e){return false}})();
@@ -1257,11 +1260,15 @@ function _customCommit(h){_navPending=false;if(!h)return;
   try{history.replaceState(null,'',location.pathname)}catch(e){}
   try{var pb=document.getElementById('btnPrint');if(pb)pb.disabled=true}catch(e2){}}
 function _okItem(x){return !!(x&&x.sieKey&&typeof x.sieKey.length==='number'&&x.contentsNum!==undefined)}
-function hlReset(){_hlTerms=[];_navPending=true;_tPg[1]='';_sbAutoClose();try{var _hb=document.getElementById('hlBar');if(_hb)_hb.style.display='none'}catch(e){}
+var _xlTok=0;
+function hlReset(){_xlTok++;_hlTerms=[];_navPending=true;_tPg[1]='';_sbAutoClose();try{var _hb=document.getElementById('hlBar');if(_hb)_hb.style.display='none'}catch(e){}
   try{var _pb=document.getElementById('btnPrint');if(_pb)_pb.disabled=false}catch(e2){}}
 function _ancU(anc){if(!anc)return'';var q=anc.indexOf('?');if(q<0)return'#'+anc;var head=anc.slice(0,q);
   if(!head||/^[0-9]{3}$/.test(head))return'?'+anc;return'#'+head}
 function _syncModel(pg){try{if(!pg||!pg.gen||pg.gen===getGen())return;
+  /* v2.5.1: a page from another LANGUAGE set of the same generation (mk7 vs mk7-hu) is not a model mismatch. Without this, any URL that
+     carries no ?000?code,year (cross-references, notes, in-frame Back, pane swap) reset the car to the first 7th-gen model. */
+  if(_baseGen(pg.gen)===getModel().gen)return;
   var qm=/\?000\?([A-Za-z0-9]+),([0-9]{4})/.exec(pg.url||''),i;
   if(qm){for(i=0;i<ALL_MODELS.length;i++){if(ALL_MODELS[i].year===qm[2]&&ALL_MODELS[i].gen===_baseGen(pg.gen)&&ALL_MODELS[i].codes.indexOf(qm[1])>=0){setModelTo(qm[2],qm[1]);return}}}
   for(i=0;i<ALL_MODELS.length;i++){if(ALL_MODELS[i].gen===_baseGen(pg.gen)){setModelTo(ALL_MODELS[i].year,ALL_MODELS[i].codes[0]);return}}}catch(e){}}
@@ -1440,7 +1447,7 @@ function getRecent(){try{var a=JSON.parse(localStorage.getItem('esm_rc')||'[]');
   return o}catch(e){return[]}}
 function saveRecent(rc){try{localStorage.setItem('esm_rc',JSON.stringify(rc))}catch(e){}}
 /* v2.2.5: the address carries the model (?000?CL7,2003), so the same page opened under two models was listed twice — compare the page itself */
-function _rcKey(u){return String(u||'').split('?')[0]}
+function _rcKey(u){return String(u||'').split(/[?#]/)[0]}
 function addRecent(pg){
   if(!pg||!pg.url)return;var rc=getRecent(),k=_rcKey(pg.url);
   rc=rc.filter(function(r){return _rcKey(r.url)!==k});
@@ -1518,29 +1525,33 @@ function initDropdowns(){var my=document.getElementById("cmbMY");my.innerHTML=""
 function popMC(){var m=getModel(),mc=document.getElementById("cmbMC");mc.innerHTML="";
   for(var i=0;i<m.codes.length;i++){var o=document.createElement("option"),c=m.codes[i];o.text=c+(CODE_LABELS[c]?" \u2014 "+CODE_LABELS[c]:"");o.value=i;mc.appendChild(o)}
   mc.selectedIndex=0;_langUI()}
-function onChangeMY(){popMC();loadSieAndTree()}
+function onChangeMY(){_xlTok++;popMC();loadSieAndTree()}
 function _langUI(){try{var m=getModel(),row=document.getElementById('langRow'),sel=document.getElementById('cmbLang');
   if(row&&sel){if(!_langsOK()){row.style.display='none'}else{row.style.display='';
     if(!sel.options.length){for(var i=0;i<LANG_ORDER.length;i++){var o=document.createElement('option');o.value=LANG_ORDER[i];o.text=LANGS[LANG_ORDER[i]];sel.appendChild(o)}}
     sel.disabled=false;sel.value=_lang}}
   var g=getGen();document.getElementById('genBadge').textContent=(GEN_LABELS[m.gen]||m.gen)+(g.length>3?' \u00b7 '+g.slice(4).toUpperCase():'')}catch(e){}}
-function _setLangQuiet(l){if(!LANGS[l]||l===_lang)return;_lang=l;try{localStorage.setItem('esm_lang',l)}catch(e){}_langUI();_i18nUse();
+function _setLangQuiet(l){if(!_isLang(l)||l===_lang)return;_lang=l;try{localStorage.setItem('esm_lang',l)}catch(e){}_langUI();_i18nUse();
   try{var _fr=['contentFrame','contentFrame2'];for(var _i=0;_i<_fr.length;_i++){var _f=document.getElementById(_fr[_i]);if(_f&&_f.contentWindow)_f.contentWindow.postMessage({esm:'lang',l:l},'*')}}catch(eP){}}
-function setLang(l){if(!LANGS[l]||l===_lang)return;
-  if(getModel().gen!=='mk7'){_setLangQuiet(l);_t('feat',{k:'lang',x:l});return}
-  var from=getGen(),cp=curPage;_setLangQuiet(l);var to=getGen();_t('feat',{k:'lang',x:l});
+function setLang(l){if(!_isLang(l)||l===_lang)return;_xlTok++;
+  var ready=false;try{ready=!!getModel()}catch(eM){}
+  if(!ready||getModel().gen!=='mk7'){_setLangQuiet(l);_t('feat',{k:'lang',x:l});return}   /* before initDropdowns (disclaimer on a slow load) there is no model yet */
+  var cp=curPage;_setLangQuiet(l);var to=getGen();_t('feat',{k:'lang',x:l});
   clearSearch();loadSieAndTree();
-  if(cp&&cp.page&&_baseGen(cp.gen)==='mk7'&&cp.gen===from&&from!==to){var qm=/\?(000\?[A-Za-z0-9]+,[0-9]{4})/.exec(cp.url||'');
-    _xlateOpen(from,to,cp.page,qm?qm[1]:('000?'+getMC()+','+getMY()),function(){esmToast('This page has no '+LANGS[l]+' version \u2014 pick a chapter from the tree.');goHome()})}}
+  if(cp&&cp.page&&_okGen(cp.gen)&&_baseGen(cp.gen)==='mk7'&&cp.gen!==to){var qm=/\?(000\?[A-Za-z0-9]+,[0-9]{4})/.exec(cp.url||'');
+    _xlateOpen(cp.gen,to,cp.page,qm?qm[1]:('000?'+getMC()+','+getMY()),function(loadFailed){
+      if(loadFailed){esmToast('Could not load the page list for that language \u2014 the open page was left as it is.');return}
+      esmToast('This page has no '+LANGS[l]+' version \u2014 pick a chapter from the tree.');goHome()})}}
 /* same procedure in another language: every page carries Honda's document code; XMAP.js lists page → code with the language letter removed */
 function _xmapLoad(g,cb){window.ESM_XMAP=window.ESM_XMAP||{};if(window.ESM_XMAP[g]){cb(true);return}
   var sc=injectScript(gp(g)+'/treedata/XMAP.js',function(){cb(!!window.ESM_XMAP[g])});sc.onerror=function(){cb(false)}}
-function _xlateOpen(from,to,page,yc,fail){_xmapLoad(from,function(a){if(!a){fail();return}_xmapLoad(to,function(b){if(!b){fail();return}
+function _xlateOpen(from,to,page,yc,fail){var tok=++_xlTok;   /* any navigation, language or model change bumps _xlTok and makes this lookup stale */
+  _xmapLoad(from,function(a){if(tok!==_xlTok)return;if(!a){fail(true);return}_xmapLoad(to,function(b){if(tok!==_xlTok)return;if(!b){fail(true);return}
   try{var A=window.ESM_XMAP[from],B=window.ESM_XMAP[to],pi=String(parseInt(page,10)),code=A[pi],hit='';
     if(code){if(B[pi]===code)hit=pi;else{if(!B._rev){var rv={};for(var k in B){if(k!=='_rev'&&!rv[B[k]])rv[B[k]]=k}Object.defineProperty(B,'_rev',{value:rv,enumerable:false})}hit=B._rev[code]||''}}
     if(!hit){fail();return}
     _tSrc='lang';openC(('000000000000000'+hit).slice(-15),yc,'',to)}catch(e){fail()}})})}
-function onChangeMC(){loadTree()}
+function onChangeMC(){_xlTok++;loadTree()}
 function selMT(t){if(_tBooted&&t!==curMT)_t('feat',{k:'manual',x:t});curMT=t;document.getElementById("radSM").checked=(t==="SM");document.getElementById("radBM").checked=(t==="BM");
   document.getElementById("btnSM").className="mt-btn"+(t==="SM"?" active":"");document.getElementById("btnBM").className="mt-btn"+(t==="BM"?" active":"");loadTree()}
 function _resetModelUI(){try{document.getElementById("treeContent").innerHTML='<div class="no-res">Loading\u2026</div>';document.getElementById("searchResults").innerHTML="";_res=[];kbIdx=-1;curSD=[];altSD=[];curTD=[];_searchGen++;
@@ -1872,9 +1883,21 @@ function swapPanes(){if(!_split||_swapBusy)return;_swapBusy=true;setTimeout(func
   else{f2.srcdoc='<body style="font-family:sans-serif;color:#889;background:#f2f2f4;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;text-align:center;padding:20px"><div><b>Right pane</b><br><br>Click the ⇥ icon on any search result or pinned item to open it here.</div></body>'}}
 
 /* ═ BACKUP & RESTORE (V2) ═ */
+/* v2.5.1: a backup is untrusted input. Only known data and preference keys travel, each with a value check; control keys never do.
+   esm_tstats is accepted only as 'off' (a backup may carry an opt-out, never undo one). */
+var _BK_JSON={esm_bk:1,esm_rc:1,esm_pins:1,esm_notes:1,esm_jobs:1,esm_sess:1,esm_glx:1};
+function _bkKeyOK(k,v){if(typeof k!=='string'||typeof v!=='string'||v.length>4000000)return false;
+  if(_BK_JSON[k]||/^esm_svc_[A-Za-z0-9_]{0,24}$/.test(k)){try{JSON.parse(v);return true}catch(e){return false}}
+  if(k==='esm_lang')return _isLang(v);
+  if(k==='esm_tstats')return v==='off';
+  if(k==='esm_mode')return MODES.indexOf(v)>=0;
+  if(k==='esm_fs')return /^[0-9.]{1,6}$/.test(v);
+  if(k==='esm_sbw')return /^[0-9]{2,4}$/.test(v);
+  if(k==='esm_sb'||k==='esm_gl'||k==='esm_tour')return v==='0'||v==='1';
+  return false}
 function exportData(){_t('feat',{k:'export'});
   var out={magic:'esm-backup',version:2,date:new Date().toISOString(),data:{}};
-  try{for(var i=0;i<localStorage.length;i++){var k=localStorage.key(i);if(k&&k.indexOf('esm_')===0)out.data[k]=localStorage.getItem(k)}}catch(e){}
+  try{for(var i=0;i<localStorage.length;i++){var k=localStorage.key(i);if(k&&k.indexOf('esm_')===0){var ev=localStorage.getItem(k);if(_bkKeyOK(k,ev))out.data[k]=ev}}}catch(e){}
   var blob=new Blob([JSON.stringify(out,null,1)],{type:'application/json'});
   var a=document.createElement('a');a.href=URL.createObjectURL(blob);
   a.download='accord-esm-backup-'+new Date().toISOString().slice(0,10)+'.json';
@@ -1897,10 +1920,9 @@ function importData(inp){var f=inp.files&&inp.files[0];if(!f)return;
       var o=JSON.parse(rd.result);
       if(!o||o.magic!=='esm-backup'||!o.data){alert('That is not a valid ESM backup file.');inp.value='';return}
       var n=0,bad=0;
-      var JK={esm_bk:1,esm_rc:1,esm_pins:1,esm_notes:1,esm_jobs:1,esm_sess:1,esm_glx:1};
       var stage={};
-      for(var k in o.data){if(k.indexOf('esm_')!==0||typeof o.data[k]!=='string')continue;
-        if(JK[k]||k.indexOf('esm_svc_')===0){try{JSON.parse(o.data[k])}catch(ej){bad++;continue}}
+      for(var k in o.data){if(!Object.prototype.hasOwnProperty.call(o.data,k)||k.indexOf('esm_')!==0)continue;
+        if(!_bkKeyOK(k,o.data[k])){bad++;continue}
         stage[k]=o.data[k]}
       var failed=0;
       for(var k2 in stage){var cur=null;try{cur=localStorage.getItem(k2)}catch(eC){}
@@ -2747,7 +2769,7 @@ function setHash(){
   try{
     var g=_okGen(curPage.gen)?curPage.gen:getGen();
     var mc=getMC(),my=getMY();var qm=/\?000\?([A-Za-z0-9]+),([0-9]{4})/.exec(curPage.url);
-    if(qm){mc=qm[1];my=qm[2]}else if(g!==getGen())return;
+    if(qm){mc=qm[1];my=qm[2]}else if(_baseGen(g)!==getModel().gen)return;
     var h=encodeHash(g,mc,my,curPage.page,curPage.title);
     if(location.hash!==h)history.replaceState(null,'',h);
   }catch(e){}
@@ -2760,15 +2782,17 @@ function loadFromHash(){
   // Find and select the right year
   var myIdx=-1;for(var i=0;i<ALL_MODELS.length;i++){if(ALL_MODELS[i].year===my&&ALL_MODELS[i].gen===_baseGen(gen)){myIdx=i;break}}
   if(myIdx<0||!_okGen(gen))return false;
-  if(_baseGen(gen)==='mk7'){if(gen.length>3&&!_langsOK())gen='mk7';_setLangQuiet(_langOfGen(gen))}
-  document.getElementById('cmbMY').selectedIndex=myIdx;popMC();
-  // Find and select the right model code
+  // validate the whole link before touching any state (v2.5.1)
   var m=ALL_MODELS[myIdx],mcIdx=-1;for(var i=0;i<m.codes.length;i++){if(m.codes[i]===mc){mcIdx=i;break}}
   if(mcIdx<0)return false;
+  if(gen.length>3&&!_langsOK()){esmToast('This link opens a translated manual, which is only available on the website.');return false}   /* the offline copy has no translated sets, and their page numbers differ from the English edition */
+  // a translated link sets the language only for a visitor who has never chosen one; it never overrides a stored choice, and an English link never resets one
+  if(gen.length>3){var _hadLang=true;try{_hadLang=localStorage.getItem('esm_lang')!==null}catch(eHL){}if(!_hadLang)_setLangQuiet(_langOfGen(gen))}
+  document.getElementById('cmbMY').selectedIndex=myIdx;popMC();
   document.getElementById('cmbMC').selectedIndex=mcIdx;
-  // Load generation + tree
-  var genChanged=(gen!==curGen);curGen=gen;
-  if(genChanged){_injectSie(gen)}else{loadTree()}
+  // Load generation + tree (the tree follows the interface language; the page follows the link)
+  var _setNow=getGen(),genChanged=(_setNow!==curGen);curGen=_setNow;
+  if(genChanged){_injectSie(_setNow)}else{loadTree()}
   // Open the page
   _tSrc='link';hlReset();
   var u=gp(gen)+'/html/'+page+'.html?000?'+mc+','+my;
