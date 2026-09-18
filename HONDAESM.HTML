@@ -9,7 +9,7 @@
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="icon" type="image/png" href="./icons/icon-192.png">
 <link rel="apple-touch-icon" href="./icons/icon-192.png">
-<link href="./fonts/fonts.css?v=2.4.0" rel="stylesheet">
+<link href="./fonts/fonts.css?v=2.5.0" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html,body{height:100%;overflow:hidden}
@@ -1185,7 +1185,7 @@ function pickLang(l){if(!LANGS[l])return;setLang(l);
 var curGen="",cdInfo=[],tDT=[],curMT="SM",curTD=[],curSD=[];
 var curKey="",curSct="",curSc="",curSys="",curComp="",curSitq="",curKW="",curScopeName="";
 var selLbl=null,_sieScript=null,_treeScript=null,_listScript=null;
-var ESM_VER='2.4.0';var _qs0=location.search||'';
+var ESM_VER='2.5.0';var _qs0=location.search||'';
 /* ═ ANONYMOUS USAGE STATS (v2.2, hosted site only) ═
    Small batches of events go to /api/t (a Cloudflare Worker on this domain): pages opened, searches (query +
    result counts), features used, errors, screen size. NEVER note text, job cards, bookmarks or pins.
@@ -1262,7 +1262,6 @@ function hlReset(){_hlTerms=[];_navPending=true;_tPg[1]='';_sbAutoClose();try{va
 function _ancU(anc){if(!anc)return'';var q=anc.indexOf('?');if(q<0)return'#'+anc;var head=anc.slice(0,q);
   if(!head||/^[0-9]{3}$/.test(head))return'?'+anc;return'#'+head}
 function _syncModel(pg){try{if(!pg||!pg.gen||pg.gen===getGen())return;
-  if(_baseGen(pg.gen)==='mk7'&&_langOfGen(pg.gen)!==_lang){var _sameFam=(getModel().gen==='mk7');_setLangQuiet(_langOfGen(pg.gen));if(_sameFam){loadSieAndTree();return}}
   var qm=/\?000\?([A-Za-z0-9]+),([0-9]{4})/.exec(pg.url||''),i;
   if(qm){for(i=0;i<ALL_MODELS.length;i++){if(ALL_MODELS[i].year===qm[2]&&ALL_MODELS[i].gen===_baseGen(pg.gen)&&ALL_MODELS[i].codes.indexOf(qm[1])>=0){setModelTo(qm[2],qm[1]);return}}}
   for(i=0;i<ALL_MODELS.length;i++){if(ALL_MODELS[i].gen===_baseGen(pg.gen)){setModelTo(ALL_MODELS[i].year,ALL_MODELS[i].codes[0]);return}}}catch(e){}}
@@ -1525,7 +1524,8 @@ function _langUI(){try{var m=getModel(),row=document.getElementById('langRow'),s
     if(!sel.options.length){for(var i=0;i<LANG_ORDER.length;i++){var o=document.createElement('option');o.value=LANG_ORDER[i];o.text=LANGS[LANG_ORDER[i]];sel.appendChild(o)}}
     sel.disabled=false;sel.value=_lang}}
   var g=getGen();document.getElementById('genBadge').textContent=(GEN_LABELS[m.gen]||m.gen)+(g.length>3?' \u00b7 '+g.slice(4).toUpperCase():'')}catch(e){}}
-function _setLangQuiet(l){if(!LANGS[l]||l===_lang)return;_lang=l;try{localStorage.setItem('esm_lang',l)}catch(e){}_langUI();_i18nUse()}
+function _setLangQuiet(l){if(!LANGS[l]||l===_lang)return;_lang=l;try{localStorage.setItem('esm_lang',l)}catch(e){}_langUI();_i18nUse();
+  try{var _fr=['contentFrame','contentFrame2'];for(var _i=0;_i<_fr.length;_i++){var _f=document.getElementById(_fr[_i]);if(_f&&_f.contentWindow)_f.contentWindow.postMessage({esm:'lang',l:l},'*')}}catch(eP){}}
 function setLang(l){if(!LANGS[l]||l===_lang)return;
   if(getModel().gen!=='mk7'){_setLangQuiet(l);_t('feat',{k:'lang',x:l});return}
   var from=getGen(),cp=curPage;_setLangQuiet(l);var to=getGen();_t('feat',{k:'lang',x:l});
@@ -2559,6 +2559,9 @@ function goHome(){_goCustom("./welcome.html","Honda Accord ESM")}
 function goService(){_goCustom("./service.html","Service Interval Dashboard")}
 function goTrims(){_goCustom("./trims.html","Trim Level Guide")}
 function goGuides(){_goCustom("./guides.html","Common Jobs")}
+function OpenProc(g,p,c,y){if(!/^[0-9]{15}$/.test(String(p||''))||!/^[A-Za-z0-9]{2,4}$/.test(String(c||''))||!/^[0-9]{4}$/.test(String(y||'')))return;var yc='000?'+c+','+y;_tSrc='dashboard';
+  if(g==='mk7'&&_lang!=='en'&&_langsOK()){_xlateOpen('mk7','mk7-'+_lang,p,yc,function(){openC(p,yc,'','mk7')});return}
+  openC(p,yc,'',(g==='mk8')?'mk8':'mk7')}
 function GuideGo(kw){_t('feat',{k:'guide',q:String(kw||'').slice(0,80)});
   document.getElementById('txtKW').value=kw;
   if(hasScope())clearScope();

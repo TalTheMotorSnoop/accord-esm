@@ -57,3 +57,9 @@ Hosting: GitHub Pages (repo `TalTheMotorSnoop/accord-esm`, branch `main`, root) 
 - Adding or changing an English string in the launcher: add it to `make_keys.cjs` extras (or re-run `collect_ui_strings.mjs`), translate it in the six `.txt` files, rebuild. An untranslated string simply stays English — nothing breaks.
 - Not translated: Welcome, Service, Trims and Guides pages, the glossary definitions, the DTC family descriptions.
 - Tests: `probe_ui_i18n.mjs <engine> <lang> [baseURL]` and `probe_ui_fit.mjs [width]` (labels that no longer fit their control).
+
+## Page translations (v2.5+)
+- Welcome, Common Jobs and the Service dashboard include `i18n/pages.js`, which applies `i18n/pages.<lang>.js` (`h` whole blocks of HTML, `s` texts, `r` rules with `$m1` month names, `g` Common Jobs search phrases). English stays the source inside the page. The Trim Level Guide is UK-market data and stays English.
+- Common Jobs link titles and search phrases are NOT hand-translated: `build_pages_i18n.cjs` looks up the same procedure in the target language through the Honda document code (needs `Accord ESM Tests/out/mk7x/<lang>` and `work/<lang>/info`).
+- Version bump now touches the `?v=` of `i18n/pages.js` in welcome/guides/service as well as `fonts.css`.
+- Changing English text on those pages: re-run `pipeline/collect_page_strings.mjs`, `i18n/make_page_keys.cjs`, fix the ids in `pages_<lang>.txt`, rebuild. Unmatched text simply stays English.

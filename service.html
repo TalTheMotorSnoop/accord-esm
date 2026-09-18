@@ -5,7 +5,7 @@
 <meta name="robots" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Service Interval Dashboard</title>
-<link href="./fonts/fonts.css?v=2.4.0" rel="stylesheet">
+<link href="./fonts/fonts.css?v=2.5.0" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Outfit',sans-serif;background:#fff;color:#2a2a2a;line-height:1.6}
@@ -173,7 +173,7 @@ function pgFor(key){var c=document.getElementById('inCode').value,yr=+document.g
   if(p[c])return p[c];for(var k in p){var m=/^(\d{4})-(\d{4})$/.exec(k);if(m&&yr>=+m[1]&&yr<=+m[2])return p[k];if(k===String(yr))return p[k]}
   for(var k2 in p)return p[k2];return''}
 function mkLnk(key,txt){var p=pgFor(key);if(!p)return'';var yr=document.getElementById('inYear').value;var c=document.getElementById('inCode').value;var g=MODELS[yr].gen;return'<a class="lnk" href="javascript:void(0)" onclick="oProc(\''+g+"','"+p+"','"+c+"','"+yr+"')\">&rarr; "+txt+'</a>'}
-function oProc(g,p,c,y){var u='./'+g+'/en/html/'+p+'.html?000?'+c+','+y;try{parent.openC(p,'000?'+c+','+y,'',g)}catch(e){try{if(parent&&parent!==window){parent.postMessage({esm:'openc',g:g,p:p,c:c,y:y},'*');return}}catch(e2){}window.open(u,'_blank')}}
+function oProc(g,p,c,y){var u='./'+g+'/en/html/'+p+'.html?000?'+c+','+y;try{if(parent.OpenProc)parent.OpenProc(g,p,c,y);else parent.openC(p,'000?'+c+','+y,'',g)}catch(e){try{if(parent&&parent!==window){parent.postMessage({esm:'openc',g:g,p:p,c:c,y:y},'*');return}}catch(e2){}window.open(u,'_blank')}}
 
 // [id,name,type,kmI,moI,note,pgKey,cat,dieselOnly,petrolOnly,firstKm,firstMo, codes?, years?]
 // Intervals transcribed from Honda's Normal Conditions schedules: MK7 petrol p.2814/5893, MK7 diesel p.2920/5959, MK8 petrol p.4417, MK8 diesel p.4213.
@@ -413,5 +413,6 @@ document.getElementById('inCode').addEventListener('change',restoreGlobal);
   try{parent.postMessage({esm:'themehello',href:location.href},'*')}catch(e){}
 }catch(e){}})();
 </script>
+<script src="./i18n/pages.js?v=2.5.0"></script>
 </body>
 </html>
