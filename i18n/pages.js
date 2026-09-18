@@ -12,7 +12,7 @@
   var OH=new WeakMap(),OT=new WeakMap(),OA=new WeakMap(),LT=new WeakMap(),obs=null,rx={};
   function norm(x){return String(x).replace(/\s+/g,' ').trim()}
   function dict(){return(lang!=='en'&&window.ESM_PI18N&&window.ESM_PI18N[lang])||null}
-  function readLang(){try{var l=localStorage.getItem('esm_lang');return(l&&LANGS[l]&&location.protocol!=='file:')?l:'en'}catch(e){return'en'}}
+  function readLang(){try{var l=localStorage.getItem('esm_lang');return(l&&Object.prototype.hasOwnProperty.call(LANGS,l)&&location.protocol!=='file:')?l:'en'}catch(e){return'en'}}
   function inlineOnly(el){var d=el.querySelectorAll('*');for(var i=0;i<d.length;i++){if(!INL[d[i].tagName])return false;if(d[i].tagName==='A'&&d[i].querySelector('*:not(span):not(b):not(i):not(em):not(strong)'))return false}return true}
   function hasOwnText(el){for(var n=el.firstChild;n;n=n.nextSibling){if(n.nodeType===3&&/[A-Za-zÀ-ɏЀ-ӿ]/.test(n.data))return true}return false}
   function isUnit(el){if(!el.children.length||!inlineOnly(el)||!hasOwnText(el))return false;if(!INL[el.tagName])return true;var p=el.parentElement;return !p||!inlineOnly(p)||!hasOwnText(p)}
