@@ -9,7 +9,7 @@
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="icon" type="image/png" href="./icons/icon-192.png">
 <link rel="apple-touch-icon" href="./icons/icon-192.png">
-<link href="./fonts/fonts.css?v=2.2.4" rel="stylesheet">
+<link href="./fonts/fonts.css?v=2.2.5" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html,body{height:100%;overflow:hidden}
@@ -1027,16 +1027,7 @@ body.fable ::-webkit-scrollbar-thumb{background:#3e3020;border-radius:3px}
       <div class="fld"><span class="fld-lbl">Code</span><select id="cmbMC" class="fld-sel" onchange="_t('feat',{k:'model',x:'code'});onChangeMC()"></select></div>
     </div></div>
     <hr class="sep-line">
-    <div class="sec"><div class="sec-label"><span class="sec-label-txt">Manual Type</span></div><div class="mt-row">
-      <div class="mt-btn active" id="btnSM" onclick="selMT('SM')"><input type="radio" name="mt" id="radSM" checked><img class="mt-img" src="./mk8/en/img/DM_SHOP_MANUAL.PNG" alt=""><span class="mt-ico">&#128295;</span><span>Shop Manual</span></div>
-      <div class="mt-btn" id="btnBM" onclick="selMT('BM')"><input type="radio" name="mt" id="radBM"><img class="mt-img" src="./mk8/en/img/DM_BODY_RIPEA.PNG" alt=""><span class="mt-ico">&#128663;</span><span>Body Repair</span></div>
-    </div></div>
-    <hr class="sep-line">
-    <div class="sec"><div class="sec-label"><span class="sec-label-txt">System / Component</span></div><div class="srch-row" style="margin-bottom:4px;align-items:center"><input type="text" id="txtTree" class="srch-in" placeholder="Filter the tree..." autocomplete="off" onkeyup="treeFilterKey(event)"><span class="clr-link" onclick="treeCollapseAll()" title="Collapse all branches and clear the filter" style="margin-left:6px;flex-shrink:0">collapse</span></div><div id="treePanel"><div id="treeContent" class="no-res">Select a model to load</div></div></div>
-    <hr class="sep-line">
-    <div class="sec"><div class="sec-label"><span class="sec-label-txt">Search</span></div><div class="srch-row" style="position:relative"><input type="text" id="txtKW" class="srch-in" placeholder="Keywords or a DTC code..." autocomplete="off" onfocus="loadCIDX()" onblur="sugBlur()" onkeyup="kwKey(event)"><button class="srch-btn" onclick="sugSubmit();doSearch()">Search</button><div id="sugBox" style="display:none"></div></div><div class="srch-opts"><span id="scopeChip" style="display:none" title="Search is limited to this system \u2014 click to remove the filter" onclick="clearScope()">&#128193; <span id="scopeName"></span><span class="scope-x">&#10005;</span></span><span class="clr-link" onclick="clearSearch()">Clear results</span></div></div>
-    <div class="sec" style="display:flex;flex-direction:column;flex:1;min-height:100px"><div class="sec-label"><span class="sec-label-txt">Results</span></div><div id="pinPanel" style="display:none"><div class="res-hdr">&#128204; PINNED</div><div id="pinList"></div></div><div id="searchPanel"><div id="searchResults"></div></div></div>
-    <hr class="sep-line">
+    <!-- v2.2.5: your own lists sit above the tree so they are one tap away on a phone (user feedback) -->
     <!-- JOB CARDS -->
     <div class="sec">
       <div class="sec-toggle" onclick="togSec('jcBody')"><span class="arrow" id="jcArrow">&#9654;</span><span class="sec-label-txt">Job Cards</span></div>
@@ -1052,6 +1043,17 @@ body.fable ::-webkit-scrollbar-thumb{background:#3e3020;border-radius:3px}
       <div class="sec-toggle" onclick="togSec('rcBody')"><span class="arrow" id="rcArrow">&#9654;</span><span class="sec-label-txt">Recently Viewed</span></div>
       <div class="sec-body collapsed" id="rcBody" style="max-height:200px"><div id="rcList" style="padding:4px 0"></div></div>
     </div>
+    <hr class="sep-line">
+    <div class="sec"><div class="sec-label"><span class="sec-label-txt">Manual Type</span></div><div class="mt-row">
+      <div class="mt-btn active" id="btnSM" onclick="selMT('SM')"><input type="radio" name="mt" id="radSM" checked><img class="mt-img" src="./mk8/en/img/DM_SHOP_MANUAL.PNG" alt=""><span class="mt-ico">&#128295;</span><span>Shop Manual</span></div>
+      <div class="mt-btn" id="btnBM" onclick="selMT('BM')"><input type="radio" name="mt" id="radBM"><img class="mt-img" src="./mk8/en/img/DM_BODY_RIPEA.PNG" alt=""><span class="mt-ico">&#128663;</span><span>Body Repair</span></div>
+    </div></div>
+    <hr class="sep-line">
+    <div class="sec"><div class="sec-label"><span class="sec-label-txt">System / Component</span></div><div class="srch-row" style="margin-bottom:4px;align-items:center"><input type="text" id="txtTree" class="srch-in" placeholder="Filter the tree..." autocomplete="off" onkeyup="treeFilterKey(event)"><span class="clr-link" onclick="treeCollapseAll()" title="Collapse all branches and clear the filter" style="margin-left:6px;flex-shrink:0">collapse</span></div><div id="treePanel"><div id="treeContent" class="no-res">Select a model to load</div></div></div>
+    <hr class="sep-line">
+    <div class="sec"><div class="sec-label"><span class="sec-label-txt">Search</span></div><div class="srch-row" style="position:relative"><input type="text" id="txtKW" class="srch-in" placeholder="Keywords or a DTC code..." autocomplete="off" onfocus="loadCIDX()" onblur="sugBlur()" onkeyup="kwKey(event)"><button class="srch-btn" onclick="sugSubmit();doSearch()">Search</button><div id="sugBox" style="display:none"></div></div><div class="srch-opts"><span id="scopeChip" style="display:none" title="Search is limited to this system \u2014 click to remove the filter" onclick="clearScope()">&#128193; <span id="scopeName"></span><span class="scope-x">&#10005;</span></span><span class="clr-link" onclick="clearSearch()">Clear results</span></div></div>
+    <div class="sec" style="display:flex;flex-direction:column;flex:1;min-height:100px"><div class="sec-label"><span class="sec-label-txt">Results</span></div><div id="pinPanel" style="display:none"><div class="res-hdr">&#128204; PINNED</div><div id="pinList"></div></div><div id="searchPanel"><div id="searchResults"></div></div></div>
+    <hr class="sep-line">
     <!-- NOTES -->
     <div class="sec">
       <div class="sec-toggle" onclick="togSec('ntBody')"><span class="arrow" id="ntArrow">&#9654;</span><span class="sec-label-txt">My Notes</span></div>
@@ -1122,7 +1124,7 @@ var GEN_LABELS={mk7:"MK7 \u00b7 7TH GEN",mk8:"MK8 \u00b7 8TH GEN"};
 var curGen="",cdInfo=[],tDT=[],curMT="SM",curTD=[],curSD=[];
 var curKey="",curSct="",curSc="",curSys="",curComp="",curSitq="",curKW="",curScopeName="";
 var selLbl=null,_sieScript=null,_treeScript=null,_listScript=null;
-var ESM_VER='2.2.4';var _qs0=location.search||'';
+var ESM_VER='2.2.5';var _qs0=location.search||'';
 /* ═ ANONYMOUS USAGE STATS (v2.2, hosted site only) ═
    Small batches of events go to /api/t (a Cloudflare Worker on this domain): pages opened, searches (query +
    result counts), features used, errors, screen size. NEVER note text, job cards, bookmarks or pins.
@@ -1372,13 +1374,15 @@ function openPin(i){var p=getPins();if(p[i]){_tSrc='pin';curResUrl=p[i].url;var 
    RECENTLY VIEWED
    ════════════════════════════════════════════ */
 function getRecent(){try{var a=JSON.parse(localStorage.getItem('esm_rc')||'[]');if(!(a instanceof Array))return[];
-  var o=[];for(var i=0;i<a.length&&o.length<30;i++){var r=a[i];
-    if(r&&_okU(r.url)&&typeof r.title==='string')o.push({url:r.url,title:r.title,gen:(r.gen==='mk8')?'mk8':'mk7'})}
+  var o=[],seen={};for(var i=0;i<a.length&&o.length<30;i++){var r=a[i];
+    if(r&&_okU(r.url)&&typeof r.title==='string'){var rk=_rcKey(r.url);if(seen[rk])continue;seen[rk]=1;o.push({url:r.url,title:r.title,gen:(r.gen==='mk8')?'mk8':'mk7'})}}
   return o}catch(e){return[]}}
 function saveRecent(rc){try{localStorage.setItem('esm_rc',JSON.stringify(rc))}catch(e){}}
+/* v2.2.5: the address carries the model (?000?CL7,2003), so the same page opened under two models was listed twice — compare the page itself */
+function _rcKey(u){return String(u||'').split('?')[0]}
 function addRecent(pg){
-  if(!pg||!pg.url)return;var rc=getRecent();
-  rc=rc.filter(function(r){return r.url!==pg.url});
+  if(!pg||!pg.url)return;var rc=getRecent(),k=_rcKey(pg.url);
+  rc=rc.filter(function(r){return _rcKey(r.url)!==k});
   rc.unshift({url:pg.url,title:pg.title||pg.page,gen:pg.gen});
   if(rc.length>20)rc.length=20;
   saveRecent(rc);renderRecent();
@@ -2013,17 +2017,26 @@ function glTog(){var v=document.getElementById('chkGL').checked;_t('feat',{k:'gl
 
 /* ═ STARTUP DISCLAIMER (V2) ═ */
 var _discOpen=false,_discShown=false;
-function showDisclaimer(){if(_discOpen||_discShown)return;_discShown=true;_discOpen=true;
+/* v2.2.5: acceptance is remembered in this browser for 30 days and tied to the wording (change the text and everyone sees it again). Key is deliberately not esm_* so backups do not carry it to another machine. */
+var DISC_DAYS=30;
+function _discHash(t){var h=5381;for(var i=0;i<t.length;i++)h=((h<<5)+h+t.charCodeAt(i))|0;return String(h)}
+function _discSeen(h){try{var d=JSON.parse(localStorage.getItem('accord_disc_ok')||'null');return !!(d&&d.h===h&&typeof d.t==='number'&&Date.now()-d.t<DISC_DAYS*864e5&&d.t<=Date.now()+6e4)}catch(e){return false}}
+var _discH='';
+function showDisclaimer(){if(_discOpen||_discShown)return;_discShown=true;
   var ov=document.createElement('div');ov.id='discOver';
-  ov.innerHTML='<div id="discCard"><div id="discTitle">Before you begin</div>'+
+  var html='<div id="discCard"><div id="discTitle">Before you begin</div>'+
   '<p><b>Disclaimer:</b> This manual is provided as-is for informational purposes only. The author and contributors accept no responsibility or liability for any damage to vehicles, property, or persons arising from the use of the information contained within. Vehicle repair carries inherent risks \u2014 if you are not confident in a procedure, consult a qualified mechanic. Always use appropriate safety equipment, support vehicles on rated stands, and follow all safety precautions described in the procedures.</p>'+
   '<p><b>Note:</b> Torque specifications and fluid capacities are for standard factory-condition vehicles. Modified vehicles or worn components may require different values. When in doubt, consult Honda or a specialist.</p>'+
   (_tHosted()?'<p style="font-size:12px;opacity:.85"><b>Usage stats:</b> this site counts which pages, searches and features are used, plus errors and screen size, so the manual can be improved. Nothing you write \u2014 notes, job cards, bookmarks, pins \u2014 is ever sent. Switch it off any time at the bottom of the sidebar.</p>':'')+
   '<label id="discChk"><input type="checkbox" id="discBox" onchange="document.getElementById(\'discGo\').disabled=!this.checked"> I have read and understood the above</label>'+
   '<button id="discGo" disabled onclick="acceptDisc()">Continue</button></div>';
+  _discH=_discHash(html);
+  if(_discSeen(_discH)){_safe(tourMaybe);return}
+  _discOpen=true;ov.innerHTML=html;
   document.body.appendChild(ov);
   try{document.getElementById('discBox').focus()}catch(eF){}}
-function acceptDisc(){var ov=document.getElementById('discOver');
+function acceptDisc(){try{localStorage.setItem('accord_disc_ok',JSON.stringify({t:Date.now(),h:_discH}))}catch(eD){}
+  var ov=document.getElementById('discOver');
   if(ov&&ov.parentNode)ov.parentNode.removeChild(ov);
   _discOpen=false;
   _safe(tourMaybe)}
@@ -2036,12 +2049,13 @@ var TOUR=[
  {s:'#toggleSB',t:'Hide the sidebar',d:'Collapse the whole sidebar for full-width reading. Click again to bring it back.'},
  {s:'.pg-row',t:'Built-in extras',d:'A Service interval dashboard, a Trim level guide, and Guides \u2014 a curated index of Honda\u2019s procedures for the jobs owners do most. And the Tutorial button re-opens this walkthrough any time.'},
  {s:'#cmbMY',u:'.sec',t:'Your car',d:'Pick the year and model code (it\u2019s on your V5 next to \u201CType\u201D). Everything \u2014 tree, search, guides \u2014 follows this choice.'},
+ {s:'#jcArrow',u:'.sec',t:'Job Cards',d:'A workspace per car: attach procedures, tick them off as you work, keep notes on the job. Activating a card even switches to that car\u2019s model.'},
+ {s:['#bkArrow','#rcArrow'],u:'.sec',t:'Bookmarks & recent',d:'Pages you have starred and the last 20 you opened, kept up here so they are one tap away.'},
  {s:'.mt-row',u:'.sec',t:'Two manuals',d:'Shop Manual covers mechanical and electrical work; Body Repair covers panels and bodywork. Search quietly checks both either way.'},
  {s:'#treePanel',u:'.sec',t:'Browse by system',d:'Honda\u2019s own chapter tree. Type in the box above it to filter instantly; \u201Ccollapse\u201D resets. Click a folder to focus search on just that system.'},
  {s:'#txtKW',u:'.srch-row',t:'Search',d:'One box for everything: it searches titles AND the text inside every page, autocompletes, fixes typos, understands British spellings \u2014 and if you type a trouble code like P0301, it decodes it automatically.'},
  {s:'#searchPanel',u:'.sec',t:'Results',d:'Grouped by where they matched. On each row: \uD83D\uDCCC pins it so it stays visible, \u21E5 opens it in the right split pane, \uFF0B adds it to a job card.'},
- {s:'#jcArrow',u:'.sec',t:'Job Cards',d:'A workspace per car: attach procedures, tick them off as you work, keep notes on the job. Activating a card even switches to that car\u2019s model.'},
- {s:['#bkArrow','#rcArrow','#ntArrow','#glArrow'],u:'.sec',t:'Your stuff',d:'Bookmarks, recently viewed pages, your own margin notes, and a glossary of Honda acronyms (which you can extend) live in these sections.'},
+ {s:['#ntArrow','#glArrow'],u:'.sec',t:'Notes & glossary',d:'Every margin note you have written, and a glossary of Honda acronyms (which you can extend), live in these sections.'},
  {s:'#impFile',u:'.sec',t:'Backup',d:'Export saves all your pins, notes, jobs and settings to one file; Import restores them on any machine. Do it before the USB stick moves house.'},
  {s:'#btnBack',u:'.cb-btns',t:'Navigation',d:'Back, forward and Home for the page area \u2014 Alt+\u2190/\u2192 work too. The address bar updates as you browse, and that link reopens the exact page.'},
  {s:'#btnBk',t:'Bookmark',d:'Star the open page to keep it in your Bookmarks list. Ctrl+B works too.'},
