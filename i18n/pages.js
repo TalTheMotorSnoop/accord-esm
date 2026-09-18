@@ -17,7 +17,7 @@
   function hasOwnText(el){for(var n=el.firstChild;n;n=n.nextSibling){if(n.nodeType===3&&/[A-Za-zÀ-ɏЀ-ӿ]/.test(n.data))return true}return false}
   function isUnit(el){if(!el.children.length||!inlineOnly(el)||!hasOwnText(el))return false;if(!INL[el.tagName])return true;var p=el.parentElement;return !p||!inlineOnly(p)||!hasOwnText(p)}
   function trText(src){var d=dict();if(!d)return null;var k=norm(src);if(k.length<2)return null;var t=d.s[k];if(t!==undefined)return t;
-    if(!/[0-9]/.test(k)||k.length>120)return null;var R=rx[lang];if(!R){R=rx[lang]=[];for(var i=0;i<d.r.length;i++){try{R.push([new RegExp(d.r[i][0]),d.r[i][1]])}catch(e){}}}
+    if(!/[0-9:]/.test(k)||k.length>200)return null;var R=rx[lang];if(!R){R=rx[lang]=[];for(var i=0;i<d.r.length;i++){try{R.push([new RegExp(d.r[i][0]),d.r[i][1]])}catch(e){}}}
     for(var j=0;j<R.length;j++){var m=R[j][0].exec(k);if(m){return R[j][1].replace(/\$m(\d)/g,function(_,g){var EN=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],ix=EN.indexOf(m[+g]);return(ix>=0&&d.m&&d.m[ix])||m[+g]}).replace(/\$(\d)/g,function(_,g){return m[+g]||''})}}
     return null}
   function doText(nd){var p=nd.parentNode;if(!p||/^(SCRIPT|STYLE|TEXTAREA)$/.test(p.nodeName))return;var cur=nd.data,o=OT.get(nd);if(o===undefined||cur!==LT.get(nd)){o=cur;OT.set(nd,o)}
