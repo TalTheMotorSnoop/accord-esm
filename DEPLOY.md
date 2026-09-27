@@ -63,3 +63,8 @@ Hosting: GitHub Pages (repo `TalTheMotorSnoop/accord-esm`, branch `main`, root) 
 - Common Jobs link titles and search phrases are NOT hand-translated: `build_pages_i18n.cjs` looks up the same procedure in the target language through the Honda document code (needs `Accord ESM Tests/out/mk7x/<lang>` and `work/<lang>/info`).
 - Version bump now touches the `?v=` of `i18n/pages.js` in welcome/guides/service as well as `fonts.css`.
 - Changing English text on those pages: re-run `pipeline/collect_page_strings.mjs`, `i18n/make_page_keys.cjs`, fix the ids in `pages_<lang>.txt`, rebuild. Unmatched text simply stays English.
+
+## Figure viewer pages in the translated sets (v2.5.2)
+- The wiring/circuit diagram pop-ups (`SEA…D0n.html` and `<page>_3.html`, 786 per language) carry Honda's IE-only viewer script on the 2008 disc. `build_lang.mjs` swaps in the modernised script from `mk8/en/html/000000000006301_3.html` (same code, already fixed in the mk8 conversion), keeping each language's alert text. If that mk8 page is ever changed, rebuild the translated sets.
+- Translated html is edge-cached by path for 4 h and browser-cached for 4 h. After re-uploading changed pages, do **Cloudflare → Purge Everything**, otherwise visitors keep the old pages for up to 4 hours.
+- Test: `node probe_zoom.mjs chromium <lang> [baseURL]`.

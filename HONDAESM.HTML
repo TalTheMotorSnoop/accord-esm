@@ -9,7 +9,7 @@
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="icon" type="image/png" href="./icons/icon-192.png">
 <link rel="apple-touch-icon" href="./icons/icon-192.png">
-<link href="./fonts/fonts.css?v=2.5.1" rel="stylesheet">
+<link href="./fonts/fonts.css?v=2.5.2" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html,body{height:100%;overflow:hidden}
@@ -1186,7 +1186,7 @@ function pickLang(l){if(!_isLang(l))return;setLang(l);
 var curGen="",cdInfo=[],tDT=[],curMT="SM",curTD=[],curSD=[];
 var curKey="",curSct="",curSc="",curSys="",curComp="",curSitq="",curKW="",curScopeName="";
 var selLbl=null,_sieScript=null,_treeScript=null,_listScript=null;
-var ESM_VER='2.5.1';var _qs0=location.search||'';
+var ESM_VER='2.5.2';var _qs0=location.search||'';
 /* ═ ANONYMOUS USAGE STATS (v2.2, hosted site only) ═
    Small batches of events go to /api/t (a Cloudflare Worker on this domain): pages opened, searches (query +
    result counts), features used, errors, screen size. NEVER note text, job cards, bookmarks or pins.
@@ -2611,7 +2611,9 @@ function Tsl(k,sct,sc,sys,comp,sitq){curKey=k;curSct=sct;curSc=sc;curSys=sys;cur
 function Old(obj){try{var f2=document.getElementById("contentFrame2");if(f2&&obj&&f2.contentWindow&&(obj===f2.contentWindow||obj.document===f2.contentDocument))return;var t="",d=null;if(obj&&obj.contentDocument)d=obj.contentDocument;else if(obj&&obj.document)d=obj.document;if(d){var el=d.querySelector&&(d.querySelector(".top_title")||d.querySelector(".table_title"));t=_okTitle(el?el.textContent:"")||_okTitle(d.title)}if(t){document.getElementById("cTitle").textContent=t;if(curPage&&t.length>3)curPage.title=t}}catch(e){}}
 function Jmp(a){if(!a)return;try{var ae=document.activeElement;var fr=(_split&&ae&&ae.id==='contentFrame2')?document.getElementById('contentFrame2'):document.getElementById('contentFrame');fr.contentWindow.location.hash=a}catch(e){}}
 function absU(rel){try{return new URL(rel,document.baseURI).href}catch(e){return location.href.split(/[?#]/)[0].replace(/[^\/]*$/,'')+rel.replace(/^\.\//,'')}}
-function Prt(key,data,gen){if(!key){doPrint();return}_t('feat',{k:'zoom',x:String(key).slice(0,40)});
+/* Honda's PrtProc does strData=Anc; strData+='?'+yearType — with no anchor that yields "undefined?000?CL7,2003" (v2.5.2) */
+function _zAnc(d){d=(d===undefined||d===null)?'':String(d);d=d.replace(/^(undefined|null)(?=\?|$)/,'');return /^[A-Za-z0-9_,.?\-]{0,60}$/.test(d)?d:''}
+function Prt(key,data,gen){data=_zAnc(data);if(!key){doPrint();return}_t('feat',{k:'zoom',x:String(key).slice(0,40)});
   if(!_okGen(gen)){var _pa=document.activeElement;
     if(_split&&_pa&&_pa.id==='contentFrame2'){gen=_frameGen(document.getElementById('contentFrame2'))||((_curPage2&&_curPage2.url)?_genOfRel(_curPage2.url):'mk7')}
     else gen=_frameGen(document.getElementById('contentFrame'))||((curPage&&_okGen(curPage.gen))?curPage.gen:getGen())}
