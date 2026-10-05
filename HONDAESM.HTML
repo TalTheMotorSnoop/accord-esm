@@ -9,7 +9,7 @@
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="icon" type="image/png" href="./icons/icon-192.png">
 <link rel="apple-touch-icon" href="./icons/icon-192.png">
-<link href="./fonts/fonts.css?v=2.5.2" rel="stylesheet">
+<link href="./fonts/fonts.css?v=2.6.0" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html,body{height:100%;overflow:hidden}
@@ -767,6 +767,38 @@ body.aurora ::-webkit-scrollbar{width:6px}body.aurora ::-webkit-scrollbar-track{
 #discChk input{width:16px;height:16px;accent-color:#ffb84d;flex-shrink:0}
 #discGo{font-family:inherit;font-size:13px;font-weight:600;padding:8px 26px;border-radius:16px;border:none;background:#ffb84d;color:#1a1408;cursor:pointer}
 #discGo:disabled{opacity:.35;cursor:not-allowed}
+/* feedback prompt card + form (v2.6) — the same fixed dark card as the disclaimer, whatever the theme */
+#fbCard{position:fixed;right:16px;bottom:16px;z-index:10300;width:min(330px,calc(100vw - 32px));box-sizing:border-box;background:#1c2230;color:#dfe5ee;border:1px solid #3a4150;border-radius:12px;padding:14px 16px;font-family:'Outfit',sans-serif;font-size:13px;line-height:1.5;text-align:left;box-shadow:0 10px 32px rgba(0,0,0,.5);animation:fbIn .25s ease-out}
+@keyframes fbIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){#fbCard{animation:none}}
+#fbCard .fb-t{font-size:14.5px;font-weight:700;color:#eef2f8;margin:0 24px 4px 0}
+#fbCard .fb-d{color:#c3cad6}
+#fbCard .fb-x{position:absolute;top:6px;right:8px;background:none;border:0;color:#9aa4b4;font-size:20px;line-height:1;cursor:pointer;padding:4px 6px;font-family:inherit}
+#fbCard .fb-x:hover{color:#fff}
+#fbCard .fb-b,#fbBox .fb-b{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+#fbCard .fb-b button,#fbBox .fb-b button{font-family:inherit;font-size:12.5px;padding:6px 16px;border-radius:14px;border:1px solid #3a4150;background:#232b38;color:#dfe5ee;cursor:pointer;letter-spacing:0;text-transform:none}
+#fbCard .fb-b button:hover,#fbBox .fb-b button:hover{border-color:#5a6478}
+#fbCard .fb-b button.fb-go,#fbBox .fb-b button.fb-go{background:#ffb84d;border-color:#ffb84d;color:#1a1408;font-weight:600}
+#fbBox .fb-b button:disabled{opacity:.45;cursor:default}
+#fbCard button:focus-visible,#fbBox button:focus-visible{outline:2px solid #ffb84d;outline-offset:2px}
+#fbOver{position:fixed;left:0;top:0;right:0;bottom:0;z-index:10450;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center}
+#fbBox{position:relative;width:min(480px,92vw);max-height:92vh;overflow-y:auto;box-sizing:border-box;background:#1c2230;color:#dfe5ee;border-radius:12px;padding:20px 24px;font-family:'Outfit',sans-serif;font-size:13.5px;line-height:1.55;text-align:left;box-shadow:0 12px 40px rgba(0,0,0,.6);outline:0}
+#fbTitle{font-size:17px;font-weight:700;color:#eef2f8;margin-bottom:8px}
+#fbBox p{margin:0 0 10px;color:#c3cad6}
+#fbBox p.fb-s{font-size:11.5px;line-height:1.45;color:#9aa4b4;margin:6px 0 10px}
+#fbBox .fb-rate{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;margin-bottom:10px}
+#fbBox .fb-stars{white-space:nowrap}
+#fbBox .fb-star{background:none;border:0;padding:0 3px;font-size:26px;line-height:1;color:#4a5262;cursor:pointer;font-family:Arial,sans-serif}
+#fbBox .fb-star.on{color:#ffb84d}
+#fbBox textarea,#fbBox input[type=text]{display:block;width:100%;box-sizing:border-box;font-family:inherit;font-size:13.5px;line-height:1.45;color:#eef2f8;background:#131822;border:1px solid #3a4150;border-radius:8px;padding:8px 10px;margin:0}
+#fbBox textarea{resize:vertical;min-height:96px}
+#fbBox textarea:focus,#fbBox input[type=text]:focus{outline:0;border-color:#ffb84d}
+#fbBox textarea::placeholder,#fbBox input::placeholder{color:#7d8798;opacity:1}
+#fbBox .fb-l{display:block;font-size:12px;color:#c3cad6;margin:0 0 4px}
+#fbBox #fbHp{position:absolute;left:-9999px;top:0;width:1px;height:1px;opacity:0;padding:0;border:0}
+#fbMsg{min-height:18px;font-size:12.5px;color:#c3cad6}
+#fbMsg.bad{color:#ff9a9a}
+@media (max-width:700px){#fbBox{padding:16px}#fbBox textarea,#fbBox input[type=text]{font-size:16px}}
 /* language chooser on the disclaimer and the first tour page (v2.4) */
 .lang-row{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 6px}
 .lang-row .lang-cap{width:100%;font-size:11px;opacity:.65;letter-spacing:.3px}
@@ -1083,6 +1115,7 @@ body.fable ::-webkit-scrollbar-thumb{background:#3e3020;border-radius:3px}
     </div>
     <div class="sec" style="padding-top:0;font-size:10.5px;line-height:1.45;opacity:.7">Your notes, jobs, bookmarks and pins live only in this browser &mdash; nothing is uploaded. Export them to keep a copy or move them to another device.</div>
     <div class="sec" id="tsWrap" style="display:none;padding-top:0"><label class="dtc-toggle" style="padding:2px 0;display:flex" title="Counts which pages, searches and features are used, plus errors and screen size. Never your notes, job cards, bookmarks or pins."><input type="checkbox" id="chkTS" onchange="tsTog(this.checked)"><span class="dtc-label">Send anonymous usage stats</span></label></div>
+    <div class="sec" id="fbWrap" style="display:none;padding-top:4px"><span class="clr-link" style="margin-left:0" onclick="fbOpen('link')" title="Tell us what you think of the manual">Give feedback</span></div>
   </div></div>
   <div id="sbDrag" title="Drag to resize the sidebar &mdash; double-click to reset"></div>
   <div id="contentArea">
@@ -1186,7 +1219,7 @@ function pickLang(l){if(!_isLang(l))return;setLang(l);
 var curGen="",cdInfo=[],tDT=[],curMT="SM",curTD=[],curSD=[];
 var curKey="",curSct="",curSc="",curSys="",curComp="",curSitq="",curKW="",curScopeName="";
 var selLbl=null,_sieScript=null,_treeScript=null,_listScript=null;
-var ESM_VER='2.5.2';var _qs0=location.search||'';
+var ESM_VER='2.6.0';var _qs0=location.search||'';
 /* ═ ANONYMOUS USAGE STATS (v2.2, hosted site only) ═
    Small batches of events go to /api/t (a Cloudflare Worker on this domain): pages opened, searches (query +
    result counts), features used, errors, screen size. NEVER note text, job cards, bookmarks or pins.
@@ -1212,7 +1245,7 @@ function _tFlush(){clearTimeout(_tTimer);_tTimer=null;if(!_tQ.length)return;
 function _okTitle(t){t=String(t||'').replace(/\s+/g,' ').trim();if(t.length<=3||/^\d+$/.test(t)||/^\d*\s*\(\s*[A-Z0-9]{12,}\s*\)$/.test(t))return '';return t}
 function _listTitle(cn,g){try{if(g&&g!==getGen())return '';var L=[curSD,altSD];for(var a=0;a<L.length;a++){var arr=L[a]||[];for(var i=0;i<arr.length;i++){var it=arr[i];if(it&&it.contentsNum===cn){var t=resTitle(it);if(t)return t}}}}catch(e){}return ''}
 function _tPageId(u){var m=/\/html\/([0-9]{15})\.html/.exec(u||'');return m?m[1]:''}
-function _tPage(who,rel,title){var key=rel.split(/[?#]/)[0];if(who===1){if(_tPg[1]===key)return;_tPg[1]=key}
+function _tPage(who,rel,title){var key=rel.split(/[?#]/)[0];if(who===1){if(_tPg[1]===key)return;_tPg[1]=key;_fbPg++}
   var src=(who===2)?(_tSrc2||'other'):(_tSrc||'other');if(who===2)_tSrc2='';else _tSrc='';
   var qm=/\?000\?([A-Za-z0-9]+),([0-9]{4})/.exec(rel),mc='',my=0;try{mc=qm?qm[1]:getMC();my=parseInt(qm?qm[2]:getMY(),10)||0}catch(e){}
   _t('page',{g:_baseGen(_genOfRel(rel)),p:_tPageId(rel),t:String(title||'').slice(0,120),mc:mc,my:my,pane:who,src:src})}
@@ -2151,6 +2184,94 @@ function acceptDisc(){try{localStorage.setItem('accord_disc_ok',JSON.stringify({
   _discOpen=false;
   _safe(tourMaybe)}
 
+/* ═ FEEDBACK (v2.6, hosted site only) ═
+   "Give feedback" at the bottom of the sidebar opens a short form: a star rating, a message, an optional contact line. It is sent to
+   /api/feedback (the stats Worker) and read on a private page. Sent with it, and listed on the form: version, language, selected car,
+   open page, viewport. NEVER notes, job cards, bookmarks or pins.
+   A small card also invites feedback — on the first visit, then again every FB_DAYS days. It never sits on top of the disclaimer or the
+   tour: it waits until both are closed, then for FB_PAGES manual pages or FB_WAIT_S seconds, whichever comes first. It does not take
+   focus and does not block the page. The time it was last shown lives in accord_fb_prompt (deliberately not esm_*, so a backup does not
+   carry it to another machine); sending feedback also resets that clock.
+   Inactive on file:// and on any host other than accord.talonbabb.com. Testing: set window.ESM_FB_URL to enable on localhost. */
+var FB_DAYS=30,FB_WAIT_S=60,FB_PAGES=2;
+var _fbPg=0,_fbDue=false,_fbTick=null,_fbQ=0,_fbBusy=false,_fbSrc='link',_fbRate=0,_fbDraft='',_fbDraftC='',_fbRet=null,_fbCloseT=null;
+function _fbOK(){try{if(window.ESM_FB_URL)return true}catch(e){}return _tHosted()}
+function _fbURL(){try{if(window.ESM_FB_URL)return String(window.ESM_FB_URL)}catch(e){}return '/api/feedback'}
+function _fbLast(){try{var t=parseInt(localStorage.getItem('accord_fb_prompt'),10);return(t>0&&t<=Date.now()+6e4)?t:0}catch(e){return -1}}
+function _fbMark(){try{localStorage.setItem('accord_fb_prompt',String(Date.now()))}catch(e){}}
+function _fbIsDue(){if(!_fbOK()||!_storageOK)return false;var t=_fbLast();return t===0||(t>0&&Date.now()-t>=FB_DAYS*864e5)}
+function fbInit(){var w=document.getElementById('fbWrap');if(w)w.style.display=_fbOK()?'':'none';
+  if(_fbTick||!_fbIsDue())return;_fbDue=true;_fbQ=0;
+  _fbTick=setInterval(function(){if(!_fbDue){clearInterval(_fbTick);_fbTick=null;return}
+    if(document.hidden)return;
+    if(_discOpen||_tourOn||document.getElementById('fbOver')){_fbQ=0;return}   /* the wait starts once nothing else is asking for attention */
+    _fbQ+=2;if(_fbQ>=FB_WAIT_S||(_fbPg>=FB_PAGES&&_fbQ>=4))_fbShow()},2000)}
+function _fbShow(){_fbDue=false;if(_fbTick){clearInterval(_fbTick);_fbTick=null}
+  if(!_fbIsDue()||document.getElementById('fbCard'))return;   /* another tab may have asked in the meantime */
+  _fbMark();
+  var c=document.createElement('div');c.id='fbCard';c.setAttribute('role','region');c.setAttribute('aria-label',T('Give feedback'));
+  c.innerHTML='<button type="button" class="fb-x" onclick="fbDismiss(\'close\')" title="Close">&times;</button>'+
+    '<div class="fb-t">How are you finding the manual?</div>'+
+    '<div class="fb-d">Your feedback decides what gets improved next. It only takes a minute.</div>'+
+    '<div class="fb-b"><button type="button" class="fb-go" onclick="fbOpen(\'prompt\')">Give feedback</button><button type="button" onclick="fbDismiss(\'later\')">Not now</button></div>';
+  document.body.appendChild(c);_t('feat',{k:'fb_prompt',x:'shown'})}
+function _fbCardOff(){var c=document.getElementById('fbCard');if(c&&c.parentNode){c.parentNode.removeChild(c);return true}return false}
+function fbDismiss(how){if(_fbCardOff())_t('feat',{k:'fb_prompt',x:how})}
+function fbOpen(src){if(!_fbOK()||_discOpen||_tourOn||document.getElementById('fbOver'))return;
+  _fbSrc=(src==='prompt')?'prompt':'link';if(_fbCardOff())_t('feat',{k:'fb_prompt',x:'open'});
+  _fbRet=document.activeElement;_fbRate=0;_fbBusy=false;clearTimeout(_fbCloseT);
+  var ov=document.createElement('div');ov.id='fbOver';ov.onmousedown=function(e){if(e.target===ov)fbClose()};
+  var st='';for(var i=1;i<=5;i++)st+='<button type="button" class="fb-star" onclick="fbRate('+i+')" aria-label="'+i+' / 5" aria-pressed="false">★</button>';
+  ov.innerHTML='<div id="fbBox" role="dialog" aria-modal="true" aria-labelledby="fbTitle" tabindex="-1"><div id="fbTitle">Give feedback</div>'+
+    '<p>What works well, what is missing, what should change?</p>'+
+    '<div class="fb-rate"><span id="fbRateL">How would you rate the manual?</span><span class="fb-stars notr" role="group" aria-labelledby="fbRateL">'+st+'</span></div>'+
+    '<textarea id="fbText" maxlength="2000" rows="5" aria-labelledby="fbTitle" placeholder="'+escH(T('Your thoughts, ideas or wishes…'))+'"></textarea>'+
+    '<p class="fb-s">Found a mistake or something that does not work? Tell us here too, and mention the page.</p>'+
+    '<label class="fb-l" for="fbContact">Contact (optional)</label>'+
+    '<input type="text" id="fbContact" maxlength="120" autocomplete="off" placeholder="E-mail or name, only if you would like a reply">'+
+    '<input type="text" id="fbHp" name="fb_confirm" tabindex="-1" autocomplete="off" aria-hidden="true">'+
+    '<p class="fb-s">Sent with your message: app version, language, selected car, the open page, browser type, screen size and country. Never your notes, job cards, bookmarks or pins.</p>'+
+    '<div id="fbMsg" role="status" aria-live="polite"></div>'+
+    '<div class="fb-b"><button type="button" class="fb-go" id="fbGo" onclick="fbSend()">Send</button><button type="button" onclick="fbClose()">Cancel</button></div></div>';
+  document.body.appendChild(ov);
+  var ta=document.getElementById('fbText');ta.value=_fbDraft;document.getElementById('fbContact').value=_fbDraftC;
+  /* on a touch screen focusing the text box would throw the keyboard over the form before it has been read */
+  try{if('ontouchstart' in window)document.getElementById('fbBox').focus();else ta.focus()}catch(eF){}
+  _t('feat',{k:'fb_open',x:_fbSrc})}
+function fbRate(n){_fbRate=(_fbRate===n)?0:n;var b=document.querySelectorAll('#fbBox .fb-star');
+  for(var i=0;i<b.length;i++){if(i<_fbRate)b[i].classList.add('on');else b[i].classList.remove('on');b[i].setAttribute('aria-pressed',(i+1===_fbRate)?'true':'false')}}
+function fbClose(){var ov=document.getElementById('fbOver');if(!ov)return;clearTimeout(_fbCloseT);
+  /* an unsent message is kept for this visit, so closing by accident loses nothing */
+  try{var ta=document.getElementById('fbText');if(ta){_fbDraft=ta.value;_fbDraftC=document.getElementById('fbContact').value}}catch(e){}
+  if(ov.parentNode)ov.parentNode.removeChild(ov);
+  try{if(_fbRet&&_fbRet.focus&&document.body.contains(_fbRet))_fbRet.focus()}catch(e2){}_fbRet=null}
+function _fbSay(m,bad){var e=document.getElementById('fbMsg');if(e){e.textContent=m;e.className=bad?'bad':''}}
+function _fbTab(e){try{var bx=document.getElementById('fbBox'),f=bx.querySelectorAll('button:not([disabled]),textarea,input:not([tabindex="-1"])');if(!f.length)return;
+  var a=document.activeElement,inside=bx.contains(a)&&a!==bx;
+  if(e.shiftKey&&(!inside||a===f[0])){e.preventDefault();f[f.length-1].focus()}
+  else if(!e.shiftKey&&(!inside||a===f[f.length-1])){e.preventDefault();f[0].focus()}}catch(x){}}
+function fbSend(){if(_fbBusy)return;var ta=document.getElementById('fbText'),go=document.getElementById('fbGo');if(!ta||!go)return;
+  var m=ta.value.replace(/^\s+|\s+$/g,'');
+  if(m.length<2&&!_fbRate){_fbSay('Please write a few words or choose a rating.',true);try{ta.focus()}catch(e0){}return}
+  var o={m:m.slice(0,2000),r:_fbRate,c:document.getElementById('fbContact').value.slice(0,120),hp:document.getElementById('fbHp').value,l:_lang,v:ESM_VER,src:_fbSrc,w:window.innerWidth||0,h:window.innerHeight||0};
+  try{o.mc=getMC();o.my=parseInt(getMY(),10)||0;o.g=getGen()}catch(e1){}
+  try{if(curPage&&curPage.url){o.p=_tPageId(curPage.url);o.t=_okTitle(curPage.title).slice(0,120);var g2=_genOfRel(curPage.url);if(_okGen(g2))o.g=g2}}catch(e2){}
+  _fbBusy=true;go.disabled=true;_fbSay('Sending…');
+  var src=_fbSrc,rate=_fbRate,fin=false,ac=null,tm=null;
+  var done=function(st){if(fin)return;fin=true;clearTimeout(tm);_fbBusy=false;var open=!!document.getElementById('fbOver');
+    if(st===200){_fbDraft='';_fbDraftC='';_fbMark();_t('feat',{k:'fb_sent',x:src,n:rate});
+      if(!open){esmToast('Thank you — your feedback has been sent.');return}
+      document.getElementById('fbBox').innerHTML='<div id="fbTitle">Thank you — your feedback has been sent.</div><div class="fb-b"><button type="button" class="fb-go" id="fbGo" onclick="fbClose()">Close</button></div>';
+      try{document.getElementById('fbGo').focus()}catch(e3){}
+      _fbCloseT=setTimeout(fbClose,6000);return}
+    if(!open)return;
+    var g=document.getElementById('fbGo');if(g)g.disabled=false;
+    _fbSay(st===429?'You have sent several messages today. Please try again tomorrow.':'Could not send. Check your connection and try again.',true)};
+  try{var opt={method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(o),credentials:'same-origin',cache:'no-store'};
+    if(typeof AbortController==='function'){ac=new AbortController();opt.signal=ac.signal}
+    tm=setTimeout(function(){try{if(ac)ac.abort()}catch(e4){}done(0)},20000);
+    fetch(_fbURL(),opt).then(function(r){done(r.status)},function(){done(0)})}catch(e5){done(0)}}
+
 /* ═ GUIDED TOUR (V2) ═ */
 var _tourOn=false,_tourI=0,_tourDone=false;
 var TOUR=[
@@ -2651,6 +2772,7 @@ function Scl(){}
 document.addEventListener('keydown',function(e){
   if(_discOpen){if(e.key==='Tab'){e.preventDefault();try{var _db=document.getElementById('discBox'),_dg=document.getElementById('discGo');
       if(document.activeElement===_db&&_dg&&!_dg.disabled)_dg.focus();else if(_db)_db.focus()}catch(eT){}}return}
+  if(document.getElementById('fbOver')){if(e.key==='Escape')fbClose();else if(e.key==='Tab')_fbTab(e);return}
   if(e.key==='Escape'){if(sugOpen()){sugHide();return}
     var _pnl,_closed=false;
     _pnl=document.getElementById('jobPanel');if(_pnl&&_pnl.offsetParent!==null){closeJobPanel();_closed=true}
@@ -2813,7 +2935,8 @@ window.addEventListener('hashchange',function(){loadFromHash()});
 function _setVH(){try{document.documentElement.style.setProperty('--vh',window.innerHeight+'px')}catch(e){}}
 document.addEventListener('DOMContentLoaded',function(){try{if(location.search)history.replaceState(null,'',location.pathname+location.hash)}catch(eQ){}_setVH();window.addEventListener('resize',_setVH);window.addEventListener('resize',_placePanels);
   try{var _sbp=localStorage.getItem('esm_sb');if(_sbp==='1'||(_sbp===null&&window.innerWidth<=800))document.getElementById('sidebar').classList.add('collapsed')}catch(e){}
-  try{showDisclaimer()}catch(e2){}});
+  try{showDisclaimer()}catch(e2){}
+  try{fbInit()}catch(e3){}});
 window.onload=function(){
   loadMode();initDropdowns();_i18nUse();
   _safe(renderBookmarks);_safe(renderRecent);_safe(renderGlossary);_safe(renderPins);_safe(applyFS);
