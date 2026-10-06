@@ -9,7 +9,7 @@
 <link rel="manifest" href="./manifest.webmanifest">
 <link rel="icon" type="image/png" href="./icons/icon-192.png">
 <link rel="apple-touch-icon" href="./icons/icon-192.png">
-<link href="./fonts/fonts.css?v=2.6.0" rel="stylesheet">
+<link href="./fonts/fonts.css?v=2.6.1" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html,body{height:100%;overflow:hidden}
@@ -768,17 +768,19 @@ body.aurora ::-webkit-scrollbar{width:6px}body.aurora ::-webkit-scrollbar-track{
 #discGo{font-family:inherit;font-size:13px;font-weight:600;padding:8px 26px;border-radius:16px;border:none;background:#ffb84d;color:#1a1408;cursor:pointer}
 #discGo:disabled{opacity:.35;cursor:not-allowed}
 /* feedback prompt card + form (v2.6) — the same fixed dark card as the disclaimer, whatever the theme */
-#fbCard{position:fixed;right:16px;bottom:16px;z-index:10300;width:min(330px,calc(100vw - 32px));box-sizing:border-box;background:#1c2230;color:#dfe5ee;border:1px solid #3a4150;border-radius:12px;padding:14px 16px;font-family:'Outfit',sans-serif;font-size:13px;line-height:1.5;text-align:left;box-shadow:0 10px 32px rgba(0,0,0,.5);animation:fbIn .25s ease-out}
-@keyframes fbIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:reduce){#fbCard{animation:none}}
-#fbCard .fb-t{font-size:14.5px;font-weight:700;color:#eef2f8;margin:0 24px 4px 0}
+#fbCardOver{position:fixed;left:0;top:0;right:0;bottom:0;z-index:10300;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;animation:fbIn .25s ease-out}
+#fbCard{position:relative;width:min(440px,92vw);max-height:92vh;overflow-y:auto;box-sizing:border-box;background:#1c2230;color:#dfe5ee;border-radius:12px;padding:22px 26px;font-family:'Outfit',sans-serif;font-size:13.5px;line-height:1.6;text-align:left;box-shadow:0 12px 40px rgba(0,0,0,.6);outline:0}
+@keyframes fbIn{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){#fbCardOver{animation:none}}
+#fbCard .fb-t{font-size:17px;font-weight:700;color:#eef2f8;margin:0 28px 6px 0}
 #fbCard .fb-d{color:#c3cad6}
-#fbCard .fb-x{position:absolute;top:6px;right:8px;background:none;border:0;color:#9aa4b4;font-size:20px;line-height:1;cursor:pointer;padding:4px 6px;font-family:inherit}
+#fbCard .fb-x{position:absolute;top:8px;right:10px;background:none;border:0;color:#9aa4b4;font-size:22px;line-height:1;cursor:pointer;padding:4px 8px;font-family:inherit}
 #fbCard .fb-x:hover{color:#fff}
 #fbCard .fb-b,#fbBox .fb-b{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
 #fbCard .fb-b button,#fbBox .fb-b button{font-family:inherit;font-size:12.5px;padding:6px 16px;border-radius:14px;border:1px solid #3a4150;background:#232b38;color:#dfe5ee;cursor:pointer;letter-spacing:0;text-transform:none}
 #fbCard .fb-b button:hover,#fbBox .fb-b button:hover{border-color:#5a6478}
 #fbCard .fb-b button.fb-go,#fbBox .fb-b button.fb-go{background:#ffb84d;border-color:#ffb84d;color:#1a1408;font-weight:600}
+#fbCard .fb-b button{font-size:13px;padding:7px 20px}
 #fbBox .fb-b button:disabled{opacity:.45;cursor:default}
 #fbCard button:focus-visible,#fbBox button:focus-visible{outline:2px solid #ffb84d;outline-offset:2px}
 #fbOver{position:fixed;left:0;top:0;right:0;bottom:0;z-index:10450;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center}
@@ -1219,7 +1221,7 @@ function pickLang(l){if(!_isLang(l))return;setLang(l);
 var curGen="",cdInfo=[],tDT=[],curMT="SM",curTD=[],curSD=[];
 var curKey="",curSct="",curSc="",curSys="",curComp="",curSitq="",curKW="",curScopeName="";
 var selLbl=null,_sieScript=null,_treeScript=null,_listScript=null;
-var ESM_VER='2.6.0';var _qs0=location.search||'';
+var ESM_VER='2.6.1';var _qs0=location.search||'';
 /* ═ ANONYMOUS USAGE STATS (v2.2, hosted site only) ═
    Small batches of events go to /api/t (a Cloudflare Worker on this domain): pages opened, searches (query +
    result counts), features used, errors, screen size. NEVER note text, job cards, bookmarks or pins.
@@ -2188,12 +2190,12 @@ function acceptDisc(){try{localStorage.setItem('accord_disc_ok',JSON.stringify({
    "Give feedback" at the bottom of the sidebar opens a short form: a star rating, a message, an optional contact line. It is sent to
    /api/feedback (the stats Worker) and read on a private page. Sent with it, and listed on the form: version, language, selected car,
    open page, viewport. NEVER notes, job cards, bookmarks or pins.
-   A small card also invites feedback — on the first visit, then again every FB_DAYS days. It never sits on top of the disclaimer or the
-   tour: it waits until both are closed, then for FB_PAGES manual pages or FB_WAIT_S seconds, whichever comes first. It does not take
-   focus and does not block the page. The time it was last shown lives in accord_fb_prompt (deliberately not esm_*, so a backup does not
+   A centred dialog (v2.6.1: like the disclaimer, it has to be closed) also invites feedback — on the first visit, then again every FB_DAYS
+   days. It never sits on top of the disclaimer or the tour: it appears FB_WAIT_S seconds after both are closed (or after FB_PAGES manual
+   pages, if that comes first). The time it was last shown lives in accord_fb_prompt (deliberately not esm_*, so a backup does not
    carry it to another machine); sending feedback also resets that clock.
    Inactive on file:// and on any host other than accord.talonbabb.com. Testing: set window.ESM_FB_URL to enable on localhost. */
-var FB_DAYS=30,FB_WAIT_S=60,FB_PAGES=2;
+var FB_DAYS=30,FB_WAIT_S=3,FB_PAGES=1;
 var _fbPg=0,_fbDue=false,_fbTick=null,_fbQ=0,_fbBusy=false,_fbSrc='link',_fbRate=0,_fbDraft='',_fbDraftC='',_fbRet=null,_fbCloseT=null;
 function _fbOK(){try{if(window.ESM_FB_URL)return true}catch(e){}return _tHosted()}
 function _fbURL(){try{if(window.ESM_FB_URL)return String(window.ESM_FB_URL)}catch(e){}return '/api/feedback'}
@@ -2207,16 +2209,18 @@ function fbInit(){var w=document.getElementById('fbWrap');if(w)w.style.display=_
     if(_discOpen||_tourOn||document.getElementById('fbOver')){_fbQ=0;return}   /* the wait starts once nothing else is asking for attention */
     _fbQ+=2;if(_fbQ>=FB_WAIT_S||(_fbPg>=FB_PAGES&&_fbQ>=4))_fbShow()},2000)}
 function _fbShow(){_fbDue=false;if(_fbTick){clearInterval(_fbTick);_fbTick=null}
-  if(!_fbIsDue()||document.getElementById('fbCard'))return;   /* another tab may have asked in the meantime */
+  if(!_fbIsDue()||document.getElementById('fbCardOver'))return;   /* another tab may have asked in the meantime */
   _fbMark();
-  var c=document.createElement('div');c.id='fbCard';c.setAttribute('role','region');c.setAttribute('aria-label',T('Give feedback'));
-  c.innerHTML='<button type="button" class="fb-x" onclick="fbDismiss(\'close\')" title="Close">&times;</button>'+
-    '<div class="fb-t">How are you finding the manual?</div>'+
+  var ov=document.createElement('div');ov.id='fbCardOver';
+  ov.innerHTML='<div id="fbCard" role="dialog" aria-modal="true" aria-labelledby="fbCardT" tabindex="-1"><button type="button" class="fb-x" onclick="fbDismiss(\'close\')" title="Close">&times;</button>'+
+    '<div class="fb-t" id="fbCardT">How are you finding the manual?</div>'+
     '<div class="fb-d">Your feedback decides what gets improved next. It only takes a minute.</div>'+
-    '<div class="fb-b"><button type="button" class="fb-go" onclick="fbOpen(\'prompt\')">Give feedback</button><button type="button" onclick="fbDismiss(\'later\')">Not now</button></div>';
-  document.body.appendChild(c);_t('feat',{k:'fb_prompt',x:'shown'})}
-function _fbCardOff(){var c=document.getElementById('fbCard');if(c&&c.parentNode){c.parentNode.removeChild(c);return true}return false}
-function fbDismiss(how){if(_fbCardOff())_t('feat',{k:'fb_prompt',x:how})}
+    '<div class="fb-b"><button type="button" class="fb-go" onclick="fbOpen(\'prompt\')">Give feedback</button><button type="button" onclick="fbDismiss(\'later\')">Not now</button></div></div>';
+  document.body.appendChild(ov);_fbRet=document.activeElement;
+  try{document.getElementById('fbCard').focus()}catch(eF){}_t('feat',{k:'fb_prompt',x:'shown'})}
+function _fbCardOff(){var c=document.getElementById('fbCardOver');if(c&&c.parentNode){c.parentNode.removeChild(c);return true}return false}
+function fbDismiss(how){if(!_fbCardOff())return;_t('feat',{k:'fb_prompt',x:how});
+  try{if(_fbRet&&_fbRet.focus&&document.body.contains(_fbRet))_fbRet.focus()}catch(e){}_fbRet=null}
 function fbOpen(src){if(!_fbOK()||_discOpen||_tourOn||document.getElementById('fbOver'))return;
   _fbSrc=(src==='prompt')?'prompt':'link';if(_fbCardOff())_t('feat',{k:'fb_prompt',x:'open'});
   _fbRet=document.activeElement;_fbRate=0;_fbBusy=false;clearTimeout(_fbCloseT);
@@ -2246,7 +2250,7 @@ function fbClose(){var ov=document.getElementById('fbOver');if(!ov)return;clearT
   if(ov.parentNode)ov.parentNode.removeChild(ov);
   try{if(_fbRet&&_fbRet.focus&&document.body.contains(_fbRet))_fbRet.focus()}catch(e2){}_fbRet=null}
 function _fbSay(m,bad){var e=document.getElementById('fbMsg');if(e){e.textContent=m;e.className=bad?'bad':''}}
-function _fbTab(e){try{var bx=document.getElementById('fbBox'),f=bx.querySelectorAll('button:not([disabled]),textarea,input:not([tabindex="-1"])');if(!f.length)return;
+function _fbTab(e,id){try{var bx=document.getElementById(id||'fbBox'),f=bx.querySelectorAll('button:not([disabled]),textarea,input:not([tabindex="-1"])');if(!f.length)return;
   var a=document.activeElement,inside=bx.contains(a)&&a!==bx;
   if(e.shiftKey&&(!inside||a===f[0])){e.preventDefault();f[f.length-1].focus()}
   else if(!e.shiftKey&&(!inside||a===f[f.length-1])){e.preventDefault();f[0].focus()}}catch(x){}}
@@ -2773,6 +2777,7 @@ document.addEventListener('keydown',function(e){
   if(_discOpen){if(e.key==='Tab'){e.preventDefault();try{var _db=document.getElementById('discBox'),_dg=document.getElementById('discGo');
       if(document.activeElement===_db&&_dg&&!_dg.disabled)_dg.focus();else if(_db)_db.focus()}catch(eT){}}return}
   if(document.getElementById('fbOver')){if(e.key==='Escape')fbClose();else if(e.key==='Tab')_fbTab(e);return}
+  if(document.getElementById('fbCardOver')){if(e.key==='Escape')fbDismiss('close');else if(e.key==='Tab')_fbTab(e,'fbCard');return}
   if(e.key==='Escape'){if(sugOpen()){sugHide();return}
     var _pnl,_closed=false;
     _pnl=document.getElementById('jobPanel');if(_pnl&&_pnl.offsetParent!==null){closeJobPanel();_closed=true}
